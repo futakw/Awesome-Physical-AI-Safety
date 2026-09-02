@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from collections import OrderedDict
 from pathlib import Path
 from urllib.parse import urlparse
@@ -68,6 +69,11 @@ def bullet_list(items: list[str]) -> str:
     return "<br>".join(f"•&nbsp;{item.strip()}" for item in items if item.strip())
 
 
+def subsection_anchor(section_key: str, subsection: str) -> str:
+    slug = re.sub(r"[^a-z0-9]+", "-", subsection.lower()).strip("-")
+    return f"{section_key}-{slug}"
+
+
 def render(papers: list[dict]) -> str:
     lines = [
         "# Awesome Responsible VLA",
@@ -107,6 +113,14 @@ def render(papers: list[dict]) -> str:
     for key in present_sections:
         icon, title = SECTIONS[key]
         lines.append(f"- [{icon} {title}](#{key})")
+        subsections = []
+        for paper in papers:
+            if paper["section"] == key and paper["subsection"] not in subsections:
+                subsections.append(paper["subsection"])
+        for subsection in subsections:
+            lines.append(
+                f"  - [{subsection}](#{subsection_anchor(key, subsection)})"
+            )
     lines.extend(["", f"**{len(papers)} papers in the current catalog.**", ""])
 
     for section_key in present_sections:
@@ -120,6 +134,8 @@ def render(papers: list[dict]) -> str:
         for subsection in subsections:
             lines.extend(
                 [
+                    f'<a id="{subsection_anchor(section_key, subsection)}"></a>',
+                    "",
                     f"### {subsection}",
                     "",
                     "| Paper | Authors | Venue | Evaluated Risk | Threat Model |",
@@ -147,10 +163,6 @@ def render(papers: list[dict]) -> str:
             "## Contributing",
             "",
             "Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) and add or update the corresponding record in `data/papers.json`. Do not edit generated paper tables directly.",
-            "",
-            "## Acknowledgements",
-            "",
-            "The organization is informed by the lifecycle and attack/defense views used in [Awesome-VLA-Safety](https://github.com/LiQiiiii/Awesome-VLA-Safety) and [Awesome-LVLM-Safety](https://github.com/XuankunRong/Awesome-LVLM-Safety), extended with explicit risk-outcome and OOD-generalization axes.",
             "",
             "## License",
             "",
