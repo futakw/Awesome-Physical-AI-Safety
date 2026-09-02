@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from collections import OrderedDict
 from pathlib import Path
 from urllib.parse import urlparse
@@ -46,8 +47,14 @@ def github_repo(url: str | None) -> str | None:
     return f"{parts[0]}/{parts[1].removesuffix('.git')}"
 
 
-def resources(paper: dict) -> str:
-    parts = [f"[Paper]({paper['paper_url']})"]
+def paper_cell(paper: dict) -> str:
+    title = (
+        paper["title"]
+        .replace("|", "\\|")
+        .replace("[", "\\[")
+        .replace("]", "\\]")
+    )
+    parts = [f"**[{title}]({paper['paper_url']})**"]
     code_url = paper.get("code_url")
     repo = github_repo(code_url)
     if repo:
@@ -55,7 +62,19 @@ def resources(paper: dict) -> str:
         parts.append(f"[![GitHub stars]({badge})]({code_url})")
     elif code_url:
         parts.append(f"[Project / Code]({code_url})")
-    return " · ".join(parts)
+    return " ".join(parts)
+
+
+def bullet_list(items: list[str]) -> str:
+    return "<br>".join(f"• {item.strip()}" for item in items if item.strip())
+
+
+def threat_items(threat_model: str) -> list[str]:
+    if " — " not in threat_model:
+        return [threat_model]
+    category, details = threat_model.split(" — ", 1)
+    mechanisms = re.split(r",\s*(?:and\s+)?", details)
+    return [category, *mechanisms]
 
 
 def render(papers: list[dict]) -> str:
@@ -109,18 +128,18 @@ def render(papers: list[dict]) -> str:
                 [
                     f"### {subsection}",
                     "",
-                    "| Paper | Authors | Venue | Risk | Threat Model | Resources |",
-                    "|---|---|---:|---|---|---|",
+                    "| Paper | Authors | Venue | Risk | Threat Model |",
+                    "|---|---|---:|---|---|",
                 ]
             )
             rows = [p for p in section_papers if p["subsection"] == subsection]
             rows.sort(key=lambda p: (-p["year"], p["title"].lower()))
             for paper in rows:
-                risk = ", ".join(RISK_LABELS[item] for item in paper["risks"])
-                title = paper["title"].replace("|", "\\|")
+                risk = bullet_list([RISK_LABELS[item] for item in paper["risks"]])
+                threat_model = bullet_list(threat_items(paper["threat_model"]))
                 venue = f"{paper['venue']} {paper['year']}"
                 lines.append(
-                    f"| **{title}** | {paper['first_author']} et al. | {venue} | {risk} | {paper['threat_model']} | {resources(paper)} |"
+                    f"| {paper_cell(paper)} | {paper['first_author']} et al. | {venue} | {risk} | {threat_model} |"
                 )
             lines.append("")
 

@@ -21,10 +21,10 @@ python3 scripts/build_readme.py --check
 ## Display Rules
 
 - Authors are displayed as `FirstAuthor et al.`; store the first author's surname in `first_author`.
-- Use the official paper title and confirmed venue. Use `arXiv` when no accepted venue is confirmed.
+- Use the official paper title and confirmed venue. The generated table links the title directly to `paper_url`; use `arXiv` when no accepted venue is confirmed.
 - Link only an official or author-maintained implementation as `code_url`.
 - Leave `code_url` as `null` when no official repository is known.
-- GitHub star badges are generated automatically from valid GitHub repository URLs.
+- GitHub star badges and other project/code links are generated beside the paper title from `code_url`.
 - Write `threat_model` from the adversary or distribution-shift perspective: for example, `Inference-time attack — physical adversarial patch` or `Non-adversarial OOD — unseen objects and layouts`. For defenses, state the threat the method is designed to mitigate.
 - Keep `threat_model` concise and include the paper's primary attack, failure, or shift focus there. More granular cross-cutting descriptors belong in `tags`; tags remain structured metadata and are not rendered as a separate table column.
 - List a paper once. Express cross-cutting properties through `risks` and `tags`.

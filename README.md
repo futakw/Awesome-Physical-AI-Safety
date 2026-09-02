@@ -42,24 +42,24 @@ See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.
 
 ### VLA Safety Surveys
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **Vision-Language-Action Safety: Threats, Challenges, Evaluations, and Mechanisms** | Li et al. | arXiv 2026 | Task, Physical, Ethical, Security/Privacy | Survey coverage — training/inference attacks, defenses, OOD, and safety benchmarks | [Paper](https://arxiv.org/abs/2604.23775) · [![GitHub stars](https://img.shields.io/github/stars/LiQiiiii/Awesome-VLA-Safety?style=social)](https://github.com/LiQiiiii/Awesome-VLA-Safety) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[Vision-Language-Action Safety: Threats, Challenges, Evaluations, and Mechanisms](https://arxiv.org/abs/2604.23775)** [![GitHub stars](https://img.shields.io/github/stars/LiQiiiii/Awesome-VLA-Safety?style=social)](https://github.com/LiQiiiii/Awesome-VLA-Safety) | Li et al. | arXiv 2026 | • Task<br>• Physical<br>• Ethical<br>• Security/Privacy | • Survey coverage<br>• training/inference attacks<br>• defenses<br>• OOD<br>• safety benchmarks |
 
 ### Embodied AI Safety and Security
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **Navigating Embodied Intelligence: Enabling Technologies, Security and Privacy, and Emerging Trends** | Wang et al. | IEEE IoT Journal 2026 | Task, Physical, Ethical, Security/Privacy | Survey coverage — security and privacy threats across the embodied system stack | [Paper](https://doi.org/10.1109/JIOT.2025.3649049) |
-| **What Breaks Embodied AI Security: LLM Vulnerabilities, CPS Flaws, or Something Else?** | Ma et al. | arXiv 2026 | Physical, Security/Privacy | Survey coverage — LLM jailbreaks, CPS flaws, and closed-loop system mismatch | [Paper](https://arxiv.org/abs/2602.17345) |
-| **Towards Robust and Secure Embodied AI: A Survey on Vulnerabilities and Attacks** | Xing et al. | arXiv 2025 | Task, Physical, Security/Privacy | Survey coverage — adversarial threats across perception, planning, and control | [Paper](https://arxiv.org/abs/2502.13175) |
-| **Towards Safe and Trustworthy Embodied AI: Foundations, Status, and Prospects** | Tan et al. | OpenReview 2025 | Task, Physical, Ethical, Security/Privacy | Survey coverage — design failures, misalignment, intervention, and recovery | [Paper](https://openreview.net/forum?id=Eu6Yt21Alv) · [![GitHub stars](https://img.shields.io/github/stars/AI45Lab/Awesome-Trustworthy-Embodied-AI?style=social)](https://github.com/AI45Lab/Awesome-Trustworthy-Embodied-AI) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[Navigating Embodied Intelligence: Enabling Technologies, Security and Privacy, and Emerging Trends](https://doi.org/10.1109/JIOT.2025.3649049)** | Wang et al. | IEEE IoT Journal 2026 | • Task<br>• Physical<br>• Ethical<br>• Security/Privacy | • Survey coverage<br>• security and privacy threats across the embodied system stack |
+| **[What Breaks Embodied AI Security: LLM Vulnerabilities, CPS Flaws, or Something Else?](https://arxiv.org/abs/2602.17345)** | Ma et al. | arXiv 2026 | • Physical<br>• Security/Privacy | • Survey coverage<br>• LLM jailbreaks<br>• CPS flaws<br>• closed-loop system mismatch |
+| **[Towards Robust and Secure Embodied AI: A Survey on Vulnerabilities and Attacks](https://arxiv.org/abs/2502.13175)** | Xing et al. | arXiv 2025 | • Task<br>• Physical<br>• Security/Privacy | • Survey coverage<br>• adversarial threats across perception<br>• planning<br>• control |
+| **[Towards Safe and Trustworthy Embodied AI: Foundations, Status, and Prospects](https://openreview.net/forum?id=Eu6Yt21Alv)** [![GitHub stars](https://img.shields.io/github/stars/AI45Lab/Awesome-Trustworthy-Embodied-AI?style=social)](https://github.com/AI45Lab/Awesome-Trustworthy-Embodied-AI) | Tan et al. | OpenReview 2025 | • Task<br>• Physical<br>• Ethical<br>• Security/Privacy | • Survey coverage<br>• design failures<br>• misalignment<br>• intervention<br>• recovery |
 
 ### Domain-Specific Surveys
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **A Survey on Vision-Language-Action Models for Autonomous Driving** | Jiang et al. | arXiv 2025 | Task, Physical | Survey coverage — OOD, robustness, safety, and formal verification in autonomous driving | [Paper](https://arxiv.org/abs/2506.24044) · [![GitHub stars](https://img.shields.io/github/stars/JohnsonJiang1996/Awesome-VLA4AD?style=social)](https://github.com/JohnsonJiang1996/Awesome-VLA4AD) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[A Survey on Vision-Language-Action Models for Autonomous Driving](https://arxiv.org/abs/2506.24044)** [![GitHub stars](https://img.shields.io/github/stars/JohnsonJiang1996/Awesome-VLA4AD?style=social)](https://github.com/JohnsonJiang1996/Awesome-VLA4AD) | Jiang et al. | arXiv 2025 | • Task<br>• Physical | • Survey coverage<br>• OOD<br>• robustness<br>• safety<br>• formal verification in autonomous driving |
 
 <a id="ood-generalization"></a>
 
@@ -67,40 +67,40 @@ See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.
 
 ### Representation and Language-Action Generalization
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **Generalizable VLA Finetuning via Representation Anchoring and Language-Action Alignment** | Dalal et al. | arXiv 2026 | Task | Non-adversarial OOD — representation shift, language instruction, viewpoint camera | [Paper](https://arxiv.org/abs/2607.13429) · [![GitHub stars](https://img.shields.io/github/stars/dwipddalal/Anchor-Align?style=social)](https://github.com/dwipddalal/Anchor-Align) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[Generalizable VLA Finetuning via Representation Anchoring and Language-Action Alignment](https://arxiv.org/abs/2607.13429)** [![GitHub stars](https://img.shields.io/github/stars/dwipddalal/Anchor-Align?style=social)](https://github.com/dwipddalal/Anchor-Align) | Dalal et al. | arXiv 2026 | • Task | • Non-adversarial OOD<br>• representation shift<br>• language instruction<br>• viewpoint camera |
 
 ### Action and Spatial Generalization
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **Boosting Vision-Language-Action Finetuning with Feasible Action Neighborhood Prior** | Niu et al. | CVPR 2026 | Task, Physical | Non-adversarial OOD — action neighborhood, spatial shift | [Paper](https://arxiv.org/abs/2604.01570) · [![GitHub stars](https://img.shields.io/github/stars/Haochen-Niu/FAN-VLA?style=social)](https://github.com/Haochen-Niu/FAN-VLA) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[Boosting Vision-Language-Action Finetuning with Feasible Action Neighborhood Prior](https://arxiv.org/abs/2604.01570)** [![GitHub stars](https://img.shields.io/github/stars/Haochen-Niu/FAN-VLA?style=social)](https://github.com/Haochen-Niu/FAN-VLA) | Niu et al. | CVPR 2026 | • Task<br>• Physical | • Non-adversarial OOD<br>• action neighborhood<br>• spatial shift |
 
 ### Benchmarks for Distribution Shift
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **LIBERO-PRO: Towards Robust and Fair Evaluation of Vision-Language-Action Models Beyond Memorization** | Zhou et al. | arXiv 2025 | Task | Non-adversarial OOD — benchmark, spatial shift, memorization | [Paper](https://arxiv.org/abs/2510.03827) · [![GitHub stars](https://img.shields.io/github/stars/Zxy-MLlab/LIBERO-PRO?style=social)](https://github.com/Zxy-MLlab/LIBERO-PRO) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[LIBERO-PRO: Towards Robust and Fair Evaluation of Vision-Language-Action Models Beyond Memorization](https://arxiv.org/abs/2510.03827)** [![GitHub stars](https://img.shields.io/github/stars/Zxy-MLlab/LIBERO-PRO?style=social)](https://github.com/Zxy-MLlab/LIBERO-PRO) | Zhou et al. | arXiv 2025 | • Task | • Non-adversarial OOD<br>• benchmark<br>• spatial shift<br>• memorization |
 
 ### Geometry and Object-Centric Stress Testing
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **Geometric Red-Teaming for Robotic Manipulation** | Goel et al. | arXiv 2025 | Task, Physical | Non-adversarial OOD — object geometry, red teaming, real robot | [Paper](https://arxiv.org/abs/2509.12379) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[Geometric Red-Teaming for Robotic Manipulation](https://arxiv.org/abs/2509.12379)** | Goel et al. | arXiv 2025 | • Task<br>• Physical | • Non-adversarial OOD<br>• object geometry<br>• red teaming<br>• real robot |
 
 ### Language and Instruction Generalization
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **ICR-Drive: Instruction Counterfactual Robustness for End-to-End Language-Driven Autonomous Driving** | Hamid et al. | arXiv 2026 | Task, Physical | Non-adversarial OOD — language instruction, counterfactual robustness | [Paper](https://arxiv.org/abs/2604.05378) · [![GitHub stars](https://img.shields.io/github/stars/icrdrive/icrdrive?style=social)](https://github.com/icrdrive/icrdrive) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[ICR-Drive: Instruction Counterfactual Robustness for End-to-End Language-Driven Autonomous Driving](https://arxiv.org/abs/2604.05378)** [![GitHub stars](https://img.shields.io/github/stars/icrdrive/icrdrive?style=social)](https://github.com/icrdrive/icrdrive) | Hamid et al. | arXiv 2026 | • Task<br>• Physical | • Non-adversarial OOD<br>• language instruction<br>• counterfactual robustness |
 
 ### Open-World Evaluation
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **How VLAs (Really) Work in Open-World Environments** | Rasouli et al. | arXiv 2026 | Task, Physical | Non-adversarial OOD — open world, environment domain | [Paper](https://arxiv.org/abs/2604.21192) |
-| **pi0.5: A Vision-Language-Action Model with Open-World Generalization** | Black et al. | arXiv 2025 | Task, Physical | Non-adversarial OOD — open world, environment domain, long horizon | [Paper](https://arxiv.org/abs/2504.16054) · [![GitHub stars](https://img.shields.io/github/stars/Physical-Intelligence/openpi?style=social)](https://github.com/Physical-Intelligence/openpi) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[How VLAs (Really) Work in Open-World Environments](https://arxiv.org/abs/2604.21192)** | Rasouli et al. | arXiv 2026 | • Task<br>• Physical | • Non-adversarial OOD<br>• open world<br>• environment domain |
+| **[pi0.5: A Vision-Language-Action Model with Open-World Generalization](https://arxiv.org/abs/2504.16054)** [![GitHub stars](https://img.shields.io/github/stars/Physical-Intelligence/openpi?style=social)](https://github.com/Physical-Intelligence/openpi) | Black et al. | arXiv 2025 | • Task<br>• Physical | • Non-adversarial OOD<br>• open world<br>• environment domain<br>• long horizon |
 
 <a id="training-attacks"></a>
 
@@ -108,14 +108,14 @@ See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.
 
 ### Backdoors and Data Poisoning
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **SilentDrift: Exploiting Action Chunking for Stealthy Backdoor Attacks on Vision-Language-Action Models** | Xu et al. | arXiv 2026 | Task, Physical, Security/Privacy | Training-time attack — backdoor, action chunk, temporal attack | [Paper](https://arxiv.org/abs/2601.14323) |
-| **State Backdoor: Towards Stealthy Real-World Poisoning Attack on Vision-Language-Action Models in State Space** | Guo et al. | arXiv 2026 | Task, Physical, Security/Privacy | Training-time attack — backdoor, state attack, physical access | [Paper](https://arxiv.org/abs/2601.04266) |
-| **BadVLA: Towards Backdoor Attacks on Vision-Language-Action Models via Objective-Decoupled Optimization** | Zhou et al. | NeurIPS 2025 | Task, Physical, Security/Privacy | Training-time attack — backdoor, training data | [Paper](https://arxiv.org/abs/2505.16640) · [![GitHub stars](https://img.shields.io/github/stars/Zxy-MLlab/BadVLA?style=social)](https://github.com/Zxy-MLlab/BadVLA) |
-| **Can We Trust Embodied Agents? Exploring Backdoor Attacks Against Embodied LLM-Based Decision-Making Systems** | Jiao et al. | ICLR 2025 | Task, Physical, Security/Privacy | Training-time attack — backdoor, decision making, knowledge injection | [Paper](https://arxiv.org/abs/2405.20774) · [![GitHub stars](https://img.shields.io/github/stars/ASGuard-UCI/BALD?style=social)](https://github.com/ASGuard-UCI/BALD) |
-| **DropVLA: An Action-Level Backdoor Attack on Vision-Language-Action Models** | Xu et al. | arXiv 2025 | Task, Physical, Security/Privacy | Training-time attack — backdoor, action output | [Paper](https://arxiv.org/abs/2510.10932) · [![GitHub stars](https://img.shields.io/github/stars/megaknight114/DropVLA?style=social)](https://github.com/megaknight114/DropVLA) |
-| **Goal-Oriented Backdoor Attack Against Vision-Language-Action Models via Physical Objects** | Zhou et al. | arXiv 2025 | Task, Physical, Security/Privacy | Training-time attack — physical-object backdoor for goal hijacking | [Paper](https://arxiv.org/abs/2510.09269) · [Project / Code](https://goba-attack.github.io/) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[SilentDrift: Exploiting Action Chunking for Stealthy Backdoor Attacks on Vision-Language-Action Models](https://arxiv.org/abs/2601.14323)** | Xu et al. | arXiv 2026 | • Task<br>• Physical<br>• Security/Privacy | • Training-time attack<br>• backdoor<br>• action chunk<br>• temporal attack |
+| **[State Backdoor: Towards Stealthy Real-World Poisoning Attack on Vision-Language-Action Models in State Space](https://arxiv.org/abs/2601.04266)** | Guo et al. | arXiv 2026 | • Task<br>• Physical<br>• Security/Privacy | • Training-time attack<br>• backdoor<br>• state attack<br>• physical access |
+| **[BadVLA: Towards Backdoor Attacks on Vision-Language-Action Models via Objective-Decoupled Optimization](https://arxiv.org/abs/2505.16640)** [![GitHub stars](https://img.shields.io/github/stars/Zxy-MLlab/BadVLA?style=social)](https://github.com/Zxy-MLlab/BadVLA) | Zhou et al. | NeurIPS 2025 | • Task<br>• Physical<br>• Security/Privacy | • Training-time attack<br>• backdoor<br>• training data |
+| **[Can We Trust Embodied Agents? Exploring Backdoor Attacks Against Embodied LLM-Based Decision-Making Systems](https://arxiv.org/abs/2405.20774)** [![GitHub stars](https://img.shields.io/github/stars/ASGuard-UCI/BALD?style=social)](https://github.com/ASGuard-UCI/BALD) | Jiao et al. | ICLR 2025 | • Task<br>• Physical<br>• Security/Privacy | • Training-time attack<br>• backdoor<br>• decision making<br>• knowledge injection |
+| **[DropVLA: An Action-Level Backdoor Attack on Vision-Language-Action Models](https://arxiv.org/abs/2510.10932)** [![GitHub stars](https://img.shields.io/github/stars/megaknight114/DropVLA?style=social)](https://github.com/megaknight114/DropVLA) | Xu et al. | arXiv 2025 | • Task<br>• Physical<br>• Security/Privacy | • Training-time attack<br>• backdoor<br>• action output |
+| **[Goal-Oriented Backdoor Attack Against Vision-Language-Action Models via Physical Objects](https://arxiv.org/abs/2510.09269)** [Project / Code](https://goba-attack.github.io/) | Zhou et al. | arXiv 2025 | • Task<br>• Physical<br>• Security/Privacy | • Training-time attack<br>• physical-object backdoor for goal hijacking |
 
 <a id="inference-attacks"></a>
 
@@ -123,42 +123,42 @@ See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.
 
 ### Visual Perturbations and Patches
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **When Robots Obey the Patch: Universal Transferable Patch Attacks on Vision-Language-Action Models** | Lu et al. | CVPR 2026 | Task, Physical, Security/Privacy | Inference-time attack — adversarial patch, black box transfer, sim to real | [Paper](https://arxiv.org/abs/2511.21192) · [![GitHub stars](https://img.shields.io/github/stars/yuyi-sd/UPA-RFAS?style=social)](https://github.com/yuyi-sd/UPA-RFAS) |
-| **ADVEDM: Fine-Grained Adversarial Attack Against VLM-Based Embodied Agents** | Wang et al. | NeurIPS 2025 | Task, Physical | Inference-time attack — fine grained attack, semantic manipulation, visual perturbation | [Paper](https://arxiv.org/abs/2509.16645) |
-| **Exploring the Adversarial Vulnerabilities of Vision-Language-Action Models in Robotics** | Wang et al. | ICCV 2025 | Task, Physical | Inference-time attack — adversarial patch, digital perturbation, real robot | [Paper](https://arxiv.org/abs/2411.13587) · [![GitHub stars](https://img.shields.io/github/stars/William-wAng618/roboticAttack?style=social)](https://github.com/William-wAng618/roboticAttack) |
-| **Model-Agnostic Adversarial Attack and Defense for Vision-Language-Action Models** | Xu et al. | arXiv 2025 | Task, Physical | Inference-time attack — adversarial patch, model agnostic, adversarial fine tuning | [Paper](https://arxiv.org/abs/2510.13237) · [![GitHub stars](https://img.shields.io/github/stars/trustmlyoungscientist/EDPA_attack_defense?style=social)](https://github.com/trustmlyoungscientist/EDPA_attack_defense) |
-| **When Alignment Fails: Multimodal Adversarial Attacks on Vision-Language-Action Models** | Yan et al. | arXiv 2025 | Task, Physical | Inference-time attack — digital perturbation, multimodal misalignment | [Paper](https://arxiv.org/abs/2511.16203) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[When Robots Obey the Patch: Universal Transferable Patch Attacks on Vision-Language-Action Models](https://arxiv.org/abs/2511.21192)** [![GitHub stars](https://img.shields.io/github/stars/yuyi-sd/UPA-RFAS?style=social)](https://github.com/yuyi-sd/UPA-RFAS) | Lu et al. | CVPR 2026 | • Task<br>• Physical<br>• Security/Privacy | • Inference-time attack<br>• adversarial patch<br>• black box transfer<br>• sim to real |
+| **[ADVEDM: Fine-Grained Adversarial Attack Against VLM-Based Embodied Agents](https://arxiv.org/abs/2509.16645)** | Wang et al. | NeurIPS 2025 | • Task<br>• Physical | • Inference-time attack<br>• fine grained attack<br>• semantic manipulation<br>• visual perturbation |
+| **[Exploring the Adversarial Vulnerabilities of Vision-Language-Action Models in Robotics](https://arxiv.org/abs/2411.13587)** [![GitHub stars](https://img.shields.io/github/stars/William-wAng618/roboticAttack?style=social)](https://github.com/William-wAng618/roboticAttack) | Wang et al. | ICCV 2025 | • Task<br>• Physical | • Inference-time attack<br>• adversarial patch<br>• digital perturbation<br>• real robot |
+| **[Model-Agnostic Adversarial Attack and Defense for Vision-Language-Action Models](https://arxiv.org/abs/2510.13237)** [![GitHub stars](https://img.shields.io/github/stars/trustmlyoungscientist/EDPA_attack_defense?style=social)](https://github.com/trustmlyoungscientist/EDPA_attack_defense) | Xu et al. | arXiv 2025 | • Task<br>• Physical | • Inference-time attack<br>• adversarial patch<br>• model agnostic<br>• adversarial fine tuning |
+| **[When Alignment Fails: Multimodal Adversarial Attacks on Vision-Language-Action Models](https://arxiv.org/abs/2511.16203)** | Yan et al. | arXiv 2025 | • Task<br>• Physical | • Inference-time attack<br>• digital perturbation<br>• multimodal misalignment |
 
 ### Planning, Action, and Trajectory Manipulation
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **FreezeVLA: Action-Freezing Attacks Against Vision-Language-Action Models** | Wang et al. | arXiv 2025 | Task, Physical | Inference-time attack — action freezing, dangerous inaction, digital perturbation | [Paper](https://arxiv.org/abs/2509.19870) · [![GitHub stars](https://img.shields.io/github/stars/xinwong/FreezeVLA?style=social)](https://github.com/xinwong/FreezeVLA) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[FreezeVLA: Action-Freezing Attacks Against Vision-Language-Action Models](https://arxiv.org/abs/2509.19870)** [![GitHub stars](https://img.shields.io/github/stars/xinwong/FreezeVLA?style=social)](https://github.com/xinwong/FreezeVLA) | Wang et al. | arXiv 2025 | • Task<br>• Physical | • Inference-time attack<br>• action freezing<br>• dangerous inaction<br>• digital perturbation |
 
 ### Sensor, State, and Physical Interventions
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **Phantom Menace: Exploring and Enhancing the Robustness of VLA Models Against Physical Sensor Attacks** | Lu et al. | AAAI 2026 | Task, Physical, Security/Privacy | Inference-time attack — sensor attack, physical intervention | [Paper](https://arxiv.org/abs/2511.10008) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[Phantom Menace: Exploring and Enhancing the Robustness of VLA Models Against Physical Sensor Attacks](https://arxiv.org/abs/2511.10008)** | Lu et al. | AAAI 2026 | • Task<br>• Physical<br>• Security/Privacy | • Inference-time attack<br>• sensor attack<br>• physical intervention |
 
 ### Jailbreaks and Prompt Injection
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **CHAI: Command Hijacking Against Embodied AI** | Burbano et al. | SaTML 2026 | Physical, Ethical, Security/Privacy | Inference-time attack — command hijacking, typographic attack, visual prompt injection | [Paper](https://arxiv.org/abs/2510.00181) · [![GitHub stars](https://img.shields.io/github/stars/Cyphysecurity/chai?style=social)](https://github.com/Cyphysecurity/chai) |
-| **If You're Waiting for a Sign... That Might Not Be It! Mitigating Trust Boundary Confusion from Visual Injections on Vision-Language Agentic Systems** | Chang et al. | arXiv 2026 | Task, Physical, Ethical, Security/Privacy | Inference-time attack — untrusted scene text used as visual prompt injection | [Paper](https://arxiv.org/abs/2604.19844) |
-| **Adversarial Attacks on Robotic Vision-Language-Action Models** | Jones et al. | arXiv 2025 | Physical, Ethical, Security/Privacy | Inference-time attack — jailbreak, command hijacking | [Paper](https://arxiv.org/abs/2506.03350) · [![GitHub stars](https://img.shields.io/github/stars/eliotjones1/robogcg?style=social)](https://github.com/eliotjones1/robogcg) |
-| **BadRobot: Jailbreaking Embodied LLM Agents in the Physical World** | Zhang et al. | ICLR 2025 | Physical, Ethical, Security/Privacy | Inference-time attack — jailbreak, voice instruction, physical harm | [Paper](https://arxiv.org/abs/2407.20242) · [![GitHub stars](https://img.shields.io/github/stars/Rookie143/BadRobot?style=social)](https://github.com/Rookie143/BadRobot) |
-| **Jailbreaking LLM-Controlled Robots** | Robey et al. | ICRA 2025 | Physical, Ethical, Security/Privacy | Inference-time attack — jailbreak, harmful policy, real robot | [Paper](https://arxiv.org/abs/2410.13691) · [![GitHub stars](https://img.shields.io/github/stars/arobey1/robopair?style=social)](https://github.com/arobey1/robopair) |
-| **POEX: Towards Policy Executable Jailbreak Attacks Against the LLM-Based Robots** | Lu et al. | arXiv 2025 | Physical, Ethical, Security/Privacy | Inference-time attack — jailbreak, policy executability, real robot | [Paper](https://arxiv.org/abs/2412.16633) · [Project / Code](https://poex-jailbreak.github.io/) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[CHAI: Command Hijacking Against Embodied AI](https://arxiv.org/abs/2510.00181)** [![GitHub stars](https://img.shields.io/github/stars/Cyphysecurity/chai?style=social)](https://github.com/Cyphysecurity/chai) | Burbano et al. | SaTML 2026 | • Physical<br>• Ethical<br>• Security/Privacy | • Inference-time attack<br>• command hijacking<br>• typographic attack<br>• visual prompt injection |
+| **[If You're Waiting for a Sign... That Might Not Be It! Mitigating Trust Boundary Confusion from Visual Injections on Vision-Language Agentic Systems](https://arxiv.org/abs/2604.19844)** | Chang et al. | arXiv 2026 | • Task<br>• Physical<br>• Ethical<br>• Security/Privacy | • Inference-time attack<br>• untrusted scene text used as visual prompt injection |
+| **[Adversarial Attacks on Robotic Vision-Language-Action Models](https://arxiv.org/abs/2506.03350)** [![GitHub stars](https://img.shields.io/github/stars/eliotjones1/robogcg?style=social)](https://github.com/eliotjones1/robogcg) | Jones et al. | arXiv 2025 | • Physical<br>• Ethical<br>• Security/Privacy | • Inference-time attack<br>• jailbreak<br>• command hijacking |
+| **[BadRobot: Jailbreaking Embodied LLM Agents in the Physical World](https://arxiv.org/abs/2407.20242)** [![GitHub stars](https://img.shields.io/github/stars/Rookie143/BadRobot?style=social)](https://github.com/Rookie143/BadRobot) | Zhang et al. | ICLR 2025 | • Physical<br>• Ethical<br>• Security/Privacy | • Inference-time attack<br>• jailbreak<br>• voice instruction<br>• physical harm |
+| **[Jailbreaking LLM-Controlled Robots](https://arxiv.org/abs/2410.13691)** [![GitHub stars](https://img.shields.io/github/stars/arobey1/robopair?style=social)](https://github.com/arobey1/robopair) | Robey et al. | ICRA 2025 | • Physical<br>• Ethical<br>• Security/Privacy | • Inference-time attack<br>• jailbreak<br>• harmful policy<br>• real robot |
+| **[POEX: Towards Policy Executable Jailbreak Attacks Against the LLM-Based Robots](https://arxiv.org/abs/2412.16633)** [Project / Code](https://poex-jailbreak.github.io/) | Lu et al. | arXiv 2025 | • Physical<br>• Ethical<br>• Security/Privacy | • Inference-time attack<br>• jailbreak<br>• policy executability<br>• real robot |
 
 ### Upstream VLM Attacks
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **Chain of Attack: On the Robustness of Vision-Language Models Against Transfer-Based Adversarial Attacks** | Xie et al. | CVPR 2025 | Task, Ethical, Security/Privacy | Inference-time attack — transfer attack, black box, multimodal semantics | [Paper](https://arxiv.org/abs/2411.15720) · [![GitHub stars](https://img.shields.io/github/stars/Shelton1013/Chain_of_Attack?style=social)](https://github.com/Shelton1013/Chain_of_Attack) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[Chain of Attack: On the Robustness of Vision-Language Models Against Transfer-Based Adversarial Attacks](https://arxiv.org/abs/2411.15720)** [![GitHub stars](https://img.shields.io/github/stars/Shelton1013/Chain_of_Attack?style=social)](https://github.com/Shelton1013/Chain_of_Attack) | Xie et al. | CVPR 2025 | • Task<br>• Ethical<br>• Security/Privacy | • Inference-time attack<br>• transfer attack<br>• black box<br>• multimodal semantics |
 
 <a id="defenses"></a>
 
@@ -166,65 +166,65 @@ See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.
 
 ### Robust Training and Safety Alignment
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **SafeVLA: Towards Safety Alignment of Vision-Language-Action Models via Constrained Learning** | Zhang et al. | NeurIPS 2025 | Task, Physical, Ethical | Hazardous instructions and unsafe policy generation | [Paper](https://arxiv.org/abs/2503.03480) · [![GitHub stars](https://img.shields.io/github/stars/PKU-Alignment/SafeVLA?style=social)](https://github.com/PKU-Alignment/SafeVLA) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[SafeVLA: Towards Safety Alignment of Vision-Language-Action Models via Constrained Learning](https://arxiv.org/abs/2503.03480)** [![GitHub stars](https://img.shields.io/github/stars/PKU-Alignment/SafeVLA?style=social)](https://github.com/PKU-Alignment/SafeVLA) | Zhang et al. | NeurIPS 2025 | • Task<br>• Physical<br>• Ethical | • Hazardous instructions and unsafe policy generation |
 
 ### Runtime Monitoring and Guardrails
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **RC-NF: Robot-Conditioned Normalizing Flow for Real-Time Anomaly Detection in Robotic Manipulation** | Zhou et al. | arXiv 2026 | Task, Physical | Non-adversarial execution anomaly — state-conditioned manipulation failures | [Paper](https://arxiv.org/abs/2603.11106) |
-| **Safety Guardrails for LLM-Enabled Robots** | Ravichandran et al. | IEEE RA-L 2026 | Physical, Ethical, Security/Privacy | Jailbreaks and unsafe plans from untrusted instructions | [Paper](https://arxiv.org/abs/2503.07885) |
-| **From Words to Safety: Language-Conditioned Safety Filtering for Robot Navigation** | Feng et al. | arXiv 2025 | Task, Physical | Unsafe navigation commands and context-dependent physical constraint violations | [Paper](https://arxiv.org/abs/2511.05889) |
-| **ROVER: Regulator-Driven Robust Temporal Verification of Black-Box Robot Policies** | Sakano et al. | arXiv 2025 | Task, Physical | Black-box policy failure — temporal safety-property violations during execution | [Paper](https://arxiv.org/abs/2511.17781) |
-| **VLSA: Vision-Language-Action Models with a Plug-and-Play Safety Constraint Layer** | Hu et al. | arXiv 2025 | Task, Physical | Unsafe VLA actions that violate physical constraints | [Paper](https://arxiv.org/abs/2512.11891) · [![GitHub stars](https://img.shields.io/github/stars/THU-RCSCT/vlsa-aegis?style=social)](https://github.com/THU-RCSCT/vlsa-aegis) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[RC-NF: Robot-Conditioned Normalizing Flow for Real-Time Anomaly Detection in Robotic Manipulation](https://arxiv.org/abs/2603.11106)** | Zhou et al. | arXiv 2026 | • Task<br>• Physical | • Non-adversarial execution anomaly<br>• state-conditioned manipulation failures |
+| **[Safety Guardrails for LLM-Enabled Robots](https://arxiv.org/abs/2503.07885)** | Ravichandran et al. | IEEE RA-L 2026 | • Physical<br>• Ethical<br>• Security/Privacy | • Jailbreaks and unsafe plans from untrusted instructions |
+| **[From Words to Safety: Language-Conditioned Safety Filtering for Robot Navigation](https://arxiv.org/abs/2511.05889)** | Feng et al. | arXiv 2025 | • Task<br>• Physical | • Unsafe navigation commands and context-dependent physical constraint violations |
+| **[ROVER: Regulator-Driven Robust Temporal Verification of Black-Box Robot Policies](https://arxiv.org/abs/2511.17781)** | Sakano et al. | arXiv 2025 | • Task<br>• Physical | • Black-box policy failure<br>• temporal safety-property violations during execution |
+| **[VLSA: Vision-Language-Action Models with a Plug-and-Play Safety Constraint Layer](https://arxiv.org/abs/2512.11891)** [![GitHub stars](https://img.shields.io/github/stars/THU-RCSCT/vlsa-aegis?style=social)](https://github.com/THU-RCSCT/vlsa-aegis) | Hu et al. | arXiv 2025 | • Task<br>• Physical | • Unsafe VLA actions that violate physical constraints |
 
 ### Action Shielding, Fail-Safes, and Recovery
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **SAFE: Multitask Failure Detection for Vision-Language-Action Models** | Gu et al. | NeurIPS 2025 | Task, Physical | Non-adversarial execution failures and OOD anomalies | [Paper](https://arxiv.org/abs/2506.09937) · [![GitHub stars](https://img.shields.io/github/stars/vla-safe/SAFE?style=social)](https://github.com/vla-safe/SAFE) |
-| **Plug in the Safety Chip: Enforcing Constraints for LLM-Driven Robot Agents** | Yang et al. | arXiv 2023 | Task, Physical | Unsafe LLM-generated plans that violate formal constraints | [Paper](https://arxiv.org/abs/2309.09919) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[SAFE: Multitask Failure Detection for Vision-Language-Action Models](https://arxiv.org/abs/2506.09937)** [![GitHub stars](https://img.shields.io/github/stars/vla-safe/SAFE?style=social)](https://github.com/vla-safe/SAFE) | Gu et al. | NeurIPS 2025 | • Task<br>• Physical | • Non-adversarial execution failures and OOD anomalies |
+| **[Plug in the Safety Chip: Enforcing Constraints for LLM-Driven Robot Agents](https://arxiv.org/abs/2309.09919)** | Yang et al. | arXiv 2023 | • Task<br>• Physical | • Unsafe LLM-generated plans that violate formal constraints |
 
 ### Representation Steering and Inference-Time Defense
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **Restoring Linguistic Grounding in VLA Models via Train-Free Attention Recalibration** | Zhang et al. | arXiv 2026 | Task, Physical | Non-adversarial OOD — linguistic grounding degradation and instruction neglect | [Paper](https://arxiv.org/abs/2603.06001) |
-| **Concept Enhancement Engineering: A Lightweight and Efficient Robust Defense Against Jailbreak Attacks in Embodied AI** | Yang et al. | arXiv 2025 | Physical, Ethical, Security/Privacy | Jailbreak attacks on embodied LLM planners | [Paper](https://arxiv.org/abs/2504.13201) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[Restoring Linguistic Grounding in VLA Models via Train-Free Attention Recalibration](https://arxiv.org/abs/2603.06001)** | Zhang et al. | arXiv 2026 | • Task<br>• Physical | • Non-adversarial OOD<br>• linguistic grounding degradation and instruction neglect |
+| **[Concept Enhancement Engineering: A Lightweight and Efficient Robust Defense Against Jailbreak Attacks in Embodied AI](https://arxiv.org/abs/2504.13201)** | Yang et al. | arXiv 2025 | • Physical<br>• Ethical<br>• Security/Privacy | • Jailbreak attacks on embodied LLM planners |
 
 ### System and Communication Defenses
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **AgentSafe: Safeguarding Large Language Model-Based Multi-Agent Systems via Hierarchical Data Management** | Mao et al. | arXiv 2025 | Task, Ethical, Security/Privacy | Memory poisoning, impersonation, and unauthorized inter-agent access | [Paper](https://arxiv.org/abs/2503.04392) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[AgentSafe: Safeguarding Large Language Model-Based Multi-Agent Systems via Hierarchical Data Management](https://arxiv.org/abs/2503.04392)** | Mao et al. | arXiv 2025 | • Task<br>• Ethical<br>• Security/Privacy | • Memory poisoning, impersonation, and unauthorized inter-agent access |
 
 ### Active Perception and Recovery
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **Affordance Field Intervention: Enabling VLAs to Escape Memory Traps in Robotic Manipulation** | Xu et al. | arXiv 2025 | Task, Physical | Non-adversarial OOD — spatial, object, color, and background shifts causing memory traps | [Paper](https://arxiv.org/abs/2512.07472) |
-| **FailSafe: Reasoning and Recovery from Failures in Vision-Language-Action Models** | Lin et al. | arXiv 2025 | Task, Physical | Non-adversarial execution failure — detection, explanation, and closed-loop recovery | [Paper](https://arxiv.org/abs/2510.01642) |
-| **Embodied Active Defense: Leveraging Recurrent Feedback to Counter Adversarial Patches** | Wu et al. | ICLR 2024 | Task, Physical, Security/Privacy | Physical adversarial patches, including unseen or adaptive patches | [Paper](https://arxiv.org/abs/2404.00540) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[Affordance Field Intervention: Enabling VLAs to Escape Memory Traps in Robotic Manipulation](https://arxiv.org/abs/2512.07472)** | Xu et al. | arXiv 2025 | • Task<br>• Physical | • Non-adversarial OOD<br>• spatial<br>• object<br>• color<br>• background shifts causing memory traps |
+| **[FailSafe: Reasoning and Recovery from Failures in Vision-Language-Action Models](https://arxiv.org/abs/2510.01642)** | Lin et al. | arXiv 2025 | • Task<br>• Physical | • Non-adversarial execution failure<br>• detection<br>• explanation<br>• closed-loop recovery |
+| **[Embodied Active Defense: Leveraging Recurrent Feedback to Counter Adversarial Patches](https://arxiv.org/abs/2404.00540)** | Wu et al. | ICLR 2024 | • Task<br>• Physical<br>• Security/Privacy | • Physical adversarial patches, including unseen or adaptive patches |
 
 ### Multimodal Perception and Physical Safeguards
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **Safe-Night VLA: Seeing the Unseen via Thermal-Perceptive Vision-Language-Action Models for Safety-Critical Manipulation** | Yu et al. | arXiv 2026 | Task, Physical | Non-adversarial OOD — low light, hidden thermal state, occlusion, and geometric violations | [Paper](https://arxiv.org/abs/2603.05754) · [Project / Code](https://thisanwerss.github.io/Safe-Night-VLA/) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[Safe-Night VLA: Seeing the Unseen via Thermal-Perceptive Vision-Language-Action Models for Safety-Critical Manipulation](https://arxiv.org/abs/2603.05754)** [Project / Code](https://thisanwerss.github.io/Safe-Night-VLA/) | Yu et al. | arXiv 2026 | • Task<br>• Physical | • Non-adversarial OOD<br>• low light<br>• hidden thermal state<br>• occlusion<br>• geometric violations |
 
 ### Human-in-the-Loop Safety Refinement
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **Human-in-the-Loop Online Rejection Sampling for Robotic Manipulation** | Lu et al. | arXiv 2025 | Task, Physical | Non-adversarial failure — unsafe or low-quality policy rollouts rejected by human feedback | [Paper](https://arxiv.org/abs/2510.26406) · [Project / Code](https://hiors-project.github.io/) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[Human-in-the-Loop Online Rejection Sampling for Robotic Manipulation](https://arxiv.org/abs/2510.26406)** [Project / Code](https://hiors-project.github.io/) | Lu et al. | arXiv 2025 | • Task<br>• Physical | • Non-adversarial failure<br>• unsafe or low-quality policy rollouts rejected by human feedback |
 
 ### Runtime Observation Interventions
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **Run-Time Observation Interventions Make Vision-Language-Action Models More Visually Robust** | Hancock et al. | arXiv 2024 | Task, Physical | Non-adversarial OOD — task-irrelevant object and background distractors | [Paper](https://arxiv.org/abs/2410.01971) · [![GitHub stars](https://img.shields.io/github/stars/irom-princeton/byovla?style=social)](https://github.com/irom-princeton/byovla) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[Run-Time Observation Interventions Make Vision-Language-Action Models More Visually Robust](https://arxiv.org/abs/2410.01971)** [![GitHub stars](https://img.shields.io/github/stars/irom-princeton/byovla?style=social)](https://github.com/irom-princeton/byovla) | Hancock et al. | arXiv 2024 | • Task<br>• Physical | • Non-adversarial OOD<br>• task-irrelevant object and background distractors |
 
 <a id="benchmarks"></a>
 
@@ -232,51 +232,51 @@ See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.
 
 ### Comprehensive VLA Evaluation
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models** | Zhang et al. | arXiv 2025 | Task, Physical | Evaluation — capability, robustness, and closed-loop safety failures | [Paper](https://arxiv.org/abs/2512.22539) · [![GitHub stars](https://img.shields.io/github/stars/PKU-Alignment/VLA-Arena?style=social)](https://github.com/PKU-Alignment/VLA-Arena) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models](https://arxiv.org/abs/2512.22539)** [![GitHub stars](https://img.shields.io/github/stars/PKU-Alignment/VLA-Arena?style=social)](https://github.com/PKU-Alignment/VLA-Arena) | Zhang et al. | arXiv 2025 | • Task<br>• Physical | • Evaluation<br>• capability<br>• robustness<br>• closed-loop safety failures |
 
 ### Adversarial and Physical Robustness
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **VLA-Risk: Benchmarking Vision-Language-Action Models with Physical Robustness** | Ru et al. | OpenReview 2026 | Task, Physical | Adversarial and physical robustness — visual and physical perturbations | [Paper](https://openreview.net/forum?id=31EjDFwFEe) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[VLA-Risk: Benchmarking Vision-Language-Action Models with Physical Robustness](https://openreview.net/forum?id=31EjDFwFEe)** | Ru et al. | OpenReview 2026 | • Task<br>• Physical | • Adversarial and physical robustness<br>• visual and physical perturbations |
 
 ### Task and Physical Safety
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents in Daily Household Tasks** | Lu et al. | AAAI 2026 | Task, Physical | Interactive physical hazards — mitigation and recovery failures | [Paper](https://arxiv.org/abs/2506.16402) |
-| **SafeAgentBench: A Benchmark for Safe Task Planning of Embodied LLM Agents** | Yin et al. | arXiv 2025 | Task, Physical, Ethical | Hazardous instructions — unsafe embodied task planning | [Paper](https://arxiv.org/abs/2412.13178) · [![GitHub stars](https://img.shields.io/github/stars/shengyin1224/SafeAgentBench?style=social)](https://github.com/shengyin1224/SafeAgentBench) |
-| **EARBench: Towards Evaluating Physical Risk Awareness for Task Planning of Foundation Model-Based Embodied AI Agents** | Zhu et al. | arXiv 2024 | Task, Physical | Physical-risk scenarios — insufficient hazard awareness | [Paper](https://arxiv.org/abs/2408.04449) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents in Daily Household Tasks](https://arxiv.org/abs/2506.16402)** | Lu et al. | AAAI 2026 | • Task<br>• Physical | • Interactive physical hazards<br>• mitigation and recovery failures |
+| **[SafeAgentBench: A Benchmark for Safe Task Planning of Embodied LLM Agents](https://arxiv.org/abs/2412.13178)** [![GitHub stars](https://img.shields.io/github/stars/shengyin1224/SafeAgentBench?style=social)](https://github.com/shengyin1224/SafeAgentBench) | Yin et al. | arXiv 2025 | • Task<br>• Physical<br>• Ethical | • Hazardous instructions<br>• unsafe embodied task planning |
+| **[EARBench: Towards Evaluating Physical Risk Awareness for Task Planning of Foundation Model-Based Embodied AI Agents](https://arxiv.org/abs/2408.04449)** | Zhu et al. | arXiv 2024 | • Task<br>• Physical | • Physical-risk scenarios<br>• insufficient hazard awareness |
 
 ### Semantic and Ethical Safety
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **Generating Robot Constitutions and Benchmarks for Semantic Safety** | Sermanet et al. | arXiv 2025 | Physical, Ethical | Semantic safety — constitution violations and harmful actions | [Paper](https://arxiv.org/abs/2503.08663) · [![GitHub stars](https://img.shields.io/github/stars/asimov-benchmark/asimov-benchmark.github.io?style=social)](https://github.com/asimov-benchmark/asimov-benchmark.github.io) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[Generating Robot Constitutions and Benchmarks for Semantic Safety](https://arxiv.org/abs/2503.08663)** [![GitHub stars](https://img.shields.io/github/stars/asimov-benchmark/asimov-benchmark.github.io?style=social)](https://github.com/asimov-benchmark/asimov-benchmark.github.io) | Sermanet et al. | arXiv 2025 | • Physical<br>• Ethical | • Semantic safety<br>• constitution violations and harmful actions |
 
 ### Evaluation Infrastructure
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **Evaluating Real-World Robot Manipulation Policies in Simulation** | Li et al. | CoRL 2024 | Task, Physical | Sim-to-real shift — policy evaluation under environment mismatch | [Paper](https://arxiv.org/abs/2405.05941) · [![GitHub stars](https://img.shields.io/github/stars/simpler-env/SimplerEnv?style=social)](https://github.com/simpler-env/SimplerEnv) |
-| **LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning** | Liu et al. | NeurIPS Datasets and Benchmarks 2023 | Task | Non-adversarial OOD — task composition and knowledge-transfer shifts | [Paper](https://arxiv.org/abs/2306.03310) · [![GitHub stars](https://img.shields.io/github/stars/Lifelong-Robot-Learning/LIBERO?style=social)](https://github.com/Lifelong-Robot-Learning/LIBERO) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[Evaluating Real-World Robot Manipulation Policies in Simulation](https://arxiv.org/abs/2405.05941)** [![GitHub stars](https://img.shields.io/github/stars/simpler-env/SimplerEnv?style=social)](https://github.com/simpler-env/SimplerEnv) | Li et al. | CoRL 2024 | • Task<br>• Physical | • Sim-to-real shift<br>• policy evaluation under environment mismatch |
+| **[LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning](https://arxiv.org/abs/2306.03310)** [![GitHub stars](https://img.shields.io/github/stars/Lifelong-Robot-Learning/LIBERO?style=social)](https://github.com/Lifelong-Robot-Learning/LIBERO) | Liu et al. | NeurIPS Datasets and Benchmarks 2023 | • Task | • Non-adversarial OOD<br>• task composition and knowledge-transfer shifts |
 
 ### Safety and Hazard Benchmarks
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **HazardArena: Evaluating Semantic Safety in Vision-Language-Action Models** | Chen et al. | arXiv 2026 | Task, Physical, Ethical | Semantic safety — hazardous instructions, unsafe context, and harmful action execution | [Paper](https://arxiv.org/abs/2604.12447) |
-| **AGENTSAFE: Benchmarking the Safety of Embodied Agents on Hazardous Instructions** | Ying et al. | arXiv 2025 | Physical, Ethical | Hazardous instructions — harmful or policy-violating embodied actions | [Paper](https://arxiv.org/abs/2506.14697) |
-| **SafeMind: Benchmarking and Mitigating Safety Risks in Embodied LLM Agents** | Chen et al. | arXiv 2025 | Physical, Ethical, Security/Privacy | Hazardous instructions and unsafe embodied planning under adversarial prompting | [Paper](https://arxiv.org/abs/2509.25885) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[HazardArena: Evaluating Semantic Safety in Vision-Language-Action Models](https://arxiv.org/abs/2604.12447)** | Chen et al. | arXiv 2026 | • Task<br>• Physical<br>• Ethical | • Semantic safety<br>• hazardous instructions<br>• unsafe context<br>• harmful action execution |
+| **[AGENTSAFE: Benchmarking the Safety of Embodied Agents on Hazardous Instructions](https://arxiv.org/abs/2506.14697)** | Ying et al. | arXiv 2025 | • Physical<br>• Ethical | • Hazardous instructions<br>• harmful or policy-violating embodied actions |
+| **[SafeMind: Benchmarking and Mitigating Safety Risks in Embodied LLM Agents](https://arxiv.org/abs/2509.25885)** | Chen et al. | arXiv 2025 | • Physical<br>• Ethical<br>• Security/Privacy | • Hazardous instructions and unsafe embodied planning under adversarial prompting |
 
 ### Robustness and Uncertainty Evaluation
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **Confidence Calibration in Vision-Language-Action Models** | Zollo et al. | arXiv 2025 | Task, Physical | Non-adversarial uncertainty — overconfidence under errors and distribution shift | [Paper](https://arxiv.org/abs/2507.17383) |
-| **VLATest: Testing and Evaluating Vision-Language-Action Models for Robotic Manipulation** | Wang et al. | arXiv 2024 | Task, Physical | Evaluation — natural and adversarial input mutations in manipulation tasks | [Paper](https://arxiv.org/abs/2409.12894) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[Confidence Calibration in Vision-Language-Action Models](https://arxiv.org/abs/2507.17383)** | Zollo et al. | arXiv 2025 | • Task<br>• Physical | • Non-adversarial uncertainty<br>• overconfidence under errors and distribution shift |
+| **[VLATest: Testing and Evaluating Vision-Language-Action Models for Robotic Manipulation](https://arxiv.org/abs/2409.12894)** | Wang et al. | arXiv 2024 | • Task<br>• Physical | • Evaluation<br>• natural and adversarial input mutations in manipulation tasks |
 
 <a id="system-security"></a>
 
@@ -284,15 +284,15 @@ See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.
 
 ### Cross-Layer System Security
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **Beyond Model Jailbreak: Systematic Dissection of the Ten Deadly Sins in Embodied Intelligence** | Huang et al. | arXiv 2025 | Physical, Security/Privacy | System-level attack — wireless, cloud, application, and firmware compromise | [Paper](https://arxiv.org/abs/2512.06387) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[Beyond Model Jailbreak: Systematic Dissection of the Ten Deadly Sins in Embodied Intelligence](https://arxiv.org/abs/2512.06387)** | Huang et al. | arXiv 2025 | • Physical<br>• Security/Privacy | • System-level attack<br>• wireless<br>• cloud<br>• application<br>• firmware compromise |
 
 ### Privacy, Misuse, and Covert Channels
 
-| Paper | Authors | Venue | Risk | Threat Model | Resources |
-|---|---|---:|---|---|---|
-| **Cyber-Physical Steganography in Robotic Motion Control** | Chang et al. | IEICE Transactions 2026 | Ethical, Security/Privacy | System-level misuse — covert channels encoded in robot trajectories | [Paper](https://arxiv.org/abs/2501.04541) |
+| Paper | Authors | Venue | Risk | Threat Model |
+|---|---|---:|---|---|
+| **[Cyber-Physical Steganography in Robotic Motion Control](https://arxiv.org/abs/2501.04541)** | Chang et al. | IEICE Transactions 2026 | • Ethical<br>• Security/Privacy | • System-level misuse<br>• covert channels encoded in robot trajectories |
 
 ## Scope and Curation Policy
 
