@@ -2,6 +2,8 @@
 
 Thank you for helping improve Awesome Responsible VLA.
 
+For recurring literature maintenance, follow the [daily curation workflow](docs/daily-curation-workflow.md).
+
 ## Add or Update a Paper
 
 1. Edit `data/papers.json`.
