@@ -108,8 +108,8 @@ def main() -> int:
         invalid_risks = set(paper.get("risks", [])) - RISKS
         if invalid_risks:
             errors.append(f"{label}: invalid risks {sorted(invalid_risks)}")
-        if not paper.get("risks"):
-            errors.append(f"{label}: risks must not be empty")
+        if not isinstance(paper.get("risks"), list):
+            errors.append(f"{label}: risks must be a list")
         if not paper.get("tags"):
             errors.append(f"{label}: tags must not be empty")
         if not isinstance(paper.get("threat_model"), str) or not paper.get("threat_model", "").strip():

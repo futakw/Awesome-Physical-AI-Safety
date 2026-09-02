@@ -2,25 +2,32 @@
 
 This repository uses a multi-axis taxonomy. A paper's primary section describes its main research contribution; independent metadata describes the outcomes at risk, the failure source, the mechanism, and the evaluation regime.
 
-## 1. Risk Outcomes
+## 1. Empirically Evaluated Risk Outcomes
 
-Risk outcomes are multi-label because a system may complete a task while remaining unsafe, unethical, or compromised.
+The `risks` field is evidence-coded, not a list of plausible consequences. A label is assigned only when the paper's experiments report a metric for that outcome. A survey that discusses all four risks therefore has an empty list, while an attack paper may receive both `Task Success` and `Security & Privacy` when it reports task success and attack success rate. Physical deployment alone does not justify a `Physical Safety` label.
 
 ### Task and Reliability Risk
 
-Task failure, degraded success, wrong-object or wrong-subtask execution, trajectory deviation, dangerous inaction, recovery failure, and uncertainty or calibration failure.
+Task or route completion, success rate, or an equivalent end-to-end execution outcome. Action deviation, detection accuracy, calibration error, and attack success alone do not qualify.
 
 ### Physical Safety Risk
 
-Collision, human injury, object or environment damage, unsafe force or motion, safety-constraint violation, and failure to mitigate an emerging hazard.
+Collision, human injury, object or environment damage, unsafe force or motion, physical-harm execution, safety-constraint violation, or an explicit physical-risk proxy.
 
 ### Ethical and Societal Risk
 
-Execution of harmful or prohibited instructions, inappropriate use, deceptive behavior, insufficient human oversight, and socially harmful embodied behavior.
+Compliance or refusal under harmful or prohibited instructions, policy or constitution violations, and explicitly measured harmful embodied behavior.
 
 ### Security and Privacy Risk
 
-Unauthorized control, backdoor persistence, information leakage, covert communication, compromised memory or agent communication, and cloud, network, firmware, or application compromise.
+Attack success, backdoor activation, unauthorized control, command hijacking, information leakage, covert communication, compromised memory or communication, and system compromise.
+
+### Assignment Rule
+
+1. Identify the metrics actually reported in experiments.
+2. Map only those metrics to the four outcomes above.
+3. Do not assign a label from the title, motivation, deployment setting, or a hypothetical downstream consequence.
+4. Use an empty `risks` list when no reported metric maps to these outcomes; the README displays `—`.
 
 ## 2. Failure Sources
 

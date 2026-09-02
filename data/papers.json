@@ -10,7 +10,7 @@
     "section": "surveys",
     "subsection": "VLA Safety Surveys",
     "scope": "vla",
-    "risks": ["task-reliability", "physical-safety", "ethical-societal", "security-privacy"],
+    "risks": [],
     "threat_model": "Survey scope (attacks, defenses, OOD, safety evaluation)",
     "tags": ["survey", "taxonomy"]
   },
@@ -25,7 +25,7 @@
     "section": "surveys",
     "subsection": "Embodied AI Safety and Security",
     "scope": "embodied-agent",
-    "risks": ["task-reliability", "physical-safety", "security-privacy"],
+    "risks": [],
     "threat_model": "Survey scope (perception, planning, control attacks)",
     "tags": ["survey", "vulnerability-taxonomy"]
   },
@@ -40,7 +40,7 @@
     "section": "surveys",
     "subsection": "Embodied AI Safety and Security",
     "scope": "embodied-agent",
-    "risks": ["physical-safety", "security-privacy"],
+    "risks": [],
     "threat_model": "Survey scope (LLM jailbreak, CPS flaw, closed-loop mismatch)",
     "tags": ["perspective", "closed-loop-safety"]
   },
@@ -70,7 +70,7 @@
     "section": "ood-generalization",
     "subsection": "Action and Spatial Generalization",
     "scope": "vla",
-    "risks": ["task-reliability", "physical-safety"],
+    "risks": ["task-reliability"],
     "threat_model": "Non-adversarial OOD (action neighborhood, spatial shift)",
     "tags": ["action-neighborhood", "spatial-shift"]
   },
@@ -100,7 +100,7 @@
     "section": "ood-generalization",
     "subsection": "Geometry and Object-Centric Stress Testing",
     "scope": "robot-policy",
-    "risks": ["task-reliability", "physical-safety"],
+    "risks": ["task-reliability"],
     "threat_model": "Non-adversarial OOD (object geometry)",
     "tags": ["object-geometry", "red-teaming", "real-robot"]
   },
@@ -145,7 +145,7 @@
     "section": "training-attacks",
     "subsection": "Backdoors and Data Poisoning",
     "scope": "vla",
-    "risks": ["task-reliability", "physical-safety", "security-privacy"],
+    "risks": ["task-reliability", "security-privacy"],
     "threat_model": "Training-time attack (backdoor)",
     "tags": ["backdoor", "training-data"]
   },
@@ -160,7 +160,7 @@
     "section": "training-attacks",
     "subsection": "Backdoors and Data Poisoning",
     "scope": "vla",
-    "risks": ["task-reliability", "physical-safety", "security-privacy"],
+    "risks": ["task-reliability", "security-privacy"],
     "threat_model": "Training-time attack (action-output backdoor)",
     "tags": ["backdoor", "action-output"]
   },
@@ -175,7 +175,7 @@
     "section": "training-attacks",
     "subsection": "Backdoors and Data Poisoning",
     "scope": "vla",
-    "risks": ["task-reliability", "physical-safety", "security-privacy"],
+    "risks": ["task-reliability", "security-privacy"],
     "threat_model": "Training-time attack (state backdoor)",
     "tags": ["backdoor", "state-attack", "physical-access"]
   },
@@ -190,7 +190,7 @@
     "section": "training-attacks",
     "subsection": "Backdoors and Data Poisoning",
     "scope": "vla",
-    "risks": ["task-reliability", "physical-safety", "security-privacy"],
+    "risks": ["task-reliability", "security-privacy"],
     "threat_model": "Training-time attack (temporal action-chunk backdoor)",
     "tags": ["backdoor", "action-chunk", "temporal-attack"]
   },
@@ -205,7 +205,7 @@
     "section": "inference-attacks",
     "subsection": "Visual Perturbations and Patches",
     "scope": "vla",
-    "risks": ["task-reliability", "physical-safety"],
+    "risks": ["task-reliability", "security-privacy"],
     "threat_model": "Inference-time attack (adversarial patch)",
     "tags": ["adversarial-patch", "digital-perturbation", "real-robot"]
   },
@@ -220,7 +220,7 @@
     "section": "inference-attacks",
     "subsection": "Visual Perturbations and Patches",
     "scope": "vla",
-    "risks": ["task-reliability", "physical-safety"],
+    "risks": ["task-reliability", "security-privacy"],
     "threat_model": "Inference-time attack (multimodal perturbation)",
     "tags": ["digital-perturbation", "multimodal-misalignment"]
   },
@@ -235,7 +235,7 @@
     "section": "inference-attacks",
     "subsection": "Planning, Action, and Trajectory Manipulation",
     "scope": "vla",
-    "risks": ["task-reliability", "physical-safety"],
+    "risks": ["security-privacy"],
     "threat_model": "Inference-time attack (action freezing)",
     "tags": ["action-freezing", "dangerous-inaction", "digital-perturbation"]
   },
@@ -250,7 +250,7 @@
     "section": "inference-attacks",
     "subsection": "Sensor, State, and Physical Interventions",
     "scope": "vla",
-    "risks": ["task-reliability", "physical-safety", "security-privacy"],
+    "risks": ["task-reliability", "security-privacy"],
     "threat_model": "Inference-time attack (physical sensor intervention)",
     "tags": ["sensor-attack", "physical-intervention"]
   },
@@ -295,7 +295,7 @@
     "section": "inference-attacks",
     "subsection": "Jailbreaks and Prompt Injection",
     "scope": "embodied-agent",
-    "risks": ["physical-safety", "ethical-societal", "security-privacy"],
+    "risks": ["security-privacy"],
     "threat_model": "Inference-time attack (visual prompt injection)",
     "tags": ["command-hijacking", "typographic-attack", "visual-prompt-injection"]
   },
@@ -310,7 +310,7 @@
     "section": "inference-attacks",
     "subsection": "Visual Perturbations and Patches",
     "scope": "embodied-agent",
-    "risks": ["task-reliability", "physical-safety"],
+    "risks": ["security-privacy"],
     "threat_model": "Inference-time attack (semantic visual perturbation)",
     "tags": ["fine-grained-attack", "semantic-manipulation", "visual-perturbation"]
   },
@@ -325,7 +325,7 @@
     "section": "inference-attacks",
     "subsection": "Visual Perturbations and Patches",
     "scope": "vla",
-    "risks": ["task-reliability", "physical-safety"],
+    "risks": ["task-reliability", "security-privacy"],
     "threat_model": "Inference-time attack (adversarial patch)",
     "tags": ["adversarial-patch", "model-agnostic", "adversarial-fine-tuning"]
   },
@@ -340,8 +340,8 @@
     "section": "defenses",
     "subsection": "Robust Training and Safety Alignment",
     "scope": "vla",
-    "risks": ["task-reliability", "physical-safety", "ethical-societal"],
-    "threat_model": "Hazardous instruction (unsafe policy generation)",
+    "risks": ["task-reliability", "physical-safety"],
+    "threat_model": "Physical safety violation (unsafe policy behavior)",
     "tags": ["safety-alignment", "constrained-learning"]
   },
   {
@@ -370,7 +370,7 @@
     "section": "defenses",
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "llm-robot",
-    "risks": ["physical-safety", "ethical-societal", "security-privacy"],
+    "risks": ["task-reliability", "physical-safety", "security-privacy"],
     "threat_model": "Hazardous instruction (jailbreak, unsafe plan)",
     "tags": ["guardrail", "control-synthesis"]
   },
@@ -385,7 +385,7 @@
     "section": "defenses",
     "subsection": "Action Shielding, Fail-Safes, and Recovery",
     "scope": "llm-robot",
-    "risks": ["task-reliability", "physical-safety"],
+    "risks": ["physical-safety"],
     "threat_model": "Planning failure (formal-constraint violation)",
     "tags": ["formal-constraint", "runtime-monitoring"]
   },
@@ -400,7 +400,7 @@
     "section": "defenses",
     "subsection": "Action Shielding, Fail-Safes, and Recovery",
     "scope": "vla",
-    "risks": ["task-reliability", "physical-safety"],
+    "risks": [],
     "threat_model": "Execution failure (OOD anomaly)",
     "tags": ["failure-detection", "runtime-monitoring"]
   },
@@ -430,7 +430,7 @@
     "section": "benchmarks",
     "subsection": "Adversarial and Physical Robustness",
     "scope": "vla",
-    "risks": ["task-reliability", "physical-safety"],
+    "risks": ["task-reliability", "security-privacy"],
     "threat_model": "Evaluation scope (visual, physical perturbation)",
     "tags": ["benchmark", "physical-robustness"]
   },
@@ -445,7 +445,7 @@
     "section": "benchmarks",
     "subsection": "Task and Physical Safety",
     "scope": "embodied-agent",
-    "risks": ["task-reliability", "physical-safety", "ethical-societal"],
+    "risks": ["task-reliability", "ethical-societal"],
     "threat_model": "Hazardous instruction (unsafe task planning)",
     "tags": ["hazardous-instruction", "task-planning"]
   },
@@ -475,7 +475,7 @@
     "section": "benchmarks",
     "subsection": "Task and Physical Safety",
     "scope": "embodied-agent",
-    "risks": ["task-reliability", "physical-safety"],
+    "risks": ["physical-safety"],
     "threat_model": "Physical safety violation (insufficient hazard awareness)",
     "tags": ["physical-risk-awareness", "task-planning"]
   },
@@ -490,7 +490,7 @@
     "section": "benchmarks",
     "subsection": "Semantic and Ethical Safety",
     "scope": "robot-agent",
-    "risks": ["physical-safety", "ethical-societal"],
+    "risks": ["ethical-societal"],
     "threat_model": "Semantic safety violation (constitution, harmful action)",
     "tags": ["robot-constitution", "semantic-safety"]
   },
@@ -505,7 +505,7 @@
     "section": "benchmarks",
     "subsection": "Evaluation Infrastructure",
     "scope": "robot-policy",
-    "risks": ["task-reliability", "physical-safety"],
+    "risks": ["task-reliability"],
     "threat_model": "Non-adversarial OOD (sim-to-real)",
     "tags": ["simulation", "sim-to-real", "evaluation-framework"]
   },
@@ -535,7 +535,7 @@
     "section": "system-security",
     "subsection": "Cross-Layer System Security",
     "scope": "robot-system",
-    "risks": ["physical-safety", "security-privacy"],
+    "risks": ["security-privacy"],
     "threat_model": "System-level attack (wireless, cloud, application, firmware)",
     "tags": ["cloud-api", "firmware", "wireless", "system-compromise"]
   },
@@ -550,7 +550,7 @@
     "section": "system-security",
     "subsection": "Privacy, Misuse, and Covert Channels",
     "scope": "vla",
-    "risks": ["ethical-societal", "security-privacy"],
+    "risks": ["security-privacy"],
     "threat_model": "System-level misuse (trajectory covert channel)",
     "tags": ["covert-channel", "trajectory-manipulation", "misuse"]
   },
@@ -565,7 +565,7 @@
     "section": "surveys",
     "subsection": "Embodied AI Safety and Security",
     "scope": "embodied-agent",
-    "risks": ["task-reliability", "physical-safety", "ethical-societal", "security-privacy"],
+    "risks": [],
     "threat_model": "Survey scope (system security, privacy)",
     "tags": ["survey", "security", "privacy"]
   },
@@ -580,7 +580,7 @@
     "section": "surveys",
     "subsection": "Embodied AI Safety and Security",
     "scope": "embodied-agent",
-    "risks": ["task-reliability", "physical-safety", "ethical-societal", "security-privacy"],
+    "risks": [],
     "threat_model": "Survey scope (design failure, misalignment, recovery)",
     "tags": ["survey", "trustworthiness", "maturity-model"]
   },
@@ -595,7 +595,7 @@
     "section": "surveys",
     "subsection": "Domain-Specific Surveys",
     "scope": "autonomous-driving",
-    "risks": ["task-reliability", "physical-safety"],
+    "risks": [],
     "threat_model": "Survey scope (OOD, safety, formal verification)",
     "tags": ["survey", "autonomous-driving", "closed-loop-control"]
   },
@@ -610,7 +610,7 @@
     "section": "ood-generalization",
     "subsection": "Open-World Evaluation",
     "scope": "vla",
-    "risks": ["task-reliability", "physical-safety"],
+    "risks": ["task-reliability"],
     "threat_model": "Non-adversarial OOD (open world, environment, long horizon)",
     "tags": ["open-world", "environment-domain", "long-horizon"]
   },
@@ -625,7 +625,7 @@
     "section": "training-attacks",
     "subsection": "Backdoors and Data Poisoning",
     "scope": "llm-robot",
-    "risks": ["task-reliability", "physical-safety", "security-privacy"],
+    "risks": ["security-privacy"],
     "threat_model": "Training-time attack (decision-making backdoor)",
     "tags": ["backdoor", "decision-making", "knowledge-injection"]
   },
@@ -640,7 +640,7 @@
     "section": "inference-attacks",
     "subsection": "Visual Perturbations and Patches",
     "scope": "vla",
-    "risks": ["task-reliability", "physical-safety", "security-privacy"],
+    "risks": ["task-reliability", "security-privacy"],
     "threat_model": "Inference-time attack (adversarial patch)",
     "tags": ["adversarial-patch", "black-box-transfer", "sim-to-real"]
   },
@@ -685,7 +685,7 @@
     "section": "inference-attacks",
     "subsection": "Upstream VLM Attacks",
     "scope": "vlm",
-    "risks": ["task-reliability", "ethical-societal", "security-privacy"],
+    "risks": ["security-privacy"],
     "threat_model": "Inference-time attack (black-box transfer)",
     "tags": ["transfer-attack", "black-box", "multimodal-semantics"]
   },
@@ -700,7 +700,7 @@
     "section": "defenses",
     "subsection": "Representation Steering and Inference-Time Defense",
     "scope": "llm-robot",
-    "risks": ["physical-safety", "ethical-societal", "security-privacy"],
+    "risks": ["ethical-societal", "security-privacy"],
     "threat_model": "Inference-time attack (planner jailbreak)",
     "tags": ["jailbreak-defense", "representation-steering", "inference-time"]
   },
@@ -715,7 +715,7 @@
     "section": "defenses",
     "subsection": "System and Communication Defenses",
     "scope": "multi-agent",
-    "risks": ["task-reliability", "ethical-societal", "security-privacy"],
+    "risks": ["security-privacy"],
     "threat_model": "System-level attack (memory poisoning, impersonation, unauthorized access)",
     "tags": ["multi-agent", "memory-defense", "communication-security"]
   },
@@ -730,7 +730,7 @@
     "section": "defenses",
     "subsection": "Active Perception and Recovery",
     "scope": "embodied-agent",
-    "risks": ["task-reliability", "physical-safety", "security-privacy"],
+    "risks": ["task-reliability", "security-privacy"],
     "threat_model": "Inference-time attack (adaptive adversarial patch)",
     "tags": ["adversarial-patch", "active-perception", "recurrent-feedback"]
   },
@@ -745,7 +745,7 @@
     "section": "training-attacks",
     "subsection": "Backdoors and Data Poisoning",
     "scope": "vla",
-    "risks": ["task-reliability", "physical-safety", "security-privacy"],
+    "risks": ["task-reliability", "security-privacy"],
     "threat_model": "Training-time attack (physical-object backdoor)",
     "tags": ["backdoor", "physical-object", "goal-hijacking"]
   },
@@ -775,7 +775,7 @@
     "section": "defenses",
     "subsection": "Human-in-the-Loop Safety Refinement",
     "scope": "robot-policy",
-    "risks": ["task-reliability", "physical-safety"],
+    "risks": ["task-reliability"],
     "threat_model": "Policy failure (unsafe or low-quality rollout)",
     "tags": ["human-in-the-loop", "rejection-sampling", "policy-refinement"]
   },
@@ -790,7 +790,7 @@
     "section": "inference-attacks",
     "subsection": "Jailbreaks and Prompt Injection",
     "scope": "vision-language-agent",
-    "risks": ["task-reliability", "physical-safety", "ethical-societal", "security-privacy"],
+    "risks": ["security-privacy"],
     "threat_model": "Inference-time attack (visual prompt injection)",
     "tags": ["visual-prompt-injection", "trust-boundary", "scene-text"]
   },
@@ -820,7 +820,7 @@
     "section": "defenses",
     "subsection": "Representation Steering and Inference-Time Defense",
     "scope": "vla",
-    "risks": ["task-reliability", "physical-safety"],
+    "risks": ["task-reliability"],
     "threat_model": "Non-adversarial OOD (linguistic grounding, instruction neglect)",
     "tags": ["linguistic-grounding", "attention-recalibration", "train-free"]
   },
@@ -835,7 +835,7 @@
     "section": "defenses",
     "subsection": "Runtime Observation Interventions",
     "scope": "vla",
-    "risks": ["task-reliability", "physical-safety"],
+    "risks": ["task-reliability"],
     "threat_model": "Non-adversarial OOD (object, background distractor)",
     "tags": ["visual-distractor", "observation-intervention", "model-agnostic"]
   },
@@ -850,7 +850,7 @@
     "section": "defenses",
     "subsection": "Active Perception and Recovery",
     "scope": "vla",
-    "risks": ["task-reliability", "physical-safety"],
+    "risks": ["task-reliability"],
     "threat_model": "Non-adversarial OOD (spatial, object, color, background)",
     "tags": ["memory-trap", "affordance-field", "recovery"]
   },
@@ -865,7 +865,7 @@
     "section": "defenses",
     "subsection": "Active Perception and Recovery",
     "scope": "vla",
-    "risks": ["task-reliability", "physical-safety"],
+    "risks": ["task-reliability"],
     "threat_model": "Execution failure (closed-loop policy failure)",
     "tags": ["failure-recovery", "reasoning", "closed-loop"]
   },
@@ -880,7 +880,7 @@
     "section": "defenses",
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "robot-policy",
-    "risks": ["task-reliability", "physical-safety"],
+    "risks": [],
     "threat_model": "Execution failure (state-conditioned anomaly)",
     "tags": ["anomaly-detection", "normalizing-flow", "runtime-monitoring"]
   },
@@ -895,7 +895,7 @@
     "section": "benchmarks",
     "subsection": "Safety and Hazard Benchmarks",
     "scope": "vla",
-    "risks": ["task-reliability", "physical-safety", "ethical-societal"],
+    "risks": ["task-reliability", "physical-safety"],
     "threat_model": "Semantic safety violation (instruction, context, harmful action)",
     "tags": ["semantic-safety", "hazard", "benchmark"]
   },
@@ -910,7 +910,7 @@
     "section": "benchmarks",
     "subsection": "Robustness and Uncertainty Evaluation",
     "scope": "vla",
-    "risks": ["task-reliability", "physical-safety"],
+    "risks": ["task-reliability"],
     "threat_model": "Evaluation scope (natural, adversarial input mutation)",
     "tags": ["testing", "input-mutation", "robotic-manipulation"]
   },
@@ -940,7 +940,7 @@
     "section": "benchmarks",
     "subsection": "Robustness and Uncertainty Evaluation",
     "scope": "vla",
-    "risks": ["task-reliability", "physical-safety"],
+    "risks": ["task-reliability"],
     "threat_model": "Uncertainty failure (overconfidence, distribution shift)",
     "tags": ["confidence-calibration", "uncertainty", "selective-prediction"]
   },
@@ -955,7 +955,7 @@
     "section": "benchmarks",
     "subsection": "Safety and Hazard Benchmarks",
     "scope": "embodied-agent",
-    "risks": ["physical-safety", "ethical-societal"],
+    "risks": ["ethical-societal"],
     "threat_model": "Hazardous instruction (harmful embodied action)",
     "tags": ["hazardous-instruction", "embodied-agent", "benchmark"]
   },
@@ -970,7 +970,7 @@
     "section": "benchmarks",
     "subsection": "Safety and Hazard Benchmarks",
     "scope": "llm-robot",
-    "risks": ["physical-safety", "ethical-societal", "security-privacy"],
+    "risks": ["ethical-societal", "security-privacy"],
     "threat_model": "Hazardous instruction (adversarial prompt, unsafe planning)",
     "tags": ["safety-benchmark", "jailbreak", "mitigation"]
   }

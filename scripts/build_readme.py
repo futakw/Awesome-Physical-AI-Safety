@@ -29,7 +29,7 @@ SECTIONS = OrderedDict(
 RISK_LABELS = {
     "task-reliability": "Task",
     "physical-safety": "Physical",
-    "ethical-societal": "Ethical",
+    "ethical-societal": "Ethics",
     "security-privacy": "Security/Privacy",
 }
 
@@ -77,16 +77,19 @@ def render(papers: list[dict]) -> str:
         "[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)",
         "[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)",
         "",
-        "> This list separates **risk outcomes** (what goes wrong) from **failure sources and mechanisms** (why it goes wrong). GitHub star badges are live and are shown only for identified official repositories.",
+        "> This list separates **empirically evaluated risk outcomes** (what the paper measures) from **failure sources and mechanisms** (why it goes wrong). GitHub star badges are live and are shown only for identified official repositories.",
         "",
         "## Taxonomy at a Glance",
         "",
         "### Risk outcomes",
         "",
-        "- **Task & Reliability:** task failure, degraded success, dangerous inaction, or recovery failure.",
-        "- **Physical Safety:** collision, injury, damage, unsafe motion, or constraint violation.",
-        "- **Ethical & Societal:** harmful instruction execution, misuse, deception, or oversight failure.",
-        "- **Security & Privacy:** unauthorized control, backdoors, leakage, covert channels, or system compromise.",
+        "A label is shown only when the paper reports a corresponding empirical outcome metric; discussion or potential impact alone does not qualify.",
+        "",
+        "- **Task Success:** task or route completion, success rate, or equivalent execution outcome.",
+        "- **Physical Safety:** collision, damage, unsafe motion or force, physical harm, or safety-constraint violation.",
+        "- **Ethical Safety:** harmful-instruction compliance or refusal, prohibited behavior, or policy/constitution violation.",
+        "- **Security & Privacy:** attack success, backdoor activation, control hijacking, unauthorized access, leakage, or compromise.",
+        "- **—:** no directly corresponding outcome is empirically evaluated, as is common for surveys and diagnostic-only work.",
         "",
         "### Failure sources",
         "",
@@ -119,14 +122,14 @@ def render(papers: list[dict]) -> str:
                 [
                     f"### {subsection}",
                     "",
-                    "| Paper | Authors | Venue | Risk | Threat Model |",
+                    "| Paper | Authors | Venue | Evaluated Risk | Threat Model |",
                     "|---|---|---:|---|---|",
                 ]
             )
             rows = [p for p in section_papers if p["subsection"] == subsection]
             rows.sort(key=lambda p: (-p["year"], p["title"].lower()))
             for paper in rows:
-                risk = bullet_list([RISK_LABELS[item] for item in paper["risks"]])
+                risk = bullet_list([RISK_LABELS[item] for item in paper["risks"]]) or "—"
                 venue = f"{paper['venue']} {paper['year']}"
                 lines.append(
                     f"| {paper_cell(paper)} | {paper['first_author']} et al. | {venue} | {risk} | {paper['threat_model']} |"
