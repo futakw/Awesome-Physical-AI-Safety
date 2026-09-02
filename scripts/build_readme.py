@@ -5,7 +5,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import re
 from collections import OrderedDict
 from pathlib import Path
 from urllib.parse import urlparse
@@ -66,15 +65,7 @@ def paper_cell(paper: dict) -> str:
 
 
 def bullet_list(items: list[str]) -> str:
-    return "<br>".join(f"• {item.strip()}" for item in items if item.strip())
-
-
-def threat_items(threat_model: str) -> list[str]:
-    if " — " not in threat_model:
-        return [threat_model]
-    category, details = threat_model.split(" — ", 1)
-    mechanisms = re.split(r",\s*(?:and\s+)?", details)
-    return [category, *mechanisms]
+    return "<br>".join(f"•&nbsp;{item.strip()}" for item in items if item.strip())
 
 
 def render(papers: list[dict]) -> str:
@@ -136,10 +127,9 @@ def render(papers: list[dict]) -> str:
             rows.sort(key=lambda p: (-p["year"], p["title"].lower()))
             for paper in rows:
                 risk = bullet_list([RISK_LABELS[item] for item in paper["risks"]])
-                threat_model = bullet_list(threat_items(paper["threat_model"]))
                 venue = f"{paper['venue']} {paper['year']}"
                 lines.append(
-                    f"| {paper_cell(paper)} | {paper['first_author']} et al. | {venue} | {risk} | {threat_model} |"
+                    f"| {paper_cell(paper)} | {paper['first_author']} et al. | {venue} | {risk} | {paper['threat_model']} |"
                 )
             lines.append("")
 

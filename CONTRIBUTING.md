@@ -25,8 +25,8 @@ python3 scripts/build_readme.py --check
 - Link only an official or author-maintained implementation as `code_url`.
 - Leave `code_url` as `null` when no official repository is known.
 - GitHub star badges and other project/code links are generated beside the paper title from `code_url`.
-- Write `threat_model` from the adversary or distribution-shift perspective: for example, `Inference-time attack — physical adversarial patch` or `Non-adversarial OOD — unseen objects and layouts`. For defenses, state the threat the method is designed to mitigate.
-- Keep `threat_model` concise and include the paper's primary attack, failure, or shift focus there. More granular cross-cutting descriptors belong in `tags`; tags remain structured metadata and are not rendered as a separate table column.
+- Write `threat_model` with the controlled `Category (primary mechanism or shift)` notation defined in [the taxonomy](docs/taxonomy.md), for example, `Inference-time attack (adversarial patch)` or `Non-adversarial OOD (unseen objects, layouts)`. For defenses, state the threat being mitigated rather than the defense method.
+- Keep `threat_model` under 90 characters. Experimental settings and secondary descriptors belong in `tags`; tags remain structured metadata and are not rendered as a separate table column.
 - List a paper once. Express cross-cutting properties through `risks` and `tags`.
 
 ## Scope

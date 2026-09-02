@@ -38,6 +38,22 @@ SECTIONS = {
     "system-security",
 }
 RISKS = {"task-reliability", "physical-safety", "ethical-societal", "security-privacy"}
+THREAT_CATEGORIES = {
+    "Training-time attack",
+    "Inference-time attack",
+    "System-level attack",
+    "Non-adversarial OOD",
+    "Execution failure",
+    "Planning failure",
+    "Policy failure",
+    "Uncertainty failure",
+    "Hazardous instruction",
+    "Physical safety violation",
+    "Semantic safety violation",
+    "System-level misuse",
+    "Survey scope",
+    "Evaluation scope",
+}
 PRIVATE_MARKERS = {
     "my_works",
     "research_questions",
@@ -98,6 +114,15 @@ def main() -> int:
             errors.append(f"{label}: tags must not be empty")
         if not isinstance(paper.get("threat_model"), str) or not paper.get("threat_model", "").strip():
             errors.append(f"{label}: threat_model must be a non-empty string")
+        else:
+            threat_model = paper["threat_model"]
+            category = threat_model.split(" (", 1)[0]
+            if category not in THREAT_CATEGORIES:
+                errors.append(f"{label}: invalid threat category {category!r}")
+            if " (" in threat_model and not threat_model.endswith(")"):
+                errors.append(f"{label}: threat_model must use 'Category (detail)' notation")
+            if len(threat_model) > 90:
+                errors.append(f"{label}: threat_model exceeds 90 characters")
         if not isinstance(paper.get("year"), int) or not 2000 <= paper.get("year", 0) <= 2100:
             errors.append(f"{label}: invalid year")
         for field in ("paper_url", "code_url"):

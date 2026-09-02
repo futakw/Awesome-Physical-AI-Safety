@@ -38,7 +38,18 @@ The failure arises from objective misspecification, multimodal misalignment, rew
 
 ## 3. Threat Mechanisms
 
-Each catalog record includes a concise `threat_model` field. It identifies whether the paper assumes a malicious adversary, a non-adversarial distribution shift, a design/system failure, or an evaluation scope spanning several threat families. Defense papers describe the threat being mitigated, rather than merely naming the defense mechanism.
+Each catalog record uses the compact notation `Category (primary mechanism or shift)`. The parenthetical detail is omitted when the category is already specific. Defense papers describe the threat being mitigated, not the defense method; experimental settings such as real-robot evaluation belong in `tags`.
+
+### Controlled Threat Categories
+
+| Family | Allowed categories |
+|---|---|
+| Adversarial | `Training-time attack`, `Inference-time attack`, `System-level attack` |
+| Non-adversarial failure | `Non-adversarial OOD`, `Execution failure`, `Planning failure`, `Policy failure`, `Uncertainty failure` |
+| Unsafe intent or outcome | `Hazardous instruction`, `Physical safety violation`, `Semantic safety violation`, `System-level misuse` |
+| Broad coverage | `Survey scope`, `Evaluation scope` |
+
+Use only the primary discriminating detail. For example, a poisoned training set that installs a backdoor is `Training-time attack (backdoor)`, not `Training-time attack (backdoor, training data)`. Multiple OOD axes may be grouped as `Non-adversarial OOD (viewpoint, language, object geometry)`.
 
 ### Visual and Physical Input Attacks
 
