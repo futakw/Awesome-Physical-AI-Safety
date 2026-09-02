@@ -65,6 +65,7 @@ def main() -> int:
 
     seen_ids: set[str] = set()
     seen_titles: set[str] = set()
+    seen_paper_urls: set[str] = set()
     for index, paper in enumerate(papers):
         label = paper.get("id", f"record[{index}]")
         missing = REQUIRED - set(paper)
@@ -80,6 +81,11 @@ def main() -> int:
             seen_ids.add(paper_id)
         if title:
             seen_titles.add(title.casefold())
+        paper_url = paper.get("paper_url")
+        if paper_url in seen_paper_urls:
+            errors.append(f"{label}: duplicate paper_url {paper_url!r}")
+        if paper_url:
+            seen_paper_urls.add(paper_url)
         if paper.get("section") not in SECTIONS:
             errors.append(f"{label}: invalid section {paper.get('section')!r}")
         invalid_risks = set(paper.get("risks", [])) - RISKS

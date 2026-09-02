@@ -34,7 +34,7 @@ See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.
 - [Benchmarks and Evaluation](#benchmarks-and-evaluation)
 - [System-Level Security, Privacy, and Misuse](#system-level-security-privacy-and-misuse)
 
-**37 papers in the current catalog.**
+**49 papers in the current catalog.**
 
 ## Surveys and Perspectives
 
@@ -48,8 +48,16 @@ See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.
 
 | Paper | Authors | Venue | Risk | Focus | Resources |
 |---|---|---:|---|---|---|
+| **Navigating Embodied Intelligence: Enabling Technologies, Security and Privacy, and Emerging Trends** | Wang et al. | IEEE IoT Journal 2026 | Task, Physical, Ethical, Security/Privacy | Survey, Security, Privacy | [Paper](https://doi.org/10.1109/JIOT.2025.3649049) |
 | **What Breaks Embodied AI Security: LLM Vulnerabilities, CPS Flaws, or Something Else?** | Ma et al. | arXiv 2026 | Physical, Security/Privacy | Perspective, Closed Loop Safety | [Paper](https://arxiv.org/abs/2602.17345) |
 | **Towards Robust and Secure Embodied AI: A Survey on Vulnerabilities and Attacks** | Xing et al. | arXiv 2025 | Task, Physical, Security/Privacy | Survey, Vulnerability Taxonomy | [Paper](https://arxiv.org/abs/2502.13175) |
+| **Towards Safe and Trustworthy Embodied AI: Foundations, Status, and Prospects** | Tan et al. | OpenReview 2025 | Task, Physical, Ethical, Security/Privacy | Survey, Trustworthiness, Maturity Model | [Paper](https://openreview.net/forum?id=Eu6Yt21Alv) · [![GitHub stars](https://img.shields.io/github/stars/AI45Lab/Awesome-Trustworthy-Embodied-AI?style=social)](https://github.com/AI45Lab/Awesome-Trustworthy-Embodied-AI) |
+
+### Domain-Specific Surveys
+
+| Paper | Authors | Venue | Risk | Focus | Resources |
+|---|---|---:|---|---|---|
+| **A Survey on Vision-Language-Action Models for Autonomous Driving** | Jiang et al. | arXiv 2025 | Task, Physical | Survey, Autonomous Driving, Closed Loop Control | [Paper](https://arxiv.org/abs/2506.24044) · [![GitHub stars](https://img.shields.io/github/stars/JohnsonJiang1996/Awesome-VLA4AD?style=social)](https://github.com/JohnsonJiang1996/Awesome-VLA4AD) |
 
 ## Robustness and OOD Generalization
 
@@ -88,6 +96,7 @@ See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.
 | Paper | Authors | Venue | Risk | Focus | Resources |
 |---|---|---:|---|---|---|
 | **How VLAs (Really) Work in Open-World Environments** | Rasouli et al. | arXiv 2026 | Task, Physical | Open World, Environment Domain | [Paper](https://arxiv.org/abs/2604.21192) |
+| **pi0.5: A Vision-Language-Action Model with Open-World Generalization** | Black et al. | arXiv 2025 | Task, Physical | Open World, Environment Domain, Long Horizon | [Paper](https://arxiv.org/abs/2504.16054) · [![GitHub stars](https://img.shields.io/github/stars/Physical-Intelligence/openpi?style=social)](https://github.com/Physical-Intelligence/openpi) |
 
 ## Training-Time Attacks
 
@@ -98,6 +107,7 @@ See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.
 | **SilentDrift: Exploiting Action Chunking for Stealthy Backdoor Attacks on Vision-Language-Action Models** | Xu et al. | arXiv 2026 | Task, Physical, Security/Privacy | Backdoor, Action Chunk, Temporal Attack | [Paper](https://arxiv.org/abs/2601.14323) |
 | **State Backdoor: Towards Stealthy Real-World Poisoning Attack on Vision-Language-Action Models in State Space** | Guo et al. | arXiv 2026 | Task, Physical, Security/Privacy | Backdoor, State Attack, Physical Access | [Paper](https://arxiv.org/abs/2601.04266) |
 | **BadVLA: Towards Backdoor Attacks on Vision-Language-Action Models via Objective-Decoupled Optimization** | Zhou et al. | NeurIPS 2025 | Task, Physical, Security/Privacy | Backdoor, Training Data | [Paper](https://arxiv.org/abs/2505.16640) · [![GitHub stars](https://img.shields.io/github/stars/Zxy-MLlab/BadVLA?style=social)](https://github.com/Zxy-MLlab/BadVLA) |
+| **Can We Trust Embodied Agents? Exploring Backdoor Attacks Against Embodied LLM-Based Decision-Making Systems** | Jiao et al. | ICLR 2025 | Task, Physical, Security/Privacy | Backdoor, Decision Making, Knowledge Injection | [Paper](https://arxiv.org/abs/2405.20774) · [![GitHub stars](https://img.shields.io/github/stars/ASGuard-UCI/BALD?style=social)](https://github.com/ASGuard-UCI/BALD) |
 | **DropVLA: An Action-Level Backdoor Attack on Vision-Language-Action Models** | Xu et al. | arXiv 2025 | Task, Physical, Security/Privacy | Backdoor, Action Output | [Paper](https://arxiv.org/abs/2510.10932) · [![GitHub stars](https://img.shields.io/github/stars/megaknight114/DropVLA?style=social)](https://github.com/megaknight114/DropVLA) |
 
 ## Inference-Time Attacks
@@ -106,6 +116,7 @@ See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.
 
 | Paper | Authors | Venue | Risk | Focus | Resources |
 |---|---|---:|---|---|---|
+| **When Robots Obey the Patch: Universal Transferable Patch Attacks on Vision-Language-Action Models** | Lu et al. | CVPR 2026 | Task, Physical, Security/Privacy | Adversarial Patch, Black Box Transfer, Sim To Real | [Paper](https://arxiv.org/abs/2511.21192) · [![GitHub stars](https://img.shields.io/github/stars/yuyi-sd/UPA-RFAS?style=social)](https://github.com/yuyi-sd/UPA-RFAS) |
 | **ADVEDM: Fine-Grained Adversarial Attack Against VLM-Based Embodied Agents** | Wang et al. | NeurIPS 2025 | Task, Physical | Fine Grained Attack, Semantic Manipulation, Visual Perturbation | [Paper](https://arxiv.org/abs/2509.16645) |
 | **Exploring the Adversarial Vulnerabilities of Vision-Language-Action Models in Robotics** | Wang et al. | ICCV 2025 | Task, Physical | Adversarial Patch, Digital Perturbation, Real Robot | [Paper](https://arxiv.org/abs/2411.13587) · [![GitHub stars](https://img.shields.io/github/stars/William-wAng618/roboticAttack?style=social)](https://github.com/William-wAng618/roboticAttack) |
 | **Model-Agnostic Adversarial Attack and Defense for Vision-Language-Action Models** | Xu et al. | arXiv 2025 | Task, Physical | Adversarial Patch, Model Agnostic, Adversarial Fine Tuning | [Paper](https://arxiv.org/abs/2510.13237) · [![GitHub stars](https://img.shields.io/github/stars/trustmlyoungscientist/EDPA_attack_defense?style=social)](https://github.com/trustmlyoungscientist/EDPA_attack_defense) |
@@ -129,7 +140,15 @@ See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.
 |---|---|---:|---|---|---|
 | **CHAI: Command Hijacking Against Embodied AI** | Burbano et al. | SaTML 2026 | Physical, Ethical, Security/Privacy | Command Hijacking, Typographic Attack, Visual Prompt Injection | [Paper](https://arxiv.org/abs/2510.00181) · [![GitHub stars](https://img.shields.io/github/stars/Cyphysecurity/chai?style=social)](https://github.com/Cyphysecurity/chai) |
 | **Adversarial Attacks on Robotic Vision-Language-Action Models** | Jones et al. | arXiv 2025 | Physical, Ethical, Security/Privacy | Jailbreak, Command Hijacking | [Paper](https://arxiv.org/abs/2506.03350) · [![GitHub stars](https://img.shields.io/github/stars/eliotjones1/robogcg?style=social)](https://github.com/eliotjones1/robogcg) |
+| **BadRobot: Jailbreaking Embodied LLM Agents in the Physical World** | Zhang et al. | ICLR 2025 | Physical, Ethical, Security/Privacy | Jailbreak, Voice Instruction, Physical Harm | [Paper](https://arxiv.org/abs/2407.20242) · [![GitHub stars](https://img.shields.io/github/stars/Rookie143/BadRobot?style=social)](https://github.com/Rookie143/BadRobot) |
 | **Jailbreaking LLM-Controlled Robots** | Robey et al. | ICRA 2025 | Physical, Ethical, Security/Privacy | Jailbreak, Harmful Policy, Real Robot | [Paper](https://arxiv.org/abs/2410.13691) · [![GitHub stars](https://img.shields.io/github/stars/arobey1/robopair?style=social)](https://github.com/arobey1/robopair) |
+| **POEX: Towards Policy Executable Jailbreak Attacks Against the LLM-Based Robots** | Lu et al. | arXiv 2025 | Physical, Ethical, Security/Privacy | Jailbreak, Policy Executability, Real Robot | [Paper](https://arxiv.org/abs/2412.16633) · [Project / Code](https://poex-jailbreak.github.io/) |
+
+### Upstream VLM Attacks
+
+| Paper | Authors | Venue | Risk | Focus | Resources |
+|---|---|---:|---|---|---|
+| **Chain of Attack: On the Robustness of Vision-Language Models Against Transfer-Based Adversarial Attacks** | Xie et al. | CVPR 2025 | Task, Ethical, Security/Privacy | Transfer Attack, Black Box, Multimodal Semantics | [Paper](https://arxiv.org/abs/2411.15720) · [![GitHub stars](https://img.shields.io/github/stars/Shelton1013/Chain_of_Attack?style=social)](https://github.com/Shelton1013/Chain_of_Attack) |
 
 ## Defenses and Safety Mechanisms
 
@@ -152,6 +171,24 @@ See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.
 |---|---|---:|---|---|---|
 | **SAFE: Multitask Failure Detection for Vision-Language-Action Models** | Gu et al. | NeurIPS 2025 | Task, Physical | Failure Detection, Runtime Monitoring | [Paper](https://arxiv.org/abs/2506.09937) · [![GitHub stars](https://img.shields.io/github/stars/vla-safe/SAFE?style=social)](https://github.com/vla-safe/SAFE) |
 | **Plug in the Safety Chip: Enforcing Constraints for LLM-Driven Robot Agents** | Yang et al. | arXiv 2023 | Task, Physical | Formal Constraint, Runtime Monitoring | [Paper](https://arxiv.org/abs/2309.09919) |
+
+### Representation Steering and Inference-Time Defense
+
+| Paper | Authors | Venue | Risk | Focus | Resources |
+|---|---|---:|---|---|---|
+| **Concept Enhancement Engineering: A Lightweight and Efficient Robust Defense Against Jailbreak Attacks in Embodied AI** | Yang et al. | arXiv 2025 | Physical, Ethical, Security/Privacy | Jailbreak Defense, Representation Steering, Inference Time | [Paper](https://arxiv.org/abs/2504.13201) |
+
+### System and Communication Defenses
+
+| Paper | Authors | Venue | Risk | Focus | Resources |
+|---|---|---:|---|---|---|
+| **AgentSafe: Safeguarding Large Language Model-Based Multi-Agent Systems via Hierarchical Data Management** | Mao et al. | arXiv 2025 | Task, Ethical, Security/Privacy | Multi Agent, Memory Defense, Communication Security | [Paper](https://arxiv.org/abs/2503.04392) |
+
+### Active Perception and Recovery
+
+| Paper | Authors | Venue | Risk | Focus | Resources |
+|---|---|---:|---|---|---|
+| **Embodied Active Defense: Leveraging Recurrent Feedback to Counter Adversarial Patches** | Wu et al. | ICLR 2024 | Task, Physical, Security/Privacy | Adversarial Patch, Active Perception, Recurrent Feedback | [Paper](https://arxiv.org/abs/2404.00540) |
 
 ## Benchmarks and Evaluation
 
