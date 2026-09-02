@@ -26,6 +26,7 @@ python3 scripts/build_readme.py --check
 - Leave `code_url` as `null` when no official repository is known.
 - GitHub star badges are generated automatically from valid GitHub repository URLs.
 - Write `threat_model` from the adversary or distribution-shift perspective: for example, `Inference-time attack — physical adversarial patch` or `Non-adversarial OOD — unseen objects and layouts`. For defenses, state the threat the method is designed to mitigate.
+- Keep `threat_model` concise and include the paper's primary attack, failure, or shift focus there. More granular cross-cutting descriptors belong in `tags`; tags remain structured metadata and are not rendered as a separate table column.
 - List a paper once. Express cross-cutting properties through `risks` and `tags`.
 
 ## Scope

@@ -46,11 +46,6 @@ def github_repo(url: str | None) -> str | None:
     return f"{parts[0]}/{parts[1].removesuffix('.git')}"
 
 
-def display_tag(tag: str) -> str:
-    special = {"ood": "OOD", "vla": "VLA", "llm": "LLM", "api": "API"}
-    return " ".join(special.get(piece, piece.capitalize()) for piece in tag.split("-"))
-
-
 def resources(paper: dict) -> str:
     parts = [f"[Paper]({paper['paper_url']})"]
     code_url = paper.get("code_url")
@@ -114,19 +109,18 @@ def render(papers: list[dict]) -> str:
                 [
                     f"### {subsection}",
                     "",
-                    "| Paper | Authors | Venue | Risk | Threat Model | Focus | Resources |",
-                    "|---|---|---:|---|---|---|---|",
+                    "| Paper | Authors | Venue | Risk | Threat Model | Resources |",
+                    "|---|---|---:|---|---|---|",
                 ]
             )
             rows = [p for p in section_papers if p["subsection"] == subsection]
             rows.sort(key=lambda p: (-p["year"], p["title"].lower()))
             for paper in rows:
                 risk = ", ".join(RISK_LABELS[item] for item in paper["risks"])
-                focus = ", ".join(display_tag(item) for item in paper["tags"][:3])
                 title = paper["title"].replace("|", "\\|")
                 venue = f"{paper['venue']} {paper['year']}"
                 lines.append(
-                    f"| **{title}** | {paper['first_author']} et al. | {venue} | {risk} | {paper['threat_model']} | {focus} | {resources(paper)} |"
+                    f"| **{title}** | {paper['first_author']} et al. | {venue} | {risk} | {paper['threat_model']} | {resources(paper)} |"
                 )
             lines.append("")
 
