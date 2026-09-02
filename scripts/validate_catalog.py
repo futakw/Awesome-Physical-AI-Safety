@@ -25,6 +25,7 @@ REQUIRED = {
     "subsection",
     "scope",
     "risks",
+    "threat_model",
     "tags",
 }
 SECTIONS = {
@@ -95,6 +96,8 @@ def main() -> int:
             errors.append(f"{label}: risks must not be empty")
         if not paper.get("tags"):
             errors.append(f"{label}: tags must not be empty")
+        if not isinstance(paper.get("threat_model"), str) or not paper.get("threat_model", "").strip():
+            errors.append(f"{label}: threat_model must be a non-empty string")
         if not isinstance(paper.get("year"), int) or not 2000 <= paper.get("year", 0) <= 2100:
             errors.append(f"{label}: invalid year")
         for field in ("paper_url", "code_url"):

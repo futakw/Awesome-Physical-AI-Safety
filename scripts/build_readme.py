@@ -16,13 +16,13 @@ README_PATH = ROOT / "README.md"
 
 SECTIONS = OrderedDict(
     [
-        ("surveys", "Surveys and Perspectives"),
-        ("ood-generalization", "Robustness and OOD Generalization"),
-        ("training-attacks", "Training-Time Attacks"),
-        ("inference-attacks", "Inference-Time Attacks"),
-        ("defenses", "Defenses and Safety Mechanisms"),
-        ("benchmarks", "Benchmarks and Evaluation"),
-        ("system-security", "System-Level Security, Privacy, and Misuse"),
+        ("surveys", ("📚", "Surveys and Perspectives")),
+        ("ood-generalization", ("🌍", "Robustness and OOD Generalization")),
+        ("training-attacks", ("🧪", "Training-Time Attacks")),
+        ("inference-attacks", ("⚡", "Inference-Time Attacks")),
+        ("defenses", ("🛡️", "Defenses and Safety Mechanisms")),
+        ("benchmarks", ("📊", "Benchmarks and Evaluation")),
+        ("system-security", ("🔐", "System-Level Security, Privacy, and Misuse")),
     ]
 )
 
@@ -63,10 +63,6 @@ def resources(paper: dict) -> str:
     return " · ".join(parts)
 
 
-def anchor(text: str) -> str:
-    return text.lower().replace("&", "and").replace(",", "").replace(" ", "-")
-
-
 def render(papers: list[dict]) -> str:
     lines = [
         "# Awesome Responsible VLA",
@@ -95,18 +91,20 @@ def render(papers: list[dict]) -> str:
         "",
         "See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.",
         "",
-        "## Contents",
+        "## 🧭 Contents",
         "",
     ]
 
     present_sections = [key for key in SECTIONS if any(p["section"] == key for p in papers)]
     for key in present_sections:
-        lines.append(f"- [{SECTIONS[key]}](#{anchor(SECTIONS[key])})")
+        icon, title = SECTIONS[key]
+        lines.append(f"- [{icon} {title}](#{key})")
     lines.extend(["", f"**{len(papers)} papers in the current catalog.**", ""])
 
     for section_key in present_sections:
         section_papers = [p for p in papers if p["section"] == section_key]
-        lines.extend([f"## {SECTIONS[section_key]}", ""])
+        icon, title = SECTIONS[section_key]
+        lines.extend([f'<a id="{section_key}"></a>', "", f"## {icon} {title}", ""])
         subsections = []
         for paper in section_papers:
             if paper["subsection"] not in subsections:
@@ -116,8 +114,8 @@ def render(papers: list[dict]) -> str:
                 [
                     f"### {subsection}",
                     "",
-                    "| Paper | Authors | Venue | Risk | Focus | Resources |",
-                    "|---|---|---:|---|---|---|",
+                    "| Paper | Authors | Venue | Risk | Threat Model | Focus | Resources |",
+                    "|---|---|---:|---|---|---|---|",
                 ]
             )
             rows = [p for p in section_papers if p["subsection"] == subsection]
@@ -128,7 +126,7 @@ def render(papers: list[dict]) -> str:
                 title = paper["title"].replace("|", "\\|")
                 venue = f"{paper['venue']} {paper['year']}"
                 lines.append(
-                    f"| **{title}** | {paper['first_author']} et al. | {venue} | {risk} | {focus} | {resources(paper)} |"
+                    f"| **{title}** | {paper['first_author']} et al. | {venue} | {risk} | {paper['threat_model']} | {focus} | {resources(paper)} |"
                 )
             lines.append("")
 
@@ -176,4 +174,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

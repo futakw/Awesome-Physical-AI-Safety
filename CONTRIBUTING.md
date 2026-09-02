@@ -7,7 +7,7 @@ Thank you for helping improve Awesome Responsible VLA.
 1. Edit `data/papers.json`.
 2. Add one record with a stable ID, official title, first-author surname, venue, year, paper URL, and—when available—the official project or GitHub URL.
 3. Assign one primary `section` and `subsection`.
-4. Add one or more risk outcomes and focused mechanism or OOD tags.
+4. Add one or more risk outcomes, a concise `threat_model`, and focused mechanism or OOD tags.
 5. Run:
 
 ```bash
@@ -25,6 +25,7 @@ python3 scripts/build_readme.py --check
 - Link only an official or author-maintained implementation as `code_url`.
 - Leave `code_url` as `null` when no official repository is known.
 - GitHub star badges are generated automatically from valid GitHub repository URLs.
+- Write `threat_model` from the adversary or distribution-shift perspective: for example, `Inference-time attack — physical adversarial patch` or `Non-adversarial OOD — unseen objects and layouts`. For defenses, state the threat the method is designed to mitigate.
 - List a paper once. Express cross-cutting properties through `risks` and `tags`.
 
 ## Scope
@@ -34,4 +35,3 @@ The core scope is Responsible VLA. Adjacent embodied-agent, autonomous-driving, 
 ## Pull Requests
 
 Keep each pull request focused. Explain why a new paper belongs in the selected section and identify whether it is core VLA work or adjacent embodied-agent work.
-

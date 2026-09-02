@@ -38,6 +38,8 @@ The failure arises from objective misspecification, multimodal misalignment, rew
 
 ## 3. Threat Mechanisms
 
+Each catalog record includes a concise `threat_model` field. It identifies whether the paper assumes a malicious adversary, a non-adversarial distribution shift, a design/system failure, or an evaluation scope spanning several threat families. Defense papers describe the threat being mitigated, rather than merely naming the defense mechanism.
+
 ### Visual and Physical Input Attacks
 
 - Digital perturbations
@@ -120,4 +122,3 @@ Generic VLM, LLM, robotics, or capability papers should not be included unless t
 ## Classification Rule
 
 List each paper once under its primary contribution. Use `risks` and `tags` for cross-cutting properties instead of duplicating the paper across sections.
-
