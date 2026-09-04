@@ -161,7 +161,7 @@ def render(papers: list[dict]) -> str:
         "",
         "## Research Landscape",
         "",
-        "[![Field timeline of the paper catalog](assets/visualizations/field-timeline.svg)](docs/index.html)",
+        "[![Field timeline of the paper catalog](assets/visualizations/field-timeline.svg)](docs/visualizations.md)",
         "",
         "Open the [interactive explorer](docs/index.html) for hoverable paper lists in the field timeline and threat-model cross-map.",
         "",

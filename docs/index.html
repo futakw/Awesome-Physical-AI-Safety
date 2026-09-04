@@ -56,7 +56,7 @@ const pinTooltip = (event, html) => { pinned = true; placeTooltip(event, html); 
 const hideTooltip = () => { if (!pinned) tooltip.style('opacity',0); };
 document.addEventListener('pointerdown', event => { if (!event.target.closest('.tooltip') && !event.target.closest('.cell')) { pinned = false; tooltip.style('opacity',0); } });
 function renderTimeline(){
-  const width=1160,height=690, margin={top:65,right:35,bottom:54,left:205};
+  const width=1160,height=690, margin={top:105,right:35,bottom:54,left:205};
   const svg=d3.select('#timeline-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Interactive field timeline');
   const years=[...new Set(papers.map(p=>p.year))].sort(), grouped=d3.rollup(papers,v=>v,p=>p.section,p=>p.year);
   const x=d3.scalePoint().domain(years).range([margin.left,width-margin.right]); const y=d3.scalePoint().domain(sections).range([margin.top,height-margin.bottom]).padding(.5);
