@@ -37,10 +37,12 @@
     <button type="button" data-view="timeline" aria-pressed="true">Field timeline</button>
     <button type="button" data-view="heatmap" aria-pressed="false">Threat cross-map</button>
     <button type="button" data-view="defense" aria-pressed="false">Defense cross-map</button>
+    <button type="button" data-view="benchmark" aria-pressed="false">Benchmark cross-map</button>
   </nav>
   <section id="timeline" class="active"><p class="note">Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to pin the paper list.</p><div id="timeline-chart"></div></section>
   <section id="heatmap"><p class="note">Cells show mechanism-surface co-occurrence for concrete threat models. Hover for a preview; click a cell to pin the paper list.</p><div id="heatmap-chart"></div></section>
   <section id="defense"><p class="note">Rows are defense subsections and columns are addressed threat mechanisms. Hover for a preview; click a cell to pin the paper list.</p><div id="defense-chart"></div></section>
+  <section id="benchmark"><p class="note">Rows are benchmark subsections and columns use the shared threat-mechanism taxonomy. Hover for a preview; click a cell to pin the paper list.</p><div id="benchmark-chart"></div></section>
 </main>
 <div id="tooltip" class="tooltip" role="tooltip"></div>
 <script>
@@ -112,8 +114,29 @@ function renderDefense(){
   svg.selectAll('text.value').data(cellData.filter(d=>d.n)).join('text').attr('class','value').attr('x',d=>x(d.mechanism)+x.bandwidth()/2).attr('y',d=>y(d.sub)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',650).attr('fill',d=>d.n/max>.48?'#fff':'#202938').style('pointer-events','none').text(d=>d.n);
 }
 
+function renderBenchmark(){
+  const benchmarks=papers.filter(p=>p.section==='benchmarks');
+  const subsectionCounts=d3.rollup(benchmarks,v=>v.length,p=>p.subsection);
+  const subsections=[...subsectionCounts].sort((a,b)=>d3.descending(a[1],b[1])).map(d=>d[0]);
+  const concrete=papers.filter(p=>!['survey','evaluation'].includes(p.threat_model.kind));
+  const explodedMechanisms=concrete.flatMap(p=>p.threat_model.mechanism.map(m=>({p,m})));
+  const mechanismCounts=d3.rollup(explodedMechanisms,v=>new Set(v.map(d=>d.p.id)).size,d=>d.m);
+  const mechanisms=[...mechanismCounts].sort((a,b)=>d3.descending(a[1],b[1])).slice(0,10).map(d=>d[0]);
+  const margin={top:190,right:35,bottom:70,left:390}, width=1180, height=Math.max(760,margin.top+subsections.length*44+margin.bottom);
+  const svg=d3.select('#benchmark-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Interactive benchmark threat heatmap');
+  const x=d3.scaleBand().domain(mechanisms).range([margin.left,width-margin.right]).padding(.06), y=d3.scaleBand().domain(subsections).range([margin.top,height-margin.bottom]).padding(.06);
+  const cellData=[]; for(const sub of subsections) for(const mechanism of mechanisms){const list=benchmarks.filter(p=>p.subsection===sub&&p.threat_model.mechanism?.includes(mechanism));cellData.push({sub,mechanism,list,n:list.length});}
+  const max=d3.max(cellData,d=>d.n)||1, fill=d3.scaleSequential().domain([0,max]).interpolator(d3.interpolate('#eef3f8','#6f9fef'));
+  svg.append('text').attr('x',margin.left).attr('y',35).attr('font-size',24).attr('font-weight',650).attr('fill','#202938').text('Benchmark subsection × threat');
+  svg.append('text').attr('x',margin.left).attr('y',57).attr('font-size',13).attr('fill','#657287').text('Hover a cell to inspect contributing papers.');
+  svg.selectAll('text.mechanism').data(mechanisms).join('text').attr('class','axis').attr('text-anchor','start').attr('transform',m=>`translate(${x(m)+8},${margin.top-18}) rotate(-52)`).text(m=>m.replaceAll('-',' '));
+  svg.selectAll('text.subsection').data(subsections).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',s=>y(s)+y.bandwidth()/2+4).text(s=>s);
+  svg.selectAll('rect.cell').data(cellData).join('rect').attr('class','cell').attr('x',d=>x(d.mechanism)).attr('y',d=>y(d.sub)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(d.sub)} × ${escapeHtml(d.mechanism.replaceAll('-',' '))}</strong><div>${d.n} papers</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();pinTooltip(event,`<strong>${escapeHtml(d.sub)} × ${escapeHtml(d.mechanism.replaceAll('-',' '))}</strong><div>${d.n} papers</div>${paperListHtml(d.list)}`);});
+  svg.selectAll('text.value').data(cellData.filter(d=>d.n)).join('text').attr('class','value').attr('x',d=>x(d.mechanism)+x.bandwidth()/2).attr('y',d=>y(d.sub)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',650).attr('fill',d=>d.n/max>.48?'#fff':'#202938').style('pointer-events','none').text(d=>d.n);
+}
+
 d3.selectAll('button[data-view]').on('click',function(){const view=this.dataset.view;d3.selectAll('button[data-view]').attr('aria-pressed','false');d3.select(this).attr('aria-pressed','true');d3.selectAll('section').classed('active',false);d3.select('#'+view).classed('active',true);});
-for (const render of [renderTimeline, renderHeatmap, renderDefense]) {
+for (const render of [renderTimeline, renderHeatmap, renderDefense, renderBenchmark]) {
   try { render(); } catch (error) { console.error('Visualization failed to render:', error); }
 }
 </script>

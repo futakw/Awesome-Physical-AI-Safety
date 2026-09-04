@@ -1,0 +1,226 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 1200 760">
+<title id="title">Benchmark coverage map</title>
+<desc id="desc">Benchmark subsection and threat-mechanism counts.</desc>
+<style>
+text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+.title { font-size: 28px; font-weight: 650; fill: #202938; }
+.subtitle { font-size: 14px; fill: #657287; }
+.axis { font-size: 13px; fill: #657287; }
+.label { font-size: 13px; fill: #202938; }
+.small { font-size: 11px; fill: #657287; }
+</style>
+<rect width="1200" height="760" fill="#FFFFFF"/>
+<text class="title" x="48" y="48">Benchmark coverage map</text>
+<text class="subtitle" x="48" y="74">Benchmark subsections × the threat mechanisms represented in their evaluations.</text>
+<text class="axis" text-anchor="start" transform="translate(420.5 167) rotate(-52)">Distribution Shift</text>
+<text class="axis" text-anchor="start" transform="translate(497.5 167) rotate(-52)">Execution Error</text>
+<text class="axis" text-anchor="start" transform="translate(574.5 167) rotate(-52)">Constraint Violation</text>
+<text class="axis" text-anchor="start" transform="translate(651.5 167) rotate(-52)">Backdoor</text>
+<text class="axis" text-anchor="start" transform="translate(728.5 167) rotate(-52)">Jailbreak</text>
+<text class="axis" text-anchor="start" transform="translate(805.5 167) rotate(-52)">Unsafe Policy Behavior</text>
+<text class="axis" text-anchor="start" transform="translate(882.5 167) rotate(-52)">Adversarial Patch</text>
+<text class="axis" text-anchor="start" transform="translate(959.5 167) rotate(-52)">Digital Perturbation</text>
+<text class="axis" text-anchor="start" transform="translate(1036.5 167) rotate(-52)">Indirect Prompt Injection</text>
+<text class="axis" text-anchor="start" transform="translate(1113.5 167) rotate(-52)">Planning Error</text>
+<text class="label" x="372" y="210.5" text-anchor="end">Task and Physical Safety</text>
+<rect x="392" y="187" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="428.5" y="210.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="469" y="187" width="73" height="39" rx="6" fill="#6F9FEF"><title>[arXiv 2025] CostNav: A Navigation Benchmark for Real-World Economic-Cost Evaluation of Physical AI Agents
+[ECCV 2026] LIBERO-Safety: A Comprehensive Benchmark for Physical and Semantic Safety in Vision-Language-Action Models
+[arXiv 2026] ForesightSafety-VLA: A Unified Diagnostic Safety Benchmark for Vision-Language-Action Models
+[arXiv 2026] SafeVLA-Bench: A Benchmark for the Success-Safety Gap in Vision-Language-Action Models</title></rect>
+<text x="505.5" y="210.5" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">4</text>
+<rect x="546" y="187" width="73" height="39" rx="6" fill="#6F9FEF"><title>[AAAI 2026] IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents in Daily Household Tasks
+[arXiv 2024] EARBench: Towards Evaluating Physical Risk Awareness for Task Planning of Foundation Model-Based Embodied AI Agents
+[arXiv 2025] CostNav: A Navigation Benchmark for Real-World Economic-Cost Evaluation of Physical AI Agents
+[arXiv 2026] SafeVLA-Bench: A Benchmark for the Success-Safety Gap in Vision-Language-Action Models</title></rect>
+<text x="582.5" y="210.5" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">4</text>
+<rect x="623" y="187" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="659.5" y="210.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="700" y="187" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="736.5" y="210.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="777" y="187" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="813.5" y="210.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="854" y="187" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="890.5" y="210.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="931" y="187" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="967.5" y="210.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="1008" y="187" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="1044.5" y="210.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="1085" y="187" width="73" height="39" rx="6" fill="#BFD4F5"><title>[arXiv 2025] A Framework for Benchmarking and Aligning Task-Planning Safety in LLM-Based Embodied Agents</title></rect>
+<text x="1121.5" y="210.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<text class="label" x="372" y="253.5" text-anchor="end">Adversarial and Physical Robustness</text>
+<rect x="392" y="230" width="73" height="39" rx="6" fill="#BFD4F5"><title>[arXiv 2024] Manipulation Facing Threats: Evaluating Physical Vulnerabilities in End-to-End Vision Language Action Models</title></rect>
+<text x="428.5" y="253.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="469" y="230" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="505.5" y="253.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="546" y="230" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="582.5" y="253.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="623" y="230" width="73" height="39" rx="6" fill="#BFD4F5"><title>[arXiv 2025] AttackVLA: Benchmarking Adversarial and Backdoor Attacks on Vision-Language-Action Models</title></rect>
+<text x="659.5" y="253.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="700" y="230" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="736.5" y="253.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="777" y="230" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="813.5" y="253.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="854" y="230" width="73" height="39" rx="6" fill="#BFD4F5"><title>[arXiv 2024] Manipulation Facing Threats: Evaluating Physical Vulnerabilities in End-to-End Vision Language Action Models</title></rect>
+<text x="890.5" y="253.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="931" y="230" width="73" height="39" rx="6" fill="#BFD4F5"><title>[arXiv 2025] AttackVLA: Benchmarking Adversarial and Backdoor Attacks on Vision-Language-Action Models</title></rect>
+<text x="967.5" y="253.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="1008" y="230" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="1044.5" y="253.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="1085" y="230" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="1121.5" y="253.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text class="label" x="372" y="296.5" text-anchor="end">OOD and Generalization Benchmarks</text>
+<rect x="392" y="273" width="73" height="39" rx="6" fill="#87AFF1"><title>[arXiv 2025] LIBERO-PRO: Towards Robust and Fair Evaluation of Vision-Language-Action Models Beyond Memorization
+[CVPR 2026] LIBERO-Plus: A Progressive Robustness Benchmark for Visual-Language-Action Models
+[EMNLP 2026] LIBERO-Para: A Diagnostic Benchmark and Metrics for Paraphrase Robustness in VLA Models</title></rect>
+<text x="428.5" y="296.5" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">3</text>
+<rect x="469" y="273" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="505.5" y="296.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="546" y="273" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="582.5" y="296.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="623" y="273" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="659.5" y="296.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="700" y="273" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="736.5" y="296.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="777" y="273" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="813.5" y="296.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="854" y="273" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="890.5" y="296.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="931" y="273" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="967.5" y="296.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="1008" y="273" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="1044.5" y="296.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="1085" y="273" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="1121.5" y="296.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text class="label" x="372" y="339.5" text-anchor="end">Safety and Hazard Benchmarks</text>
+<rect x="392" y="316" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="428.5" y="339.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="469" y="316" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="505.5" y="339.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="546" y="316" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="582.5" y="339.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="623" y="316" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="659.5" y="339.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="700" y="316" width="73" height="39" rx="6" fill="#BFD4F5"><title>[arXiv 2025] SafeMind: Benchmarking and Mitigating Safety Risks in Embodied LLM Agents</title></rect>
+<text x="736.5" y="339.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="777" y="316" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="813.5" y="339.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="854" y="316" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="890.5" y="339.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="931" y="316" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="967.5" y="339.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="1008" y="316" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="1044.5" y="339.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="1085" y="316" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="1121.5" y="339.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text class="label" x="372" y="382.5" text-anchor="end">Robustness and Uncertainty Evaluation</text>
+<rect x="392" y="359" width="73" height="39" rx="6" fill="#BFD4F5"><title>[arXiv 2024] VLATest: Testing and Evaluating Vision-Language-Action Models for Robotic Manipulation</title></rect>
+<text x="428.5" y="382.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="469" y="359" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="505.5" y="382.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="546" y="359" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="582.5" y="382.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="623" y="359" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="659.5" y="382.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="700" y="359" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="736.5" y="382.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="777" y="359" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="813.5" y="382.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="854" y="359" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="890.5" y="382.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="931" y="359" width="73" height="39" rx="6" fill="#BFD4F5"><title>[arXiv 2024] VLATest: Testing and Evaluating Vision-Language-Action Models for Robotic Manipulation</title></rect>
+<text x="967.5" y="382.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="1008" y="359" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="1044.5" y="382.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="1085" y="359" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="1121.5" y="382.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text class="label" x="372" y="425.5" text-anchor="end">Comprehensive VLA Evaluation</text>
+<rect x="392" y="402" width="73" height="39" rx="6" fill="#A1C0F3"><title>[arXiv 2025] VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models
+[arXiv 2024] VLABench: A Large-Scale Benchmark for Language-Conditioned Robotics Manipulation with Long-Horizon Reasoning Tasks</title></rect>
+<text x="428.5" y="425.5" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">2</text>
+<rect x="469" y="402" width="73" height="39" rx="6" fill="#BFD4F5"><title>[arXiv 2025] VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models</title></rect>
+<text x="505.5" y="425.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="546" y="402" width="73" height="39" rx="6" fill="#BFD4F5"><title>[arXiv 2025] VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models</title></rect>
+<text x="582.5" y="425.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="623" y="402" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="659.5" y="425.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="700" y="402" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="736.5" y="425.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="777" y="402" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="813.5" y="425.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="854" y="402" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="890.5" y="425.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="931" y="402" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="967.5" y="425.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="1008" y="402" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="1044.5" y="425.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="1085" y="402" width="73" height="39" rx="6" fill="#BFD4F5"><title>[arXiv 2024] VLABench: A Large-Scale Benchmark for Language-Conditioned Robotics Manipulation with Long-Horizon Reasoning Tasks</title></rect>
+<text x="1121.5" y="425.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<text class="label" x="372" y="468.5" text-anchor="end">Evaluation Infrastructure</text>
+<rect x="392" y="445" width="73" height="39" rx="6" fill="#A1C0F3"><title>[CoRL 2024] Evaluating Real-World Robot Manipulation Policies in Simulation
+[NeurIPS Datasets and Benchmarks 2023] LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning</title></rect>
+<text x="428.5" y="468.5" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">2</text>
+<rect x="469" y="445" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="505.5" y="468.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="546" y="445" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="582.5" y="468.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="623" y="445" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="659.5" y="468.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="700" y="445" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="736.5" y="468.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="777" y="445" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="813.5" y="468.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="854" y="445" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="890.5" y="468.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="931" y="445" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="967.5" y="468.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="1008" y="445" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="1044.5" y="468.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="1085" y="445" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="1121.5" y="468.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text class="label" x="372" y="511.5" text-anchor="end">Safety-Critical Perception Evaluation</text>
+<rect x="392" y="488" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="428.5" y="511.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="469" y="488" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="505.5" y="511.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="546" y="488" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="582.5" y="511.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="623" y="488" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="659.5" y="511.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="700" y="488" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="736.5" y="511.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="777" y="488" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="813.5" y="511.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="854" y="488" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="890.5" y="511.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="931" y="488" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="967.5" y="511.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="1008" y="488" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="1044.5" y="511.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="1085" y="488" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="1121.5" y="511.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text class="label" x="372" y="554.5" text-anchor="end">Semantic and Ethical Safety</text>
+<rect x="392" y="531" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="428.5" y="554.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="469" y="531" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="505.5" y="554.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="546" y="531" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="582.5" y="554.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="623" y="531" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="659.5" y="554.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="700" y="531" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="736.5" y="554.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="777" y="531" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="813.5" y="554.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="854" y="531" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="890.5" y="554.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="931" y="531" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="967.5" y="554.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="1008" y="531" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="1044.5" y="554.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="1085" y="531" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="1121.5" y="554.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text class="axis" x="775" y="608" text-anchor="middle">threat_model.mechanism</text>
+<text class="axis" transform="translate(45 378.5) rotate(-90)" text-anchor="middle">Benchmark subsection</text>
+</svg>

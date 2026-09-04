@@ -22,6 +22,12 @@ The heatmap includes concrete threat models and excludes broad survey/evaluation
 
 Rows are defense subsections; columns use the same top-10 `threat_model.mechanism` order as the Threat-Model Cross-Map, including zero-count cells. The interactive explorer supports hover and click-to-pin paper lists.
 
+## Benchmark Cross-Map
+
+![Benchmark coverage map](../assets/visualizations/benchmark-heatmap.svg)
+
+Rows are benchmark subsections; columns use the same threat-mechanism order as the other cross-maps, including zero-count cells.
+
 ## Regeneration
 
 ```bash
