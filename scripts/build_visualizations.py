@@ -162,7 +162,8 @@ def render_defense_heatmap(papers: list[dict]) -> str:
     body = header("Defense coverage map", "Defense subsections × the threats they address; multi-label records contribute to each applicable cell.")
     defenses = [paper for paper in papers if paper["section"] == "defenses"]
     subsections = [value for value, _ in Counter(paper["subsection"] for paper in defenses).most_common()]
-    mechanisms = [value for value, _ in Counter(value for paper in defenses for value in threat_values(paper, "mechanism")).most_common(10)]
+    concrete = [paper for paper in papers if paper["threat_model"].get("kind") not in {"survey", "evaluation"}]
+    mechanisms = [value for value, _ in Counter(value for paper in concrete for value in threat_values(paper, "mechanism")).most_common(10)]
     left, top, cell_w, cell_h = 390, 185, 77, 43
     max_value = max((sum(1 for paper in defenses if paper["subsection"] == subsection and mechanism in threat_values(paper, "mechanism")) for subsection in subsections for mechanism in mechanisms), default=1)
     for col, mechanism in enumerate(mechanisms):
@@ -184,7 +185,7 @@ def render_defense_heatmap(papers: list[dict]) -> str:
                 f'<text x="{x + cell_w / 2:.1f}" y="{y + cell_h / 2 + 4:.1f}" text-anchor="middle" font-size="12" font-weight="600" fill="{text_color}">{value if value else ""}</text>',
             ]
     body += [
-        f'<text class="axis" x="{left + 5 * cell_w}" y="{top + len(subsections) * cell_h + 36}" text-anchor="middle">Addressed threat mechanism</text>',
+        f'<text class="axis" x="{left + 5 * cell_w}" y="{top + len(subsections) * cell_h + 36}" text-anchor="middle">threat_model.mechanism</text>',
         f'<text class="axis" transform="translate(45 {top + len(subsections) * cell_h / 2}) rotate(-90)" text-anchor="middle">Defense subsection</text>',
     ]
     return svg_document("Defense coverage map", "Defense subsection and addressed-threat mechanism counts.", width, height, body)
