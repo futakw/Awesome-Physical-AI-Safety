@@ -9,9 +9,9 @@ A curated, taxonomy-driven list of research on the safety, robustness, security,
 
 ## Research Landscape
 
-[![Taxonomy map of the paper catalog](assets/visualizations/topic-map.svg)](docs/visualizations.md)
+[![Field timeline of the paper catalog](assets/visualizations/field-timeline.svg)](docs/index.html)
 
-The map uses explicit, interpretable axes. Open the [interactive explorer](docs/index.html) for hoverable paper details, topic trends, the field timeline, and threat-model cross-maps.
+Open the [interactive explorer](docs/index.html) for hoverable paper lists in the field timeline and threat-model cross-map.
 
 ## Taxonomy at a Glance
 

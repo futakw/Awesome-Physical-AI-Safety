@@ -34,12 +34,10 @@
   <h1>Research Landscape</h1>
   <p class="lede">Interactive views of the Awesome Responsible VLA catalog (<span id="paper-count"></span> papers).</p>
   <nav aria-label="Visualization views">
-    <button type="button" data-view="map" aria-pressed="true">Topic map</button>
-    <button type="button" data-view="timeline" aria-pressed="false">Field timeline</button>
+    <button type="button" data-view="timeline" aria-pressed="true">Field timeline</button>
     <button type="button" data-view="heatmap" aria-pressed="false">Threat cross-map</button>
   </nav>
-  <section id="map" class="active"><p class="note">Each dot is one paper. X encodes adversarial versus non-adversarial threat kind; Y encodes attacks/benchmarks versus defenses. Survey and system-failure records are placed near the center. Hover for paper details; click to open the paper.</p><div id="map-chart"></div></section>
-  <section id="timeline"><p class="note">Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to pin the paper list.</p><div id="timeline-chart"></div></section>
+  <section id="timeline" class="active"><p class="note">Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to pin the paper list.</p><div id="timeline-chart"></div></section>
   <section id="heatmap"><p class="note">Cells show mechanism-surface co-occurrence for concrete threat models. Hover for a preview; click a cell to pin the paper list.</p><div id="heatmap-chart"></div></section>
 </main>
 <div id="tooltip" class="tooltip" role="tooltip"></div>
@@ -49,44 +47,25 @@ const colors = {surveys:'#657A8C', 'ood-generalization':'#3FA89B', 'training-att
 const labels = {surveys:'Surveys','ood-generalization':'OOD Generalization','training-attacks':'Training Attacks','inference-attacks':'Inference Attacks',defenses:'Defenses',benchmarks:'Benchmarks','system-security':'System Security'};
 const sections = Object.keys(labels), tooltip = d3.select('#tooltip');
 d3.select('#paper-count').text(papers.length);
-const threatLabel = p => { const t=p.threat_model; if(t.kind==='survey'||t.kind==='evaluation') return t.kind+' coverage'; return `${t.kind}; ${t.lifecycle.join(', ')}; ${t.mechanism.join(', ')} → ${t.target.join(', ')} → ${t.consequence.join(', ')}`; };
-const xScore = p => p.threat_model.kind==='adversarial' ? -1 : p.threat_model.kind==='non-adversarial' ? 1 : 0;
-const yScore = p => p.section==='defenses' ? 1 : ['training-attacks','inference-attacks','system-security'].includes(p.section) ? -.85 : p.section==='benchmarks' ? -.55 : p.section==='ood-generalization' ? .05 : 0;
+const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+const paperListHtml = list => `<ul class="paper-list">${list.map(p=>`<li><a href="${escapeHtml(p.paper_url)}" target="_blank" rel="noopener">[${escapeHtml(p.venue)} ${p.year}] ${escapeHtml(p.title)}</a></li>`).join('')}</ul>`;
 let pinned = false;
 const placeTooltip = (event, html) => tooltip.html(html).style('opacity',1).style('left',`${Math.max(8,Math.min(event.clientX+14,window.innerWidth-400))}px`).style('top',`${Math.max(8,Math.min(event.clientY+14,window.innerHeight-220))}px`);
 const showTooltip = (event, html) => { if (!pinned) placeTooltip(event, html); };
 const pinTooltip = (event, html) => { pinned = true; placeTooltip(event, html); };
 const hideTooltip = () => { if (!pinned) tooltip.style('opacity',0); };
 document.addEventListener('pointerdown', event => { if (!event.target.closest('.tooltip') && !event.target.closest('.cell')) { pinned = false; tooltip.style('opacity',0); } });
-const paperHtml = p => `<strong>${p.title}</strong><div>${p.first_author} et al. · ${p.venue} ${p.year}</div><div>${labels[p.section]} · ${threatLabel(p)}</div>`;
-
-function renderMap(){
-  const width=1160,height=690, margin={top:54,right:35,bottom:72,left:82};
-  const svg=d3.select('#map-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Interactive taxonomy map');
-  const x=d3.scaleLinear().domain([-1.08,1.08]).range([margin.left,width-margin.right]);
-  const y=d3.scaleLinear().domain([-1.08,1.08]).range([height-margin.bottom,margin.top]);
-  svg.append('text').attr('x',margin.left).attr('y',30).attr('font-size',24).attr('font-weight',650).attr('fill','#202938').text('Taxonomy map');
-  svg.append('text').attr('x',margin.left).attr('y',50).attr('font-size',13).attr('fill','#657287').text('Explicit axes make the placement interpretable.');
-  svg.append('g').attr('class','axis').attr('transform',`translate(0,${y(0)})`).call(d3.axisBottom(x).tickValues([-1,0,1]).tickFormat(d=>d===-1?'Adversarial':d===1?'Non-adversarial':'Mixed / other'));
-  svg.append('g').attr('class','axis').attr('transform',`translate(${x(0)},0)`).call(d3.axisLeft(y).tickValues([-1,0,1]).tickFormat(d=>d===-1?'Attack + Benchmark':d===1?'Defense':'Survey / System failure'));
-  svg.append('line').attr('x1',margin.left).attr('x2',width-margin.right).attr('y1',y(0)).attr('y2',y(0)).attr('stroke','#dce3ec').attr('stroke-dasharray','4 7');
-  svg.append('line').attr('x1',x(0)).attr('x2',x(0)).attr('y1',margin.top).attr('y2',height-margin.bottom).attr('stroke','#dce3ec').attr('stroke-dasharray','4 7');
-  svg.selectAll('circle.paper').data(papers).join('circle').attr('class','paper').attr('cx',p=>x(xScore(p) + (([...p.id].reduce((a,c)=>a+c.charCodeAt(0),0)%17)-8)*.012)).attr('cy',p=>y(yScore(p) + (([...p.id].reduce((a,c)=>a+c.charCodeAt(0),0)%13)-6)*.012)).attr('r',6).attr('fill',p=>colors[p.section]).attr('fill-opacity',.82).attr('stroke','#fff').attr('stroke-width',1.5).style('cursor','pointer').on('pointermove',(event,p)=>showTooltip(event,paperHtml(p))).on('pointerleave',hideTooltip).on('click',(_,p)=>window.open(p.paper_url,'_blank','noopener'));
-  const legend=svg.append('g').attr('class','legend').attr('transform',`translate(${margin.left},${height-25})`);
-  sections.forEach((s,i)=>{const g=legend.append('g').attr('transform',`translate(${(i%4)*255},${Math.floor(i/4)*22})`);g.append('circle').attr('r',6).attr('cx',6).attr('cy',-4).attr('fill',colors[s]);g.append('text').attr('x',18).text(labels[s]);});
-}
-
 function renderTimeline(){
   const width=1160,height=690, margin={top:65,right:35,bottom:54,left:205};
   const svg=d3.select('#timeline-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Interactive field timeline');
-  const years=[...new Set(papers.map(p=>p.year))].sort(), grouped=d3.rollup(papers,v=>v,[p=>p.section,p=>p.year]);
+  const years=[...new Set(papers.map(p=>p.year))].sort(), grouped=d3.rollup(papers,v=>v,p=>p.section,p=>p.year);
   const x=d3.scalePoint().domain(years).range([margin.left,width-margin.right]); const y=d3.scalePoint().domain(sections).range([margin.top,height-margin.bottom]).padding(.5);
   const max=d3.max([...grouped.values()].flatMap(v=>[...v.values()].map(a=>a.length)))||1;
   svg.append('text').attr('x',margin.left).attr('y',30).attr('font-size',24).attr('font-weight',650).attr('fill','#202938').text('Field timeline');
   years.forEach(year=>{svg.append('line').attr('x1',x(year)).attr('x2',x(year)).attr('y1',margin.top-20).attr('y2',height-margin.bottom+12).attr('stroke','#dce3ec');svg.append('text').attr('class','axis').attr('x',x(year)).attr('y',margin.top-32).attr('text-anchor','middle').text(year);});
   sections.forEach(s=>{svg.append('line').attr('x1',margin.left).attr('x2',width-margin.right).attr('y1',y(s)).attr('y2',y(s)).attr('stroke','#dce3ec');svg.append('text').attr('class','axis').attr('x',margin.left-20).attr('y',y(s)+5).attr('text-anchor','end').text(labels[s]);});
   const cells=[]; for(const s of sections) for(const year of years){const list=(grouped.get(s)?.get(year))||[]; if(list.length) cells.push({s,year,list});}
-  svg.selectAll('circle.cell').data(cells).join('circle').attr('class','cell').attr('cx',d=>x(d.year)).attr('cy',d=>y(d.s)).attr('r',d=>8+22*Math.sqrt(d.list.length/max)).attr('fill',d=>colors[d.s]).attr('fill-opacity',.88).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${labels[d.s]} · ${d.year} · ${d.list.length} papers</strong><ul class="paper-list">${d.list.map(p=>`<li><a href="${p.paper_url}" target="_blank" rel="noopener">${p.title}</a></li>`).join('')}</ul>`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();pinTooltip(event,`<strong>${labels[d.s]} · ${d.year} · ${d.list.length} papers</strong><ul class="paper-list">${d.list.map(p=>`<li><a href="${p.paper_url}" target="_blank" rel="noopener">${p.title}</a></li>`).join('')}</ul>`);});
+  svg.selectAll('circle.cell').data(cells).join('circle').attr('class','cell').attr('cx',d=>x(d.year)).attr('cy',d=>y(d.s)).attr('r',d=>8+22*Math.sqrt(d.list.length/max)).attr('fill',d=>colors[d.s]).attr('fill-opacity',.88).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${labels[d.s]} · ${d.year} · ${d.list.length} papers</strong>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();pinTooltip(event,`<strong>${labels[d.s]} · ${d.year} · ${d.list.length} papers</strong>${paperListHtml(d.list)}`);});
   svg.selectAll('text.count').data(cells).join('text').attr('class','count').attr('x',d=>x(d.year)).attr('y',d=>y(d.s)+5).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',650).attr('fill','#fff').style('pointer-events','none').text(d=>d.list.length);
 }
 
@@ -106,12 +85,12 @@ function renderHeatmap(){
   svg.append('text').attr('x',margin.left).attr('y',57).attr('font-size',13).attr('fill','#657287').text('Hover a cell to inspect contributing papers.');
   svg.selectAll('text.surface').data(surfaces).join('text').attr('class','axis').attr('text-anchor','start').attr('transform',s=>`translate(${x(s)+8},${margin.top-18}) rotate(-52)`).text(s=>s.replaceAll('-',' '));
   svg.selectAll('text.mechanism').data(mechanisms).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',m=>y(m)+y.bandwidth()/2+4).text(m=>m.replaceAll('-',' '));
-  svg.selectAll('rect.cell').data(cellData).join('rect').attr('class','cell').attr('x',d=>x(d.s)).attr('y',d=>y(d.m)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${d.m.replaceAll('-',' ')} × ${d.s.replaceAll('-',' ')}</strong><div>${d.n} papers</div><ul class="paper-list">${d.list.map(p=>`<li><a href="${p.paper_url}" target="_blank" rel="noopener">${p.title}</a></li>`).join('')}</ul>`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();pinTooltip(event,`<strong>${d.m.replaceAll('-',' ')} × ${d.s.replaceAll('-',' ')}</strong><div>${d.n} papers</div><ul class="paper-list">${d.list.map(p=>`<li><a href="${p.paper_url}" target="_blank" rel="noopener">${p.title}</a></li>`).join('')}</ul>`);});
+  svg.selectAll('rect.cell').data(cellData).join('rect').attr('class','cell').attr('x',d=>x(d.s)).attr('y',d=>y(d.m)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${d.m.replaceAll('-',' ')} × ${d.s.replaceAll('-',' ')}</strong><div>${d.n} papers</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();pinTooltip(event,`<strong>${d.m.replaceAll('-',' ')} × ${d.s.replaceAll('-',' ')}</strong><div>${d.n} papers</div>${paperListHtml(d.list)}`);});
   svg.selectAll('text.value').data(cellData.filter(d=>d.n)).join('text').attr('class','value').attr('x',d=>x(d.s)+x.bandwidth()/2).attr('y',d=>y(d.m)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',650).attr('fill',d=>d.n/max>.48?'#fff':'#202938').style('pointer-events','none').text(d=>d.n);
 }
 
 d3.selectAll('button[data-view]').on('click',function(){const view=this.dataset.view;d3.selectAll('button[data-view]').attr('aria-pressed','false');d3.select(this).attr('aria-pressed','true');d3.selectAll('section').classed('active',false);d3.select('#'+view).classed('active',true);});
-for (const render of [renderMap, renderTimeline, renderHeatmap]) {
+for (const render of [renderTimeline, renderHeatmap]) {
   try { render(); } catch (error) { console.error('Visualization failed to render:', error); }
 }
 </script>

@@ -23,214 +23,332 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text class="axis" text-anchor="start" transform="translate(989.0 257) rotate(-55)">Reasoning Representation</text>
 <text class="axis" text-anchor="start" transform="translate(1071.0 257) rotate(-55)">Physical Semantic Environment</text>
 <text class="label" x="282" y="305.5" text-anchor="end">Distribution Shift</text>
-<rect x="302" y="277" width="78" height="47" rx="6" fill="#4F67A5"><title>Distribution Shift × Visual Perception: 14 papers</title></rect>
+<rect x="302" y="277" width="78" height="47" rx="6" fill="#4F67A5"><title>[arXiv 2026] Generalizable VLA Finetuning via Representation Anchoring and Language-Action Alignment
+[arXiv 2025] LIBERO-PRO: Towards Robust and Fair Evaluation of Vision-Language-Action Models Beyond Memorization
+[CVPR 2026] LIBERO-Plus: A Progressive Robustness Benchmark for Visual-Language-Action Models
+[arXiv 2025] Geometric Red-Teaming for Robotic Manipulation
+[arXiv 2026] How VLAs (Really) Work in Open-World Environments
+[CoRL 2024] Evaluating Real-World Robot Manipulation Policies in Simulation
+[NeurIPS Datasets and Benchmarks 2023] LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning
+[arXiv 2025] pi0.5: A Vision-Language-Action Model with Open-World Generalization
+[arXiv 2026] Safe-Night VLA: Seeing the Unseen via Thermal-Perceptive Vision-Language-Action Models for Safety-Critical Manipulation
+[arXiv 2024] Run-Time Observation Interventions Make Vision-Language-Action Models More Visually Robust
+[arXiv 2025] Affordance Field Intervention: Enabling VLAs to Escape Memory Traps in Robotic Manipulation
+[EMNLP 2026] LIBERO-Para: A Diagnostic Benchmark and Metrics for Paraphrase Robustness in VLA Models
+[arXiv 2025] VLM-SAFE: Vision-Language Model-Guided Safety-Aware Reinforcement Learning with World Models for Autonomous Driving
+[arXiv 2025] Don&#x27;t Blind Your VLA: Aligning Visual Representations for OOD Generalization</title></rect>
 <text x="341.0" y="305.5" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">14</text>
-<rect x="384" y="277" width="78" height="47" rx="6" fill="#576EA9"><title>Distribution Shift × World State: 13 papers</title></rect>
+<rect x="384" y="277" width="78" height="47" rx="6" fill="#576EA9"><title>[CVPR 2026] Boosting Vision-Language-Action Finetuning with Feasible Action Neighborhood Prior
+[arXiv 2025] LIBERO-PRO: Towards Robust and Fair Evaluation of Vision-Language-Action Models Beyond Memorization
+[CVPR 2026] LIBERO-Plus: A Progressive Robustness Benchmark for Visual-Language-Action Models
+[arXiv 2025] Geometric Red-Teaming for Robotic Manipulation
+[arXiv 2026] ICR-Drive: Instruction Counterfactual Robustness for End-to-End Language-Driven Autonomous Driving
+[arXiv 2026] How VLAs (Really) Work in Open-World Environments
+[CoRL 2024] Evaluating Real-World Robot Manipulation Policies in Simulation
+[NeurIPS Datasets and Benchmarks 2023] LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning
+[arXiv 2025] pi0.5: A Vision-Language-Action Model with Open-World Generalization
+[arXiv 2025] Affordance Field Intervention: Enabling VLAs to Escape Memory Traps in Robotic Manipulation
+[arXiv 2026] Generative Scenario Rollouts for End-to-End Autonomous Driving
+[arXiv 2025] VLM-SAFE: Vision-Language Model-Guided Safety-Aware Reinforcement Learning with World Models for Autonomous Driving
+[IROS 2026] Shift &amp; Drift: A Zero-Shot Benchmark for Generalizable and Robust Autonomous Driving Motion Planning</title></rect>
 <text x="423.0" y="305.5" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">13</text>
-<rect x="466" y="277" width="78" height="47" rx="6" fill="#BAC5DD"><title>Distribution Shift × Action Interface: 3 papers</title></rect>
+<rect x="466" y="277" width="78" height="47" rx="6" fill="#BAC5DD"><title>[CVPR 2026] Boosting Vision-Language-Action Finetuning with Feasible Action Neighborhood Prior
+[CoRL 2024] Evaluating Real-World Robot Manipulation Policies in Simulation
+[arXiv 2025] VLM-SAFE: Vision-Language Model-Guided Safety-Aware Reinforcement Learning with World Models for Autonomous Driving</title></rect>
 <text x="505.0" y="305.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">3</text>
-<rect x="548" y="277" width="78" height="47" rx="6" fill="#A2B0D0"><title>Distribution Shift × User Instruction: 5 papers</title></rect>
+<rect x="548" y="277" width="78" height="47" rx="6" fill="#A2B0D0"><title>[arXiv 2026] Generalizable VLA Finetuning via Representation Anchoring and Language-Action Alignment
+[CVPR 2026] LIBERO-Plus: A Progressive Robustness Benchmark for Visual-Language-Action Models
+[arXiv 2026] ICR-Drive: Instruction Counterfactual Robustness for End-to-End Language-Driven Autonomous Driving
+[NeurIPS Datasets and Benchmarks 2023] LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning
+[arXiv 2026] Restoring Linguistic Grounding in VLA Models via Train-Free Attention Recalibration</title></rect>
 <text x="587.0" y="305.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">5</text>
-<rect x="630" y="277" width="78" height="47" rx="6" fill="#D6DEEC"><title>Distribution Shift × Execution Control: 1 papers</title></rect>
+<rect x="630" y="277" width="78" height="47" rx="6" fill="#D6DEEC"><title>[IROS 2026] Shift &amp; Drift: A Zero-Shot Benchmark for Generalizable and Robust Autonomous Driving Motion Planning</title></rect>
 <text x="669.0" y="305.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="712" y="277" width="78" height="47" rx="6" fill="#EEF3F8"><title>Distribution Shift × Model Supply Chain: 0 papers</title></rect>
+<rect x="712" y="277" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="751.0" y="305.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="794" y="277" width="78" height="47" rx="6" fill="#BAC5DD"><title>Distribution Shift × Task Planning: 3 papers</title></rect>
+<rect x="794" y="277" width="78" height="47" rx="6" fill="#BAC5DD"><title>[arXiv 2025] pi0.5: A Vision-Language-Action Model with Open-World Generalization
+[arXiv 2026] Generative Scenario Rollouts for End-to-End Autonomous Driving
+[arXiv 2025] VLM-SAFE: Vision-Language Model-Guided Safety-Aware Reinforcement Learning with World Models for Autonomous Driving</title></rect>
 <text x="833.0" y="305.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">3</text>
-<rect x="876" y="277" width="78" height="47" rx="6" fill="#D6DEEC"><title>Distribution Shift × Proprioception: 1 papers</title></rect>
+<rect x="876" y="277" width="78" height="47" rx="6" fill="#D6DEEC"><title>[CVPR 2026] LIBERO-Plus: A Progressive Robustness Benchmark for Visual-Language-Action Models</title></rect>
 <text x="915.0" y="305.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="958" y="277" width="78" height="47" rx="6" fill="#BAC5DD"><title>Distribution Shift × Reasoning Representation: 3 papers</title></rect>
+<rect x="958" y="277" width="78" height="47" rx="6" fill="#BAC5DD"><title>[arXiv 2026] Generalizable VLA Finetuning via Representation Anchoring and Language-Action Alignment
+[arXiv 2026] Restoring Linguistic Grounding in VLA Models via Train-Free Attention Recalibration
+[arXiv 2025] Don&#x27;t Blind Your VLA: Aligning Visual Representations for OOD Generalization</title></rect>
 <text x="997.0" y="305.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">3</text>
-<rect x="1040" y="277" width="78" height="47" rx="6" fill="#EEF3F8"><title>Distribution Shift × Physical Semantic Environment: 0 papers</title></rect>
+<rect x="1040" y="277" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1079.0" y="305.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="label" x="282" y="356.5" text-anchor="end">Execution Error</text>
-<rect x="302" y="328" width="78" height="47" rx="6" fill="#687DB2"><title>Execution Error × Visual Perception: 11 papers</title></rect>
+<rect x="302" y="328" width="78" height="47" rx="6" fill="#687DB2"><title>[NeurIPS 2025] SAFE: Multitask Failure Detection for Vision-Language-Action Models
+[arXiv 2025] FailSafe: Reasoning and Recovery from Failures in Vision-Language-Action Models
+[CoRL 2023] REFLECT: Summarizing Robot Experiences for Failure Explanation and Correction
+[ECCV 2026] VLA Knows Its Limits: Adaptive Execution Horizons for Robot Policies
+[arXiv 2025] I-FailSense: Towards General Robotic Failure Detection with Vision-Language Models
+[IROS 2024] DoReMi: Grounding Language Model by Detecting and Recovering from Plan-Execution Misalignment
+[arXiv 2026] Replanning Human-Robot Collaborative Tasks with Vision-Language Models via Semantic and Physical Dual-Correction
+[arXiv 2024] A Self-Correcting Vision-Language-Action Model for Fast and Slow System Manipulation
+[CVPR 2025] Phoenix: A Motion-based Self-Reflection Framework for Fine-grained Robotic Action Correction
+[CVPR 2026] FLARE: A Failure-Aware Framework for Autonomous Correction and Recovery in Visual-Language Robotic Manipulation
+[arXiv 2026] Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents</title></rect>
 <text x="341.0" y="356.5" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">11</text>
-<rect x="384" y="328" width="78" height="47" rx="6" fill="#98A7CB"><title>Execution Error × World State: 6 papers</title></rect>
+<rect x="384" y="328" width="78" height="47" rx="6" fill="#98A7CB"><title>[arXiv 2025] FailSafe: Reasoning and Recovery from Failures in Vision-Language-Action Models
+[arXiv 2026] RC-NF: Robot-Conditioned Normalizing Flow for Real-Time Anomaly Detection in Robotic Manipulation
+[CoRL 2023] REFLECT: Summarizing Robot Experiences for Failure Explanation and Correction
+[IROS 2024] DoReMi: Grounding Language Model by Detecting and Recovering from Plan-Execution Misalignment
+[arXiv 2026] Replanning Human-Robot Collaborative Tasks with Vision-Language Models via Semantic and Physical Dual-Correction
+[arXiv 2024] A Self-Correcting Vision-Language-Action Model for Fast and Slow System Manipulation</title></rect>
 <text x="423.0" y="356.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">6</text>
-<rect x="466" y="328" width="78" height="47" rx="6" fill="#7A8DBC"><title>Execution Error × Action Interface: 9 papers</title></rect>
+<rect x="466" y="328" width="78" height="47" rx="6" fill="#7A8DBC"><title>[NeurIPS 2025] SAFE: Multitask Failure Detection for Vision-Language-Action Models
+[arXiv 2025] FailSafe: Reasoning and Recovery from Failures in Vision-Language-Action Models
+[ECCV 2026] VLA Knows Its Limits: Adaptive Execution Horizons for Robot Policies
+[arXiv 2024] A Self-Correcting Vision-Language-Action Model for Fast and Slow System Manipulation
+[CVPR 2025] Phoenix: A Motion-based Self-Reflection Framework for Fine-grained Robotic Action Correction
+[CVPR 2026] FLARE: A Failure-Aware Framework for Autonomous Correction and Recovery in Visual-Language Robotic Manipulation
+[arXiv 2026] Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents
+[arXiv 2026] FAR: Failure-Aware Retry for Test-Time Recovery and Continual Policy Improvement
+[arXiv 2026] ASPIRE: Agentic /Skills Discovery for Robotics</title></rect>
 <text x="505.0" y="356.5" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">9</text>
-<rect x="548" y="328" width="78" height="47" rx="6" fill="#D6DEEC"><title>Execution Error × User Instruction: 1 papers</title></rect>
+<rect x="548" y="328" width="78" height="47" rx="6" fill="#D6DEEC"><title>[arXiv 2026] Replanning Human-Robot Collaborative Tasks with Vision-Language Models via Semantic and Physical Dual-Correction</title></rect>
 <text x="587.0" y="356.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="630" y="328" width="78" height="47" rx="6" fill="#98A7CB"><title>Execution Error × Execution Control: 6 papers</title></rect>
+<rect x="630" y="328" width="78" height="47" rx="6" fill="#98A7CB"><title>[ECCV 2026] VLA Knows Its Limits: Adaptive Execution Horizons for Robot Policies
+[IROS 2024] DoReMi: Grounding Language Model by Detecting and Recovering from Plan-Execution Misalignment
+[arXiv 2026] Replanning Human-Robot Collaborative Tasks with Vision-Language Models via Semantic and Physical Dual-Correction
+[CVPR 2025] Phoenix: A Motion-based Self-Reflection Framework for Fine-grained Robotic Action Correction
+[CVPR 2026] FLARE: A Failure-Aware Framework for Autonomous Correction and Recovery in Visual-Language Robotic Manipulation
+[arXiv 2026] FAR: Failure-Aware Retry for Test-Time Recovery and Continual Policy Improvement</title></rect>
 <text x="669.0" y="356.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">6</text>
-<rect x="712" y="328" width="78" height="47" rx="6" fill="#EEF3F8"><title>Execution Error × Model Supply Chain: 0 papers</title></rect>
+<rect x="712" y="328" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="751.0" y="356.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="794" y="328" width="78" height="47" rx="6" fill="#C7D1E4"><title>Execution Error × Task Planning: 2 papers</title></rect>
+<rect x="794" y="328" width="78" height="47" rx="6" fill="#C7D1E4"><title>[IROS 2024] DoReMi: Grounding Language Model by Detecting and Recovering from Plan-Execution Misalignment
+[arXiv 2026] ASPIRE: Agentic /Skills Discovery for Robotics</title></rect>
 <text x="833.0" y="356.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
-<rect x="876" y="328" width="78" height="47" rx="6" fill="#A2B0D0"><title>Execution Error × Proprioception: 5 papers</title></rect>
+<rect x="876" y="328" width="78" height="47" rx="6" fill="#A2B0D0"><title>[arXiv 2026] RC-NF: Robot-Conditioned Normalizing Flow for Real-Time Anomaly Detection in Robotic Manipulation
+[CoRL 2023] REFLECT: Summarizing Robot Experiences for Failure Explanation and Correction
+[arXiv 2025] I-FailSense: Towards General Robotic Failure Detection with Vision-Language Models
+[CVPR 2026] FLARE: A Failure-Aware Framework for Autonomous Correction and Recovery in Visual-Language Robotic Manipulation
+[arXiv 2026] Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents</title></rect>
 <text x="915.0" y="356.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">5</text>
-<rect x="958" y="328" width="78" height="47" rx="6" fill="#EEF3F8"><title>Execution Error × Reasoning Representation: 0 papers</title></rect>
+<rect x="958" y="328" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="997.0" y="356.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1040" y="328" width="78" height="47" rx="6" fill="#EEF3F8"><title>Execution Error × Physical Semantic Environment: 0 papers</title></rect>
+<rect x="1040" y="328" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1079.0" y="356.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="label" x="282" y="407.5" text-anchor="end">Constraint Violation</text>
-<rect x="302" y="379" width="78" height="47" rx="6" fill="#C7D1E4"><title>Constraint Violation × Visual Perception: 2 papers</title></rect>
+<rect x="302" y="379" width="78" height="47" rx="6" fill="#C7D1E4"><title>[arXiv 2024] EARBench: Towards Evaluating Physical Risk Awareness for Task Planning of Foundation Model-Based Embodied AI Agents
+[arXiv 2026] DroneVLA: VLA based Aerial Manipulation</title></rect>
 <text x="341.0" y="407.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
-<rect x="384" y="379" width="78" height="47" rx="6" fill="#98A7CB"><title>Constraint Violation × World State: 6 papers</title></rect>
+<rect x="384" y="379" width="78" height="47" rx="6" fill="#98A7CB"><title>[AAAI 2026] IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents in Daily Household Tasks
+[arXiv 2024] EARBench: Towards Evaluating Physical Risk Awareness for Task Planning of Foundation Model-Based Embodied AI Agents
+[arXiv 2025] From Words to Safety: Language-Conditioned Safety Filtering for Robot Navigation
+[arXiv 2024] Safety Optimized Reinforcement Learning via Multi-Objective Policy Optimization
+[arXiv 2023] Safe-VLN: Collision Avoidance for Vision-and-Language Navigation of Autonomous Robots Operating in Continuous Environments
+[arXiv 2026] DroneVLA: VLA based Aerial Manipulation</title></rect>
 <text x="423.0" y="407.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">6</text>
-<rect x="466" y="379" width="78" height="47" rx="6" fill="#98A7CB"><title>Constraint Violation × Action Interface: 6 papers</title></rect>
+<rect x="466" y="379" width="78" height="47" rx="6" fill="#98A7CB"><title>[NeurIPS 2025] SafeVLA: Towards Safety Alignment of Vision-Language-Action Models via Constrained Learning
+[arXiv 2025] VLSA: Vision-Language-Action Models with a Plug-and-Play Safety Constraint Layer
+[arXiv 2024] Safety Optimized Reinforcement Learning via Multi-Objective Policy Optimization
+[arXiv 2023] Safe-VLN: Collision Avoidance for Vision-and-Language Navigation of Autonomous Robots Operating in Continuous Environments
+[arXiv 2025] Towards Safe Robot Foundation Models Using Inductive Biases
+[arXiv 2026] CompliantVLA-adaptor: VLM-Guided Variable Impedance Action for Safe Contact-Rich Manipulation</title></rect>
 <text x="505.0" y="407.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">6</text>
-<rect x="548" y="379" width="78" height="47" rx="6" fill="#A2B0D0"><title>Constraint Violation × User Instruction: 5 papers</title></rect>
+<rect x="548" y="379" width="78" height="47" rx="6" fill="#A2B0D0"><title>[NeurIPS 2025] SafeVLA: Towards Safety Alignment of Vision-Language-Action Models via Constrained Learning
+[arXiv 2025] VLSA: Vision-Language-Action Models with a Plug-and-Play Safety Constraint Layer
+[AAAI 2026] IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents in Daily Household Tasks
+[arXiv 2024] EARBench: Towards Evaluating Physical Risk Awareness for Task Planning of Foundation Model-Based Embodied AI Agents
+[arXiv 2025] From Words to Safety: Language-Conditioned Safety Filtering for Robot Navigation</title></rect>
 <text x="587.0" y="407.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">5</text>
-<rect x="630" y="379" width="78" height="47" rx="6" fill="#A2B0D0"><title>Constraint Violation × Execution Control: 5 papers</title></rect>
+<rect x="630" y="379" width="78" height="47" rx="6" fill="#A2B0D0"><title>[AAAI 2026] IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents in Daily Household Tasks
+[arXiv 2024] Safety Optimized Reinforcement Learning via Multi-Objective Policy Optimization
+[arXiv 2023] Safe-VLN: Collision Avoidance for Vision-and-Language Navigation of Autonomous Robots Operating in Continuous Environments
+[arXiv 2025] Towards Safe Robot Foundation Models Using Inductive Biases
+[arXiv 2026] DroneVLA: VLA based Aerial Manipulation</title></rect>
 <text x="669.0" y="407.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">5</text>
-<rect x="712" y="379" width="78" height="47" rx="6" fill="#EEF3F8"><title>Constraint Violation × Model Supply Chain: 0 papers</title></rect>
+<rect x="712" y="379" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="751.0" y="407.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="794" y="379" width="78" height="47" rx="6" fill="#EEF3F8"><title>Constraint Violation × Task Planning: 0 papers</title></rect>
+<rect x="794" y="379" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="833.0" y="407.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="876" y="379" width="78" height="47" rx="6" fill="#D6DEEC"><title>Constraint Violation × Proprioception: 1 papers</title></rect>
+<rect x="876" y="379" width="78" height="47" rx="6" fill="#D6DEEC"><title>[arXiv 2026] CompliantVLA-adaptor: VLM-Guided Variable Impedance Action for Safe Contact-Rich Manipulation</title></rect>
 <text x="915.0" y="407.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="958" y="379" width="78" height="47" rx="6" fill="#EEF3F8"><title>Constraint Violation × Reasoning Representation: 0 papers</title></rect>
+<rect x="958" y="379" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="997.0" y="407.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1040" y="379" width="78" height="47" rx="6" fill="#EEF3F8"><title>Constraint Violation × Physical Semantic Environment: 0 papers</title></rect>
+<rect x="1040" y="379" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1079.0" y="407.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="label" x="282" y="458.5" text-anchor="end">Backdoor</text>
-<rect x="302" y="430" width="78" height="47" rx="6" fill="#98A7CB"><title>Backdoor × Visual Perception: 6 papers</title></rect>
+<rect x="302" y="430" width="78" height="47" rx="6" fill="#98A7CB"><title>[NeurIPS 2025] BadVLA: Towards Backdoor Attacks on Vision-Language-Action Models via Objective-Decoupled Optimization
+[arXiv 2025] DropVLA: An Action-Level Backdoor Attack on Vision-Language-Action Models
+[arXiv 2026] SilentDrift: Exploiting Action Chunking for Stealthy Backdoor Attacks on Vision-Language-Action Models
+[arXiv 2025] Goal-Oriented Backdoor Attack Against Vision-Language-Action Models via Physical Objects
+[arXiv 2026] TrustVLA: Mechanism-Guided Inference-Time Defense Against Vision-Language-Action Backdoors
+[arXiv 2026] Inject Once Survive Later: Backdooring Vision-Language-Action Models to Persist Through Downstream Fine-tuning</title></rect>
 <text x="341.0" y="458.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">6</text>
-<rect x="384" y="430" width="78" height="47" rx="6" fill="#D6DEEC"><title>Backdoor × World State: 1 papers</title></rect>
+<rect x="384" y="430" width="78" height="47" rx="6" fill="#D6DEEC"><title>[arXiv 2026] State Backdoor: Towards Stealthy Real-World Poisoning Attack on Vision-Language-Action Models in State Space</title></rect>
 <text x="423.0" y="458.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="466" y="430" width="78" height="47" rx="6" fill="#C7D1E4"><title>Backdoor × Action Interface: 2 papers</title></rect>
+<rect x="466" y="430" width="78" height="47" rx="6" fill="#C7D1E4"><title>[arXiv 2025] DropVLA: An Action-Level Backdoor Attack on Vision-Language-Action Models
+[arXiv 2026] SilentDrift: Exploiting Action Chunking for Stealthy Backdoor Attacks on Vision-Language-Action Models</title></rect>
 <text x="505.0" y="458.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
-<rect x="548" y="430" width="78" height="47" rx="6" fill="#D6DEEC"><title>Backdoor × User Instruction: 1 papers</title></rect>
+<rect x="548" y="430" width="78" height="47" rx="6" fill="#D6DEEC"><title>[ICLR 2025] Can We Trust Embodied Agents? Exploring Backdoor Attacks Against Embodied LLM-Based Decision-Making Systems</title></rect>
 <text x="587.0" y="458.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="630" y="430" width="78" height="47" rx="6" fill="#EEF3F8"><title>Backdoor × Execution Control: 0 papers</title></rect>
+<rect x="630" y="430" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="669.0" y="458.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="712" y="430" width="78" height="47" rx="6" fill="#8495C1"><title>Backdoor × Model Supply Chain: 8 papers</title></rect>
+<rect x="712" y="430" width="78" height="47" rx="6" fill="#8495C1"><title>[NeurIPS 2025] BadVLA: Towards Backdoor Attacks on Vision-Language-Action Models via Objective-Decoupled Optimization
+[arXiv 2025] DropVLA: An Action-Level Backdoor Attack on Vision-Language-Action Models
+[arXiv 2026] State Backdoor: Towards Stealthy Real-World Poisoning Attack on Vision-Language-Action Models in State Space
+[arXiv 2026] SilentDrift: Exploiting Action Chunking for Stealthy Backdoor Attacks on Vision-Language-Action Models
+[ICLR 2025] Can We Trust Embodied Agents? Exploring Backdoor Attacks Against Embodied LLM-Based Decision-Making Systems
+[arXiv 2025] Goal-Oriented Backdoor Attack Against Vision-Language-Action Models via Physical Objects
+[arXiv 2026] TrustVLA: Mechanism-Guided Inference-Time Defense Against Vision-Language-Action Backdoors
+[arXiv 2026] Inject Once Survive Later: Backdooring Vision-Language-Action Models to Persist Through Downstream Fine-tuning</title></rect>
 <text x="751.0" y="458.5" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">8</text>
-<rect x="794" y="430" width="78" height="47" rx="6" fill="#EEF3F8"><title>Backdoor × Task Planning: 0 papers</title></rect>
+<rect x="794" y="430" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="833.0" y="458.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="876" y="430" width="78" height="47" rx="6" fill="#D6DEEC"><title>Backdoor × Proprioception: 1 papers</title></rect>
+<rect x="876" y="430" width="78" height="47" rx="6" fill="#D6DEEC"><title>[arXiv 2026] State Backdoor: Towards Stealthy Real-World Poisoning Attack on Vision-Language-Action Models in State Space</title></rect>
 <text x="915.0" y="458.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="958" y="430" width="78" height="47" rx="6" fill="#EEF3F8"><title>Backdoor × Reasoning Representation: 0 papers</title></rect>
+<rect x="958" y="430" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="997.0" y="458.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1040" y="430" width="78" height="47" rx="6" fill="#D6DEEC"><title>Backdoor × Physical Semantic Environment: 1 papers</title></rect>
+<rect x="1040" y="430" width="78" height="47" rx="6" fill="#D6DEEC"><title>[arXiv 2025] Goal-Oriented Backdoor Attack Against Vision-Language-Action Models via Physical Objects</title></rect>
 <text x="1079.0" y="458.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <text class="label" x="282" y="509.5" text-anchor="end">Jailbreak</text>
-<rect x="302" y="481" width="78" height="47" rx="6" fill="#EEF3F8"><title>Jailbreak × Visual Perception: 0 papers</title></rect>
+<rect x="302" y="481" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="341.0" y="509.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="384" y="481" width="78" height="47" rx="6" fill="#D6DEEC"><title>Jailbreak × World State: 1 papers</title></rect>
+<rect x="384" y="481" width="78" height="47" rx="6" fill="#D6DEEC"><title>[IEEE RA-L 2026] Safety Guardrails for LLM-Enabled Robots</title></rect>
 <text x="423.0" y="509.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="466" y="481" width="78" height="47" rx="6" fill="#EEF3F8"><title>Jailbreak × Action Interface: 0 papers</title></rect>
+<rect x="466" y="481" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="505.0" y="509.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="548" y="481" width="78" height="47" rx="6" fill="#8D9EC6"><title>Jailbreak × User Instruction: 7 papers</title></rect>
+<rect x="548" y="481" width="78" height="47" rx="6" fill="#8D9EC6"><title>[ICRA 2025] Jailbreaking LLM-Controlled Robots
+[arXiv 2025] Adversarial Attacks on Robotic Vision-Language-Action Models
+[IEEE RA-L 2026] Safety Guardrails for LLM-Enabled Robots
+[arXiv 2025] POEX: Towards Policy Executable Jailbreak Attacks Against the LLM-Based Robots
+[ICLR 2025] BadRobot: Jailbreaking Embodied LLM Agents in the Physical World
+[arXiv 2025] Concept Enhancement Engineering: A Lightweight and Efficient Robust Defense Against Jailbreak Attacks in Embodied AI
+[arXiv 2025] SafeMind: Benchmarking and Mitigating Safety Risks in Embodied LLM Agents</title></rect>
 <text x="587.0" y="509.5" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">7</text>
-<rect x="630" y="481" width="78" height="47" rx="6" fill="#EEF3F8"><title>Jailbreak × Execution Control: 0 papers</title></rect>
+<rect x="630" y="481" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="669.0" y="509.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="712" y="481" width="78" height="47" rx="6" fill="#EEF3F8"><title>Jailbreak × Model Supply Chain: 0 papers</title></rect>
+<rect x="712" y="481" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="751.0" y="509.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="794" y="481" width="78" height="47" rx="6" fill="#EEF3F8"><title>Jailbreak × Task Planning: 0 papers</title></rect>
+<rect x="794" y="481" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="833.0" y="509.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="876" y="481" width="78" height="47" rx="6" fill="#EEF3F8"><title>Jailbreak × Proprioception: 0 papers</title></rect>
+<rect x="876" y="481" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="915.0" y="509.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="958" y="481" width="78" height="47" rx="6" fill="#D6DEEC"><title>Jailbreak × Reasoning Representation: 1 papers</title></rect>
+<rect x="958" y="481" width="78" height="47" rx="6" fill="#D6DEEC"><title>[arXiv 2025] Concept Enhancement Engineering: A Lightweight and Efficient Robust Defense Against Jailbreak Attacks in Embodied AI</title></rect>
 <text x="997.0" y="509.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="1040" y="481" width="78" height="47" rx="6" fill="#EEF3F8"><title>Jailbreak × Physical Semantic Environment: 0 papers</title></rect>
+<rect x="1040" y="481" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1079.0" y="509.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="label" x="282" y="560.5" text-anchor="end">Unsafe Policy Behavior</text>
-<rect x="302" y="532" width="78" height="47" rx="6" fill="#EEF3F8"><title>Unsafe Policy Behavior × Visual Perception: 0 papers</title></rect>
+<rect x="302" y="532" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="341.0" y="560.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="384" y="532" width="78" height="47" rx="6" fill="#EEF3F8"><title>Unsafe Policy Behavior × World State: 0 papers</title></rect>
+<rect x="384" y="532" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="423.0" y="560.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="466" y="532" width="78" height="47" rx="6" fill="#ADBAD6"><title>Unsafe Policy Behavior × Action Interface: 4 papers</title></rect>
+<rect x="466" y="532" width="78" height="47" rx="6" fill="#ADBAD6"><title>[arXiv 2025] Human-in-the-Loop Online Rejection Sampling for Robotic Manipulation
+[arXiv 2025] ROVER: Regulator-Driven Robust Temporal Verification of Black-Box Robot Policies
+[arXiv 2025] EvoVLA: Self-Evolving Vision-Language-Action Model
+[NeurIPS 2025] Human-assisted Robotic Policy Refinement via Action Preference Optimization</title></rect>
 <text x="505.0" y="560.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">4</text>
-<rect x="548" y="532" width="78" height="47" rx="6" fill="#EEF3F8"><title>Unsafe Policy Behavior × User Instruction: 0 papers</title></rect>
+<rect x="548" y="532" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="587.0" y="560.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="630" y="532" width="78" height="47" rx="6" fill="#D6DEEC"><title>Unsafe Policy Behavior × Execution Control: 1 papers</title></rect>
+<rect x="630" y="532" width="78" height="47" rx="6" fill="#D6DEEC"><title>[arXiv 2025] ROVER: Regulator-Driven Robust Temporal Verification of Black-Box Robot Policies</title></rect>
 <text x="669.0" y="560.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="712" y="532" width="78" height="47" rx="6" fill="#D6DEEC"><title>Unsafe Policy Behavior × Model Supply Chain: 1 papers</title></rect>
+<rect x="712" y="532" width="78" height="47" rx="6" fill="#D6DEEC"><title>[arXiv 2026] VLA-Forget: Vision-Language-Action Unlearning for Embodied Foundation Models</title></rect>
 <text x="751.0" y="560.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="794" y="532" width="78" height="47" rx="6" fill="#D6DEEC"><title>Unsafe Policy Behavior × Task Planning: 1 papers</title></rect>
+<rect x="794" y="532" width="78" height="47" rx="6" fill="#D6DEEC"><title>[arXiv 2025] EvoVLA: Self-Evolving Vision-Language-Action Model</title></rect>
 <text x="833.0" y="560.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="876" y="532" width="78" height="47" rx="6" fill="#EEF3F8"><title>Unsafe Policy Behavior × Proprioception: 0 papers</title></rect>
+<rect x="876" y="532" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="915.0" y="560.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="958" y="532" width="78" height="47" rx="6" fill="#EEF3F8"><title>Unsafe Policy Behavior × Reasoning Representation: 0 papers</title></rect>
+<rect x="958" y="532" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="997.0" y="560.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1040" y="532" width="78" height="47" rx="6" fill="#EEF3F8"><title>Unsafe Policy Behavior × Physical Semantic Environment: 0 papers</title></rect>
+<rect x="1040" y="532" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1079.0" y="560.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="label" x="282" y="611.5" text-anchor="end">Adversarial Patch</text>
-<rect x="302" y="583" width="78" height="47" rx="6" fill="#ADBAD6"><title>Adversarial Patch × Visual Perception: 4 papers</title></rect>
+<rect x="302" y="583" width="78" height="47" rx="6" fill="#ADBAD6"><title>[ICCV 2025] Exploring the Adversarial Vulnerabilities of Vision-Language-Action Models in Robotics
+[arXiv 2025] Model-Agnostic Adversarial Attack and Defense for Vision-Language-Action Models
+[CVPR 2026] When Robots Obey the Patch: Universal Transferable Patch Attacks on Vision-Language-Action Models
+[ICLR 2024] Embodied Active Defense: Leveraging Recurrent Feedback to Counter Adversarial Patches</title></rect>
 <text x="341.0" y="611.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">4</text>
-<rect x="384" y="583" width="78" height="47" rx="6" fill="#EEF3F8"><title>Adversarial Patch × World State: 0 papers</title></rect>
+<rect x="384" y="583" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="423.0" y="611.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="466" y="583" width="78" height="47" rx="6" fill="#EEF3F8"><title>Adversarial Patch × Action Interface: 0 papers</title></rect>
+<rect x="466" y="583" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="505.0" y="611.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="548" y="583" width="78" height="47" rx="6" fill="#EEF3F8"><title>Adversarial Patch × User Instruction: 0 papers</title></rect>
+<rect x="548" y="583" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="587.0" y="611.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="630" y="583" width="78" height="47" rx="6" fill="#EEF3F8"><title>Adversarial Patch × Execution Control: 0 papers</title></rect>
+<rect x="630" y="583" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="669.0" y="611.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="712" y="583" width="78" height="47" rx="6" fill="#EEF3F8"><title>Adversarial Patch × Model Supply Chain: 0 papers</title></rect>
+<rect x="712" y="583" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="751.0" y="611.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="794" y="583" width="78" height="47" rx="6" fill="#EEF3F8"><title>Adversarial Patch × Task Planning: 0 papers</title></rect>
+<rect x="794" y="583" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="833.0" y="611.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="876" y="583" width="78" height="47" rx="6" fill="#EEF3F8"><title>Adversarial Patch × Proprioception: 0 papers</title></rect>
+<rect x="876" y="583" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="915.0" y="611.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="958" y="583" width="78" height="47" rx="6" fill="#EEF3F8"><title>Adversarial Patch × Reasoning Representation: 0 papers</title></rect>
+<rect x="958" y="583" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="997.0" y="611.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1040" y="583" width="78" height="47" rx="6" fill="#EEF3F8"><title>Adversarial Patch × Physical Semantic Environment: 0 papers</title></rect>
+<rect x="1040" y="583" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1079.0" y="611.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="label" x="282" y="662.5" text-anchor="end">Digital Perturbation</text>
-<rect x="302" y="634" width="78" height="47" rx="6" fill="#ADBAD6"><title>Digital Perturbation × Visual Perception: 4 papers</title></rect>
+<rect x="302" y="634" width="78" height="47" rx="6" fill="#ADBAD6"><title>[arXiv 2025] When Alignment Fails: Multimodal Adversarial Attacks on Vision-Language-Action Models
+[arXiv 2025] FreezeVLA: Action-Freezing Attacks Against Vision-Language-Action Models
+[NeurIPS 2025] ADVEDM: Fine-Grained Adversarial Attack Against VLM-Based Embodied Agents
+[CVPR 2025] Chain of Attack: On the Robustness of Vision-Language Models Against Transfer-Based Adversarial Attacks</title></rect>
 <text x="341.0" y="662.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">4</text>
-<rect x="384" y="634" width="78" height="47" rx="6" fill="#EEF3F8"><title>Digital Perturbation × World State: 0 papers</title></rect>
+<rect x="384" y="634" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="423.0" y="662.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="466" y="634" width="78" height="47" rx="6" fill="#EEF3F8"><title>Digital Perturbation × Action Interface: 0 papers</title></rect>
+<rect x="466" y="634" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="505.0" y="662.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="548" y="634" width="78" height="47" rx="6" fill="#D6DEEC"><title>Digital Perturbation × User Instruction: 1 papers</title></rect>
+<rect x="548" y="634" width="78" height="47" rx="6" fill="#D6DEEC"><title>[arXiv 2025] When Alignment Fails: Multimodal Adversarial Attacks on Vision-Language-Action Models</title></rect>
 <text x="587.0" y="662.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="630" y="634" width="78" height="47" rx="6" fill="#EEF3F8"><title>Digital Perturbation × Execution Control: 0 papers</title></rect>
+<rect x="630" y="634" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="669.0" y="662.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="712" y="634" width="78" height="47" rx="6" fill="#EEF3F8"><title>Digital Perturbation × Model Supply Chain: 0 papers</title></rect>
+<rect x="712" y="634" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="751.0" y="662.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="794" y="634" width="78" height="47" rx="6" fill="#EEF3F8"><title>Digital Perturbation × Task Planning: 0 papers</title></rect>
+<rect x="794" y="634" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="833.0" y="662.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="876" y="634" width="78" height="47" rx="6" fill="#EEF3F8"><title>Digital Perturbation × Proprioception: 0 papers</title></rect>
+<rect x="876" y="634" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="915.0" y="662.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="958" y="634" width="78" height="47" rx="6" fill="#EEF3F8"><title>Digital Perturbation × Reasoning Representation: 0 papers</title></rect>
+<rect x="958" y="634" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="997.0" y="662.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1040" y="634" width="78" height="47" rx="6" fill="#EEF3F8"><title>Digital Perturbation × Physical Semantic Environment: 0 papers</title></rect>
+<rect x="1040" y="634" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1079.0" y="662.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="label" x="282" y="713.5" text-anchor="end">Indirect Prompt Injection</text>
-<rect x="302" y="685" width="78" height="47" rx="6" fill="#EEF3F8"><title>Indirect Prompt Injection × Visual Perception: 0 papers</title></rect>
+<rect x="302" y="685" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="341.0" y="713.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="384" y="685" width="78" height="47" rx="6" fill="#EEF3F8"><title>Indirect Prompt Injection × World State: 0 papers</title></rect>
+<rect x="384" y="685" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="423.0" y="713.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="466" y="685" width="78" height="47" rx="6" fill="#EEF3F8"><title>Indirect Prompt Injection × Action Interface: 0 papers</title></rect>
+<rect x="466" y="685" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="505.0" y="713.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="548" y="685" width="78" height="47" rx="6" fill="#EEF3F8"><title>Indirect Prompt Injection × User Instruction: 0 papers</title></rect>
+<rect x="548" y="685" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="587.0" y="713.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="630" y="685" width="78" height="47" rx="6" fill="#EEF3F8"><title>Indirect Prompt Injection × Execution Control: 0 papers</title></rect>
+<rect x="630" y="685" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="669.0" y="713.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="712" y="685" width="78" height="47" rx="6" fill="#EEF3F8"><title>Indirect Prompt Injection × Model Supply Chain: 0 papers</title></rect>
+<rect x="712" y="685" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="751.0" y="713.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="794" y="685" width="78" height="47" rx="6" fill="#EEF3F8"><title>Indirect Prompt Injection × Task Planning: 0 papers</title></rect>
+<rect x="794" y="685" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="833.0" y="713.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="876" y="685" width="78" height="47" rx="6" fill="#EEF3F8"><title>Indirect Prompt Injection × Proprioception: 0 papers</title></rect>
+<rect x="876" y="685" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="915.0" y="713.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="958" y="685" width="78" height="47" rx="6" fill="#EEF3F8"><title>Indirect Prompt Injection × Reasoning Representation: 0 papers</title></rect>
+<rect x="958" y="685" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="997.0" y="713.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1040" y="685" width="78" height="47" rx="6" fill="#BAC5DD"><title>Indirect Prompt Injection × Physical Semantic Environment: 3 papers</title></rect>
+<rect x="1040" y="685" width="78" height="47" rx="6" fill="#BAC5DD"><title>[SaTML 2026] CHAI: Command Hijacking Against Embodied AI
+[arXiv 2026] If You&#x27;re Waiting for a Sign... That Might Not Be It! Mitigating Trust Boundary Confusion from Visual Injections on Vision-Language Agentic Systems
+[arXiv 2025] The Shawshank Redemption of Embodied AI: Understanding and Benchmarking Indirect Environmental Jailbreaks</title></rect>
 <text x="1079.0" y="713.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">3</text>
 <text class="label" x="282" y="764.5" text-anchor="end">Planning Error</text>
-<rect x="302" y="736" width="78" height="47" rx="6" fill="#D6DEEC"><title>Planning Error × Visual Perception: 1 papers</title></rect>
+<rect x="302" y="736" width="78" height="47" rx="6" fill="#D6DEEC"><title>[arXiv 2026] Causal Scene Narration with Runtime Safety Supervision for Vision-Language-Action Driving</title></rect>
 <text x="341.0" y="764.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="384" y="736" width="78" height="47" rx="6" fill="#D6DEEC"><title>Planning Error × World State: 1 papers</title></rect>
+<rect x="384" y="736" width="78" height="47" rx="6" fill="#D6DEEC"><title>[arXiv 2026] Causal Scene Narration with Runtime Safety Supervision for Vision-Language-Action Driving</title></rect>
 <text x="423.0" y="764.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="466" y="736" width="78" height="47" rx="6" fill="#D6DEEC"><title>Planning Error × Action Interface: 1 papers</title></rect>
+<rect x="466" y="736" width="78" height="47" rx="6" fill="#D6DEEC"><title>[arXiv 2023] Plug in the Safety Chip: Enforcing Constraints for LLM-Driven Robot Agents</title></rect>
 <text x="505.0" y="764.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="548" y="736" width="78" height="47" rx="6" fill="#D6DEEC"><title>Planning Error × User Instruction: 1 papers</title></rect>
+<rect x="548" y="736" width="78" height="47" rx="6" fill="#D6DEEC"><title>[arXiv 2025] Do What? Teaching Vision-Language-Action Models to Reject the Impossible</title></rect>
 <text x="587.0" y="764.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="630" y="736" width="78" height="47" rx="6" fill="#EEF3F8"><title>Planning Error × Execution Control: 0 papers</title></rect>
+<rect x="630" y="736" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="669.0" y="764.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="712" y="736" width="78" height="47" rx="6" fill="#EEF3F8"><title>Planning Error × Model Supply Chain: 0 papers</title></rect>
+<rect x="712" y="736" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="751.0" y="764.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="794" y="736" width="78" height="47" rx="6" fill="#C7D1E4"><title>Planning Error × Task Planning: 2 papers</title></rect>
+<rect x="794" y="736" width="78" height="47" rx="6" fill="#C7D1E4"><title>[arXiv 2023] Plug in the Safety Chip: Enforcing Constraints for LLM-Driven Robot Agents
+[arXiv 2026] Causal Scene Narration with Runtime Safety Supervision for Vision-Language-Action Driving</title></rect>
 <text x="833.0" y="764.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
-<rect x="876" y="736" width="78" height="47" rx="6" fill="#EEF3F8"><title>Planning Error × Proprioception: 0 papers</title></rect>
+<rect x="876" y="736" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="915.0" y="764.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="958" y="736" width="78" height="47" rx="6" fill="#EEF3F8"><title>Planning Error × Reasoning Representation: 0 papers</title></rect>
+<rect x="958" y="736" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="997.0" y="764.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1040" y="736" width="78" height="47" rx="6" fill="#EEF3F8"><title>Planning Error × Physical Semantic Environment: 0 papers</title></rect>
+<rect x="1040" y="736" width="78" height="47" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1079.0" y="764.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="axis" x="710" y="805" text-anchor="middle">Threat surface</text>
 <text class="axis" transform="translate(48 530) rotate(-90)" text-anchor="middle">Mechanism</text>
