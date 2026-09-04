@@ -52,7 +52,7 @@ const labels = {surveys:'Surveys','ood-generalization':'OOD Generalization','tra
 const sections = Object.keys(labels), tooltip = d3.select('#tooltip');
 d3.select('#paper-count').text(papers.length);
 const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
-const paperListHtml = list => `<ul class="paper-list">${list.map(p=>`<li><a href="${escapeHtml(p.paper_url)}" target="_blank" rel="noopener">[${escapeHtml(p.venue)} ${p.year}] ${escapeHtml(p.title)}</a></li>`).join('')}</ul>`;
+const paperListHtml = list => `<ul class="paper-list">${list.map(p=>`<li>${p.paper_url?`<a href="${escapeHtml(p.paper_url)}" target="_blank" rel="noopener">[${escapeHtml(p.venue)} ${p.year}] ${escapeHtml(p.title)}</a>`:`[${escapeHtml(p.venue)} ${p.year}] ${escapeHtml(p.title)}`}</li>`).join('')}</ul>`;
 let pinned = false;
 const placeTooltip = (event, html) => tooltip.html(html).style('opacity',1).style('left',`${Math.max(8,Math.min(event.clientX+14,window.innerWidth-400))}px`).style('top',`${Math.max(8,Math.min(event.clientY+14,window.innerHeight-220))}px`);
 const showTooltip = (event, html) => { if (!pinned) placeTooltip(event, html); };

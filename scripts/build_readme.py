@@ -132,7 +132,8 @@ def paper_cell(paper: dict) -> str:
         .replace("[", "\\[")
         .replace("]", "\\]")
     )
-    parts = [f"**[{title}]({paper['paper_url']})**"]
+    paper_url = paper.get("paper_url")
+    parts = [f"**[{title}]({paper_url})**" if paper_url else f"**{title}**"]
     code_url = paper.get("code_url")
     repo = github_repo(code_url)
     if repo:
