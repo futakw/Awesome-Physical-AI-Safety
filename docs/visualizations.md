@@ -8,7 +8,7 @@ For hoverable paper details and linked paper lists, open the [interactive explor
 
 ![Taxonomy map of the paper catalog](../assets/visualizations/topic-map.svg)
 
-The map uses explicit, interpretable axes. X is the threat kind (`adversarial` ↔ `non-adversarial`); Y is the catalog role (`attack + benchmark` ↔ `defense`). Survey and system-failure records sit near the center. It is a taxonomy view, not an abstract-semantic embedding.
+The map uses explicit, interpretable axes. X is the threat kind (`adversarial` ↔ `non-adversarial`); Y is the catalog role (`attack + benchmark` ↔ `defense`). Survey and system-failure records sit near the center. A small deterministic jitter reduces overlap within the same category. It is a taxonomy view, not an abstract-semantic embedding.
 
 ## Topic Trends
 

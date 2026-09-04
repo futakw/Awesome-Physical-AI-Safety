@@ -264,8 +264,10 @@ def render_topic_map(papers: list[dict]) -> str:
         return (start + end) / 2 if high == low else start + (value - low) / (high - low) * (end - start)
     mapped = []
     for paper in papers:
-        jitter = ((sum(ord(char) for char in paper["id"]) % 13) - 6) * 0.012
-        mapped.append((scale(topic_x_score(paper), -1.08, 1.08, left, right), scale(topic_y_score(paper) + jitter, -1.08, 1.08, bottom, top)))
+        seed = sum(ord(char) for char in paper["id"])
+        jitter_x = ((seed % 17) - 8) * 0.012
+        jitter_y = ((seed % 13) - 6) * 0.012
+        mapped.append((scale(topic_x_score(paper) + jitter_x, -1.08, 1.08, left, right), scale(topic_y_score(paper) + jitter_y, -1.08, 1.08, bottom, top)))
     body += [
         f'<rect x="{left}" y="{top}" width="{right-left}" height="{bottom-top}" rx="10" fill="{PANEL}" stroke="{GRID}"/>',
         f'<line x1="{(left+right)/2}" y1="{top}" x2="{(left+right)/2}" y2="{bottom}" stroke="{GRID}" stroke-dasharray="4 7"/>',
