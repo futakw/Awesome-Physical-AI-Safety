@@ -151,6 +151,68 @@ def subsection_anchor(section_key: str, subsection: str) -> str:
     return f"{section_key}-{slug}"
 
 
+def research_gap_table(papers: list[dict]) -> list[str]:
+    total = len(papers)
+    risk_counts = {
+        risk: sum(risk in paper.get("risks", []) for paper in papers)
+        for risk in RISK_LABELS
+    }
+    section_counts = {
+        section: sum(paper["section"] == section for paper in papers)
+        for section in SECTIONS
+    }
+    evaluations = [paper["evaluation"] for paper in papers if "evaluation" in paper]
+    real_robot = sum(
+        "real-robot" in evaluation["environments"] for evaluation in evaluations
+    )
+    unspecified = sum(
+        evaluation["environments"] == ["unspecified"] for evaluation in evaluations
+    )
+
+    threat_counts: dict[str, int] = {}
+    defended_counts: dict[str, int] = {}
+    for paper in papers:
+        threat = paper["threat_model"]
+        mechanisms = threat.get("mechanism", threat.get("coverage", {}).get("mechanisms", []))
+        for mechanism in mechanisms:
+            threat_counts[mechanism] = threat_counts.get(mechanism, 0) + 1
+        for mechanism in paper.get("defense", {}).get("defends_against", []):
+            defended_counts[mechanism] = defended_counts.get(mechanism, 0) + 1
+
+    benchmark_papers = [paper for paper in papers if paper["section"] == "benchmarks"]
+    benchmark_consequences: dict[str, int] = {}
+    for paper in benchmark_papers:
+        threat = paper["threat_model"]
+        consequences = threat.get("consequence", threat.get("coverage", {}).get("consequences", []))
+        for consequence in consequences:
+            benchmark_consequences[consequence] = benchmark_consequences.get(consequence, 0) + 1
+
+    attack_defense = ", ".join(
+        f"{display_label(mechanism)} {threat_counts.get(mechanism, 0)} / {defended_counts.get(mechanism, 0)}"
+        for mechanism in ("backdoor", "jailbreak", "adversarial-patch", "digital-perturbation", "indirect-prompt-injection")
+    )
+    benchmark_signal = ", ".join(
+        f"{display_label(consequence)} {benchmark_consequences.get(consequence, 0)}"
+        for consequence in ("task-failure", "physical-damage", "policy-violation", "privacy-leakage", "recovery-failure", "control-hijacking")
+    )
+
+    return [
+        "## Research Gaps",
+        "",
+        f"The table below reports **signals within this {total}-paper catalog**, not definitive field-wide bibliometric conclusions. Counts are regenerated from the structured metadata.",
+        "",
+        "| Gap | Catalog signal | Missing evidence | Research direction |",
+        "|---|---|---|---|",
+        f"| Outcome coverage beyond task success | Task outcomes appear in {risk_counts['task-reliability']} papers, versus physical safety in {risk_counts['physical-safety']} and ethics in {risk_counts['ethical-societal']}. | Comparable measures of harm severity, near misses, human impact, and norm-sensitive behavior. | Build multi-outcome protocols that jointly measure task completion, physical safety, and ethical compliance. |",
+        f"| Attack–defense imbalance | Threat / defended-paper counts: {attack_defense}. | Defenses for several well-studied attacks remain absent or sparsely replicated under common settings. | Evaluate attack families and defenses on shared models, tasks, budgets, and adaptive attackers. |",
+        f"| Limited verified physical validation | {real_robot} of {len(evaluations)} empirically oriented records explicitly include real-robot evaluation; {unspecified} still lack an abstract-verifiable environment. | Cross-platform replication, sim-to-real correlation, and reporting of physical deployment conditions. | Establish reproducible physical test protocols with standardized hardware and safety reporting. |",
+        f"| Benchmark consequence concentration | Across {len(benchmark_papers)} benchmark papers: {benchmark_signal}. | Long-horizon recovery, control takeover, and compound consequences receive little dedicated coverage. | Design scenario-based benchmarks that track propagation from initial failure to downstream harm and recovery. |",
+        f"| Sparse system-level security | Only {section_counts['system-security']} papers are primarily cataloged under system-level security, privacy, and misuse. | Middleware, network, checkpoint, memory, multi-agent, and supply-chain risks are not covered as systematically as model inputs. | Test end-to-end VLA stacks across trust boundaries instead of evaluating the policy model in isolation. |",
+        f"| OOD safety under active attack | {section_counts['ood-generalization']} papers are primarily cataloged as OOD/generalization work, while attack and defense studies usually isolate adversarial and natural shifts. | Evidence on attacks under unseen environments, embodiments, viewpoints, and dynamics. | Jointly evaluate adversarial robustness and non-adversarial generalization under compositional shifts. |",
+        "",
+    ]
+
+
 def render(papers: list[dict]) -> str:
     lines = [
         "# Awesome Responsible VLA",
@@ -168,6 +230,9 @@ def render(papers: list[dict]) -> str:
         "",
         "Open the [interactive explorer](docs/index.html) for hoverable paper lists in the field timeline and the Threat, Defense, Benchmark, and Evaluation cross-maps.",
         "",
+    ]
+    lines.extend(research_gap_table(papers))
+    lines.extend([
         "## Taxonomy at a Glance",
         "",
         "### Risk outcomes",
@@ -196,9 +261,10 @@ def render(papers: list[dict]) -> str:
         "",
         "## 🧭 Contents",
         "",
-    ]
+    ])
 
     present_sections = [key for key in SECTIONS if any(p["section"] == key for p in papers)]
+    lines.append("- [🔎 Research Gaps](#research-gaps)")
     for key in present_sections:
         icon, title = SECTIONS[key]
         lines.append(f"- [{icon} {title}](#{key})")

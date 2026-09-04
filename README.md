@@ -13,6 +13,19 @@ A curated, taxonomy-driven list of research on the safety, robustness, security,
 
 Open the [interactive explorer](docs/index.html) for hoverable paper lists in the field timeline and the Threat, Defense, Benchmark, and Evaluation cross-maps.
 
+## Research Gaps
+
+The table below reports **signals within this 171-paper catalog**, not definitive field-wide bibliometric conclusions. Counts are regenerated from the structured metadata.
+
+| Gap | Catalog signal | Missing evidence | Research direction |
+|---|---|---|---|
+| Outcome coverage beyond task success | Task outcomes appear in 123 papers, versus physical safety in 38 and ethics in 10. | Comparable measures of harm severity, near misses, human impact, and norm-sensitive behavior. | Build multi-outcome protocols that jointly measure task completion, physical safety, and ethical compliance. |
+| Attack–defense imbalance | Threat / defended-paper counts: Backdoor 16 / 3, Jailbreak 12 / 2, Adversarial Patch 10 / 2, Digital Perturbation 7 / 0, Indirect Prompt Injection 7 / 0. | Defenses for several well-studied attacks remain absent or sparsely replicated under common settings. | Evaluate attack families and defenses on shared models, tasks, budgets, and adaptive attackers. |
+| Limited verified physical validation | 52 of 151 empirically oriented records explicitly include real-robot evaluation; 49 still lack an abstract-verifiable environment. | Cross-platform replication, sim-to-real correlation, and reporting of physical deployment conditions. | Establish reproducible physical test protocols with standardized hardware and safety reporting. |
+| Benchmark consequence concentration | Across 28 benchmark papers: Task Failure 20, Physical Damage 6, Policy Violation 5, Privacy Leakage 4, Recovery Failure 1, Control Hijacking 1. | Long-horizon recovery, control takeover, and compound consequences receive little dedicated coverage. | Design scenario-based benchmarks that track propagation from initial failure to downstream harm and recovery. |
+| Sparse system-level security | Only 3 papers are primarily cataloged under system-level security, privacy, and misuse. | Middleware, network, checkpoint, memory, multi-agent, and supply-chain risks are not covered as systematically as model inputs. | Test end-to-end VLA stacks across trust boundaries instead of evaluating the policy model in isolation. |
+| OOD safety under active attack | 9 papers are primarily cataloged as OOD/generalization work, while attack and defense studies usually isolate adversarial and natural shifts. | Evidence on attacks under unseen environments, embodiments, viewpoints, and dynamics. | Jointly evaluate adversarial robustness and non-adversarial generalization under compositional shifts. |
+
 ## Taxonomy at a Glance
 
 ### Risk outcomes
@@ -41,6 +54,7 @@ See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.
 
 ## 🧭 Contents
 
+- [🔎 Research Gaps](#research-gaps)
 - [📚 Surveys and Perspectives](#surveys)
 - [🌍 Robustness and OOD Generalization](#ood-generalization)
 - [🧪 Training-Time Attacks](#training-attacks)
