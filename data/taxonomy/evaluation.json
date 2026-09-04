@@ -3,5 +3,5 @@
   "access": ["white-box", "gray-box", "black-box", "transfer", "not-applicable", "unspecified"],
   "metrics": ["task-success-rate", "attack-success-rate", "clean-task-success-rate", "physical-damage-rate", "collision-rate", "constraint-violation-rate", "robust-success-rate", "false-positive-rate", "recovery-rate"],
   "physical_validation": [true, false, null],
-  "curation_statuses": ["paper-verified", "catalog-derived", "reference-only"]
+  "curation_statuses": ["paper-verified", "abstract-verified", "catalog-derived", "reference-only"]
 }
