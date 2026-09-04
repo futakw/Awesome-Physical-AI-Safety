@@ -154,7 +154,7 @@ def validate_values(errors: list[str], label: str, field: str, value: object, al
 def validate_extensions(errors: list[str], label: str, paper: dict, taxonomies: dict) -> None:
     defense = paper.get("defense")
     if defense is not None:
-        expected = {"position", "mechanism", "protected_surface", "defends_against", "assumptions"}
+        expected = {"position", "mechanism", "protected_surface", "defends_against", "assumptions", "curation_status"}
         if set(defense) != expected:
             errors.append(f"{label}: defense fields must be {sorted(expected)}")
         validate_values(errors, label, "defense.position", defense.get("position"), set(taxonomies["defense"]["positions"]))
@@ -162,9 +162,11 @@ def validate_extensions(errors: list[str], label: str, paper: dict, taxonomies: 
         validate_values(errors, label, "defense.protected_surface", defense.get("protected_surface"), SURFACES)
         validate_values(errors, label, "defense.defends_against", defense.get("defends_against"), MECHANISMS)
         validate_values(errors, label, "defense.assumptions", defense.get("assumptions"), set(taxonomies["defense"]["assumptions"]))
+        if defense.get("curation_status") not in taxonomies["defense"]["curation_statuses"]:
+            errors.append(f"{label}: invalid defense.curation_status {defense.get('curation_status')!r}")
     evaluation = paper.get("evaluation")
     if evaluation is not None:
-        expected = {"environments", "platforms", "models", "access", "metrics", "physical_validation"}
+        expected = {"environments", "platforms", "models", "access", "metrics", "physical_validation", "curation_status"}
         if set(evaluation) != expected:
             errors.append(f"{label}: evaluation fields must be {sorted(expected)}")
         validate_values(errors, label, "evaluation.environments", evaluation.get("environments"), set(taxonomies["evaluation"]["environments"]))
@@ -172,15 +174,19 @@ def validate_extensions(errors: list[str], label: str, paper: dict, taxonomies: 
         validate_values(errors, label, "evaluation.metrics", evaluation.get("metrics"), set(taxonomies["evaluation"]["metrics"]))
         if evaluation.get("physical_validation") not in {True, False, None}:
             errors.append(f"{label}: evaluation.physical_validation must be true, false, or null")
+        if evaluation.get("curation_status") not in taxonomies["evaluation"]["curation_statuses"]:
+            errors.append(f"{label}: invalid evaluation.curation_status {evaluation.get('curation_status')!r}")
     benchmark = paper.get("benchmark")
     if benchmark is not None:
-        expected = {"evaluates", "shift_types", "environment", "base_platforms", "public_data", "leaderboard"}
+        expected = {"evaluates", "shift_types", "environment", "base_platforms", "public_data", "leaderboard", "curation_status"}
         if set(benchmark) != expected:
             errors.append(f"{label}: benchmark fields must be {sorted(expected)}")
         validate_values(errors, label, "benchmark.evaluates", benchmark.get("evaluates"), set(taxonomies["benchmark"]["evaluates"]))
         validate_values(errors, label, "benchmark.shift_types", benchmark.get("shift_types"), set(taxonomies["benchmark"]["shift_types"]))
         if benchmark.get("environment") not in set(taxonomies["benchmark"]["environments"]):
             errors.append(f"{label}: invalid benchmark.environment {benchmark.get('environment')!r}")
+        if benchmark.get("curation_status") not in taxonomies["benchmark"]["curation_statuses"]:
+            errors.append(f"{label}: invalid benchmark.curation_status {benchmark.get('curation_status')!r}")
 
 
 def main() -> int:

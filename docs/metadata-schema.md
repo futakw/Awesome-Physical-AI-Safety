@@ -6,9 +6,9 @@ The catalog keeps a small common record and adds optional extensions only where 
 - `evaluation`: experimental environments, platforms, evaluated models, attacker access, metrics, and physical validation.
 - `benchmark`: evaluated dimensions, distribution shifts, environment, base platforms, and artifact availability.
 
-`null` means not yet verified, an empty list means verified with no applicable value, and an absent extension means the extension does not apply to that paper.
+`null` means not yet verified, an empty list means no value could be established, and an absent extension means the extension does not apply to that paper. Each extension includes `curation_status`; catalog-wide inferred values are explicitly marked `catalog-derived` until checked against the original paper.
 
-Controlled values are maintained under [`data/taxonomy`](../data/taxonomy/). The first pilot covers ten representative attack, defense, OOD, and benchmark papers before catalog-wide enrichment.
+Controlled values are maintained under [`data/taxonomy`](../data/taxonomy/). Type-specific extensions now cover every applicable catalog record, with provenance status retained for later paper-level verification.
 
 For `survey` and `evaluation` threat models, `coverage` contains `lifecycles`, `mechanisms`, `surfaces`, and `consequences`. This keeps benchmark threat/consequence aggregation aligned with concrete threat-model records.
 

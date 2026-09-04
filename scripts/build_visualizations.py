@@ -271,7 +271,7 @@ def outputs(papers: list[dict]) -> dict[Path, str]:
         OUTPUT_DIR / "threat-heatmap.svg": render_heatmap(papers),
         OUTPUT_DIR / "defense-heatmap.svg": render_extension_heatmap(papers, "defense", "Defense mechanism × defended threat", "Columns follow the Threat Cross-Map order, including empty cells", "mechanism", "defends_against", "Defense mechanism", "Defended threat", ordered_threat_mechanisms(papers)),
         OUTPUT_DIR / "benchmark-heatmap.svg": render_benchmark_threat_consequence(papers),
-        OUTPUT_DIR / "evaluation-heatmap.svg": render_extension_heatmap(papers, "evaluation", "Evaluation environment × metric", "Type-specific metadata pilot", "environments", "metrics", "Environment", "Metric"),
+        OUTPUT_DIR / "evaluation-heatmap.svg": render_extension_heatmap(papers, "evaluation", "Evaluation environment × metric", "Catalog-wide metadata; unspecified marks records awaiting paper-level verification", "environments", "metrics", "Environment", "Metric"),
     }
 
 

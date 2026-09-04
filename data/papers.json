@@ -57,11 +57,12 @@
         "task-success-rate",
         "robust-success-rate"
       ],
-      "physical_validation": true
+      "physical_validation": true,
+      "curation_status": "catalog-derived"
     },
     "defense": {
       "position": [
-        "training-time"
+        "inference-time"
       ],
       "mechanism": [
         "robust-finetuning"
@@ -75,7 +76,8 @@
       ],
       "assumptions": [
         "model-access"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     }
   },
   {
@@ -115,7 +117,24 @@
     "tags": [
       "survey-2608.16843",
       "metadata-review-needed"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "pre-execution-safety-gate-task-safety-contracts-for-llm-based-robot-task-pl-2026",
@@ -154,7 +173,42 @@
     "tags": [
       "survey-2608.16843",
       "survey-reference"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "defends_against": [
+        "constraint-violation"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "protea-securing-robot-task-planning-and-execution-2026",
@@ -193,7 +247,42 @@
     "tags": [
       "survey-2608.16843",
       "survey-reference"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "defends_against": [
+        "constraint-violation"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "logicguard-improving-embodied-llm-agents-through-temporal-logic-based-criti-2026",
@@ -232,7 +321,44 @@
     "tags": [
       "survey-2608.16843",
       "metadata-review-needed"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "formal-verification"
+      ],
+      "protected_surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "defends_against": [
+        "constraint-violation"
+      ],
+      "assumptions": [
+        "runtime-monitor",
+        "safety-constraints"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "safeplan-leveraging-formal-logic-and-chain-of-thought-reasoning-for-enhance-2025",
@@ -271,7 +397,44 @@
     "tags": [
       "survey-2608.16843",
       "survey-reference"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "formal-verification"
+      ],
+      "protected_surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "defends_against": [
+        "constraint-violation"
+      ],
+      "assumptions": [
+        "runtime-monitor",
+        "safety-constraints"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "safe-llm-controlled-robots-with-formal-guarantees-via-reachability-analysis-2025",
@@ -310,7 +473,44 @@
     "tags": [
       "survey-2608.16843",
       "survey-reference"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "formal-verification"
+      ],
+      "protected_surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "defends_against": [
+        "constraint-violation"
+      ],
+      "assumptions": [
+        "runtime-monitor",
+        "safety-constraints"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "safeembodai-securing-llm-controlled-mobile-robots-against-prompt-injection-2024",
@@ -349,7 +549,42 @@
     "tags": [
       "survey-2608.16843",
       "survey-reference"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "defends_against": [
+        "constraint-violation"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "trojanrobot-robot-collapse-supply-chain-backdoor-attacks-against-vlm-based--2025",
@@ -388,7 +623,24 @@
     "tags": [
       "survey-2608.16843",
       "survey-reference"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "compromising-llm-driven-embodied-agents-with-contextual-backdoor-attacks-2025",
@@ -427,7 +679,24 @@
     "tags": [
       "survey-2608.16843",
       "survey-reference"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "exploring-the-robustness-of-decision-level-through-adversarial-attacks-on-l-2024",
@@ -464,7 +733,24 @@
     "tags": [
       "survey-2608.16843",
       "survey-reference"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "on-the-vulnerability-of-llm-vlm-controlled-robotics-2024",
@@ -502,7 +788,24 @@
     "tags": [
       "survey-2608.16843",
       "survey-reference"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "extended-to-reality-prompt-injection-in-3d-environments-2026",
@@ -541,7 +844,24 @@
     "tags": [
       "survey-2608.16843",
       "survey-reference"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "hijacking-robots-with-a-piece-of-paper-a-systematic-study-of-physical-promp-2026",
@@ -578,7 +898,24 @@
     "tags": [
       "survey-2608.16843",
       "survey-reference"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "jailbreaking-embodied-llms-via-action-level-manipulation-2026",
@@ -617,7 +954,24 @@
     "tags": [
       "survey-2608.16843",
       "survey-reference"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "badnaver-jailbreaking-vision-language-navigation-agents-2025",
@@ -656,7 +1010,24 @@
     "tags": [
       "survey-2608.16843",
       "survey-reference"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "beat-visual-backdoor-attacks-on-mllm-embodied-decision-making-via-contrasti-2025",
@@ -695,7 +1066,24 @@
     "tags": [
       "survey-2608.16843",
       "survey-reference"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "safedec-constrained-decoding-for-safe-autoregressive-embodied-policies-2025",
@@ -734,7 +1122,42 @@
     "tags": [
       "survey-2608.16843",
       "survey-reference"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "defends_against": [
+        "constraint-violation"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "ask-before-you-act-token-level-uncertainty-for-intervention-in-vision-langu-2025",
@@ -773,7 +1196,42 @@
     "tags": [
       "survey-2608.16843",
       "metadata-review-needed"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "defends_against": [
+        "constraint-violation"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "fpc-vla-a-vision-language-action-framework-with-a-supervisor-for-failure-pr-2026",
@@ -812,7 +1270,43 @@
     "tags": [
       "survey-2608.16843",
       "metadata-review-needed"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "world-state",
+        "action-interface"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "guardian-detecting-robotic-planning-and-execution-errors-with-vision-langua-2025",
@@ -851,7 +1345,43 @@
     "tags": [
       "survey-2608.16843",
       "survey-reference"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "world-state",
+        "action-interface"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "aha-a-vision-language-model-for-detecting-and-reasoning-over-failures-in-ro-2024",
@@ -890,7 +1420,43 @@
     "tags": [
       "survey-2608.16843",
       "metadata-review-needed"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "world-state",
+        "action-interface"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "when-attention-betrays-erasing-backdoor-attacks-in-robotic-policies-by-reco-2026",
@@ -929,7 +1495,43 @@
     "tags": [
       "survey-2608.16843",
       "survey-reference"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "representation-steering"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "reasoning-representation"
+      ],
+      "defends_against": [
+        "backdoor"
+      ],
+      "assumptions": [
+        "clean-reference"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "chromaguard-defending-vla-models-against-color-illumination-induced-blindne-2026",
@@ -967,7 +1569,40 @@
     "tags": [
       "survey-2608.16843",
       "survey-reference"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "visual-perception"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [
+        "model-access"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "structure-aware-robust-fine-tuning-2026",
@@ -1005,7 +1640,40 @@
     "tags": [
       "survey-2608.16843",
       "survey-reference"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "visual-perception"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [
+        "model-access"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "safe-dict-concept-based-dictionary-learning-for-inference-time-safety-in-vi-2026",
@@ -1044,7 +1712,43 @@
     "tags": [
       "survey-2608.16843",
       "survey-reference"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "representation-steering"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "reasoning-representation"
+      ],
+      "defends_against": [
+        "backdoor"
+      ],
+      "assumptions": [
+        "clean-reference"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "horcrux-robustness-recovery-for-vision-language-action-policies-2025",
@@ -1083,7 +1787,43 @@
     "tags": [
       "survey-2608.16843",
       "survey-reference"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "world-state",
+        "action-interface"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "mergevla-robust-vision-language-action-models-via-model-merging-2025",
@@ -1121,7 +1861,41 @@
     "tags": [
       "survey-2608.16843",
       "survey-reference"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "robust-finetuning",
+        "model-merging"
+      ],
+      "protected_surface": [
+        "visual-perception"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [
+        "model-access"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "retain-robust-finetuning-of-vision-language-action-robot-policies-via-param-2025",
@@ -1159,7 +1933,41 @@
     "tags": [
       "survey-2608.16843",
       "survey-reference"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "robust-finetuning",
+        "model-merging"
+      ],
+      "protected_surface": [
+        "visual-perception"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [
+        "model-access"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "drift-derailing-trajectories-of-flow-matching-vlas-with-adversarial-patches-2026",
@@ -1196,7 +2004,24 @@
     "tags": [
       "survey-2608.16843",
       "survey-reference"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "vlaguard-vasa-visuomotor-attention-guided-semantic-attack-2026",
@@ -1233,7 +2058,24 @@
     "tags": [
       "survey-2608.16843",
       "survey-reference"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "saber-2026-vla",
@@ -1275,7 +2117,24 @@
       "black-box",
       "agentic-attack",
       "vla"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "dura-2026-vla",
@@ -1317,7 +2176,26 @@
       "diffusion",
       "unrestricted-attack",
       "vla"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate",
+        "physical-damage-rate",
+        "collision-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "altered-thoughts-actions-2026",
@@ -1359,7 +2237,24 @@
       "chain-of-thought",
       "reasoning",
       "vla"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "partially-observable-patch-vla-2026",
@@ -1397,7 +2292,24 @@
       "adversarial-patch",
       "partial-observability",
       "vla"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "world-models-dream-wrong-2026",
@@ -1440,7 +2352,26 @@
       "world-model",
       "physical-attack",
       "embodied-agent"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate",
+        "physical-damage-rate",
+        "collision-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "trap-2026-vla-cot-patch",
@@ -1496,7 +2427,8 @@
         "attack-success-rate",
         "task-success-rate"
       ],
-      "physical_validation": false
+      "physical_validation": false,
+      "curation_status": "catalog-derived"
     }
   },
   {
@@ -1539,7 +2471,26 @@
       "physical-attack",
       "texture",
       "vla"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate",
+        "physical-damage-rate",
+        "collision-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "flowhijack-2026-vla",
@@ -1580,7 +2531,24 @@
       "backdoor",
       "flow-matching",
       "vla"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "jailwam-2026",
@@ -1623,7 +2591,26 @@
       "jailbreak",
       "world-action-model",
       "robotics"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate",
+        "physical-damage-rate",
+        "collision-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "pina-2026",
@@ -1665,7 +2652,26 @@
       "prompt-injection",
       "navigation",
       "embodied-agent"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate",
+        "physical-damage-rate",
+        "collision-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "vlaleaks-2026",
@@ -1704,7 +2710,23 @@
       "membership-inference",
       "privacy",
       "vla"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "ripa-2026",
@@ -1747,7 +2769,25 @@
       "prompt-injection",
       "ros2",
       "sensory-vector"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "attack-success-rate",
+        "clean-task-success-rate",
+        "physical-damage-rate",
+        "collision-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "gong-2026-sok-security-privacy-foundation-model-powered-robots",
@@ -2080,7 +3120,22 @@
       "representation-shift",
       "language-instruction",
       "viewpoint-camera"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "niu-2026-fan-vla",
@@ -2118,7 +3173,22 @@
     "tags": [
       "action-neighborhood",
       "spatial-shift"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "zhou-2025-libero-pro",
@@ -2173,7 +3243,8 @@
         "task-success-rate",
         "robust-success-rate"
       ],
-      "physical_validation": false
+      "physical_validation": false,
+      "curation_status": "catalog-derived"
     },
     "benchmark": {
       "evaluates": [
@@ -2181,16 +3252,15 @@
         "task-reliability"
       ],
       "shift_types": [
-        "object",
-        "background",
-        "instruction"
+        "action"
       ],
       "environment": "simulation",
       "base_platforms": [
         "LIBERO"
       ],
       "public_data": true,
-      "leaderboard": false
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
     }
   },
   {
@@ -2253,7 +3323,8 @@
         "task-success-rate",
         "robust-success-rate"
       ],
-      "physical_validation": false
+      "physical_validation": false,
+      "curation_status": "catalog-derived"
     },
     "benchmark": {
       "evaluates": [
@@ -2265,14 +3336,17 @@
         "background",
         "instruction",
         "camera",
-        "lighting"
+        "lighting",
+        "action",
+        "state"
       ],
       "environment": "simulation",
       "base_platforms": [
         "LIBERO"
       ],
       "public_data": true,
-      "leaderboard": false
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
     }
   },
   {
@@ -2312,7 +3386,22 @@
       "object-geometry",
       "red-teaming",
       "real-robot"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "hamid-2026-icr-drive",
@@ -2353,7 +3442,24 @@
     "tags": [
       "language-instruction",
       "counterfactual-robustness"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "physical-damage-rate",
+        "collision-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "rasouli-2026-open-world-vla",
@@ -2393,7 +3499,24 @@
     "tags": [
       "open-world",
       "environment-domain"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "physical-damage-rate",
+        "collision-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "zhou-2025-badvla",
@@ -2453,7 +3576,8 @@
         "attack-success-rate",
         "clean-task-success-rate"
       ],
-      "physical_validation": false
+      "physical_validation": false,
+      "curation_status": "catalog-derived"
     }
   },
   {
@@ -2497,7 +3621,24 @@
     "tags": [
       "backdoor",
       "action-output"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "guo-2026-state-backdoor",
@@ -2559,7 +3700,8 @@
         "attack-success-rate",
         "clean-task-success-rate"
       ],
-      "physical_validation": true
+      "physical_validation": true,
+      "curation_status": "catalog-derived"
     }
   },
   {
@@ -2604,7 +3746,24 @@
       "backdoor",
       "action-chunk",
       "temporal-attack"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "wang-2025-vla-adversarial-vulnerabilities",
@@ -2643,7 +3802,24 @@
       "adversarial-patch",
       "digital-perturbation",
       "real-robot"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "yan-2025-when-alignment-fails",
@@ -2682,7 +3858,24 @@
     "tags": [
       "digital-perturbation",
       "multimodal-misalignment"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "wang-2025-freezevla",
@@ -2722,7 +3915,23 @@
       "action-freezing",
       "dangerous-inaction",
       "digital-perturbation"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "lu-2026-phantom-menace",
@@ -2777,7 +3986,8 @@
         "task-success-rate",
         "robust-success-rate"
       ],
-      "physical_validation": true
+      "physical_validation": true,
+      "curation_status": "catalog-derived"
     },
     "defense": {
       "position": [
@@ -2796,7 +4006,8 @@
       "assumptions": [
         "model-access",
         "attack-samples"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     }
   },
   {
@@ -2839,7 +4050,25 @@
       "jailbreak",
       "harmful-policy",
       "real-robot"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "attack-success-rate",
+        "clean-task-success-rate",
+        "physical-damage-rate",
+        "collision-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "jones-2025-robogcg",
@@ -2882,7 +4111,25 @@
     "tags": [
       "jailbreak",
       "command-hijacking"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "attack-success-rate",
+        "clean-task-success-rate",
+        "physical-damage-rate",
+        "collision-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "burbano-2026-chai",
@@ -2922,7 +4169,23 @@
       "command-hijacking",
       "typographic-attack",
       "visual-prompt-injection"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "wang-2025-advedm",
@@ -2961,7 +4224,23 @@
       "fine-grained-attack",
       "semantic-manipulation",
       "visual-perturbation"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "xu-2025-edpa",
@@ -3019,7 +4298,8 @@
         "attack-success-rate",
         "clean-task-success-rate"
       ],
-      "physical_validation": false
+      "physical_validation": false,
+      "curation_status": "catalog-derived"
     },
     "defense": {
       "position": [
@@ -3037,7 +4317,8 @@
       "assumptions": [
         "visual-encoder-access",
         "attack-samples"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     }
   },
   {
@@ -3097,25 +4378,27 @@
         "task-success-rate",
         "constraint-violation-rate"
       ],
-      "physical_validation": false
+      "physical_validation": false,
+      "curation_status": "catalog-derived"
     },
     "defense": {
       "position": [
-        "training-time"
+        "inference-time"
       ],
       "mechanism": [
         "robust-finetuning"
       ],
       "protected_surface": [
+        "user-instruction",
         "action-interface"
       ],
       "defends_against": [
         "constraint-violation"
       ],
       "assumptions": [
-        "model-access",
-        "safety-constraints"
-      ]
+        "model-access"
+      ],
+      "curation_status": "catalog-derived"
     }
   },
   {
@@ -3173,25 +4456,27 @@
         "task-success-rate",
         "constraint-violation-rate"
       ],
-      "physical_validation": false
+      "physical_validation": false,
+      "curation_status": "catalog-derived"
     },
     "defense": {
       "position": [
         "runtime"
       ],
       "mechanism": [
-        "action-shielding"
+        "runtime-monitoring"
       ],
       "protected_surface": [
-        "action-interface",
-        "execution-control"
+        "user-instruction",
+        "action-interface"
       ],
       "defends_against": [
         "constraint-violation"
       ],
       "assumptions": [
-        "safety-constraints"
-      ]
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
     }
   },
   {
@@ -3235,7 +4520,45 @@
     "tags": [
       "guardrail",
       "control-synthesis"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate",
+        "physical-damage-rate",
+        "collision-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "user-instruction",
+        "world-state"
+      ],
+      "defends_against": [
+        "jailbreak"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "yang-2023-safety-chip",
@@ -3273,7 +4596,43 @@
     "tags": [
       "formal-constraint",
       "runtime-monitoring"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "physical-damage-rate",
+        "collision-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "task-planning",
+        "action-interface"
+      ],
+      "defends_against": [
+        "planning-error"
+      ],
+      "assumptions": [
+        "safety-constraints"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "gu-2025-safe-failure-detection",
@@ -3326,26 +4685,27 @@
         "false-positive-rate",
         "recovery-rate"
       ],
-      "physical_validation": false
+      "physical_validation": false,
+      "curation_status": "catalog-derived"
     },
     "defense": {
       "position": [
         "runtime"
       ],
       "mechanism": [
-        "runtime-monitoring",
-        "failure-recovery"
+        "action-shielding"
       ],
       "protected_surface": [
-        "world-state",
+        "visual-perception",
         "action-interface"
       ],
       "defends_against": [
         "execution-error"
       ],
       "assumptions": [
-        "runtime-monitor"
-      ]
+        "safety-constraints"
+      ],
+      "curation_status": "catalog-derived"
     }
   },
   {
@@ -3404,22 +4764,23 @@
         "task-success-rate",
         "robust-success-rate"
       ],
-      "physical_validation": false
+      "physical_validation": false,
+      "curation_status": "catalog-derived"
     },
     "benchmark": {
       "evaluates": [
         "ood",
+        "physical-safety",
         "task-reliability"
       ],
       "shift_types": [
-        "object",
-        "background",
-        "camera"
+        "action"
       ],
       "environment": "simulation",
       "base_platforms": [],
       "public_data": true,
-      "leaderboard": false
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
     }
   },
   {
@@ -3477,21 +4838,22 @@
         "physical-damage-rate",
         "collision-rate"
       ],
-      "physical_validation": true
+      "physical_validation": true,
+      "curation_status": "catalog-derived"
     },
     "benchmark": {
       "evaluates": [
-        "physical-safety",
+        "ood",
         "task-reliability"
       ],
       "shift_types": [
-        "object",
-        "state"
+        "action"
       ],
       "environment": "mixed",
       "base_platforms": [],
-      "public_data": true,
-      "leaderboard": false
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
     }
   },
   {
@@ -3545,10 +4907,12 @@
         "task-success-rate",
         "constraint-violation-rate"
       ],
-      "physical_validation": false
+      "physical_validation": false,
+      "curation_status": "catalog-derived"
     },
     "benchmark": {
       "evaluates": [
+        "adversarial-attack",
         "semantic-safety",
         "task-reliability"
       ],
@@ -3558,7 +4922,8 @@
       "environment": "simulation",
       "base_platforms": [],
       "public_data": true,
-      "leaderboard": false
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
     }
   },
   {
@@ -3602,7 +4967,39 @@
       "interactive-safety",
       "risk-mitigation",
       "closed-loop"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "physical-damage-rate",
+        "collision-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "benchmark": {
+      "evaluates": [
+        "physical-safety",
+        "task-reliability"
+      ],
+      "shift_types": [
+        "none"
+      ],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "zhu-2024-earbench",
@@ -3642,7 +5039,37 @@
     "tags": [
       "physical-risk-awareness",
       "task-planning"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "physical-damage-rate",
+        "collision-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "benchmark": {
+      "evaluates": [
+        "physical-safety"
+      ],
+      "shift_types": [
+        "none"
+      ],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "sermanet-2025-asimov",
@@ -3681,7 +5108,33 @@
     "tags": [
       "robot-constitution",
       "semantic-safety"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": false,
+      "curation_status": "catalog-derived"
+    },
+    "benchmark": {
+      "evaluates": [
+        "semantic-safety"
+      ],
+      "shift_types": [
+        "none"
+      ],
+      "environment": "simulation",
+      "base_platforms": [],
+      "public_data": true,
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "li-2024-simpler",
@@ -3721,7 +5174,37 @@
       "simulation",
       "sim-to-real",
       "evaluation-framework"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot",
+        "simulation"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "catalog-derived"
+    },
+    "benchmark": {
+      "evaluates": [
+        "ood",
+        "task-reliability"
+      ],
+      "shift_types": [
+        "none"
+      ],
+      "environment": "mixed",
+      "base_platforms": [],
+      "public_data": true,
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "liu-2023-libero",
@@ -3761,7 +5244,40 @@
       "benchmark",
       "lifelong-learning",
       "knowledge-transfer"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "LIBERO"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "catalog-derived"
+    },
+    "benchmark": {
+      "evaluates": [
+        "ood",
+        "task-reliability"
+      ],
+      "shift_types": [
+        "none"
+      ],
+      "environment": "simulation",
+      "base_platforms": [
+        "LIBERO"
+      ],
+      "public_data": true,
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "huang-2025-ten-deadly-sins",
@@ -3807,7 +5323,23 @@
       "firmware",
       "wireless",
       "system-compromise"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "chang-2026-cyber-physical-steganography",
@@ -3850,7 +5382,23 @@
       "covert-channel",
       "trajectory-manipulation",
       "misuse"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "wang-2026-navigating-embodied-intelligence",
@@ -4012,7 +5560,24 @@
       "open-world",
       "environment-domain",
       "long-horizon"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [
+        "pi0"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "jiao-2025-bald",
@@ -4053,7 +5618,23 @@
       "backdoor",
       "decision-making",
       "knowledge-injection"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "lu-2026-upa-rfas",
@@ -4109,7 +5690,8 @@
         "attack-success-rate",
         "task-success-rate"
       ],
-      "physical_validation": true
+      "physical_validation": true,
+      "curation_status": "catalog-derived"
     }
   },
   {
@@ -4152,7 +5734,25 @@
       "jailbreak",
       "policy-executability",
       "real-robot"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "attack-success-rate",
+        "clean-task-success-rate",
+        "physical-damage-rate",
+        "collision-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "zhang-2025-badrobot",
@@ -4195,7 +5795,25 @@
       "jailbreak",
       "voice-instruction",
       "physical-harm"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "attack-success-rate",
+        "clean-task-success-rate",
+        "physical-damage-rate",
+        "collision-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "xie-2025-chain-of-attack",
@@ -4234,7 +5852,23 @@
       "transfer-attack",
       "black-box",
       "multimodal-semantics"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "yang-2025-cee",
@@ -4275,7 +5909,42 @@
       "jailbreak-defense",
       "representation-steering",
       "inference-time"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "representation-steering"
+      ],
+      "protected_surface": [
+        "user-instruction",
+        "reasoning-representation"
+      ],
+      "defends_against": [
+        "jailbreak"
+      ],
+      "assumptions": [
+        "clean-reference"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "mao-2025-agentsafe",
@@ -4316,7 +5985,44 @@
       "multi-agent",
       "memory-defense",
       "communication-security"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime",
+        "system-level"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "context-memory-retrieval",
+        "multi-agent-communication"
+      ],
+      "defends_against": [
+        "memory-poisoning",
+        "multi-agent-propagation"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "wu-2024-embodied-active-defense",
@@ -4355,7 +6061,43 @@
       "adversarial-patch",
       "active-perception",
       "recurrent-feedback"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "visual-perception"
+      ],
+      "defends_against": [
+        "adversarial-patch"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "zhou-2025-goba",
@@ -4400,7 +6142,24 @@
       "backdoor",
       "physical-object",
       "goal-hijacking"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "yu-2026-safe-night-vla",
@@ -4440,7 +6199,42 @@
       "thermal-perception",
       "control-barrier-function",
       "ood"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "physical-damage-rate",
+        "collision-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "input-filtering"
+      ],
+      "protected_surface": [
+        "visual-perception"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [
+        "clean-reference"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "lu-2025-hi-ors",
@@ -4478,7 +6272,40 @@
       "human-in-the-loop",
       "rejection-sampling",
       "policy-refinement"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "action-interface"
+      ],
+      "defends_against": [
+        "unsafe-policy-behavior"
+      ],
+      "assumptions": [
+        "model-access"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "chang-2026-visual-injection-trust-boundary",
@@ -4517,7 +6344,23 @@
       "visual-prompt-injection",
       "trust-boundary",
       "scene-text"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "feng-2025-words-to-safety",
@@ -4559,7 +6402,44 @@
       "language-conditioned",
       "safety-filter",
       "navigation"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "physical-damage-rate",
+        "collision-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "user-instruction",
+        "world-state"
+      ],
+      "defends_against": [
+        "constraint-violation"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "zhang-2026-linguistic-grounding",
@@ -4598,7 +6478,41 @@
       "linguistic-grounding",
       "attention-recalibration",
       "train-free"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "representation-steering"
+      ],
+      "protected_surface": [
+        "user-instruction",
+        "reasoning-representation"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [
+        "clean-reference"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "hancock-2024-byovla",
@@ -4636,7 +6550,40 @@
       "visual-distractor",
       "observation-intervention",
       "model-agnostic"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "input-filtering"
+      ],
+      "protected_surface": [
+        "visual-perception"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [
+        "clean-reference"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "xu-2025-affordance-field-intervention",
@@ -4675,7 +6622,42 @@
       "memory-trap",
       "affordance-field",
       "recovery"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "world-state"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "lin-2025-failsafe",
@@ -4716,7 +6698,44 @@
       "failure-recovery",
       "reasoning",
       "closed-loop"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "world-state",
+        "action-interface"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "zhou-2026-rc-nf",
@@ -4754,7 +6773,41 @@
       "anomaly-detection",
       "normalizing-flow",
       "runtime-monitoring"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "recovery-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "proprioception",
+        "world-state"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "chen-2026-hazardarena",
@@ -4811,21 +6864,23 @@
         "task-success-rate",
         "constraint-violation-rate"
       ],
-      "physical_validation": false
+      "physical_validation": false,
+      "curation_status": "catalog-derived"
     },
     "benchmark": {
       "evaluates": [
+        "physical-safety",
         "semantic-safety",
-        "physical-safety"
+        "task-reliability"
       ],
       "shift_types": [
-        "object",
-        "instruction"
+        "action"
       ],
       "environment": "simulation",
       "base_platforms": [],
-      "public_data": true,
-      "leaderboard": false
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
     }
   },
   {
@@ -4865,7 +6920,37 @@
       "testing",
       "input-mutation",
       "robotic-manipulation"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "benchmark": {
+      "evaluates": [
+        "ood",
+        "adversarial-attack",
+        "task-reliability"
+      ],
+      "shift_types": [
+        "action"
+      ],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "sakano-2025-rover",
@@ -4921,27 +7006,29 @@
         "constraint-violation-rate",
         "task-success-rate"
       ],
-      "physical_validation": false
+      "physical_validation": false,
+      "curation_status": "catalog-derived"
     },
     "defense": {
       "position": [
         "runtime"
       ],
       "mechanism": [
-        "formal-verification",
-        "runtime-monitoring"
+        "runtime-monitoring",
+        "formal-verification"
       ],
       "protected_surface": [
         "action-interface",
         "execution-control"
       ],
       "defends_against": [
-        "constraint-violation"
+        "unsafe-policy-behavior"
       ],
       "assumptions": [
         "runtime-monitor",
         "safety-constraints"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     }
   },
   {
@@ -4981,7 +7068,36 @@
       "confidence-calibration",
       "uncertainty",
       "selective-prediction"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "benchmark": {
+      "evaluates": [
+        "ood",
+        "task-reliability"
+      ],
+      "shift_types": [
+        "action"
+      ],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "ying-2025-agentsafe-benchmark",
@@ -5019,7 +7135,38 @@
       "hazardous-instruction",
       "embodied-agent",
       "benchmark"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "attack-success-rate",
+        "clean-task-success-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "catalog-derived"
+    },
+    "benchmark": {
+      "evaluates": [
+        "adversarial-attack",
+        "semantic-safety"
+      ],
+      "shift_types": [
+        "instruction"
+      ],
+      "environment": "simulation",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "chen-2025-safemind",
@@ -5058,7 +7205,37 @@
       "safety-benchmark",
       "jailbreak",
       "mitigation"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "catalog-derived"
+    },
+    "benchmark": {
+      "evaluates": [
+        "adversarial-attack",
+        "semantic-safety"
+      ],
+      "shift_types": [
+        "none"
+      ],
+      "environment": "simulation",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "liu-2025-evovla",
@@ -5098,7 +7275,41 @@
       "stage-hallucination",
       "long-horizon",
       "sim-to-real"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "task-planning",
+        "action-interface"
+      ],
+      "defends_against": [
+        "unsafe-policy-behavior"
+      ],
+      "assumptions": [
+        "model-access"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "yasarla-2026-gero",
@@ -5139,7 +7350,22 @@
       "scenario-rollout",
       "long-horizon",
       "zero-shot"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "honari-2024-sorl",
@@ -5180,7 +7406,44 @@
       "safe-reinforcement-learning",
       "multi-objective",
       "constraint-violation"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "physical-damage-rate",
+        "collision-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "world-state",
+        "action-interface",
+        "execution-control"
+      ],
+      "defends_against": [
+        "constraint-violation"
+      ],
+      "assumptions": [
+        "model-access"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "ranjan-2026-vla-forget",
@@ -5224,7 +7487,43 @@
       "privacy",
       "unsafe-behavior",
       "utility-preservation"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "BEHAVIOR"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "training-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "model-supply-chain"
+      ],
+      "defends_against": [
+        "memorized-data-retention",
+        "unsafe-policy-behavior"
+      ],
+      "assumptions": [
+        "model-access"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "xia-2025-apo",
@@ -5263,7 +7562,40 @@
       "preference-optimization",
       "failure-correction",
       "real-robot"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "action-interface"
+      ],
+      "defends_against": [
+        "unsafe-policy-behavior"
+      ],
+      "assumptions": [
+        "model-access"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "yue-2023-safe-vln",
@@ -5307,7 +7639,45 @@
       "vision-language-navigation",
       "waypoint",
       "recovery"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "physical-damage-rate",
+        "collision-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "world-state",
+        "action-interface",
+        "execution-control"
+      ],
+      "defends_against": [
+        "constraint-violation"
+      ],
+      "assumptions": [
+        "safety-constraints"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "liu-2023-reflect",
@@ -5349,7 +7719,43 @@
       "failure-correction",
       "multisensory",
       "llm-planner"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "proprioception",
+        "world-state"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "safety-constraints"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "li-2026-causal-scene-narration",
@@ -5392,7 +7798,45 @@
       "runtime-supervision",
       "causal-narration",
       "infraction-score"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "physical-damage-rate",
+        "collision-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "world-state",
+        "task-planning"
+      ],
+      "defends_against": [
+        "planning-error"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "tolle-2025-safe-rfm",
@@ -5433,7 +7877,43 @@
       "inductive-bias",
       "formal-guarantee",
       "collision-avoidance"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "physical-damage-rate",
+        "collision-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "defends_against": [
+        "constraint-violation"
+      ],
+      "assumptions": [
+        "safety-constraints"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "mehboob-2026-dronevla",
@@ -5473,7 +7953,42 @@
       "human-aware-control",
       "handover",
       "navigation"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "constraint-violation-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "input-filtering"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "world-state",
+        "execution-control"
+      ],
+      "defends_against": [
+        "constraint-violation"
+      ],
+      "assumptions": [
+        "clean-reference"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "zhang-2026-compliantvla",
@@ -5516,7 +8031,44 @@
       "force-control",
       "variable-impedance",
       "real-robot"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "physical-damage-rate",
+        "collision-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "proprioception",
+        "action-interface"
+      ],
+      "defends_against": [
+        "constraint-violation"
+      ],
+      "assumptions": [
+        "safety-constraints"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "bui-2026-construction-vlm",
@@ -5550,7 +8102,31 @@
       "human-action-recognition",
       "emotion-recognition",
       "vlm"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "benchmark": {
+      "evaluates": [],
+      "shift_types": [
+        "action"
+      ],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "valle-2025-vla-uncertainty-quality",
@@ -5589,7 +8165,33 @@
       "execution-quality",
       "human-evaluation",
       "test-oracle"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "benchmark": {
+      "evaluates": [
+        "ood"
+      ],
+      "shift_types": [
+        "action"
+      ],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "lu-2025-sensor-attacks",
@@ -5630,7 +8232,24 @@
       "camera",
       "microphone",
       "robustness-evaluation"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "zhang-2024-vlabench",
@@ -5672,7 +8291,37 @@
       "long-horizon",
       "language-grounding",
       "knowledge-transfer"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "catalog-derived"
+    },
+    "benchmark": {
+      "evaluates": [
+        "ood",
+        "task-reliability"
+      ],
+      "shift_types": [
+        "none"
+      ],
+      "environment": "simulation",
+      "base_platforms": [],
+      "public_data": true,
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "seong-2025-costnav",
@@ -5715,7 +8364,41 @@
       "collision",
       "economic-cost",
       "deployment"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot",
+        "simulation"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "physical-damage-rate",
+        "collision-rate",
+        "constraint-violation-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "catalog-derived"
+    },
+    "benchmark": {
+      "evaluates": [
+        "physical-safety",
+        "task-reliability"
+      ],
+      "shift_types": [
+        "none"
+      ],
+      "environment": "mixed",
+      "base_platforms": [],
+      "public_data": true,
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "li-2025-shawshank",
@@ -5757,7 +8440,23 @@
       "environmental-injection",
       "benchmark",
       "black-box"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "cui-2026-libero-safety",
@@ -5818,7 +8517,8 @@
         "physical-damage-rate",
         "constraint-violation-rate"
       ],
-      "physical_validation": false
+      "physical_validation": false,
+      "curation_status": "catalog-derived"
     },
     "benchmark": {
       "evaluates": [
@@ -5827,15 +8527,15 @@
         "task-reliability"
       ],
       "shift_types": [
-        "object",
-        "instruction"
+        "action"
       ],
       "environment": "simulation",
       "base_platforms": [
         "LIBERO"
       ],
       "public_data": true,
-      "leaderboard": false
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
     }
   },
   {
@@ -5881,7 +8581,39 @@
       "safety-cost",
       "risk-exposure-time",
       "unsafe-success"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "physical-damage-rate",
+        "collision-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "catalog-derived"
+    },
+    "benchmark": {
+      "evaluates": [
+        "physical-safety",
+        "task-reliability"
+      ],
+      "shift_types": [
+        "action"
+      ],
+      "environment": "simulation",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "kim-2026-libero-para",
@@ -5920,7 +8652,40 @@
       "paraphrase",
       "linguistic-generalization",
       "semantic-grounding"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "LIBERO"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "catalog-derived"
+    },
+    "benchmark": {
+      "evaluates": [
+        "ood",
+        "task-reliability"
+      ],
+      "shift_types": [
+        "none"
+      ],
+      "environment": "simulation",
+      "base_platforms": [
+        "LIBERO"
+      ],
+      "public_data": true,
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "li-2025-attackvla",
@@ -5982,23 +8747,26 @@
         "attack-success-rate",
         "clean-task-success-rate"
       ],
-      "physical_validation": false
+      "physical_validation": false,
+      "curation_status": "catalog-derived"
     },
     "benchmark": {
       "evaluates": [
+        "ood",
         "adversarial-attack",
         "backdoor",
         "task-reliability"
       ],
       "shift_types": [
-        "none"
+        "action"
       ],
       "environment": "simulation",
       "base_platforms": [
         "LIBERO"
       ],
-      "public_data": true,
-      "leaderboard": false
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
     }
   },
   {
@@ -6044,7 +8812,41 @@
       "trajectory-optimization",
       "safety-cost",
       "guard"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "attack-success-rate",
+        "clean-task-success-rate",
+        "physical-damage-rate",
+        "collision-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "benchmark": {
+      "evaluates": [
+        "ood",
+        "adversarial-attack",
+        "physical-safety"
+      ],
+      "shift_types": [
+        "object",
+        "action"
+      ],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": true,
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "fan-2026-safevla-bench",
@@ -6088,7 +8890,40 @@
       "signal-temporal-logic",
       "severity",
       "collision"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "physical-damage-rate",
+        "collision-rate",
+        "constraint-violation-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "catalog-derived"
+    },
+    "benchmark": {
+      "evaluates": [
+        "physical-safety",
+        "task-reliability"
+      ],
+      "shift_types": [
+        "action"
+      ],
+      "environment": "simulation",
+      "base_platforms": [],
+      "public_data": true,
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "fu-2026-trustvla",
@@ -6149,26 +8984,27 @@
         "attack-success-rate",
         "clean-task-success-rate"
       ],
-      "physical_validation": false
+      "physical_validation": false,
+      "curation_status": "catalog-derived"
     },
     "defense": {
       "position": [
-        "inference-time"
+        "training-time"
       ],
       "mechanism": [
-        "runtime-monitoring",
-        "input-filtering"
+        "representation-steering"
       ],
       "protected_surface": [
-        "visual-perception",
-        "reasoning-representation"
+        "model-supply-chain",
+        "visual-perception"
       ],
       "defends_against": [
         "backdoor"
       ],
       "assumptions": [
-        "runtime-monitor"
-      ]
+        "clean-reference"
+      ],
+      "curation_status": "catalog-derived"
     }
   },
   {
@@ -6213,7 +9049,24 @@
       "supply-chain",
       "fine-tuning-persistence",
       "real-robot"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "qu-2025-vlm-safe",
@@ -6258,7 +9111,45 @@
       "world-model",
       "autonomous-driving",
       "semantic-safety"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "physical-damage-rate",
+        "collision-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "world-state",
+        "task-planning",
+        "action-interface"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [
+        "model-access"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "huang-2025-safe-beal",
@@ -6300,7 +9191,40 @@
       "alignment",
       "task-planning",
       "hazard-category"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "physical-damage-rate",
+        "collision-rate",
+        "constraint-violation-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "catalog-derived"
+    },
+    "benchmark": {
+      "evaluates": [
+        "physical-safety",
+        "task-reliability"
+      ],
+      "shift_types": [
+        "none"
+      ],
+      "environment": "simulation",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "wang-2026-auto-horizon",
@@ -6342,7 +9266,43 @@
       "adaptive-horizon",
       "test-time",
       "attention"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "action-interface",
+        "execution-control"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "safety-constraints"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "kachaev-2025-dont-blind-vla",
@@ -6382,7 +9342,22 @@
       "fine-tuning",
       "alignment",
       "ood-generalization"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "cheng-2024-manipulation-facing-threats",
@@ -6425,7 +9400,37 @@
       "physical-threat",
       "typographic-attack",
       "adversarial-patch"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "catalog-derived"
+    },
+    "benchmark": {
+      "evaluates": [
+        "ood",
+        "adversarial-attack",
+        "task-reliability"
+      ],
+      "shift_types": [
+        "action"
+      ],
+      "environment": "simulation",
+      "base_platforms": [],
+      "public_data": true,
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "huang-2025-ulr-privacy",
@@ -6466,7 +9471,40 @@
       "ultra-low-resolution",
       "semantic-segmentation",
       "navigation"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "input-filtering"
+      ],
+      "protected_surface": [
+        "visual-perception"
+      ],
+      "defends_against": [
+        "sensitive-data-exposure"
+      ],
+      "assumptions": [
+        "clean-reference"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "huang-2025-robot-vision-privacy",
@@ -6504,7 +9542,31 @@
       "user-study",
       "image-modality",
       "resolution"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "benchmark": {
+      "evaluates": [],
+      "shift_types": [
+        "none"
+      ],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "choi-2025-pcvs",
@@ -6545,7 +9607,40 @@
       "real-time-video",
       "conformal-prediction",
       "formal-specification"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "input-filtering"
+      ],
+      "protected_surface": [
+        "visual-perception"
+      ],
+      "defends_against": [
+        "sensitive-data-exposure"
+      ],
+      "assumptions": [
+        "clean-reference"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "zhang-2025-dynamic-privacy",
@@ -6628,7 +9723,45 @@
       "control-barrier-function",
       "collision",
       "safety-filter"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "physical-damage-rate",
+        "collision-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "world-state",
+        "action-interface",
+        "execution-control"
+      ],
+      "defends_against": [
+        "semantic-misalignment"
+      ],
+      "assumptions": [
+        "safety-constraints"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "grislain-2025-i-failsense",
@@ -6669,7 +9802,43 @@
       "semantic-misalignment",
       "vlm",
       "real-robot"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "proprioception"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "wang-2025-robosafe",
@@ -6713,7 +9882,47 @@
       "executable-logic",
       "safety-memory",
       "replanning"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate",
+        "physical-damage-rate",
+        "collision-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "user-instruction",
+        "world-state",
+        "task-planning"
+      ],
+      "defends_against": [
+        "hazardous-instruction"
+      ],
+      "assumptions": [
+        "safety-constraints"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "guo-2024-doremi",
@@ -6756,7 +9965,45 @@
       "recovery",
       "constraint-monitoring",
       "planning"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "world-state",
+        "task-planning",
+        "execution-control"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "ren-2023-knowno",
@@ -6798,7 +10045,42 @@
       "conformal-prediction",
       "ask-for-help",
       "human-oversight"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "uncertainty-gating"
+      ],
+      "protected_surface": [
+        "user-instruction",
+        "reasoning-representation",
+        "task-planning"
+      ],
+      "defends_against": [
+        "instruction-ambiguity"
+      ],
+      "assumptions": [
+        "none"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "kato-2026-dual-correction",
@@ -6841,7 +10123,45 @@
       "human-robot-collaboration",
       "dual-correction",
       "verification"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "user-instruction",
+        "visual-perception",
+        "world-state",
+        "execution-control"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "lin-2026-ask-to-clarify",
@@ -6881,7 +10201,40 @@
       "multi-turn-dialogue",
       "disambiguation",
       "real-robot"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "uncertainty-gating"
+      ],
+      "protected_surface": [
+        "user-instruction"
+      ],
+      "defends_against": [
+        "instruction-ambiguity"
+      ],
+      "assumptions": [
+        "none"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "hsieh-2025-iva",
@@ -6920,7 +10273,41 @@
       "rejection",
       "clarification",
       "instruction-tuning"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "uncertainty-gating"
+      ],
+      "protected_surface": [
+        "user-instruction"
+      ],
+      "defends_against": [
+        "planning-error"
+      ],
+      "assumptions": [
+        "none"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "li-2024-sc-vla",
@@ -6962,7 +10349,44 @@
       "fast-slow-system",
       "chain-of-thought",
       "failure-recovery"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "world-state",
+        "action-interface"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "xia-2025-phoenix",
@@ -7004,7 +10428,44 @@
       "motion-instruction",
       "action-correction",
       "lifelong-learning"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "action-interface",
+        "execution-control"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "sapkota-2025-vla-review",
@@ -7341,7 +10802,45 @@
       "reset",
       "failure-recovery",
       "contact-rich"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "proprioception",
+        "action-interface",
+        "execution-control"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "zhang-2026-harness-vla",
@@ -7386,7 +10885,45 @@
       "contact-rich",
       "memory-guided",
       "v4-revision"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "proprioception",
+        "action-interface",
+        "context-memory-retrieval"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "hao-2026-far",
@@ -7427,7 +10964,43 @@
       "failure-aware",
       "test-time-adaptation",
       "continual-improvement"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "canevaro-2026-shift-drift",
@@ -7470,7 +11043,22 @@
       "semantic-shift",
       "state-drift",
       "IROS-2026"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "lu-2026-aspire",
@@ -7513,7 +11101,44 @@
       "failure-diagnosis",
       "repair",
       "sim-to-real"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "catalog-derived"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "context-memory-retrieval",
+        "task-planning",
+        "action-interface"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "ma-2024-vla-embodied-ai-survey",
