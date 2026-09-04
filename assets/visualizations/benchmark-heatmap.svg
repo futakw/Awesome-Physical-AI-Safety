@@ -17,11 +17,11 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text class="axis" text-anchor="start" transform="translate(574.5 167) rotate(-52)">Constraint Violation</text>
 <text class="axis" text-anchor="start" transform="translate(651.5 167) rotate(-52)">Backdoor</text>
 <text class="axis" text-anchor="start" transform="translate(728.5 167) rotate(-52)">Jailbreak</text>
-<text class="axis" text-anchor="start" transform="translate(805.5 167) rotate(-52)">Unsafe Policy Behavior</text>
-<text class="axis" text-anchor="start" transform="translate(882.5 167) rotate(-52)">Adversarial Patch</text>
-<text class="axis" text-anchor="start" transform="translate(959.5 167) rotate(-52)">Digital Perturbation</text>
-<text class="axis" text-anchor="start" transform="translate(1036.5 167) rotate(-52)">Indirect Prompt Injection</text>
-<text class="axis" text-anchor="start" transform="translate(1113.5 167) rotate(-52)">Planning Error</text>
+<text class="axis" text-anchor="start" transform="translate(805.5 167) rotate(-52)">Adversarial Patch</text>
+<text class="axis" text-anchor="start" transform="translate(882.5 167) rotate(-52)">Unsafe Policy Behavior</text>
+<text class="axis" text-anchor="start" transform="translate(959.5 167) rotate(-52)">Indirect Prompt Injection</text>
+<text class="axis" text-anchor="start" transform="translate(1036.5 167) rotate(-52)">Digital Perturbation</text>
+<text class="axis" text-anchor="start" transform="translate(1113.5 167) rotate(-52)">Command Hijacking</text>
 <text class="label" x="372" y="210.5" text-anchor="end">Task and Physical Safety</text>
 <rect x="392" y="187" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="428.5" y="210.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
@@ -47,8 +47,8 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="967.5" y="210.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="1008" y="187" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1044.5" y="210.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1085" y="187" width="73" height="39" rx="6" fill="#BFD4F5"><title>[arXiv 2025] A Framework for Benchmarking and Aligning Task-Planning Safety in LLM-Based Embodied Agents</title></rect>
-<text x="1121.5" y="210.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="1085" y="187" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="1121.5" y="210.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="label" x="372" y="253.5" text-anchor="end">Adversarial and Physical Robustness</text>
 <rect x="392" y="230" width="73" height="39" rx="6" fill="#BFD4F5"><title>[arXiv 2024] Manipulation Facing Threats: Evaluating Physical Vulnerabilities in End-to-End Vision Language Action Models</title></rect>
 <text x="428.5" y="253.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
@@ -60,14 +60,14 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="659.5" y="253.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="700" y="230" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="736.5" y="253.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="777" y="230" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="813.5" y="253.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="854" y="230" width="73" height="39" rx="6" fill="#BFD4F5"><title>[arXiv 2024] Manipulation Facing Threats: Evaluating Physical Vulnerabilities in End-to-End Vision Language Action Models</title></rect>
-<text x="890.5" y="253.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="931" y="230" width="73" height="39" rx="6" fill="#BFD4F5"><title>[arXiv 2025] AttackVLA: Benchmarking Adversarial and Backdoor Attacks on Vision-Language-Action Models</title></rect>
-<text x="967.5" y="253.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="1008" y="230" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1044.5" y="253.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="777" y="230" width="73" height="39" rx="6" fill="#BFD4F5"><title>[arXiv 2024] Manipulation Facing Threats: Evaluating Physical Vulnerabilities in End-to-End Vision Language Action Models</title></rect>
+<text x="813.5" y="253.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="854" y="230" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="890.5" y="253.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="931" y="230" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="967.5" y="253.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="1008" y="230" width="73" height="39" rx="6" fill="#BFD4F5"><title>[arXiv 2025] AttackVLA: Benchmarking Adversarial and Backdoor Attacks on Vision-Language-Action Models</title></rect>
+<text x="1044.5" y="253.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="1085" y="230" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1121.5" y="253.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="label" x="372" y="296.5" text-anchor="end">OOD and Generalization Benchmarks</text>
@@ -129,10 +129,10 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="813.5" y="382.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="854" y="359" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="890.5" y="382.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="931" y="359" width="73" height="39" rx="6" fill="#BFD4F5"><title>[arXiv 2024] VLATest: Testing and Evaluating Vision-Language-Action Models for Robotic Manipulation</title></rect>
-<text x="967.5" y="382.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="1008" y="359" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1044.5" y="382.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="931" y="359" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="967.5" y="382.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="1008" y="359" width="73" height="39" rx="6" fill="#BFD4F5"><title>[arXiv 2024] VLATest: Testing and Evaluating Vision-Language-Action Models for Robotic Manipulation</title></rect>
+<text x="1044.5" y="382.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="1085" y="359" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1121.5" y="382.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="label" x="372" y="425.5" text-anchor="end">Comprehensive VLA Evaluation</text>
@@ -155,8 +155,8 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="967.5" y="425.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="1008" y="402" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1044.5" y="425.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1085" y="402" width="73" height="39" rx="6" fill="#BFD4F5"><title>[arXiv 2024] VLABench: A Large-Scale Benchmark for Language-Conditioned Robotics Manipulation with Long-Horizon Reasoning Tasks</title></rect>
-<text x="1121.5" y="425.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="1085" y="402" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="1121.5" y="425.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="label" x="372" y="468.5" text-anchor="end">Evaluation Infrastructure</text>
 <rect x="392" y="445" width="73" height="39" rx="6" fill="#A1C0F3"><title>[CoRL 2024] Evaluating Real-World Robot Manipulation Policies in Simulation
 [NeurIPS Datasets and Benchmarks 2023] LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning</title></rect>

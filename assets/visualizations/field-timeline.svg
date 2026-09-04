@@ -65,10 +65,11 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [ICLR 2025] Can We Trust Embodied Agents? Exploring Backdoor Attacks Against Embodied LLM-Based Decision-Making Systems
 [arXiv 2025] Goal-Oriented Backdoor Attack Against Vision-Language-Action Models via Physical Objects</title></circle>
 <text x="830.0" y="261" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">4</text>
-<circle cx="1120.0" cy="256" r="14.2" fill="#7356A3" fill-opacity="0.88"><title>[arXiv 2026] State Backdoor: Towards Stealthy Real-World Poisoning Attack on Vision-Language-Action Models in State Space
+<circle cx="1120.0" cy="256" r="15.3" fill="#7356A3" fill-opacity="0.88"><title>[arXiv 2026] FlowHijack: Backdoor Attacks on Flow-Matching Vision-Language-Action Models
+[arXiv 2026] State Backdoor: Towards Stealthy Real-World Poisoning Attack on Vision-Language-Action Models in State Space
 [arXiv 2026] SilentDrift: Exploiting Action Chunking for Stealthy Backdoor Attacks on Vision-Language-Action Models
 [arXiv 2026] Inject Once Survive Later: Backdooring Vision-Language-Action Models to Persist Through Downstream Fine-tuning</title></circle>
-<text x="1120.0" y="261" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">3</text>
+<text x="1120.0" y="261" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">4</text>
 <text class="label" x="222" y="325" text-anchor="end">Inference Attacks</text>
 <line x1="250" y1="320" x2="1120" y2="320" stroke="#DCE3EC"/>
 <circle cx="830.0" cy="320" r="21.4" fill="#B0523A" fill-opacity="0.88"><title>[ICCV 2025] Exploring the Adversarial Vulnerabilities of Vision-Language-Action Models in Robotics
@@ -84,11 +85,17 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [LAMPS@CCS 2025] Exploring the Robustness of Vision-Language-Action Models against Sensor Attacks
 [arXiv 2025] The Shawshank Redemption of Embodied AI: Understanding and Benchmarking Indirect Environmental Jailbreaks</title></circle>
 <text x="830.0" y="325" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">12</text>
-<circle cx="1120.0" cy="320" r="15.3" fill="#B0523A" fill-opacity="0.88"><title>[AAAI 2026] Phantom Menace: Exploring and Enhancing the Robustness of VLA Models Against Physical Sensor Attacks
+<circle cx="1120.0" cy="320" r="20.1" fill="#B0523A" fill-opacity="0.88"><title>[arXiv 2026] TRAP: Hijacking VLA CoT-Reasoning via Adversarial Patches
+[arXiv 2026] Tex3D: Physical 3D Texture Attacks on Vision-Language-Action Models
+[arXiv 2026] JailWAM: Jailbreaking World Action Models in Robot Control
+[arXiv 2026] PINA: Prompt Injection Attack against Navigation Agents
+[arXiv 2026] VLALeaks: Membership Inference Attacks against Vision-Language-Action Models
+[arXiv 2026] RIPA: Sensory-Vector Prompt Injection Attacks on LLM-Controlled ROS 2 Robots
+[AAAI 2026] Phantom Menace: Exploring and Enhancing the Robustness of VLA Models Against Physical Sensor Attacks
 [SaTML 2026] CHAI: Command Hijacking Against Embodied AI
 [CVPR 2026] When Robots Obey the Patch: Universal Transferable Patch Attacks on Vision-Language-Action Models
 [arXiv 2026] If You&#x27;re Waiting for a Sign... That Might Not Be It! Mitigating Trust Boundary Confusion from Visual Injections on Vision-Language Agentic Systems</title></circle>
-<text x="1120.0" y="325" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">4</text>
+<text x="1120.0" y="325" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">10</text>
 <text class="label" x="222" y="389" text-anchor="end">Defenses</text>
 <line x1="250" y1="384" x2="1120" y2="384" stroke="#DCE3EC"/>
 <circle cx="250.0" cy="384" r="15.3" fill="#4F67A5" fill-opacity="0.88"><title>[arXiv 2023] Plug in the Safety Chip: Enforcing Constraints for LLM-Driven Robot Agents
