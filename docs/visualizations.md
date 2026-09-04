@@ -20,7 +20,7 @@ The heatmap includes concrete threat models and excludes broad survey/evaluation
 
 ![Defense coverage map](../assets/visualizations/defense-heatmap.svg)
 
-Rows are defense subsections; columns are the threat mechanisms addressed by those papers. The interactive explorer supports hover and click-to-pin paper lists.
+Rows are defense subsections; columns use the same top-10 `threat_model.mechanism` order as the Threat-Model Cross-Map, including zero-count cells. The interactive explorer supports hover and click-to-pin paper lists.
 
 ## Regeneration
 
