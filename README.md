@@ -69,10 +69,10 @@ See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.
 - **🧪 Training-Time Attacks**
   - [Backdoors and Data Poisoning](#training-attacks-backdoors-and-data-poisoning)
 - **⚡ Inference-Time Attacks**
+  - [Planning, Action, and Trajectory Manipulation](#inference-attacks-planning-action-and-trajectory-manipulation)
   - [Visual Perturbations and Patches](#inference-attacks-visual-perturbations-and-patches)
   - [Jailbreaks and Prompt Injection](#inference-attacks-jailbreaks-and-prompt-injection)
   - [Privacy and Data Leakage](#inference-attacks-privacy-and-data-leakage)
-  - [Planning, Action, and Trajectory Manipulation](#inference-attacks-planning-action-and-trajectory-manipulation)
   - [Sensor, State, and Physical Interventions](#inference-attacks-sensor-state-and-physical-interventions)
   - [Upstream VLM Attacks](#inference-attacks-upstream-vlm-attacks)
 - **🛡️ Defenses and Safety Mechanisms**
@@ -107,7 +107,7 @@ See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.
 
 </details>
 
-**135 papers in the current catalog.**
+**140 papers in the current catalog.**
 
 <a id="surveys"></a>
 
@@ -253,12 +253,24 @@ See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.
 
 ## ⚡ Inference-Time Attacks
 
+<a id="inference-attacks-planning-action-and-trajectory-manipulation"></a>
+
+### Planning, Action, and Trajectory Manipulation
+
+| Paper | Venue | Evaluated Risk | Threat Model |
+|---|---:|---|---|
+| **[SABER: A Stealthy Agentic Black-Box Attack Framework for Vision-Language-Action Models](https://arxiv.org/abs/2603.24935)**<br><sub>et al. et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Task Planning +1](https://img.shields.io/badge/-Task_Planning_%2B1-3FA89B?style=flat) <br> ![Action Manipulation +1](https://img.shields.io/badge/-Action_Manipulation_%2B1-D47A5D?style=flat) &nbsp;→&nbsp; ![Task Planner](https://img.shields.io/badge/-Task_Planner-9873D4?style=flat) &nbsp;→&nbsp; ![Control Hijacking](https://img.shields.io/badge/-Control_Hijacking-D96F8A?style=flat) |
+| **[When World Models Dream Wrong: Physical-Conditioned Adversarial Attacks Against World Models](https://arxiv.org/abs/2602.18739)**<br><sub>et al. et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) ![Physical](https://img.shields.io/badge/-Physical-D96F8A?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![World State +1](https://img.shields.io/badge/-World_State_%2B1-3FA89B?style=flat) <br> ![Environment Manipulation +1](https://img.shields.io/badge/-Environment_Manipulation_%2B1-D47A5D?style=flat) &nbsp;→&nbsp; ![World State](https://img.shields.io/badge/-World_State-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
+| **[FreezeVLA: Action-Freezing Attacks Against Vision-Language-Action Models](https://arxiv.org/abs/2509.19870)** [![GitHub stars](https://img.shields.io/github/stars/xinwong/FreezeVLA?style=social)](https://github.com/xinwong/FreezeVLA)<br><sub>Wang et al.</sub> | arXiv 2025 | ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-B88A24?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Visual Perception](https://img.shields.io/badge/-Visual_Perception-3FA89B?style=flat) <br> ![Digital Perturbation](https://img.shields.io/badge/-Digital_Perturbation-D47A5D?style=flat) &nbsp;→&nbsp; ![Action Generation](https://img.shields.io/badge/-Action_Generation-9873D4?style=flat) &nbsp;→&nbsp; ![Action Freezing](https://img.shields.io/badge/-Action_Freezing-D96F8A?style=flat) |
+
 <a id="inference-attacks-visual-perturbations-and-patches"></a>
 
 ### Visual Perturbations and Patches
 
 | Paper | Venue | Evaluated Risk | Threat Model |
 |---|---:|---|---|
+| **[Hidden in Plain Sight: Diffusion-Based Unrestricted Robotic Attacks on Vision-Language-Action Models](https://arxiv.org/abs/2608.10393)**<br><sub>et al. et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) ![Physical](https://img.shields.io/badge/-Physical-D96F8A?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Visual Perception](https://img.shields.io/badge/-Visual_Perception-3FA89B?style=flat) <br> ![Digital Perturbation +1](https://img.shields.io/badge/-Digital_Perturbation_%2B1-D47A5D?style=flat) &nbsp;→&nbsp; ![Perception Model](https://img.shields.io/badge/-Perception_Model-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
+| **[Partially Observable Adversarial Patch Attacks on Vision-Language-Action Models](https://arxiv.org/abs/2606.03556)**<br><sub>et al. et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Visual Perception](https://img.shields.io/badge/-Visual_Perception-3FA89B?style=flat) <br> ![Adversarial Patch](https://img.shields.io/badge/-Adversarial_Patch-D47A5D?style=flat) &nbsp;→&nbsp; ![VLA policy](https://img.shields.io/badge/-VLA_policy-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
 | **[Tex3D: Physical 3D Texture Attacks on Vision-Language-Action Models](https://arxiv.org/abs/2604.01618)**<br><sub>et al. et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) ![Physical](https://img.shields.io/badge/-Physical-D96F8A?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Physical Semantic Environment +1](https://img.shields.io/badge/-Physical_Semantic_Environment_%2B1-3FA89B?style=flat) <br> ![Adversarial Object](https://img.shields.io/badge/-Adversarial_Object-D47A5D?style=flat) &nbsp;→&nbsp; ![Perception Model](https://img.shields.io/badge/-Perception_Model-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
 | **[TRAP: Hijacking VLA CoT-Reasoning via Adversarial Patches](https://arxiv.org/abs/2603.23117)**<br><sub>et al. et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Visual Perception +1](https://img.shields.io/badge/-Visual_Perception_%2B1-3FA89B?style=flat) <br> ![Adversarial Patch +1](https://img.shields.io/badge/-Adversarial_Patch_%2B1-D47A5D?style=flat) &nbsp;→&nbsp; ![Reasoning Process](https://img.shields.io/badge/-Reasoning_Process-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
 | **[When Robots Obey the Patch: Universal Transferable Patch Attacks on Vision-Language-Action Models](https://arxiv.org/abs/2511.21192)** [![GitHub stars](https://img.shields.io/github/stars/yuyi-sd/UPA-RFAS?style=social)](https://github.com/yuyi-sd/UPA-RFAS)<br><sub>Lu et al.</sub> | CVPR 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-B88A24?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Visual Perception](https://img.shields.io/badge/-Visual_Perception-3FA89B?style=flat) <br> ![Adversarial Patch](https://img.shields.io/badge/-Adversarial_Patch-D47A5D?style=flat) &nbsp;→&nbsp; ![VLA policy](https://img.shields.io/badge/-VLA_policy-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
@@ -273,6 +285,7 @@ See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.
 
 | Paper | Venue | Evaluated Risk | Threat Model |
 |---|---:|---|---|
+| **[Altered Thoughts, Altered Actions: Probing Chain-of-Thought Vulnerabilities in VLA Robotic Manipulation](https://arxiv.org/abs/2603.12717)**<br><sub>et al. et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Reasoning Representation +1](https://img.shields.io/badge/-Reasoning_Representation_%2B1-3FA89B?style=flat) <br> ![Representation Hijacking +1](https://img.shields.io/badge/-Representation_Hijacking_%2B1-D47A5D?style=flat) &nbsp;→&nbsp; ![Reasoning Process](https://img.shields.io/badge/-Reasoning_Process-9873D4?style=flat) &nbsp;→&nbsp; ![Control Hijacking](https://img.shields.io/badge/-Control_Hijacking-D96F8A?style=flat) |
 | **[CHAI: Command Hijacking Against Embodied AI](https://arxiv.org/abs/2510.00181)** [![GitHub stars](https://img.shields.io/github/stars/Cyphysecurity/chai?style=social)](https://github.com/Cyphysecurity/chai)<br><sub>Burbano et al.</sub> | SaTML 2026 | ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-B88A24?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Physical Semantic Environment](https://img.shields.io/badge/-Physical_Semantic_Environment-3FA89B?style=flat) <br> ![Indirect Prompt Injection +2](https://img.shields.io/badge/-Indirect_Prompt_Injection_%2B2-D47A5D?style=flat) &nbsp;→&nbsp; ![Task Planner](https://img.shields.io/badge/-Task_Planner-9873D4?style=flat) &nbsp;→&nbsp; ![Control Hijacking](https://img.shields.io/badge/-Control_Hijacking-D96F8A?style=flat) |
 | **[If You're Waiting for a Sign... That Might Not Be It! Mitigating Trust Boundary Confusion from Visual Injections on Vision-Language Agentic Systems](https://arxiv.org/abs/2604.19844)**<br><sub>Chang et al.</sub> | arXiv 2026 | ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-B88A24?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Physical Semantic Environment](https://img.shields.io/badge/-Physical_Semantic_Environment-3FA89B?style=flat) <br> ![Indirect Prompt Injection +1](https://img.shields.io/badge/-Indirect_Prompt_Injection_%2B1-D47A5D?style=flat) &nbsp;→&nbsp; ![Task Planner](https://img.shields.io/badge/-Task_Planner-9873D4?style=flat) &nbsp;→&nbsp; ![Control Hijacking](https://img.shields.io/badge/-Control_Hijacking-D96F8A?style=flat) |
 | **[JailWAM: Jailbreaking World Action Models in Robot Control](https://arxiv.org/abs/2604.05498)**<br><sub>et al. et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) ![Physical](https://img.shields.io/badge/-Physical-D96F8A?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![User Instruction +1](https://img.shields.io/badge/-User_Instruction_%2B1-3FA89B?style=flat) <br> ![Jailbreak +1](https://img.shields.io/badge/-Jailbreak_%2B1-D47A5D?style=flat) &nbsp;→&nbsp; ![Task Planner](https://img.shields.io/badge/-Task_Planner-9873D4?style=flat) &nbsp;→&nbsp; ![Control Hijacking](https://img.shields.io/badge/-Control_Hijacking-D96F8A?style=flat) |
@@ -291,14 +304,6 @@ See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.
 | Paper | Venue | Evaluated Risk | Threat Model |
 |---|---:|---|---|
 | **[VLALeaks: Membership Inference Attacks against Vision-Language-Action Models](https://arxiv.org/abs/2606.15165)**<br><sub>et al. et al.</sub> | arXiv 2026 | ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-B88A24?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Model Supply Chain](https://img.shields.io/badge/-Model_Supply_Chain-3FA89B?style=flat) <br> ![Memorized Data Retention](https://img.shields.io/badge/-Memorized_Data_Retention-D47A5D?style=flat) &nbsp;→&nbsp; ![Private Data](https://img.shields.io/badge/-Private_Data-9873D4?style=flat) &nbsp;→&nbsp; ![Privacy Leakage](https://img.shields.io/badge/-Privacy_Leakage-D96F8A?style=flat) |
-
-<a id="inference-attacks-planning-action-and-trajectory-manipulation"></a>
-
-### Planning, Action, and Trajectory Manipulation
-
-| Paper | Venue | Evaluated Risk | Threat Model |
-|---|---:|---|---|
-| **[FreezeVLA: Action-Freezing Attacks Against Vision-Language-Action Models](https://arxiv.org/abs/2509.19870)** [![GitHub stars](https://img.shields.io/github/stars/xinwong/FreezeVLA?style=social)](https://github.com/xinwong/FreezeVLA)<br><sub>Wang et al.</sub> | arXiv 2025 | ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-B88A24?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Visual Perception](https://img.shields.io/badge/-Visual_Perception-3FA89B?style=flat) <br> ![Digital Perturbation](https://img.shields.io/badge/-Digital_Perturbation-D47A5D?style=flat) &nbsp;→&nbsp; ![Action Generation](https://img.shields.io/badge/-Action_Generation-9873D4?style=flat) &nbsp;→&nbsp; ![Action Freezing](https://img.shields.io/badge/-Action_Freezing-D96F8A?style=flat) |
 
 <a id="inference-attacks-sensor-state-and-physical-interventions"></a>
 

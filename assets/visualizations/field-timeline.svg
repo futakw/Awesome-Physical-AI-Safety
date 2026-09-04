@@ -85,7 +85,12 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [LAMPS@CCS 2025] Exploring the Robustness of Vision-Language-Action Models against Sensor Attacks
 [arXiv 2025] The Shawshank Redemption of Embodied AI: Understanding and Benchmarking Indirect Environmental Jailbreaks</title></circle>
 <text x="830.0" y="325" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">12</text>
-<circle cx="1120.0" cy="320" r="20.1" fill="#B0523A" fill-opacity="0.88"><title>[arXiv 2026] TRAP: Hijacking VLA CoT-Reasoning via Adversarial Patches
+<circle cx="1120.0" cy="320" r="23.1" fill="#B0523A" fill-opacity="0.88"><title>[arXiv 2026] SABER: A Stealthy Agentic Black-Box Attack Framework for Vision-Language-Action Models
+[arXiv 2026] Hidden in Plain Sight: Diffusion-Based Unrestricted Robotic Attacks on Vision-Language-Action Models
+[arXiv 2026] Altered Thoughts, Altered Actions: Probing Chain-of-Thought Vulnerabilities in VLA Robotic Manipulation
+[arXiv 2026] Partially Observable Adversarial Patch Attacks on Vision-Language-Action Models
+[arXiv 2026] When World Models Dream Wrong: Physical-Conditioned Adversarial Attacks Against World Models
+[arXiv 2026] TRAP: Hijacking VLA CoT-Reasoning via Adversarial Patches
 [arXiv 2026] Tex3D: Physical 3D Texture Attacks on Vision-Language-Action Models
 [arXiv 2026] JailWAM: Jailbreaking World Action Models in Robot Control
 [arXiv 2026] PINA: Prompt Injection Attack against Navigation Agents
@@ -95,7 +100,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [SaTML 2026] CHAI: Command Hijacking Against Embodied AI
 [CVPR 2026] When Robots Obey the Patch: Universal Transferable Patch Attacks on Vision-Language-Action Models
 [arXiv 2026] If You&#x27;re Waiting for a Sign... That Might Not Be It! Mitigating Trust Boundary Confusion from Visual Injections on Vision-Language Agentic Systems</title></circle>
-<text x="1120.0" y="325" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">10</text>
+<text x="1120.0" y="325" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">15</text>
 <text class="label" x="222" y="389" text-anchor="end">Defenses</text>
 <line x1="250" y1="384" x2="1120" y2="384" stroke="#DCE3EC"/>
 <circle cx="250.0" cy="384" r="15.3" fill="#4F67A5" fill-opacity="0.88"><title>[arXiv 2023] Plug in the Safety Chip: Enforcing Constraints for LLM-Driven Robot Agents
