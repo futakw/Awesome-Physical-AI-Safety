@@ -10,16 +10,73 @@
     "section": "defenses",
     "subsection": "Robust Training and Safety Alignment",
     "scope": "vla",
-    "risks": ["task-reliability"],
+    "risks": [
+      "task-reliability"
+    ],
     "threat_model": {
       "kind": "non-adversarial",
-      "lifecycle": ["inference"],
-      "mechanism": ["distribution-shift"],
-      "surface": ["visual-perception", "action-interface"],
-      "target": ["vla-policy"],
-      "consequence": ["task-failure"]
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "visual-perception",
+        "action-interface"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
     },
-    "tags": ["survey-2608.16843", "reinforcement-learning", "post-training", "robustness"]
+    "tags": [
+      "survey-2608.16843",
+      "reinforcement-learning",
+      "post-training",
+      "robustness"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "LIBERO"
+      ],
+      "models": [
+        "OpenVLA",
+        "pi0"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "robust-success-rate"
+      ],
+      "physical_validation": true
+    },
+    "defense": {
+      "position": [
+        "training-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "action-interface"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [
+        "model-access"
+      ]
+    }
   },
   {
     "id": "clean-action-backdoor-attacks-on-vision-language-action-models-via-sequenti-2025",
@@ -1425,7 +1482,22 @@
       "adversarial-patch",
       "chain-of-thought",
       "vla"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "white-box"
+      ],
+      "metrics": [
+        "attack-success-rate",
+        "task-success-rate"
+      ],
+      "physical_validation": false
+    }
   },
   {
     "id": "tex3d-2026-vla",
@@ -2113,7 +2185,43 @@
       "lighting",
       "background-texture",
       "sensor-noise"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "LIBERO"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "robust-success-rate"
+      ],
+      "physical_validation": false
+    },
+    "benchmark": {
+      "evaluates": [
+        "ood",
+        "task-reliability"
+      ],
+      "shift_types": [
+        "object",
+        "background",
+        "instruction",
+        "camera",
+        "lighting"
+      ],
+      "environment": "simulation",
+      "base_platforms": [
+        "LIBERO"
+      ],
+      "public_data": true,
+      "leaderboard": false
+    }
   },
   {
     "id": "goel-2025-geometric-red-teaming",
@@ -2275,7 +2383,26 @@
     "tags": [
       "backdoor",
       "training-data"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "LIBERO"
+      ],
+      "models": [
+        "OpenVLA"
+      ],
+      "access": [
+        "white-box"
+      ],
+      "metrics": [
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": false
+    }
   },
   {
     "id": "xu-2025-dropvla",
@@ -2363,7 +2490,25 @@
       "backdoor",
       "state-attack",
       "physical-access"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "LIBERO"
+      ],
+      "models": [],
+      "access": [
+        "white-box"
+      ],
+      "metrics": [
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": true
+    }
   },
   {
     "id": "xu-2026-silentdrift",
@@ -2565,7 +2710,42 @@
     "tags": [
       "sensor-attack",
       "physical-intervention"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "black-box"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "robust-success-rate"
+      ],
+      "physical_validation": true
+    },
+    "defense": {
+      "position": [
+        "training-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "audio-perception"
+      ],
+      "defends_against": [
+        "sensor-spoofing"
+      ],
+      "assumptions": [
+        "model-access",
+        "attack-samples"
+      ]
+    }
   },
   {
     "id": "robey-2025-robopair",
@@ -2809,7 +2989,44 @@
     "tags": [
       "safety-alignment",
       "constrained-learning"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "LIBERO"
+      ],
+      "models": [
+        "OpenVLA"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": false
+    },
+    "defense": {
+      "position": [
+        "training-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "action-interface"
+      ],
+      "defends_against": [
+        "constraint-violation"
+      ],
+      "assumptions": [
+        "model-access",
+        "safety-constraints"
+      ]
+    }
   },
   {
     "id": "hu-2025-vlsa",
@@ -2850,7 +3067,42 @@
     "tags": [
       "guardrail",
       "safety-constraint"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "LIBERO"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": false
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "defends_against": [
+        "constraint-violation"
+      ],
+      "assumptions": [
+        "safety-constraints"
+      ]
+    }
   },
   {
     "id": "ravichandran-2026-safety-guardrails",
@@ -5347,7 +5599,41 @@
       "backdoor",
       "targeted-action",
       "real-robot"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "LIBERO"
+      ],
+      "models": [],
+      "access": [
+        "white-box",
+        "black-box"
+      ],
+      "metrics": [
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": false
+    },
+    "benchmark": {
+      "evaluates": [
+        "adversarial-attack",
+        "backdoor",
+        "task-reliability"
+      ],
+      "shift_types": [
+        "none"
+      ],
+      "environment": "simulation",
+      "base_platforms": [
+        "LIBERO"
+      ],
+      "public_data": true,
+      "leaderboard": false
+    }
   },
   {
     "id": "zhang-2026-redvla",
@@ -5477,7 +5763,43 @@
       "uncertainty",
       "localization",
       "inpainting"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "LIBERO"
+      ],
+      "models": [],
+      "access": [
+        "white-box"
+      ],
+      "metrics": [
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": false
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "input-filtering"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "reasoning-representation"
+      ],
+      "defends_against": [
+        "backdoor"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ]
+    }
   },
   {
     "id": "zhou-2026-infuse",

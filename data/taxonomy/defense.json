@@ -1,0 +1,5 @@
+{
+  "positions": ["training-time", "inference-time", "runtime", "system-level"],
+  "mechanisms": ["adversarial-training", "robust-finetuning", "input-filtering", "representation-steering", "runtime-monitoring", "uncertainty-gating", "action-shielding", "formal-verification", "failure-recovery", "model-merging"],
+  "assumptions": ["known-attack", "attack-samples", "clean-reference", "model-access", "visual-encoder-access", "runtime-monitor", "safety-constraints", "human-oversight", "none"]
+}

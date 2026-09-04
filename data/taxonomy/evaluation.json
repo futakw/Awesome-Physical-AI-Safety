@@ -1,0 +1,6 @@
+{
+  "environments": ["simulation", "real-robot", "offline-dataset"],
+  "access": ["white-box", "gray-box", "black-box", "transfer", "not-applicable"],
+  "metrics": ["task-success-rate", "attack-success-rate", "clean-task-success-rate", "physical-damage-rate", "collision-rate", "constraint-violation-rate", "robust-success-rate", "false-positive-rate", "recovery-rate"],
+  "physical_validation": [true, false, null]
+}

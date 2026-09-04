@@ -141,7 +141,9 @@ def paper_cell(paper: dict) -> str:
         parts.append(f"[![GitHub stars]({badge})]({code_url})")
     elif code_url:
         parts.append(f"[Project / Code]({code_url})")
-    return " ".join(parts) + f"<br><sub>{paper['first_author']} et al.</sub>"
+    author = paper["first_author"]
+    author_label = author if author.lower().endswith("et al.") else f"{author} et al."
+    return " ".join(parts) + f"<br><sub>{author_label}</sub>"
 
 
 def subsection_anchor(section_key: str, subsection: str) -> str:
@@ -250,6 +252,8 @@ def render(papers: list[dict]) -> str:
             "The core scope is VLA safety, robustness, security, and evaluation. Closely related LLM-robot, VLM-driven embodied-agent, autonomous-driving, and robot-policy papers are included when they expose a risk, mechanism, defense, or evaluation principle that transfers directly to VLA systems.",
             "",
             "A paper is listed once under its primary contribution. Risk outcomes and mechanisms are represented as multi-label metadata rather than by duplicating the paper across sections.",
+            "",
+            "The optional Defense, Evaluation, and Benchmark metadata extensions are documented in [docs/metadata-schema.md](docs/metadata-schema.md).",
             "",
             "## Contributing",
             "",

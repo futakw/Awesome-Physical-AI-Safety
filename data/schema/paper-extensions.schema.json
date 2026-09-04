@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "paper-extensions.schema.json",
+  "title": "Optional Responsible VLA paper metadata extensions",
+  "type": "object",
+  "properties": {
+    "defense": {
+      "type": "object",
+      "required": ["position", "mechanism", "protected_surface", "defends_against", "assumptions"]
+    },
+    "evaluation": {
+      "type": "object",
+      "required": ["environments", "platforms", "models", "access", "metrics", "physical_validation"]
+    },
+    "benchmark": {
+      "type": "object",
+      "required": ["evaluates", "shift_types", "environment", "base_platforms", "public_data", "leaderboard"]
+    }
+  }
+}

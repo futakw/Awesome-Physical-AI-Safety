@@ -12,6 +12,7 @@ from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data" / "papers.json"
+TAXONOMY_DIR = ROOT / "data" / "taxonomy"
 
 REQUIRED = {
     "id",
@@ -140,9 +141,51 @@ def validate_threat_model(errors: list[str], label: str, threat_model: object) -
     validate_string_list(errors, label, "consequence", threat_model.get("consequence"), CONSEQUENCES)
 
 
+def validate_values(errors: list[str], label: str, field: str, value: object, allowed: set[str]) -> None:
+    if not isinstance(value, list) or any(not isinstance(item, str) for item in value):
+        errors.append(f"{label}: {field} must be a list of strings")
+        return
+    invalid = set(value) - allowed
+    if invalid:
+        errors.append(f"{label}: invalid {field} {sorted(invalid)}")
+
+
+def validate_extensions(errors: list[str], label: str, paper: dict, taxonomies: dict) -> None:
+    defense = paper.get("defense")
+    if defense is not None:
+        expected = {"position", "mechanism", "protected_surface", "defends_against", "assumptions"}
+        if set(defense) != expected:
+            errors.append(f"{label}: defense fields must be {sorted(expected)}")
+        validate_values(errors, label, "defense.position", defense.get("position"), set(taxonomies["defense"]["positions"]))
+        validate_values(errors, label, "defense.mechanism", defense.get("mechanism"), set(taxonomies["defense"]["mechanisms"]))
+        validate_values(errors, label, "defense.protected_surface", defense.get("protected_surface"), SURFACES)
+        validate_values(errors, label, "defense.defends_against", defense.get("defends_against"), MECHANISMS)
+        validate_values(errors, label, "defense.assumptions", defense.get("assumptions"), set(taxonomies["defense"]["assumptions"]))
+    evaluation = paper.get("evaluation")
+    if evaluation is not None:
+        expected = {"environments", "platforms", "models", "access", "metrics", "physical_validation"}
+        if set(evaluation) != expected:
+            errors.append(f"{label}: evaluation fields must be {sorted(expected)}")
+        validate_values(errors, label, "evaluation.environments", evaluation.get("environments"), set(taxonomies["evaluation"]["environments"]))
+        validate_values(errors, label, "evaluation.access", evaluation.get("access"), set(taxonomies["evaluation"]["access"]))
+        validate_values(errors, label, "evaluation.metrics", evaluation.get("metrics"), set(taxonomies["evaluation"]["metrics"]))
+        if evaluation.get("physical_validation") not in {True, False, None}:
+            errors.append(f"{label}: evaluation.physical_validation must be true, false, or null")
+    benchmark = paper.get("benchmark")
+    if benchmark is not None:
+        expected = {"evaluates", "shift_types", "environment", "base_platforms", "public_data", "leaderboard"}
+        if set(benchmark) != expected:
+            errors.append(f"{label}: benchmark fields must be {sorted(expected)}")
+        validate_values(errors, label, "benchmark.evaluates", benchmark.get("evaluates"), set(taxonomies["benchmark"]["evaluates"]))
+        validate_values(errors, label, "benchmark.shift_types", benchmark.get("shift_types"), set(taxonomies["benchmark"]["shift_types"]))
+        if benchmark.get("environment") not in set(taxonomies["benchmark"]["environments"]):
+            errors.append(f"{label}: invalid benchmark.environment {benchmark.get('environment')!r}")
+
+
 def main() -> int:
     errors: list[str] = []
     papers = json.loads(DATA_PATH.read_text(encoding="utf-8"))
+    taxonomies = {name: json.loads((TAXONOMY_DIR / f"{name}.json").read_text(encoding="utf-8")) for name in ("defense", "evaluation", "benchmark")}
     if not isinstance(papers, list) or not papers:
         errors.append("data/papers.json must be a non-empty array")
         papers = []
@@ -181,6 +224,7 @@ def main() -> int:
         if not paper.get("tags"):
             errors.append(f"{label}: tags must not be empty")
         validate_threat_model(errors, label, paper.get("threat_model"))
+        validate_extensions(errors, label, paper, taxonomies)
         if not isinstance(paper.get("year"), int) or not 2000 <= paper.get("year", 0) <= 2100:
             errors.append(f"{label}: invalid year")
         for field in ("paper_url", "code_url"):
