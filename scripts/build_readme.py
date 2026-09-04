@@ -151,66 +151,106 @@ def subsection_anchor(section_key: str, subsection: str) -> str:
     return f"{section_key}-{slug}"
 
 
-def research_gap_table(papers: list[dict]) -> list[str]:
-    total = len(papers)
-    risk_counts = {
-        risk: sum(risk in paper.get("risks", []) for paper in papers)
-        for risk in RISK_LABELS
-    }
-    section_counts = {
-        section: sum(paper["section"] == section for paper in papers)
-        for section in SECTIONS
-    }
-    evaluations = [paper["evaluation"] for paper in papers if "evaluation" in paper]
-    real_robot = sum(
-        "real-robot" in evaluation["environments"] for evaluation in evaluations
-    )
-    unspecified = sum(
-        evaluation["environments"] == ["unspecified"] for evaluation in evaluations
-    )
+GAP_COLORS = {
+    "strong": "3FA89B",
+    "moderate": "B88A24",
+    "sparse": "D47A5D",
+    "none": "D96F8A",
+    "not-applicable": "657A8C",
+}
 
-    threat_counts: dict[str, int] = {}
-    defended_counts: dict[str, int] = {}
-    for paper in papers:
-        threat = paper["threat_model"]
-        mechanisms = threat.get("mechanism", threat.get("coverage", {}).get("mechanisms", []))
-        for mechanism in mechanisms:
-            threat_counts[mechanism] = threat_counts.get(mechanism, 0) + 1
-        for mechanism in paper.get("defense", {}).get("defends_against", []):
-            defended_counts[mechanism] = defended_counts.get(mechanism, 0) + 1
 
-    benchmark_papers = [paper for paper in papers if paper["section"] == "benchmarks"]
-    benchmark_consequences: dict[str, int] = {}
-    for paper in benchmark_papers:
-        threat = paper["threat_model"]
-        consequences = threat.get("consequence", threat.get("coverage", {}).get("consequences", []))
-        for consequence in consequences:
-            benchmark_consequences[consequence] = benchmark_consequences.get(consequence, 0) + 1
+def coverage_badge(count: int, total: int) -> str:
+    ratio = count / total if total else 0
+    if ratio >= 0.6:
+        level = "strong"
+    elif ratio >= 0.3:
+        level = "moderate"
+    elif count:
+        level = "sparse"
+    else:
+        level = "none"
+    label = f"{display_label(level)} · {count}/{total}"
+    return badge(label, GAP_COLORS[level])
 
-    attack_defense = ", ".join(
-        f"{display_label(mechanism)} {threat_counts.get(mechanism, 0)} / {defended_counts.get(mechanism, 0)}"
-        for mechanism in ("backdoor", "jailbreak", "adversarial-patch", "digital-perturbation", "indirect-prompt-injection")
-    )
-    benchmark_signal = ", ".join(
-        f"{display_label(consequence)} {benchmark_consequences.get(consequence, 0)}"
-        for consequence in ("task-failure", "physical-damage", "policy-violation", "privacy-leakage", "recovery-failure", "control-hijacking")
+
+def research_gap_matrix(papers: list[dict]) -> list[str]:
+    threat_families = OrderedDict(
+        [
+            ("Adversarial patch", {"adversarial-patch"}),
+            ("Backdoor", {"backdoor"}),
+            ("OOD / distribution shift", {"distribution-shift"}),
+            (
+                "Prompt injection",
+                {
+                    "direct-prompt-injection",
+                    "indirect-prompt-injection",
+                    "typographic-injection",
+                    "command-hijacking",
+                },
+            ),
+        ]
     )
 
-    return [
-        "## Research Gaps",
+    lines = [
+        "## Research Gap Matrix",
         "",
-        f"The table below reports **signals within this {total}-paper catalog**, not definitive field-wide bibliometric conclusions. Counts are regenerated from the structured metadata.",
+        "Coverage is computed from the structured catalog. Each cell shows `matching papers / papers in that threat family`; warmer colors expose thinner coverage.",
         "",
-        "| Gap | Catalog signal | Missing evidence | Research direction |",
-        "|---|---|---|---|",
-        f"| Outcome coverage beyond task success | Task outcomes appear in {risk_counts['task-reliability']} papers, versus physical safety in {risk_counts['physical-safety']} and ethics in {risk_counts['ethical-societal']}. | Comparable measures of harm severity, near misses, human impact, and norm-sensitive behavior. | Build multi-outcome protocols that jointly measure task completion, physical safety, and ethical compliance. |",
-        f"| Attack–defense imbalance | Threat / defended-paper counts: {attack_defense}. | Defenses for several well-studied attacks remain absent or sparsely replicated under common settings. | Evaluate attack families and defenses on shared models, tasks, budgets, and adaptive attackers. |",
-        f"| Limited verified physical validation | {real_robot} of {len(evaluations)} empirically oriented records explicitly include real-robot evaluation; {unspecified} still lack an abstract-verifiable environment. | Cross-platform replication, sim-to-real correlation, and reporting of physical deployment conditions. | Establish reproducible physical test protocols with standardized hardware and safety reporting. |",
-        f"| Benchmark consequence concentration | Across {len(benchmark_papers)} benchmark papers: {benchmark_signal}. | Long-horizon recovery, control takeover, and compound consequences receive little dedicated coverage. | Design scenario-based benchmarks that track propagation from initial failure to downstream harm and recovery. |",
-        f"| Sparse system-level security | Only {section_counts['system-security']} papers are primarily cataloged under system-level security, privacy, and misuse. | Middleware, network, checkpoint, memory, multi-agent, and supply-chain risks are not covered as systematically as model inputs. | Test end-to-end VLA stacks across trust boundaries instead of evaluating the policy model in isolation. |",
-        f"| OOD safety under active attack | {section_counts['ood-generalization']} papers are primarily cataloged as OOD/generalization work, while attack and defense studies usually isolate adversarial and natural shifts. | Evidence on attacks under unseen environments, embodiments, viewpoints, and dynamics. | Jointly evaluate adversarial robustness and non-adversarial generalization under compositional shifts. |",
-        "",
+        "| Threat family | Simulation | Real robot | Black-box | Defense | Physical-damage evaluation |",
+        "|---|---:|---:|---:|---:|---:|",
     ]
+    for label, mechanisms in threat_families.items():
+        matching = []
+        for paper in papers:
+            threat = paper["threat_model"]
+            paper_mechanisms = set(
+                threat.get("mechanism", threat.get("coverage", {}).get("mechanisms", []))
+            )
+            if paper_mechanisms & mechanisms:
+                matching.append(paper)
+
+        total = len(matching)
+        simulation = sum(
+            "simulation" in paper.get("evaluation", {}).get("environments", [])
+            for paper in matching
+        )
+        real_robot = sum(
+            "real-robot" in paper.get("evaluation", {}).get("environments", [])
+            for paper in matching
+        )
+        black_box = sum(
+            "black-box" in paper.get("evaluation", {}).get("access", [])
+            for paper in matching
+        )
+        defended = sum(
+            bool(set(paper.get("defense", {}).get("defends_against", [])) & mechanisms)
+            for paper in papers
+        )
+        physical_damage = sum(
+            "physical-safety" in paper.get("risks", []) for paper in matching
+        )
+        black_box_cell = (
+            badge("N/A", GAP_COLORS["not-applicable"])
+            if label.startswith("OOD")
+            else coverage_badge(black_box, total)
+        )
+        lines.append(
+            f"| **{label}** <sub>n={total}</sub> | {coverage_badge(simulation, total)} | "
+            f"{coverage_badge(real_robot, total)} | {black_box_cell} | "
+            f"{coverage_badge(defended, total)} | {coverage_badge(physical_damage, total)} |"
+        )
+
+    lines.extend(
+        [
+            "",
+            f"{badge('Strong ≥60%', GAP_COLORS['strong'])} {badge('Moderate ≥30%', GAP_COLORS['moderate'])} {badge('Sparse <30%', GAP_COLORS['sparse'])} {badge('None', GAP_COLORS['none'])} {badge('N/A', GAP_COLORS['not-applicable'])}",
+            "",
+            "> A zero means that the current metadata does not document matching evidence; it does not prove that no such experiment exists. Surveys are included only when their structured coverage names the threat family.",
+            "",
+        ]
+    )
+    return lines
 
 
 def render(papers: list[dict]) -> str:
@@ -231,7 +271,7 @@ def render(papers: list[dict]) -> str:
         "Open the [interactive explorer](docs/index.html) for hoverable paper lists in the field timeline and the Threat, Defense, Benchmark, and Evaluation cross-maps.",
         "",
     ]
-    lines.extend(research_gap_table(papers))
+    lines.extend(research_gap_matrix(papers))
     lines.extend([
         "## Taxonomy at a Glance",
         "",
@@ -264,7 +304,7 @@ def render(papers: list[dict]) -> str:
     ])
 
     present_sections = [key for key in SECTIONS if any(p["section"] == key for p in papers)]
-    lines.append("- [🔎 Research Gaps](#research-gaps)")
+    lines.append("- [🔎 Research Gap Matrix](#research-gap-matrix)")
     for key in present_sections:
         icon, title = SECTIONS[key]
         lines.append(f"- [{icon} {title}](#{key})")
