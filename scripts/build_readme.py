@@ -8,7 +8,7 @@ import json
 import re
 from collections import OrderedDict
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import quote, urlparse
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -34,6 +34,23 @@ RISK_LABELS = {
     "security-privacy": "Security/Privacy",
 }
 
+RISK_COLORS = {
+    "task-reliability": "2563EB",
+    "physical-safety": "B91C1C",
+    "ethical-societal": "7E22CE",
+    "security-privacy": "C2410C",
+}
+
+THREAT_COLORS = {
+    "lifecycle": "2563EB",
+    "surface": "0F766E",
+    "mechanism": "C2410C",
+    "target": "7E22CE",
+    "consequence": "B91C1C",
+    "survey": "6B7280",
+    "evaluation": "0369A1",
+}
+
 
 DISPLAY_LABELS = {
     "vla-policy": "VLA policy",
@@ -44,10 +61,21 @@ def display_label(value: str) -> str:
     return DISPLAY_LABELS.get(value, value.replace("-", " ").title())
 
 
-def compact_labels(values: list[str], *, multiple_label: str) -> str:
-    if len(values) > 2:
-        return multiple_label
-    return " + ".join(display_label(value) for value in values)
+def badge(text: str, color: str) -> str:
+    escaped = text.replace("-", "--").replace("_", "__").replace(" ", "_")
+    url = f"https://img.shields.io/badge/-{quote(escaped, safe='')}-{color}?style=flat-square"
+    return f"![{text}]({url})"
+
+
+def primary_label(values: list[str]) -> str:
+    label = display_label(values[0])
+    return f"{label} +{len(values) - 1}" if len(values) > 1 else label
+
+
+def risk_cell(risks: list[str]) -> str:
+    if not risks:
+        return "—"
+    return " ".join(badge(RISK_LABELS[risk], RISK_COLORS[risk]) for risk in risks)
 
 
 def threat_model_cell(threat_model: dict) -> str:
@@ -56,14 +84,33 @@ def threat_model_cell(threat_model: dict) -> str:
         coverage = threat_model["coverage"]
         lifecycles = coverage["lifecycles"]
         lifecycle = "Cross-lifecycle" if len(lifecycles) > 2 else " → ".join(display_label(value) for value in lifecycles)
-        surface = compact_labels(coverage["surfaces"], multiple_label="Multiple surfaces")
-        return f"`{lifecycle}` · `{surface}`<br>{display_label(kind)} coverage"
+        surfaces = coverage["surfaces"]
+        surface = "Multiple surfaces" if len(surfaces) > 2 else " + ".join(display_label(value) for value in surfaces)
+        return " ".join(
+            [
+                badge(lifecycle, THREAT_COLORS["lifecycle"]),
+                badge(surface, THREAT_COLORS["surface"]),
+                "<br>",
+                badge(f"{display_label(kind)} coverage", THREAT_COLORS[kind]),
+            ]
+        )
     lifecycle = " → ".join(display_label(value) for value in threat_model["lifecycle"])
-    surface = compact_labels(threat_model["surface"], multiple_label="Multiple surfaces")
-    mechanism = compact_labels(threat_model["mechanism"], multiple_label="Multiple mechanisms")
+    surface = primary_label(threat_model["surface"])
+    mechanism = primary_label(threat_model["mechanism"])
     target = display_label(threat_model["target"][0])
     consequence = display_label(threat_model["consequence"][0])
-    return f"`{lifecycle}` · `{surface}`<br>{mechanism} → {target} → {consequence}"
+    return " ".join(
+        [
+            badge(lifecycle, THREAT_COLORS["lifecycle"]),
+            badge(surface, THREAT_COLORS["surface"]),
+            "<br>",
+            badge(mechanism, THREAT_COLORS["mechanism"]),
+            "&nbsp;→&nbsp;",
+            badge(target, THREAT_COLORS["target"]),
+            "&nbsp;→&nbsp;",
+            badge(consequence, THREAT_COLORS["consequence"]),
+        ]
+    )
 
 
 def github_repo(url: str | None) -> str | None:
@@ -93,11 +140,7 @@ def paper_cell(paper: dict) -> str:
         parts.append(f"[![GitHub stars]({badge})]({code_url})")
     elif code_url:
         parts.append(f"[Project / Code]({code_url})")
-    return " ".join(parts)
-
-
-def bullet_list(items: list[str]) -> str:
-    return "<br>".join(f"•&nbsp;{item.strip()}" for item in items if item.strip())
+    return " ".join(parts) + f"<br><sub>{paper['first_author']} et al.</sub>"
 
 
 def subsection_anchor(section_key: str, subsection: str) -> str:
@@ -122,10 +165,10 @@ def render(papers: list[dict]) -> str:
         "",
         "A label is shown only when the paper reports a corresponding empirical outcome metric; discussion or potential impact alone does not qualify.",
         "",
-        "- **Task Success:** task or route completion, success rate, or equivalent execution outcome.",
-        "- **Physical Safety:** collision, damage, unsafe motion or force, physical harm, or safety-constraint violation.",
-        "- **Ethical Safety:** harmful-instruction compliance or refusal, prohibited behavior, or policy/constitution violation.",
-        "- **Security & Privacy:** attack success, backdoor activation, control hijacking, unauthorized access, leakage, or compromise.",
+        f"- {badge('Task', RISK_COLORS['task-reliability'])} task or route completion, success rate, or equivalent execution outcome.",
+        f"- {badge('Physical', RISK_COLORS['physical-safety'])} collision, damage, unsafe motion or force, physical harm, or safety-constraint violation.",
+        f"- {badge('Ethics', RISK_COLORS['ethical-societal'])} harmful-instruction compliance or refusal, prohibited behavior, or policy/constitution violation.",
+        f"- {badge('Security/Privacy', RISK_COLORS['security-privacy'])} attack success, backdoor activation, control hijacking, unauthorized access, leakage, or compromise.",
         "- **—:** no directly corresponding outcome is empirically evaluated, as is common for surveys and diagnostic-only work.",
         "",
         "### Failure sources",
@@ -133,6 +176,12 @@ def render(papers: list[dict]) -> str:
         "- **Adversarial:** malicious manipulation of inputs, training, states, actions, or system components.",
         "- **Non-adversarial / OOD:** failures under unseen viewpoints, objects, language, tasks, environments, embodiments, or dynamics.",
         "- **Design / system:** misalignment, misspecified objectives, sensor faults, planner-executor mismatch, or failed recovery.",
+        "",
+        "### Threat model badges",
+        "",
+        "Each concrete threat model is rendered in two lines. A `+N` suffix indicates additional values retained in `data/papers.json`.",
+        "",
+        f"{badge('Lifecycle', THREAT_COLORS['lifecycle'])} {badge('Surface', THREAT_COLORS['surface'])}<br>{badge('Mechanism', THREAT_COLORS['mechanism'])} &nbsp;→&nbsp; {badge('Target', THREAT_COLORS['target'])} &nbsp;→&nbsp; {badge('Consequence', THREAT_COLORS['consequence'])}",
         "",
         "See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.",
         "",
@@ -144,6 +193,10 @@ def render(papers: list[dict]) -> str:
     for key in present_sections:
         icon, title = SECTIONS[key]
         lines.append(f"- [{icon} {title}](#{key})")
+    lines.extend(["", "<details>", '<summary><strong>Show subsection index</strong></summary>', ""])
+    for key in present_sections:
+        icon, title = SECTIONS[key]
+        lines.append(f"- **{icon} {title}**")
         subsections = []
         for paper in papers:
             if paper["section"] == key and paper["subsection"] not in subsections:
@@ -152,7 +205,7 @@ def render(papers: list[dict]) -> str:
             lines.append(
                 f"  - [{subsection}](#{subsection_anchor(key, subsection)})"
             )
-    lines.extend(["", f"**{len(papers)} papers in the current catalog.**", ""])
+    lines.extend(["", "</details>", "", f"**{len(papers)} papers in the current catalog.**", ""])
 
     for section_key in present_sections:
         section_papers = [p for p in papers if p["section"] == section_key]
@@ -169,17 +222,17 @@ def render(papers: list[dict]) -> str:
                     "",
                     f"### {subsection}",
                     "",
-                    "| Paper | Authors | Venue | Evaluated Risk | Threat Model |",
-                    "|---|---|---:|---|---|",
+                    "| Paper | Venue | Evaluated Risk | Threat Model |",
+                    "|---|---:|---|---|",
                 ]
             )
             rows = [p for p in section_papers if p["subsection"] == subsection]
             rows.sort(key=lambda p: (-p["year"], p["title"].lower()))
             for paper in rows:
-                risk = bullet_list([RISK_LABELS[item] for item in paper["risks"]]) or "—"
+                risk = risk_cell(paper["risks"])
                 venue = f"{paper['venue']} {paper['year']}"
                 lines.append(
-                    f"| {paper_cell(paper)} | {paper['first_author']} et al. | {venue} | {risk} | {threat_model_cell(paper['threat_model'])} |"
+                    f"| {paper_cell(paper)} | {venue} | {risk} | {threat_model_cell(paper['threat_model'])} |"
                 )
             lines.append("")
 

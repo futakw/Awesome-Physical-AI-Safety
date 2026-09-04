@@ -45,7 +45,7 @@ The failure arises from objective misspecification, multimodal misalignment, rew
 
 ## 3. Structured Threat Model
 
-> **Status: Proposed.** This schema is presented for review before the catalog records and README generator are migrated.
+> **Status: Adopted.** All catalog records and the README generator use this schema.
 
 The `threat_model` field should be a structured object rather than a compact free-text string. It separates when a threat occurs, how it operates, which system boundary or boundaries it uses, what it targets, and what consequence it produces.
 
@@ -205,17 +205,17 @@ Surveys and broad benchmarks should not be assigned an invented single target or
 }
 ```
 
-### Proposed README Rendering
+### README Rendering
 
-The README should retain one `Threat Model` column. The generator will render structured metadata as a compact two-line summary rather than creating five additional columns.
+The README retains one `Threat Model` column. The generator renders structured metadata as a compact two-line summary using fixed colors: blue for lifecycle, teal for surface, orange for mechanism, purple for target, and red for consequence. A `+N` suffix reports additional values stored in `data/papers.json`.
 
 | Study type | Proposed display |
 |---|---|
-| Adversarial patch | `Inference · Visual Perception`<br>Adversarial patch → VLA policy → Task failure |
-| Backdoor | `Training → Inference · Model Supply Chain + Visual Perception`<br>Backdoor → Action generation → Targeted action |
-| OOD evaluation | `Inference · Visual Perception`<br>Distribution shift → VLA policy → Task failure |
-| Runtime defense | `Inference · Action Interface`<br>Unsafe action → Runtime monitor → Collision prevention |
-| Survey | `Cross-lifecycle · Multiple surfaces`<br>Survey coverage |
+| Adversarial patch | `Inference` `Visual Perception`<br>`Adversarial Patch` → `VLA Policy` → `Task Failure` |
+| Backdoor | `Training → Inference` `Model Supply Chain +1`<br>`Backdoor` → `Action Generation` → `Targeted Action` |
+| OOD evaluation | `Inference` `Visual Perception`<br>`Distribution Shift` → `VLA Policy` → `Task Failure` |
+| Runtime defense | `Inference` `Action Interface`<br>`Unsafe Policy Behavior` → `Runtime Monitor` → `Collision` |
+| Survey | `Cross-lifecycle` `Multiple surfaces`<br>`Survey coverage` |
 
 Detailed attack chains belong in the corresponding paper notes or source material rather than catalog metadata. This avoids encoding propagation steps that a paper did not explicitly establish.
 
