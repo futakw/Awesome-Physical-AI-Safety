@@ -157,10 +157,44 @@ def render_heatmap(papers: list[dict]) -> str:
     return svg_document("Threat mechanism and surface heatmap", "Heatmap of mechanism and surface co-occurrence counts.", width, height, body)
 
 
+def render_defense_heatmap(papers: list[dict]) -> str:
+    width, height = 1200, 980
+    body = header("Defense coverage map", "Defense subsections × the threats they address; multi-label records contribute to each applicable cell.")
+    defenses = [paper for paper in papers if paper["section"] == "defenses"]
+    subsections = [value for value, _ in Counter(paper["subsection"] for paper in defenses).most_common()]
+    mechanisms = [value for value, _ in Counter(value for paper in defenses for value in threat_values(paper, "mechanism")).most_common(10)]
+    left, top, cell_w, cell_h = 390, 185, 77, 43
+    max_value = max((sum(1 for paper in defenses if paper["subsection"] == subsection and mechanism in threat_values(paper, "mechanism")) for subsection in subsections for mechanism in mechanisms), default=1)
+    for col, mechanism in enumerate(mechanisms):
+        x = left + col * cell_w + cell_w / 2
+        body.append(f'<text class="axis" text-anchor="start" transform="translate({x - 8:.1f} {top - 18}) rotate(-52)">{esc(label(mechanism))}</text>')
+    for row, subsection in enumerate(subsections):
+        y = top + row * cell_h
+        body.append(f'<text class="label" x="{left - 18}" y="{y + cell_h / 2 + 4:.1f}" text-anchor="end">{esc(subsection)}</text>')
+        for col, mechanism in enumerate(mechanisms):
+            matching = [paper for paper in defenses if paper["subsection"] == subsection and mechanism in threat_values(paper, "mechanism")]
+            value = len(matching)
+            fraction = value / max_value if max_value else 0
+            color = blend("#EEF3F8", "#6F9FEF", fraction ** 0.72)
+            x = left + col * cell_w
+            text_color = "#FFFFFF" if fraction > 0.48 else TEXT
+            papers_title = "\n".join(f"[{paper['venue']} {paper['year']}] {paper['title']}" for paper in matching)
+            body += [
+                f'<rect x="{x + 2}" y="{y + 2}" width="{cell_w - 4}" height="{cell_h - 4}" rx="6" fill="{color}"><title>{esc(papers_title)}</title></rect>',
+                f'<text x="{x + cell_w / 2:.1f}" y="{y + cell_h / 2 + 4:.1f}" text-anchor="middle" font-size="12" font-weight="600" fill="{text_color}">{value if value else ""}</text>',
+            ]
+    body += [
+        f'<text class="axis" x="{left + 5 * cell_w}" y="{top + len(subsections) * cell_h + 36}" text-anchor="middle">Addressed threat mechanism</text>',
+        f'<text class="axis" transform="translate(45 {top + len(subsections) * cell_h / 2}) rotate(-90)" text-anchor="middle">Defense strategy / subsection</text>',
+    ]
+    return svg_document("Defense coverage map", "Defense subsection and addressed-threat mechanism counts.", width, height, body)
+
+
 def outputs(papers: list[dict]) -> dict[Path, str]:
     return {
         OUTPUT_DIR / "field-timeline.svg": render_timeline(papers),
         OUTPUT_DIR / "threat-heatmap.svg": render_heatmap(papers),
+        OUTPUT_DIR / "defense-heatmap.svg": render_defense_heatmap(papers),
     }
 
 

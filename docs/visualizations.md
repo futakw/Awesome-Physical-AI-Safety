@@ -16,6 +16,12 @@ Bubble area encodes the number of cataloged papers in each area-year cell.
 
 The heatmap includes concrete threat models and excludes broad survey/evaluation coverage. Multi-label papers contribute to every applicable mechanism-surface pair.
 
+## Defense Cross-Map
+
+![Defense coverage map](../assets/visualizations/defense-heatmap.svg)
+
+Rows are defense subsections; columns are the threat mechanisms addressed by those papers. The interactive explorer supports hover and click-to-pin paper lists.
+
 ## Regeneration
 
 ```bash

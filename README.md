@@ -11,7 +11,7 @@ A curated, taxonomy-driven list of research on the safety, robustness, security,
 
 [![Field timeline of the paper catalog](assets/visualizations/field-timeline.svg)](docs/visualizations.md)
 
-Open the [interactive explorer](docs/index.html) for hoverable paper lists in the field timeline and threat-model cross-map.
+Open the [interactive explorer](docs/index.html) for hoverable paper lists in the field timeline, threat-model cross-map, and defense cross-map.
 
 ## Taxonomy at a Glance
 
