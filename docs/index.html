@@ -110,8 +110,10 @@ function renderHeatmap(){
   svg.selectAll('text.value').data(cellData.filter(d=>d.n)).join('text').attr('class','value').attr('x',d=>x(d.s)+x.bandwidth()/2).attr('y',d=>y(d.m)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',650).attr('fill',d=>d.n/max>.48?'#fff':'#202938').style('pointer-events','none').text(d=>d.n);
 }
 
-renderMap(); renderTimeline(); renderHeatmap();
 d3.selectAll('button[data-view]').on('click',function(){const view=this.dataset.view;d3.selectAll('button[data-view]').attr('aria-pressed','false');d3.select(this).attr('aria-pressed','true');d3.selectAll('section').classed('active',false);d3.select('#'+view).classed('active',true);});
+for (const render of [renderMap, renderTimeline, renderHeatmap]) {
+  try { render(); } catch (error) { console.error('Visualization failed to render:', error); }
+}
 </script>
 </body>
 </html>
