@@ -16,6 +16,8 @@ For recurring literature maintenance, follow the [daily curation workflow](docs/
 python3 scripts/validate_catalog.py
 python3 scripts/build_readme.py
 python3 scripts/build_readme.py --check
+python3 scripts/build_visualizations.py
+python3 scripts/build_visualizations.py --check
 ```
 
 6. Commit both the metadata change and the generated `README.md`.

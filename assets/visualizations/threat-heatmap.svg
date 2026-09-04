@@ -1,0 +1,238 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 1200 850">
+<title id="title">Threat mechanism and surface heatmap</title>
+<desc id="desc">Heatmap of mechanism and surface co-occurrence counts.</desc>
+<style>
+text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+.title { font-size: 28px; font-weight: 650; fill: #202938; }
+.subtitle { font-size: 14px; fill: #657287; }
+.axis { font-size: 13px; fill: #657287; }
+.label { font-size: 13px; fill: #202938; }
+.small { font-size: 11px; fill: #657287; }
+</style>
+<rect width="1200" height="850" fill="#FFFFFF"/>
+<text class="title" x="48" y="48">Where threats enter and how they act</text>
+<text class="subtitle" x="48" y="74">Mechanism × surface co-occurrence for concrete threat models; survey coverage is excluded.</text>
+<text class="axis" text-anchor="start" transform="translate(333.0 257) rotate(-55)">Visual Perception</text>
+<text class="axis" text-anchor="start" transform="translate(415.0 257) rotate(-55)">World State</text>
+<text class="axis" text-anchor="start" transform="translate(497.0 257) rotate(-55)">Action Interface</text>
+<text class="axis" text-anchor="start" transform="translate(579.0 257) rotate(-55)">User Instruction</text>
+<text class="axis" text-anchor="start" transform="translate(661.0 257) rotate(-55)">Execution Control</text>
+<text class="axis" text-anchor="start" transform="translate(743.0 257) rotate(-55)">Model Supply Chain</text>
+<text class="axis" text-anchor="start" transform="translate(825.0 257) rotate(-55)">Task Planning</text>
+<text class="axis" text-anchor="start" transform="translate(907.0 257) rotate(-55)">Proprioception</text>
+<text class="axis" text-anchor="start" transform="translate(989.0 257) rotate(-55)">Reasoning Representation</text>
+<text class="axis" text-anchor="start" transform="translate(1071.0 257) rotate(-55)">Physical Semantic Environment</text>
+<text class="label" x="282" y="305.5" text-anchor="end">Distribution Shift</text>
+<rect x="302" y="277" width="78" height="47" rx="6" fill="#4F67A5"><title>Distribution Shift × Visual Perception: 14 papers</title></rect>
+<text x="341.0" y="305.5" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">14</text>
+<rect x="384" y="277" width="78" height="47" rx="6" fill="#576EA9"><title>Distribution Shift × World State: 13 papers</title></rect>
+<text x="423.0" y="305.5" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">13</text>
+<rect x="466" y="277" width="78" height="47" rx="6" fill="#BAC5DD"><title>Distribution Shift × Action Interface: 3 papers</title></rect>
+<text x="505.0" y="305.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">3</text>
+<rect x="548" y="277" width="78" height="47" rx="6" fill="#A2B0D0"><title>Distribution Shift × User Instruction: 5 papers</title></rect>
+<text x="587.0" y="305.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">5</text>
+<rect x="630" y="277" width="78" height="47" rx="6" fill="#D6DEEC"><title>Distribution Shift × Execution Control: 1 papers</title></rect>
+<text x="669.0" y="305.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="712" y="277" width="78" height="47" rx="6" fill="#EEF3F8"><title>Distribution Shift × Model Supply Chain: 0 papers</title></rect>
+<text x="751.0" y="305.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="794" y="277" width="78" height="47" rx="6" fill="#BAC5DD"><title>Distribution Shift × Task Planning: 3 papers</title></rect>
+<text x="833.0" y="305.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">3</text>
+<rect x="876" y="277" width="78" height="47" rx="6" fill="#D6DEEC"><title>Distribution Shift × Proprioception: 1 papers</title></rect>
+<text x="915.0" y="305.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="958" y="277" width="78" height="47" rx="6" fill="#BAC5DD"><title>Distribution Shift × Reasoning Representation: 3 papers</title></rect>
+<text x="997.0" y="305.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">3</text>
+<rect x="1040" y="277" width="78" height="47" rx="6" fill="#EEF3F8"><title>Distribution Shift × Physical Semantic Environment: 0 papers</title></rect>
+<text x="1079.0" y="305.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text class="label" x="282" y="356.5" text-anchor="end">Execution Error</text>
+<rect x="302" y="328" width="78" height="47" rx="6" fill="#687DB2"><title>Execution Error × Visual Perception: 11 papers</title></rect>
+<text x="341.0" y="356.5" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">11</text>
+<rect x="384" y="328" width="78" height="47" rx="6" fill="#98A7CB"><title>Execution Error × World State: 6 papers</title></rect>
+<text x="423.0" y="356.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">6</text>
+<rect x="466" y="328" width="78" height="47" rx="6" fill="#7A8DBC"><title>Execution Error × Action Interface: 9 papers</title></rect>
+<text x="505.0" y="356.5" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">9</text>
+<rect x="548" y="328" width="78" height="47" rx="6" fill="#D6DEEC"><title>Execution Error × User Instruction: 1 papers</title></rect>
+<text x="587.0" y="356.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="630" y="328" width="78" height="47" rx="6" fill="#98A7CB"><title>Execution Error × Execution Control: 6 papers</title></rect>
+<text x="669.0" y="356.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">6</text>
+<rect x="712" y="328" width="78" height="47" rx="6" fill="#EEF3F8"><title>Execution Error × Model Supply Chain: 0 papers</title></rect>
+<text x="751.0" y="356.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="794" y="328" width="78" height="47" rx="6" fill="#C7D1E4"><title>Execution Error × Task Planning: 2 papers</title></rect>
+<text x="833.0" y="356.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
+<rect x="876" y="328" width="78" height="47" rx="6" fill="#A2B0D0"><title>Execution Error × Proprioception: 5 papers</title></rect>
+<text x="915.0" y="356.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">5</text>
+<rect x="958" y="328" width="78" height="47" rx="6" fill="#EEF3F8"><title>Execution Error × Reasoning Representation: 0 papers</title></rect>
+<text x="997.0" y="356.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="1040" y="328" width="78" height="47" rx="6" fill="#EEF3F8"><title>Execution Error × Physical Semantic Environment: 0 papers</title></rect>
+<text x="1079.0" y="356.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text class="label" x="282" y="407.5" text-anchor="end">Constraint Violation</text>
+<rect x="302" y="379" width="78" height="47" rx="6" fill="#C7D1E4"><title>Constraint Violation × Visual Perception: 2 papers</title></rect>
+<text x="341.0" y="407.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
+<rect x="384" y="379" width="78" height="47" rx="6" fill="#98A7CB"><title>Constraint Violation × World State: 6 papers</title></rect>
+<text x="423.0" y="407.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">6</text>
+<rect x="466" y="379" width="78" height="47" rx="6" fill="#98A7CB"><title>Constraint Violation × Action Interface: 6 papers</title></rect>
+<text x="505.0" y="407.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">6</text>
+<rect x="548" y="379" width="78" height="47" rx="6" fill="#A2B0D0"><title>Constraint Violation × User Instruction: 5 papers</title></rect>
+<text x="587.0" y="407.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">5</text>
+<rect x="630" y="379" width="78" height="47" rx="6" fill="#A2B0D0"><title>Constraint Violation × Execution Control: 5 papers</title></rect>
+<text x="669.0" y="407.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">5</text>
+<rect x="712" y="379" width="78" height="47" rx="6" fill="#EEF3F8"><title>Constraint Violation × Model Supply Chain: 0 papers</title></rect>
+<text x="751.0" y="407.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="794" y="379" width="78" height="47" rx="6" fill="#EEF3F8"><title>Constraint Violation × Task Planning: 0 papers</title></rect>
+<text x="833.0" y="407.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="876" y="379" width="78" height="47" rx="6" fill="#D6DEEC"><title>Constraint Violation × Proprioception: 1 papers</title></rect>
+<text x="915.0" y="407.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="958" y="379" width="78" height="47" rx="6" fill="#EEF3F8"><title>Constraint Violation × Reasoning Representation: 0 papers</title></rect>
+<text x="997.0" y="407.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="1040" y="379" width="78" height="47" rx="6" fill="#EEF3F8"><title>Constraint Violation × Physical Semantic Environment: 0 papers</title></rect>
+<text x="1079.0" y="407.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text class="label" x="282" y="458.5" text-anchor="end">Backdoor</text>
+<rect x="302" y="430" width="78" height="47" rx="6" fill="#98A7CB"><title>Backdoor × Visual Perception: 6 papers</title></rect>
+<text x="341.0" y="458.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">6</text>
+<rect x="384" y="430" width="78" height="47" rx="6" fill="#D6DEEC"><title>Backdoor × World State: 1 papers</title></rect>
+<text x="423.0" y="458.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="466" y="430" width="78" height="47" rx="6" fill="#C7D1E4"><title>Backdoor × Action Interface: 2 papers</title></rect>
+<text x="505.0" y="458.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
+<rect x="548" y="430" width="78" height="47" rx="6" fill="#D6DEEC"><title>Backdoor × User Instruction: 1 papers</title></rect>
+<text x="587.0" y="458.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="630" y="430" width="78" height="47" rx="6" fill="#EEF3F8"><title>Backdoor × Execution Control: 0 papers</title></rect>
+<text x="669.0" y="458.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="712" y="430" width="78" height="47" rx="6" fill="#8495C1"><title>Backdoor × Model Supply Chain: 8 papers</title></rect>
+<text x="751.0" y="458.5" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">8</text>
+<rect x="794" y="430" width="78" height="47" rx="6" fill="#EEF3F8"><title>Backdoor × Task Planning: 0 papers</title></rect>
+<text x="833.0" y="458.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="876" y="430" width="78" height="47" rx="6" fill="#D6DEEC"><title>Backdoor × Proprioception: 1 papers</title></rect>
+<text x="915.0" y="458.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="958" y="430" width="78" height="47" rx="6" fill="#EEF3F8"><title>Backdoor × Reasoning Representation: 0 papers</title></rect>
+<text x="997.0" y="458.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="1040" y="430" width="78" height="47" rx="6" fill="#D6DEEC"><title>Backdoor × Physical Semantic Environment: 1 papers</title></rect>
+<text x="1079.0" y="458.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<text class="label" x="282" y="509.5" text-anchor="end">Jailbreak</text>
+<rect x="302" y="481" width="78" height="47" rx="6" fill="#EEF3F8"><title>Jailbreak × Visual Perception: 0 papers</title></rect>
+<text x="341.0" y="509.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="384" y="481" width="78" height="47" rx="6" fill="#D6DEEC"><title>Jailbreak × World State: 1 papers</title></rect>
+<text x="423.0" y="509.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="466" y="481" width="78" height="47" rx="6" fill="#EEF3F8"><title>Jailbreak × Action Interface: 0 papers</title></rect>
+<text x="505.0" y="509.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="548" y="481" width="78" height="47" rx="6" fill="#8D9EC6"><title>Jailbreak × User Instruction: 7 papers</title></rect>
+<text x="587.0" y="509.5" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">7</text>
+<rect x="630" y="481" width="78" height="47" rx="6" fill="#EEF3F8"><title>Jailbreak × Execution Control: 0 papers</title></rect>
+<text x="669.0" y="509.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="712" y="481" width="78" height="47" rx="6" fill="#EEF3F8"><title>Jailbreak × Model Supply Chain: 0 papers</title></rect>
+<text x="751.0" y="509.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="794" y="481" width="78" height="47" rx="6" fill="#EEF3F8"><title>Jailbreak × Task Planning: 0 papers</title></rect>
+<text x="833.0" y="509.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="876" y="481" width="78" height="47" rx="6" fill="#EEF3F8"><title>Jailbreak × Proprioception: 0 papers</title></rect>
+<text x="915.0" y="509.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="958" y="481" width="78" height="47" rx="6" fill="#D6DEEC"><title>Jailbreak × Reasoning Representation: 1 papers</title></rect>
+<text x="997.0" y="509.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="1040" y="481" width="78" height="47" rx="6" fill="#EEF3F8"><title>Jailbreak × Physical Semantic Environment: 0 papers</title></rect>
+<text x="1079.0" y="509.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text class="label" x="282" y="560.5" text-anchor="end">Unsafe Policy Behavior</text>
+<rect x="302" y="532" width="78" height="47" rx="6" fill="#EEF3F8"><title>Unsafe Policy Behavior × Visual Perception: 0 papers</title></rect>
+<text x="341.0" y="560.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="384" y="532" width="78" height="47" rx="6" fill="#EEF3F8"><title>Unsafe Policy Behavior × World State: 0 papers</title></rect>
+<text x="423.0" y="560.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="466" y="532" width="78" height="47" rx="6" fill="#ADBAD6"><title>Unsafe Policy Behavior × Action Interface: 4 papers</title></rect>
+<text x="505.0" y="560.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">4</text>
+<rect x="548" y="532" width="78" height="47" rx="6" fill="#EEF3F8"><title>Unsafe Policy Behavior × User Instruction: 0 papers</title></rect>
+<text x="587.0" y="560.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="630" y="532" width="78" height="47" rx="6" fill="#D6DEEC"><title>Unsafe Policy Behavior × Execution Control: 1 papers</title></rect>
+<text x="669.0" y="560.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="712" y="532" width="78" height="47" rx="6" fill="#D6DEEC"><title>Unsafe Policy Behavior × Model Supply Chain: 1 papers</title></rect>
+<text x="751.0" y="560.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="794" y="532" width="78" height="47" rx="6" fill="#D6DEEC"><title>Unsafe Policy Behavior × Task Planning: 1 papers</title></rect>
+<text x="833.0" y="560.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="876" y="532" width="78" height="47" rx="6" fill="#EEF3F8"><title>Unsafe Policy Behavior × Proprioception: 0 papers</title></rect>
+<text x="915.0" y="560.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="958" y="532" width="78" height="47" rx="6" fill="#EEF3F8"><title>Unsafe Policy Behavior × Reasoning Representation: 0 papers</title></rect>
+<text x="997.0" y="560.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="1040" y="532" width="78" height="47" rx="6" fill="#EEF3F8"><title>Unsafe Policy Behavior × Physical Semantic Environment: 0 papers</title></rect>
+<text x="1079.0" y="560.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text class="label" x="282" y="611.5" text-anchor="end">Adversarial Patch</text>
+<rect x="302" y="583" width="78" height="47" rx="6" fill="#ADBAD6"><title>Adversarial Patch × Visual Perception: 4 papers</title></rect>
+<text x="341.0" y="611.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">4</text>
+<rect x="384" y="583" width="78" height="47" rx="6" fill="#EEF3F8"><title>Adversarial Patch × World State: 0 papers</title></rect>
+<text x="423.0" y="611.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="466" y="583" width="78" height="47" rx="6" fill="#EEF3F8"><title>Adversarial Patch × Action Interface: 0 papers</title></rect>
+<text x="505.0" y="611.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="548" y="583" width="78" height="47" rx="6" fill="#EEF3F8"><title>Adversarial Patch × User Instruction: 0 papers</title></rect>
+<text x="587.0" y="611.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="630" y="583" width="78" height="47" rx="6" fill="#EEF3F8"><title>Adversarial Patch × Execution Control: 0 papers</title></rect>
+<text x="669.0" y="611.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="712" y="583" width="78" height="47" rx="6" fill="#EEF3F8"><title>Adversarial Patch × Model Supply Chain: 0 papers</title></rect>
+<text x="751.0" y="611.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="794" y="583" width="78" height="47" rx="6" fill="#EEF3F8"><title>Adversarial Patch × Task Planning: 0 papers</title></rect>
+<text x="833.0" y="611.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="876" y="583" width="78" height="47" rx="6" fill="#EEF3F8"><title>Adversarial Patch × Proprioception: 0 papers</title></rect>
+<text x="915.0" y="611.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="958" y="583" width="78" height="47" rx="6" fill="#EEF3F8"><title>Adversarial Patch × Reasoning Representation: 0 papers</title></rect>
+<text x="997.0" y="611.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="1040" y="583" width="78" height="47" rx="6" fill="#EEF3F8"><title>Adversarial Patch × Physical Semantic Environment: 0 papers</title></rect>
+<text x="1079.0" y="611.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text class="label" x="282" y="662.5" text-anchor="end">Digital Perturbation</text>
+<rect x="302" y="634" width="78" height="47" rx="6" fill="#ADBAD6"><title>Digital Perturbation × Visual Perception: 4 papers</title></rect>
+<text x="341.0" y="662.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">4</text>
+<rect x="384" y="634" width="78" height="47" rx="6" fill="#EEF3F8"><title>Digital Perturbation × World State: 0 papers</title></rect>
+<text x="423.0" y="662.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="466" y="634" width="78" height="47" rx="6" fill="#EEF3F8"><title>Digital Perturbation × Action Interface: 0 papers</title></rect>
+<text x="505.0" y="662.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="548" y="634" width="78" height="47" rx="6" fill="#D6DEEC"><title>Digital Perturbation × User Instruction: 1 papers</title></rect>
+<text x="587.0" y="662.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="630" y="634" width="78" height="47" rx="6" fill="#EEF3F8"><title>Digital Perturbation × Execution Control: 0 papers</title></rect>
+<text x="669.0" y="662.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="712" y="634" width="78" height="47" rx="6" fill="#EEF3F8"><title>Digital Perturbation × Model Supply Chain: 0 papers</title></rect>
+<text x="751.0" y="662.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="794" y="634" width="78" height="47" rx="6" fill="#EEF3F8"><title>Digital Perturbation × Task Planning: 0 papers</title></rect>
+<text x="833.0" y="662.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="876" y="634" width="78" height="47" rx="6" fill="#EEF3F8"><title>Digital Perturbation × Proprioception: 0 papers</title></rect>
+<text x="915.0" y="662.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="958" y="634" width="78" height="47" rx="6" fill="#EEF3F8"><title>Digital Perturbation × Reasoning Representation: 0 papers</title></rect>
+<text x="997.0" y="662.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="1040" y="634" width="78" height="47" rx="6" fill="#EEF3F8"><title>Digital Perturbation × Physical Semantic Environment: 0 papers</title></rect>
+<text x="1079.0" y="662.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text class="label" x="282" y="713.5" text-anchor="end">Indirect Prompt Injection</text>
+<rect x="302" y="685" width="78" height="47" rx="6" fill="#EEF3F8"><title>Indirect Prompt Injection × Visual Perception: 0 papers</title></rect>
+<text x="341.0" y="713.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="384" y="685" width="78" height="47" rx="6" fill="#EEF3F8"><title>Indirect Prompt Injection × World State: 0 papers</title></rect>
+<text x="423.0" y="713.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="466" y="685" width="78" height="47" rx="6" fill="#EEF3F8"><title>Indirect Prompt Injection × Action Interface: 0 papers</title></rect>
+<text x="505.0" y="713.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="548" y="685" width="78" height="47" rx="6" fill="#EEF3F8"><title>Indirect Prompt Injection × User Instruction: 0 papers</title></rect>
+<text x="587.0" y="713.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="630" y="685" width="78" height="47" rx="6" fill="#EEF3F8"><title>Indirect Prompt Injection × Execution Control: 0 papers</title></rect>
+<text x="669.0" y="713.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="712" y="685" width="78" height="47" rx="6" fill="#EEF3F8"><title>Indirect Prompt Injection × Model Supply Chain: 0 papers</title></rect>
+<text x="751.0" y="713.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="794" y="685" width="78" height="47" rx="6" fill="#EEF3F8"><title>Indirect Prompt Injection × Task Planning: 0 papers</title></rect>
+<text x="833.0" y="713.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="876" y="685" width="78" height="47" rx="6" fill="#EEF3F8"><title>Indirect Prompt Injection × Proprioception: 0 papers</title></rect>
+<text x="915.0" y="713.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="958" y="685" width="78" height="47" rx="6" fill="#EEF3F8"><title>Indirect Prompt Injection × Reasoning Representation: 0 papers</title></rect>
+<text x="997.0" y="713.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="1040" y="685" width="78" height="47" rx="6" fill="#BAC5DD"><title>Indirect Prompt Injection × Physical Semantic Environment: 3 papers</title></rect>
+<text x="1079.0" y="713.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">3</text>
+<text class="label" x="282" y="764.5" text-anchor="end">Planning Error</text>
+<rect x="302" y="736" width="78" height="47" rx="6" fill="#D6DEEC"><title>Planning Error × Visual Perception: 1 papers</title></rect>
+<text x="341.0" y="764.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="384" y="736" width="78" height="47" rx="6" fill="#D6DEEC"><title>Planning Error × World State: 1 papers</title></rect>
+<text x="423.0" y="764.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="466" y="736" width="78" height="47" rx="6" fill="#D6DEEC"><title>Planning Error × Action Interface: 1 papers</title></rect>
+<text x="505.0" y="764.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="548" y="736" width="78" height="47" rx="6" fill="#D6DEEC"><title>Planning Error × User Instruction: 1 papers</title></rect>
+<text x="587.0" y="764.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="630" y="736" width="78" height="47" rx="6" fill="#EEF3F8"><title>Planning Error × Execution Control: 0 papers</title></rect>
+<text x="669.0" y="764.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="712" y="736" width="78" height="47" rx="6" fill="#EEF3F8"><title>Planning Error × Model Supply Chain: 0 papers</title></rect>
+<text x="751.0" y="764.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="794" y="736" width="78" height="47" rx="6" fill="#C7D1E4"><title>Planning Error × Task Planning: 2 papers</title></rect>
+<text x="833.0" y="764.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
+<rect x="876" y="736" width="78" height="47" rx="6" fill="#EEF3F8"><title>Planning Error × Proprioception: 0 papers</title></rect>
+<text x="915.0" y="764.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="958" y="736" width="78" height="47" rx="6" fill="#EEF3F8"><title>Planning Error × Reasoning Representation: 0 papers</title></rect>
+<text x="997.0" y="764.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="1040" y="736" width="78" height="47" rx="6" fill="#EEF3F8"><title>Planning Error × Physical Semantic Environment: 0 papers</title></rect>
+<text x="1079.0" y="764.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text class="axis" x="710" y="805" text-anchor="middle">Threat surface</text>
+<text class="axis" transform="translate(48 530) rotate(-90)" text-anchor="middle">Mechanism</text>
+<text class="small" x="300" y="832">Top 10 mechanisms and surfaces by paper frequency; multi-label records contribute to each applicable cell.</text>
+</svg>

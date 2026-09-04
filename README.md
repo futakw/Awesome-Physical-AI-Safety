@@ -7,6 +7,12 @@ A curated, taxonomy-driven list of research on the safety, robustness, security,
 
 > This list separates **empirically evaluated risk outcomes** (what the paper measures) from **failure sources and mechanisms** (why it goes wrong). GitHub star badges are live and are shown only for identified official repositories.
 
+## Research Landscape
+
+[![Taxonomy map of the paper catalog](assets/visualizations/topic-map.svg)](docs/visualizations.md)
+
+The map projects papers from their structured risk, threat-model, and scope metadata. See [topic trends, the field timeline, and threat-model cross-maps](docs/visualizations.md).
+
 ## Taxonomy at a Glance
 
 ### Risk outcomes

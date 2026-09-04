@@ -48,6 +48,8 @@ Run all checks from the repository root:
 python3 scripts/validate_catalog.py
 python3 scripts/build_readme.py
 python3 scripts/build_readme.py --check
+python3 scripts/build_visualizations.py
+python3 scripts/build_visualizations.py --check
 git diff --check
 ```
 
@@ -59,6 +61,7 @@ Review the generated README and confirm:
 - Risk and Threat Model remain compact and evidence-consistent
 - the table of contents includes any new subsection
 - the total paper count is correct
+- the generated landscape figures are current
 - no private marker, local path, CJK text, or personal research content is present
 
 ## 5. Commit and Push

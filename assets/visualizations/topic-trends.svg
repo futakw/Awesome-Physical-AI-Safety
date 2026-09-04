@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 1200 650">
+<title id="title">Research areas over time</title>
+<desc id="desc">Stacked annual paper counts by research area.</desc>
+<style>
+text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+.title { font-size: 28px; font-weight: 650; fill: #202938; }
+.subtitle { font-size: 14px; fill: #657287; }
+.axis { font-size: 13px; fill: #657287; }
+.label { font-size: 13px; fill: #202938; }
+.small { font-size: 11px; fill: #657287; }
+</style>
+<rect width="1200" height="650" fill="#FFFFFF"/>
+<text class="title" x="48" y="48">Research areas over time</text>
+<text class="subtitle" x="48" y="74">Paper counts in the curated catalog; 2026 is an incomplete snapshot.</text>
+<line x1="90" y1="510.0" x2="1140" y2="510.0" stroke="#DCE3EC"/>
+<text class="axis" x="76" y="515.0" text-anchor="end">0</text>
+<line x1="90" y1="454.3" x2="1140" y2="454.3" stroke="#DCE3EC"/>
+<text class="axis" x="76" y="459.3" text-anchor="end">10</text>
+<line x1="90" y1="398.6" x2="1140" y2="398.6" stroke="#DCE3EC"/>
+<text class="axis" x="76" y="403.6" text-anchor="end">20</text>
+<line x1="90" y1="342.9" x2="1140" y2="342.9" stroke="#DCE3EC"/>
+<text class="axis" x="76" y="347.9" text-anchor="end">30</text>
+<line x1="90" y1="287.1" x2="1140" y2="287.1" stroke="#DCE3EC"/>
+<text class="axis" x="76" y="292.1" text-anchor="end">40</text>
+<line x1="90" y1="231.4" x2="1140" y2="231.4" stroke="#DCE3EC"/>
+<text class="axis" x="76" y="236.4" text-anchor="end">50</text>
+<line x1="90" y1="175.7" x2="1140" y2="175.7" stroke="#DCE3EC"/>
+<text class="axis" x="76" y="180.7" text-anchor="end">60</text>
+<line x1="90" y1="120.0" x2="1140" y2="120.0" stroke="#DCE3EC"/>
+<text class="axis" x="76" y="125.0" text-anchor="end">70</text>
+<rect x="150.4" y="504.4" width="141.8" height="5.6" fill="#C48724"><title>Benchmarks: 1</title></rect>
+<rect x="150.4" y="482.1" width="141.8" height="22.3" fill="#4F67A5"><title>Defenses: 4</title></rect>
+<text class="label" x="221.2" y="540" text-anchor="middle">2023</text>
+<text class="label" x="221.2" y="472.1" text-anchor="middle">5</text>
+<rect x="412.9" y="482.1" width="141.8" height="27.9" fill="#C48724"><title>Benchmarks: 5</title></rect>
+<rect x="412.9" y="454.3" width="141.8" height="27.9" fill="#4F67A5"><title>Defenses: 5</title></rect>
+<rect x="412.9" y="448.7" width="141.8" height="5.6" fill="#667585"><title>Surveys: 1</title></rect>
+<text class="label" x="483.8" y="540" text-anchor="middle">2024</text>
+<text class="label" x="483.8" y="438.7" text-anchor="middle">11</text>
+<rect x="675.4" y="504.4" width="141.8" height="5.6" fill="#AE4560"><title>System Security: 1</title></rect>
+<rect x="675.4" y="437.6" width="141.8" height="66.9" fill="#C48724"><title>Benchmarks: 12</title></rect>
+<rect x="675.4" y="320.6" width="141.8" height="117.0" fill="#4F67A5"><title>Defenses: 21</title></rect>
+<rect x="675.4" y="253.7" width="141.8" height="66.9" fill="#B0523A"><title>Inference Attacks: 12</title></rect>
+<rect x="675.4" y="231.4" width="141.8" height="22.3" fill="#7356A3"><title>Training Attacks: 4</title></rect>
+<rect x="675.4" y="214.7" width="141.8" height="16.7" fill="#2F7D73"><title>OOD Generalization: 3</title></rect>
+<rect x="675.4" y="147.9" width="141.8" height="66.9" fill="#667585"><title>Surveys: 12</title></rect>
+<text class="label" x="746.2" y="540" text-anchor="middle">2025</text>
+<text class="label" x="746.2" y="137.9" text-anchor="middle">65</text>
+<rect x="937.9" y="504.4" width="141.8" height="5.6" fill="#AE4560"><title>System Security: 1</title></rect>
+<rect x="937.9" y="448.7" width="141.8" height="55.7" fill="#C48724"><title>Benchmarks: 10</title></rect>
+<rect x="937.9" y="359.6" width="141.8" height="89.1" fill="#4F67A5"><title>Defenses: 16</title></rect>
+<rect x="937.9" y="337.3" width="141.8" height="22.3" fill="#B0523A"><title>Inference Attacks: 4</title></rect>
+<rect x="937.9" y="320.6" width="141.8" height="16.7" fill="#7356A3"><title>Training Attacks: 3</title></rect>
+<rect x="937.9" y="287.1" width="141.8" height="33.4" fill="#2F7D73"><title>OOD Generalization: 6</title></rect>
+<rect x="937.9" y="270.4" width="141.8" height="16.7" fill="#667585"><title>Surveys: 3</title></rect>
+<text class="label" x="1008.8" y="540" text-anchor="middle">2026</text>
+<text class="label" x="1008.8" y="260.4" text-anchor="middle">43</text>
+<text class="axis" transform="translate(28 330) rotate(-90)" text-anchor="middle">Papers</text>
+<rect x="72" y="553" width="14" height="14" rx="3" fill="#667585"/>
+<text class="label" x="95" y="565">Surveys</text>
+<rect x="342" y="553" width="14" height="14" rx="3" fill="#2F7D73"/>
+<text class="label" x="365" y="565">OOD Generalization</text>
+<rect x="612" y="553" width="14" height="14" rx="3" fill="#7356A3"/>
+<text class="label" x="635" y="565">Training Attacks</text>
+<rect x="882" y="553" width="14" height="14" rx="3" fill="#B0523A"/>
+<text class="label" x="905" y="565">Inference Attacks</text>
+<rect x="72" y="587" width="14" height="14" rx="3" fill="#4F67A5"/>
+<text class="label" x="95" y="599">Defenses</text>
+<rect x="342" y="587" width="14" height="14" rx="3" fill="#C48724"/>
+<text class="label" x="365" y="599">Benchmarks</text>
+<rect x="612" y="587" width="14" height="14" rx="3" fill="#AE4560"/>
+<text class="label" x="635" y="599">System Security</text>
+</svg>
