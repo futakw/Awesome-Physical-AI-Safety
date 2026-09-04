@@ -43,63 +43,193 @@ The system fails under unseen viewpoints, visual appearances, objects, geometrie
 
 The failure arises from objective misspecification, multimodal misalignment, reward hacking, sensor faults, planner-executor mismatch, or insufficient runtime recovery.
 
-## 3. Threat Mechanisms
+## 3. Structured Threat Model
 
-Each catalog record uses the compact notation `Category (primary mechanism or shift)`. The parenthetical detail is omitted when the category is already specific. Defense papers describe the threat being mitigated, not the defense method; experimental settings such as real-robot evaluation belong in `tags`.
+> **Status: Proposed.** This schema is presented for review before the catalog records and README generator are migrated.
 
-### Controlled Threat Categories
+The `threat_model` field should be a structured object rather than a compact free-text string. It separates when a threat occurs, how it operates, where it first enters the system, what it targets, and what consequence it produces.
 
-| Family | Allowed categories |
+### Core Fields
+
+| Field | Type | Required for a concrete study | Meaning | Example |
+|---|---|---:|---|---|
+| `kind` | string | Yes | Broad source of failure or scope of the record | `adversarial` |
+| `lifecycle` | array of strings | Yes | Stages in which compromise is introduced or activated | `training`, `inference` |
+| `mechanism` | array of strings | Yes | How the attack, shift, or failure is produced | `adversarial-patch` |
+| `primary_surface` | string | Yes | First system boundary directly compromised or affected | `visual-perception` |
+| `target` | array of strings | Yes | Component or representation the threat is intended to alter | `vla-policy` |
+| `consequence` | array of strings | Yes | Concrete endpoint of the threat or failure chain | `task-failure` |
+| `trigger` | array of strings | No | Condition that activates a previously implanted threat | `visual-trigger` |
+| `propagation_surfaces` | ordered array of strings | No | Important boundaries crossed after the primary surface | `reasoning-representation`, `action-interface` |
+
+The repository uses descriptive semantic labels. Numbered surface codes defined by an individual paper or survey are not used as canonical metadata.
+
+### Threat Kinds
+
+| Value | Use when |
 |---|---|
-| Adversarial | `Training-time attack`, `Inference-time attack`, `System-level attack` |
-| Non-adversarial failure | `Non-adversarial OOD`, `Execution failure`, `Planning failure`, `Policy failure`, `Uncertainty failure` |
-| Unsafe intent or outcome | `Hazardous instruction`, `Physical safety violation`, `Semantic safety violation`, `System-level misuse` |
-| Broad coverage | `Survey scope`, `Evaluation scope` |
+| `adversarial` | An attacker intentionally manipulates training, input, state, model, action, or infrastructure. |
+| `non-adversarial` | The study evaluates OOD shift, ambiguity, uncertainty, or naturally occurring failure without an attacker. |
+| `system-failure` | Failure originates from system design, integration, controller, recovery, or infrastructure behavior. |
+| `evaluation` | A benchmark covers several distinct threats and has no single primary threat path. |
+| `survey` | A survey or position paper describes a threat landscape rather than one concrete threat. |
 
-Use only the primary discriminating detail. For example, a poisoned training set that installs a backdoor is `Training-time attack (backdoor)`, not `Training-time attack (backdoor, training data)`. Multiple OOD axes may be grouped as `Non-adversarial OOD (viewpoint, language, object geometry)`.
+### Lifecycle Vocabulary
 
-### Visual and Physical Input Attacks
+| Value | Definition |
+|---|---|
+| `training` | Data collection, pretraining, fine-tuning, post-training, model merging, or checkpoint distribution. |
+| `inference` | Deployment-time perception, reasoning, planning, action generation, or runtime interaction. |
+| `system` | Middleware, networking, external service, multi-agent, or execution infrastructure. |
 
-- Digital perturbations
-- Localized adversarial patches, including printed patches
-- Adversarial objects, textures, signs, and scene interventions
-- Typographic attacks and visual prompt injection
-- Lighting, occlusion, geometry, and placement manipulation
+`lifecycle` is multi-label. A backdoor can be implanted during `training` and activated during `inference`.
 
-### Language and Instruction Attacks
+### Primary Surface Vocabulary
 
-- Jailbreaks
-- Direct and indirect prompt injection
-- Command hijacking
-- Malicious or ambiguous instructions
-- Policy-executability-aware attacks
+| Value | Boundary represented |
+|---|---|
+| `model-supply-chain` | Training data, adapters, checkpoints, pretrained components, or model distribution. |
+| `user-instruction` | Authenticated text or speech accepted as the current task or control intent. |
+| `context-memory-retrieval` | Interaction history, persistent memory, ICL examples, RAG documents, or tool results. |
+| `physical-semantic-environment` | Scene text, signs, labels, displays, QR codes, or other correctly perceived semantic content. |
+| `visual-perception` | Images, video, cameras, visual tokens, patches, textures, or optical signals. |
+| `audio-perception` | Speech, microphones, acoustic signals, or audio features. |
+| `proprioception` | Joint state, force, tactile feedback, or internal robot sensing. |
+| `world-state` | Object relations, occupancy, localization, scene graphs, affordances, or predicted state. |
+| `reasoning-representation` | Hidden states, attention, chain-of-thought, or cross-modal representations. |
+| `task-planning` | Goals, task decomposition, action order, paths, or recovery strategies. |
+| `action-interface` | Action tokens, action chunks, code, tool calls, APIs, skills, or continuous controls. |
+| `middleware-network` | ROS/ROS2, DDS, drivers, credentials, cloud models, remote APIs, or transport. |
+| `multi-agent-communication` | Robot-to-robot messages, shared memory, claims, or collaborative state. |
+| `execution-control` | Trajectories, actuator commands, safety stops, freezing, or resource availability. |
 
-### Sensor and State Attacks
+The primary surface records the first affected boundary, not the final location where harm becomes visible. For example, a visual patch that eventually causes an unsafe action starts at `visual-perception`, not `execution-control`.
 
-- Camera, microphone, and proprioception corruption
-- State manipulation
-- Temporal sensor attacks
-- Multimodal desynchronization
+### Mechanism Vocabulary
 
-### Training-Time Attacks
+| Family | Example values |
+|---|---|
+| Training and supply chain | `data-poisoning`, `backdoor`, `malicious-adapter`, `checkpoint-compromise`, `reward-manipulation` |
+| Visual and physical input | `digital-perturbation`, `adversarial-patch`, `adversarial-object`, `typographic-injection`, `environment-manipulation` |
+| Language and context | `jailbreak`, `direct-prompt-injection`, `indirect-prompt-injection`, `command-hijacking`, `memory-poisoning`, `retrieval-poisoning` |
+| Sensor and state | `sensor-spoofing`, `state-manipulation`, `feedback-spoofing`, `multimodal-desynchronization` |
+| Reasoning, planning, and action | `representation-hijacking`, `planning-hijacking`, `action-manipulation`, `action-freezing`, `trajectory-manipulation` |
+| System and communication | `middleware-compromise`, `network-attack`, `multi-agent-propagation`, `denial-of-service`, `privacy-leakage`, `covert-channel` |
+| Non-adversarial | `distribution-shift`, `instruction-ambiguity`, `perception-error`, `planning-error`, `execution-error`, `uncertainty-miscalibration` |
 
-- Data poisoning
-- Input-, action-, and state-level backdoors
-- Reward manipulation
-- Fine-tuning and supply-chain compromise
+### Target Vocabulary
 
-### Representation, Planning, and Action Attacks
+| Value | Target object |
+|---|---|
+| `perception-model` | Visual, audio, or multimodal perception component. |
+| `world-state` | Structured or predicted state used for downstream decisions. |
+| `reasoning-process` | Internal reasoning, attention, or multimodal alignment. |
+| `task-planner` | Goal selection, task decomposition, path, or high-level policy intent. |
+| `vla-policy` | End-to-end or partially exposed VLA policy. |
+| `action-generation` | Action token, chunk, trajectory, code, or tool generation. |
+| `runtime-monitor` | Guardrail, verifier, detector, or safety judge. |
+| `robot-executor` | Controller, actuator, safety stop, or execution process. |
+| `shared-system-state` | Memory, middleware, cloud service, or multi-agent shared state. |
+| `private-data` | Training membership, observations, identity, location, or other sensitive data. |
 
-- Multimodal alignment corruption
-- Subtask and future-plan hijacking
-- Action freezing and action-chunk manipulation
-- Trajectory manipulation
+### Consequence Vocabulary
 
-### System-Level Attacks
+| Value | Concrete endpoint |
+|---|---|
+| `task-failure` | The assigned task or route is not completed. |
+| `targeted-action` | The system performs an attacker-selected action or action sequence. |
+| `action-freezing` | The policy stops or produces dangerous inaction. |
+| `unsafe-success` | The task succeeds while violating a safety property. |
+| `collision` | The robot contacts an obstacle, person, or prohibited object. |
+| `unsafe-motion` | Unsafe force, speed, pose, trajectory, or control behavior occurs. |
+| `physical-damage` | A person, robot, object, or environment is harmed or damaged. |
+| `control-hijacking` | An unauthorized source gains influence over robot behavior. |
+| `policy-violation` | The agent performs explicitly prohibited or harmful behavior. |
+| `privacy-leakage` | Sensitive information is inferred, exposed, or transmitted. |
+| `availability-loss` | The system is frozen, stopped, delayed, or denied service. |
+| `recovery-failure` | Detection, mitigation, replanning, or recovery does not restore safe operation. |
 
-- Memory and inter-agent communication attacks
-- Cloud, API, wireless, network, firmware, and application compromise
-- Covert channels and privacy leakage
+The existing `risks` field remains separate. `risks` records empirically evaluated outcome families, while `consequence` records the specific endpoint represented by the threat path.
+
+### Concrete Study Example
+
+```json
+"threat_model": {
+  "kind": "adversarial",
+  "lifecycle": ["inference"],
+  "mechanism": ["adversarial-patch"],
+  "primary_surface": "visual-perception",
+  "target": ["vla-policy"],
+  "consequence": ["task-failure"],
+  "trigger": [],
+  "propagation_surfaces": [
+    "reasoning-representation",
+    "action-interface"
+  ]
+}
+```
+
+### Backdoor Example
+
+```json
+"threat_model": {
+  "kind": "adversarial",
+  "lifecycle": ["training", "inference"],
+  "mechanism": ["backdoor"],
+  "primary_surface": "model-supply-chain",
+  "target": ["action-generation"],
+  "consequence": ["targeted-action", "task-failure"],
+  "trigger": ["visual-trigger"],
+  "propagation_surfaces": [
+    "visual-perception",
+    "action-interface"
+  ]
+}
+```
+
+### Survey and Broad-Evaluation Records
+
+Surveys and broad benchmarks should not be assigned an invented single target or consequence. They use a coverage variant instead.
+
+```json
+"threat_model": {
+  "kind": "survey",
+  "coverage": {
+    "lifecycles": ["training", "inference", "system"],
+    "mechanisms": ["multiple"],
+    "surfaces": [
+      "model-supply-chain",
+      "user-instruction",
+      "context-memory-retrieval",
+      "physical-semantic-environment",
+      "visual-perception",
+      "audio-perception",
+      "proprioception",
+      "world-state",
+      "reasoning-representation",
+      "task-planning",
+      "action-interface",
+      "middleware-network",
+      "multi-agent-communication",
+      "execution-control"
+    ]
+  }
+}
+```
+
+### Proposed README Rendering
+
+The README should retain one `Threat Model` column. The generator will render structured metadata as a compact two-line threat path rather than creating five additional columns.
+
+| Study type | Proposed display |
+|---|---|
+| Adversarial patch | `Inference · Visual Perception`<br>Adversarial patch → VLA policy → Task failure |
+| Backdoor | `Training → Inference · Model Supply Chain`<br>Backdoor / visual trigger → Action generation → Targeted action |
+| OOD evaluation | `Inference · Visual Perception`<br>Distribution shift → VLA policy → Task failure |
+| Runtime defense | `Inference · Action Interface`<br>Unsafe action → Runtime monitor → Collision prevention |
+| Survey | `Cross-lifecycle · Multiple surfaces`<br>Survey coverage |
+
+Detailed triggers and propagation paths remain available in `data/papers.json`; the README displays only the primary path.
 
 ## 4. OOD Generalization Axes
 
