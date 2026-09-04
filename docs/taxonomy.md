@@ -47,7 +47,7 @@ The failure arises from objective misspecification, multimodal misalignment, rew
 
 > **Status: Proposed.** This schema is presented for review before the catalog records and README generator are migrated.
 
-The `threat_model` field should be a structured object rather than a compact free-text string. It separates when a threat occurs, how it operates, where it first enters the system, what it targets, and what consequence it produces.
+The `threat_model` field should be a structured object rather than a compact free-text string. It separates when a threat occurs, how it operates, which system boundary or boundaries it uses, what it targets, and what consequence it produces.
 
 ### Core Fields
 
@@ -56,11 +56,9 @@ The `threat_model` field should be a structured object rather than a compact fre
 | `kind` | string | Yes | Broad source of failure or scope of the record | `adversarial` |
 | `lifecycle` | array of strings | Yes | Stages in which compromise is introduced or activated | `training`, `inference` |
 | `mechanism` | array of strings | Yes | How the attack, shift, or failure is produced | `adversarial-patch` |
-| `primary_surface` | string | Yes | First system boundary directly compromised or affected | `visual-perception` |
+| `surface` | array of strings | Yes | Direct system boundary or boundaries through which the threat, shift, or failure is introduced or observed | `visual-perception` |
 | `target` | array of strings | Yes | Component or representation the threat is intended to alter | `vla-policy` |
 | `consequence` | array of strings | Yes | Concrete endpoint of the threat or failure chain | `task-failure` |
-| `trigger` | array of strings | No | Condition that activates a previously implanted threat | `visual-trigger` |
-| `propagation_surfaces` | ordered array of strings | No | Important boundaries crossed after the primary surface | `reasoning-representation`, `action-interface` |
 
 The repository uses descriptive semantic labels. Numbered surface codes defined by an individual paper or survey are not used as canonical metadata.
 
@@ -84,7 +82,7 @@ The repository uses descriptive semantic labels. Numbered surface codes defined 
 
 `lifecycle` is multi-label. A backdoor can be implanted during `training` and activated during `inference`.
 
-### Primary Surface Vocabulary
+### Surface Vocabulary
 
 | Value | Boundary represented |
 |---|---|
@@ -103,7 +101,7 @@ The repository uses descriptive semantic labels. Numbered surface codes defined 
 | `multi-agent-communication` | Robot-to-robot messages, shared memory, claims, or collaborative state. |
 | `execution-control` | Trajectories, actuator commands, safety stops, freezing, or resource availability. |
 
-The primary surface records the first affected boundary, not the final location where harm becomes visible. For example, a visual patch that eventually causes an unsafe action starts at `visual-perception`, not `execution-control`.
+`surface` records only interfaces directly manipulated, shifted, corrupted, or evaluated by the study. It does not encode an inferred internal propagation path. Multiple values are allowed when distinct lifecycle stages use different interfaces. For example, a visually activated backdoor can use both `model-supply-chain` during training and `visual-perception` during inference.
 
 ### Mechanism Vocabulary
 
@@ -158,14 +156,9 @@ The existing `risks` field remains separate. `risks` records empirically evaluat
   "kind": "adversarial",
   "lifecycle": ["inference"],
   "mechanism": ["adversarial-patch"],
-  "primary_surface": "visual-perception",
+  "surface": ["visual-perception"],
   "target": ["vla-policy"],
-  "consequence": ["task-failure"],
-  "trigger": [],
-  "propagation_surfaces": [
-    "reasoning-representation",
-    "action-interface"
-  ]
+  "consequence": ["task-failure"]
 }
 ```
 
@@ -176,14 +169,9 @@ The existing `risks` field remains separate. `risks` records empirically evaluat
   "kind": "adversarial",
   "lifecycle": ["training", "inference"],
   "mechanism": ["backdoor"],
-  "primary_surface": "model-supply-chain",
+  "surface": ["model-supply-chain", "visual-perception"],
   "target": ["action-generation"],
-  "consequence": ["targeted-action", "task-failure"],
-  "trigger": ["visual-trigger"],
-  "propagation_surfaces": [
-    "visual-perception",
-    "action-interface"
-  ]
+  "consequence": ["targeted-action", "task-failure"]
 }
 ```
 
@@ -219,17 +207,17 @@ Surveys and broad benchmarks should not be assigned an invented single target or
 
 ### Proposed README Rendering
 
-The README should retain one `Threat Model` column. The generator will render structured metadata as a compact two-line threat path rather than creating five additional columns.
+The README should retain one `Threat Model` column. The generator will render structured metadata as a compact two-line summary rather than creating five additional columns.
 
 | Study type | Proposed display |
 |---|---|
 | Adversarial patch | `Inference · Visual Perception`<br>Adversarial patch → VLA policy → Task failure |
-| Backdoor | `Training → Inference · Model Supply Chain`<br>Backdoor / visual trigger → Action generation → Targeted action |
+| Backdoor | `Training → Inference · Model Supply Chain + Visual Perception`<br>Backdoor → Action generation → Targeted action |
 | OOD evaluation | `Inference · Visual Perception`<br>Distribution shift → VLA policy → Task failure |
 | Runtime defense | `Inference · Action Interface`<br>Unsafe action → Runtime monitor → Collision prevention |
 | Survey | `Cross-lifecycle · Multiple surfaces`<br>Survey coverage |
 
-Detailed triggers and propagation paths remain available in `data/papers.json`; the README displays only the primary path.
+Detailed attack chains belong in the corresponding paper notes or source material rather than catalog metadata. This avoids encoding propagation steps that a paper did not explicitly establish.
 
 ## 4. OOD Generalization Axes
 
