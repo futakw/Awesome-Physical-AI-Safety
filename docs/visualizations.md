@@ -20,13 +20,13 @@ The heatmap includes concrete threat models and excludes broad survey/evaluation
 
 ![Defense coverage map](../assets/visualizations/defense-heatmap.svg)
 
-Rows are `defense.mechanism` values and columns are `defense.defends_against` values. Only records enriched with the optional Defense extension are counted.
+Rows are `defense.mechanism` values. Columns follow the same top threat-mechanism order as the Threat Cross-Map; mechanisms with no matching defense remain visible as empty columns.
 
 ## Benchmark Cross-Map
 
 ![Benchmark coverage map](../assets/visualizations/benchmark-heatmap.svg)
 
-Rows are `benchmark.evaluates` values and columns are `benchmark.shift_types` values. Only records enriched with the optional Benchmark extension are counted.
+Rows are `threat_model.mechanism` values and columns are `threat_model.consequence` values for benchmark papers. Evaluation-style threat models use `coverage.mechanisms` and `coverage.consequences`.
 
 ## Evaluation Cross-Map
 

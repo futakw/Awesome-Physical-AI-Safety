@@ -1776,6 +1776,9 @@
           "user-instruction",
           "action-interface",
           "multi-agent-communication"
+        ],
+        "consequences": [
+          "privacy-leakage"
         ]
       }
     },
@@ -1813,6 +1816,10 @@
           "user-instruction",
           "context-memory-retrieval",
           "action-interface"
+        ],
+        "consequences": [
+          "privacy-leakage",
+          "task-failure"
         ]
       }
     },
@@ -1850,6 +1857,10 @@
           "world-state",
           "visual-perception",
           "action-interface"
+        ],
+        "consequences": [
+          "task-failure",
+          "physical-damage"
         ]
       }
     },
@@ -1885,6 +1896,10 @@
         "surfaces": [
           "user-instruction",
           "action-interface"
+        ],
+        "consequences": [
+          "privacy-leakage",
+          "task-failure"
         ]
       }
     },
@@ -1933,7 +1948,8 @@
           "user-instruction",
           "visual-perception",
           "world-state"
-        ]
+        ],
+        "consequences": []
       }
     },
     "tags": [
@@ -1979,7 +1995,8 @@
           "user-instruction",
           "visual-perception",
           "world-state"
-        ]
+        ],
+        "consequences": []
       }
     },
     "tags": [
@@ -2016,7 +2033,8 @@
           "middleware-network",
           "task-planning",
           "user-instruction"
-        ]
+        ],
+        "consequences": []
       }
     },
     "tags": [
@@ -3362,6 +3380,10 @@
           "world-state",
           "action-interface",
           "execution-control"
+        ],
+        "consequences": [
+          "task-failure",
+          "physical-damage"
         ]
       }
     },
@@ -3429,6 +3451,10 @@
           "visual-perception",
           "physical-semantic-environment",
           "execution-control"
+        ],
+        "consequences": [
+          "task-failure",
+          "privacy-leakage"
         ]
       }
     },
@@ -3856,7 +3882,8 @@
           "model-supply-chain",
           "multi-agent-communication",
           "visual-perception"
-        ]
+        ],
+        "consequences": []
       }
     },
     "tags": [
@@ -3895,7 +3922,8 @@
           "execution-control",
           "reasoning-representation",
           "task-planning"
-        ]
+        ],
+        "consequences": []
       }
     },
     "tags": [
@@ -3936,7 +3964,8 @@
           "user-instruction",
           "visual-perception",
           "world-state"
-        ]
+        ],
+        "consequences": []
       }
     },
     "tags": [
@@ -4826,6 +4855,9 @@
         "surfaces": [
           "visual-perception",
           "user-instruction"
+        ],
+        "consequences": [
+          "task-failure"
         ]
       }
     },
@@ -5509,7 +5541,8 @@
         ],
         "surfaces": [
           "visual-perception"
-        ]
+        ],
+        "consequences": []
       }
     },
     "tags": [
@@ -5628,6 +5661,9 @@
           "user-instruction",
           "task-planning",
           "action-interface"
+        ],
+        "consequences": [
+          "task-failure"
         ]
       }
     },
@@ -5667,6 +5703,10 @@
           "world-state",
           "task-planning",
           "execution-control"
+        ],
+        "consequences": [
+          "task-failure",
+          "physical-damage"
         ]
       }
     },
@@ -5749,6 +5789,10 @@
           "user-instruction",
           "world-state",
           "execution-control"
+        ],
+        "consequences": [
+          "task-failure",
+          "physical-damage"
         ]
       }
     },
@@ -5825,6 +5869,10 @@
           "user-instruction",
           "world-state",
           "action-interface"
+        ],
+        "consequences": [
+          "task-failure",
+          "physical-damage"
         ]
       }
     },
@@ -5904,6 +5952,10 @@
           "model-supply-chain",
           "visual-perception",
           "action-interface"
+        ],
+        "consequences": [
+          "task-failure",
+          "privacy-leakage"
         ]
       }
     },
@@ -6023,6 +6075,10 @@
           "world-state",
           "action-interface",
           "execution-control"
+        ],
+        "consequences": [
+          "task-failure",
+          "physical-damage"
         ]
       }
     },
@@ -6232,6 +6288,10 @@
         "surfaces": [
           "user-instruction",
           "task-planning"
+        ],
+        "consequences": [
+          "task-failure",
+          "physical-damage"
         ]
       }
     },
@@ -6353,6 +6413,10 @@
         "surfaces": [
           "visual-perception",
           "physical-semantic-environment"
+        ],
+        "consequences": [
+          "task-failure",
+          "privacy-leakage"
         ]
       }
     },
@@ -6429,6 +6493,9 @@
         ],
         "surfaces": [
           "visual-perception"
+        ],
+        "consequences": [
+          "privacy-leakage"
         ]
       }
     },
@@ -6506,7 +6573,8 @@
           "context-memory-retrieval",
           "multi-agent-communication",
           "visual-perception"
-        ]
+        ],
+        "consequences": []
       }
     },
     "tags": [
@@ -6965,7 +7033,8 @@
           "reasoning-representation",
           "user-instruction",
           "visual-perception"
-        ]
+        ],
+        "consequences": []
       }
     },
     "tags": [
@@ -7000,7 +7069,8 @@
           "reasoning-representation",
           "user-instruction",
           "visual-perception"
-        ]
+        ],
+        "consequences": []
       }
     },
     "tags": [
@@ -7033,7 +7103,8 @@
           "action-interface",
           "model-supply-chain",
           "reasoning-representation"
-        ]
+        ],
+        "consequences": []
       }
     },
     "tags": [
@@ -7066,7 +7137,8 @@
         "surfaces": [
           "action-interface",
           "reasoning-representation"
-        ]
+        ],
+        "consequences": []
       }
     },
     "tags": [
@@ -7101,7 +7173,8 @@
           "execution-control",
           "user-instruction",
           "visual-perception"
-        ]
+        ],
+        "consequences": []
       }
     },
     "tags": [
@@ -7136,7 +7209,8 @@
           "reasoning-representation",
           "user-instruction",
           "visual-perception"
-        ]
+        ],
+        "consequences": []
       }
     },
     "tags": [
@@ -7172,7 +7246,8 @@
           "middleware-network",
           "model-supply-chain",
           "reasoning-representation"
-        ]
+        ],
+        "consequences": []
       }
     },
     "tags": [
@@ -7212,7 +7287,8 @@
           "proprioception",
           "visual-perception",
           "world-state"
-        ]
+        ],
+        "consequences": []
       }
     },
     "tags": [
@@ -7464,7 +7540,8 @@
           "reasoning-representation",
           "user-instruction",
           "visual-perception"
-        ]
+        ],
+        "consequences": []
       }
     },
     "tags": [

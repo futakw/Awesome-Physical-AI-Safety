@@ -121,8 +121,8 @@ def validate_threat_model(errors: list[str], label: str, threat_model: object) -
         if not isinstance(coverage, dict):
             errors.append(f"{label}: threat_model.coverage must be an object")
             return
-        if set(coverage) != {"lifecycles", "mechanisms", "surfaces"}:
-            errors.append(f"{label}: threat_model.coverage must contain lifecycles, mechanisms, and surfaces")
+        if set(coverage) != {"lifecycles", "mechanisms", "surfaces", "consequences"}:
+            errors.append(f"{label}: threat_model.coverage must contain lifecycles, mechanisms, surfaces, and consequences")
         validate_string_list(errors, label, "coverage.lifecycles", coverage.get("lifecycles"), LIFECYCLES)
         mechanisms = coverage.get("mechanisms")
         if mechanisms == ["multiple"]:
@@ -130,6 +130,7 @@ def validate_threat_model(errors: list[str], label: str, threat_model: object) -
         else:
             validate_string_list(errors, label, "coverage.mechanisms", mechanisms, MECHANISMS, empty_ok=kind == "survey")
         validate_string_list(errors, label, "coverage.surfaces", coverage.get("surfaces"), SURFACES)
+        validate_string_list(errors, label, "coverage.consequences", coverage.get("consequences"), CONSEQUENCES, empty_ok=True)
         return
     expected = {"kind", "lifecycle", "mechanism", "surface", "target", "consequence"}
     if set(threat_model) != expected:

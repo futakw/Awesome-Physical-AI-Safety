@@ -43,7 +43,7 @@
   <section id="timeline" class="active"><p class="note">Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to pin the paper list.</p><div id="timeline-chart"></div></section>
   <section id="heatmap"><p class="note">Cells show mechanism-surface co-occurrence for concrete threat models. Hover for a preview; click a cell to pin the paper list.</p><div id="heatmap-chart"></div></section>
   <section id="defense"><p class="note">Rows are defense mechanisms and columns are the threat mechanisms they address. Only enriched records are counted.</p><div id="defense-chart"></div></section>
-  <section id="benchmark"><p class="note">Rows are benchmark coverage dimensions and columns are distribution-shift types. Only enriched records are counted.</p><div id="benchmark-chart"></div></section>
+  <section id="benchmark"><p class="note">Rows are evaluated threat mechanisms and columns are evaluated consequences for benchmark papers.</p><div id="benchmark-chart"></div></section>
   <section id="evaluation"><p class="note">Rows are evaluation environments and columns are reported metrics. Only enriched records are counted.</p><div id="evaluation-chart"></div></section>
 </main>
 <div id="tooltip" class="tooltip" role="tooltip"></div>
@@ -55,6 +55,8 @@ const sections = Object.keys(labels), tooltip = d3.select('#tooltip');
 d3.select('#paper-count').text(papers.length);
 const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const paperListHtml = list => `<ul class="paper-list">${list.map(p=>`<li>${p.paper_url?`<a href="${escapeHtml(p.paper_url)}" target="_blank" rel="noopener">[${escapeHtml(p.venue)} ${p.year}] ${escapeHtml(p.title)}</a>`:`[${escapeHtml(p.venue)} ${p.year}] ${escapeHtml(p.title)}`}</li>`).join('')}</ul>`;
+const threatValues = (p,field) => ['survey','evaluation'].includes(p.threat_model.kind) ? (p.threat_model.coverage[{lifecycle:'lifecycles',mechanism:'mechanisms',surface:'surfaces',consequence:'consequences'}[field]]||[]) : (p.threat_model[field]||[]);
+const orderedThreatMechanisms = () => { const concrete=papers.filter(p=>!['survey','evaluation'].includes(p.threat_model.kind)); const exploded=concrete.flatMap(p=>p.threat_model.mechanism.map(m=>({p,m}))); const counts=d3.rollup(exploded,v=>new Set(v.map(d=>d.p.id)).size,d=>d.m); return [...counts].sort((a,b)=>d3.descending(a[1],b[1])).slice(0,10).map(d=>d[0]); };
 let pinned = false;
 const placeTooltip = (event, html) => tooltip.html(html).style('opacity',1).style('left',`${Math.max(8,Math.min(event.clientX+14,window.innerWidth-400))}px`).style('top',`${Math.max(8,Math.min(event.clientY+14,window.innerHeight-220))}px`);
 const showTooltip = (event, html) => { if (!pinned) placeTooltip(event, html); };
@@ -152,12 +154,14 @@ function renderExtensionMap(container,title,items,rows,cols,rowValues,colValues,
 }
 
 function renderDefenseV2(){
-  const items=papers.filter(p=>p.defense), rows=[...new Set(items.flatMap(p=>p.defense.mechanism))], cols=[...new Set(items.flatMap(p=>p.defense.defends_against))];
+  const items=papers.filter(p=>p.defense), rows=[...new Set(items.flatMap(p=>p.defense.mechanism))], cols=orderedThreatMechanisms();
   renderExtensionMap('#defense-chart','Defense mechanism × defended threat',items,rows,cols,p=>p.defense.mechanism,p=>p.defense.defends_against,'Defense mechanism and defended threat cross-map');
 }
 function renderBenchmarkV2(){
-  const items=papers.filter(p=>p.benchmark), rows=[...new Set(items.flatMap(p=>p.benchmark.evaluates))], cols=[...new Set(items.flatMap(p=>p.benchmark.shift_types))];
-  renderExtensionMap('#benchmark-chart','Benchmark coverage × shift type',items,rows,cols,p=>p.benchmark.evaluates,p=>p.benchmark.shift_types,'Benchmark coverage and shift type cross-map');
+  const items=papers.filter(p=>p.section==='benchmarks');
+  const rows=[...new Set(items.flatMap(p=>threatValues(p,'mechanism')))].sort((a,b)=>d3.descending(items.filter(p=>threatValues(p,'mechanism').includes(a)).length,items.filter(p=>threatValues(p,'mechanism').includes(b)).length));
+  const cols=[...new Set(items.flatMap(p=>threatValues(p,'consequence')))];
+  renderExtensionMap('#benchmark-chart','Threat mechanism × consequence',items,rows,cols,p=>threatValues(p,'mechanism'),p=>threatValues(p,'consequence'),'Benchmark threat mechanism and consequence cross-map');
 }
 function renderEvaluation(){
   const items=papers.filter(p=>p.evaluation), rows=[...new Set(items.flatMap(p=>p.evaluation.environments))], cols=[...new Set(items.flatMap(p=>p.evaluation.metrics))];

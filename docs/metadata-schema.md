@@ -10,4 +10,6 @@ The catalog keeps a small common record and adds optional extensions only where 
 
 Controlled values are maintained under [`data/taxonomy`](../data/taxonomy/). The first pilot covers ten representative attack, defense, OOD, and benchmark papers before catalog-wide enrichment.
 
+For `survey` and `evaluation` threat models, `coverage` contains `lifecycles`, `mechanisms`, `surfaces`, and `consequences`. This keeps benchmark threat/consequence aggregation aligned with concrete threat-model records.
+
 The optional extension contract is documented in [`paper-extensions.schema.json`](../data/schema/paper-extensions.schema.json), while `scripts/validate_catalog.py` enforces the controlled vocabularies.
