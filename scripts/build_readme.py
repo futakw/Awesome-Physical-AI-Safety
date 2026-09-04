@@ -35,6 +35,37 @@ RISK_LABELS = {
 }
 
 
+DISPLAY_LABELS = {
+    "vla-policy": "VLA policy",
+}
+
+
+def display_label(value: str) -> str:
+    return DISPLAY_LABELS.get(value, value.replace("-", " ").title())
+
+
+def compact_labels(values: list[str], *, multiple_label: str) -> str:
+    if len(values) > 2:
+        return multiple_label
+    return " + ".join(display_label(value) for value in values)
+
+
+def threat_model_cell(threat_model: dict) -> str:
+    kind = threat_model["kind"]
+    if kind in {"survey", "evaluation"}:
+        coverage = threat_model["coverage"]
+        lifecycles = coverage["lifecycles"]
+        lifecycle = "Cross-lifecycle" if len(lifecycles) > 2 else " → ".join(display_label(value) for value in lifecycles)
+        surface = compact_labels(coverage["surfaces"], multiple_label="Multiple surfaces")
+        return f"`{lifecycle}` · `{surface}`<br>{display_label(kind)} coverage"
+    lifecycle = " → ".join(display_label(value) for value in threat_model["lifecycle"])
+    surface = compact_labels(threat_model["surface"], multiple_label="Multiple surfaces")
+    mechanism = compact_labels(threat_model["mechanism"], multiple_label="Multiple mechanisms")
+    target = display_label(threat_model["target"][0])
+    consequence = display_label(threat_model["consequence"][0])
+    return f"`{lifecycle}` · `{surface}`<br>{mechanism} → {target} → {consequence}"
+
+
 def github_repo(url: str | None) -> str | None:
     if not url:
         return None
@@ -148,7 +179,7 @@ def render(papers: list[dict]) -> str:
                 risk = bullet_list([RISK_LABELS[item] for item in paper["risks"]]) or "—"
                 venue = f"{paper['venue']} {paper['year']}"
                 lines.append(
-                    f"| {paper_cell(paper)} | {paper['first_author']} et al. | {venue} | {risk} | {paper['threat_model']} |"
+                    f"| {paper_cell(paper)} | {paper['first_author']} et al. | {venue} | {risk} | {threat_model_cell(paper['threat_model'])} |"
                 )
             lines.append("")
 

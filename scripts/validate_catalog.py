@@ -38,21 +38,38 @@ SECTIONS = {
     "system-security",
 }
 RISKS = {"task-reliability", "physical-safety", "ethical-societal", "security-privacy"}
-THREAT_CATEGORIES = {
-    "Training-time attack",
-    "Inference-time attack",
-    "System-level attack",
-    "Non-adversarial OOD",
-    "Execution failure",
-    "Planning failure",
-    "Policy failure",
-    "Uncertainty failure",
-    "Hazardous instruction",
-    "Physical safety violation",
-    "Semantic safety violation",
-    "System-level misuse",
-    "Survey scope",
-    "Evaluation scope",
+THREAT_KINDS = {"adversarial", "non-adversarial", "system-failure", "evaluation", "survey"}
+LIFECYCLES = {"training", "inference", "system"}
+MECHANISMS = {
+    "action-freezing", "action-manipulation", "adversarial-object", "adversarial-patch",
+    "backdoor", "checkpoint-compromise", "command-hijacking", "constraint-violation",
+    "covert-channel", "data-poisoning", "denial-of-service", "digital-perturbation",
+    "direct-prompt-injection", "distribution-shift", "environment-manipulation",
+    "execution-error", "feedback-spoofing", "hazardous-instruction",
+    "indirect-prompt-injection", "instruction-ambiguity", "jailbreak", "malicious-adapter",
+    "memorized-data-retention", "memory-poisoning", "middleware-compromise", "multi-agent-propagation",
+    "multimodal-desynchronization", "network-attack", "perception-error", "planning-error",
+    "planning-hijacking", "representation-hijacking",
+    "retrieval-poisoning", "reward-manipulation", "semantic-misalignment", "sensor-spoofing",
+    "sensitive-data-exposure", "state-manipulation", "trajectory-manipulation", "typographic-injection",
+    "uncertainty-miscalibration", "unsafe-policy-behavior",
+}
+SURFACES = {
+    "model-supply-chain", "user-instruction", "context-memory-retrieval",
+    "physical-semantic-environment", "visual-perception", "audio-perception",
+    "proprioception", "world-state", "reasoning-representation", "task-planning",
+    "action-interface", "middleware-network", "multi-agent-communication",
+    "execution-control",
+}
+TARGETS = {
+    "perception-model", "world-state", "reasoning-process", "task-planner", "vla-policy",
+    "action-generation", "runtime-monitor", "robot-executor", "shared-system-state",
+    "private-data",
+}
+CONSEQUENCES = {
+    "task-failure", "targeted-action", "action-freezing", "unsafe-success", "collision",
+    "unsafe-motion", "physical-damage", "control-hijacking", "policy-violation",
+    "privacy-leakage", "availability-loss", "recovery-failure",
 }
 PRIVATE_MARKERS = {
     "my_works",
@@ -71,6 +88,56 @@ def valid_url(value: str | None) -> bool:
         return True
     parsed = urlparse(value)
     return parsed.scheme == "https" and bool(parsed.netloc)
+
+
+def validate_string_list(
+    errors: list[str], label: str, field: str, value: object, allowed: set[str], *, empty_ok: bool = False
+) -> None:
+    if not isinstance(value, list) or any(not isinstance(item, str) for item in value):
+        errors.append(f"{label}: threat_model.{field} must be a list of strings")
+        return
+    if not value and not empty_ok:
+        errors.append(f"{label}: threat_model.{field} must not be empty")
+    if len(value) != len(set(value)):
+        errors.append(f"{label}: threat_model.{field} contains duplicates")
+    invalid = set(value) - allowed
+    if invalid:
+        errors.append(f"{label}: invalid threat_model.{field} {sorted(invalid)}")
+
+
+def validate_threat_model(errors: list[str], label: str, threat_model: object) -> None:
+    if not isinstance(threat_model, dict):
+        errors.append(f"{label}: threat_model must be an object")
+        return
+    kind = threat_model.get("kind")
+    if kind not in THREAT_KINDS:
+        errors.append(f"{label}: invalid threat_model.kind {kind!r}")
+        return
+    if kind in {"survey", "evaluation"}:
+        if set(threat_model) != {"kind", "coverage"}:
+            errors.append(f"{label}: {kind} threat_model must contain only kind and coverage")
+        coverage = threat_model.get("coverage")
+        if not isinstance(coverage, dict):
+            errors.append(f"{label}: threat_model.coverage must be an object")
+            return
+        if set(coverage) != {"lifecycles", "mechanisms", "surfaces"}:
+            errors.append(f"{label}: threat_model.coverage must contain lifecycles, mechanisms, and surfaces")
+        validate_string_list(errors, label, "coverage.lifecycles", coverage.get("lifecycles"), LIFECYCLES)
+        mechanisms = coverage.get("mechanisms")
+        if mechanisms == ["multiple"]:
+            pass
+        else:
+            validate_string_list(errors, label, "coverage.mechanisms", mechanisms, MECHANISMS, empty_ok=kind == "survey")
+        validate_string_list(errors, label, "coverage.surfaces", coverage.get("surfaces"), SURFACES)
+        return
+    expected = {"kind", "lifecycle", "mechanism", "surface", "target", "consequence"}
+    if set(threat_model) != expected:
+        errors.append(f"{label}: concrete threat_model fields must be {sorted(expected)}")
+    validate_string_list(errors, label, "lifecycle", threat_model.get("lifecycle"), LIFECYCLES)
+    validate_string_list(errors, label, "mechanism", threat_model.get("mechanism"), MECHANISMS)
+    validate_string_list(errors, label, "surface", threat_model.get("surface"), SURFACES)
+    validate_string_list(errors, label, "target", threat_model.get("target"), TARGETS)
+    validate_string_list(errors, label, "consequence", threat_model.get("consequence"), CONSEQUENCES)
 
 
 def main() -> int:
@@ -105,24 +172,15 @@ def main() -> int:
             seen_paper_urls.add(paper_url)
         if paper.get("section") not in SECTIONS:
             errors.append(f"{label}: invalid section {paper.get('section')!r}")
-        invalid_risks = set(paper.get("risks", [])) - RISKS
-        if invalid_risks:
-            errors.append(f"{label}: invalid risks {sorted(invalid_risks)}")
         if not isinstance(paper.get("risks"), list):
             errors.append(f"{label}: risks must be a list")
+        else:
+            invalid_risks = set(paper["risks"]) - RISKS
+            if invalid_risks:
+                errors.append(f"{label}: invalid risks {sorted(invalid_risks)}")
         if not paper.get("tags"):
             errors.append(f"{label}: tags must not be empty")
-        if not isinstance(paper.get("threat_model"), str) or not paper.get("threat_model", "").strip():
-            errors.append(f"{label}: threat_model must be a non-empty string")
-        else:
-            threat_model = paper["threat_model"]
-            category = threat_model.split(" (", 1)[0]
-            if category not in THREAT_CATEGORIES:
-                errors.append(f"{label}: invalid threat category {category!r}")
-            if " (" in threat_model and not threat_model.endswith(")"):
-                errors.append(f"{label}: threat_model must use 'Category (detail)' notation")
-            if len(threat_model) > 90:
-                errors.append(f"{label}: threat_model exceeds 90 characters")
+        validate_threat_model(errors, label, paper.get("threat_model"))
         if not isinstance(paper.get("year"), int) or not 2000 <= paper.get("year", 0) <= 2100:
             errors.append(f"{label}: invalid year")
         for field in ("paper_url", "code_url"):

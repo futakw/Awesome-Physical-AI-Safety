@@ -11,7 +11,14 @@
     "subsection": "VLA Safety Surveys",
     "scope": "vla",
     "risks": [],
-    "threat_model": "Survey scope (attacks, defenses, OOD, safety evaluation)",
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": ["training", "inference", "system"],
+        "mechanisms": ["multiple"],
+        "surfaces": ["action-interface", "audio-perception", "context-memory-retrieval", "execution-control", "middleware-network", "model-supply-chain", "multi-agent-communication", "physical-semantic-environment", "proprioception", "reasoning-representation", "task-planning", "user-instruction", "visual-perception", "world-state"]
+      }
+    },
     "tags": ["survey", "taxonomy"]
   },
   {
@@ -26,7 +33,14 @@
     "subsection": "Embodied AI Safety and Security",
     "scope": "embodied-agent",
     "risks": [],
-    "threat_model": "Survey scope (perception, planning, control attacks)",
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": ["training", "inference", "system"],
+        "mechanisms": ["multiple"],
+        "surfaces": ["action-interface", "audio-perception", "context-memory-retrieval", "execution-control", "middleware-network", "model-supply-chain", "multi-agent-communication", "physical-semantic-environment", "proprioception", "reasoning-representation", "task-planning", "user-instruction", "visual-perception", "world-state"]
+      }
+    },
     "tags": ["survey", "vulnerability-taxonomy"]
   },
   {
@@ -41,7 +55,14 @@
     "subsection": "Embodied AI Safety and Security",
     "scope": "embodied-agent",
     "risks": [],
-    "threat_model": "Survey scope (LLM jailbreak, CPS flaw, closed-loop mismatch)",
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": ["inference", "system"],
+        "mechanisms": ["jailbreak", "middleware-compromise", "execution-error"],
+        "surfaces": ["execution-control", "middleware-network", "task-planning", "user-instruction"]
+      }
+    },
     "tags": ["perspective", "closed-loop-safety"]
   },
   {
@@ -56,7 +77,14 @@
     "subsection": "Representation and Language-Action Generalization",
     "scope": "vla",
     "risks": ["task-reliability"],
-    "threat_model": "Non-adversarial OOD (representation, language, viewpoint)",
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["distribution-shift"],
+      "surface": ["visual-perception", "user-instruction", "reasoning-representation"],
+      "target": ["vla-policy"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["representation-shift", "language-instruction", "viewpoint-camera"]
   },
   {
@@ -71,7 +99,14 @@
     "subsection": "Action and Spatial Generalization",
     "scope": "vla",
     "risks": ["task-reliability"],
-    "threat_model": "Non-adversarial OOD (action neighborhood, spatial shift)",
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["distribution-shift"],
+      "surface": ["world-state", "action-interface"],
+      "target": ["action-generation"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["action-neighborhood", "spatial-shift"]
   },
   {
@@ -86,7 +121,14 @@
     "subsection": "OOD and Generalization Benchmarks",
     "scope": "vla",
     "risks": ["task-reliability"],
-    "threat_model": "Non-adversarial OOD (spatial shift, memorization)",
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["distribution-shift"],
+      "surface": ["visual-perception", "world-state"],
+      "target": ["vla-policy"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["benchmark", "spatial-shift", "memorization"]
   },
   {
@@ -101,7 +143,14 @@
     "subsection": "OOD and Generalization Benchmarks",
     "scope": "vla",
     "risks": ["task-reliability"],
-    "threat_model": "Non-adversarial OOD (layout, viewpoint, robot state, language, appearance, sensor noise)",
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["distribution-shift"],
+      "surface": ["visual-perception", "user-instruction", "proprioception", "world-state"],
+      "target": ["vla-policy"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["benchmark", "object-layout", "viewpoint-camera", "robot-state", "language-instruction", "lighting", "background-texture", "sensor-noise"]
   },
   {
@@ -116,7 +165,14 @@
     "subsection": "Geometry and Object-Centric Stress Testing",
     "scope": "robot-policy",
     "risks": ["task-reliability"],
-    "threat_model": "Non-adversarial OOD (object geometry)",
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["distribution-shift"],
+      "surface": ["visual-perception", "world-state"],
+      "target": ["vla-policy"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["object-geometry", "red-teaming", "real-robot"]
   },
   {
@@ -131,7 +187,14 @@
     "subsection": "Language and Instruction Generalization",
     "scope": "autonomous-driving",
     "risks": ["task-reliability", "physical-safety"],
-    "threat_model": "Non-adversarial OOD (language, counterfactual scenario)",
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["distribution-shift"],
+      "surface": ["user-instruction", "world-state"],
+      "target": ["task-planner", "action-generation"],
+      "consequence": ["task-failure", "unsafe-motion"]
+    },
     "tags": ["language-instruction", "counterfactual-robustness"]
   },
   {
@@ -146,7 +209,14 @@
     "subsection": "Open-World Evaluation",
     "scope": "vla",
     "risks": ["task-reliability", "physical-safety"],
-    "threat_model": "Non-adversarial OOD (open-world environment)",
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["distribution-shift"],
+      "surface": ["visual-perception", "world-state"],
+      "target": ["vla-policy"],
+      "consequence": ["task-failure", "unsafe-motion"]
+    },
     "tags": ["open-world", "environment-domain"]
   },
   {
@@ -161,7 +231,14 @@
     "subsection": "Backdoors and Data Poisoning",
     "scope": "vla",
     "risks": ["task-reliability", "security-privacy"],
-    "threat_model": "Training-time attack (backdoor)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["training", "inference"],
+      "mechanism": ["backdoor"],
+      "surface": ["model-supply-chain", "visual-perception"],
+      "target": ["vla-policy"],
+      "consequence": ["targeted-action", "control-hijacking", "task-failure"]
+    },
     "tags": ["backdoor", "training-data"]
   },
   {
@@ -176,7 +253,14 @@
     "subsection": "Backdoors and Data Poisoning",
     "scope": "vla",
     "risks": ["task-reliability", "security-privacy"],
-    "threat_model": "Training-time attack (action-output backdoor)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["training", "inference"],
+      "mechanism": ["backdoor"],
+      "surface": ["model-supply-chain", "visual-perception", "action-interface"],
+      "target": ["action-generation"],
+      "consequence": ["targeted-action", "control-hijacking", "task-failure"]
+    },
     "tags": ["backdoor", "action-output"]
   },
   {
@@ -191,7 +275,14 @@
     "subsection": "Backdoors and Data Poisoning",
     "scope": "vla",
     "risks": ["task-reliability", "security-privacy"],
-    "threat_model": "Training-time attack (state backdoor)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["training", "inference"],
+      "mechanism": ["backdoor"],
+      "surface": ["model-supply-chain", "proprioception", "world-state"],
+      "target": ["world-state", "vla-policy"],
+      "consequence": ["targeted-action", "control-hijacking", "task-failure"]
+    },
     "tags": ["backdoor", "state-attack", "physical-access"]
   },
   {
@@ -206,7 +297,14 @@
     "subsection": "Backdoors and Data Poisoning",
     "scope": "vla",
     "risks": ["task-reliability", "security-privacy"],
-    "threat_model": "Training-time attack (temporal action-chunk backdoor)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["training", "inference"],
+      "mechanism": ["backdoor"],
+      "surface": ["model-supply-chain", "visual-perception", "action-interface"],
+      "target": ["action-generation"],
+      "consequence": ["targeted-action", "control-hijacking", "task-failure"]
+    },
     "tags": ["backdoor", "action-chunk", "temporal-attack"]
   },
   {
@@ -221,7 +319,14 @@
     "subsection": "Visual Perturbations and Patches",
     "scope": "vla",
     "risks": ["task-reliability", "security-privacy"],
-    "threat_model": "Inference-time attack (adversarial patch)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["adversarial-patch"],
+      "surface": ["visual-perception"],
+      "target": ["vla-policy"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["adversarial-patch", "digital-perturbation", "real-robot"]
   },
   {
@@ -236,7 +341,14 @@
     "subsection": "Visual Perturbations and Patches",
     "scope": "vla",
     "risks": ["task-reliability", "security-privacy"],
-    "threat_model": "Inference-time attack (multimodal perturbation)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["digital-perturbation"],
+      "surface": ["visual-perception", "user-instruction"],
+      "target": ["vla-policy"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["digital-perturbation", "multimodal-misalignment"]
   },
   {
@@ -251,7 +363,14 @@
     "subsection": "Planning, Action, and Trajectory Manipulation",
     "scope": "vla",
     "risks": ["security-privacy"],
-    "threat_model": "Inference-time attack (action freezing)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["digital-perturbation"],
+      "surface": ["visual-perception"],
+      "target": ["action-generation"],
+      "consequence": ["action-freezing", "availability-loss", "control-hijacking"]
+    },
     "tags": ["action-freezing", "dangerous-inaction", "digital-perturbation"]
   },
   {
@@ -266,7 +385,14 @@
     "subsection": "Sensor, State, and Physical Interventions",
     "scope": "vla",
     "risks": ["task-reliability", "security-privacy"],
-    "threat_model": "Inference-time attack (physical sensor intervention)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["sensor-spoofing"],
+      "surface": ["visual-perception", "audio-perception", "proprioception"],
+      "target": ["vla-policy"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["sensor-attack", "physical-intervention"]
   },
   {
@@ -281,7 +407,14 @@
     "subsection": "Jailbreaks and Prompt Injection",
     "scope": "llm-robot",
     "risks": ["physical-safety", "ethical-societal", "security-privacy"],
-    "threat_model": "Inference-time attack (jailbreak)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["jailbreak"],
+      "surface": ["user-instruction"],
+      "target": ["task-planner"],
+      "consequence": ["policy-violation", "control-hijacking", "unsafe-motion"]
+    },
     "tags": ["jailbreak", "harmful-policy", "real-robot"]
   },
   {
@@ -296,7 +429,14 @@
     "subsection": "Jailbreaks and Prompt Injection",
     "scope": "vla",
     "risks": ["physical-safety", "ethical-societal", "security-privacy"],
-    "threat_model": "Inference-time attack (jailbreak, command hijacking)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["jailbreak", "command-hijacking"],
+      "surface": ["user-instruction"],
+      "target": ["task-planner", "action-generation"],
+      "consequence": ["policy-violation", "control-hijacking", "unsafe-motion"]
+    },
     "tags": ["jailbreak", "command-hijacking"]
   },
   {
@@ -311,7 +451,14 @@
     "subsection": "Jailbreaks and Prompt Injection",
     "scope": "embodied-agent",
     "risks": ["security-privacy"],
-    "threat_model": "Inference-time attack (visual prompt injection)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["indirect-prompt-injection", "typographic-injection", "command-hijacking"],
+      "surface": ["physical-semantic-environment"],
+      "target": ["task-planner"],
+      "consequence": ["control-hijacking"]
+    },
     "tags": ["command-hijacking", "typographic-attack", "visual-prompt-injection"]
   },
   {
@@ -326,7 +473,14 @@
     "subsection": "Visual Perturbations and Patches",
     "scope": "embodied-agent",
     "risks": ["security-privacy"],
-    "threat_model": "Inference-time attack (semantic visual perturbation)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["digital-perturbation"],
+      "surface": ["visual-perception"],
+      "target": ["reasoning-process", "task-planner"],
+      "consequence": ["targeted-action"]
+    },
     "tags": ["fine-grained-attack", "semantic-manipulation", "visual-perturbation"]
   },
   {
@@ -341,7 +495,14 @@
     "subsection": "Visual Perturbations and Patches",
     "scope": "vla",
     "risks": ["task-reliability", "security-privacy"],
-    "threat_model": "Inference-time attack (adversarial patch)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["adversarial-patch"],
+      "surface": ["visual-perception"],
+      "target": ["vla-policy"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["adversarial-patch", "model-agnostic", "adversarial-fine-tuning"]
   },
   {
@@ -356,7 +517,14 @@
     "subsection": "Robust Training and Safety Alignment",
     "scope": "vla",
     "risks": ["task-reliability", "physical-safety"],
-    "threat_model": "Physical safety violation (unsafe policy behavior)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["constraint-violation"],
+      "surface": ["user-instruction", "action-interface"],
+      "target": ["vla-policy", "action-generation"],
+      "consequence": ["task-failure", "unsafe-motion"]
+    },
     "tags": ["safety-alignment", "constrained-learning"]
   },
   {
@@ -371,7 +539,14 @@
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "vla",
     "risks": ["task-reliability", "physical-safety"],
-    "threat_model": "Physical safety violation (unsafe VLA action)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["constraint-violation"],
+      "surface": ["user-instruction", "action-interface"],
+      "target": ["action-generation", "robot-executor"],
+      "consequence": ["task-failure", "unsafe-motion"]
+    },
     "tags": ["guardrail", "safety-constraint"]
   },
   {
@@ -386,7 +561,14 @@
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "llm-robot",
     "risks": ["task-reliability", "physical-safety", "security-privacy"],
-    "threat_model": "Hazardous instruction (jailbreak, unsafe plan)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["jailbreak"],
+      "surface": ["user-instruction", "world-state"],
+      "target": ["task-planner", "action-generation"],
+      "consequence": ["policy-violation", "task-failure", "unsafe-motion"]
+    },
     "tags": ["guardrail", "control-synthesis"]
   },
   {
@@ -401,7 +583,14 @@
     "subsection": "Action Shielding, Fail-Safes, and Recovery",
     "scope": "llm-robot",
     "risks": ["physical-safety"],
-    "threat_model": "Planning failure (formal-constraint violation)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["planning-error"],
+      "surface": ["task-planning", "action-interface"],
+      "target": ["task-planner"],
+      "consequence": ["unsafe-motion"]
+    },
     "tags": ["formal-constraint", "runtime-monitoring"]
   },
   {
@@ -416,7 +605,14 @@
     "subsection": "Action Shielding, Fail-Safes, and Recovery",
     "scope": "vla",
     "risks": [],
-    "threat_model": "Execution failure (OOD anomaly)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["execution-error"],
+      "surface": ["visual-perception", "action-interface"],
+      "target": ["action-generation", "robot-executor"],
+      "consequence": ["recovery-failure"]
+    },
     "tags": ["failure-detection", "runtime-monitoring"]
   },
   {
@@ -431,7 +627,14 @@
     "subsection": "Comprehensive VLA Evaluation",
     "scope": "vla",
     "risks": ["task-reliability", "physical-safety"],
-    "threat_model": "Evaluation scope (capability, robustness, closed-loop safety)",
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": ["inference"],
+        "mechanisms": ["distribution-shift", "execution-error", "constraint-violation"],
+        "surfaces": ["visual-perception", "user-instruction", "world-state", "action-interface", "execution-control"]
+      }
+    },
     "tags": ["benchmark", "closed-loop"]
   },
   {
@@ -446,7 +649,14 @@
     "subsection": "Adversarial and Physical Robustness",
     "scope": "vla",
     "risks": ["task-reliability", "security-privacy"],
-    "threat_model": "Evaluation scope (visual, physical perturbation)",
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": ["inference"],
+        "mechanisms": ["environment-manipulation", "sensor-spoofing"],
+        "surfaces": ["visual-perception", "physical-semantic-environment", "execution-control"]
+      }
+    },
     "tags": ["benchmark", "physical-robustness"]
   },
   {
@@ -461,7 +671,14 @@
     "subsection": "Task and Physical Safety",
     "scope": "embodied-agent",
     "risks": ["task-reliability", "ethical-societal"],
-    "threat_model": "Hazardous instruction (unsafe task planning)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["hazardous-instruction"],
+      "surface": ["user-instruction"],
+      "target": ["task-planner"],
+      "consequence": ["policy-violation", "task-failure"]
+    },
     "tags": ["hazardous-instruction", "task-planning"]
   },
   {
@@ -476,7 +693,14 @@
     "subsection": "Task and Physical Safety",
     "scope": "embodied-agent",
     "risks": ["task-reliability", "physical-safety"],
-    "threat_model": "Physical safety violation (mitigation, recovery failure)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["constraint-violation"],
+      "surface": ["user-instruction", "world-state", "execution-control"],
+      "target": ["action-generation", "robot-executor"],
+      "consequence": ["task-failure", "unsafe-motion"]
+    },
     "tags": ["interactive-safety", "risk-mitigation", "closed-loop"]
   },
   {
@@ -491,7 +715,14 @@
     "subsection": "Task and Physical Safety",
     "scope": "embodied-agent",
     "risks": ["physical-safety"],
-    "threat_model": "Physical safety violation (insufficient hazard awareness)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["constraint-violation"],
+      "surface": ["visual-perception", "user-instruction", "world-state"],
+      "target": ["action-generation", "robot-executor"],
+      "consequence": ["unsafe-motion"]
+    },
     "tags": ["physical-risk-awareness", "task-planning"]
   },
   {
@@ -506,7 +737,14 @@
     "subsection": "Semantic and Ethical Safety",
     "scope": "robot-agent",
     "risks": ["ethical-societal"],
-    "threat_model": "Semantic safety violation (constitution, harmful action)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["semantic-misalignment"],
+      "surface": ["user-instruction", "world-state"],
+      "target": ["task-planner", "action-generation"],
+      "consequence": ["policy-violation"]
+    },
     "tags": ["robot-constitution", "semantic-safety"]
   },
   {
@@ -521,7 +759,14 @@
     "subsection": "Evaluation Infrastructure",
     "scope": "robot-policy",
     "risks": ["task-reliability"],
-    "threat_model": "Non-adversarial OOD (sim-to-real)",
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["distribution-shift"],
+      "surface": ["visual-perception", "world-state", "action-interface"],
+      "target": ["vla-policy"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["simulation", "sim-to-real", "evaluation-framework"]
   },
   {
@@ -536,7 +781,14 @@
     "subsection": "Evaluation Infrastructure",
     "scope": "robot-policy",
     "risks": ["task-reliability"],
-    "threat_model": "Non-adversarial OOD (task composition, knowledge transfer)",
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["distribution-shift"],
+      "surface": ["visual-perception", "user-instruction", "world-state"],
+      "target": ["vla-policy"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["benchmark", "lifelong-learning", "knowledge-transfer"]
   },
   {
@@ -551,7 +803,14 @@
     "subsection": "Cross-Layer System Security",
     "scope": "robot-system",
     "risks": ["security-privacy"],
-    "threat_model": "System-level attack (wireless, cloud, application, firmware)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["system", "inference"],
+      "mechanism": ["middleware-compromise", "network-attack", "checkpoint-compromise"],
+      "surface": ["model-supply-chain", "middleware-network", "execution-control"],
+      "target": ["shared-system-state", "robot-executor"],
+      "consequence": ["policy-violation", "control-hijacking"]
+    },
     "tags": ["cloud-api", "firmware", "wireless", "system-compromise"]
   },
   {
@@ -566,7 +825,14 @@
     "subsection": "Privacy, Misuse, and Covert Channels",
     "scope": "vla",
     "risks": ["security-privacy"],
-    "threat_model": "System-level misuse (trajectory covert channel)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["system", "inference"],
+      "mechanism": ["covert-channel", "trajectory-manipulation"],
+      "surface": ["action-interface", "execution-control"],
+      "target": ["robot-executor", "private-data"],
+      "consequence": ["privacy-leakage", "control-hijacking"]
+    },
     "tags": ["covert-channel", "trajectory-manipulation", "misuse"]
   },
   {
@@ -581,7 +847,14 @@
     "subsection": "Embodied AI Safety and Security",
     "scope": "embodied-agent",
     "risks": [],
-    "threat_model": "Survey scope (system security, privacy)",
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": ["training", "inference", "system"],
+        "mechanisms": ["multiple"],
+        "surfaces": ["context-memory-retrieval", "execution-control", "middleware-network", "model-supply-chain", "multi-agent-communication", "visual-perception"]
+      }
+    },
     "tags": ["survey", "security", "privacy"]
   },
   {
@@ -596,7 +869,14 @@
     "subsection": "Embodied AI Safety and Security",
     "scope": "embodied-agent",
     "risks": [],
-    "threat_model": "Survey scope (design failure, misalignment, recovery)",
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": ["training", "inference", "system"],
+        "mechanisms": ["semantic-misalignment", "planning-error", "execution-error"],
+        "surfaces": ["action-interface", "execution-control", "reasoning-representation", "task-planning"]
+      }
+    },
     "tags": ["survey", "trustworthiness", "maturity-model"]
   },
   {
@@ -611,7 +891,14 @@
     "subsection": "Domain-Specific Surveys",
     "scope": "autonomous-driving",
     "risks": [],
-    "threat_model": "Survey scope (OOD, safety, formal verification)",
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": ["training", "inference", "system"],
+        "mechanisms": ["distribution-shift", "constraint-violation", "execution-error"],
+        "surfaces": ["action-interface", "execution-control", "task-planning", "user-instruction", "visual-perception", "world-state"]
+      }
+    },
     "tags": ["survey", "autonomous-driving", "closed-loop-control"]
   },
   {
@@ -626,7 +913,14 @@
     "subsection": "Open-World Evaluation",
     "scope": "vla",
     "risks": ["task-reliability"],
-    "threat_model": "Non-adversarial OOD (open world, environment, long horizon)",
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["distribution-shift"],
+      "surface": ["visual-perception", "world-state", "task-planning"],
+      "target": ["vla-policy"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["open-world", "environment-domain", "long-horizon"]
   },
   {
@@ -641,7 +935,14 @@
     "subsection": "Backdoors and Data Poisoning",
     "scope": "llm-robot",
     "risks": ["security-privacy"],
-    "threat_model": "Training-time attack (decision-making backdoor)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["training", "inference"],
+      "mechanism": ["backdoor"],
+      "surface": ["model-supply-chain", "user-instruction"],
+      "target": ["task-planner"],
+      "consequence": ["targeted-action", "control-hijacking"]
+    },
     "tags": ["backdoor", "decision-making", "knowledge-injection"]
   },
   {
@@ -656,7 +957,14 @@
     "subsection": "Visual Perturbations and Patches",
     "scope": "vla",
     "risks": ["task-reliability", "security-privacy"],
-    "threat_model": "Inference-time attack (adversarial patch)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["adversarial-patch"],
+      "surface": ["visual-perception"],
+      "target": ["vla-policy"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["adversarial-patch", "black-box-transfer", "sim-to-real"]
   },
   {
@@ -671,7 +979,14 @@
     "subsection": "Jailbreaks and Prompt Injection",
     "scope": "llm-robot",
     "risks": ["physical-safety", "ethical-societal", "security-privacy"],
-    "threat_model": "Inference-time attack (executable jailbreak)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["jailbreak"],
+      "surface": ["user-instruction"],
+      "target": ["task-planner"],
+      "consequence": ["policy-violation", "control-hijacking", "unsafe-motion"]
+    },
     "tags": ["jailbreak", "policy-executability", "real-robot"]
   },
   {
@@ -686,7 +1001,14 @@
     "subsection": "Jailbreaks and Prompt Injection",
     "scope": "llm-robot",
     "risks": ["physical-safety", "ethical-societal", "security-privacy"],
-    "threat_model": "Inference-time attack (voice jailbreak)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["jailbreak"],
+      "surface": ["audio-perception", "user-instruction"],
+      "target": ["task-planner"],
+      "consequence": ["policy-violation", "control-hijacking", "unsafe-motion"]
+    },
     "tags": ["jailbreak", "voice-instruction", "physical-harm"]
   },
   {
@@ -701,7 +1023,14 @@
     "subsection": "Upstream VLM Attacks",
     "scope": "vlm",
     "risks": ["security-privacy"],
-    "threat_model": "Inference-time attack (black-box transfer)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["digital-perturbation"],
+      "surface": ["visual-perception"],
+      "target": ["perception-model", "reasoning-process"],
+      "consequence": ["control-hijacking"]
+    },
     "tags": ["transfer-attack", "black-box", "multimodal-semantics"]
   },
   {
@@ -716,7 +1045,14 @@
     "subsection": "Representation Steering and Inference-Time Defense",
     "scope": "llm-robot",
     "risks": ["ethical-societal", "security-privacy"],
-    "threat_model": "Inference-time attack (planner jailbreak)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["jailbreak"],
+      "surface": ["user-instruction", "reasoning-representation"],
+      "target": ["task-planner"],
+      "consequence": ["policy-violation", "control-hijacking"]
+    },
     "tags": ["jailbreak-defense", "representation-steering", "inference-time"]
   },
   {
@@ -731,7 +1067,14 @@
     "subsection": "System and Communication Defenses",
     "scope": "multi-agent",
     "risks": ["security-privacy"],
-    "threat_model": "System-level attack (memory poisoning, impersonation, unauthorized access)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["system", "inference"],
+      "mechanism": ["memory-poisoning", "multi-agent-propagation"],
+      "surface": ["context-memory-retrieval", "multi-agent-communication"],
+      "target": ["shared-system-state"],
+      "consequence": ["control-hijacking"]
+    },
     "tags": ["multi-agent", "memory-defense", "communication-security"]
   },
   {
@@ -746,7 +1089,14 @@
     "subsection": "Active Perception and Recovery",
     "scope": "embodied-agent",
     "risks": ["task-reliability", "security-privacy"],
-    "threat_model": "Inference-time attack (adaptive adversarial patch)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["adversarial-patch"],
+      "surface": ["visual-perception"],
+      "target": ["vla-policy"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["adversarial-patch", "active-perception", "recurrent-feedback"]
   },
   {
@@ -761,7 +1111,14 @@
     "subsection": "Backdoors and Data Poisoning",
     "scope": "vla",
     "risks": ["task-reliability", "security-privacy"],
-    "threat_model": "Training-time attack (physical-object backdoor)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["training", "inference"],
+      "mechanism": ["backdoor"],
+      "surface": ["model-supply-chain", "physical-semantic-environment", "visual-perception"],
+      "target": ["task-planner", "vla-policy"],
+      "consequence": ["targeted-action", "control-hijacking", "task-failure"]
+    },
     "tags": ["backdoor", "physical-object", "goal-hijacking"]
   },
   {
@@ -776,7 +1133,14 @@
     "subsection": "Multimodal Perception and Physical Safeguards",
     "scope": "vla",
     "risks": ["task-reliability", "physical-safety"],
-    "threat_model": "Non-adversarial OOD (low light, occlusion, geometry)",
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["distribution-shift"],
+      "surface": ["visual-perception"],
+      "target": ["vla-policy"],
+      "consequence": ["task-failure", "unsafe-motion"]
+    },
     "tags": ["thermal-perception", "control-barrier-function", "ood"]
   },
   {
@@ -791,7 +1155,14 @@
     "subsection": "Human-in-the-Loop Safety Refinement",
     "scope": "robot-policy",
     "risks": ["task-reliability"],
-    "threat_model": "Policy failure (unsafe or low-quality rollout)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["unsafe-policy-behavior"],
+      "surface": ["action-interface"],
+      "target": ["vla-policy"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["human-in-the-loop", "rejection-sampling", "policy-refinement"]
   },
   {
@@ -806,7 +1177,14 @@
     "subsection": "Jailbreaks and Prompt Injection",
     "scope": "vision-language-agent",
     "risks": ["security-privacy"],
-    "threat_model": "Inference-time attack (visual prompt injection)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["indirect-prompt-injection", "typographic-injection"],
+      "surface": ["physical-semantic-environment"],
+      "target": ["task-planner"],
+      "consequence": ["control-hijacking"]
+    },
     "tags": ["visual-prompt-injection", "trust-boundary", "scene-text"]
   },
   {
@@ -821,7 +1199,14 @@
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "robot-navigation",
     "risks": ["task-reliability", "physical-safety"],
-    "threat_model": "Physical safety violation (unsafe command, context constraint)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["constraint-violation"],
+      "surface": ["user-instruction", "world-state"],
+      "target": ["action-generation", "robot-executor"],
+      "consequence": ["task-failure", "unsafe-motion"]
+    },
     "tags": ["language-conditioned", "safety-filter", "navigation"]
   },
   {
@@ -836,7 +1221,14 @@
     "subsection": "Representation Steering and Inference-Time Defense",
     "scope": "vla",
     "risks": ["task-reliability"],
-    "threat_model": "Non-adversarial OOD (linguistic grounding, instruction neglect)",
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["distribution-shift"],
+      "surface": ["user-instruction", "reasoning-representation"],
+      "target": ["vla-policy"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["linguistic-grounding", "attention-recalibration", "train-free"]
   },
   {
@@ -851,7 +1243,14 @@
     "subsection": "Runtime Observation Interventions",
     "scope": "vla",
     "risks": ["task-reliability"],
-    "threat_model": "Non-adversarial OOD (object, background distractor)",
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["distribution-shift"],
+      "surface": ["visual-perception"],
+      "target": ["vla-policy"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["visual-distractor", "observation-intervention", "model-agnostic"]
   },
   {
@@ -866,7 +1265,14 @@
     "subsection": "Active Perception and Recovery",
     "scope": "vla",
     "risks": ["task-reliability"],
-    "threat_model": "Non-adversarial OOD (spatial, object, color, background)",
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["distribution-shift"],
+      "surface": ["visual-perception", "world-state"],
+      "target": ["vla-policy"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["memory-trap", "affordance-field", "recovery"]
   },
   {
@@ -881,7 +1287,14 @@
     "subsection": "Active Perception and Recovery",
     "scope": "vla",
     "risks": ["task-reliability"],
-    "threat_model": "Execution failure (closed-loop policy failure)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["execution-error"],
+      "surface": ["visual-perception", "world-state", "action-interface"],
+      "target": ["action-generation", "robot-executor"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["failure-recovery", "reasoning", "closed-loop"]
   },
   {
@@ -896,7 +1309,14 @@
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "robot-policy",
     "risks": [],
-    "threat_model": "Execution failure (state-conditioned anomaly)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["execution-error"],
+      "surface": ["proprioception", "world-state"],
+      "target": ["action-generation", "robot-executor"],
+      "consequence": ["recovery-failure"]
+    },
     "tags": ["anomaly-detection", "normalizing-flow", "runtime-monitoring"]
   },
   {
@@ -911,7 +1331,14 @@
     "subsection": "Safety and Hazard Benchmarks",
     "scope": "vla",
     "risks": ["task-reliability", "physical-safety"],
-    "threat_model": "Semantic safety violation (instruction, context, harmful action)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["semantic-misalignment"],
+      "surface": ["user-instruction", "world-state"],
+      "target": ["task-planner", "action-generation"],
+      "consequence": ["policy-violation", "task-failure", "unsafe-motion"]
+    },
     "tags": ["semantic-safety", "hazard", "benchmark"]
   },
   {
@@ -926,7 +1353,14 @@
     "subsection": "Robustness and Uncertainty Evaluation",
     "scope": "vla",
     "risks": ["task-reliability"],
-    "threat_model": "Evaluation scope (natural, adversarial input mutation)",
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": ["inference"],
+        "mechanisms": ["distribution-shift", "digital-perturbation"],
+        "surfaces": ["visual-perception", "user-instruction"]
+      }
+    },
     "tags": ["testing", "input-mutation", "robotic-manipulation"]
   },
   {
@@ -941,7 +1375,14 @@
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "robot-policy",
     "risks": ["task-reliability", "physical-safety"],
-    "threat_model": "Policy failure (temporal safety-property violation)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["unsafe-policy-behavior"],
+      "surface": ["action-interface", "execution-control"],
+      "target": ["action-generation", "robot-executor"],
+      "consequence": ["task-failure", "unsafe-motion"]
+    },
     "tags": ["temporal-verification", "black-box-policy", "runtime-regulator"]
   },
   {
@@ -956,7 +1397,14 @@
     "subsection": "Robustness and Uncertainty Evaluation",
     "scope": "vla",
     "risks": ["task-reliability"],
-    "threat_model": "Uncertainty failure (overconfidence, distribution shift)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["uncertainty-miscalibration"],
+      "surface": ["reasoning-representation", "action-interface"],
+      "target": ["vla-policy"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["confidence-calibration", "uncertainty", "selective-prediction"]
   },
   {
@@ -971,7 +1419,14 @@
     "subsection": "Safety and Hazard Benchmarks",
     "scope": "embodied-agent",
     "risks": ["ethical-societal"],
-    "threat_model": "Hazardous instruction (harmful embodied action)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["hazardous-instruction"],
+      "surface": ["user-instruction"],
+      "target": ["task-planner"],
+      "consequence": ["policy-violation"]
+    },
     "tags": ["hazardous-instruction", "embodied-agent", "benchmark"]
   },
   {
@@ -986,7 +1441,14 @@
     "subsection": "Safety and Hazard Benchmarks",
     "scope": "llm-robot",
     "risks": ["ethical-societal", "security-privacy"],
-    "threat_model": "Hazardous instruction (adversarial prompt, unsafe planning)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["jailbreak"],
+      "surface": ["user-instruction"],
+      "target": ["task-planner"],
+      "consequence": ["policy-violation"]
+    },
     "tags": ["safety-benchmark", "jailbreak", "mitigation"]
   },
   {
@@ -1001,7 +1463,14 @@
     "subsection": "Reliability-Oriented Policy Refinement",
     "scope": "vla",
     "risks": ["task-reliability"],
-    "threat_model": "Policy failure (stage hallucination, long-horizon shortcut)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["unsafe-policy-behavior"],
+      "surface": ["task-planning", "action-interface"],
+      "target": ["vla-policy"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["self-evolving-policy", "stage-hallucination", "long-horizon", "sim-to-real"]
   },
   {
@@ -1016,7 +1485,14 @@
     "subsection": "Driving Robustness and Generalization",
     "scope": "autonomous-driving",
     "risks": ["task-reliability"],
-    "threat_model": "Non-adversarial OOD (long-horizon rollout, scenario variation)",
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["distribution-shift"],
+      "surface": ["world-state", "task-planning"],
+      "target": ["task-planner", "action-generation"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["autonomous-driving", "scenario-rollout", "long-horizon", "zero-shot"]
   },
   {
@@ -1031,7 +1507,14 @@
     "subsection": "Robust Training and Safety Alignment",
     "scope": "robot-policy",
     "risks": ["physical-safety"],
-    "threat_model": "Physical safety violation (safe-RL constraint violation)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["constraint-violation"],
+      "surface": ["world-state", "action-interface", "execution-control"],
+      "target": ["action-generation", "robot-executor"],
+      "consequence": ["unsafe-motion"]
+    },
     "tags": ["safe-reinforcement-learning", "multi-objective", "constraint-violation"]
   },
   {
@@ -1046,7 +1529,14 @@
     "subsection": "Model Unlearning and Data Governance",
     "scope": "vla",
     "risks": ["task-reliability"],
-    "threat_model": "System-level misuse (unsafe or privacy-sensitive behavior retention)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["training", "inference"],
+      "mechanism": ["memorized-data-retention", "unsafe-policy-behavior"],
+      "surface": ["model-supply-chain"],
+      "target": ["vla-policy", "private-data"],
+      "consequence": ["privacy-leakage", "policy-violation", "task-failure"]
+    },
     "tags": ["machine-unlearning", "privacy", "unsafe-behavior", "utility-preservation"]
   },
   {
@@ -1061,7 +1551,14 @@
     "subsection": "Human-in-the-Loop Safety Refinement",
     "scope": "vla",
     "risks": ["task-reliability"],
-    "threat_model": "Policy failure (failure-prone action, post-deployment drift)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["unsafe-policy-behavior"],
+      "surface": ["action-interface"],
+      "target": ["vla-policy"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["human-in-the-loop", "preference-optimization", "failure-correction", "real-robot"]
   },
   {
@@ -1076,7 +1573,14 @@
     "subsection": "Action Shielding, Fail-Safes, and Recovery",
     "scope": "vision-language-navigation",
     "risks": ["task-reliability", "physical-safety"],
-    "threat_model": "Physical safety violation (navigation collision)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["constraint-violation"],
+      "surface": ["world-state", "action-interface", "execution-control"],
+      "target": ["action-generation", "robot-executor"],
+      "consequence": ["collision", "task-failure"]
+    },
     "tags": ["collision-avoidance", "vision-language-navigation", "waypoint", "recovery"]
   },
   {
@@ -1091,7 +1595,14 @@
     "subsection": "Action Shielding, Fail-Safes, and Recovery",
     "scope": "llm-robot",
     "risks": ["task-reliability"],
-    "threat_model": "Execution failure (explanation, corrective planning)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["execution-error"],
+      "surface": ["visual-perception", "proprioception", "world-state"],
+      "target": ["action-generation", "robot-executor"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["failure-explanation", "failure-correction", "multisensory", "llm-planner"]
   },
   {
@@ -1106,7 +1617,14 @@
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "autonomous-driving",
     "risks": ["task-reliability", "physical-safety"],
-    "threat_model": "Planning failure (intent-constraint mismatch, sensing error)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["planning-error"],
+      "surface": ["visual-perception", "world-state", "task-planning"],
+      "target": ["task-planner"],
+      "consequence": ["task-failure", "unsafe-motion"]
+    },
     "tags": ["autonomous-driving", "runtime-supervision", "causal-narration", "infraction-score"]
   },
   {
@@ -1121,7 +1639,14 @@
     "subsection": "Action Shielding, Fail-Safes, and Recovery",
     "scope": "robot-foundation-model",
     "risks": ["physical-safety"],
-    "threat_model": "Physical safety violation (collision, state-action constraint)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["constraint-violation"],
+      "surface": ["action-interface", "execution-control"],
+      "target": ["action-generation", "robot-executor"],
+      "consequence": ["collision"]
+    },
     "tags": ["safety-layer", "inductive-bias", "formal-guarantee", "collision-avoidance"]
   },
   {
@@ -1136,7 +1661,14 @@
     "subsection": "Multimodal Perception and Physical Safeguards",
     "scope": "vla",
     "risks": [],
-    "threat_model": "Physical safety violation (human-aware aerial handover)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["constraint-violation"],
+      "surface": ["visual-perception", "world-state", "execution-control"],
+      "target": ["action-generation", "robot-executor"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["aerial-manipulation", "human-aware-control", "handover", "navigation"]
   },
   {
@@ -1151,7 +1683,14 @@
     "subsection": "Action Shielding, Fail-Safes, and Recovery",
     "scope": "vla",
     "risks": ["task-reliability", "physical-safety"],
-    "threat_model": "Physical safety violation (contact force, impedance mismatch)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["constraint-violation"],
+      "surface": ["proprioception", "action-interface"],
+      "target": ["action-generation", "robot-executor"],
+      "consequence": ["task-failure", "unsafe-motion"]
+    },
     "tags": ["contact-rich-manipulation", "force-control", "variable-impedance", "real-robot"]
   },
   {
@@ -1166,7 +1705,14 @@
     "subsection": "Safety-Critical Perception Evaluation",
     "scope": "vlm",
     "risks": [],
-    "threat_model": "Evaluation scope (worker action, emotion recognition)",
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": ["inference"],
+        "mechanisms": ["perception-error"],
+        "surfaces": ["visual-perception"]
+      }
+    },
     "tags": ["construction-safety", "human-action-recognition", "emotion-recognition", "vlm"]
   },
   {
@@ -1181,7 +1727,14 @@
     "subsection": "Robustness and Uncertainty Evaluation",
     "scope": "vla",
     "risks": [],
-    "threat_model": "Uncertainty failure (execution quality, confidence)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["uncertainty-miscalibration"],
+      "surface": ["visual-perception", "reasoning-representation", "action-interface"],
+      "target": ["vla-policy"],
+      "consequence": ["recovery-failure"]
+    },
     "tags": ["uncertainty", "execution-quality", "human-evaluation", "test-oracle"]
   },
   {
@@ -1196,7 +1749,14 @@
     "subsection": "Sensor, State, and Physical Interventions",
     "scope": "vla",
     "risks": ["task-reliability", "security-privacy"],
-    "threat_model": "Inference-time attack (camera, microphone sensor corruption)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["sensor-spoofing"],
+      "surface": ["visual-perception", "audio-perception"],
+      "target": ["vla-policy"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["sensor-attack", "camera", "microphone", "robustness-evaluation"]
   },
   {
@@ -1211,7 +1771,14 @@
     "subsection": "Comprehensive VLA Evaluation",
     "scope": "vla",
     "risks": ["task-reliability"],
-    "threat_model": "Evaluation scope (long horizon, language, knowledge transfer)",
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": ["inference"],
+        "mechanisms": ["distribution-shift", "planning-error"],
+        "surfaces": ["visual-perception", "user-instruction", "task-planning", "action-interface"]
+      }
+    },
     "tags": ["benchmark", "long-horizon", "language-grounding", "knowledge-transfer"]
   },
   {
@@ -1226,7 +1793,14 @@
     "subsection": "Task and Physical Safety",
     "scope": "physical-ai",
     "risks": ["task-reliability", "physical-safety"],
-    "threat_model": "Evaluation scope (collision, cargo damage, injury cost)",
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": ["inference"],
+        "mechanisms": ["execution-error", "constraint-violation"],
+        "surfaces": ["world-state", "task-planning", "execution-control"]
+      }
+    },
     "tags": ["navigation", "collision", "economic-cost", "deployment"]
   },
   {
@@ -1241,7 +1815,14 @@
     "subsection": "Jailbreaks and Prompt Injection",
     "scope": "embodied-agent",
     "risks": ["ethical-societal", "security-privacy"],
-    "threat_model": "Inference-time attack (indirect environmental jailbreak)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["indirect-prompt-injection", "environment-manipulation"],
+      "surface": ["physical-semantic-environment"],
+      "target": ["task-planner"],
+      "consequence": ["policy-violation", "control-hijacking"]
+    },
     "tags": ["indirect-jailbreak", "environmental-injection", "benchmark", "black-box"]
   },
   {
@@ -1256,7 +1837,14 @@
     "subsection": "Task and Physical Safety",
     "scope": "vla",
     "risks": ["task-reliability", "physical-safety"],
-    "threat_model": "Evaluation scope (collision, semantic misalignment, unsafe success)",
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": ["inference"],
+        "mechanisms": ["semantic-misalignment", "execution-error"],
+        "surfaces": ["visual-perception", "user-instruction", "world-state", "execution-control"]
+      }
+    },
     "tags": ["benchmark", "collision-free-demonstration", "semantic-safety", "domain-randomization"]
   },
   {
@@ -1271,7 +1859,14 @@
     "subsection": "Task and Physical Safety",
     "scope": "vla",
     "risks": ["task-reliability", "physical-safety"],
-    "threat_model": "Evaluation scope (scene, instruction, perception safety)",
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": ["inference"],
+        "mechanisms": ["perception-error", "semantic-misalignment", "execution-error"],
+        "surfaces": ["visual-perception", "user-instruction", "world-state", "action-interface"]
+      }
+    },
     "tags": ["benchmark", "safety-cost", "risk-exposure-time", "unsafe-success"]
   },
   {
@@ -1286,7 +1881,14 @@
     "subsection": "OOD and Generalization Benchmarks",
     "scope": "vla",
     "risks": ["task-reliability"],
-    "threat_model": "Non-adversarial OOD (paraphrase, object reference)",
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["distribution-shift"],
+      "surface": ["visual-perception"],
+      "target": ["vla-policy"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["benchmark", "paraphrase", "linguistic-generalization", "semantic-grounding"]
   },
   {
@@ -1301,7 +1903,14 @@
     "subsection": "Adversarial and Physical Robustness",
     "scope": "vla",
     "risks": ["task-reliability", "security-privacy"],
-    "threat_model": "Evaluation scope (adversarial attack, backdoor, targeted action)",
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": ["training", "inference"],
+        "mechanisms": ["digital-perturbation", "backdoor"],
+        "surfaces": ["model-supply-chain", "visual-perception", "action-interface"]
+      }
+    },
     "tags": ["benchmark", "adversarial-attack", "backdoor", "targeted-action", "real-robot"]
   },
   {
@@ -1316,7 +1925,14 @@
     "subsection": "Adversarial and Physical Robustness",
     "scope": "vla",
     "risks": ["physical-safety", "security-privacy"],
-    "threat_model": "Inference-time attack (physical risk-object injection)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["adversarial-object", "environment-manipulation"],
+      "surface": ["physical-semantic-environment", "visual-perception"],
+      "target": ["vla-policy", "action-generation"],
+      "consequence": ["control-hijacking", "unsafe-motion"]
+    },
     "tags": ["physical-red-teaming", "risk-object", "trajectory-optimization", "safety-cost", "guard"]
   },
   {
@@ -1331,7 +1947,14 @@
     "subsection": "Task and Physical Safety",
     "scope": "vla",
     "risks": ["task-reliability", "physical-safety"],
-    "threat_model": "Evaluation scope (unsafe success, contact, disturbance, self-collision)",
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": ["inference"],
+        "mechanisms": ["constraint-violation", "execution-error"],
+        "surfaces": ["world-state", "action-interface", "execution-control"]
+      }
+    },
     "tags": ["benchmark", "unsafe-success", "signal-temporal-logic", "severity", "collision"]
   },
   {
@@ -1346,7 +1969,14 @@
     "subsection": "Representation Steering and Inference-Time Defense",
     "scope": "vla",
     "risks": ["task-reliability", "security-privacy"],
-    "threat_model": "Training-time attack (visual-triggered backdoor)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["training", "inference"],
+      "mechanism": ["backdoor"],
+      "surface": ["model-supply-chain", "visual-perception"],
+      "target": ["action-generation"],
+      "consequence": ["targeted-action", "control-hijacking", "task-failure"]
+    },
     "tags": ["backdoor-defense", "inference-time", "uncertainty", "localization", "inpainting"]
   },
   {
@@ -1361,7 +1991,14 @@
     "subsection": "Backdoors and Data Poisoning",
     "scope": "vla",
     "risks": ["task-reliability", "security-privacy"],
-    "threat_model": "Training-time attack (persistent backdoor, downstream fine-tuning)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["training", "inference"],
+      "mechanism": ["backdoor"],
+      "surface": ["model-supply-chain", "visual-perception"],
+      "target": ["vla-policy"],
+      "consequence": ["targeted-action", "control-hijacking", "task-failure"]
+    },
     "tags": ["backdoor", "supply-chain", "fine-tuning-persistence", "real-robot"]
   },
   {
@@ -1376,7 +2013,14 @@
     "subsection": "Safety-Aware Policy Learning",
     "scope": "autonomous-driving",
     "risks": ["task-reliability", "physical-safety"],
-    "threat_model": "Non-adversarial OOD (traffic density, unsafe exploration)",
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["distribution-shift"],
+      "surface": ["visual-perception", "world-state", "task-planning", "action-interface"],
+      "target": ["task-planner", "action-generation"],
+      "consequence": ["task-failure", "unsafe-motion"]
+    },
     "tags": ["safe-rl", "world-model", "autonomous-driving", "semantic-safety"]
   },
   {
@@ -1391,7 +2035,14 @@
     "subsection": "Task and Physical Safety",
     "scope": "embodied-agent",
     "risks": ["task-reliability", "physical-safety"],
-    "threat_model": "Evaluation scope (non-adversarial hazardous task planning)",
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": ["inference"],
+        "mechanisms": ["hazardous-instruction", "planning-error"],
+        "surfaces": ["user-instruction", "task-planning"]
+      }
+    },
     "tags": ["benchmark", "alignment", "task-planning", "hazard-category"]
   },
   {
@@ -1406,7 +2057,14 @@
     "subsection": "Action Shielding, Fail-Safes, and Recovery",
     "scope": "vla",
     "risks": ["task-reliability"],
-    "threat_model": "Execution failure (fixed action-chunk horizon, perceptual change)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["execution-error"],
+      "surface": ["visual-perception", "action-interface", "execution-control"],
+      "target": ["action-generation", "robot-executor"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["action-chunking", "adaptive-horizon", "test-time", "attention"]
   },
   {
@@ -1421,7 +2079,14 @@
     "subsection": "Representation and Language-Action Generalization",
     "scope": "vla",
     "risks": ["task-reliability"],
-    "threat_model": "Non-adversarial OOD (visual shift, representation degradation)",
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["distribution-shift"],
+      "surface": ["visual-perception", "reasoning-representation"],
+      "target": ["vla-policy"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["visual-representation", "fine-tuning", "alignment", "ood-generalization"]
   },
   {
@@ -1436,7 +2101,14 @@
     "subsection": "Adversarial and Physical Robustness",
     "scope": "vla",
     "risks": ["task-reliability", "security-privacy"],
-    "threat_model": "Evaluation scope (OOD, typographic prompt, adversarial patch)",
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": ["inference"],
+        "mechanisms": ["distribution-shift", "typographic-injection", "adversarial-patch"],
+        "surfaces": ["visual-perception", "physical-semantic-environment"]
+      }
+    },
     "tags": ["benchmark", "physical-threat", "typographic-attack", "adversarial-patch"]
   },
   {
@@ -1451,7 +2123,14 @@
     "subsection": "Privacy-Preserving Perception",
     "scope": "robot-perception",
     "risks": ["task-reliability", "security-privacy"],
-    "threat_model": "System-level misuse (sensitive visual content, navigation utility)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["sensitive-data-exposure"],
+      "surface": ["visual-perception"],
+      "target": ["private-data"],
+      "consequence": ["privacy-leakage", "task-failure"]
+    },
     "tags": ["privacy", "ultra-low-resolution", "semantic-segmentation", "navigation"]
   },
   {
@@ -1466,7 +2145,14 @@
     "subsection": "Safety-Critical Perception Evaluation",
     "scope": "robot-perception",
     "risks": ["security-privacy"],
-    "threat_model": "Evaluation scope (image modality, resolution, perceived privacy)",
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": ["inference"],
+        "mechanisms": ["sensitive-data-exposure"],
+        "surfaces": ["visual-perception"]
+      }
+    },
     "tags": ["privacy", "user-study", "image-modality", "resolution"]
   },
   {
@@ -1481,7 +2167,14 @@
     "subsection": "Privacy-Preserving Perception",
     "scope": "robot-perception",
     "risks": ["task-reliability", "security-privacy"],
-    "threat_model": "System-level misuse (privacy-sensitive objects in video streams)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["sensitive-data-exposure"],
+      "surface": ["visual-perception"],
+      "target": ["private-data"],
+      "consequence": ["privacy-leakage", "task-failure"]
+    },
     "tags": ["privacy", "real-time-video", "conformal-prediction", "formal-specification"]
   },
   {
@@ -1496,7 +2189,14 @@
     "subsection": "Position Papers and Research Agendas",
     "scope": "embodied-agent",
     "risks": [],
-    "threat_model": "Survey scope (inferential privacy, contextual integrity)",
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": ["inference", "system"],
+        "mechanisms": ["sensitive-data-exposure"],
+        "surfaces": ["context-memory-retrieval", "multi-agent-communication", "visual-perception"]
+      }
+    },
     "tags": ["position-paper", "privacy", "human-robot-interaction", "dynamic-learning"]
   },
   {
@@ -1511,7 +2211,14 @@
     "subsection": "Action Shielding, Fail-Safes, and Recovery",
     "scope": "robot-manipulation",
     "risks": ["task-reliability", "physical-safety"],
-    "threat_model": "Semantic safety violation (unsafe relation, pose, collision)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["semantic-misalignment"],
+      "surface": ["visual-perception", "world-state", "action-interface", "execution-control"],
+      "target": ["task-planner", "action-generation"],
+      "consequence": ["collision", "policy-violation", "task-failure"]
+    },
     "tags": ["semantic-safety", "control-barrier-function", "collision", "safety-filter"]
   },
   {
@@ -1526,7 +2233,14 @@
     "subsection": "Failure Detection and Recovery",
     "scope": "robot-manipulation",
     "risks": ["task-reliability"],
-    "threat_model": "Execution failure (semantic misalignment, cross-domain transfer)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["execution-error"],
+      "surface": ["visual-perception", "proprioception"],
+      "target": ["action-generation", "robot-executor"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["failure-detection", "semantic-misalignment", "vlm", "real-robot"]
   },
   {
@@ -1541,7 +2255,14 @@
     "subsection": "Action Shielding, Fail-Safes, and Recovery",
     "scope": "embodied-agent",
     "risks": ["task-reliability", "physical-safety"],
-    "threat_model": "Hazardous instruction (dynamic, temporal, context-dependent risk)",
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["hazardous-instruction"],
+      "surface": ["user-instruction", "world-state", "task-planning"],
+      "target": ["task-planner"],
+      "consequence": ["policy-violation", "task-failure", "unsafe-motion"]
+    },
     "tags": ["runtime-guardrail", "executable-logic", "safety-memory", "replanning"]
   },
   {
@@ -1556,7 +2277,14 @@
     "subsection": "Failure Detection and Recovery",
     "scope": "llm-robot",
     "risks": ["task-reliability"],
-    "threat_model": "Execution failure (plan-execution misalignment, perturbation)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["execution-error"],
+      "surface": ["visual-perception", "world-state", "task-planning", "execution-control"],
+      "target": ["action-generation", "robot-executor"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["failure-detection", "recovery", "constraint-monitoring", "planning"]
   },
   {
@@ -1571,7 +2299,14 @@
     "subsection": "Uncertainty, Abstention, and Human Oversight",
     "scope": "llm-robot",
     "risks": ["task-reliability"],
-    "threat_model": "Uncertainty failure (ambiguous instruction, calibrated help request)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["instruction-ambiguity"],
+      "surface": ["user-instruction", "reasoning-representation", "task-planning"],
+      "target": ["reasoning-process", "task-planner"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["uncertainty", "conformal-prediction", "ask-for-help", "human-oversight"]
   },
   {
@@ -1586,7 +2321,14 @@
     "subsection": "Failure Detection and Recovery",
     "scope": "llm-robot",
     "risks": ["task-reliability"],
-    "threat_model": "Execution failure (semantic target, physical execution, visual verification)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["execution-error"],
+      "surface": ["user-instruction", "visual-perception", "world-state", "execution-control"],
+      "target": ["action-generation", "robot-executor"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["replanning", "human-robot-collaboration", "dual-correction", "verification"]
   },
   {
@@ -1601,7 +2343,14 @@
     "subsection": "Uncertainty, Abstention, and Human Oversight",
     "scope": "vla",
     "risks": ["task-reliability"],
-    "threat_model": "Uncertainty failure (ambiguous instruction, dialogue disambiguation)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["instruction-ambiguity"],
+      "surface": ["user-instruction"],
+      "target": ["reasoning-process", "task-planner"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["instruction-ambiguity", "multi-turn-dialogue", "disambiguation", "real-robot"]
   },
   {
@@ -1616,7 +2365,14 @@
     "subsection": "Uncertainty, Abstention, and Human Oversight",
     "scope": "vla",
     "risks": ["task-reliability"],
-    "threat_model": "Planning failure (false-premise instruction, impossible task)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["planning-error"],
+      "surface": ["user-instruction"],
+      "target": ["task-planner"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["false-premise", "rejection", "clarification", "instruction-tuning"]
   },
   {
@@ -1631,7 +2387,14 @@
     "subsection": "Failure Detection and Recovery",
     "scope": "vla",
     "risks": ["task-reliability"],
-    "threat_model": "Execution failure (novel task, failed action, corrective action)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["execution-error"],
+      "surface": ["visual-perception", "world-state", "action-interface"],
+      "target": ["action-generation", "robot-executor"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["self-correction", "fast-slow-system", "chain-of-thought", "failure-recovery"]
   },
   {
@@ -1646,7 +2409,14 @@
     "subsection": "Failure Detection and Recovery",
     "scope": "robot-manipulation",
     "risks": ["task-reliability"],
-    "threat_model": "Execution failure (fine-grained action, dynamic environment)",
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["execution-error"],
+      "surface": ["visual-perception", "action-interface", "execution-control"],
+      "target": ["action-generation", "robot-executor"],
+      "consequence": ["task-failure"]
+    },
     "tags": ["self-reflection", "motion-instruction", "action-correction", "lifelong-learning"]
   },
   {
@@ -1661,7 +2431,14 @@
     "subsection": "General VLA Surveys",
     "scope": "vla",
     "risks": [],
-    "threat_model": "Survey scope (applications, challenges, real-world deployment)",
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": ["training", "inference", "system"],
+        "mechanisms": [],
+        "surfaces": ["action-interface", "execution-control", "reasoning-representation", "user-instruction", "visual-perception"]
+      }
+    },
     "tags": ["survey", "vla", "applications", "challenges"]
   },
   {
@@ -1676,7 +2453,14 @@
     "subsection": "General VLA Surveys",
     "scope": "vla",
     "risks": [],
-    "threat_model": "Survey scope (VLM-based VLA architecture, manipulation)",
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": ["training", "inference"],
+        "mechanisms": [],
+        "surfaces": ["action-interface", "reasoning-representation", "user-instruction", "visual-perception"]
+      }
+    },
     "tags": ["survey", "vlm", "robotic-manipulation", "architecture"]
   },
   {
@@ -1691,7 +2475,14 @@
     "subsection": "Training and Adaptation Surveys",
     "scope": "vla",
     "risks": [],
-    "threat_model": "Survey scope (post-training, adaptation, motor learning)",
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": ["training"],
+        "mechanisms": [],
+        "surfaces": ["action-interface", "model-supply-chain", "reasoning-representation"]
+      }
+    },
     "tags": ["survey", "post-training", "adaptation", "motor-learning"]
   },
   {
@@ -1706,7 +2497,14 @@
     "subsection": "Training and Adaptation Surveys",
     "scope": "vla",
     "risks": [],
-    "threat_model": "Survey scope (action tokenization, policy representation)",
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": ["training", "inference"],
+        "mechanisms": [],
+        "surfaces": ["action-interface", "reasoning-representation"]
+      }
+    },
     "tags": ["survey", "action-tokenization", "policy-representation", "vla"]
   },
   {
@@ -1721,7 +2519,14 @@
     "subsection": "General VLA Surveys",
     "scope": "vla",
     "risks": [],
-    "threat_model": "Survey scope (robotic manipulation, systematic review)",
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": ["training", "inference"],
+        "mechanisms": [],
+        "surfaces": ["action-interface", "execution-control", "user-instruction", "visual-perception"]
+      }
+    },
     "tags": ["survey", "systematic-review", "robotic-manipulation", "vla"]
   },
   {
@@ -1736,7 +2541,14 @@
     "subsection": "General VLA Surveys",
     "scope": "vla",
     "risks": [],
-    "threat_model": "Survey scope (end-to-end VLA models, taxonomy)",
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": ["training", "inference"],
+        "mechanisms": [],
+        "surfaces": ["action-interface", "reasoning-representation", "user-instruction", "visual-perception"]
+      }
+    },
     "tags": ["survey", "end-to-end", "taxonomy", "vla"]
   },
   {
@@ -1751,7 +2563,14 @@
     "subsection": "Training and Adaptation Surveys",
     "scope": "vla",
     "risks": [],
-    "threat_model": "Survey scope (training, inference, deployment efficiency)",
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": ["training", "inference", "system"],
+        "mechanisms": [],
+        "surfaces": ["action-interface", "middleware-network", "model-supply-chain", "reasoning-representation"]
+      }
+    },
     "tags": ["survey", "efficiency", "inference", "deployment"]
   },
   {
@@ -1766,8 +2585,125 @@
     "subsection": "Domain-Specific Surveys",
     "scope": "vla",
     "risks": [],
-    "threat_model": "Survey scope (real-world robotics, deployment challenges)",
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": ["training", "inference", "system"],
+        "mechanisms": ["distribution-shift", "execution-error"],
+        "surfaces": ["action-interface", "execution-control", "proprioception", "visual-perception", "world-state"]
+      }
+    },
     "tags": ["survey", "real-world", "robotics", "deployment"]
+  },
+  {
+    "id": "zhao-2026-flare",
+    "title": "FLARE: A Failure-Aware Framework for Autonomous Correction and Recovery in Visual-Language Robotic Manipulation",
+    "first_author": "Zhao",
+    "venue": "CVPR",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2608.26645",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection and Recovery",
+    "scope": "vla",
+    "risks": ["task-reliability"],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["execution-error"],
+      "surface": ["visual-perception", "proprioception", "action-interface", "execution-control"],
+      "target": ["action-generation", "robot-executor"],
+      "consequence": ["task-failure", "collision"]
+    },
+    "tags": ["vla", "retry", "reset", "failure-recovery", "contact-rich"]
+  },
+  {
+    "id": "zhang-2026-harness-vla",
+    "title": "Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents",
+    "first_author": "Zhang",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2607.08448",
+    "code_url": "https://github.com/RLinf/RPent",
+    "section": "defenses",
+    "subsection": "Failure Detection and Recovery",
+    "scope": "vla",
+    "risks": ["task-reliability"],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["execution-error"],
+      "surface": ["visual-perception", "proprioception", "action-interface", "context-memory-retrieval"],
+      "target": ["action-generation", "robot-executor"],
+      "consequence": ["task-failure"]
+    },
+    "tags": ["vla", "harness", "retry", "contact-rich", "memory-guided", "v4-revision"]
+  },
+  {
+    "id": "hao-2026-far",
+    "title": "FAR: Failure-Aware Retry for Test-Time Recovery and Continual Policy Improvement",
+    "first_author": "Hao",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2607.01111",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection and Recovery",
+    "scope": "robot-policy",
+    "risks": ["task-reliability"],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["execution-error"],
+      "surface": ["action-interface", "execution-control"],
+      "target": ["action-generation", "robot-executor"],
+      "consequence": ["task-failure"]
+    },
+    "tags": ["robot-policy", "failure-aware", "test-time-adaptation", "continual-improvement"]
+  },
+  {
+    "id": "canevaro-2026-shift-drift",
+    "title": "Shift & Drift: A Zero-Shot Benchmark for Generalizable and Robust Autonomous Driving Motion Planning",
+    "first_author": "Canevaro",
+    "venue": "IROS",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2607.07844",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Driving Robustness and Generalization",
+    "scope": "autonomous-driving",
+    "risks": ["task-reliability"],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["distribution-shift"],
+      "surface": ["world-state", "execution-control"],
+      "target": ["task-planner", "action-generation"],
+      "consequence": ["task-failure"]
+    },
+    "tags": ["benchmark", "autonomous-driving", "closed-loop", "semantic-shift", "state-drift", "IROS-2026"]
+  },
+  {
+    "id": "lu-2026-aspire",
+    "title": "ASPIRE: Agentic /Skills Discovery for Robotics",
+    "first_author": "Lu",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2607.00272",
+    "code_url": "https://research.nvidia.com/labs/gear/ASPIRE/",
+    "section": "defenses",
+    "subsection": "Failure Detection and Recovery",
+    "scope": "embodied-agent",
+    "risks": ["task-reliability"],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["execution-error"],
+      "surface": ["context-memory-retrieval", "task-planning", "action-interface"],
+      "target": ["action-generation", "robot-executor"],
+      "consequence": ["task-failure"]
+    },
+    "tags": ["embodied-agent", "skill-discovery", "failure-diagnosis", "repair", "sim-to-real"]
   },
   {
     "id": "ma-2024-vla-embodied-ai-survey",
@@ -1781,7 +2717,14 @@
     "subsection": "General VLA Surveys",
     "scope": "vla",
     "risks": [],
-    "threat_model": "Survey scope (embodied AI, VLA models, benchmarks)",
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": ["training", "inference"],
+        "mechanisms": [],
+        "surfaces": ["action-interface", "reasoning-representation", "user-instruction", "visual-perception"]
+      }
+    },
     "tags": ["survey", "embodied-ai", "benchmark", "vla"]
   }
 ]

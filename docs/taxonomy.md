@@ -54,10 +54,10 @@ The `threat_model` field should be a structured object rather than a compact fre
 | Field | Type | Required for a concrete study | Meaning | Example |
 |---|---|---:|---|---|
 | `kind` | string | Yes | Broad source of failure or scope of the record | `adversarial` |
-| `lifecycle` | array of strings | Yes | Stages in which compromise is introduced or activated | `training`, `inference` |
+| `lifecycle` | array of strings | Yes | Stages in which a threat is introduced or activated, or a failure is evaluated | `training`, `inference` |
 | `mechanism` | array of strings | Yes | How the attack, shift, or failure is produced | `adversarial-patch` |
 | `surface` | array of strings | Yes | Direct system boundary or boundaries through which the threat, shift, or failure is introduced or observed | `visual-perception` |
-| `target` | array of strings | Yes | Component or representation the threat is intended to alter | `vla-policy` |
+| `target` | array of strings | Yes | Component, representation, or asset affected or evaluated | `vla-policy` |
 | `consequence` | array of strings | Yes | Concrete endpoint of the threat or failure chain | `task-failure` |
 
 The repository uses descriptive semantic labels. Numbered surface codes defined by an individual paper or survey are not used as canonical metadata.
@@ -112,8 +112,8 @@ The repository uses descriptive semantic labels. Numbered surface codes defined 
 | Language and context | `jailbreak`, `direct-prompt-injection`, `indirect-prompt-injection`, `command-hijacking`, `memory-poisoning`, `retrieval-poisoning` |
 | Sensor and state | `sensor-spoofing`, `state-manipulation`, `feedback-spoofing`, `multimodal-desynchronization` |
 | Reasoning, planning, and action | `representation-hijacking`, `planning-hijacking`, `action-manipulation`, `action-freezing`, `trajectory-manipulation` |
-| System and communication | `middleware-compromise`, `network-attack`, `multi-agent-propagation`, `denial-of-service`, `privacy-leakage`, `covert-channel` |
-| Non-adversarial | `distribution-shift`, `instruction-ambiguity`, `perception-error`, `planning-error`, `execution-error`, `uncertainty-miscalibration` |
+| System and communication | `middleware-compromise`, `network-attack`, `multi-agent-propagation`, `denial-of-service`, `sensitive-data-exposure`, `memorized-data-retention`, `covert-channel` |
+| Non-adversarial and system failure | `distribution-shift`, `instruction-ambiguity`, `perception-error`, `semantic-misalignment`, `planning-error`, `execution-error`, `constraint-violation`, `uncertainty-miscalibration`, `unsafe-policy-behavior` |
 
 ### Target Vocabulary
 
@@ -177,7 +177,7 @@ The existing `risks` field remains separate. `risks` records empirically evaluat
 
 ### Survey and Broad-Evaluation Records
 
-Surveys and broad benchmarks should not be assigned an invented single target or consequence. They use a coverage variant instead.
+Surveys and broad benchmarks should not be assigned an invented single target or consequence. They use a coverage variant instead. A general survey that does not analyze safety mechanisms may use an empty `mechanisms` list; a broad safety or security survey may use `["multiple"]`.
 
 ```json
 "threat_model": {
