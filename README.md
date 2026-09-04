@@ -53,8 +53,8 @@ See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.
 <summary><strong>Show subsection index</strong></summary>
 
 - **📚 Surveys and Perspectives**
-  - [VLA Safety Surveys](#surveys-vla-safety-surveys)
   - [Embodied AI Safety and Security](#surveys-embodied-ai-safety-and-security)
+  - [VLA Safety Surveys](#surveys-vla-safety-surveys)
   - [Domain-Specific Surveys](#surveys-domain-specific-surveys)
   - [Position Papers and Research Agendas](#surveys-position-papers-and-research-agendas)
   - [General VLA Surveys](#surveys-general-vla-surveys)
@@ -106,19 +106,11 @@ See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.
 
 </details>
 
-**124 papers in the current catalog.**
+**128 papers in the current catalog.**
 
 <a id="surveys"></a>
 
 ## 📚 Surveys and Perspectives
-
-<a id="surveys-vla-safety-surveys"></a>
-
-### VLA Safety Surveys
-
-| Paper | Venue | Evaluated Risk | Threat Model |
-|---|---:|---|---|
-| **[Vision-Language-Action Safety: Threats, Challenges, Evaluations, and Mechanisms](https://arxiv.org/abs/2604.23775)** [![GitHub stars](https://img.shields.io/github/stars/LiQiiiii/Awesome-VLA-Safety?style=social)](https://github.com/LiQiiiii/Awesome-VLA-Safety)<br><sub>Li et al.</sub> | arXiv 2026 | — | ![Cross-lifecycle](https://img.shields.io/badge/-Cross--lifecycle-6F9FEF?style=flat) ![Multiple surfaces](https://img.shields.io/badge/-Multiple_surfaces-3FA89B?style=flat) <br> ![Survey coverage](https://img.shields.io/badge/-Survey_coverage-657A8C?style=flat) |
 
 <a id="surveys-embodied-ai-safety-and-security"></a>
 
@@ -127,9 +119,21 @@ See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.
 | Paper | Venue | Evaluated Risk | Threat Model |
 |---|---:|---|---|
 | **[Navigating Embodied Intelligence: Enabling Technologies, Security and Privacy, and Emerging Trends](https://doi.org/10.1109/JIOT.2025.3649049)**<br><sub>Wang et al.</sub> | IEEE IoT Journal 2026 | — | ![Cross-lifecycle](https://img.shields.io/badge/-Cross--lifecycle-6F9FEF?style=flat) ![Multiple surfaces](https://img.shields.io/badge/-Multiple_surfaces-3FA89B?style=flat) <br> ![Survey coverage](https://img.shields.io/badge/-Survey_coverage-657A8C?style=flat) |
+| **[Security of World-Model-Based Embodied AI: A Lifecycle of Threats, Defenses, and Evaluation](https://arxiv.org/abs/2607.28226)**<br><sub>Liu et al. et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) ![Physical](https://img.shields.io/badge/-Physical-D96F8A?style=flat) | ![Training → Inference](https://img.shields.io/badge/-Training_%E2%86%92_Inference-6F9FEF?style=flat) ![Multiple surfaces](https://img.shields.io/badge/-Multiple_surfaces-3FA89B?style=flat) <br> ![Survey coverage](https://img.shields.io/badge/-Survey_coverage-657A8C?style=flat) |
+| **[SoK: Security and Privacy of Foundation-Model-Powered Robots](https://arxiv.org/abs/2606.16788)**<br><sub>Gong et al. et al.</sub> | arXiv 2026 | ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-B88A24?style=flat) | ![Training → Inference](https://img.shields.io/badge/-Training_%E2%86%92_Inference-6F9FEF?style=flat) ![Multiple surfaces](https://img.shields.io/badge/-Multiple_surfaces-3FA89B?style=flat) <br> ![Survey coverage](https://img.shields.io/badge/-Survey_coverage-657A8C?style=flat) |
+| **[Toward Secure LLM Agents: Threat Surfaces, Attacks, Defenses, and Evaluation](https://arxiv.org/abs/2606.10749)**<br><sub>Ling et al. et al.</sub> | arXiv 2026 | ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-B88A24?style=flat) ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Training → Inference](https://img.shields.io/badge/-Training_%E2%86%92_Inference-6F9FEF?style=flat) ![Multiple surfaces](https://img.shields.io/badge/-Multiple_surfaces-3FA89B?style=flat) <br> ![Survey coverage](https://img.shields.io/badge/-Survey_coverage-657A8C?style=flat) |
+| **[Trust in LLM-controlled Robotics: Risks and Mitigation Strategies](https://arxiv.org/abs/2601.02377)**<br><sub>Unknown et al.</sub> | arXiv 2026 | ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-B88A24?style=flat) ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![User Instruction + Action Interface](https://img.shields.io/badge/-User_Instruction_%2B_Action_Interface-3FA89B?style=flat) <br> ![Survey coverage](https://img.shields.io/badge/-Survey_coverage-657A8C?style=flat) |
 | **[What Breaks Embodied AI Security: LLM Vulnerabilities, CPS Flaws, or Something Else?](https://arxiv.org/abs/2602.17345)**<br><sub>Ma et al.</sub> | arXiv 2026 | — | ![Inference → System](https://img.shields.io/badge/-Inference_%E2%86%92_System-6F9FEF?style=flat) ![Multiple surfaces](https://img.shields.io/badge/-Multiple_surfaces-3FA89B?style=flat) <br> ![Survey coverage](https://img.shields.io/badge/-Survey_coverage-657A8C?style=flat) |
 | **[Towards Robust and Secure Embodied AI: A Survey on Vulnerabilities and Attacks](https://arxiv.org/abs/2502.13175)**<br><sub>Xing et al.</sub> | arXiv 2025 | — | ![Cross-lifecycle](https://img.shields.io/badge/-Cross--lifecycle-6F9FEF?style=flat) ![Multiple surfaces](https://img.shields.io/badge/-Multiple_surfaces-3FA89B?style=flat) <br> ![Survey coverage](https://img.shields.io/badge/-Survey_coverage-657A8C?style=flat) |
 | **[Towards Safe and Trustworthy Embodied AI: Foundations, Status, and Prospects](https://openreview.net/forum?id=Eu6Yt21Alv)** [![GitHub stars](https://img.shields.io/github/stars/AI45Lab/Awesome-Trustworthy-Embodied-AI?style=social)](https://github.com/AI45Lab/Awesome-Trustworthy-Embodied-AI)<br><sub>Tan et al.</sub> | OpenReview 2025 | — | ![Cross-lifecycle](https://img.shields.io/badge/-Cross--lifecycle-6F9FEF?style=flat) ![Multiple surfaces](https://img.shields.io/badge/-Multiple_surfaces-3FA89B?style=flat) <br> ![Survey coverage](https://img.shields.io/badge/-Survey_coverage-657A8C?style=flat) |
+
+<a id="surveys-vla-safety-surveys"></a>
+
+### VLA Safety Surveys
+
+| Paper | Venue | Evaluated Risk | Threat Model |
+|---|---:|---|---|
+| **[Vision-Language-Action Safety: Threats, Challenges, Evaluations, and Mechanisms](https://arxiv.org/abs/2604.23775)** [![GitHub stars](https://img.shields.io/github/stars/LiQiiiii/Awesome-VLA-Safety?style=social)](https://github.com/LiQiiiii/Awesome-VLA-Safety)<br><sub>Li et al.</sub> | arXiv 2026 | — | ![Cross-lifecycle](https://img.shields.io/badge/-Cross--lifecycle-6F9FEF?style=flat) ![Multiple surfaces](https://img.shields.io/badge/-Multiple_surfaces-3FA89B?style=flat) <br> ![Survey coverage](https://img.shields.io/badge/-Survey_coverage-657A8C?style=flat) |
 
 <a id="surveys-domain-specific-surveys"></a>
 
