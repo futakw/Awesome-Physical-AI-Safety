@@ -185,7 +185,7 @@ def render_defense_heatmap(papers: list[dict]) -> str:
             ]
     body += [
         f'<text class="axis" x="{left + 5 * cell_w}" y="{top + len(subsections) * cell_h + 36}" text-anchor="middle">Addressed threat mechanism</text>',
-        f'<text class="axis" transform="translate(45 {top + len(subsections) * cell_h / 2}) rotate(-90)" text-anchor="middle">Defense strategy / subsection</text>',
+        f'<text class="axis" transform="translate(45 {top + len(subsections) * cell_h / 2}) rotate(-90)" text-anchor="middle">Defense subsection</text>',
     ]
     return svg_document("Defense coverage map", "Defense subsection and addressed-threat mechanism counts.", width, height, body)
 

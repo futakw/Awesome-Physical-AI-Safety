@@ -101,7 +101,7 @@ function renderDefense(){
   const x=d3.scaleBand().domain(mechanisms).range([margin.left,width-margin.right]).padding(.06), y=d3.scaleBand().domain(subsections).range([margin.top,height-margin.bottom]).padding(.06);
   const cellData=[]; for(const sub of subsections) for(const mechanism of mechanisms){const list=defenses.filter(p=>p.subsection===sub&&p.threat_model.mechanism.includes(mechanism));cellData.push({sub,mechanism,list,n:list.length});}
   const max=d3.max(cellData,d=>d.n)||1, fill=d3.scaleSequential().domain([0,max]).interpolator(d3.interpolate('#eef3f8','#6f9fef'));
-  svg.append('text').attr('x',margin.left).attr('y',35).attr('font-size',24).attr('font-weight',650).attr('fill','#202938').text('Defense strategy × addressed threat');
+  svg.append('text').attr('x',margin.left).attr('y',35).attr('font-size',24).attr('font-weight',650).attr('fill','#202938').text('Defense subsection × addressed threat');
   svg.append('text').attr('x',margin.left).attr('y',57).attr('font-size',13).attr('fill','#657287').text('Hover a cell to inspect contributing papers.');
   svg.selectAll('text.mechanism').data(mechanisms).join('text').attr('class','axis').attr('text-anchor','start').attr('transform',m=>`translate(${x(m)+8},${margin.top-18}) rotate(-52)`).text(m=>m.replaceAll('-',' '));
   svg.selectAll('text.subsection').data(subsections).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',s=>y(s)+y.bandwidth()/2+4).text(s=>s);

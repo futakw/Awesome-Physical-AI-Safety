@@ -355,5 +355,5 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <rect x="1085" y="789" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1121.5" y="812.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="axis" x="775" y="866" text-anchor="middle">Addressed threat mechanism</text>
-<text class="axis" transform="translate(45 507.5) rotate(-90)" text-anchor="middle">Defense strategy / subsection</text>
+<text class="axis" transform="translate(45 507.5) rotate(-90)" text-anchor="middle">Defense subsection</text>
 </svg>
