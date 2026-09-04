@@ -236,20 +236,44 @@ def taxonomy_projection(papers: list[dict]) -> list[tuple[float, float]]:
     return [(first[i] * math.sqrt(value_1), second[i] * math.sqrt(value_2)) for i in range(len(papers))]
 
 
+def topic_x_score(paper: dict) -> float:
+    kind = paper["threat_model"]["kind"]
+    return -1.0 if kind == "adversarial" else 1.0 if kind == "non-adversarial" else 0.0
+
+
+def topic_y_score(paper: dict) -> float:
+    section = paper["section"]
+    if section == "defenses":
+        return 1.0
+    if section in {"training-attacks", "inference-attacks"}:
+        return -0.85
+    if section == "system-security":
+        return -0.65
+    if section == "benchmarks":
+        return -0.55
+    if section == "ood-generalization":
+        return 0.05
+    return 0.0
+
+
 def render_topic_map(papers: list[dict]) -> str:
     width, height = 1200, 760
-    body = header("Taxonomy map of the catalog", "Proximity reflects shared risk, threat-model, and scope labels—not abstract semantics.")
-    points = taxonomy_projection(papers)
-    min_x, max_x = min(x for x, _ in points), max(x for x, _ in points)
-    min_y, max_y = min(y for _, y in points), max(y for _, y in points)
+    body = header("Taxonomy map of the catalog", "Explicit axes: adversarial ↔ non-adversarial and attack/benchmark ↔ defense.")
     left, right, top, bottom = 75, 1125, 115, 625
     def scale(value: float, low: float, high: float, start: float, end: float) -> float:
         return (start + end) / 2 if high == low else start + (value - low) / (high - low) * (end - start)
-    mapped = [(scale(x, min_x, max_x, left, right), scale(y, min_y, max_y, bottom, top)) for x, y in points]
+    mapped = []
+    for paper in papers:
+        jitter = ((sum(ord(char) for char in paper["id"]) % 13) - 6) * 0.012
+        mapped.append((scale(topic_x_score(paper), -1.08, 1.08, left, right), scale(topic_y_score(paper) + jitter, -1.08, 1.08, bottom, top)))
     body += [
         f'<rect x="{left}" y="{top}" width="{right-left}" height="{bottom-top}" rx="10" fill="{PANEL}" stroke="{GRID}"/>',
         f'<line x1="{(left+right)/2}" y1="{top}" x2="{(left+right)/2}" y2="{bottom}" stroke="{GRID}" stroke-dasharray="4 7"/>',
         f'<line x1="{left}" y1="{(top+bottom)/2}" x2="{right}" y2="{(top+bottom)/2}" stroke="{GRID}" stroke-dasharray="4 7"/>',
+        f'<text class="axis" x="{left}" y="{bottom + 30}">Adversarial</text>',
+        f'<text class="axis" x="{right}" y="{bottom + 30}" text-anchor="end">Non-adversarial</text>',
+        f'<text class="axis" transform="translate(26 {top + 8}) rotate(-90)">Defense</text>',
+        f'<text class="axis" transform="translate(26 {bottom}) rotate(-90)">Attack + Benchmark</text>',
     ]
     for paper, (x, y) in zip(papers, mapped):
         section = paper["section"]

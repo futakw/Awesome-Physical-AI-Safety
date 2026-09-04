@@ -163,7 +163,7 @@ def render(papers: list[dict]) -> str:
         "",
         "[![Taxonomy map of the paper catalog](assets/visualizations/topic-map.svg)](docs/visualizations.md)",
         "",
-        "The map projects papers from their structured risk, threat-model, and scope metadata. See [topic trends, the field timeline, and threat-model cross-maps](docs/visualizations.md).",
+        "The map uses explicit, interpretable axes. Open the [interactive explorer](docs/index.html) for hoverable paper details, topic trends, the field timeline, and threat-model cross-maps.",
         "",
         "## Taxonomy at a Glance",
         "",

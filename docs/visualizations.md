@@ -2,11 +2,13 @@
 
 These views are generated from the structured metadata in [`data/papers.json`](../data/papers.json). They describe the current catalog rather than the full publication volume of the field.
 
+For hoverable paper details and linked paper lists, open the [interactive explorer](index.html). GitHub README markdown cannot execute JavaScript, so the README keeps a static preview and links to this page.
+
 ## Taxonomy Map
 
 ![Taxonomy map of the paper catalog](../assets/visualizations/topic-map.svg)
 
-This projection uses risk, threat-model, and scope labels. It exposes metadata similarity and should not be interpreted as a semantic embedding of paper abstracts.
+The map uses explicit, interpretable axes. X is the threat kind (`adversarial` ↔ `non-adversarial`); Y is the catalog role (`attack + benchmark` ↔ `defense`). Survey and system-failure records sit near the center. It is a taxonomy view, not an abstract-semantic embedding.
 
 ## Topic Trends
 
@@ -31,4 +33,5 @@ The heatmap includes concrete threat models and excludes broad survey/evaluation
 ```bash
 python3 scripts/build_visualizations.py
 python3 scripts/build_visualizations.py --check
+python3 scripts/build_explorer.py
 ```
