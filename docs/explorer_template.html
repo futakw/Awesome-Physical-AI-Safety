@@ -38,11 +38,13 @@
     <button type="button" data-view="heatmap" aria-pressed="false">Threat cross-map</button>
     <button type="button" data-view="defense" aria-pressed="false">Defense cross-map</button>
     <button type="button" data-view="benchmark" aria-pressed="false">Benchmark cross-map</button>
+    <button type="button" data-view="evaluation" aria-pressed="false">Evaluation cross-map</button>
   </nav>
   <section id="timeline" class="active"><p class="note">Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to pin the paper list.</p><div id="timeline-chart"></div></section>
   <section id="heatmap"><p class="note">Cells show mechanism-surface co-occurrence for concrete threat models. Hover for a preview; click a cell to pin the paper list.</p><div id="heatmap-chart"></div></section>
-  <section id="defense"><p class="note">Rows are defense subsections and columns are addressed threat mechanisms. Hover for a preview; click a cell to pin the paper list.</p><div id="defense-chart"></div></section>
-  <section id="benchmark"><p class="note">Rows are benchmark subsections and columns use the shared threat-mechanism taxonomy. Hover for a preview; click a cell to pin the paper list.</p><div id="benchmark-chart"></div></section>
+  <section id="defense"><p class="note">Rows are defense mechanisms and columns are the threat mechanisms they address. Only enriched records are counted.</p><div id="defense-chart"></div></section>
+  <section id="benchmark"><p class="note">Rows are benchmark coverage dimensions and columns are distribution-shift types. Only enriched records are counted.</p><div id="benchmark-chart"></div></section>
+  <section id="evaluation"><p class="note">Rows are evaluation environments and columns are reported metrics. Only enriched records are counted.</p><div id="evaluation-chart"></div></section>
 </main>
 <div id="tooltip" class="tooltip" role="tooltip"></div>
 <script>
@@ -135,8 +137,35 @@ function renderBenchmark(){
   svg.selectAll('text.value').data(cellData.filter(d=>d.n)).join('text').attr('class','value').attr('x',d=>x(d.mechanism)+x.bandwidth()/2).attr('y',d=>y(d.sub)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',650).attr('fill',d=>d.n/max>.48?'#fff':'#202938').style('pointer-events','none').text(d=>d.n);
 }
 
+function renderExtensionMap(container,title,items,rows,cols,rowValues,colValues,aria){
+  const margin={top:190,right:35,bottom:70,left:260}, width=1180, height=Math.max(620,margin.top+rows.length*52+margin.bottom);
+  const svg=d3.select(container).append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label',aria);
+  const x=d3.scaleBand().domain(cols).range([margin.left,width-margin.right]).padding(.06), y=d3.scaleBand().domain(rows).range([margin.top,height-margin.bottom]).padding(.06);
+  const cells=[]; for(const row of rows) for(const col of cols){const list=items.filter(p=>rowValues(p).includes(row)&&colValues(p).includes(col));cells.push({row,col,list,n:list.length});}
+  const max=d3.max(cells,d=>d.n)||1, fill=d3.scaleSequential().domain([0,max]).interpolator(d3.interpolate('#eef3f8','#6f9fef'));
+  svg.append('text').attr('x',margin.left).attr('y',35).attr('font-size',24).attr('font-weight',650).attr('fill','#202938').text(title);
+  svg.append('text').attr('x',margin.left).attr('y',57).attr('font-size',13).attr('fill','#657287').text(`${items.length} enriched papers; hover or click a cell for the paper list.`);
+  svg.selectAll('text.col').data(cols).join('text').attr('class','axis').attr('text-anchor','start').attr('transform',d=>`translate(${x(d)+8},${margin.top-18}) rotate(-52)`).text(d=>d.replaceAll('-',' '));
+  svg.selectAll('text.row').data(rows).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',d=>y(d)+y.bandwidth()/2+4).text(d=>d.replaceAll('-',' '));
+  svg.selectAll('rect.cell').data(cells).join('rect').attr('class','cell').attr('x',d=>x(d.col)).attr('y',d=>y(d.row)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(d.row.replaceAll('-',' '))} × ${escapeHtml(d.col.replaceAll('-',' '))}</strong><div>${d.n} papers</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();pinTooltip(event,`<strong>${escapeHtml(d.row.replaceAll('-',' '))} × ${escapeHtml(d.col.replaceAll('-',' '))}</strong><div>${d.n} papers</div>${paperListHtml(d.list)}`);});
+  svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.col)+x.bandwidth()/2).attr('y',d=>y(d.row)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',650).attr('fill',d=>d.n/max>.48?'#fff':'#202938').style('pointer-events','none').text(d=>d.n);
+}
+
+function renderDefenseV2(){
+  const items=papers.filter(p=>p.defense), rows=[...new Set(items.flatMap(p=>p.defense.mechanism))], cols=[...new Set(items.flatMap(p=>p.defense.defends_against))];
+  renderExtensionMap('#defense-chart','Defense mechanism × defended threat',items,rows,cols,p=>p.defense.mechanism,p=>p.defense.defends_against,'Defense mechanism and defended threat cross-map');
+}
+function renderBenchmarkV2(){
+  const items=papers.filter(p=>p.benchmark), rows=[...new Set(items.flatMap(p=>p.benchmark.evaluates))], cols=[...new Set(items.flatMap(p=>p.benchmark.shift_types))];
+  renderExtensionMap('#benchmark-chart','Benchmark coverage × shift type',items,rows,cols,p=>p.benchmark.evaluates,p=>p.benchmark.shift_types,'Benchmark coverage and shift type cross-map');
+}
+function renderEvaluation(){
+  const items=papers.filter(p=>p.evaluation), rows=[...new Set(items.flatMap(p=>p.evaluation.environments))], cols=[...new Set(items.flatMap(p=>p.evaluation.metrics))];
+  renderExtensionMap('#evaluation-chart','Evaluation environment × metric',items,rows,cols,p=>p.evaluation.environments,p=>p.evaluation.metrics,'Evaluation environment and metric cross-map');
+}
+
 d3.selectAll('button[data-view]').on('click',function(){const view=this.dataset.view;d3.selectAll('button[data-view]').attr('aria-pressed','false');d3.select(this).attr('aria-pressed','true');d3.selectAll('section').classed('active',false);d3.select('#'+view).classed('active',true);});
-for (const render of [renderTimeline, renderHeatmap, renderDefense, renderBenchmark]) {
+for (const render of [renderTimeline, renderHeatmap, renderDefenseV2, renderBenchmarkV2, renderEvaluation]) {
   try { render(); } catch (error) { console.error('Visualization failed to render:', error); }
 }
 </script>

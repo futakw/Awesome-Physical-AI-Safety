@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 1200 620">
+<title id="title">Evaluation environment × metric</title>
+<desc id="desc">Type-specific metadata pilot</desc>
+<style>
+text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+.title { font-size: 28px; font-weight: 650; fill: #202938; }
+.subtitle { font-size: 14px; fill: #657287; }
+.axis { font-size: 13px; fill: #657287; }
+.label { font-size: 13px; fill: #202938; }
+.small { font-size: 11px; fill: #657287; }
+</style>
+<rect width="1200" height="620" fill="#FFFFFF"/>
+<text class="title" x="48" y="48">Evaluation environment × metric</text>
+<text class="subtitle" x="48" y="74">Type-specific metadata pilot (20 enriched papers).</text>
+<text class="axis" text-anchor="start" transform="translate(340.1 167) rotate(-52)">Task Success Rate</text>
+<text class="axis" text-anchor="start" transform="translate(436.2 167) rotate(-52)">Robust Success Rate</text>
+<text class="axis" text-anchor="start" transform="translate(532.3 167) rotate(-52)">Attack Success Rate</text>
+<text class="axis" text-anchor="start" transform="translate(628.4 167) rotate(-52)">Clean Task Success Rate</text>
+<text class="axis" text-anchor="start" transform="translate(724.5 167) rotate(-52)">Constraint Violation Rate</text>
+<text class="axis" text-anchor="start" transform="translate(820.6 167) rotate(-52)">False Positive Rate</text>
+<text class="axis" text-anchor="start" transform="translate(916.7 167) rotate(-52)">Recovery Rate</text>
+<text class="axis" text-anchor="start" transform="translate(1012.8 167) rotate(-52)">Physical Damage Rate</text>
+<text class="axis" text-anchor="start" transform="translate(1108.9 167) rotate(-52)">Collision Rate</text>
+<text class="label" x="282" y="216.0" text-anchor="end">Simulation</text>
+<rect x="302.0" y="187" width="92.11111111111111" height="50" rx="6" fill="#6F9FEF"><title>[arXiv 2025] RobustVLA: Robustness-Aware Reinforcement Post-Training for Vision-Language-Action Models
+[arXiv 2026] TRAP: Hijacking VLA CoT-Reasoning via Adversarial Patches
+[arXiv 2025] LIBERO-PRO: Towards Robust and Fair Evaluation of Vision-Language-Action Models Beyond Memorization
+[CVPR 2026] LIBERO-Plus: A Progressive Robustness Benchmark for Visual-Language-Action Models
+[AAAI 2026] Phantom Menace: Exploring and Enhancing the Robustness of VLA Models Against Physical Sensor Attacks
+[NeurIPS 2025] SafeVLA: Towards Safety Alignment of Vision-Language-Action Models via Constrained Learning
+[arXiv 2025] VLSA: Vision-Language-Action Models with a Plug-and-Play Safety Constraint Layer
+[arXiv 2025] VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models
+[OpenReview 2026] VLA-Risk: Benchmarking Vision-Language-Action Models with Physical Robustness
+[arXiv 2025] SafeAgentBench: A Benchmark for Safe Task Planning of Embodied LLM Agents
+[CVPR 2026] When Robots Obey the Patch: Universal Transferable Patch Attacks on Vision-Language-Action Models
+[arXiv 2026] HazardArena: Evaluating Semantic Safety in Vision-Language-Action Models
+[arXiv 2025] ROVER: Regulator-Driven Robust Temporal Verification of Black-Box Robot Policies
+[ECCV 2026] LIBERO-Safety: A Comprehensive Benchmark for Physical and Semantic Safety in Vision-Language-Action Models</title></rect>
+<text x="348.1" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">14</text>
+<rect x="398.1111111111111" y="187" width="92.11111111111111" height="50" rx="6" fill="#B1CBF4"><title>[arXiv 2025] RobustVLA: Robustness-Aware Reinforcement Post-Training for Vision-Language-Action Models
+[arXiv 2025] LIBERO-PRO: Towards Robust and Fair Evaluation of Vision-Language-Action Models Beyond Memorization
+[CVPR 2026] LIBERO-Plus: A Progressive Robustness Benchmark for Visual-Language-Action Models
+[AAAI 2026] Phantom Menace: Exploring and Enhancing the Robustness of VLA Models Against Physical Sensor Attacks
+[arXiv 2025] VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models</title></rect>
+<text x="444.2" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">5</text>
+<rect x="494.22222222222223" y="187" width="92.11111111111111" height="50" rx="6" fill="#A1C0F3"><title>[arXiv 2026] TRAP: Hijacking VLA CoT-Reasoning via Adversarial Patches
+[NeurIPS 2025] BadVLA: Towards Backdoor Attacks on Vision-Language-Action Models via Objective-Decoupled Optimization
+[arXiv 2026] State Backdoor: Towards Stealthy Real-World Poisoning Attack on Vision-Language-Action Models in State Space
+[arXiv 2025] Model-Agnostic Adversarial Attack and Defense for Vision-Language-Action Models
+[CVPR 2026] When Robots Obey the Patch: Universal Transferable Patch Attacks on Vision-Language-Action Models
+[arXiv 2025] AttackVLA: Benchmarking Adversarial and Backdoor Attacks on Vision-Language-Action Models
+[arXiv 2026] TrustVLA: Mechanism-Guided Inference-Time Defense Against Vision-Language-Action Backdoors</title></rect>
+<text x="540.3" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">7</text>
+<rect x="590.3333333333334" y="187" width="92.11111111111111" height="50" rx="6" fill="#B1CBF4"><title>[NeurIPS 2025] BadVLA: Towards Backdoor Attacks on Vision-Language-Action Models via Objective-Decoupled Optimization
+[arXiv 2026] State Backdoor: Towards Stealthy Real-World Poisoning Attack on Vision-Language-Action Models in State Space
+[arXiv 2025] Model-Agnostic Adversarial Attack and Defense for Vision-Language-Action Models
+[arXiv 2025] AttackVLA: Benchmarking Adversarial and Backdoor Attacks on Vision-Language-Action Models
+[arXiv 2026] TrustVLA: Mechanism-Guided Inference-Time Defense Against Vision-Language-Action Backdoors</title></rect>
+<text x="636.4" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">5</text>
+<rect x="686.4444444444445" y="187" width="92.11111111111111" height="50" rx="6" fill="#A9C5F3"><title>[NeurIPS 2025] SafeVLA: Towards Safety Alignment of Vision-Language-Action Models via Constrained Learning
+[arXiv 2025] VLSA: Vision-Language-Action Models with a Plug-and-Play Safety Constraint Layer
+[arXiv 2025] SafeAgentBench: A Benchmark for Safe Task Planning of Embodied LLM Agents
+[arXiv 2026] HazardArena: Evaluating Semantic Safety in Vision-Language-Action Models
+[arXiv 2025] ROVER: Regulator-Driven Robust Temporal Verification of Black-Box Robot Policies
+[ECCV 2026] LIBERO-Safety: A Comprehensive Benchmark for Physical and Semantic Safety in Vision-Language-Action Models</title></rect>
+<text x="732.5" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">6</text>
+<rect x="782.5555555555555" y="187" width="92.11111111111111" height="50" rx="6" fill="#DBE6F7"><title>[NeurIPS 2025] SAFE: Multitask Failure Detection for Vision-Language-Action Models</title></rect>
+<text x="828.6" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="878.6666666666667" y="187" width="92.11111111111111" height="50" rx="6" fill="#DBE6F7"><title>[NeurIPS 2025] SAFE: Multitask Failure Detection for Vision-Language-Action Models</title></rect>
+<text x="924.7" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="974.7777777777778" y="187" width="92.11111111111111" height="50" rx="6" fill="#CFDEF6"><title>[OpenReview 2026] VLA-Risk: Benchmarking Vision-Language-Action Models with Physical Robustness
+[ECCV 2026] LIBERO-Safety: A Comprehensive Benchmark for Physical and Semantic Safety in Vision-Language-Action Models</title></rect>
+<text x="1020.8" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
+<rect x="1070.888888888889" y="187" width="92.11111111111111" height="50" rx="6" fill="#DBE6F7"><title>[OpenReview 2026] VLA-Risk: Benchmarking Vision-Language-Action Models with Physical Robustness</title></rect>
+<text x="1116.9" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<text class="label" x="282" y="270.0" text-anchor="end">Real Robot</text>
+<rect x="302.0" y="241" width="92.11111111111111" height="50" rx="6" fill="#BAD1F4"><title>[arXiv 2025] RobustVLA: Robustness-Aware Reinforcement Post-Training for Vision-Language-Action Models
+[AAAI 2026] Phantom Menace: Exploring and Enhancing the Robustness of VLA Models Against Physical Sensor Attacks
+[OpenReview 2026] VLA-Risk: Benchmarking Vision-Language-Action Models with Physical Robustness
+[CVPR 2026] When Robots Obey the Patch: Universal Transferable Patch Attacks on Vision-Language-Action Models</title></rect>
+<text x="348.1" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">4</text>
+<rect x="398.1111111111111" y="241" width="92.11111111111111" height="50" rx="6" fill="#CFDEF6"><title>[arXiv 2025] RobustVLA: Robustness-Aware Reinforcement Post-Training for Vision-Language-Action Models
+[AAAI 2026] Phantom Menace: Exploring and Enhancing the Robustness of VLA Models Against Physical Sensor Attacks</title></rect>
+<text x="444.2" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
+<rect x="494.22222222222223" y="241" width="92.11111111111111" height="50" rx="6" fill="#CFDEF6"><title>[arXiv 2026] State Backdoor: Towards Stealthy Real-World Poisoning Attack on Vision-Language-Action Models in State Space
+[CVPR 2026] When Robots Obey the Patch: Universal Transferable Patch Attacks on Vision-Language-Action Models</title></rect>
+<text x="540.3" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
+<rect x="590.3333333333334" y="241" width="92.11111111111111" height="50" rx="6" fill="#DBE6F7"><title>[arXiv 2026] State Backdoor: Towards Stealthy Real-World Poisoning Attack on Vision-Language-Action Models in State Space</title></rect>
+<text x="636.4" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="686.4444444444445" y="241" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="732.5" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="782.5555555555555" y="241" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="828.6" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="878.6666666666667" y="241" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="924.7" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="974.7777777777778" y="241" width="92.11111111111111" height="50" rx="6" fill="#DBE6F7"><title>[OpenReview 2026] VLA-Risk: Benchmarking Vision-Language-Action Models with Physical Robustness</title></rect>
+<text x="1020.8" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="1070.888888888889" y="241" width="92.11111111111111" height="50" rx="6" fill="#DBE6F7"><title>[OpenReview 2026] VLA-Risk: Benchmarking Vision-Language-Action Models with Physical Robustness</title></rect>
+<text x="1116.9" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<text class="axis" x="732.5" y="333" text-anchor="middle">Metric</text>
+<text class="axis" transform="translate(45 239.0) rotate(-90)" text-anchor="middle">Environment</text>
+</svg>

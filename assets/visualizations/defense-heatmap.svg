@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 1200 980">
-<title id="title">Defense coverage map</title>
-<desc id="desc">Defense subsection and addressed-threat mechanism counts.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 1200 653">
+<title id="title">Defense mechanism × defended threat</title>
+<desc id="desc">Type-specific metadata pilot</desc>
 <style>
 text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 .title { font-size: 28px; font-weight: 650; fill: #202938; }
@@ -9,366 +9,106 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 .label { font-size: 13px; fill: #202938; }
 .small { font-size: 11px; fill: #657287; }
 </style>
-<rect width="1200" height="980" fill="#FFFFFF"/>
-<text class="title" x="48" y="48">Defense coverage map</text>
-<text class="subtitle" x="48" y="74">Defense subsections × the threats they address; multi-label records contribute to each applicable cell.</text>
-<text class="axis" text-anchor="start" transform="translate(420.5 167) rotate(-52)">Distribution Shift</text>
-<text class="axis" text-anchor="start" transform="translate(497.5 167) rotate(-52)">Constraint Violation</text>
-<text class="axis" text-anchor="start" transform="translate(574.5 167) rotate(-52)">Execution Error</text>
-<text class="axis" text-anchor="start" transform="translate(651.5 167) rotate(-52)">Backdoor</text>
-<text class="axis" text-anchor="start" transform="translate(728.5 167) rotate(-52)">Jailbreak</text>
-<text class="axis" text-anchor="start" transform="translate(805.5 167) rotate(-52)">Adversarial Patch</text>
-<text class="axis" text-anchor="start" transform="translate(882.5 167) rotate(-52)">Indirect Prompt Injection</text>
-<text class="axis" text-anchor="start" transform="translate(959.5 167) rotate(-52)">Planning Hijacking</text>
-<text class="axis" text-anchor="start" transform="translate(1036.5 167) rotate(-52)">Data Poisoning</text>
-<text class="axis" text-anchor="start" transform="translate(1113.5 167) rotate(-52)">Digital Perturbation</text>
-<text class="label" x="372" y="210.5" text-anchor="end">Runtime Monitoring and Guardrails</text>
-<rect x="392" y="187" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="428.5" y="210.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="469" y="187" width="73" height="39" rx="6" fill="#85ADF1"><title>[arXiv 2026] Pre-Execution Safety Gate &amp; Task Safety Contracts for LLM-Based Robot Task Planning
-[arXiv 2026] PROTEA: Securing Robot Task Planning and Execution
-[Reference-only 2026] LogicGuard: Improving Embodied LLM Agents Through Temporal Logic-Based Critics
-[arXiv 2025] SafePlan: Leveraging Formal Logic and Chain-of-Thought Reasoning for Enhanced Safety in LLM-based Robotic Task Planning
-[arXiv 2025] Safe LLM-Controlled Robots with Formal Guarantees via Reachability Analysis
-[arXiv 2024] SafeEmbodAI: Securing LLM-Controlled Mobile Robots against Prompt Injection
-[arXiv 2025] SafeDec: Constrained Decoding for Safe Autoregressive Embodied Policies
-[Reference-only 2025] Ask Before You Act: Token-Level Uncertainty for Intervention in Vision-Language-Action Models
-[arXiv 2025] VLSA: Vision-Language-Action Models with a Plug-and-Play Safety Constraint Layer
-[arXiv 2025] From Words to Safety: Language-Conditioned Safety Filtering for Robot Navigation</title></rect>
-<text x="505.5" y="210.5" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">10</text>
-<rect x="546" y="187" width="73" height="39" rx="6" fill="#DAE6F7"><title>[arXiv 2026] RC-NF: Robot-Conditioned Normalizing Flow for Real-Time Anomaly Detection in Robotic Manipulation</title></rect>
-<text x="582.5" y="210.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="623" y="187" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="659.5" y="210.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="700" y="187" width="73" height="39" rx="6" fill="#DAE6F7"><title>[IEEE RA-L 2026] Safety Guardrails for LLM-Enabled Robots</title></rect>
-<text x="736.5" y="210.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="777" y="187" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="813.5" y="210.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="854" y="187" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="890.5" y="210.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="931" y="187" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="967.5" y="210.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1008" y="187" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1044.5" y="210.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1085" y="187" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1121.5" y="210.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<text class="label" x="372" y="253.5" text-anchor="end">Failure Detection and Recovery</text>
-<rect x="392" y="230" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="428.5" y="253.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="469" y="230" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="505.5" y="253.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="546" y="230" width="73" height="39" rx="6" fill="#6F9FEF"><title>[Reference-only 2026] FPC-VLA: A Vision-Language-Action Framework with a Supervisor for Failure Prediction and Correction
-[arXiv 2025] Guardian: Detecting Robotic Planning and Execution Errors with Vision-Language Models
-[Reference-only 2024] AHA: A Vision-Language-Model for Detecting and Reasoning over Failures in Robotic Manipulation
-[arXiv 2025] Horcrux: Robustness/Recovery for Vision-Language-Action Policies
-[arXiv 2025] I-FailSense: Towards General Robotic Failure Detection with Vision-Language Models
-[IROS 2024] DoReMi: Grounding Language Model by Detecting and Recovering from Plan-Execution Misalignment
-[arXiv 2026] Replanning Human-Robot Collaborative Tasks with Vision-Language Models via Semantic and Physical Dual-Correction
-[arXiv 2024] A Self-Correcting Vision-Language-Action Model for Fast and Slow System Manipulation
-[CVPR 2025] Phoenix: A Motion-based Self-Reflection Framework for Fine-grained Robotic Action Correction
-[CVPR 2026] FLARE: A Failure-Aware Framework for Autonomous Correction and Recovery in Visual-Language Robotic Manipulation
-[arXiv 2026] Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents
-[arXiv 2026] FAR: Failure-Aware Retry for Test-Time Recovery and Continual Policy Improvement
-[arXiv 2026] ASPIRE: Agentic /Skills Discovery for Robotics</title></rect>
-<text x="582.5" y="253.5" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">13</text>
-<rect x="623" y="230" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="659.5" y="253.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="700" y="230" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="736.5" y="253.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="777" y="230" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="813.5" y="253.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="854" y="230" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="890.5" y="253.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="931" y="230" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="967.5" y="253.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1008" y="230" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1044.5" y="253.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1085" y="230" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1121.5" y="253.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<text class="label" x="372" y="296.5" text-anchor="end">Action Shielding, Fail-Safes, and Recovery</text>
-<rect x="392" y="273" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="428.5" y="296.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="469" y="273" width="73" height="39" rx="6" fill="#C2D6F5"><title>[arXiv 2023] Safe-VLN: Collision Avoidance for Vision-and-Language Navigation of Autonomous Robots Operating in Continuous Environments
-[arXiv 2025] Towards Safe Robot Foundation Models Using Inductive Biases
-[arXiv 2026] CompliantVLA-adaptor: VLM-Guided Variable Impedance Action for Safe Contact-Rich Manipulation</title></rect>
-<text x="505.5" y="296.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">3</text>
-<rect x="546" y="273" width="73" height="39" rx="6" fill="#C2D6F5"><title>[NeurIPS 2025] SAFE: Multitask Failure Detection for Vision-Language-Action Models
-[CoRL 2023] REFLECT: Summarizing Robot Experiences for Failure Explanation and Correction
-[ECCV 2026] VLA Knows Its Limits: Adaptive Execution Horizons for Robot Policies</title></rect>
-<text x="582.5" y="296.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">3</text>
-<rect x="623" y="273" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="659.5" y="296.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="700" y="273" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="736.5" y="296.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="777" y="273" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="813.5" y="296.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="854" y="273" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="890.5" y="296.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="931" y="273" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="967.5" y="296.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1008" y="273" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1044.5" y="296.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1085" y="273" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1121.5" y="296.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<text class="label" x="372" y="339.5" text-anchor="end">Robust Training and Safety Alignment</text>
-<rect x="392" y="316" width="73" height="39" rx="6" fill="#AEC9F3"><title>[arXiv 2025] RobustVLA: Robustness-Aware Reinforcement Post-Training for Vision-Language-Action Models
-[arXiv 2026] ChromaGuard: Defending VLA Models against Color/Illumination-Induced Blindness
-[arXiv 2026] Structure-Aware Robust Fine-Tuning
-[arXiv 2025] MergeVLA: Robust Vision-Language-Action Models via Model Merging
-[arXiv 2025] RETAIN: Robust Finetuning of Vision-Language-Action Robot Policies via Parameter Merging</title></rect>
-<text x="428.5" y="339.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">5</text>
-<rect x="469" y="316" width="73" height="39" rx="6" fill="#CDDDF6"><title>[NeurIPS 2025] SafeVLA: Towards Safety Alignment of Vision-Language-Action Models via Constrained Learning
-[arXiv 2024] Safety Optimized Reinforcement Learning via Multi-Objective Policy Optimization</title></rect>
-<text x="505.5" y="339.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
-<rect x="546" y="316" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="582.5" y="339.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="623" y="316" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="659.5" y="339.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="700" y="316" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="736.5" y="339.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="777" y="316" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="813.5" y="339.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="854" y="316" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="890.5" y="339.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="931" y="316" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="967.5" y="339.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1008" y="316" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1044.5" y="339.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1085" y="316" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1121.5" y="339.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<text class="label" x="372" y="382.5" text-anchor="end">Representation Steering and Inference-Time Defense</text>
-<rect x="392" y="359" width="73" height="39" rx="6" fill="#DAE6F7"><title>[arXiv 2026] Restoring Linguistic Grounding in VLA Models via Train-Free Attention Recalibration</title></rect>
-<text x="428.5" y="382.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="469" y="359" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="505.5" y="382.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="546" y="359" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="582.5" y="382.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="623" y="359" width="73" height="39" rx="6" fill="#C2D6F5"><title>[arXiv 2026] When Attention Betrays: Erasing Backdoor Attacks in Robotic Policies by Reconstructing Visual Tokens
-[arXiv 2026] SAFE-Dict: Concept-Based Dictionary Learning for Inference-Time Safety in Vision Language Action Models
-[arXiv 2026] TrustVLA: Mechanism-Guided Inference-Time Defense Against Vision-Language-Action Backdoors</title></rect>
-<text x="659.5" y="382.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">3</text>
-<rect x="700" y="359" width="73" height="39" rx="6" fill="#DAE6F7"><title>[arXiv 2025] Concept Enhancement Engineering: A Lightweight and Efficient Robust Defense Against Jailbreak Attacks in Embodied AI</title></rect>
-<text x="736.5" y="382.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="777" y="359" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="813.5" y="382.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="854" y="359" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="890.5" y="382.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="931" y="359" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="967.5" y="382.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1008" y="359" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1044.5" y="382.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1085" y="359" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1121.5" y="382.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<text class="label" x="372" y="425.5" text-anchor="end">Active Perception and Recovery</text>
-<rect x="392" y="402" width="73" height="39" rx="6" fill="#DAE6F7"><title>[arXiv 2025] Affordance Field Intervention: Enabling VLAs to Escape Memory Traps in Robotic Manipulation</title></rect>
-<text x="428.5" y="425.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="469" y="402" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="505.5" y="425.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="546" y="402" width="73" height="39" rx="6" fill="#DAE6F7"><title>[arXiv 2025] FailSafe: Reasoning and Recovery from Failures in Vision-Language-Action Models</title></rect>
-<text x="582.5" y="425.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="623" y="402" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="659.5" y="425.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="700" y="402" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="736.5" y="425.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="777" y="402" width="73" height="39" rx="6" fill="#DAE6F7"><title>[ICLR 2024] Embodied Active Defense: Leveraging Recurrent Feedback to Counter Adversarial Patches</title></rect>
-<text x="813.5" y="425.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="854" y="402" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="890.5" y="425.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="931" y="402" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="967.5" y="425.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1008" y="402" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1044.5" y="425.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1085" y="402" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1121.5" y="425.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<text class="label" x="372" y="468.5" text-anchor="end">Uncertainty, Abstention, and Human Oversight</text>
-<rect x="392" y="445" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="428.5" y="468.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="469" y="445" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="505.5" y="468.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="546" y="445" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="582.5" y="468.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="623" y="445" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="659.5" y="468.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="700" y="445" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="736.5" y="468.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="777" y="445" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="813.5" y="468.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="854" y="445" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="890.5" y="468.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="931" y="445" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="967.5" y="468.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1008" y="445" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1044.5" y="468.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1085" y="445" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1121.5" y="468.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<text class="label" x="372" y="511.5" text-anchor="end">Multimodal Perception and Physical Safeguards</text>
-<rect x="392" y="488" width="73" height="39" rx="6" fill="#DAE6F7"><title>[arXiv 2026] Safe-Night VLA: Seeing the Unseen via Thermal-Perceptive Vision-Language-Action Models for Safety-Critical Manipulation</title></rect>
-<text x="428.5" y="511.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="469" y="488" width="73" height="39" rx="6" fill="#DAE6F7"><title>[arXiv 2026] DroneVLA: VLA based Aerial Manipulation</title></rect>
-<text x="505.5" y="511.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="546" y="488" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="582.5" y="511.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="623" y="488" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="659.5" y="511.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="700" y="488" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="736.5" y="511.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="777" y="488" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="813.5" y="511.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="854" y="488" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="890.5" y="511.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="931" y="488" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="967.5" y="511.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1008" y="488" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1044.5" y="511.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1085" y="488" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1121.5" y="511.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<text class="label" x="372" y="554.5" text-anchor="end">Human-in-the-Loop Safety Refinement</text>
-<rect x="392" y="531" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="428.5" y="554.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="469" y="531" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="505.5" y="554.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="546" y="531" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="582.5" y="554.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="623" y="531" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="659.5" y="554.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="700" y="531" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="736.5" y="554.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="777" y="531" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="813.5" y="554.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="854" y="531" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="890.5" y="554.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="931" y="531" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="967.5" y="554.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1008" y="531" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1044.5" y="554.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1085" y="531" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1121.5" y="554.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<text class="label" x="372" y="597.5" text-anchor="end">Privacy-Preserving Perception</text>
-<rect x="392" y="574" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="428.5" y="597.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="469" y="574" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="505.5" y="597.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="546" y="574" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="582.5" y="597.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="623" y="574" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="659.5" y="597.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="700" y="574" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="736.5" y="597.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="777" y="574" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="813.5" y="597.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="854" y="574" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="890.5" y="597.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="931" y="574" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="967.5" y="597.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1008" y="574" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1044.5" y="597.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1085" y="574" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1121.5" y="597.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<text class="label" x="372" y="640.5" text-anchor="end">System and Communication Defenses</text>
-<rect x="392" y="617" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="428.5" y="640.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="469" y="617" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="505.5" y="640.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="546" y="617" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="582.5" y="640.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="623" y="617" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="659.5" y="640.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="700" y="617" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="736.5" y="640.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="777" y="617" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="813.5" y="640.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="854" y="617" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="890.5" y="640.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="931" y="617" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="967.5" y="640.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1008" y="617" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1044.5" y="640.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1085" y="617" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1121.5" y="640.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<text class="label" x="372" y="683.5" text-anchor="end">Runtime Observation Interventions</text>
-<rect x="392" y="660" width="73" height="39" rx="6" fill="#DAE6F7"><title>[arXiv 2024] Run-Time Observation Interventions Make Vision-Language-Action Models More Visually Robust</title></rect>
-<text x="428.5" y="683.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="469" y="660" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="505.5" y="683.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="546" y="660" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="582.5" y="683.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="623" y="660" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="659.5" y="683.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="700" y="660" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="736.5" y="683.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="777" y="660" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="813.5" y="683.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="854" y="660" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="890.5" y="683.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="931" y="660" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="967.5" y="683.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1008" y="660" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1044.5" y="683.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1085" y="660" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1121.5" y="683.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<text class="label" x="372" y="726.5" text-anchor="end">Reliability-Oriented Policy Refinement</text>
-<rect x="392" y="703" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="428.5" y="726.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="469" y="703" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="505.5" y="726.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="546" y="703" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="582.5" y="726.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="623" y="703" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="659.5" y="726.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="700" y="703" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="736.5" y="726.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="777" y="703" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="813.5" y="726.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="854" y="703" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="890.5" y="726.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="931" y="703" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="967.5" y="726.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1008" y="703" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1044.5" y="726.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1085" y="703" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1121.5" y="726.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<text class="label" x="372" y="769.5" text-anchor="end">Model Unlearning and Data Governance</text>
-<rect x="392" y="746" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="428.5" y="769.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="469" y="746" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="505.5" y="769.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="546" y="746" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="582.5" y="769.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="623" y="746" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="659.5" y="769.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="700" y="746" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="736.5" y="769.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="777" y="746" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="813.5" y="769.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="854" y="746" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="890.5" y="769.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="931" y="746" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="967.5" y="769.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1008" y="746" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1044.5" y="769.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1085" y="746" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1121.5" y="769.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<text class="label" x="372" y="812.5" text-anchor="end">Safety-Aware Policy Learning</text>
-<rect x="392" y="789" width="73" height="39" rx="6" fill="#DAE6F7"><title>[arXiv 2025] VLM-SAFE: Vision-Language Model-Guided Safety-Aware Reinforcement Learning with World Models for Autonomous Driving</title></rect>
-<text x="428.5" y="812.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="469" y="789" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="505.5" y="812.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="546" y="789" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="582.5" y="812.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="623" y="789" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="659.5" y="812.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="700" y="789" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="736.5" y="812.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="777" y="789" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="813.5" y="812.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="854" y="789" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="890.5" y="812.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="931" y="789" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="967.5" y="812.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1008" y="789" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1044.5" y="812.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1085" y="789" width="73" height="39" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1121.5" y="812.5" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<text class="axis" x="775" y="866" text-anchor="middle">threat_model.mechanism</text>
-<text class="axis" transform="translate(45 507.5) rotate(-90)" text-anchor="middle">Defense subsection</text>
+<rect width="1200" height="653" fill="#FFFFFF"/>
+<text class="title" x="48" y="48">Defense mechanism × defended threat</text>
+<text class="subtitle" x="48" y="74">Type-specific metadata pilot (8 enriched papers).</text>
+<text class="axis" text-anchor="start" transform="translate(354.5 167) rotate(-52)">Distribution Shift</text>
+<text class="axis" text-anchor="start" transform="translate(479.5 167) rotate(-52)">Sensor Spoofing</text>
+<text class="axis" text-anchor="start" transform="translate(604.5 167) rotate(-52)">Adversarial Patch</text>
+<text class="axis" text-anchor="start" transform="translate(729.5 167) rotate(-52)">Constraint Violation</text>
+<text class="axis" text-anchor="start" transform="translate(854.5 167) rotate(-52)">Execution Error</text>
+<text class="axis" text-anchor="start" transform="translate(979.5 167) rotate(-52)">Backdoor</text>
+<text class="label" x="282" y="216.0" text-anchor="end">Robust Finetuning</text>
+<rect x="302" y="187" width="121" height="50" rx="6" fill="#6F9FEF"><title>[arXiv 2025] RobustVLA: Robustness-Aware Reinforcement Post-Training for Vision-Language-Action Models</title></rect>
+<text x="362.5" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">1</text>
+<rect x="427" y="187" width="121" height="50" rx="6" fill="#6F9FEF"><title>[AAAI 2026] Phantom Menace: Exploring and Enhancing the Robustness of VLA Models Against Physical Sensor Attacks</title></rect>
+<text x="487.5" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">1</text>
+<rect x="552" y="187" width="121" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="612.5" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="677" y="187" width="121" height="50" rx="6" fill="#6F9FEF"><title>[NeurIPS 2025] SafeVLA: Towards Safety Alignment of Vision-Language-Action Models via Constrained Learning</title></rect>
+<text x="737.5" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">1</text>
+<rect x="802" y="187" width="121" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="862.5" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="927" y="187" width="121" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="987.5" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text class="label" x="282" y="270.0" text-anchor="end">Adversarial Training</text>
+<rect x="302" y="241" width="121" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="362.5" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="427" y="241" width="121" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="487.5" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="552" y="241" width="121" height="50" rx="6" fill="#6F9FEF"><title>[arXiv 2025] Model-Agnostic Adversarial Attack and Defense for Vision-Language-Action Models</title></rect>
+<text x="612.5" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">1</text>
+<rect x="677" y="241" width="121" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="737.5" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="802" y="241" width="121" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="862.5" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="927" y="241" width="121" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="987.5" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text class="label" x="282" y="324.0" text-anchor="end">Action Shielding</text>
+<rect x="302" y="295" width="121" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="362.5" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="427" y="295" width="121" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="487.5" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="552" y="295" width="121" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="612.5" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="677" y="295" width="121" height="50" rx="6" fill="#6F9FEF"><title>[arXiv 2025] VLSA: Vision-Language-Action Models with a Plug-and-Play Safety Constraint Layer</title></rect>
+<text x="737.5" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">1</text>
+<rect x="802" y="295" width="121" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="862.5" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="927" y="295" width="121" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="987.5" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text class="label" x="282" y="378.0" text-anchor="end">Runtime Monitoring</text>
+<rect x="302" y="349" width="121" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="362.5" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="427" y="349" width="121" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="487.5" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="552" y="349" width="121" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="612.5" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="677" y="349" width="121" height="50" rx="6" fill="#6F9FEF"><title>[arXiv 2025] ROVER: Regulator-Driven Robust Temporal Verification of Black-Box Robot Policies</title></rect>
+<text x="737.5" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">1</text>
+<rect x="802" y="349" width="121" height="50" rx="6" fill="#6F9FEF"><title>[NeurIPS 2025] SAFE: Multitask Failure Detection for Vision-Language-Action Models</title></rect>
+<text x="862.5" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">1</text>
+<rect x="927" y="349" width="121" height="50" rx="6" fill="#6F9FEF"><title>[arXiv 2026] TrustVLA: Mechanism-Guided Inference-Time Defense Against Vision-Language-Action Backdoors</title></rect>
+<text x="987.5" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">1</text>
+<text class="label" x="282" y="432.0" text-anchor="end">Failure Recovery</text>
+<rect x="302" y="403" width="121" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="362.5" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="427" y="403" width="121" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="487.5" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="552" y="403" width="121" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="612.5" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="677" y="403" width="121" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="737.5" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="802" y="403" width="121" height="50" rx="6" fill="#6F9FEF"><title>[NeurIPS 2025] SAFE: Multitask Failure Detection for Vision-Language-Action Models</title></rect>
+<text x="862.5" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">1</text>
+<rect x="927" y="403" width="121" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="987.5" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text class="label" x="282" y="486.0" text-anchor="end">Formal Verification</text>
+<rect x="302" y="457" width="121" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="362.5" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="427" y="457" width="121" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="487.5" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="552" y="457" width="121" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="612.5" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="677" y="457" width="121" height="50" rx="6" fill="#6F9FEF"><title>[arXiv 2025] ROVER: Regulator-Driven Robust Temporal Verification of Black-Box Robot Policies</title></rect>
+<text x="737.5" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">1</text>
+<rect x="802" y="457" width="121" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="862.5" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="927" y="457" width="121" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="987.5" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text class="label" x="282" y="540.0" text-anchor="end">Input Filtering</text>
+<rect x="302" y="511" width="121" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="362.5" y="540.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="427" y="511" width="121" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="487.5" y="540.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="552" y="511" width="121" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="612.5" y="540.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="677" y="511" width="121" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="737.5" y="540.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="802" y="511" width="121" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="862.5" y="540.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="927" y="511" width="121" height="50" rx="6" fill="#6F9FEF"><title>[arXiv 2026] TrustVLA: Mechanism-Guided Inference-Time Defense Against Vision-Language-Action Backdoors</title></rect>
+<text x="987.5" y="540.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">1</text>
+<text class="axis" x="675.0" y="603" text-anchor="middle">Defended threat</text>
+<text class="axis" transform="translate(45 374.0) rotate(-90)" text-anchor="middle">Defense mechanism</text>
 </svg>

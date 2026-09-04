@@ -2139,7 +2139,41 @@
       "benchmark",
       "spatial-shift",
       "memorization"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "LIBERO"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "robust-success-rate"
+      ],
+      "physical_validation": false
+    },
+    "benchmark": {
+      "evaluates": [
+        "ood",
+        "task-reliability"
+      ],
+      "shift_types": [
+        "object",
+        "background",
+        "instruction"
+      ],
+      "environment": "simulation",
+      "base_platforms": [
+        "LIBERO"
+      ],
+      "public_data": true,
+      "leaderboard": false
+    }
   },
   {
     "id": "fei-2026-libero-plus",
@@ -2948,7 +2982,45 @@
       "adversarial-patch",
       "model-agnostic",
       "adversarial-fine-tuning"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "LIBERO"
+      ],
+      "models": [
+        "OpenVLA"
+      ],
+      "access": [
+        "white-box",
+        "transfer"
+      ],
+      "metrics": [
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": false
+    },
+    "defense": {
+      "position": [
+        "training-time"
+      ],
+      "mechanism": [
+        "adversarial-training"
+      ],
+      "protected_surface": [
+        "visual-perception"
+      ],
+      "defends_against": [
+        "adversarial-patch"
+      ],
+      "assumptions": [
+        "visual-encoder-access",
+        "attack-samples"
+      ]
+    }
   },
   {
     "id": "zhang-2025-safevla",
@@ -3220,7 +3292,43 @@
     "tags": [
       "failure-detection",
       "runtime-monitoring"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "LIBERO"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "false-positive-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": false
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "world-state",
+        "action-interface"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ]
+    }
   },
   {
     "id": "zhang-2025-vla-arena",
@@ -3260,7 +3368,37 @@
     "tags": [
       "benchmark",
       "closed-loop"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "robust-success-rate"
+      ],
+      "physical_validation": false
+    },
+    "benchmark": {
+      "evaluates": [
+        "ood",
+        "task-reliability"
+      ],
+      "shift_types": [
+        "object",
+        "background",
+        "camera"
+      ],
+      "environment": "simulation",
+      "base_platforms": [],
+      "public_data": true,
+      "leaderboard": false
+    }
   },
   {
     "id": "ru-2026-vla-risk",
@@ -3297,7 +3435,38 @@
     "tags": [
       "benchmark",
       "physical-robustness"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "physical-damage-rate",
+        "collision-rate"
+      ],
+      "physical_validation": true
+    },
+    "benchmark": {
+      "evaluates": [
+        "physical-safety",
+        "task-reliability"
+      ],
+      "shift_types": [
+        "object",
+        "state"
+      ],
+      "environment": "mixed",
+      "base_platforms": [],
+      "public_data": true,
+      "leaderboard": false
+    }
   },
   {
     "id": "yin-2025-safeagentbench",
@@ -3336,7 +3505,35 @@
     "tags": [
       "hazardous-instruction",
       "task-planning"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": false
+    },
+    "benchmark": {
+      "evaluates": [
+        "semantic-safety",
+        "task-reliability"
+      ],
+      "shift_types": [
+        "instruction"
+      ],
+      "environment": "simulation",
+      "base_platforms": [],
+      "public_data": true,
+      "leaderboard": false
+    }
   },
   {
     "id": "lu-2026-is-bench",
@@ -3866,7 +4063,25 @@
       "adversarial-patch",
       "black-box-transfer",
       "sim-to-real"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "LIBERO"
+      ],
+      "models": [],
+      "access": [
+        "transfer"
+      ],
+      "metrics": [
+        "attack-success-rate",
+        "task-success-rate"
+      ],
+      "physical_validation": true
+    }
   },
   {
     "id": "lu-2025-poex",
@@ -4553,7 +4768,36 @@
       "semantic-safety",
       "hazard",
       "benchmark"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": false
+    },
+    "benchmark": {
+      "evaluates": [
+        "semantic-safety",
+        "physical-safety"
+      ],
+      "shift_types": [
+        "object",
+        "instruction"
+      ],
+      "environment": "simulation",
+      "base_platforms": [],
+      "public_data": true,
+      "leaderboard": false
+    }
   },
   {
     "id": "wang-2024-vlatest",
@@ -4631,7 +4875,42 @@
       "temporal-verification",
       "black-box-policy",
       "runtime-regulator"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "black-box"
+      ],
+      "metrics": [
+        "constraint-violation-rate",
+        "task-success-rate"
+      ],
+      "physical_validation": false
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "formal-verification",
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "defends_against": [
+        "constraint-violation"
+      ],
+      "assumptions": [
+        "runtime-monitor",
+        "safety-constraints"
+      ]
+    }
   },
   {
     "id": "zollo-2025-vla-calibration",
@@ -5478,7 +5757,42 @@
       "collision-free-demonstration",
       "semantic-safety",
       "domain-randomization"
-    ]
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "LIBERO"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "physical-damage-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": false
+    },
+    "benchmark": {
+      "evaluates": [
+        "physical-safety",
+        "semantic-safety",
+        "task-reliability"
+      ],
+      "shift_types": [
+        "object",
+        "instruction"
+      ],
+      "environment": "simulation",
+      "base_platforms": [
+        "LIBERO"
+      ],
+      "public_data": true,
+      "leaderboard": false
+    }
   },
   {
     "id": "lyu-2026-foresight-safety-vla",
