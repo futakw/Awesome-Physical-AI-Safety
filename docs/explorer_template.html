@@ -21,7 +21,7 @@
     svg { width:100%; height:auto; display:block; border:1px solid var(--line); border-radius:10px; background:var(--panel); }
     .axis text,.legend text { fill:var(--muted); font-size:12px; }
     .axis path,.axis line { stroke:var(--line); }
-    .tooltip { position:fixed; pointer-events:none; max-width:380px; background:#202938; color:#fff; border-radius:8px; padding:11px 13px; box-shadow:0 8px 25px #20293833; font-size:13px; z-index:5; opacity:0; }
+    .tooltip { position:fixed; pointer-events:auto; max-width:380px; background:#202938; color:#fff; border-radius:8px; padding:11px 13px; box-shadow:0 8px 25px #20293833; font-size:13px; z-index:5; opacity:0; }
     .tooltip strong { display:block; font-size:14px; line-height:1.35; margin-bottom:4px; }
     .tooltip a { color:#c8dcff; }
     .paper-list { max-height:190px; overflow:auto; margin:6px 0 0; padding-left:18px; }
@@ -52,8 +52,12 @@ d3.select('#paper-count').text(papers.length);
 const threatLabel = p => { const t=p.threat_model; if(t.kind==='survey'||t.kind==='evaluation') return t.kind+' coverage'; return `${t.kind}; ${t.lifecycle.join(', ')}; ${t.mechanism.join(', ')} → ${t.target.join(', ')} → ${t.consequence.join(', ')}`; };
 const xScore = p => p.threat_model.kind==='adversarial' ? -1 : p.threat_model.kind==='non-adversarial' ? 1 : 0;
 const yScore = p => p.section==='defenses' ? 1 : ['training-attacks','inference-attacks','system-security'].includes(p.section) ? -.85 : p.section==='benchmarks' ? -.55 : p.section==='ood-generalization' ? .05 : 0;
-const showTooltip = (event, html) => { tooltip.html(html).style('opacity',1).style('left',`${Math.min(event.clientX+14,window.innerWidth-400)}px`).style('top',`${Math.min(event.clientY+14,window.innerHeight-220)}px`); };
-const hideTooltip = () => tooltip.style('opacity',0);
+let pinned = false;
+const placeTooltip = (event, html) => tooltip.html(html).style('opacity',1).style('left',`${Math.max(8,Math.min(event.clientX+14,window.innerWidth-400))}px`).style('top',`${Math.max(8,Math.min(event.clientY+14,window.innerHeight-220))}px`);
+const showTooltip = (event, html) => { if (!pinned) placeTooltip(event, html); };
+const pinTooltip = (event, html) => { pinned = true; placeTooltip(event, html); };
+const hideTooltip = () => { if (!pinned) tooltip.style('opacity',0); };
+document.addEventListener('pointerdown', event => { if (!event.target.closest('.tooltip') && !event.target.closest('.cell')) { pinned = false; tooltip.style('opacity',0); } });
 const paperHtml = p => `<strong>${p.title}</strong><div>${p.first_author} et al. · ${p.venue} ${p.year}</div><div>${labels[p.section]} · ${threatLabel(p)}</div>`;
 
 function renderMap(){
@@ -82,8 +86,8 @@ function renderTimeline(){
   years.forEach(year=>{svg.append('line').attr('x1',x(year)).attr('x2',x(year)).attr('y1',margin.top-20).attr('y2',height-margin.bottom+12).attr('stroke','#dce3ec');svg.append('text').attr('class','axis').attr('x',x(year)).attr('y',margin.top-32).attr('text-anchor','middle').text(year);});
   sections.forEach(s=>{svg.append('line').attr('x1',margin.left).attr('x2',width-margin.right).attr('y1',y(s)).attr('y2',y(s)).attr('stroke','#dce3ec');svg.append('text').attr('class','axis').attr('x',margin.left-20).attr('y',y(s)+5).attr('text-anchor','end').text(labels[s]);});
   const cells=[]; for(const s of sections) for(const year of years){const list=(grouped.get(s)?.get(year))||[]; if(list.length) cells.push({s,year,list});}
-  svg.selectAll('circle.cell').data(cells).join('circle').attr('class','cell').attr('cx',d=>x(d.year)).attr('cy',d=>y(d.s)).attr('r',d=>8+22*Math.sqrt(d.list.length/max)).attr('fill',d=>colors[d.s]).attr('fill-opacity',.88).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${labels[d.s]} · ${d.year} · ${d.list.length} papers</strong><ul class="paper-list">${d.list.map(p=>`<li><a href="${p.paper_url}" target="_blank" rel="noopener">${p.title}</a></li>`).join('')}</ul>`)).on('pointerleave',hideTooltip);
-  svg.selectAll('text.count').data(cells).join('text').attr('class','count').attr('x',d=>x(d.year)).attr('y',d=>y(d.s)+5).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',650).attr('fill','#fff').text(d=>d.list.length);
+  svg.selectAll('circle.cell').data(cells).join('circle').attr('class','cell').attr('cx',d=>x(d.year)).attr('cy',d=>y(d.s)).attr('r',d=>8+22*Math.sqrt(d.list.length/max)).attr('fill',d=>colors[d.s]).attr('fill-opacity',.88).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${labels[d.s]} · ${d.year} · ${d.list.length} papers</strong><ul class="paper-list">${d.list.map(p=>`<li><a href="${p.paper_url}" target="_blank" rel="noopener">${p.title}</a></li>`).join('')}</ul>`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();pinTooltip(event,`<strong>${labels[d.s]} · ${d.year} · ${d.list.length} papers</strong><ul class="paper-list">${d.list.map(p=>`<li><a href="${p.paper_url}" target="_blank" rel="noopener">${p.title}</a></li>`).join('')}</ul>`);});
+  svg.selectAll('text.count').data(cells).join('text').attr('class','count').attr('x',d=>x(d.year)).attr('y',d=>y(d.s)+5).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',650).attr('fill','#fff').style('pointer-events','none').text(d=>d.list.length);
 }
 
 function renderHeatmap(){
@@ -102,8 +106,8 @@ function renderHeatmap(){
   svg.append('text').attr('x',margin.left).attr('y',57).attr('font-size',13).attr('fill','#657287').text('Hover a cell to inspect contributing papers.');
   svg.selectAll('text.surface').data(surfaces).join('text').attr('class','axis').attr('text-anchor','start').attr('transform',s=>`translate(${x(s)+8},${margin.top-18}) rotate(-52)`).text(s=>s.replaceAll('-',' '));
   svg.selectAll('text.mechanism').data(mechanisms).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',m=>y(m)+y.bandwidth()/2+4).text(m=>m.replaceAll('-',' '));
-  svg.selectAll('rect.cell').data(cellData).join('rect').attr('class','cell').attr('x',d=>x(d.s)).attr('y',d=>y(d.m)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${d.m.replaceAll('-',' ')} × ${d.s.replaceAll('-',' ')}</strong><div>${d.n} papers</div><ul class="paper-list">${d.list.map(p=>`<li><a href="${p.paper_url}" target="_blank" rel="noopener">${p.title}</a></li>`).join('')}</ul>`)).on('pointerleave',hideTooltip);
-  svg.selectAll('text.value').data(cellData.filter(d=>d.n)).join('text').attr('class','value').attr('x',d=>x(d.s)+x.bandwidth()/2).attr('y',d=>y(d.m)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',650).attr('fill',d=>d.n/max>.48?'#fff':'#202938').text(d=>d.n);
+  svg.selectAll('rect.cell').data(cellData).join('rect').attr('class','cell').attr('x',d=>x(d.s)).attr('y',d=>y(d.m)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${d.m.replaceAll('-',' ')} × ${d.s.replaceAll('-',' ')}</strong><div>${d.n} papers</div><ul class="paper-list">${d.list.map(p=>`<li><a href="${p.paper_url}" target="_blank" rel="noopener">${p.title}</a></li>`).join('')}</ul>`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();pinTooltip(event,`<strong>${d.m.replaceAll('-',' ')} × ${d.s.replaceAll('-',' ')}</strong><div>${d.n} papers</div><ul class="paper-list">${d.list.map(p=>`<li><a href="${p.paper_url}" target="_blank" rel="noopener">${p.title}</a></li>`).join('')}</ul>`);});
+  svg.selectAll('text.value').data(cellData.filter(d=>d.n)).join('text').attr('class','value').attr('x',d=>x(d.s)+x.bandwidth()/2).attr('y',d=>y(d.m)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',650).attr('fill',d=>d.n/max>.48?'#fff':'#202938').style('pointer-events','none').text(d=>d.n);
 }
 
 renderMap(); renderTimeline(); renderHeatmap();
