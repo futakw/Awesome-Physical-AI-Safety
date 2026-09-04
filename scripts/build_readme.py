@@ -35,20 +35,20 @@ RISK_LABELS = {
 }
 
 RISK_COLORS = {
-    "task-reliability": "526D82",
-    "physical-safety": "87585D",
-    "ethical-societal": "6F6282",
-    "security-privacy": "806A4F",
+    "task-reliability": "4F67A5",
+    "physical-safety": "AE4560",
+    "ethical-societal": "7356A3",
+    "security-privacy": "947019",
 }
 
 THREAT_COLORS = {
-    "lifecycle": "526D82",
-    "surface": "4F746F",
-    "mechanism": "8A624D",
-    "target": "6F6282",
-    "consequence": "87585D",
-    "survey": "667078",
-    "evaluation": "516F7F",
+    "lifecycle": "4F67A5",
+    "surface": "2F7D73",
+    "mechanism": "B0523A",
+    "target": "7356A3",
+    "consequence": "AE4560",
+    "survey": "667585",
+    "evaluation": "36758C",
 }
 
 
