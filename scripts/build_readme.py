@@ -35,20 +35,20 @@ RISK_LABELS = {
 }
 
 RISK_COLORS = {
-    "task-reliability": "2563EB",
-    "physical-safety": "B91C1C",
-    "ethical-societal": "7E22CE",
-    "security-privacy": "C2410C",
+    "task-reliability": "526D82",
+    "physical-safety": "87585D",
+    "ethical-societal": "6F6282",
+    "security-privacy": "806A4F",
 }
 
 THREAT_COLORS = {
-    "lifecycle": "2563EB",
-    "surface": "0F766E",
-    "mechanism": "C2410C",
-    "target": "7E22CE",
-    "consequence": "B91C1C",
-    "survey": "6B7280",
-    "evaluation": "0369A1",
+    "lifecycle": "526D82",
+    "surface": "4F746F",
+    "mechanism": "8A624D",
+    "target": "6F6282",
+    "consequence": "87585D",
+    "survey": "667078",
+    "evaluation": "516F7F",
 }
 
 
@@ -63,7 +63,7 @@ def display_label(value: str) -> str:
 
 def badge(text: str, color: str) -> str:
     escaped = text.replace("-", "--").replace("_", "__").replace(" ", "_")
-    url = f"https://img.shields.io/badge/-{quote(escaped, safe='')}-{color}?style=flat-square"
+    url = f"https://img.shields.io/badge/-{quote(escaped, safe='')}-{color}?style=flat"
     return f"![{text}]({url})"
 
 
