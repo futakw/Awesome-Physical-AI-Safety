@@ -151,108 +151,6 @@ def subsection_anchor(section_key: str, subsection: str) -> str:
     return f"{section_key}-{slug}"
 
 
-GAP_COLORS = {
-    "strong": "3FA89B",
-    "moderate": "B88A24",
-    "sparse": "D47A5D",
-    "none": "D96F8A",
-    "not-applicable": "657A8C",
-}
-
-
-def coverage_badge(count: int, total: int) -> str:
-    ratio = count / total if total else 0
-    if ratio >= 0.6:
-        level = "strong"
-    elif ratio >= 0.3:
-        level = "moderate"
-    elif count:
-        level = "sparse"
-    else:
-        level = "none"
-    label = f"{display_label(level)} · {count}/{total}"
-    return badge(label, GAP_COLORS[level])
-
-
-def research_gap_matrix(papers: list[dict]) -> list[str]:
-    threat_families = OrderedDict(
-        [
-            ("Adversarial patch", {"adversarial-patch"}),
-            ("Backdoor", {"backdoor"}),
-            ("OOD / distribution shift", {"distribution-shift"}),
-            (
-                "Prompt injection",
-                {
-                    "direct-prompt-injection",
-                    "indirect-prompt-injection",
-                    "typographic-injection",
-                    "command-hijacking",
-                },
-            ),
-        ]
-    )
-
-    lines = [
-        "## Research Gap Matrix",
-        "",
-        "Coverage is computed from the structured catalog. Each cell shows `matching papers / papers in that threat family`; warmer colors expose thinner coverage.",
-        "",
-        "| Threat family | Simulation | Real robot | Black-box | Defense | Physical-damage evaluation |",
-        "|---|---:|---:|---:|---:|---:|",
-    ]
-    for label, mechanisms in threat_families.items():
-        matching = []
-        for paper in papers:
-            threat = paper["threat_model"]
-            paper_mechanisms = set(
-                threat.get("mechanism", threat.get("coverage", {}).get("mechanisms", []))
-            )
-            if paper_mechanisms & mechanisms:
-                matching.append(paper)
-
-        total = len(matching)
-        simulation = sum(
-            "simulation" in paper.get("evaluation", {}).get("environments", [])
-            for paper in matching
-        )
-        real_robot = sum(
-            "real-robot" in paper.get("evaluation", {}).get("environments", [])
-            for paper in matching
-        )
-        black_box = sum(
-            "black-box" in paper.get("evaluation", {}).get("access", [])
-            for paper in matching
-        )
-        defended = sum(
-            bool(set(paper.get("defense", {}).get("defends_against", [])) & mechanisms)
-            for paper in papers
-        )
-        physical_damage = sum(
-            "physical-safety" in paper.get("risks", []) for paper in matching
-        )
-        black_box_cell = (
-            badge("N/A", GAP_COLORS["not-applicable"])
-            if label.startswith("OOD")
-            else coverage_badge(black_box, total)
-        )
-        lines.append(
-            f"| **{label}** <sub>n={total}</sub> | {coverage_badge(simulation, total)} | "
-            f"{coverage_badge(real_robot, total)} | {black_box_cell} | "
-            f"{coverage_badge(defended, total)} | {coverage_badge(physical_damage, total)} |"
-        )
-
-    lines.extend(
-        [
-            "",
-            f"{badge('Strong ≥60%', GAP_COLORS['strong'])} {badge('Moderate ≥30%', GAP_COLORS['moderate'])} {badge('Sparse <30%', GAP_COLORS['sparse'])} {badge('None', GAP_COLORS['none'])} {badge('N/A', GAP_COLORS['not-applicable'])}",
-            "",
-            "> A zero means that the current metadata does not document matching evidence; it does not prove that no such experiment exists. Surveys are included only when their structured coverage names the threat family.",
-            "",
-        ]
-    )
-    return lines
-
-
 def render(papers: list[dict]) -> str:
     lines = [
         "# Awesome Responsible VLA",
@@ -271,7 +169,6 @@ def render(papers: list[dict]) -> str:
         "Open the [interactive explorer](docs/index.html) for hoverable paper lists in the field timeline and the Threat, Defense, Benchmark, and Evaluation cross-maps.",
         "",
     ]
-    lines.extend(research_gap_matrix(papers))
     lines.extend([
         "## Taxonomy at a Glance",
         "",
@@ -304,7 +201,6 @@ def render(papers: list[dict]) -> str:
     ])
 
     present_sections = [key for key in SECTIONS if any(p["section"] == key for p in papers)]
-    lines.append("- [🔎 Research Gap Matrix](#research-gap-matrix)")
     for key in present_sections:
         icon, title = SECTIONS[key]
         lines.append(f"- [{icon} {title}](#{key})")

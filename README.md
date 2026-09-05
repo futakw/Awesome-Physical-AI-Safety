@@ -13,21 +13,6 @@ A curated, taxonomy-driven list of research on the safety, robustness, security,
 
 Open the [interactive explorer](docs/index.html) for hoverable paper lists in the field timeline and the Threat, Defense, Benchmark, and Evaluation cross-maps.
 
-## Research Gap Matrix
-
-Coverage is computed from the structured catalog. Each cell shows `matching papers / papers in that threat family`; warmer colors expose thinner coverage.
-
-| Threat family | Simulation | Real robot | Black-box | Defense | Physical-damage evaluation |
-|---|---:|---:|---:|---:|---:|
-| **Adversarial patch** <sub>n=10</sub> | ![Strong · 7/10](https://img.shields.io/badge/-Strong_%C2%B7_7%2F10-3FA89B?style=flat) | ![Moderate · 4/10](https://img.shields.io/badge/-Moderate_%C2%B7_4%2F10-B88A24?style=flat) | ![None · 0/10](https://img.shields.io/badge/-None_%C2%B7_0%2F10-D96F8A?style=flat) | ![Sparse · 2/10](https://img.shields.io/badge/-Sparse_%C2%B7_2%2F10-D47A5D?style=flat) | ![Sparse · 1/10](https://img.shields.io/badge/-Sparse_%C2%B7_1%2F10-D47A5D?style=flat) |
-| **Backdoor** <sub>n=16</sub> | ![Moderate · 8/16](https://img.shields.io/badge/-Moderate_%C2%B7_8%2F16-B88A24?style=flat) | ![Moderate · 5/16](https://img.shields.io/badge/-Moderate_%C2%B7_5%2F16-B88A24?style=flat) | ![Sparse · 1/16](https://img.shields.io/badge/-Sparse_%C2%B7_1%2F16-D47A5D?style=flat) | ![Sparse · 3/16](https://img.shields.io/badge/-Sparse_%C2%B7_3%2F16-D47A5D?style=flat) | ![None · 0/16](https://img.shields.io/badge/-None_%C2%B7_0%2F16-D96F8A?style=flat) |
-| **OOD / distribution shift** <sub>n=30</sub> | ![Moderate · 16/30](https://img.shields.io/badge/-Moderate_%C2%B7_16%2F30-B88A24?style=flat) | ![Moderate · 10/30](https://img.shields.io/badge/-Moderate_%C2%B7_10%2F30-B88A24?style=flat) | ![N/A](https://img.shields.io/badge/-N%2FA-657A8C?style=flat) | ![Moderate · 10/30](https://img.shields.io/badge/-Moderate_%C2%B7_10%2F30-B88A24?style=flat) | ![Sparse · 5/30](https://img.shields.io/badge/-Sparse_%C2%B7_5%2F30-D47A5D?style=flat) |
-| **Prompt injection** <sub>n=10</sub> | ![Moderate · 4/10](https://img.shields.io/badge/-Moderate_%C2%B7_4%2F10-B88A24?style=flat) | ![Moderate · 3/10](https://img.shields.io/badge/-Moderate_%C2%B7_3%2F10-B88A24?style=flat) | ![None · 0/10](https://img.shields.io/badge/-None_%C2%B7_0%2F10-D96F8A?style=flat) | ![None · 0/10](https://img.shields.io/badge/-None_%C2%B7_0%2F10-D96F8A?style=flat) | ![Moderate · 3/10](https://img.shields.io/badge/-Moderate_%C2%B7_3%2F10-B88A24?style=flat) |
-
-![Strong ≥60%](https://img.shields.io/badge/-Strong_%E2%89%A560%25-3FA89B?style=flat) ![Moderate ≥30%](https://img.shields.io/badge/-Moderate_%E2%89%A530%25-B88A24?style=flat) ![Sparse <30%](https://img.shields.io/badge/-Sparse_%3C30%25-D47A5D?style=flat) ![None](https://img.shields.io/badge/-None-D96F8A?style=flat) ![N/A](https://img.shields.io/badge/-N%2FA-657A8C?style=flat)
-
-> A zero means that the current metadata does not document matching evidence; it does not prove that no such experiment exists. Surveys are included only when their structured coverage names the threat family.
-
 ## Taxonomy at a Glance
 
 ### Risk outcomes
@@ -56,7 +41,6 @@ See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.
 
 ## 🧭 Contents
 
-- [🔎 Research Gap Matrix](#research-gap-matrix)
 - [📚 Surveys and Perspectives](#surveys)
 - [🌍 Robustness and OOD Generalization](#ood-generalization)
 - [🧪 Training-Time Attacks](#training-attacks)
