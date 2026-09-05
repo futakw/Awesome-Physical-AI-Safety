@@ -44,6 +44,8 @@
     <button type="button" data-view="defense" aria-pressed="false">Defense cross-map</button>
     <button type="button" data-view="benchmark" aria-pressed="false">Benchmark cross-map</button>
     <button type="button" data-view="evaluation" aria-pressed="false">Evaluation cross-map</button>
+    <button type="button" data-view="model" aria-pressed="false">Model view</button>
+    <button type="button" data-view="environment" aria-pressed="false">Environment view</button>
   </nav>
   <section id="timeline" class="active"><p class="note">Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to pin the paper list.</p><div id="timeline-chart"></div></section>
   <section id="heatmap"><p class="note">Cells show mechanism-surface co-occurrence for concrete threat models. Hover for a preview; click a cell to pin the paper list.</p><div id="heatmap-chart"></div></section>
@@ -53,6 +55,8 @@
   <section id="evaluation"><p class="note">Rows are evaluation environments and columns are reported metrics. Only enriched records are counted.</p><div id="evaluation-chart"></div></section>
   <section id="readme"><iframe class="doc-frame" src="readme.html" title="Rendered README"></iframe></section>
   <section id="taxonomy"><iframe class="doc-frame" src="taxonomy.html" title="Rendered taxonomy"></iframe></section>
+  <section id="model"><p class="note">Model × evaluated risk. Hover or click a cell for the paper list.</p><div id="model-chart"></div></section>
+  <section id="environment"><p class="note">Environment × evaluated risk. Hover or click a cell for the paper list.</p><div id="environment-chart"></div></section>
 </main>
 <div id="tooltip" class="tooltip" role="tooltip"></div>
 <script>
@@ -180,9 +184,16 @@ function renderEvaluation(){
   const items=papers.filter(p=>p.evaluation), rows=[...new Set(items.flatMap(p=>p.evaluation.environments))], cols=[...new Set(items.flatMap(p=>p.evaluation.metrics))];
   renderExtensionMap('#evaluation-chart','Evaluation environment × metric',items,rows,cols,p=>p.evaluation.environments,p=>p.evaluation.metrics,'Evaluation environment and metric cross-map');
 }
+function renderModelEnvironment(){
+  const items=papers.filter(p=>p.evaluation), cols=['task-reliability','physical-safety','ethical-societal','security-privacy'];
+  const models=[...new Set(items.flatMap(p=>p.evaluation.models||[]))].filter(x=>x!=='unspecified').sort();
+  const envs=[...new Set(items.flatMap(p=>p.evaluation.environments||[]))].filter(x=>x!=='unspecified').sort();
+  renderExtensionMap('#model-chart','Model × evaluated risk',items,models,cols,p=>p.evaluation.models||[],p=>p.risks,'Model and evaluated risk cross-map');
+  renderExtensionMap('#environment-chart','Environment × evaluated risk',items,envs,cols,p=>p.evaluation.environments||[],p=>p.risks,'Environment and evaluated risk cross-map');
+}
 
 d3.selectAll('button[data-view]').on('click',function(){const view=this.dataset.view;d3.selectAll('button[data-view]').attr('aria-pressed','false');d3.select(this).attr('aria-pressed','true');d3.selectAll('section').classed('active',false);d3.select('#'+view).classed('active',true);});
-for (const render of [renderTimeline, renderHeatmap, renderThreatRisk, renderDefenseV2, renderBenchmarkV2, renderEvaluation]) {
+for (const render of [renderTimeline, renderHeatmap, renderThreatRisk, renderDefenseV2, renderBenchmarkV2, renderEvaluation, renderModelEnvironment]) {
   try { render(); } catch (error) { console.error('Visualization failed to render:', error); }
 }
 </script>
