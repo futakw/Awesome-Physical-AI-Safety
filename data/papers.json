@@ -5141,7 +5141,8 @@
         ],
         "mechanisms": [
           "environment-manipulation",
-          "sensor-spoofing"
+          "sensor-spoofing",
+          "typographic-injection"
         ],
         "surfaces": [
           "visual-perception",
@@ -5156,7 +5157,8 @@
     },
     "tags": [
       "benchmark",
-      "physical-robustness"
+      "physical-robustness",
+      "typographic-attack"
     ],
     "evaluation": {
       "environments": [
