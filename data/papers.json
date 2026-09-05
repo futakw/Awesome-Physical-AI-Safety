@@ -6271,19 +6271,25 @@
     ],
     "evaluation": {
       "environments": [
-        "unspecified"
+        "offline-dataset"
       ],
-      "platforms": [],
-      "models": [],
+      "platforms": [
+        "SafeAgentBench"
+      ],
+      "models": [
+        "LLaMA-3.2-Vision",
+        "Qwen2-VL",
+        "GPT-4o"
+      ],
       "access": [
-        "unspecified"
+        "white-box"
       ],
       "metrics": [
         "attack-success-rate",
         "clean-task-success-rate"
       ],
-      "physical_validation": null,
-      "curation_status": "catalog-derived"
+      "physical_validation": false,
+      "curation_status": "paper-verified"
     },
     "defense": {
       "position": [
@@ -7811,10 +7817,15 @@
     ],
     "evaluation": {
       "environments": [
-        "unspecified"
+        "simulation"
       ],
-      "platforms": [],
-      "models": [],
+      "platforms": [
+        "MuJoCo",
+        "Bullet Safety Gym"
+      ],
+      "models": [
+        "SORL policy"
+      ],
       "access": [
         "not-applicable"
       ],
@@ -7823,8 +7834,8 @@
         "collision-rate",
         "constraint-violation-rate"
       ],
-      "physical_validation": null,
-      "curation_status": "catalog-derived"
+      "physical_validation": false,
+      "curation_status": "paper-verified"
     },
     "defense": {
       "position": [
@@ -8044,10 +8055,15 @@
     ],
     "evaluation": {
       "environments": [
-        "unspecified"
+        "simulation"
       ],
-      "platforms": [],
-      "models": [],
+      "platforms": [
+        "R2R-CE",
+        "Matterport3D"
+      ],
+      "models": [
+        "ETPNav"
+      ],
       "access": [
         "not-applicable"
       ],
@@ -8057,8 +8073,8 @@
         "collision-rate",
         "constraint-violation-rate"
       ],
-      "physical_validation": null,
-      "curation_status": "catalog-derived"
+      "physical_validation": false,
+      "curation_status": "paper-verified"
     },
     "defense": {
       "position": [
