@@ -54,12 +54,12 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text class="label" x="282" y="250.0" text-anchor="end">Constraint Violation</text>
 <rect x="302" y="221" width="186" height="50" rx="6" fill="#B49CE0"><title>[arXiv 2026] Pre-Execution Safety Gate &amp; Task Safety Contracts for LLM-Based Robot Task Planning
 [arXiv 2026] PROTEA: Securing Robot Task Planning and Execution
-[Reference-only 2026] LogicGuard: Improving Embodied LLM Agents Through Temporal Logic-Based Critics
+[arXiv 2025] LogicGuard: Improving Embodied LLM Agents Through Temporal Logic-Based Critics
 [arXiv 2025] SafePlan: Leveraging Formal Logic and Chain-of-Thought Reasoning for Enhanced Safety in LLM-based Robotic Task Planning
 [arXiv 2025] Safe LLM-Controlled Robots with Formal Guarantees via Reachability Analysis
 [arXiv 2024] SafeEmbodAI: Securing LLM-Controlled Mobile Robots against Prompt Injection
 [arXiv 2025] SafeDec: Constrained Decoding for Safe Autoregressive Embodied Policies
-[Reference-only 2025] Ask Before You Act: Token-Level Uncertainty for Intervention in Vision-Language-Action Models
+[RSS Workshop 2025] Ask Before You Act: Token-Level Uncertainty for Intervention in Vision-Language-Action Models
 [NeurIPS 2025] SafeVLA: Towards Safety Alignment of Vision-Language-Action Models via Constrained Learning
 [arXiv 2025] VLSA: Vision-Language-Action Models with a Plug-and-Play Safety Constraint Layer
 [AAAI 2026] IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents in Daily Household Tasks
@@ -82,9 +82,9 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <rect x="872" y="221" width="186" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="965.0" y="250.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="label" x="282" y="304.0" text-anchor="end">Execution Error</text>
-<rect x="302" y="275" width="186" height="50" rx="6" fill="#AE93DD"><title>[Reference-only 2026] FPC-VLA: A Vision-Language-Action Framework with a Supervisor for Failure Prediction and Correction
+<rect x="302" y="275" width="186" height="50" rx="6" fill="#AE93DD"><title>[Expert Systems with Applications 2026] FPC-VLA: A Vision-Language-Action Framework with a Supervisor for Failure Prediction and Correction
 [arXiv 2025] Guardian: Detecting Robotic Planning and Execution Errors with Vision-Language Models
-[Reference-only 2024] AHA: A Vision-Language-Model for Detecting and Reasoning over Failures in Robotic Manipulation
+[ICLR 2025] AHA: A Vision-Language-Model for Detecting and Reasoning over Failures in Robotic Manipulation
 [arXiv 2025] Horcrux: Robustness/Recovery for Vision-Language-Action Policies
 [arXiv 2025] FailSafe: Reasoning and Recovery from Failures in Vision-Language-Action Models
 [CoRL 2023] REFLECT: Summarizing Robot Experiences for Failure Explanation and Correction
@@ -106,7 +106,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <rect x="872" y="275" width="186" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="965.0" y="304.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="label" x="282" y="358.0" text-anchor="end">Backdoor</text>
-<rect x="302" y="329" width="186" height="50" rx="6" fill="#B49CE0"><title>[Reference-only 2025] Clean-Action Backdoor Attacks on Vision-Language-Action Models via Sequential Error Exploitation
+<rect x="302" y="329" width="186" height="50" rx="6" fill="#B49CE0"><title>[OpenReview 2026] Clean-Action Backdoor Attacks on Vision-Language-Action Models via Sequential Error Exploitation
 [arXiv 2025] TrojanRobot / Robot Collapse: Supply-Chain Backdoor Attacks Against VLM-based Robotic Manipulation
 [arXiv 2025] Compromising LLM Driven Embodied Agents with Contextual Backdoor Attacks
 [arXiv 2025] BEAT: Visual Backdoor Attacks on MLLM Embodied Decision Making via Contrastive Trigger Learning
@@ -212,7 +212,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <rect x="872" y="545" width="186" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="965.0" y="574.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="label" x="282" y="628.0" text-anchor="end">Data Poisoning</text>
-<rect x="302" y="599" width="186" height="50" rx="6" fill="#D2CAEC"><title>[Reference-only 2025] Clean-Action Backdoor Attacks on Vision-Language-Action Models via Sequential Error Exploitation
+<rect x="302" y="599" width="186" height="50" rx="6" fill="#D2CAEC"><title>[OpenReview 2026] Clean-Action Backdoor Attacks on Vision-Language-Action Models via Sequential Error Exploitation
 [arXiv 2025] TrojanRobot / Robot Collapse: Supply-Chain Backdoor Attacks Against VLM-based Robotic Manipulation
 [arXiv 2025] Compromising LLM Driven Embodied Agents with Contextual Backdoor Attacks
 [arXiv 2025] BEAT: Visual Backdoor Attacks on MLLM Embodied Decision Making via Contrastive Trigger Learning

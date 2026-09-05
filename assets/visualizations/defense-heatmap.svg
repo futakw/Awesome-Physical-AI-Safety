@@ -54,18 +54,18 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="343.2" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="388.5" y="241" width="82.5" height="50" rx="6" fill="#8FB4F1"><title>[arXiv 2026] Pre-Execution Safety Gate &amp; Task Safety Contracts for LLM-Based Robot Task Planning
 [arXiv 2026] PROTEA: Securing Robot Task Planning and Execution
-[Reference-only 2026] LogicGuard: Improving Embodied LLM Agents Through Temporal Logic-Based Critics
+[arXiv 2025] LogicGuard: Improving Embodied LLM Agents Through Temporal Logic-Based Critics
 [arXiv 2025] SafePlan: Leveraging Formal Logic and Chain-of-Thought Reasoning for Enhanced Safety in LLM-based Robotic Task Planning
 [arXiv 2025] Safe LLM-Controlled Robots with Formal Guarantees via Reachability Analysis
 [arXiv 2024] SafeEmbodAI: Securing LLM-Controlled Mobile Robots against Prompt Injection
 [arXiv 2025] SafeDec: Constrained Decoding for Safe Autoregressive Embodied Policies
-[Reference-only 2025] Ask Before You Act: Token-Level Uncertainty for Intervention in Vision-Language-Action Models
+[RSS Workshop 2025] Ask Before You Act: Token-Level Uncertainty for Intervention in Vision-Language-Action Models
 [arXiv 2025] VLSA: Vision-Language-Action Models with a Plug-and-Play Safety Constraint Layer
 [arXiv 2025] From Words to Safety: Language-Conditioned Safety Filtering for Robot Navigation</title></rect>
 <text x="429.8" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">10</text>
-<rect x="475.0" y="241" width="82.5" height="50" rx="6" fill="#6F9FEF"><title>[Reference-only 2026] FPC-VLA: A Vision-Language-Action Framework with a Supervisor for Failure Prediction and Correction
+<rect x="475.0" y="241" width="82.5" height="50" rx="6" fill="#6F9FEF"><title>[Expert Systems with Applications 2026] FPC-VLA: A Vision-Language-Action Framework with a Supervisor for Failure Prediction and Correction
 [arXiv 2025] Guardian: Detecting Robotic Planning and Execution Errors with Vision-Language Models
-[Reference-only 2024] AHA: A Vision-Language-Model for Detecting and Reasoning over Failures in Robotic Manipulation
+[ICLR 2025] AHA: A Vision-Language-Model for Detecting and Reasoning over Failures in Robotic Manipulation
 [arXiv 2025] Horcrux: Robustness/Recovery for Vision-Language-Action Policies
 [arXiv 2025] FailSafe: Reasoning and Recovery from Failures in Vision-Language-Action Models
 [arXiv 2026] RC-NF: Robot-Conditioned Normalizing Flow for Real-Time Anomaly Detection in Robotic Manipulation
@@ -96,7 +96,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text class="label" x="282" y="324.0" text-anchor="end">Formal Verification</text>
 <rect x="302.0" y="295" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="343.2" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="388.5" y="295" width="82.5" height="50" rx="6" fill="#C6D9F5"><title>[Reference-only 2026] LogicGuard: Improving Embodied LLM Agents Through Temporal Logic-Based Critics
+<rect x="388.5" y="295" width="82.5" height="50" rx="6" fill="#C6D9F5"><title>[arXiv 2025] LogicGuard: Improving Embodied LLM Agents Through Temporal Logic-Based Critics
 [arXiv 2025] SafePlan: Leveraging Formal Logic and Chain-of-Thought Reasoning for Enhanced Safety in LLM-based Robotic Task Planning
 [arXiv 2025] Safe LLM-Controlled Robots with Formal Guarantees via Reachability Analysis</title></rect>
 <text x="429.8" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">3</text>
@@ -121,9 +121,9 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="343.2" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="388.5" y="349" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="429.8" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="475.0" y="349" width="82.5" height="50" rx="6" fill="#75A3EF"><title>[Reference-only 2026] FPC-VLA: A Vision-Language-Action Framework with a Supervisor for Failure Prediction and Correction
+<rect x="475.0" y="349" width="82.5" height="50" rx="6" fill="#75A3EF"><title>[Expert Systems with Applications 2026] FPC-VLA: A Vision-Language-Action Framework with a Supervisor for Failure Prediction and Correction
 [arXiv 2025] Guardian: Detecting Robotic Planning and Execution Errors with Vision-Language Models
-[Reference-only 2024] AHA: A Vision-Language-Model for Detecting and Reasoning over Failures in Robotic Manipulation
+[ICLR 2025] AHA: A Vision-Language-Model for Detecting and Reasoning over Failures in Robotic Manipulation
 [arXiv 2025] Horcrux: Robustness/Recovery for Vision-Language-Action Policies
 [arXiv 2025] FailSafe: Reasoning and Recovery from Failures in Vision-Language-Action Models
 [arXiv 2025] I-FailSense: Towards General Robotic Failure Detection with Vision-Language Models
