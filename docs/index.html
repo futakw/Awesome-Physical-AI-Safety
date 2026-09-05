@@ -27,6 +27,7 @@
     .tooltip a { color:#c8dcff; }
     .paper-list { max-height:190px; overflow:auto; margin:6px 0 0; padding-left:18px; }
     .paper-list li { margin:2px 0; }
+    .doc-frame { width:100%; min-height:900px; border:1px solid var(--line); border-radius:10px; background:#fff; }
     @media (max-width:620px) { main { padding:25px 12px 40px; } h1 { font-size:26px; } .tooltip { max-width:280px; } }
   </style>
 </head>
@@ -35,8 +36,8 @@
   <h1>Research Landscape</h1>
   <p class="lede">Interactive views of the Awesome Responsible VLA catalog (<span id="paper-count"></span> papers).</p>
   <nav aria-label="Visualization views">
-    <a class="doc-link" href="readme.html" target="_blank" rel="noopener">README</a>
-    <a class="doc-link" href="taxonomy.html" target="_blank" rel="noopener">Taxonomy</a>
+    <button type="button" data-view="readme" aria-pressed="false">README</button>
+    <button type="button" data-view="taxonomy" aria-pressed="false">Taxonomy</button>
     <button type="button" data-view="timeline" aria-pressed="true">Field timeline</button>
     <button type="button" data-view="heatmap" aria-pressed="false">Threat cross-map</button>
     <button type="button" data-view="risk" aria-pressed="false">Threat × risk</button>
@@ -50,6 +51,8 @@
   <section id="defense"><p class="note">Rows are defense mechanisms and columns are the threat mechanisms they address. Only enriched records are counted.</p><div id="defense-chart"></div></section>
   <section id="benchmark"><p class="note">Rows are evaluated threat mechanisms and columns are evaluated consequences for benchmark papers.</p><div id="benchmark-chart"></div></section>
   <section id="evaluation"><p class="note">Rows are evaluation environments and columns are reported metrics. Only enriched records are counted.</p><div id="evaluation-chart"></div></section>
+  <section id="readme"><iframe class="doc-frame" src="readme.html" title="Rendered README"></iframe></section>
+  <section id="taxonomy"><iframe class="doc-frame" src="taxonomy.html" title="Rendered taxonomy"></iframe></section>
 </main>
 <div id="tooltip" class="tooltip" role="tooltip"></div>
 <script>
