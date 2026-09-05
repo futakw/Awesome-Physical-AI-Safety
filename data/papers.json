@@ -667,7 +667,7 @@
         "MiniGPT-v2"
       ],
       "access": [
-        "unspecified"
+        "black-box"
       ],
       "metrics": [
         "task-success-rate",
@@ -782,14 +782,14 @@
         "Otter"
       ],
       "access": [
-        "unspecified"
+        "white-box"
       ],
       "metrics": [
         "task-success-rate",
         "attack-success-rate",
         "clean-task-success-rate"
       ],
-      "physical_validation": null,
+      "physical_validation": false,
       "curation_status": "paper-verified"
     }
   },
@@ -894,20 +894,30 @@
     ],
     "evaluation": {
       "environments": [
-        "unspecified"
+        "simulation",
+        "offline-dataset"
       ],
-      "platforms": [],
-      "models": [],
+      "platforms": [
+        "Unity",
+        "PI3D virtual environments",
+        "PI3D real-world captures"
+      ],
+      "models": [
+        "Gemini 2.0 Flash",
+        "GPT-4o-mini",
+        "GPT-5",
+        "Gemini 2.5 Flash"
+      ],
       "access": [
-        "unspecified"
+        "black-box"
       ],
       "metrics": [
         "task-success-rate",
         "attack-success-rate",
         "clean-task-success-rate"
       ],
-      "physical_validation": null,
-      "curation_status": "catalog-derived"
+      "physical_validation": false,
+      "curation_status": "paper-verified"
     }
   },
   {
@@ -1150,20 +1160,30 @@
     ],
     "evaluation": {
       "environments": [
-        "unspecified"
+        "simulation"
       ],
-      "platforms": [],
-      "models": [],
+      "platforms": [
+        "VAB-OmniGibson",
+        "OmniGibson",
+        "EB-ALFRED",
+        "AI2-THOR"
+      ],
+      "models": [
+        "GPT-4o-2024-08-06",
+        "Qwen2-VL-7B-Instruct",
+        "InternVL3-8B"
+      ],
       "access": [
-        "unspecified"
+        "white-box",
+        "black-box"
       ],
       "metrics": [
         "task-success-rate",
         "attack-success-rate",
         "clean-task-success-rate"
       ],
-      "physical_validation": null,
-      "curation_status": "catalog-derived"
+      "physical_validation": false,
+      "curation_status": "paper-verified"
     }
   },
   {
@@ -2936,19 +2956,29 @@
     ],
     "evaluation": {
       "environments": [
-        "unspecified"
+        "simulation",
+        "real-robot"
       ],
-      "platforms": [],
-      "models": [],
+      "platforms": [
+        "LIBERO",
+        "AIRBOT Play",
+        "AIRBOT Replay",
+        "Woosh mobile base"
+      ],
+      "models": [
+        "OpenVLA",
+        "OpenVLA-OFT",
+        "pi0"
+      ],
       "access": [
-        "unspecified"
+        "white-box"
       ],
       "metrics": [
         "attack-success-rate",
         "clean-task-success-rate"
       ],
-      "physical_validation": null,
-      "curation_status": "catalog-derived"
+      "physical_validation": true,
+      "curation_status": "paper-verified"
     }
   },
   {
@@ -5691,17 +5721,24 @@
       "environments": [
         "simulation"
       ],
-      "platforms": [],
-      "models": [],
+      "platforms": [
+        "SIMPLER",
+        "Google Robot",
+        "WidowX"
+      ],
+      "models": [
+        "OpenVLA",
+        "Octo"
+      ],
       "access": [
-        "unspecified"
+        "black-box"
       ],
       "metrics": [
         "attack-success-rate",
         "clean-task-success-rate"
       ],
-      "physical_validation": null,
-      "curation_status": "abstract-verified"
+      "physical_validation": false,
+      "curation_status": "paper-verified"
     }
   },
   {
