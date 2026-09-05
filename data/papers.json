@@ -411,10 +411,16 @@
     ],
     "evaluation": {
       "environments": [
-        "unspecified"
+        "simulation"
       ],
-      "platforms": [],
-      "models": [],
+      "platforms": [
+        "AI2-THOR"
+      ],
+      "models": [
+        "GPT-4o",
+        "Gemini 2.0 Flash",
+        "Gemini 1.5 Pro"
+      ],
       "access": [
         "not-applicable"
       ],
@@ -422,8 +428,8 @@
         "task-success-rate",
         "constraint-violation-rate"
       ],
-      "physical_validation": null,
-      "curation_status": "catalog-derived"
+      "physical_validation": false,
+      "curation_status": "paper-verified"
     },
     "defense": {
       "position": [
@@ -640,8 +646,18 @@
         "simulation",
         "real-robot"
       ],
-      "platforms": [],
-      "models": [],
+      "platforms": [
+        "UR3e",
+        "myCobot 280-Pi"
+      ],
+      "models": [
+        "Code as Policies",
+        "VoxPoser",
+        "ProgPrompt",
+        "OWLv2",
+        "Qwen-VL-Max",
+        "MiniGPT-v2"
+      ],
       "access": [
         "unspecified"
       ],
@@ -651,7 +667,7 @@
         "clean-task-success-rate"
       ],
       "physical_validation": true,
-      "curation_status": "abstract-verified"
+      "curation_status": "paper-verified"
     }
   },
   {
@@ -753,7 +769,10 @@
       "platforms": [
         "EIRAD"
       ],
-      "models": [],
+      "models": [
+        "Llama-2-7B-Chat",
+        "Otter"
+      ],
       "access": [
         "unspecified"
       ],
@@ -763,7 +782,7 @@
         "clean-task-success-rate"
       ],
       "physical_validation": null,
-      "curation_status": "abstract-verified"
+      "curation_status": "paper-verified"
     }
   },
   {
