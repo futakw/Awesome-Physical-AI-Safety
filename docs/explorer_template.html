@@ -58,7 +58,7 @@ d3.select('#paper-count').text(papers.length);
 const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const paperListHtml = list => `<ul class="paper-list">${list.map(p=>`<li>${p.paper_url?`<a href="${escapeHtml(p.paper_url)}" target="_blank" rel="noopener">[${escapeHtml(p.venue)} ${p.year}] ${escapeHtml(p.title)}</a>`:`[${escapeHtml(p.venue)} ${p.year}] ${escapeHtml(p.title)}`}</li>`).join('')}</ul>`;
 const threatValues = (p,field) => ['survey','evaluation'].includes(p.threat_model.kind) ? (p.threat_model.coverage[{lifecycle:'lifecycles',mechanism:'mechanisms',surface:'surfaces',consequence:'consequences'}[field]]||[]) : (p.threat_model[field]||[]);
-const orderedThreatMechanisms = () => { const concrete=papers.filter(p=>!['survey','evaluation'].includes(p.threat_model.kind)); const exploded=concrete.flatMap(p=>p.threat_model.mechanism.map(m=>({p,m}))); const counts=d3.rollup(exploded,v=>new Set(v.map(d=>d.p.id)).size,d=>d.m); return [...counts].sort((a,b)=>d3.descending(a[1],b[1])).slice(0,10).map(d=>d[0]); };
+const orderedThreatMechanisms = () => { const concrete=papers.filter(p=>p.threat_model.kind!=='survey'); const exploded=concrete.flatMap(p=>threatValues(p,'mechanism').map(m=>({p,m}))); const counts=d3.rollup(exploded,v=>new Set(v.map(d=>d.p.id)).size,d=>d.m); return [...counts].sort((a,b)=>d3.descending(a[1],b[1])).slice(0,10).map(d=>d[0]); };
 let pinned = false;
 const placeTooltip = (event, html) => tooltip.html(html).style('opacity',1).style('left',`${Math.max(8,Math.min(event.clientX+14,window.innerWidth-400))}px`).style('top',`${Math.max(8,Math.min(event.clientY+14,window.innerHeight-220))}px`);
 const showTooltip = (event, html) => { if (!pinned) placeTooltip(event, html); };
@@ -160,7 +160,7 @@ function renderDefenseV2(){
   renderExtensionMap('#defense-chart','Defense mechanism × defended threat',items,rows,cols,p=>p.defense.mechanism,p=>p.defense.defends_against,'Defense mechanism and defended threat cross-map');
 }
 function renderThreatRisk(){
-  const items=papers.filter(p=>!['survey','evaluation'].includes(p.threat_model.kind));
+  const items=papers.filter(p=>p.threat_model.kind!=='survey');
   const rows=orderedThreatMechanisms(), cols=['task-reliability','physical-safety','ethical-societal','security-privacy'];
   renderExtensionMap('#risk-chart','Threat mechanism × evaluated risk',items,rows,cols,p=>threatValues(p,'mechanism'),p=>p.risks,'Threat mechanism and evaluated risk cross-map');
 }
