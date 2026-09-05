@@ -16,6 +16,12 @@ Bubble area encodes the number of cataloged papers in each area-year cell.
 
 The heatmap includes concrete threat models and excludes broad survey/evaluation coverage. Multi-label papers contribute to every applicable mechanism-surface pair.
 
+## Threat Mechanism × Evaluated Risk
+
+![Threat mechanism and evaluated risk heatmap](../assets/visualizations/threat-risk-heatmap.svg)
+
+Rows follow the same top threat-mechanism order as the Threat Cross-Map. Columns are the four evidence-coded `risks` outcomes; a paper contributes only when it reports a corresponding empirical metric.
+
 ## Defense Cross-Map
 
 ![Defense coverage map](../assets/visualizations/defense-heatmap.svg)

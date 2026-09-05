@@ -1,0 +1,243 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 1200 795">
+<title id="title">Threat mechanism × evaluated risk</title>
+<desc id="desc">Cross-map of threat mechanisms and empirically evaluated risk outcomes.</desc>
+<style>
+text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+.title { font-size: 28px; font-weight: 650; fill: #202938; }
+.subtitle { font-size: 14px; fill: #657287; }
+.axis { font-size: 13px; fill: #657287; }
+.label { font-size: 13px; fill: #202938; }
+.small { font-size: 11px; fill: #657287; }
+</style>
+<rect width="1200" height="795" fill="#FFFFFF"/>
+<text class="title" x="48" y="48">Threat mechanism × evaluated risk</text>
+<text class="subtitle" x="48" y="74">Empirically evaluated outcome families; empty cells remain visible.</text>
+<text class="axis" x="395.0" y="145" text-anchor="middle">Task Reliability</text>
+<text class="axis" x="585.0" y="145" text-anchor="middle">Physical Safety</text>
+<text class="axis" x="775.0" y="145" text-anchor="middle">Ethical Societal</text>
+<text class="axis" x="965.0" y="145" text-anchor="middle">Security Privacy</text>
+<text class="label" x="282" y="196.0" text-anchor="end">Distribution Shift</text>
+<rect x="302" y="167" width="186" height="50" rx="6" fill="#9873D4"><title>[arXiv 2025] RobustVLA: Robustness-Aware Reinforcement Post-Training for Vision-Language-Action Models
+[arXiv 2026] ChromaGuard: Defending VLA Models against Color/Illumination-Induced Blindness
+[arXiv 2026] Structure-Aware Robust Fine-Tuning
+[arXiv 2025] MergeVLA: Robust Vision-Language-Action Models via Model Merging
+[arXiv 2025] RETAIN: Robust Finetuning of Vision-Language-Action Robot Policies via Parameter Merging
+[arXiv 2026] Generalizable VLA Finetuning via Representation Anchoring and Language-Action Alignment
+[CVPR 2026] Boosting Vision-Language-Action Finetuning with Feasible Action Neighborhood Prior
+[arXiv 2025] LIBERO-PRO: Towards Robust and Fair Evaluation of Vision-Language-Action Models Beyond Memorization
+[CVPR 2026] LIBERO-Plus: A Progressive Robustness Benchmark for Visual-Language-Action Models
+[arXiv 2025] Geometric Red-Teaming for Robotic Manipulation
+[arXiv 2026] ICR-Drive: Instruction Counterfactual Robustness for End-to-End Language-Driven Autonomous Driving
+[arXiv 2026] How VLAs (Really) Work in Open-World Environments
+[CoRL 2024] Evaluating Real-World Robot Manipulation Policies in Simulation
+[NeurIPS Datasets and Benchmarks 2023] LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning
+[arXiv 2025] pi0.5: A Vision-Language-Action Model with Open-World Generalization
+[arXiv 2026] Safe-Night VLA: Seeing the Unseen via Thermal-Perceptive Vision-Language-Action Models for Safety-Critical Manipulation
+[arXiv 2026] Restoring Linguistic Grounding in VLA Models via Train-Free Attention Recalibration
+[arXiv 2024] Run-Time Observation Interventions Make Vision-Language-Action Models More Visually Robust
+[arXiv 2025] Affordance Field Intervention: Enabling VLAs to Escape Memory Traps in Robotic Manipulation
+[arXiv 2026] Generative Scenario Rollouts for End-to-End Autonomous Driving
+[EMNLP 2026] LIBERO-Para: A Diagnostic Benchmark and Metrics for Paraphrase Robustness in VLA Models
+[arXiv 2025] VLM-SAFE: Vision-Language Model-Guided Safety-Aware Reinforcement Learning with World Models for Autonomous Driving
+[arXiv 2025] Don&#x27;t Blind Your VLA: Aligning Visual Representations for OOD Generalization
+[IROS 2026] Shift &amp; Drift: A Zero-Shot Benchmark for Generalizable and Robust Autonomous Driving Motion Planning</title></rect>
+<text x="395.0" y="196.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">24</text>
+<rect x="492" y="167" width="186" height="50" rx="6" fill="#D6D0EE"><title>[arXiv 2026] ICR-Drive: Instruction Counterfactual Robustness for End-to-End Language-Driven Autonomous Driving
+[arXiv 2026] How VLAs (Really) Work in Open-World Environments
+[arXiv 2026] Safe-Night VLA: Seeing the Unseen via Thermal-Perceptive Vision-Language-Action Models for Safety-Critical Manipulation
+[arXiv 2025] VLM-SAFE: Vision-Language Model-Guided Safety-Aware Reinforcement Learning with World Models for Autonomous Driving</title></rect>
+<text x="585.0" y="196.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">4</text>
+<rect x="682" y="167" width="186" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="775.0" y="196.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="872" y="167" width="186" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="965.0" y="196.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text class="label" x="282" y="250.0" text-anchor="end">Constraint Violation</text>
+<rect x="302" y="221" width="186" height="50" rx="6" fill="#B49CE0"><title>[arXiv 2026] Pre-Execution Safety Gate &amp; Task Safety Contracts for LLM-Based Robot Task Planning
+[arXiv 2026] PROTEA: Securing Robot Task Planning and Execution
+[Reference-only 2026] LogicGuard: Improving Embodied LLM Agents Through Temporal Logic-Based Critics
+[arXiv 2025] SafePlan: Leveraging Formal Logic and Chain-of-Thought Reasoning for Enhanced Safety in LLM-based Robotic Task Planning
+[arXiv 2025] Safe LLM-Controlled Robots with Formal Guarantees via Reachability Analysis
+[arXiv 2024] SafeEmbodAI: Securing LLM-Controlled Mobile Robots against Prompt Injection
+[arXiv 2025] SafeDec: Constrained Decoding for Safe Autoregressive Embodied Policies
+[Reference-only 2025] Ask Before You Act: Token-Level Uncertainty for Intervention in Vision-Language-Action Models
+[NeurIPS 2025] SafeVLA: Towards Safety Alignment of Vision-Language-Action Models via Constrained Learning
+[arXiv 2025] VLSA: Vision-Language-Action Models with a Plug-and-Play Safety Constraint Layer
+[AAAI 2026] IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents in Daily Household Tasks
+[arXiv 2025] From Words to Safety: Language-Conditioned Safety Filtering for Robot Navigation
+[arXiv 2023] Safe-VLN: Collision Avoidance for Vision-and-Language Navigation of Autonomous Robots Operating in Continuous Environments
+[arXiv 2026] CompliantVLA-adaptor: VLM-Guided Variable Impedance Action for Safe Contact-Rich Manipulation</title></rect>
+<text x="395.0" y="250.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">14</text>
+<rect x="492" y="221" width="186" height="50" rx="6" fill="#C4B4E6"><title>[NeurIPS 2025] SafeVLA: Towards Safety Alignment of Vision-Language-Action Models via Constrained Learning
+[arXiv 2025] VLSA: Vision-Language-Action Models with a Plug-and-Play Safety Constraint Layer
+[AAAI 2026] IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents in Daily Household Tasks
+[arXiv 2024] EARBench: Towards Evaluating Physical Risk Awareness for Task Planning of Foundation Model-Based Embodied AI Agents
+[arXiv 2025] From Words to Safety: Language-Conditioned Safety Filtering for Robot Navigation
+[arXiv 2024] Safety Optimized Reinforcement Learning via Multi-Objective Policy Optimization
+[arXiv 2023] Safe-VLN: Collision Avoidance for Vision-and-Language Navigation of Autonomous Robots Operating in Continuous Environments
+[arXiv 2025] Towards Safe Robot Foundation Models Using Inductive Biases
+[arXiv 2026] CompliantVLA-adaptor: VLM-Guided Variable Impedance Action for Safe Contact-Rich Manipulation</title></rect>
+<text x="585.0" y="250.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">9</text>
+<rect x="682" y="221" width="186" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="775.0" y="250.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="872" y="221" width="186" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="965.0" y="250.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text class="label" x="282" y="304.0" text-anchor="end">Execution Error</text>
+<rect x="302" y="275" width="186" height="50" rx="6" fill="#AE93DD"><title>[Reference-only 2026] FPC-VLA: A Vision-Language-Action Framework with a Supervisor for Failure Prediction and Correction
+[arXiv 2025] Guardian: Detecting Robotic Planning and Execution Errors with Vision-Language Models
+[Reference-only 2024] AHA: A Vision-Language-Model for Detecting and Reasoning over Failures in Robotic Manipulation
+[arXiv 2025] Horcrux: Robustness/Recovery for Vision-Language-Action Policies
+[arXiv 2025] FailSafe: Reasoning and Recovery from Failures in Vision-Language-Action Models
+[CoRL 2023] REFLECT: Summarizing Robot Experiences for Failure Explanation and Correction
+[ECCV 2026] VLA Knows Its Limits: Adaptive Execution Horizons for Robot Policies
+[arXiv 2025] I-FailSense: Towards General Robotic Failure Detection with Vision-Language Models
+[IROS 2024] DoReMi: Grounding Language Model by Detecting and Recovering from Plan-Execution Misalignment
+[arXiv 2026] Replanning Human-Robot Collaborative Tasks with Vision-Language Models via Semantic and Physical Dual-Correction
+[arXiv 2024] A Self-Correcting Vision-Language-Action Model for Fast and Slow System Manipulation
+[CVPR 2025] Phoenix: A Motion-based Self-Reflection Framework for Fine-grained Robotic Action Correction
+[CVPR 2026] FLARE: A Failure-Aware Framework for Autonomous Correction and Recovery in Visual-Language Robotic Manipulation
+[arXiv 2026] Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents
+[arXiv 2026] FAR: Failure-Aware Retry for Test-Time Recovery and Continual Policy Improvement
+[arXiv 2026] ASPIRE: Agentic /Skills Discovery for Robotics</title></rect>
+<text x="395.0" y="304.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">16</text>
+<rect x="492" y="275" width="186" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="585.0" y="304.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="682" y="275" width="186" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="775.0" y="304.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="872" y="275" width="186" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="965.0" y="304.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text class="label" x="282" y="358.0" text-anchor="end">Backdoor</text>
+<rect x="302" y="329" width="186" height="50" rx="6" fill="#B49CE0"><title>[Reference-only 2025] Clean-Action Backdoor Attacks on Vision-Language-Action Models via Sequential Error Exploitation
+[arXiv 2025] TrojanRobot / Robot Collapse: Supply-Chain Backdoor Attacks Against VLM-based Robotic Manipulation
+[arXiv 2025] Compromising LLM Driven Embodied Agents with Contextual Backdoor Attacks
+[arXiv 2025] BEAT: Visual Backdoor Attacks on MLLM Embodied Decision Making via Contrastive Trigger Learning
+[arXiv 2026] When Attention Betrays: Erasing Backdoor Attacks in Robotic Policies by Reconstructing Visual Tokens
+[arXiv 2026] SAFE-Dict: Concept-Based Dictionary Learning for Inference-Time Safety in Vision Language Action Models
+[arXiv 2026] FlowHijack: Backdoor Attacks on Flow-Matching Vision-Language-Action Models
+[NeurIPS 2025] BadVLA: Towards Backdoor Attacks on Vision-Language-Action Models via Objective-Decoupled Optimization
+[arXiv 2025] DropVLA: An Action-Level Backdoor Attack on Vision-Language-Action Models
+[arXiv 2026] State Backdoor: Towards Stealthy Real-World Poisoning Attack on Vision-Language-Action Models in State Space
+[arXiv 2026] SilentDrift: Exploiting Action Chunking for Stealthy Backdoor Attacks on Vision-Language-Action Models
+[arXiv 2025] Goal-Oriented Backdoor Attack Against Vision-Language-Action Models via Physical Objects
+[arXiv 2026] TrustVLA: Mechanism-Guided Inference-Time Defense Against Vision-Language-Action Backdoors
+[arXiv 2026] Inject Once Survive Later: Backdooring Vision-Language-Action Models to Persist Through Downstream Fine-tuning</title></rect>
+<text x="395.0" y="358.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">14</text>
+<rect x="492" y="329" width="186" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="585.0" y="358.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="682" y="329" width="186" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="775.0" y="358.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="872" y="329" width="186" height="50" rx="6" fill="#C7B9E8"><title>[NeurIPS 2025] BadVLA: Towards Backdoor Attacks on Vision-Language-Action Models via Objective-Decoupled Optimization
+[arXiv 2025] DropVLA: An Action-Level Backdoor Attack on Vision-Language-Action Models
+[arXiv 2026] State Backdoor: Towards Stealthy Real-World Poisoning Attack on Vision-Language-Action Models in State Space
+[arXiv 2026] SilentDrift: Exploiting Action Chunking for Stealthy Backdoor Attacks on Vision-Language-Action Models
+[ICLR 2025] Can We Trust Embodied Agents? Exploring Backdoor Attacks Against Embodied LLM-Based Decision-Making Systems
+[arXiv 2025] Goal-Oriented Backdoor Attack Against Vision-Language-Action Models via Physical Objects
+[arXiv 2026] TrustVLA: Mechanism-Guided Inference-Time Defense Against Vision-Language-Action Backdoors
+[arXiv 2026] Inject Once Survive Later: Backdooring Vision-Language-Action Models to Persist Through Downstream Fine-tuning</title></rect>
+<text x="965.0" y="358.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">8</text>
+<text class="label" x="282" y="412.0" text-anchor="end">Jailbreak</text>
+<rect x="302" y="383" width="186" height="50" rx="6" fill="#D2CAEC"><title>[arXiv 2026] Extended to Reality: Prompt Injection in 3D Environments
+[arXiv 2026] Jailbreaking Embodied LLMs via Action-level Manipulation
+[arXiv 2025] BadNAVer: Jailbreaking Vision-Language Navigation Agents
+[arXiv 2026] JailWAM: Jailbreaking World Action Models in Robot Control
+[IEEE RA-L 2026] Safety Guardrails for LLM-Enabled Robots</title></rect>
+<text x="395.0" y="412.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">5</text>
+<rect x="492" y="383" width="186" height="50" rx="6" fill="#CEC4EB"><title>[arXiv 2026] JailWAM: Jailbreaking World Action Models in Robot Control
+[ICRA 2025] Jailbreaking LLM-Controlled Robots
+[arXiv 2025] Adversarial Attacks on Robotic Vision-Language-Action Models
+[IEEE RA-L 2026] Safety Guardrails for LLM-Enabled Robots
+[arXiv 2025] POEX: Towards Policy Executable Jailbreak Attacks Against the LLM-Based Robots
+[ICLR 2025] BadRobot: Jailbreaking Embodied LLM Agents in the Physical World</title></rect>
+<text x="585.0" y="412.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">6</text>
+<rect x="682" y="383" width="186" height="50" rx="6" fill="#CEC4EB"><title>[ICRA 2025] Jailbreaking LLM-Controlled Robots
+[arXiv 2025] Adversarial Attacks on Robotic Vision-Language-Action Models
+[arXiv 2025] POEX: Towards Policy Executable Jailbreak Attacks Against the LLM-Based Robots
+[ICLR 2025] BadRobot: Jailbreaking Embodied LLM Agents in the Physical World
+[arXiv 2025] Concept Enhancement Engineering: A Lightweight and Efficient Robust Defense Against Jailbreak Attacks in Embodied AI
+[arXiv 2025] SafeMind: Benchmarking and Mitigating Safety Risks in Embodied LLM Agents</title></rect>
+<text x="775.0" y="412.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">6</text>
+<rect x="872" y="383" width="186" height="50" rx="6" fill="#CBBEE9"><title>[ICRA 2025] Jailbreaking LLM-Controlled Robots
+[arXiv 2025] Adversarial Attacks on Robotic Vision-Language-Action Models
+[IEEE RA-L 2026] Safety Guardrails for LLM-Enabled Robots
+[arXiv 2025] POEX: Towards Policy Executable Jailbreak Attacks Against the LLM-Based Robots
+[ICLR 2025] BadRobot: Jailbreaking Embodied LLM Agents in the Physical World
+[arXiv 2025] Concept Enhancement Engineering: A Lightweight and Efficient Robust Defense Against Jailbreak Attacks in Embodied AI
+[arXiv 2025] SafeMind: Benchmarking and Mitigating Safety Risks in Embodied LLM Agents</title></rect>
+<text x="965.0" y="412.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">7</text>
+<text class="label" x="282" y="466.0" text-anchor="end">Adversarial Patch</text>
+<rect x="302" y="437" width="186" height="50" rx="6" fill="#C4B4E6"><title>[arXiv 2026] Hijacking Robots with a Piece of Paper: A Systematic Study of Physical Prompt Injection in VLM-Controlled Robots
+[arXiv 2026] DRIFT: Derailing Trajectories of Flow-Matching VLAs with Adversarial Patches
+[arXiv 2026] Hidden in Plain Sight: Diffusion-Based Unrestricted Robotic Attacks on Vision-Language-Action Models
+[arXiv 2026] Partially Observable Adversarial Patch Attacks on Vision-Language-Action Models
+[arXiv 2026] TRAP: Hijacking VLA CoT-Reasoning via Adversarial Patches
+[ICCV 2025] Exploring the Adversarial Vulnerabilities of Vision-Language-Action Models in Robotics
+[arXiv 2025] Model-Agnostic Adversarial Attack and Defense for Vision-Language-Action Models
+[CVPR 2026] When Robots Obey the Patch: Universal Transferable Patch Attacks on Vision-Language-Action Models
+[ICLR 2024] Embodied Active Defense: Leveraging Recurrent Feedback to Counter Adversarial Patches</title></rect>
+<text x="395.0" y="466.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">9</text>
+<rect x="492" y="437" width="186" height="50" rx="6" fill="#E5E6F4"><title>[arXiv 2026] Hidden in Plain Sight: Diffusion-Based Unrestricted Robotic Attacks on Vision-Language-Action Models</title></rect>
+<text x="585.0" y="466.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="682" y="437" width="186" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="775.0" y="466.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="872" y="437" width="186" height="50" rx="6" fill="#D6D0EE"><title>[ICCV 2025] Exploring the Adversarial Vulnerabilities of Vision-Language-Action Models in Robotics
+[arXiv 2025] Model-Agnostic Adversarial Attack and Defense for Vision-Language-Action Models
+[CVPR 2026] When Robots Obey the Patch: Universal Transferable Patch Attacks on Vision-Language-Action Models
+[ICLR 2024] Embodied Active Defense: Leveraging Recurrent Feedback to Counter Adversarial Patches</title></rect>
+<text x="965.0" y="466.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">4</text>
+<text class="label" x="282" y="520.0" text-anchor="end">Indirect Prompt Injection</text>
+<rect x="302" y="491" width="186" height="50" rx="6" fill="#DBD6F0"><title>[arXiv 2026] Extended to Reality: Prompt Injection in 3D Environments
+[arXiv 2026] Jailbreaking Embodied LLMs via Action-level Manipulation
+[arXiv 2025] BadNAVer: Jailbreaking Vision-Language Navigation Agents</title></rect>
+<text x="395.0" y="520.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">3</text>
+<rect x="492" y="491" width="186" height="50" rx="6" fill="#E5E6F4"><title>[arXiv 2026] RIPA: Sensory-Vector Prompt Injection Attacks on LLM-Controlled ROS 2 Robots</title></rect>
+<text x="585.0" y="520.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="682" y="491" width="186" height="50" rx="6" fill="#E5E6F4"><title>[arXiv 2025] The Shawshank Redemption of Embodied AI: Understanding and Benchmarking Indirect Environmental Jailbreaks</title></rect>
+<text x="775.0" y="520.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="872" y="491" width="186" height="50" rx="6" fill="#D6D0EE"><title>[arXiv 2026] RIPA: Sensory-Vector Prompt Injection Attacks on LLM-Controlled ROS 2 Robots
+[SaTML 2026] CHAI: Command Hijacking Against Embodied AI
+[arXiv 2026] If You&#x27;re Waiting for a Sign... That Might Not Be It! Mitigating Trust Boundary Confusion from Visual Injections on Vision-Language Agentic Systems
+[arXiv 2025] The Shawshank Redemption of Embodied AI: Understanding and Benchmarking Indirect Environmental Jailbreaks</title></rect>
+<text x="965.0" y="520.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">4</text>
+<text class="label" x="282" y="574.0" text-anchor="end">Planning Hijacking</text>
+<rect x="302" y="545" width="186" height="50" rx="6" fill="#CEC4EB"><title>[arXiv 2024] Exploring the Robustness of Decision-Level Through Adversarial Attacks on LLM-Based Embodied Models
+[arXiv 2024] On the Vulnerability of LLM/VLM-Controlled Robotics
+[arXiv 2026] VLAGuard / VASA: Visuomotor Attention-guided Semantic Attack
+[arXiv 2026] SABER: A Stealthy Agentic Black-Box Attack Framework for Vision-Language-Action Models
+[arXiv 2026] Altered Thoughts, Altered Actions: Probing Chain-of-Thought Vulnerabilities in VLA Robotic Manipulation
+[arXiv 2026] JailWAM: Jailbreaking World Action Models in Robot Control</title></rect>
+<text x="395.0" y="574.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">6</text>
+<rect x="492" y="545" width="186" height="50" rx="6" fill="#E5E6F4"><title>[arXiv 2026] JailWAM: Jailbreaking World Action Models in Robot Control</title></rect>
+<text x="585.0" y="574.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="682" y="545" width="186" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="775.0" y="574.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="872" y="545" width="186" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="965.0" y="574.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text class="label" x="282" y="628.0" text-anchor="end">Data Poisoning</text>
+<rect x="302" y="599" width="186" height="50" rx="6" fill="#D2CAEC"><title>[Reference-only 2025] Clean-Action Backdoor Attacks on Vision-Language-Action Models via Sequential Error Exploitation
+[arXiv 2025] TrojanRobot / Robot Collapse: Supply-Chain Backdoor Attacks Against VLM-based Robotic Manipulation
+[arXiv 2025] Compromising LLM Driven Embodied Agents with Contextual Backdoor Attacks
+[arXiv 2025] BEAT: Visual Backdoor Attacks on MLLM Embodied Decision Making via Contrastive Trigger Learning
+[arXiv 2026] FlowHijack: Backdoor Attacks on Flow-Matching Vision-Language-Action Models</title></rect>
+<text x="395.0" y="628.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">5</text>
+<rect x="492" y="599" width="186" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="585.0" y="628.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="682" y="599" width="186" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="775.0" y="628.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="872" y="599" width="186" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="965.0" y="628.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text class="label" x="282" y="682.0" text-anchor="end">Digital Perturbation</text>
+<rect x="302" y="653" width="186" height="50" rx="6" fill="#E0DEF2"><title>[arXiv 2026] Hidden in Plain Sight: Diffusion-Based Unrestricted Robotic Attacks on Vision-Language-Action Models
+[arXiv 2025] When Alignment Fails: Multimodal Adversarial Attacks on Vision-Language-Action Models</title></rect>
+<text x="395.0" y="682.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
+<rect x="492" y="653" width="186" height="50" rx="6" fill="#E5E6F4"><title>[arXiv 2026] Hidden in Plain Sight: Diffusion-Based Unrestricted Robotic Attacks on Vision-Language-Action Models</title></rect>
+<text x="585.0" y="682.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="682" y="653" width="186" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="775.0" y="682.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="872" y="653" width="186" height="50" rx="6" fill="#D6D0EE"><title>[arXiv 2025] When Alignment Fails: Multimodal Adversarial Attacks on Vision-Language-Action Models
+[arXiv 2025] FreezeVLA: Action-Freezing Attacks Against Vision-Language-Action Models
+[NeurIPS 2025] ADVEDM: Fine-Grained Adversarial Attack Against VLM-Based Embodied Agents
+[CVPR 2025] Chain of Attack: On the Robustness of Vision-Language Models Against Transfer-Based Adversarial Attacks</title></rect>
+<text x="965.0" y="682.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">4</text>
+<text class="axis" x="680.0" y="745" text-anchor="middle">Evaluated risk</text>
+<text class="axis" transform="translate(45 435.0) rotate(-90)" text-anchor="middle">Threat mechanism</text>
+<text class="small" x="300" y="777">Top 10 mechanisms by frequency; risk labels require a corresponding empirical outcome metric.</text>
+</svg>

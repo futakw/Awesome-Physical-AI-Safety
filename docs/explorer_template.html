@@ -36,12 +36,14 @@
   <nav aria-label="Visualization views">
     <button type="button" data-view="timeline" aria-pressed="true">Field timeline</button>
     <button type="button" data-view="heatmap" aria-pressed="false">Threat cross-map</button>
+    <button type="button" data-view="risk" aria-pressed="false">Threat × risk</button>
     <button type="button" data-view="defense" aria-pressed="false">Defense cross-map</button>
     <button type="button" data-view="benchmark" aria-pressed="false">Benchmark cross-map</button>
     <button type="button" data-view="evaluation" aria-pressed="false">Evaluation cross-map</button>
   </nav>
   <section id="timeline" class="active"><p class="note">Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to pin the paper list.</p><div id="timeline-chart"></div></section>
   <section id="heatmap"><p class="note">Cells show mechanism-surface co-occurrence for concrete threat models. Hover for a preview; click a cell to pin the paper list.</p><div id="heatmap-chart"></div></section>
+  <section id="risk"><p class="note">Rows are threat mechanisms and columns are empirically evaluated risk outcomes. Empty cells remain visible.</p><div id="risk-chart"></div></section>
   <section id="defense"><p class="note">Rows are defense mechanisms and columns are the threat mechanisms they address. Only enriched records are counted.</p><div id="defense-chart"></div></section>
   <section id="benchmark"><p class="note">Rows are evaluated threat mechanisms and columns are evaluated consequences for benchmark papers.</p><div id="benchmark-chart"></div></section>
   <section id="evaluation"><p class="note">Rows are evaluation environments and columns are reported metrics. Only enriched records are counted.</p><div id="evaluation-chart"></div></section>
@@ -157,6 +159,11 @@ function renderDefenseV2(){
   const items=papers.filter(p=>p.defense), rows=[...new Set(items.flatMap(p=>p.defense.mechanism))], cols=orderedThreatMechanisms();
   renderExtensionMap('#defense-chart','Defense mechanism × defended threat',items,rows,cols,p=>p.defense.mechanism,p=>p.defense.defends_against,'Defense mechanism and defended threat cross-map');
 }
+function renderThreatRisk(){
+  const items=papers.filter(p=>!['survey','evaluation'].includes(p.threat_model.kind));
+  const rows=orderedThreatMechanisms(), cols=['task-reliability','physical-safety','ethical-societal','security-privacy'];
+  renderExtensionMap('#risk-chart','Threat mechanism × evaluated risk',items,rows,cols,p=>threatValues(p,'mechanism'),p=>p.risks,'Threat mechanism and evaluated risk cross-map');
+}
 function renderBenchmarkV2(){
   const items=papers.filter(p=>p.section==='benchmarks');
   const rows=[...new Set(items.flatMap(p=>threatValues(p,'mechanism')))].sort((a,b)=>d3.descending(items.filter(p=>threatValues(p,'mechanism').includes(a)).length,items.filter(p=>threatValues(p,'mechanism').includes(b)).length));
@@ -169,7 +176,7 @@ function renderEvaluation(){
 }
 
 d3.selectAll('button[data-view]').on('click',function(){const view=this.dataset.view;d3.selectAll('button[data-view]').attr('aria-pressed','false');d3.select(this).attr('aria-pressed','true');d3.selectAll('section').classed('active',false);d3.select('#'+view).classed('active',true);});
-for (const render of [renderTimeline, renderHeatmap, renderDefenseV2, renderBenchmarkV2, renderEvaluation]) {
+for (const render of [renderTimeline, renderHeatmap, renderThreatRisk, renderDefenseV2, renderBenchmarkV2, renderEvaluation]) {
   try { render(); } catch (error) { console.error('Visualization failed to render:', error); }
 }
 </script>
