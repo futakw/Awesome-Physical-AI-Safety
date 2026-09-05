@@ -493,10 +493,18 @@
     ],
     "evaluation": {
       "environments": [
-        "unspecified"
+        "simulation",
+        "real-robot"
       ],
-      "platforms": [],
-      "models": [],
+      "platforms": [
+        "Gazebo",
+        "ROS",
+        "TurtleBot3",
+        "JetRacer"
+      ],
+      "models": [
+        "GPT-4o"
+      ],
       "access": [
         "not-applicable"
       ],
@@ -504,8 +512,8 @@
         "task-success-rate",
         "constraint-violation-rate"
       ],
-      "physical_validation": null,
-      "curation_status": "catalog-derived"
+      "physical_validation": true,
+      "curation_status": "paper-verified"
     },
     "defense": {
       "position": [
@@ -824,20 +832,26 @@
     ],
     "evaluation": {
       "environments": [
-        "unspecified"
+        "simulation"
       ],
-      "platforms": [],
-      "models": [],
+      "platforms": [
+        "VIMA-Bench"
+      ],
+      "models": [
+        "VIMA",
+        "Instruct2Act",
+        "GPT-4-Turbo"
+      ],
       "access": [
-        "unspecified"
+        "black-box"
       ],
       "metrics": [
         "task-success-rate",
         "attack-success-rate",
         "clean-task-success-rate"
       ],
-      "physical_validation": null,
-      "curation_status": "catalog-derived"
+      "physical_validation": false,
+      "curation_status": "paper-verified"
     }
   },
   {
@@ -934,25 +948,27 @@
     ],
     "evaluation": {
       "environments": [
-        "unspecified"
+        "offline-dataset"
       ],
-      "platforms": [],
+      "platforms": [
+        "Kinova manipulator",
+        "Intel RealSense D435i"
+      ],
       "models": [
         "GPT-4o",
         "Gemini 2.5 Flash",
-        "Qwen3-VL-32B",
-        "GPT-4"
+        "Qwen3-VL-32B"
       ],
       "access": [
-        "unspecified"
+        "black-box"
       ],
       "metrics": [
         "task-success-rate",
         "attack-success-rate",
         "clean-task-success-rate"
       ],
-      "physical_validation": null,
-      "curation_status": "abstract-verified"
+      "physical_validation": false,
+      "curation_status": "paper-verified"
     }
   },
   {
@@ -998,10 +1014,25 @@
         "simulation",
         "real-robot"
       ],
-      "platforms": [],
-      "models": [],
+      "platforms": [
+        "VirtualHome",
+        "SafeAgentBench",
+        "BadRobot",
+        "UFactory xArm 6"
+      ],
+      "models": [
+        "ProgPrompt",
+        "Llama-3.1-8B",
+        "DeepSeek-R1-14B",
+        "Gemma-3-27B",
+        "Phi-4-14B",
+        "GPT-4o",
+        "GPT-4o-mini",
+        "GPT-4-Turbo",
+        "Claude-3.5-Sonnet"
+      ],
       "access": [
-        "unspecified"
+        "black-box"
       ],
       "metrics": [
         "task-success-rate",
@@ -1009,7 +1040,7 @@
         "clean-task-success-rate"
       ],
       "physical_validation": true,
-      "curation_status": "abstract-verified"
+      "curation_status": "paper-verified"
     }
   },
   {
@@ -1056,11 +1087,19 @@
         "real-robot"
       ],
       "platforms": [
-        "Matterport3D"
+        "Matterport3D",
+        "R2R",
+        "MapGPT"
       ],
-      "models": [],
+      "models": [
+        "InternVL3-8B",
+        "Qwen2.5-VL-7B-Instruct",
+        "LLaVA-v1.6-Mistral-7B",
+        "GPT-4o",
+        "Gemini 2.0 Flash"
+      ],
       "access": [
-        "unspecified"
+        "black-box"
       ],
       "metrics": [
         "task-success-rate",
@@ -1068,7 +1107,7 @@
         "clean-task-success-rate"
       ],
       "physical_validation": true,
-      "curation_status": "abstract-verified"
+      "curation_status": "paper-verified"
     }
   },
   {
@@ -1571,20 +1610,29 @@
     ],
     "evaluation": {
       "environments": [
-        "unspecified"
+        "real-robot",
+        "offline-dataset"
       ],
-      "platforms": [],
-      "models": [],
+      "platforms": [
+        "custom real-world grasping dataset",
+        "dual-arm desktop robot",
+        "humanoid robots",
+        "UR5"
+      ],
+      "models": [
+        "OpenVLA",
+        "DexGraspVLA"
+      ],
       "access": [
-        "unspecified"
+        "gray-box"
       ],
       "metrics": [
         "task-success-rate",
         "attack-success-rate",
         "clean-task-success-rate"
       ],
-      "physical_validation": null,
-      "curation_status": "catalog-derived"
+      "physical_validation": true,
+      "curation_status": "paper-verified"
     },
     "defense": {
       "position": [
@@ -1716,14 +1764,17 @@
     ],
     "evaluation": {
       "environments": [
-        "unspecified"
+        "simulation",
+        "real-robot"
       ],
       "platforms": [
         "LIBERO",
         "PiPER"
       ],
       "models": [
-        "OpenVLA"
+        "OpenVLA",
+        "OpenVLA-OFT",
+        "pi0"
       ],
       "access": [
         "not-applicable"
@@ -1731,8 +1782,8 @@
       "metrics": [
         "task-success-rate"
       ],
-      "physical_validation": null,
-      "curation_status": "abstract-verified"
+      "physical_validation": true,
+      "curation_status": "paper-verified"
     },
     "defense": {
       "position": [
@@ -1793,7 +1844,7 @@
     ],
     "evaluation": {
       "environments": [
-        "unspecified"
+        "simulation"
       ],
       "platforms": [
         "LIBERO-Harm",
@@ -1801,17 +1852,23 @@
         "RoboPAIR",
         "IS-Bench"
       ],
-      "models": [],
+      "models": [
+        "OpenVLA",
+        "pi0.5",
+        "Llama-3.2-Vision",
+        "Qwen2-VL",
+        "Qwen2.5-VL"
+      ],
       "access": [
-        "unspecified"
+        "not-applicable"
       ],
       "metrics": [
         "task-success-rate",
         "attack-success-rate",
         "clean-task-success-rate"
       ],
-      "physical_validation": null,
-      "curation_status": "abstract-verified"
+      "physical_validation": false,
+      "curation_status": "paper-verified"
     },
     "defense": {
       "position": [
@@ -1873,10 +1930,15 @@
     ],
     "evaluation": {
       "environments": [
-        "unspecified"
+        "offline-dataset"
       ],
-      "platforms": [],
-      "models": [],
+      "platforms": [
+        "hh-rlhf"
+      ],
+      "models": [
+        "MITD",
+        "GPT-2"
+      ],
       "access": [
         "not-applicable"
       ],
@@ -1884,8 +1946,8 @@
         "task-success-rate",
         "recovery-rate"
       ],
-      "physical_validation": null,
-      "curation_status": "catalog-derived"
+      "physical_validation": false,
+      "curation_status": "paper-verified"
     },
     "defense": {
       "position": [
@@ -2107,15 +2169,15 @@
         "pi0.5"
       ],
       "access": [
-        "unspecified"
+        "white-box"
       ],
       "metrics": [
         "task-success-rate",
         "attack-success-rate",
         "clean-task-success-rate"
       ],
-      "physical_validation": null,
-      "curation_status": "abstract-verified"
+      "physical_validation": false,
+      "curation_status": "paper-verified"
     }
   },
   {
@@ -2160,13 +2222,16 @@
         "real-robot"
       ],
       "platforms": [
-        "LIBERO"
+        "LIBERO",
+        "PiPER"
       ],
       "models": [
-        "OpenVLA"
+        "OpenVLA",
+        "OpenVLA-OFT",
+        "pi0"
       ],
       "access": [
-        "unspecified"
+        "white-box"
       ],
       "metrics": [
         "task-success-rate",
@@ -2174,7 +2239,7 @@
         "clean-task-success-rate"
       ],
       "physical_validation": true,
-      "curation_status": "abstract-verified"
+      "curation_status": "paper-verified"
     }
   },
   {
@@ -2284,10 +2349,17 @@
         "simulation",
         "real-robot"
       ],
-      "platforms": [],
-      "models": [],
+      "platforms": [
+        "LIBERO",
+        "BridgeData V2"
+      ],
+      "models": [
+        "OpenVLA-7B",
+        "pi0-FAST"
+      ],
       "access": [
-        "unspecified"
+        "white-box",
+        "black-box"
       ],
       "metrics": [
         "task-success-rate",
@@ -2297,7 +2369,7 @@
         "collision-rate"
       ],
       "physical_validation": true,
-      "curation_status": "abstract-verified"
+      "curation_status": "paper-verified"
     }
   },
   {
@@ -2348,17 +2420,21 @@
       "platforms": [
         "LIBERO"
       ],
-      "models": [],
+      "models": [
+        "DeepThinkVLA",
+        "OpenVLA-OFT",
+        "OpenVLA"
+      ],
       "access": [
-        "unspecified"
+        "black-box"
       ],
       "metrics": [
         "task-success-rate",
         "attack-success-rate",
         "clean-task-success-rate"
       ],
-      "physical_validation": null,
-      "curation_status": "abstract-verified"
+      "physical_validation": false,
+      "curation_status": "paper-verified"
     }
   },
   {
@@ -2403,10 +2479,15 @@
         "simulation",
         "real-robot"
       ],
-      "platforms": [],
-      "models": [],
+      "platforms": [
+        "LIBERO"
+      ],
+      "models": [
+        "OpenVLA",
+        "Hume"
+      ],
       "access": [
-        "unspecified"
+        "gray-box"
       ],
       "metrics": [
         "task-success-rate",
@@ -2414,7 +2495,7 @@
         "clean-task-success-rate"
       ],
       "physical_validation": true,
-      "curation_status": "abstract-verified"
+      "curation_status": "paper-verified"
     }
   },
   {
@@ -2461,10 +2542,15 @@
     ],
     "evaluation": {
       "environments": [
-        "unspecified"
+        "offline-dataset"
       ],
-      "platforms": [],
-      "models": [],
+      "platforms": [
+        "nuScenes"
+      ],
+      "models": [
+        "DriveDreamer",
+        "DriveDreamer2"
+      ],
       "access": [
         "white-box"
       ],
@@ -2475,8 +2561,8 @@
         "physical-damage-rate",
         "collision-rate"
       ],
-      "physical_validation": null,
-      "curation_status": "abstract-verified"
+      "physical_validation": false,
+      "curation_status": "paper-verified"
     }
   },
   {
@@ -2583,10 +2669,18 @@
         "simulation",
         "real-robot"
       ],
-      "platforms": [],
-      "models": [],
+      "platforms": [
+        "LIBERO",
+        "MuJoCo"
+      ],
+      "models": [
+        "OpenVLA",
+        "OpenVLA-OFT",
+        "pi0",
+        "pi0.5"
+      ],
       "access": [
-        "unspecified"
+        "white-box"
       ],
       "metrics": [
         "task-success-rate",
@@ -2596,7 +2690,7 @@
         "collision-rate"
       ],
       "physical_validation": true,
-      "curation_status": "abstract-verified"
+      "curation_status": "paper-verified"
     }
   },
   {
@@ -2641,20 +2735,27 @@
     ],
     "evaluation": {
       "environments": [
-        "unspecified"
+        "simulation",
+        "real-robot"
       ],
-      "platforms": [],
-      "models": [],
+      "platforms": [
+        "LIBERO",
+        "Franka Emika Panda",
+        "ZED cameras"
+      ],
+      "models": [
+        "pi0"
+      ],
       "access": [
-        "unspecified"
+        "white-box"
       ],
       "metrics": [
         "task-success-rate",
         "attack-success-rate",
         "clean-task-success-rate"
       ],
-      "physical_validation": null,
-      "curation_status": "catalog-derived"
+      "physical_validation": true,
+      "curation_status": "paper-verified"
     }
   },
   {
@@ -2704,13 +2805,19 @@
         "simulation"
       ],
       "platforms": [
-        "RoboTwin"
+        "RoboTwin",
+        "LIBERO"
       ],
       "models": [
-        "LingBot-VA"
+        "LingBot-VA",
+        "Light-WAM",
+        "X-WAM",
+        "Image-WAM",
+        "Motus",
+        "X-VLA"
       ],
       "access": [
-        "unspecified"
+        "black-box"
       ],
       "metrics": [
         "task-success-rate",
@@ -2719,8 +2826,8 @@
         "physical-damage-rate",
         "collision-rate"
       ],
-      "physical_validation": null,
-      "curation_status": "abstract-verified"
+      "physical_validation": false,
+      "curation_status": "paper-verified"
     }
   },
   {
@@ -2766,10 +2873,15 @@
     ],
     "evaluation": {
       "environments": [
-        "unspecified"
+        "simulation"
       ],
-      "platforms": [],
-      "models": [],
+      "platforms": [
+        "R2R"
+      ],
+      "models": [
+        "NavGPT",
+        "Balcı et al. outdoor navigation agent"
+      ],
       "access": [
         "black-box"
       ],
@@ -2780,8 +2892,8 @@
         "physical-damage-rate",
         "collision-rate"
       ],
-      "physical_validation": null,
-      "curation_status": "abstract-verified"
+      "physical_validation": false,
+      "curation_status": "paper-verified"
     }
   },
   {
@@ -2883,9 +2995,13 @@
     ],
     "evaluation": {
       "environments": [
-        "unspecified"
+        "simulation"
       ],
-      "platforms": [],
+      "platforms": [
+        "ROS 2 Jazzy",
+        "Gazebo Harmonic",
+        "TurtleBot3 Waffle"
+      ],
       "models": [
         "DeepSeek-V4-Flash",
         "Llama-3-8B-Instruct-Lite",
@@ -2894,7 +3010,7 @@
         "Gemma-3n-E4B"
       ],
       "access": [
-        "unspecified"
+        "black-box"
       ],
       "metrics": [
         "attack-success-rate",
@@ -2902,8 +3018,8 @@
         "physical-damage-rate",
         "collision-rate"
       ],
-      "physical_validation": null,
-      "curation_status": "abstract-verified"
+      "physical_validation": false,
+      "curation_status": "paper-verified"
     }
   },
   {
@@ -3630,13 +3746,14 @@
     ],
     "evaluation": {
       "environments": [
-        "unspecified"
+        "simulation"
       ],
       "platforms": [
-        "BEHAVIOR-1K",
-        "BEHAVIOR"
+        "BEHAVIOR-1K"
       ],
-      "models": [],
+      "models": [
+        "RLC"
+      ],
       "access": [
         "not-applicable"
       ],
@@ -3645,8 +3762,8 @@
         "physical-damage-rate",
         "collision-rate"
       ],
-      "physical_validation": null,
-      "curation_status": "abstract-verified"
+      "physical_validation": false,
+      "curation_status": "paper-verified"
     }
   },
   {
@@ -3944,12 +4061,19 @@
     ],
     "evaluation": {
       "environments": [
+        "simulation",
         "real-robot"
       ],
-      "platforms": [],
-      "models": [],
+      "platforms": [
+        "LIBERO",
+        "BridgeData V2"
+      ],
+      "models": [
+        "OpenVLA-7B",
+        "OpenVLA-7B-LIBERO"
+      ],
       "access": [
-        "unspecified"
+        "white-box"
       ],
       "metrics": [
         "task-success-rate",
@@ -3957,7 +4081,7 @@
         "clean-task-success-rate"
       ],
       "physical_validation": true,
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     }
   },
   {
@@ -4062,19 +4186,25 @@
     ],
     "evaluation": {
       "environments": [
-        "unspecified"
+        "simulation"
       ],
-      "platforms": [],
-      "models": [],
+      "platforms": [
+        "LIBERO"
+      ],
+      "models": [
+        "SpatialVLA",
+        "OpenVLA",
+        "pi0"
+      ],
       "access": [
-        "unspecified"
+        "white-box"
       ],
       "metrics": [
         "attack-success-rate",
         "clean-task-success-rate"
       ],
-      "physical_validation": null,
-      "curation_status": "catalog-derived"
+      "physical_validation": false,
+      "curation_status": "paper-verified"
     }
   },
   {
@@ -4265,12 +4395,21 @@
     ],
     "evaluation": {
       "environments": [
-        "unspecified"
+        "simulation",
+        "offline-dataset"
       ],
-      "platforms": [],
-      "models": [],
+      "platforms": [
+        "LIBERO",
+        "SIMPLER",
+        "HYDRA",
+        "Open X-Embodiment"
+      ],
+      "models": [
+        "OpenVLA"
+      ],
       "access": [
-        "unspecified"
+        "white-box",
+        "transfer"
       ],
       "metrics": [
         "attack-success-rate",
@@ -4278,8 +4417,8 @@
         "physical-damage-rate",
         "collision-rate"
       ],
-      "physical_validation": null,
-      "curation_status": "catalog-derived"
+      "physical_validation": false,
+      "curation_status": "paper-verified"
     }
   },
   {
