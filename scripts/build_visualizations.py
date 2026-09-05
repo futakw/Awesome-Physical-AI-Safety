@@ -246,7 +246,9 @@ def ordered_threat_mechanisms(papers: list[dict]) -> list[str]:
 
 
 def render_threat_risk_heatmap(papers: list[dict]) -> str:
-    concrete = [paper for paper in papers if paper["threat_model"]["kind"] not in {"survey", "evaluation"}]
+    # Include benchmark/evaluation records: their threat coverage and evaluated
+    # risks are precisely what this cross-map is intended to summarize.
+    concrete = [paper for paper in papers if paper["threat_model"]["kind"] != "survey"]
     rows = ordered_threat_mechanisms(papers)
     cols = ["task-reliability", "physical-safety", "ethical-societal", "security-privacy"]
     width, left, top, cell_h = 1200, 300, 165, 54
