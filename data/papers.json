@@ -4281,7 +4281,9 @@
         "simulation",
         "real-robot"
       ],
-      "platforms": [],
+      "platforms": [
+        "Real-Sim-Real sensor-attack framework"
+      ],
       "models": [],
       "access": [
         "black-box"
@@ -4291,7 +4293,7 @@
         "robust-success-rate"
       ],
       "physical_validation": true,
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "defense": {
       "position": [
@@ -7474,18 +7476,25 @@
     ],
     "evaluation": {
       "environments": [
-        "unspecified"
+        "simulation"
       ],
-      "platforms": [],
-      "models": [],
+      "platforms": [
+        "LIBERO"
+      ],
+      "models": [
+        "OpenVLA",
+        "MolmoAct",
+        "UniVLA",
+        "NORA"
+      ],
       "access": [
         "not-applicable"
       ],
       "metrics": [
         "task-success-rate"
       ],
-      "physical_validation": null,
-      "curation_status": "catalog-derived"
+      "physical_validation": false,
+      "curation_status": "paper-verified"
     },
     "benchmark": {
       "evaluates": [
@@ -9258,12 +9267,22 @@
     ],
     "evaluation": {
       "environments": [
-        "unspecified"
+        "simulation"
       ],
-      "platforms": [],
-      "models": [],
+      "platforms": [
+        "LIBERO",
+        "MuJoCo"
+      ],
+      "models": [
+        "OpenVLA",
+        "OpenVLA-OFT",
+        "VLA-Adapter",
+        "VLA-Adapter-Pro",
+        "pi0",
+        "pi0.5"
+      ],
       "access": [
-        "unspecified"
+        "black-box"
       ],
       "metrics": [
         "attack-success-rate",
@@ -9271,8 +9290,8 @@
         "physical-damage-rate",
         "collision-rate"
       ],
-      "physical_validation": null,
-      "curation_status": "catalog-derived"
+      "physical_validation": false,
+      "curation_status": "paper-verified"
     },
     "benchmark": {
       "evaluates": [
@@ -10736,10 +10755,16 @@
     ],
     "evaluation": {
       "environments": [
-        "offline-dataset"
+        "simulation"
       ],
-      "platforms": [],
-      "models": [],
+      "platforms": [
+        "RLBench",
+        "Open X-Embodiment"
+      ],
+      "models": [
+        "LLARVA",
+        "IVA"
+      ],
       "access": [
         "not-applicable"
       ],
@@ -10747,8 +10772,8 @@
         "task-success-rate",
         "recovery-rate"
       ],
-      "physical_validation": null,
-      "curation_status": "abstract-verified"
+      "physical_validation": false,
+      "curation_status": "paper-verified"
     },
     "defense": {
       "position": [
@@ -11271,10 +11296,17 @@
     ],
     "evaluation": {
       "environments": [
-        "unspecified"
+        "simulation",
+        "real-robot"
       ],
-      "platforms": [],
-      "models": [],
+      "platforms": [
+        "LIBERO",
+        "Piper arm"
+      ],
+      "models": [
+        "OpenVLA",
+        "pi0"
+      ],
       "access": [
         "not-applicable"
       ],
@@ -11282,8 +11314,8 @@
         "task-success-rate",
         "recovery-rate"
       ],
-      "physical_validation": null,
-      "curation_status": "catalog-derived"
+      "physical_validation": true,
+      "curation_status": "paper-verified"
     },
     "defense": {
       "position": [
