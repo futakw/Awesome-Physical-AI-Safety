@@ -13,6 +13,7 @@
     h1 { margin:0; font-size:32px; letter-spacing:-.02em; }
     .lede { color:var(--muted); margin:7px 0 25px; }
     nav { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px; }
+    .doc-link { border:1px solid var(--line); background:var(--panel); color:var(--ink); border-radius:8px; padding:9px 14px; text-decoration:none; }
     button { border:1px solid var(--line); background:#fff; color:var(--ink); border-radius:8px; padding:9px 14px; cursor:pointer; font:inherit; }
     button[aria-pressed="true"] { background:#eef3fa; border-color:#aebed6; font-weight:600; }
     section { display:none; }
@@ -34,6 +35,8 @@
   <h1>Research Landscape</h1>
   <p class="lede">Interactive views of the Awesome Responsible VLA catalog (<span id="paper-count"></span> papers).</p>
   <nav aria-label="Visualization views">
+    <a class="doc-link" href="../README.md" target="_blank" rel="noopener">README</a>
+    <a class="doc-link" href="taxonomy.md" target="_blank" rel="noopener">Taxonomy</a>
     <button type="button" data-view="timeline" aria-pressed="true">Field timeline</button>
     <button type="button" data-view="heatmap" aria-pressed="false">Threat cross-map</button>
     <button type="button" data-view="risk" aria-pressed="false">Threat × risk</button>
