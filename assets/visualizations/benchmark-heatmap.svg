@@ -11,7 +11,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 </style>
 <rect width="1200" height="1193" fill="#FFFFFF"/>
 <text class="title" x="48" y="48">Threat mechanism × consequence</text>
-<text class="subtitle" x="48" y="74">Benchmark papers only (28 papers).</text>
+<text class="subtitle" x="48" y="74">Benchmark papers only (29 papers).</text>
 <text class="axis" text-anchor="start" transform="translate(353.8 167) rotate(-52)">Task Failure</text>
 <text class="axis" text-anchor="start" transform="translate(477.4 167) rotate(-52)">Physical Damage</text>
 <text class="axis" text-anchor="start" transform="translate(600.9 167) rotate(-52)">Privacy Leakage</text>
@@ -43,12 +43,13 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <rect x="1043.4285714285716" y="187" width="119.57142857142857" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1103.2" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="label" x="282" y="270.0" text-anchor="end">Execution Error</text>
-<rect x="302.0" y="241" width="119.57142857142857" height="50" rx="6" fill="#9BBCF2"><title>[arXiv 2025] VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models
+<rect x="302.0" y="241" width="119.57142857142857" height="50" rx="6" fill="#8FB4F1"><title>[arXiv 2025] VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models
 [arXiv 2025] CostNav: A Navigation Benchmark for Real-World Economic-Cost Evaluation of Physical AI Agents
 [ECCV 2026] LIBERO-Safety: A Comprehensive Benchmark for Physical and Semantic Safety in Vision-Language-Action Models
 [arXiv 2026] ForesightSafety-VLA: A Unified Diagnostic Safety Benchmark for Vision-Language-Action Models
-[arXiv 2026] SafeVLA-Bench: A Benchmark for the Success-Safety Gap in Vision-Language-Action Models</title></rect>
-<text x="361.8" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">5</text>
+[arXiv 2026] SafeVLA-Bench: A Benchmark for the Success-Safety Gap in Vision-Language-Action Models
+[arXiv 2026] FailBench: How Reliable are VLMs at Judging Robot Task Success?</title></rect>
+<text x="361.8" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">6</text>
 <rect x="425.57142857142856" y="241" width="119.57142857142857" height="50" rx="6" fill="#9BBCF2"><title>[arXiv 2025] VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models
 [arXiv 2025] CostNav: A Navigation Benchmark for Real-World Economic-Cost Evaluation of Physical AI Agents
 [ECCV 2026] LIBERO-Safety: A Comprehensive Benchmark for Physical and Semantic Safety in Vision-Language-Action Models
@@ -61,8 +62,8 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="732.5" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="796.2857142857142" y="241" width="119.57142857142857" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="856.1" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="919.8571428571429" y="241" width="119.57142857142857" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="979.6" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="919.8571428571429" y="241" width="119.57142857142857" height="50" rx="6" fill="#D4E2F6"><title>[arXiv 2026] FailBench: How Reliable are VLMs at Judging Robot Task Success?</title></rect>
+<text x="979.6" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="1043.4285714285716" y="241" width="119.57142857142857" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1103.2" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="label" x="282" y="324.0" text-anchor="end">Constraint Violation</text>
