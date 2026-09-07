@@ -48,6 +48,7 @@ Run all checks from the repository root:
 python3 scripts/validate_catalog.py
 python3 scripts/build_readme.py
 python3 scripts/build_readme.py --check
+python3 scripts/build_doc_pages.py
 python3 scripts/build_visualizations.py
 python3 scripts/build_visualizations.py --check
 python3 scripts/build_explorer.py
