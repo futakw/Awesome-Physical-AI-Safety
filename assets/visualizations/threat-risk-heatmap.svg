@@ -255,35 +255,34 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="775.0" y="574.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="872" y="545" width="186" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="965.0" y="574.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<text class="label" x="282" y="628.0" text-anchor="end">Data Poisoning</text>
-<rect x="302" y="599" width="186" height="50" rx="6" fill="#D7D1EF"><title>[OpenReview 2026] Clean-Action Backdoor Attacks on Vision-Language-Action Models via Sequential Error Exploitation
-[arXiv 2025] TrojanRobot / Robot Collapse: Supply-Chain Backdoor Attacks Against VLM-based Robotic Manipulation
-[arXiv 2025] Compromising LLM Driven Embodied Agents with Contextual Backdoor Attacks
-[arXiv 2025] BEAT: Visual Backdoor Attacks on MLLM Embodied Decision Making via Contrastive Trigger Learning
-[arXiv 2026] FlowHijack: Backdoor Attacks on Flow-Matching Vision-Language-Action Models</title></rect>
+<text class="label" x="282" y="628.0" text-anchor="end">Unsafe Policy Behavior</text>
+<rect x="302" y="599" width="186" height="50" rx="6" fill="#D7D1EF"><title>[arXiv 2025] Human-in-the-Loop Online Rejection Sampling for Robotic Manipulation
+[arXiv 2025] ROVER: Regulator-Driven Robust Temporal Verification of Black-Box Robot Policies
+[arXiv 2025] EvoVLA: Self-Evolving Vision-Language-Action Model
+[arXiv 2026] VLA-Forget: Vision-Language-Action Unlearning for Embodied Foundation Models
+[NeurIPS 2025] Human-assisted Robotic Policy Refinement via Action Preference Optimization</title></rect>
 <text x="395.0" y="628.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">5</text>
-<rect x="492" y="599" width="186" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="585.0" y="628.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="492" y="599" width="186" height="50" rx="6" fill="#DEDCF1"><title>[arXiv 2025] ROVER: Regulator-Driven Robust Temporal Verification of Black-Box Robot Policies
+[arXiv 2026] ReactHuman: A Physics-Grounded Benchmark for Human-Like Reactive Decision-Making in Embodied Multimodal LLMs
+[arXiv 2026] ResSafe: Learning Safety Filtering with Residual Reinforcement Learning for Humanoids</title></rect>
+<text x="585.0" y="628.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">3</text>
 <rect x="682" y="599" width="186" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="775.0" y="628.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="872" y="599" width="186" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="965.0" y="628.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<text class="label" x="282" y="682.0" text-anchor="end">Digital Perturbation</text>
-<rect x="302" y="653" width="186" height="50" rx="6" fill="#DBD6F0"><title>[arXiv 2026] Hidden in Plain Sight: Diffusion-Based Unrestricted Robotic Attacks on Vision-Language-Action Models
-[arXiv 2025] When Alignment Fails: Multimodal Adversarial Attacks on Vision-Language-Action Models
-[arXiv 2024] VLATest: Testing and Evaluating Vision-Language-Action Models for Robotic Manipulation
-[arXiv 2025] AttackVLA: Benchmarking Adversarial and Backdoor Attacks on Vision-Language-Action Models</title></rect>
-<text x="395.0" y="682.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">4</text>
-<rect x="492" y="653" width="186" height="50" rx="6" fill="#E7E8F5"><title>[arXiv 2026] Hidden in Plain Sight: Diffusion-Based Unrestricted Robotic Attacks on Vision-Language-Action Models</title></rect>
-<text x="585.0" y="682.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<text class="label" x="282" y="682.0" text-anchor="end">Data Poisoning</text>
+<rect x="302" y="653" width="186" height="50" rx="6" fill="#D7D1EF"><title>[OpenReview 2026] Clean-Action Backdoor Attacks on Vision-Language-Action Models via Sequential Error Exploitation
+[arXiv 2025] TrojanRobot / Robot Collapse: Supply-Chain Backdoor Attacks Against VLM-based Robotic Manipulation
+[arXiv 2025] Compromising LLM Driven Embodied Agents with Contextual Backdoor Attacks
+[arXiv 2025] BEAT: Visual Backdoor Attacks on MLLM Embodied Decision Making via Contrastive Trigger Learning
+[arXiv 2026] FlowHijack: Backdoor Attacks on Flow-Matching Vision-Language-Action Models</title></rect>
+<text x="395.0" y="682.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">5</text>
+<rect x="492" y="653" width="186" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="585.0" y="682.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="682" y="653" width="186" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="775.0" y="682.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="872" y="653" width="186" height="50" rx="6" fill="#D7D1EF"><title>[arXiv 2025] When Alignment Fails: Multimodal Adversarial Attacks on Vision-Language-Action Models
-[arXiv 2025] FreezeVLA: Action-Freezing Attacks Against Vision-Language-Action Models
-[NeurIPS 2025] ADVEDM: Fine-Grained Adversarial Attack Against VLM-Based Embodied Agents
-[CVPR 2025] Chain of Attack: On the Robustness of Vision-Language Models Against Transfer-Based Adversarial Attacks
-[arXiv 2025] AttackVLA: Benchmarking Adversarial and Backdoor Attacks on Vision-Language-Action Models</title></rect>
-<text x="965.0" y="682.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">5</text>
+<rect x="872" y="653" width="186" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="965.0" y="682.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="axis" x="680.0" y="745" text-anchor="middle">Evaluated risk</text>
 <text class="axis" transform="translate(45 435.0) rotate(-90)" text-anchor="middle">Threat mechanism</text>
 <text class="small" x="300" y="777">Top 10 mechanisms by frequency; risk labels require a corresponding empirical outcome metric.</text>

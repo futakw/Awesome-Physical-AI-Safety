@@ -12065,5 +12065,74 @@
     "tags": ["benchmark-construction", "artifact-verification", "provenance", "closed-loop-synthesis", "repair"],
     "evaluation": {"environments":["offline-dataset","simulation"],"platforms":["Embodied-BenchForge"],"models":["MLLMs","embodied agents"],"access":["black-box"],"metrics":[],"physical_validation":false,"curation_status":"abstract-verified"},
     "benchmark": {"evaluates":["task-reliability"],"shift_types":["none"],"environment":"simulation","base_platforms":[],"public_data":null,"leaderboard":null,"curation_status":"catalog-derived"}
+  },
+  {
+    "id": "sinha-2026-rethinking-safety-generalist-robots",
+    "title": "Rethinking Safety for Generalist Robots",
+    "first_author": "Sinha",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2609.06326",
+    "code_url": null,
+    "section": "surveys",
+    "subsection": "Position Papers and Research Agendas",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {"kind":"survey","coverage":{"lifecycles":["training","inference","system"],"mechanisms":["multiple"],"surfaces":["user-instruction","physical-semantic-environment","visual-perception","task-planning","execution-control"],"consequences":[]}},
+    "tags": ["position-paper", "generalist-robots", "embodied-ai-safety", "contextual-safety", "lifecycle"]
+  },
+  {
+    "id": "eide-2026-arc-autonomous-robotics-compliance",
+    "title": "ARC: Autonomous Robotics Compliance A Three-Layer Governance Architecture for Deployed Autonomous Systems",
+    "first_author": "Eide",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2609.12932",
+    "code_url": null,
+    "section": "surveys",
+    "subsection": "Position Papers and Research Agendas",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {"kind":"survey","coverage":{"lifecycles":["inference","system"],"mechanisms":["multiple"],"surfaces":["model-supply-chain","task-planning","execution-control","middleware-network"],"consequences":[]}},
+    "tags": ["governance", "compliance", "deployment-assurance", "certification", "operational-authorization"]
+  },
+  {
+    "id": "qu-2026-ressafe-residual-safety-filtering-humanoids",
+    "title": "ResSafe: Learning Safety Filtering with Residual Reinforcement Learning for Humanoids",
+    "first_author": "Qu",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2609.15988",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "scope": "embodied-agent",
+    "risks": ["physical-safety"],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": ["inference"],
+      "mechanism": ["unsafe-policy-behavior"],
+      "surface": ["action-interface", "execution-control"],
+      "target": ["robot-executor"],
+      "consequence": ["unsafe-motion"]
+    },
+    "tags": ["humanoid", "residual-reinforcement-learning", "safety-filter", "sim-to-real", "payload-disturbance"],
+    "evaluation": {
+      "environments": ["simulation", "real-robot"],
+      "platforms": ["IsaacGym", "Unitree G1"],
+      "models": ["reference motion policy"],
+      "access": ["not-applicable"],
+      "metrics": ["constraint-violation-rate"],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": ["inference-time"],
+      "mechanism": ["action-shielding"],
+      "protected_surface": ["action-interface", "execution-control"],
+      "defends_against": ["unsafe-policy-behavior"],
+      "assumptions": ["safety-constraints"],
+      "curation_status": "catalog-derived"
+    }
   }
 ]

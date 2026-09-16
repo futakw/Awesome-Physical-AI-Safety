@@ -11,7 +11,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 </style>
 <rect width="1200" height="815" fill="#FFFFFF"/>
 <text class="title" x="48" y="48">Defense mechanism × defended threat</text>
-<text class="subtitle" x="48" y="74">Columns follow the Threat Cross-Map order, including empty cells (74 enriched papers).</text>
+<text class="subtitle" x="48" y="74">Columns follow the Threat Cross-Map order, including empty cells (75 enriched papers).</text>
 <text class="axis" text-anchor="start" transform="translate(335.2 167) rotate(-52)">Distribution Shift</text>
 <text class="axis" text-anchor="start" transform="translate(421.8 167) rotate(-52)">Execution Error</text>
 <text class="axis" text-anchor="start" transform="translate(508.2 167) rotate(-52)">Constraint Violation</text>
@@ -20,8 +20,8 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text class="axis" text-anchor="start" transform="translate(767.8 167) rotate(-52)">Adversarial Patch</text>
 <text class="axis" text-anchor="start" transform="translate(854.2 167) rotate(-52)">Indirect Prompt Injection</text>
 <text class="axis" text-anchor="start" transform="translate(940.8 167) rotate(-52)">Planning Hijacking</text>
-<text class="axis" text-anchor="start" transform="translate(1027.2 167) rotate(-52)">Data Poisoning</text>
-<text class="axis" text-anchor="start" transform="translate(1113.8 167) rotate(-52)">Digital Perturbation</text>
+<text class="axis" text-anchor="start" transform="translate(1027.2 167) rotate(-52)">Unsafe Policy Behavior</text>
+<text class="axis" text-anchor="start" transform="translate(1113.8 167) rotate(-52)">Data Poisoning</text>
 <text class="label" x="282" y="216.0" text-anchor="end">Robust Finetuning</text>
 <rect x="302.0" y="187" width="82.5" height="50" rx="6" fill="#ABC7F3"><title>[arXiv 2025] RobustVLA: Robustness-Aware Reinforcement Post-Training for Vision-Language-Action Models
 [arXiv 2026] ChromaGuard: Defending VLA Models against Color/Illumination-Induced Blindness
@@ -46,8 +46,11 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="862.2" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="907.5" y="187" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="948.8" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="994.0" y="187" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1035.2" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="994.0" y="187" width="82.5" height="50" rx="6" fill="#C1D5F5"><title>[arXiv 2025] Human-in-the-Loop Online Rejection Sampling for Robotic Manipulation
+[arXiv 2025] EvoVLA: Self-Evolving Vision-Language-Action Model
+[arXiv 2026] VLA-Forget: Vision-Language-Action Unlearning for Embodied Foundation Models
+[NeurIPS 2025] Human-assisted Robotic Policy Refinement via Action Preference Optimization</title></rect>
+<text x="1035.2" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">4</text>
 <rect x="1080.5" y="187" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1121.8" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="label" x="282" y="270.0" text-anchor="end">Runtime Monitoring</text>
@@ -92,8 +95,8 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="862.2" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="907.5" y="241" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="948.8" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="994.0" y="241" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1035.2" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="994.0" y="241" width="82.5" height="50" rx="6" fill="#DDE8F7"><title>[arXiv 2025] ROVER: Regulator-Driven Robust Temporal Verification of Black-Box Robot Policies</title></rect>
+<text x="1035.2" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="1080.5" y="241" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1121.8" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="label" x="282" y="324.0" text-anchor="end">Formal Verification</text>
@@ -115,8 +118,8 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="862.2" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="907.5" y="295" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="948.8" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="994.0" y="295" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1035.2" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="994.0" y="295" width="82.5" height="50" rx="6" fill="#DDE8F7"><title>[arXiv 2025] ROVER: Regulator-Driven Robust Temporal Verification of Black-Box Robot Policies</title></rect>
+<text x="1035.2" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="1080.5" y="295" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1121.8" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="label" x="282" y="378.0" text-anchor="end">Failure Recovery</text>
@@ -242,8 +245,8 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="862.2" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="907.5" y="565" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="948.8" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="994.0" y="565" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1035.2" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="994.0" y="565" width="82.5" height="50" rx="6" fill="#DDE8F7"><title>[arXiv 2026] ResSafe: Learning Safety Filtering with Residual Reinforcement Learning for Humanoids</title></rect>
+<text x="1035.2" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="1080.5" y="565" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1121.8" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="label" x="282" y="648.0" text-anchor="end">Input Filtering</text>
