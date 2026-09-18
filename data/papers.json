@@ -12199,5 +12199,22 @@
     "tags": ["QP-solver", "constraint-handling", "always-feasible", "runtime-control", "open-source"],
     "evaluation": {"environments":["simulation"],"platforms":["robot control benchmarks"],"models":["constrained QP controllers"],"access":["not-applicable"],"metrics":["constraint-violation-rate"],"physical_validation":false,"curation_status":"paper-verified"},
     "defense": {"position":["inference-time"],"mechanism":["action-shielding"],"protected_surface":["execution-control"],"defends_against":["constraint-violation"],"assumptions":["safety-constraints"],"curation_status":"catalog-derived"}
+  },
+  {
+    "id": "huang-2026-safemanip",
+    "title": "SafeManip: A Property-Driven Benchmark for Temporal Safety Evaluation in Robotic Manipulation",
+    "first_author": "Huang",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2605.12386",
+    "code_url": "https://github.com/chengyuehuang511/SafeManip",
+    "section": "benchmarks",
+    "subsection": "Task and Physical Safety",
+    "scope": "vla",
+    "risks": ["task-reliability", "physical-safety"],
+    "threat_model": {"kind":"evaluation","coverage":{"lifecycles":["inference"],"mechanisms":["constraint-violation","execution-error"],"surfaces":["world-state","action-interface","execution-control"],"consequences":["unsafe-success","collision","recovery-failure"]}},
+    "tags": ["benchmark", "temporal-safety", "LTLf", "DFA-monitor", "RoboCasa365", "safe-success"],
+    "evaluation": {"environments":["simulation"],"platforms":["RoboCasa365"],"models":["π0","π0.5","GR00T N1.5"],"access":["not-applicable"],"metrics":["task-success-rate","constraint-violation-rate","physical-damage-rate"],"physical_validation":false,"curation_status":"paper-verified"},
+    "benchmark": {"evaluates":["physical-safety","task-reliability"],"shift_types":["none"],"environment":"simulation","base_platforms":["RoboCasa365"],"public_data":true,"leaderboard":null,"curation_status":"catalog-derived"}
   }
 ]
