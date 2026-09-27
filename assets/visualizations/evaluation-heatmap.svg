@@ -11,7 +11,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 </style>
 <rect width="1200" height="620" fill="#FFFFFF"/>
 <text class="title" x="48" y="48">Evaluation environment × metric</text>
-<text class="subtitle" x="48" y="74">Catalog-wide metadata; unspecified marks records awaiting paper-level verification (190 enriched papers).</text>
+<text class="subtitle" x="48" y="74">Catalog-wide metadata; unspecified marks records awaiting paper-level verification (191 enriched papers).</text>
 <text class="axis" text-anchor="start" transform="translate(340.1 167) rotate(-52)">Task Success Rate</text>
 <text class="axis" text-anchor="start" transform="translate(436.2 167) rotate(-52)">Robust Success Rate</text>
 <text class="axis" text-anchor="start" transform="translate(532.3 167) rotate(-52)">Attack Success Rate</text>
@@ -338,7 +338,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2026] Predictive Zonotope Reduction: Precise Runtime Monitoring under Uncertainty</title></rect>
 <text x="1116.9" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
 <text class="label" x="282" y="270.0" text-anchor="end">Real Robot</text>
-<rect x="302.0" y="241" width="92.11111111111111" height="50" rx="6" fill="#8EB3F1"><title>[arXiv 2025] RobustVLA: Robustness-Aware Reinforcement Post-Training for Vision-Language-Action Models
+<rect x="302.0" y="241" width="92.11111111111111" height="50" rx="6" fill="#8DB3F1"><title>[arXiv 2025] RobustVLA: Robustness-Aware Reinforcement Post-Training for Vision-Language-Action Models
 [arXiv 2026] Pre-Execution Safety Gate &amp; Task Safety Contracts for LLM-Based Robot Task Planning
 [arXiv 2025] Safe LLM-Controlled Robots with Formal Guarantees via Reachability Analysis
 [arXiv 2025] TrojanRobot / Robot Collapse: Supply-Chain Backdoor Attacks Against VLM-based Robotic Manipulation
@@ -405,8 +405,9 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2026] VLPSA: Vision-Language-Poisson-Safe Actions for Full-Body Safety of Learned Policies
 [IROS 2026 Workshop 2026] Backdoors in Learning-Based Industrial Robotic Arm Manipulation: An Empirical Security Study
 [arXiv 2026] ProTracer: Proprioception-Guided Failure Diagnosis in Robot Manipulation
-[arXiv 2026] CARE: Experience-Guided Atomic Corrective Execution for Vision-Language-Action Policies</title></rect>
-<text x="348.1" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">68</text>
+[arXiv 2026] CARE: Experience-Guided Atomic Corrective Execution for Vision-Language-Action Policies
+[arXiv 2026] Self-Adaptive VLA for Robust Robot Deployment</title></rect>
+<text x="348.1" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">69</text>
 <rect x="398.1111111111111" y="241" width="92.11111111111111" height="50" rx="6" fill="#E6EEF7"><title>[arXiv 2025] RobustVLA: Robustness-Aware Reinforcement Post-Training for Vision-Language-Action Models
 [AAAI 2026] Phantom Menace: Exploring and Enhancing the Robustness of VLA Models Against Physical Sensor Attacks</title></rect>
 <text x="444.2" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>

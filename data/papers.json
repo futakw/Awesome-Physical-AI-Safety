@@ -12398,5 +12398,36 @@
     "tags": ["benchmark", "physical-condition-shift", "RoboTwin", "13-attributes", "WAM", "VLA", "5k-demonstrations"],
     "evaluation": {"environments":["simulation"],"platforms":["RoboTwin-Phys"],"models":["Fast-WAM","Motus","FACT","pi0.5","Galaxea-VLA"],"access":["not-applicable"],"metrics":["task-success-rate"],"physical_validation":false,"curation_status":"paper-verified"},
     "benchmark": {"evaluates":["task-reliability"],"shift_types":["dynamics"],"environment":"simulation","base_platforms":["RoboTwin-Phys"],"public_data":true,"leaderboard":null,"curation_status":"catalog-derived"}
+  },
+  {
+    "id": "zhang-2026-self-adaptive-vla",
+    "title": "Self-Adaptive VLA for Robust Robot Deployment",
+    "first_author": "Zhang",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2609.30092",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness and Uncertainty Evaluation",
+    "scope": "vla",
+    "risks": ["task-reliability"],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": ["inference"],
+      "mechanism": ["distribution-shift", "execution-error"],
+      "surface": ["proprioception", "execution-control"],
+      "target": ["vla-policy", "robot-executor"],
+      "consequence": ["task-failure", "recovery-failure"]
+    },
+    "tags": ["deployment-robustness", "hardware-shift", "actuation-bias", "joint-encoder-offset", "context-adaptation", "proprioception", "bimanual-manipulation"],
+    "evaluation": {
+      "environments": ["real-robot"],
+      "platforms": ["Piper", "Piper-X", "Marvin", "Wuji Hands", "multiple workstations"],
+      "models": ["diffusion-based VLA"],
+      "access": ["not-applicable"],
+      "metrics": ["task-success-rate"],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    }
   }
 ]

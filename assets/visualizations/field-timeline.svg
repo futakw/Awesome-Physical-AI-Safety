@@ -238,7 +238,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2025] A Framework for Benchmarking and Aligning Task-Planning Safety in LLM-Based Embodied Agents
 [arXiv 2025] Privacy Risks of Robot Vision: A User Study on Image Modalities and Resolution</title></circle>
 <text x="830.0" y="453" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">12</text>
-<circle cx="1120.0" cy="448" r="19.4" fill="#C48724" fill-opacity="0.88"><title>[CVPR 2026] LIBERO-Plus: A Progressive Robustness Benchmark for Visual-Language-Action Models
+<circle cx="1120.0" cy="448" r="19.7" fill="#C48724" fill-opacity="0.88"><title>[CVPR 2026] LIBERO-Plus: A Progressive Robustness Benchmark for Visual-Language-Action Models
 [OpenReview 2026] VLA-Risk: Benchmarking Vision-Language-Action Models with Physical Robustness
 [AAAI 2026] IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents in Daily Household Tasks
 [arXiv 2026] HazardArena: Evaluating Semantic Safety in Vision-Language-Action Models
@@ -257,8 +257,9 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2026] SafeManip: A Property-Driven Benchmark for Temporal Safety Evaluation in Robotic Manipulation
 [IROS 2026 Workshop 2026] Marginal Calibration Does Not Compose: Hidden Dependence in Modular Robot Navigation
 [arXiv 2026] SafeStage: Evaluating Safety Before, During, and After Vision-Language-Conditioned Robot Manipulation
-[arXiv 2026] RoboTwin-Phys: Do WAMs and VLAs Understand the Physical World?</title></circle>
-<text x="1120.0" y="453" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">20</text>
+[arXiv 2026] RoboTwin-Phys: Do WAMs and VLAs Understand the Physical World?
+[arXiv 2026] Self-Adaptive VLA for Robust Robot Deployment</title></circle>
+<text x="1120.0" y="453" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">21</text>
 <text class="label" x="222" y="517" text-anchor="end">System Security</text>
 <line x1="250" y1="512" x2="1120" y2="512" stroke="#DCE3EC"/>
 <circle cx="540.0" cy="512" r="9.8" fill="#AE4560" fill-opacity="0.88"><title>[arXiv 2024] On the Vulnerability of LLM/VLM-Controlled Robotics</title></circle>
