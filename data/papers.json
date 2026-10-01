@@ -12632,5 +12632,38 @@
     "tags": ["counterfactual-benchmark", "corner-case", "hazard-clearance", "nuScenes", "autonomous-driving"],
     "evaluation": {"environments":["simulation"],"platforms":["ExceptionDrive"],"models":["seven driving planners"],"access":["not-applicable"],"metrics":["collision-rate","constraint-violation-rate","task-success-rate"],"physical_validation":false,"curation_status":"paper-verified"},
     "benchmark": {"evaluates":["physical-safety","task-reliability"],"shift_types":["dynamics","state"],"environment":"simulation","base_platforms":["nuScenes"],"public_data":null,"leaderboard":null,"curation_status":"catalog-derived"}
+  },
+  {
+    "id": "liu-2026-trapvla-configured-failure",
+    "title": "TrapVLA: Trapping Vision-Language-Action Models in Configured Failure Modes",
+    "first_author": "Liu",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2608.26578",
+    "code_url": "https://john-liua.github.io/TrapVLA/",
+    "section": "training-attacks",
+    "subsection": "Backdoors and Data Poisoning",
+    "scope": "vla",
+    "risks": ["task-reliability"],
+    "threat_model": {"kind":"adversarial","lifecycle":["training","inference"],"mechanism":["backdoor"],"surface":["model-supply-chain","user-instruction"],"target":["vla-policy"],"consequence":["targeted-action","task-failure"]},
+    "tags": ["configured-failure", "text-trigger", "Trap-LIBERO", "Trap-RoboTwin", "real-robot"],
+    "evaluation": {"environments":["simulation","real-robot"],"platforms":["Trap-LIBERO","Trap-RoboTwin"],"models":["OpenVLA-OFT","pi0.5"],"access":["white-box"],"metrics":["attack-success-rate","clean-task-success-rate"],"physical_validation":true,"curation_status":"paper-verified"}
+  },
+  {
+    "id": "deng-2026-dynaharness",
+    "title": "DynaHarness: A Dynamic Physical Harness for Self-Evolving Robot Agents",
+    "first_author": "Deng",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2609.40306",
+    "code_url": "https://denghaoyuan123.github.io/Dynaharness_page/",
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "embodied-agent",
+    "risks": ["task-reliability"],
+    "threat_model": {"kind":"system-failure","lifecycle":["inference","system"],"mechanism":["constraint-violation","execution-error","unsafe-policy-behavior"],"surface":["task-planning","action-interface","execution-control"],"target":["runtime-monitor","robot-executor","vla-policy"],"consequence":["task-failure","recovery-failure","policy-violation"]},
+    "tags": ["physical-execution-contract", "fast-slow-agent", "failure-attribution", "self-evolution", "LIBERO-Pro", "pi0.5"],
+    "evaluation": {"environments":["simulation"],"platforms":["LIBERO-Pro"],"models":["pi0.5","Qwen3-VL-4B"],"access":["not-applicable"],"metrics":["task-success-rate"],"physical_validation":false,"curation_status":"paper-verified"},
+    "defense": {"position":["runtime","system-level"],"mechanism":["runtime-monitoring","failure-recovery"],"protected_surface":["task-planning","action-interface","execution-control"],"defends_against":["constraint-violation","execution-error","unsafe-policy-behavior"],"assumptions":["runtime-monitor","safety-constraints"],"curation_status":"catalog-derived"}
   }
 ]
