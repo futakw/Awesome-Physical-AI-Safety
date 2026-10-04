@@ -12665,5 +12665,21 @@
     "tags": ["physical-execution-contract", "fast-slow-agent", "failure-attribution", "self-evolution", "LIBERO-Pro", "pi0.5"],
     "evaluation": {"environments":["simulation"],"platforms":["LIBERO-Pro"],"models":["pi0.5","Qwen3-VL-4B"],"access":["not-applicable"],"metrics":["task-success-rate"],"physical_validation":false,"curation_status":"paper-verified"},
     "defense": {"position":["runtime","system-level"],"mechanism":["runtime-monitoring","failure-recovery"],"protected_surface":["task-planning","action-interface","execution-control"],"defends_against":["constraint-violation","execution-error","unsafe-policy-behavior"],"assumptions":["runtime-monitor","safety-constraints"],"curation_status":"catalog-derived"}
+  },
+  {
+    "id": "yang-2026-universal-adversarial-attacks-vla",
+    "title": "Exploiting Vulnerabilities: Universal Adversarial Attacks on Vision-Language-Action Models in Robotics",
+    "first_author": "Yang",
+    "venue": "ICRA",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2609.39178",
+    "code_url": null,
+    "section": "inference-attacks",
+    "subsection": "Visual Perturbations and Patches",
+    "scope": "vla",
+    "risks": ["task-reliability", "security-privacy"],
+    "threat_model": {"kind":"adversarial","lifecycle":["inference"],"mechanism":["adversarial-object"],"surface":["visual-perception","physical-semantic-environment"],"target":["vla-policy"],"consequence":["task-failure"]},
+    "tags": ["universal-adversarial-object", "physical-attack", "SPSA", "multi-view", "trajectory-deviation", "Pi0", "RDT", "Aloha"],
+    "evaluation": {"environments":["simulation","real-robot"],"platforms":["13 manipulation tasks","Aloha dual-arm"],"models":["Pi0","RDT"],"access":["black-box"],"metrics":["task-success-rate","attack-success-rate"],"physical_validation":true,"curation_status":"paper-verified"}
   }
 ]
