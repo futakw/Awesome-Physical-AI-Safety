@@ -12681,5 +12681,39 @@
     "threat_model": {"kind":"adversarial","lifecycle":["inference"],"mechanism":["adversarial-object"],"surface":["visual-perception","physical-semantic-environment"],"target":["vla-policy"],"consequence":["task-failure"]},
     "tags": ["universal-adversarial-object", "physical-attack", "SPSA", "multi-view", "trajectory-deviation", "Pi0", "RDT", "Aloha"],
     "evaluation": {"environments":["simulation","real-robot"],"platforms":["13 manipulation tasks","Aloha dual-arm"],"models":["Pi0","RDT"],"access":["black-box"],"metrics":["task-success-rate","attack-success-rate"],"physical_validation":true,"curation_status":"paper-verified"}
+  },
+  {
+    "id": "agarwal-2026-multi-link-safety-filtering",
+    "title": "Multi-Link Safety Filtering for VLA Policies Around Moving Hazards",
+    "first_author": "Agarwal",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2609.40007",
+    "code_url": "https://yathag.github.io/multilink-safety-filter/",
+    "section": "defenses",
+    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "scope": "vla",
+    "risks": ["task-reliability","physical-safety"],
+    "threat_model": {"kind":"system-failure","lifecycle":["inference"],"mechanism":["constraint-violation","execution-error"],"surface":["visual-perception","world-state","execution-control"],"target":["runtime-monitor","robot-executor"],"consequence":["collision","unsafe-motion","task-failure"]},
+    "tags": ["moving-hazard","multi-link-shield","control-barrier-function","optical-flow","safe-success","SO-101","real-robot"],
+    "evaluation": {"environments":["simulation","real-robot"],"platforms":["six simulated hazard-motion conditions","SO-101"],"models":["π0.5"],"access":["not-applicable"],"metrics":["collision-rate","task-success-rate"],"physical_validation":true,"curation_status":"paper-verified"},
+    "defense": {"position":["runtime"],"mechanism":["action-shielding","runtime-monitoring"],"protected_surface":["visual-perception","world-state","execution-control"],"defends_against":["constraint-violation","execution-error"],"assumptions":["safety-constraints","runtime-monitor"],"curation_status":"catalog-derived"}
+  },
+  {
+    "id": "zhen-2026-wbag",
+    "title": "WBAG: A Whole-Body and Attached-Geometry Safety Framework for Vision-Language-Action Manipulation",
+    "first_author": "Zhen",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.01083",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "scope": "vla",
+    "risks": ["task-reliability","physical-safety"],
+    "threat_model": {"kind":"system-failure","lifecycle":["inference"],"mechanism":["constraint-violation","execution-error"],"surface":["world-state","execution-control"],"target":["runtime-monitor","robot-executor"],"consequence":["collision","unsafe-motion","task-failure"]},
+    "tags": ["whole-body-safety","attached-geometry","grasp-conditioned","control-barrier-function","SafeLIBERO","safe-success"],
+    "evaluation": {"environments":["simulation"],"platforms":["SafeLIBERO"],"models":["VLA policies"],"access":["not-applicable"],"metrics":["collision-rate","constraint-violation-rate","task-success-rate"],"physical_validation":false,"curation_status":"paper-verified"},
+    "defense": {"position":["runtime"],"mechanism":["action-shielding","formal-verification"],"protected_surface":["world-state","execution-control"],"defends_against":["constraint-violation","execution-error"],"assumptions":["safety-constraints","runtime-monitor"],"curation_status":"catalog-derived"}
   }
 ]
