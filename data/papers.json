@@ -12715,5 +12715,22 @@
     "tags": ["whole-body-safety","attached-geometry","grasp-conditioned","control-barrier-function","SafeLIBERO","safe-success"],
     "evaluation": {"environments":["simulation"],"platforms":["SafeLIBERO"],"models":["VLA policies"],"access":["not-applicable"],"metrics":["collision-rate","constraint-violation-rate","task-success-rate"],"physical_validation":false,"curation_status":"paper-verified"},
     "defense": {"position":["runtime"],"mechanism":["action-shielding","formal-verification"],"protected_surface":["world-state","execution-control"],"defends_against":["constraint-violation","execution-error"],"assumptions":["safety-constraints","runtime-monitor"],"curation_status":"catalog-derived"}
+  },
+  {
+    "id": "nguyen-2026-feasible-future-decoding-vla",
+    "title": "A Safe Action Is Not Enough: Feasible-Future Decoding for Vision-Language-Action Policies",
+    "first_author": "Nguyen",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.05166",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "scope": "vla",
+    "risks": ["task-reliability"],
+    "threat_model": {"kind":"system-failure","lifecycle":["inference"],"mechanism":["unsafe-policy-behavior","execution-error"],"surface":["task-planning","action-interface"],"target":["vla-policy","runtime-monitor"],"consequence":["task-failure","recovery-failure"]},
+    "tags": ["feasibility-likelihood-gap", "feasible-future", "VICS", "training-free", "Safety-CHORES", "simulation-only"],
+    "evaluation": {"environments":["simulation"],"platforms":["Safety-CHORES","Fetch"],"models":["frozen VLA policies"],"access":["not-applicable"],"metrics":["task-success-rate"],"physical_validation":false,"curation_status":"paper-verified"},
+    "defense": {"position":["inference-time"],"mechanism":["action-shielding","runtime-monitoring"],"protected_surface":["task-planning","action-interface"],"defends_against":["unsafe-policy-behavior","execution-error"],"assumptions":["runtime-monitor","safety-constraints"],"curation_status":"catalog-derived"}
   }
 ]
