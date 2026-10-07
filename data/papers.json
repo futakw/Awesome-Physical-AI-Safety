@@ -12732,5 +12732,22 @@
     "tags": ["feasibility-likelihood-gap", "feasible-future", "VICS", "training-free", "Safety-CHORES", "simulation-only"],
     "evaluation": {"environments":["simulation"],"platforms":["Safety-CHORES","Fetch"],"models":["frozen VLA policies"],"access":["not-applicable"],"metrics":["task-success-rate"],"physical_validation":false,"curation_status":"paper-verified"},
     "defense": {"position":["inference-time"],"mechanism":["action-shielding","runtime-monitoring"],"protected_surface":["task-planning","action-interface"],"defends_against":["unsafe-policy-behavior","execution-error"],"assumptions":["runtime-monitor","safety-constraints"],"curation_status":"catalog-derived"}
+  },
+  {
+    "id": "lee-2026-salt-visual-disruptions",
+    "title": "Adapting Vision-Language-Action Models to Unknown Visual Disruptions During Execution",
+    "first_author": "Lee",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.07946",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Runtime Observation Interventions",
+    "scope": "vla",
+    "risks": ["task-reliability"],
+    "threat_model": {"kind":"non-adversarial","lifecycle":["inference"],"mechanism":["distribution-shift"],"surface":["visual-perception"],"target":["vla-policy"],"consequence":["task-failure"]},
+    "tags": ["SALT", "test-time-adaptation", "visual-disruption", "action-chunk", "LIBERO-Plus", "real-robot"],
+    "evaluation": {"environments":["simulation","real-robot"],"platforms":["LIBERO-10","LIBERO-Plus"],"models":["SmolVLA","GR00T N1.7"],"access":["not-applicable"],"metrics":["task-success-rate"],"physical_validation":true,"curation_status":"paper-verified"},
+    "defense": {"position":["inference-time"],"mechanism":["robust-finetuning"],"protected_surface":["visual-perception"],"defends_against":["distribution-shift"],"assumptions":["model-access"],"curation_status":"catalog-derived"}
   }
 ]

@@ -109,7 +109,7 @@ See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.
 
 </details>
 
-**231 papers in the current catalog.**
+**232 papers in the current catalog.**
 
 <a id="surveys"></a>
 
@@ -518,6 +518,7 @@ See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.
 
 | Paper | Venue | Evaluated Risk | Threat Model |
 |---|---:|---|---|
+| **[Adapting Vision-Language-Action Models to Unknown Visual Disruptions During Execution](https://arxiv.org/abs/2610.07946)**<br><sub>Lee et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Visual Perception](https://img.shields.io/badge/-Visual_Perception-3FA89B?style=flat) <br> ![Distribution Shift](https://img.shields.io/badge/-Distribution_Shift-D47A5D?style=flat) &nbsp;→&nbsp; ![VLA policy](https://img.shields.io/badge/-VLA_policy-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
 | **[Run-Time Observation Interventions Make Vision-Language-Action Models More Visually Robust](https://arxiv.org/abs/2410.01971)** [![GitHub stars](https://img.shields.io/github/stars/irom-princeton/byovla?style=social)](https://github.com/irom-princeton/byovla)<br><sub>Hancock et al.</sub> | arXiv 2024 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Visual Perception](https://img.shields.io/badge/-Visual_Perception-3FA89B?style=flat) <br> ![Distribution Shift](https://img.shields.io/badge/-Distribution_Shift-D47A5D?style=flat) &nbsp;→&nbsp; ![VLA policy](https://img.shields.io/badge/-VLA_policy-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
 
 <a id="defenses-reliability-oriented-policy-refinement"></a>
