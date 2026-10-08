@@ -12749,5 +12749,38 @@
     "tags": ["SALT", "test-time-adaptation", "visual-disruption", "action-chunk", "LIBERO-Plus", "real-robot"],
     "evaluation": {"environments":["simulation","real-robot"],"platforms":["LIBERO-10","LIBERO-Plus"],"models":["SmolVLA","GR00T N1.7"],"access":["not-applicable"],"metrics":["task-success-rate"],"physical_validation":true,"curation_status":"paper-verified"},
     "defense": {"position":["inference-time"],"mechanism":["robust-finetuning"],"protected_surface":["visual-perception"],"defends_against":["distribution-shift"],"assumptions":["model-access"],"curation_status":"catalog-derived"}
+  },
+  {
+    "id": "lee-2026-sparse-feature-policy-unlearning-state-hallucination",
+    "title": "Sparse Feature Policy Unlearning Mitigates State Hallucination in Vision-Language-Action Models",
+    "first_author": "Lee",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.09496",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety-Aware Policy Learning",
+    "scope": "vla",
+    "risks": ["task-reliability"],
+    "threat_model": {"kind":"system-failure","lifecycle":["training","inference"],"mechanism":["unsafe-policy-behavior","perception-error"],"surface":["world-state","reasoning-representation","action-interface"],"target":["vla-policy","reasoning-process"],"consequence":["task-failure","recovery-failure"]},
+    "tags": ["SOUL", "state-hallucination", "policy-unlearning", "sparse-autoencoder", "OpenVLA", "pi0.5", "LIBERO-Plus", "RoboCasa", "Franka"],
+    "evaluation": {"environments":["simulation","real-robot"],"platforms":["LIBERO-Plus","RoboCasa","Franka Research 3"],"models":["OpenVLA","π0.5"],"access":["white-box"],"metrics":["task-success-rate","clean-task-success-rate"],"physical_validation":true,"curation_status":"paper-verified"},
+    "defense": {"position":["training-time"],"mechanism":["representation-steering"],"protected_surface":["reasoning-representation","action-interface"],"defends_against":["unsafe-policy-behavior","perception-error"],"assumptions":["model-access"],"curation_status":"catalog-derived"}
+  },
+  {
+    "id": "wulff-2026-vla-instruction-grounding-mechanistic",
+    "title": "Do Vision-Language-Action Models Understand Instructions? A Mechanistic Interpretability Study on Language Grounding",
+    "first_author": "Wulff",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.10178",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Language and Instruction Robustness",
+    "scope": "vla",
+    "risks": [],
+    "threat_model": {"kind":"non-adversarial","lifecycle":["inference"],"mechanism":["instruction-ambiguity"],"surface":["user-instruction","reasoning-representation"],"target":["reasoning-process","action-generation"],"consequence":["task-failure"]},
+    "tags": ["instruction-grounding", "mechanistic-interpretability", "activation-patching", "attribution-patching", "CKA", "directional-corruption", "pi0.5", "GR00T-N1.7", "LIBERO-10"],
+    "evaluation": {"environments":["simulation"],"platforms":["LIBERO-10 offline dataset"],"models":["π0.5","GR00T N1.7"],"access":["not-applicable"],"metrics":[],"physical_validation":false,"curation_status":"paper-verified"}
   }
 ]
