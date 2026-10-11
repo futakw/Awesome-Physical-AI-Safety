@@ -12811,10 +12811,10 @@
     "section": "benchmarks",
     "subsection": "Semantic and Ethical Safety",
     "scope": "embodied-agent",
-    "risks": ["task-reliability", "physical-safety", "ethical-societal", "security-privacy"],
+    "risks": ["task-reliability", "physical-safety", "security-privacy"],
     "threat_model": {"kind":"evaluation","coverage":{"lifecycles":["inference"],"mechanisms":["jailbreak","unsafe-policy-behavior"],"surfaces":["user-instruction","task-planning","execution-control"],"consequences":["policy-violation","unsafe-motion","task-failure"]}},
     "tags": ["jailbreak", "guardrail-benchmark", "hazard-success", "false-positive-rate", "latency", "embodied-agent"],
-    "evaluation": {"environments":["simulation"],"platforms":["embodied-agent simulator"],"models":["embodied agents"],"access":["not-applicable"],"metrics":["attack-success-rate","physical-damage-rate","task-success-rate","false-positive-rate"],"physical_validation":false,"curation_status":"paper-verified"},
+    "evaluation": {"environments":["simulation"],"platforms":["embodied-agent simulator"],"models":["embodied agents"],"access":["not-applicable"],"metrics":["attack-success-rate","task-success-rate","false-positive-rate"],"physical_validation":false,"curation_status":"paper-verified"},
     "benchmark": {"evaluates":["physical-safety","semantic-safety","task-reliability","adversarial-attack"],"shift_types":["instruction"],"environment":"simulation","base_platforms":["embodied-agent simulator"],"public_data":null,"leaderboard":null,"curation_status":"catalog-derived"}
   },
   {

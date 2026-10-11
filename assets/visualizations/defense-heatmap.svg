@@ -11,14 +11,14 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 </style>
 <rect width="1200" height="815" fill="#FFFFFF"/>
 <text class="title" x="48" y="48">Defense mechanism × defended threat</text>
-<text class="subtitle" x="48" y="74">Columns follow the Threat Cross-Map order, including empty cells (95 enriched papers).</text>
+<text class="subtitle" x="48" y="74">Columns follow the Threat Cross-Map order, including empty cells (97 enriched papers).</text>
 <text class="axis" text-anchor="start" transform="translate(335.2 167) rotate(-52)">Execution Error</text>
 <text class="axis" text-anchor="start" transform="translate(421.8 167) rotate(-52)">Distribution Shift</text>
 <text class="axis" text-anchor="start" transform="translate(508.2 167) rotate(-52)">Constraint Violation</text>
 <text class="axis" text-anchor="start" transform="translate(594.8 167) rotate(-52)">Backdoor</text>
 <text class="axis" text-anchor="start" transform="translate(681.2 167) rotate(-52)">Jailbreak</text>
-<text class="axis" text-anchor="start" transform="translate(767.8 167) rotate(-52)">Unsafe Policy Behavior</text>
-<text class="axis" text-anchor="start" transform="translate(854.2 167) rotate(-52)">Adversarial Patch</text>
+<text class="axis" text-anchor="start" transform="translate(767.8 167) rotate(-52)">Adversarial Patch</text>
+<text class="axis" text-anchor="start" transform="translate(854.2 167) rotate(-52)">Unsafe Policy Behavior</text>
 <text class="axis" text-anchor="start" transform="translate(940.8 167) rotate(-52)">Data Poisoning</text>
 <text class="axis" text-anchor="start" transform="translate(1027.2 167) rotate(-52)">Indirect Prompt Injection</text>
 <text class="axis" text-anchor="start" transform="translate(1113.8 167) rotate(-52)">Planning Error</text>
@@ -41,13 +41,13 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="602.8" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="648.0" y="187" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="689.2" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="734.5" y="187" width="82.5" height="50" rx="6" fill="#CCDDF6"><title>[arXiv 2025] Human-in-the-Loop Online Rejection Sampling for Robotic Manipulation
+<rect x="734.5" y="187" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="775.8" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="821.0" y="187" width="82.5" height="50" rx="6" fill="#CCDDF6"><title>[arXiv 2025] Human-in-the-Loop Online Rejection Sampling for Robotic Manipulation
 [arXiv 2025] EvoVLA: Self-Evolving Vision-Language-Action Model
 [arXiv 2026] VLA-Forget: Vision-Language-Action Unlearning for Embodied Foundation Models
 [NeurIPS 2025] Human-assisted Robotic Policy Refinement via Action Preference Optimization</title></rect>
-<text x="775.8" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">4</text>
-<rect x="821.0" y="187" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="862.2" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text x="862.2" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">4</text>
 <rect x="907.5" y="187" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="948.8" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="994.0" y="187" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
@@ -101,13 +101,14 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="602.8" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="648.0" y="241" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[IEEE RA-L 2026] Safety Guardrails for LLM-Enabled Robots</title></rect>
 <text x="689.2" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="734.5" y="241" width="82.5" height="50" rx="6" fill="#CCDDF6"><title>[arXiv 2025] ROVER: Regulator-Driven Robust Temporal Verification of Black-Box Robot Policies
+<rect x="734.5" y="241" width="82.5" height="50" rx="6" fill="#D9E5F7"><title>[ICLR 2024] Embodied Active Defense: Leveraging Recurrent Feedback to Counter Adversarial Patches
+[arXiv 2026] Detect and Suppress: A Mechanistic Defense against Adversarial Patches in VLA Models</title></rect>
+<text x="775.8" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
+<rect x="821.0" y="241" width="82.5" height="50" rx="6" fill="#CCDDF6"><title>[arXiv 2025] ROVER: Regulator-Driven Robust Temporal Verification of Black-Box Robot Policies
 [AdaptFM@ICML 2026] Adaptive Safety Probing for Resource-Efficient Vision-Language-Action Models
 [arXiv 2026] DynaHarness: A Dynamic Physical Harness for Self-Evolving Robot Agents
 [arXiv 2026] A Safe Action Is Not Enough: Feasible-Future Decoding for Vision-Language-Action Policies</title></rect>
-<text x="775.8" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">4</text>
-<rect x="821.0" y="241" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[ICLR 2024] Embodied Active Defense: Leveraging Recurrent Feedback to Counter Adversarial Patches</title></rect>
-<text x="862.2" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<text x="862.2" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">4</text>
 <rect x="907.5" y="241" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="948.8" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="994.0" y="241" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
@@ -134,10 +135,10 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="602.8" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="648.0" y="295" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="689.2" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="734.5" y="295" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[arXiv 2025] ROVER: Regulator-Driven Robust Temporal Verification of Black-Box Robot Policies</title></rect>
-<text x="775.8" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="821.0" y="295" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="862.2" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="734.5" y="295" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="775.8" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="821.0" y="295" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[arXiv 2025] ROVER: Regulator-Driven Robust Temporal Verification of Black-Box Robot Policies</title></rect>
+<text x="862.2" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="907.5" y="295" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="948.8" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="994.0" y="295" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
@@ -173,9 +174,9 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="602.8" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="648.0" y="349" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="689.2" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="734.5" y="349" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[arXiv 2026] DynaHarness: A Dynamic Physical Harness for Self-Evolving Robot Agents</title></rect>
+<rect x="734.5" y="349" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[ICLR 2024] Embodied Active Defense: Leveraging Recurrent Feedback to Counter Adversarial Patches</title></rect>
 <text x="775.8" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="821.0" y="349" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[ICLR 2024] Embodied Active Defense: Leveraging Recurrent Feedback to Counter Adversarial Patches</title></rect>
+<rect x="821.0" y="349" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[arXiv 2026] DynaHarness: A Dynamic Physical Harness for Self-Evolving Robot Agents</title></rect>
 <text x="862.2" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="907.5" y="349" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="948.8" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
@@ -196,10 +197,11 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="602.8" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">3</text>
 <rect x="648.0" y="403" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[arXiv 2025] Concept Enhancement Engineering: A Lightweight and Efficient Robust Defense Against Jailbreak Attacks in Embodied AI</title></rect>
 <text x="689.2" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="734.5" y="403" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[AdaptFM@ICML 2026] Adaptive Safety Probing for Resource-Efficient Vision-Language-Action Models</title></rect>
+<rect x="734.5" y="403" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[arXiv 2026] Detect and Suppress: A Mechanistic Defense against Adversarial Patches in VLA Models</title></rect>
 <text x="775.8" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="821.0" y="403" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="862.2" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="821.0" y="403" width="82.5" height="50" rx="6" fill="#D9E5F7"><title>[AdaptFM@ICML 2026] Adaptive Safety Probing for Resource-Efficient Vision-Language-Action Models
+[arXiv 2026] Sparse Feature Policy Unlearning Mitigates State Hallucination in Vision-Language-Action Models</title></rect>
+<text x="862.2" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
 <rect x="907.5" y="403" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="948.8" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="994.0" y="403" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
@@ -239,10 +241,10 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="602.8" y="540.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="648.0" y="511" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="689.2" y="540.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="734.5" y="511" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="775.8" y="540.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="821.0" y="511" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[arXiv 2025] Model-Agnostic Adversarial Attack and Defense for Vision-Language-Action Models</title></rect>
-<text x="862.2" y="540.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="734.5" y="511" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[arXiv 2025] Model-Agnostic Adversarial Attack and Defense for Vision-Language-Action Models</title></rect>
+<text x="775.8" y="540.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="821.0" y="511" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="862.2" y="540.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="907.5" y="511" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="948.8" y="540.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="994.0" y="511" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
@@ -273,11 +275,11 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="602.8" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="648.0" y="565" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="689.2" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="734.5" y="565" width="82.5" height="50" rx="6" fill="#D9E5F7"><title>[arXiv 2026] ResSafe: Learning Safety Filtering with Residual Reinforcement Learning for Humanoids
+<rect x="734.5" y="565" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="775.8" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="821.0" y="565" width="82.5" height="50" rx="6" fill="#D9E5F7"><title>[arXiv 2026] ResSafe: Learning Safety Filtering with Residual Reinforcement Learning for Humanoids
 [arXiv 2026] A Safe Action Is Not Enough: Feasible-Future Decoding for Vision-Language-Action Policies</title></rect>
-<text x="775.8" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
-<rect x="821.0" y="565" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="862.2" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text x="862.2" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
 <rect x="907.5" y="565" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="948.8" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="994.0" y="565" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
