@@ -42,3 +42,7 @@ The scope is physical-AI safety, security, robustness, privacy, ethical and soci
 ## Pull Requests
 
 Keep each pull request focused. Explain why a new paper belongs in the selected section, which physical-AI system it studies, and what risk, mechanism, or evaluation principle it contributes.
+
+## Licensing
+
+Code contributions are under MIT; original catalog content contributions are under CC BY 4.0. Submit only material you have the right to contribute, and see [LICENSES.md](LICENSES.md) for the scope of each license.

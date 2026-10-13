@@ -163,7 +163,7 @@ def render(papers: list[dict]) -> str:
         "[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)",
         "[![Cite this repository](https://img.shields.io/badge/Cite-CITATION.cff-blue.svg)](CITATION.cff)",
         "[![LLM-assisted](https://img.shields.io/badge/curation-%F0%9F%A4%96%20LLM--assisted-critical.svg)](docs/daily-curation-workflow.md)",
-        f"[![License](https://img.shields.io/badge/License-MIT-3FA89B?style=flat)](LICENSE) [![Papers](https://img.shields.io/badge/Papers-{paper_count}-6F9FEF?style=flat)](docs/index.html) [![Update](https://img.shields.io/badge/Update-Daily-D47A5D?style=flat)](docs/daily-curation-workflow.md)",
+        f"[![Licenses: MIT + CC BY 4.0](https://img.shields.io/badge/Licenses-MIT%20%2B%20CC%20BY%204.0-3FA89B?style=flat)](LICENSES.md) [![Papers](https://img.shields.io/badge/Papers-{paper_count}-6F9FEF?style=flat)](docs/index.html) [![Update](https://img.shields.io/badge/Update-Daily-D47A5D?style=flat)](docs/daily-curation-workflow.md)",
         "",
         "**[🔎 Explore the interactive research landscape →](docs/index.html#heatmap)** — open any chart cell to inspect its contributing papers.",
         "",
@@ -345,9 +345,9 @@ def render(papers: list[dict]) -> str:
             "",
             "Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) and add or update the corresponding record in `data/papers.json`. Do not edit generated paper tables directly.",
             "",
-            "## License",
+            "## Licenses",
             "",
-            "MIT License. Paper titles, author names, venues, and links remain the property of their respective authors and publishers.",
+            "Code is licensed under [MIT](LICENSE); original catalog content is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). See [LICENSES.md](LICENSES.md) for scope and attribution details. Linked papers and third-party materials retain their own terms.",
             "",
         ]
     )

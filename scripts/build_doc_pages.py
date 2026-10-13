@@ -12,5 +12,7 @@ for source, output, title in [(ROOT/'README.md', ROOT/'docs'/'readme.html', 'Awe
     if source.name == 'README.md':
         # The rendered page lives under docs/, so adjust repository-root links.
         text = text.replace('](assets/', '](../assets/').replace('](docs/', '](../docs/')
+        for filename in ('LICENSE', 'LICENSES.md', 'CONTRIBUTING.md', 'CITATION.cff'):
+            text = text.replace(f']({filename})', f'](../{filename})')
     output.write_text(TEMPLATE.format(title=title, source=json.dumps(text)), encoding='utf-8')
     print(f'Generated {output.name}')
