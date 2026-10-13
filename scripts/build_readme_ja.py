@@ -354,6 +354,17 @@ def render(papers: list[dict]) -> str:
     return "\n".join(lines) + "\n"
 
 
+def warn_untranslated_subsections(papers: list[dict]) -> None:
+    missing = sorted({p["subsection"] for p in papers} - set(SUBSECTIONS_JA))
+    if missing:
+        print(
+            "WARNING: subsection(s) missing from scripts/labels_ja.py SUBSECTIONS_JA "
+            "(rendering in English in README.ja.md until translated):"
+        )
+        for name in missing:
+            print(f"  - {name!r}")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true")
@@ -361,6 +372,7 @@ def main() -> int:
 
     papers = json.loads(DATA_PATH.read_text(encoding="utf-8"))
     output = render(papers)
+    warn_untranslated_subsections(papers)
 
     if args.check:
         current = README_JA_PATH.read_text(encoding="utf-8") if README_JA_PATH.exists() else ""

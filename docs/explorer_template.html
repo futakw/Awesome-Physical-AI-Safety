@@ -37,53 +37,105 @@
     .paper-list { max-height:190px; overflow:auto; margin:6px 0 0; padding-left:18px; }
     .paper-list li { margin:2px 0; }
     .doc-frame { width:100%; min-height:900px; border:1px solid var(--line); border-radius:10px; background:#fff; }
-    .gh-link { display:inline-flex; align-items:center; gap:6px; margin-bottom:14px; padding:7px 12px; border:1px solid var(--line); border-radius:8px; background:var(--panel); color:var(--ink); text-decoration:none; font-size:13px; }
+    .top-row { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom:14px; }
+    .gh-link { display:inline-flex; align-items:center; gap:6px; padding:7px 12px; border:1px solid var(--line); border-radius:8px; background:var(--panel); color:var(--ink); text-decoration:none; font-size:13px; }
     .gh-link:hover { background:#eef3fa; }
-    .lang-banner { display:none; align-items:center; justify-content:space-between; gap:12px; margin-bottom:14px; padding:9px 14px; border:1px solid #aebed6; border-radius:8px; background:#eef3fa; color:var(--ink); font-size:13px; }
-    .lang-banner.show { display:flex; }
-    .lang-banner a { color:#2451a6; font-weight:650; text-decoration:none; }
-    .lang-banner a:hover { text-decoration:underline; }
-    .lang-banner button { border:none; background:transparent; color:var(--muted); font-size:16px; line-height:1; padding:2px 6px; cursor:pointer; }
+    .lang-toggle { display:inline-flex; border:1px solid var(--line); border-radius:8px; overflow:hidden; }
+    .lang-toggle button { border:none; border-radius:0; padding:7px 13px; font-size:13px; background:#fff; }
+    .lang-toggle button + button { border-left:1px solid var(--line); }
+    .lang-toggle button[aria-pressed="true"] { background:var(--ink); color:#fff; font-weight:650; }
     @media (max-width:620px) { main { padding:25px 12px 40px; } h1 { font-size:26px; } .tooltip { max-width:280px; } }
   </style>
 </head>
 <body>
 <main>
-  <a class="gh-link" href="https://github.com/futakw/Awesome-Physical-AI-Safety" target="_blank" rel="noopener noreferrer">⭐ View on GitHub — star the repo &amp; see how to cite it</a>
-  <div id="lang-banner" class="lang-banner" role="note">
-    <span>🇯🇵 日本語の概要ページがあります。 <a href="https://github.com/futakw/Awesome-Physical-AI-Safety/blob/main/README.ja.md" target="_blank" rel="noopener noreferrer">こちらから</a></span>
-    <button type="button" id="lang-banner-dismiss" aria-label="Dismiss">✕</button>
+  <div class="top-row">
+    <a class="gh-link" id="gh-link" href="https://github.com/futakw/Awesome-Physical-AI-Safety" target="_blank" rel="noopener noreferrer">⭐ View on GitHub — star the repo &amp; see how to cite it</a>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button type="button" id="lang-en" aria-pressed="true">EN</button>
+      <button type="button" id="lang-ja" aria-pressed="false">日本語</button>
+    </div>
   </div>
-  <h1>Research Landscape</h1>
-  <p class="lede">Interactive views of the Awesome Physical AI Safety catalog (<span id="paper-count"></span> papers).</p>
+  <h1 data-i18n="title">Research Landscape</h1>
+  <p class="lede"><span data-i18n="ledePrefix">Interactive views of the Awesome Physical AI Safety catalog (</span><span id="paper-count"></span><span data-i18n="ledeSuffix"> papers).</span></p>
   <div class="meta-badges" aria-label="Catalog metadata">
-    <a class="meta-badge" href="../LICENSES.md" target="_blank" rel="noopener noreferrer"><span>Licenses</span><strong>MIT · CC BY 4.0</strong></a>
-    <a class="meta-badge papers" href="readme.html" target="_blank" rel="noopener noreferrer"><span>Papers</span><strong id="paper-count-badge">—</strong></a>
-    <a class="meta-badge update" href="../docs/daily-curation-workflow.md" target="_blank" rel="noopener noreferrer"><span>Update</span><strong>Daily</strong></a>
-    <a class="meta-badge curation" href="readme.html" target="_blank" rel="noopener noreferrer"><span>Curation</span><strong>LLM-assisted</strong></a>
+    <a class="meta-badge" href="../LICENSES.md" target="_blank" rel="noopener noreferrer"><span data-i18n="badgeLicenses">Licenses</span><strong>MIT · CC BY 4.0</strong></a>
+    <a class="meta-badge papers" href="readme.html" target="_blank" rel="noopener noreferrer"><span data-i18n="badgePapers">Papers</span><strong id="paper-count-badge">—</strong></a>
+    <a class="meta-badge update" href="../docs/daily-curation-workflow.md" target="_blank" rel="noopener noreferrer"><span data-i18n="badgeUpdate">Update</span><strong data-i18n="badgeDaily">Daily</strong></a>
+    <a class="meta-badge curation" href="readme.html" target="_blank" rel="noopener noreferrer"><span data-i18n="badgeCuration">Curation</span><strong data-i18n="badgeLlm">LLM-assisted</strong></a>
   </div>
   <nav aria-label="Visualization views">
-    <button type="button" data-view="readme" aria-pressed="false">README</button>
-    <button type="button" data-view="taxonomy" aria-pressed="false">Taxonomy</button>
-    <button type="button" data-view="timeline" aria-pressed="true">Field timeline</button>
-    <button type="button" data-view="heatmap" aria-pressed="false">Threat cross-map</button>
-    <button type="button" data-view="risk" aria-pressed="false">Threat × measured risk</button>
+    <button type="button" data-view="readme" aria-pressed="false" data-i18n="navReadme">README</button>
+    <button type="button" data-view="taxonomy" aria-pressed="false" data-i18n="navTaxonomy">Taxonomy</button>
+    <button type="button" data-view="timeline" aria-pressed="true" data-i18n="navTimeline">Field timeline</button>
+    <button type="button" data-view="heatmap" aria-pressed="false" data-i18n="navHeatmap">Threat cross-map</button>
+    <button type="button" data-view="risk" aria-pressed="false" data-i18n="navRisk">Threat × measured risk</button>
   </nav>
-  <p class="note">Charts summarize catalog coverage, not field-wide prevalence. Click a cell to inspect the contributing papers.</p>
+  <p class="note" data-i18n="topNote">Charts summarize catalog coverage, not field-wide prevalence. Click a cell to inspect the contributing papers.</p>
   <div class="view-container">
-  <section id="timeline" class="active"><p class="note">Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to pin the paper list.</p><div id="timeline-chart"></div></section>
-  <section id="heatmap"><p class="note">Cells show mechanism-surface co-occurrence for concrete threat models. Hover for a preview; click a cell to pin the paper list.</p><div id="heatmap-chart"></div></section>
-  <section id="risk"><p class="note">Rows are threat mechanisms and columns are empirically evaluated risk outcomes. Empty cells remain visible.</p><div id="risk-chart"></div></section>
-  <section id="readme"><iframe class="doc-frame" src="readme.html" title="Rendered README"></iframe></section>
-  <section id="taxonomy"><iframe class="doc-frame" src="taxonomy.html" title="Rendered taxonomy"></iframe></section>
+  <section id="timeline" class="active"><p class="note" data-i18n="timelineNote">Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to pin the paper list.</p><div id="timeline-chart"></div></section>
+  <section id="heatmap"><p class="note" data-i18n="heatmapNote">Cells show mechanism-surface co-occurrence for concrete threat models. Hover for a preview; click a cell to pin the paper list.</p><div id="heatmap-chart"></div></section>
+  <section id="risk"><p class="note" data-i18n="riskNote">Rows are threat mechanisms and columns are empirically evaluated risk outcomes. Empty cells remain visible.</p><div id="risk-chart"></div></section>
+  <section id="readme"><iframe class="doc-frame" id="readme-frame" src="readme.html" title="Rendered README"></iframe></section>
+  <section id="taxonomy"><iframe class="doc-frame" id="taxonomy-frame" src="taxonomy.html" title="Rendered taxonomy"></iframe></section>
   </div>
 </main>
 <div id="tooltip" class="tooltip" role="tooltip"></div>
 <script>
 const papers = __PAPERS_JSON__;
+const labelsJa = __LABELS_JA_JSON__;
 const colors = {surveys:'#657A8C', 'ood-generalization':'#3FA89B', 'training-attacks':'#9873D4', 'inference-attacks':'#D47A5D', defenses:'#6F9FEF', benchmarks:'#B88A24', 'system-security':'#D96F8A'};
 const labels = {surveys:'Surveys','ood-generalization':'OOD Generalization','training-attacks':'Training Attacks','inference-attacks':'Inference Attacks',defenses:'Defenses',benchmarks:'Benchmarks','system-security':'System Security'};
 const sections = Object.keys(labels), tooltip = d3.select('#tooltip');
+
+let currentLang = 'en';
+const dlabelFlat = Object.assign({}, labelsJa.surface, labelsJa.mechanism, labelsJa.target, labelsJa.consequence, labelsJa.lifecycle);
+function dlabel(raw){
+  if (currentLang === 'ja') return dlabelFlat[raw] || (labelsJa.risks && labelsJa.risks[raw]) || (labelsJa.kind && labelsJa.kind[raw]) || raw.replaceAll('-',' ');
+  return raw.replaceAll('-',' ');
+}
+const sectionsShortJa = {surveys:'サーベイ','ood-generalization':'OOD汎化','training-attacks':'学習時攻撃','inference-attacks':'推論時攻撃',defenses:'防御・安全機構',benchmarks:'ベンチマーク','system-security':'システムセキュリティ'};
+function sectionLabel(key){ return currentLang === 'ja' ? (sectionsShortJa[key] || labels[key]) : labels[key]; }
+function countLabel(n){ return `${n}${I18N[currentLang].papersWord}`; }
+
+const I18N = {
+  en: {
+    title: 'Research Landscape',
+    ledePrefix: 'Interactive views of the Awesome Physical AI Safety catalog (',
+    ledeSuffix: ' papers).',
+    ghlink: '⭐ View on GitHub — star the repo & see how to cite it',
+    navReadme: 'README', navTaxonomy: 'Taxonomy', navTimeline: 'Field timeline', navHeatmap: 'Threat cross-map', navRisk: 'Threat × measured risk',
+    badgeLicenses: 'Licenses', badgePapers: 'Papers', badgeUpdate: 'Update', badgeCuration: 'Curation', badgeDaily: 'Daily', badgeLlm: 'LLM-assisted',
+    topNote: 'Charts summarize catalog coverage, not field-wide prevalence. Click a cell to inspect the contributing papers.',
+    timelineNote: 'Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to pin the paper list.',
+    heatmapNote: 'Cells show mechanism-surface co-occurrence for concrete threat models. Hover for a preview; click a cell to pin the paper list.',
+    riskNote: 'Rows are threat mechanisms and columns are empirically evaluated risk outcomes. Empty cells remain visible.',
+    chartTimelineTitle: 'Field timeline',
+    chartHeatmapTitle: 'Threat coverage: mechanism × surface',
+    chartHeatmapHint: 'Hover a cell to inspect contributing papers.',
+    chartRiskTitle: 'Threat mechanism × evaluated risk',
+    enrichedSuffix: ' enriched papers; hover or click a cell for the paper list.',
+    papersWord: ' papers',
+  },
+  ja: {
+    title: '研究ランドスケープ',
+    ledePrefix: 'Awesome Physical AI Safetyカタログのインタラクティブな可視化（',
+    ledeSuffix: '件の論文）。',
+    ghlink: '⭐ GitHubで見る — Starをお願いします。引用方法もこちらから',
+    navReadme: 'README', navTaxonomy: 'Taxonomy', navTimeline: 'タイムライン', navHeatmap: '脅威クロスマップ', navRisk: '脅威 × 評価リスク',
+    badgeLicenses: 'ライセンス', badgePapers: '論文数', badgeUpdate: '更新頻度', badgeCuration: 'キュレーション', badgeDaily: '毎日', badgeLlm: 'LLM支援',
+    topNote: 'これらのチャートはカタログ内のメタデータの関係性を示すものであり、分野全体での頻度や防御の有効性を示すものではありません。セルをクリックすると元論文を確認できます。',
+    timelineNote: 'バブルの大きさは、分野×年のセルに含まれる論文数を表します。ホバーでプレビュー、クリックで論文一覧を固定表示します。',
+    heatmapNote: 'セルは具体的なthreat modelにおけるmechanismとsurfaceの共起を示します。ホバーでプレビュー、クリックで固定表示します。',
+    riskNote: '行はthreatメカニズム、列は実証的に評価されたリスクアウトカムです。空のセルも表示されます。',
+    chartTimelineTitle: 'フィールドタイムライン',
+    chartHeatmapTitle: '脅威カバレッジ: メカニズム × サーフェス',
+    chartHeatmapHint: 'セルにホバーすると該当論文を確認できます。',
+    chartRiskTitle: '脅威メカニズム × 評価されたリスク',
+    enrichedSuffix: '件の拡張済み論文。ホバーまたはクリックで論文一覧を表示します。',
+    papersWord: '件',
+  },
+};
 d3.select('#paper-count').text(papers.length);
 d3.select('#paper-count-badge').text(papers.length);
 const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
@@ -97,16 +149,16 @@ const pinTooltip = (event, html) => { pinned = true; placeTooltip(event, html); 
 const hideTooltip = () => { if (!pinned) tooltip.style('opacity',0); };
 document.addEventListener('pointerdown', event => { if (!event.target.closest('.tooltip') && !event.target.closest('.cell')) { pinned = false; tooltip.style('opacity',0); } });
 function renderTimeline(){
-  const width=1160,height=690, margin={top:105,right:35,bottom:54,left:205};
+  const width=1160,height=690, margin={top:105,right:35,bottom:54,left: currentLang === 'ja' ? 235 : 205};
   const svg=d3.select('#timeline-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Interactive field timeline');
   const years=[...new Set(papers.map(p=>p.year))].sort(), grouped=d3.rollup(papers,v=>v,p=>p.section,p=>p.year);
   const x=d3.scalePoint().domain(years).range([margin.left,width-margin.right]); const y=d3.scalePoint().domain(sections).range([margin.top,height-margin.bottom]).padding(.5);
   const max=d3.max([...grouped.values()].flatMap(v=>[...v.values()].map(a=>a.length)))||1;
-  svg.append('text').attr('x',margin.left).attr('y',30).attr('font-size',24).attr('font-weight',650).attr('fill','#202938').text('Field timeline');
+  svg.append('text').attr('x',margin.left).attr('y',30).attr('font-size',24).attr('font-weight',650).attr('fill','#202938').text(I18N[currentLang].chartTimelineTitle);
   years.forEach(year=>{svg.append('line').attr('x1',x(year)).attr('x2',x(year)).attr('y1',margin.top-20).attr('y2',height-margin.bottom+12).attr('stroke','#dce3ec');svg.append('text').attr('class','axis').attr('x',x(year)).attr('y',margin.top-32).attr('text-anchor','middle').text(year);});
-  sections.forEach(s=>{svg.append('line').attr('x1',margin.left).attr('x2',width-margin.right).attr('y1',y(s)).attr('y2',y(s)).attr('stroke','#dce3ec');svg.append('text').attr('class','axis').attr('x',margin.left-20).attr('y',y(s)+5).attr('text-anchor','end').text(labels[s]);});
+  sections.forEach(s=>{svg.append('line').attr('x1',margin.left).attr('x2',width-margin.right).attr('y1',y(s)).attr('y2',y(s)).attr('stroke','#dce3ec');svg.append('text').attr('class','axis').attr('x',margin.left-20).attr('y',y(s)+5).attr('text-anchor','end').text(sectionLabel(s));});
   const cells=[]; for(const s of sections) for(const year of years){const list=(grouped.get(s)?.get(year))||[]; if(list.length) cells.push({s,year,list});}
-  svg.selectAll('circle.cell').data(cells).join('circle').attr('class','cell').attr('cx',d=>x(d.year)).attr('cy',d=>y(d.s)).attr('r',d=>8+22*Math.sqrt(d.list.length/max)).attr('fill',d=>colors[d.s]).attr('fill-opacity',.88).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${labels[d.s]} · ${d.year} · ${d.list.length} papers</strong>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();pinTooltip(event,`<strong>${labels[d.s]} · ${d.year} · ${d.list.length} papers</strong>${paperListHtml(d.list)}`);});
+  svg.selectAll('circle.cell').data(cells).join('circle').attr('class','cell').attr('cx',d=>x(d.year)).attr('cy',d=>y(d.s)).attr('r',d=>8+22*Math.sqrt(d.list.length/max)).attr('fill',d=>colors[d.s]).attr('fill-opacity',.88).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${sectionLabel(d.s)} · ${d.year} · ${countLabel(d.list.length)}</strong>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();pinTooltip(event,`<strong>${sectionLabel(d.s)} · ${d.year} · ${countLabel(d.list.length)}</strong>${paperListHtml(d.list)}`);});
   svg.selectAll('text.count').data(cells).join('text').attr('class','count').attr('x',d=>x(d.year)).attr('y',d=>y(d.s)+5).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',650).attr('fill','#fff').style('pointer-events','none').text(d=>d.list.length);
 }
 
@@ -122,11 +174,11 @@ function renderHeatmap(){
   const x=d3.scaleBand().domain(surfaces).range([margin.left,width-margin.right]).padding(.06), y=d3.scaleBand().domain(mechanisms).range([margin.top,height-margin.bottom]).padding(.06);
   const cellData=[]; for(const m of mechanisms) for(const s of surfaces){const list=concrete.filter(p=>p.threat_model.mechanism.includes(m)&&p.threat_model.surface.includes(s));cellData.push({m,s,list,n:list.length});}
   const max=d3.max(cellData,d=>d.n)||1, fill=d3.scaleSequential().domain([0,max]).interpolator(d3.interpolate('#eef3f8','#6f9fef'));
-  svg.append('text').attr('x',margin.left).attr('y',35).attr('font-size',24).attr('font-weight',650).attr('fill','#202938').text('Threat coverage: mechanism × surface');
-  svg.append('text').attr('x',margin.left).attr('y',57).attr('font-size',13).attr('fill','#657287').text('Hover a cell to inspect contributing papers.');
-  svg.selectAll('text.surface').data(surfaces).join('text').attr('class','axis').attr('text-anchor','start').attr('transform',s=>`translate(${x(s)+8},${margin.top-18}) rotate(-52)`).text(s=>s.replaceAll('-',' '));
-  svg.selectAll('text.mechanism').data(mechanisms).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',m=>y(m)+y.bandwidth()/2+4).text(m=>m.replaceAll('-',' '));
-  svg.selectAll('rect.cell').data(cellData).join('rect').attr('class','cell').attr('x',d=>x(d.s)).attr('y',d=>y(d.m)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${d.m.replaceAll('-',' ')} × ${d.s.replaceAll('-',' ')}</strong><div>${d.n} papers</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();pinTooltip(event,`<strong>${d.m.replaceAll('-',' ')} × ${d.s.replaceAll('-',' ')}</strong><div>${d.n} papers</div>${paperListHtml(d.list)}`);});
+  svg.append('text').attr('x',margin.left).attr('y',35).attr('font-size',24).attr('font-weight',650).attr('fill','#202938').text(I18N[currentLang].chartHeatmapTitle);
+  svg.append('text').attr('x',margin.left).attr('y',57).attr('font-size',13).attr('fill','#657287').text(I18N[currentLang].chartHeatmapHint);
+  svg.selectAll('text.surface').data(surfaces).join('text').attr('class','axis').attr('text-anchor','start').attr('transform',s=>`translate(${x(s)+8},${margin.top-18}) rotate(-52)`).text(s=>dlabel(s));
+  svg.selectAll('text.mechanism').data(mechanisms).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',m=>y(m)+y.bandwidth()/2+4).text(m=>dlabel(m));
+  svg.selectAll('rect.cell').data(cellData).join('rect').attr('class','cell').attr('x',d=>x(d.s)).attr('y',d=>y(d.m)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${dlabel(d.m)} × ${dlabel(d.s)}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();pinTooltip(event,`<strong>${dlabel(d.m)} × ${dlabel(d.s)}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`);});
   svg.selectAll('text.value').data(cellData.filter(d=>d.n)).join('text').attr('class','value').attr('x',d=>x(d.s)+x.bandwidth()/2).attr('y',d=>y(d.m)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',650).attr('fill',d=>d.n/max>.48?'#fff':'#202938').style('pointer-events','none').text(d=>d.n);
 }
 
@@ -179,10 +231,10 @@ function renderExtensionMap(container,title,items,rows,cols,rowValues,colValues,
   const cells=[]; for(const row of rows) for(const col of cols){const list=items.filter(p=>rowValues(p).includes(row)&&colValues(p).includes(col));cells.push({row,col,list,n:list.length});}
   const max=d3.max(cells,d=>d.n)||1, fill=d3.scaleSequential().domain([0,max]).interpolator(d3.interpolate('#eef3f8','#6f9fef'));
   svg.append('text').attr('x',margin.left).attr('y',35).attr('font-size',24).attr('font-weight',650).attr('fill','#202938').text(title);
-  svg.append('text').attr('x',margin.left).attr('y',57).attr('font-size',13).attr('fill','#657287').text(`${items.length} enriched papers; hover or click a cell for the paper list.`);
-  svg.selectAll('text.col').data(cols).join('text').attr('class','axis').attr('text-anchor','start').attr('transform',d=>`translate(${x(d)+8},${margin.top-18}) rotate(-52)`).text(d=>d.replaceAll('-',' '));
-  svg.selectAll('text.row').data(rows).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',d=>y(d)+y.bandwidth()/2+4).text(d=>d.replaceAll('-',' '));
-  svg.selectAll('rect.cell').data(cells).join('rect').attr('class','cell').attr('x',d=>x(d.col)).attr('y',d=>y(d.row)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(d.row.replaceAll('-',' '))} × ${escapeHtml(d.col.replaceAll('-',' '))}</strong><div>${d.n} papers</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();pinTooltip(event,`<strong>${escapeHtml(d.row.replaceAll('-',' '))} × ${escapeHtml(d.col.replaceAll('-',' '))}</strong><div>${d.n} papers</div>${paperListHtml(d.list)}`);});
+  svg.append('text').attr('x',margin.left).attr('y',57).attr('font-size',13).attr('fill','#657287').text(`${items.length}${I18N[currentLang].enrichedSuffix}`);
+  svg.selectAll('text.col').data(cols).join('text').attr('class','axis').attr('text-anchor','start').attr('transform',d=>`translate(${x(d)+8},${margin.top-18}) rotate(-52)`).text(d=>dlabel(d));
+  svg.selectAll('text.row').data(rows).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',d=>y(d)+y.bandwidth()/2+4).text(d=>dlabel(d));
+  svg.selectAll('rect.cell').data(cells).join('rect').attr('class','cell').attr('x',d=>x(d.col)).attr('y',d=>y(d.row)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(dlabel(d.row))} × ${escapeHtml(dlabel(d.col))}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();pinTooltip(event,`<strong>${escapeHtml(dlabel(d.row))} × ${escapeHtml(dlabel(d.col))}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`);});
   svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.col)+x.bandwidth()/2).attr('y',d=>y(d.row)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',650).attr('fill',d=>d.n/max>.48?'#fff':'#202938').style('pointer-events','none').text(d=>d.n);
 }
 
@@ -193,7 +245,7 @@ function renderDefenseV2(){
 function renderThreatRisk(){
   const items=papers.filter(p=>p.threat_model.kind!=='survey');
   const rows=orderedThreatMechanisms(), cols=['task-reliability','physical-safety','ethical-societal','security-privacy'];
-  renderExtensionMap('#risk-chart','Threat mechanism × evaluated risk',items,rows,cols,p=>threatValues(p,'mechanism'),p=>p.risks,'Threat mechanism and evaluated risk cross-map');
+  renderExtensionMap('#risk-chart',I18N[currentLang].chartRiskTitle,items,rows,cols,p=>threatValues(p,'mechanism'),p=>p.risks,'Threat mechanism and evaluated risk cross-map');
 }
 function renderBenchmarkV2(){
   const items=papers.filter(p=>p.section==='benchmarks');
@@ -226,22 +278,41 @@ d3.selectAll('button[data-view]').on('click', function(){
 });
 window.addEventListener('hashchange', () => activateView(window.location.hash.slice(1)));
 activateView(availableViews.has(window.location.hash.slice(1)) ? window.location.hash.slice(1) : 'timeline');
-for (const render of [renderTimeline, renderHeatmap, renderThreatRisk]) {
-  try { render(); } catch (error) { console.error('Visualization failed to render:', error); }
+
+function renderAll(){
+  for (const id of ['timeline-chart','heatmap-chart','risk-chart']) {
+    document.getElementById(id).innerHTML = '';
+  }
+  for (const render of [renderTimeline, renderHeatmap, renderThreatRisk]) {
+    try { render(); } catch (error) { console.error('Visualization failed to render:', error); }
+  }
 }
 
-(function(){
-  const banner = document.getElementById('lang-banner');
-  const dismissKey = 'lang-banner-dismissed';
-  const isJapanese = [navigator.language, ...(navigator.languages||[])].some(l => (l||'').toLowerCase().startsWith('ja'));
-  if (isJapanese && !localStorage.getItem(dismissKey)) {
-    banner.classList.add('show');
-  }
-  document.getElementById('lang-banner-dismiss').addEventListener('click', () => {
-    banner.classList.remove('show');
-    localStorage.setItem(dismissKey, '1');
+function applyStaticI18n(lang){
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (I18N[lang][key] !== undefined) el.textContent = I18N[lang][key];
   });
-})();
+  document.getElementById('gh-link').textContent = I18N[lang].ghlink;
+}
+
+function setLanguage(lang){
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  document.getElementById('lang-en').setAttribute('aria-pressed', String(lang === 'en'));
+  document.getElementById('lang-ja').setAttribute('aria-pressed', String(lang === 'ja'));
+  applyStaticI18n(lang);
+  document.getElementById('readme-frame').src = lang === 'ja' ? 'readme.ja.html' : 'readme.html';
+  document.getElementById('taxonomy-frame').src = lang === 'ja' ? 'taxonomy.ja.html' : 'taxonomy.html';
+  localStorage.setItem('lang', lang);
+  renderAll();
+}
+document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
+document.getElementById('lang-ja').addEventListener('click', () => setLanguage('ja'));
+
+const savedLang = localStorage.getItem('lang');
+const browserJapanese = [navigator.language, ...(navigator.languages || [])].some(l => (l || '').toLowerCase().startsWith('ja'));
+setLanguage(savedLang === 'en' || savedLang === 'ja' ? savedLang : (browserJapanese ? 'ja' : 'en'));
 </script>
 </body>
 </html>
