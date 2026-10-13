@@ -14,7 +14,7 @@
 
 ## About This Catalog
 
-### 🧭 How This Catalog Is Organized
+### 🧭 Core Organizing Principle
 
 - **📏 Measured outcomes:** Risk labels represent outcomes reported with an empirical metric, not hypothetical harms.
 - **🧩 Threat & failure mechanisms:** Each record traces lifecycle → mechanism → surface → target → consequence.
