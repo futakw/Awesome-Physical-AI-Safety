@@ -170,7 +170,7 @@ def render(papers: list[dict]) -> str:
         "",
         "## About This Catalog",
         "",
-        "### 🧭 Core Organizing Principle",
+        "### 🧠 Core Organizing Principle",
         "",
         "- **📏 Measured outcomes:** Risk labels record what a paper measures—such as attack success, task success, collision rate, or constraint violations—not harms it only discusses.",
         "- **🧩 Threat & failure mechanisms:** Each record traces lifecycle → mechanism → surface → target → consequence.",
