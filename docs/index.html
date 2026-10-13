@@ -57,23 +57,14 @@
     <button type="button" data-view="taxonomy" aria-pressed="false">Taxonomy</button>
     <button type="button" data-view="timeline" aria-pressed="true">Field timeline</button>
     <button type="button" data-view="heatmap" aria-pressed="false">Threat cross-map</button>
-    <button type="button" data-view="risk" aria-pressed="false">Threat × risk</button>
-    <button type="button" data-view="defense" aria-pressed="false">Defense cross-map</button>
-    <button type="button" data-view="benchmark" aria-pressed="false">Benchmark cross-map</button>
-    <button type="button" data-view="evaluation" aria-pressed="false">Evaluation cross-map</button>
-    <button type="button" data-view="model" aria-pressed="false">Model view</button>
-    <button type="button" data-view="environment" aria-pressed="false">Environment view</button>
+    <button type="button" data-view="risk" aria-pressed="false">Threat × measured risk</button>
   </nav>
+  <p class="note">Charts summarize catalog coverage, not field-wide prevalence. Click a cell to inspect the contributing papers.</p>
   <section id="timeline" class="active"><p class="note">Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to pin the paper list.</p><div id="timeline-chart"></div></section>
   <section id="heatmap"><p class="note">Cells show mechanism-surface co-occurrence for concrete threat models. Hover for a preview; click a cell to pin the paper list.</p><div id="heatmap-chart"></div></section>
   <section id="risk"><p class="note">Rows are threat mechanisms and columns are empirically evaluated risk outcomes. Empty cells remain visible.</p><div id="risk-chart"></div></section>
-  <section id="defense"><p class="note">Rows are defense mechanisms and columns are the threat mechanisms they address. Only enriched records are counted.</p><div id="defense-chart"></div></section>
-  <section id="benchmark"><p class="note">Rows are evaluated threat mechanisms and columns are evaluated consequences for benchmark papers.</p><div id="benchmark-chart"></div></section>
-  <section id="evaluation"><p class="note">Rows are evaluation environments and columns are reported metrics. Only enriched records are counted.</p><div id="evaluation-chart"></div></section>
   <section id="readme"><iframe class="doc-frame" src="readme.html" title="Rendered README"></iframe></section>
   <section id="taxonomy"><iframe class="doc-frame" src="taxonomy.html" title="Rendered taxonomy"></iframe></section>
-  <section id="model"><p class="note">Model × evaluated risk. Hover or click a cell for the paper list.</p><div id="model-chart"></div></section>
-  <section id="environment"><p class="note">Environment × evaluated risk. Hover or click a cell for the paper list.</p><div id="environment-chart"></div></section>
 </main>
 <div id="tooltip" class="tooltip" role="tooltip"></div>
 <script>
@@ -210,8 +201,20 @@ function renderModelEnvironment(){
   renderExtensionMap('#environment-chart','Environment × evaluated risk',items,envs,cols,p=>p.evaluation.environments||[],p=>p.risks,'Environment and evaluated risk cross-map');
 }
 
-d3.selectAll('button[data-view]').on('click',function(){const view=this.dataset.view;d3.selectAll('button[data-view]').attr('aria-pressed','false');d3.select(this).attr('aria-pressed','true');d3.selectAll('section').classed('active',false);d3.select('#'+view).classed('active',true);});
-for (const render of [renderTimeline, renderHeatmap, renderThreatRisk, renderDefenseV2, renderBenchmarkV2, renderEvaluation, renderModelEnvironment]) {
+const availableViews = new Set([...document.querySelectorAll('button[data-view]')].map(button => button.dataset.view));
+function activateView(view) {
+  if (!availableViews.has(view)) return;
+  d3.selectAll('button[data-view]').attr('aria-pressed', function(){ return String(this.dataset.view === view); });
+  d3.selectAll('section').classed('active', function(){ return this.id === view; });
+}
+d3.selectAll('button[data-view]').on('click', function(){
+  const view = this.dataset.view;
+  activateView(view);
+  window.location.hash = view;
+});
+window.addEventListener('hashchange', () => activateView(window.location.hash.slice(1)));
+activateView(availableViews.has(window.location.hash.slice(1)) ? window.location.hash.slice(1) : 'timeline');
+for (const render of [renderTimeline, renderHeatmap, renderThreatRisk]) {
   try { render(); } catch (error) { console.error('Visualization failed to render:', error); }
 }
 </script>

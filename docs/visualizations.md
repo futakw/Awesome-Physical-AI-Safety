@@ -2,7 +2,7 @@
 
 These views are generated from the structured metadata in [`data/papers.json`](../data/papers.json). They describe the current catalog rather than the full publication volume of the field.
 
-For hoverable paper lists, open the [interactive explorer](index.html). GitHub README markdown cannot execute JavaScript, so the README keeps a static preview and links to this page.
+For hoverable paper lists, open the [interactive explorer](index.html#heatmap). Each README preview links directly to its corresponding view.
 
 ## Field Timeline
 
@@ -22,23 +22,7 @@ The heatmap includes concrete threat models and excludes broad survey/evaluation
 
 Rows follow the same top threat-mechanism order as the Threat Cross-Map. Columns are the four evidence-coded `risks` outcomes; a paper contributes only when it reports a corresponding empirical metric.
 
-## Defense Cross-Map
-
-![Defense coverage map](../assets/visualizations/defense-heatmap.svg)
-
-Rows are `defense.mechanism` values. Columns follow the same top threat-mechanism order as the Threat Cross-Map; mechanisms with no matching defense remain visible as empty columns.
-
-## Benchmark Cross-Map
-
-![Benchmark coverage map](../assets/visualizations/benchmark-heatmap.svg)
-
-Rows are `threat_model.mechanism` values and columns are `threat_model.consequence` values for benchmark papers. Evaluation-style threat models use `coverage.mechanisms` and `coverage.consequences`.
-
-## Evaluation Cross-Map
-
-![Evaluation protocol map](../assets/visualizations/evaluation-heatmap.svg)
-
-Rows are `evaluation.environments` values and columns are `evaluation.metrics` values. Only records enriched with the optional Evaluation extension are counted.
+Defense, benchmark, and evaluation-extension cross-maps are not shown in the public Explorer while their catalog-derived classifications await paper-level verification.
 
 ## Regeneration
 
