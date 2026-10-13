@@ -3176,8 +3176,8 @@
   },
   {
     "id": "trust-llm-controlled-robotics-2026",
-    "title": "Trust in LLM-controlled Robotics: Risks and Mitigation Strategies",
-    "first_author": "Unknown",
+    "title": "Trust in LLM-controlled Robotics: a Survey of Security Threats, Defenses and Challenges",
+    "first_author": "Huang",
     "venue": "arXiv",
     "year": 2026,
     "paper_url": "https://arxiv.org/abs/2601.02377",
@@ -6052,7 +6052,7 @@
   },
   {
     "id": "lu-2025-poex",
-    "title": "POEX: Towards Policy Executable Jailbreak Attacks Against the LLM-Based Robots",
+    "title": "POEX: Policy Executable Embodied AI Jailbreak Attacks",
     "first_author": "Lu",
     "venue": "arXiv",
     "year": 2025,
@@ -6235,7 +6235,7 @@
   },
   {
     "id": "yang-2025-cee",
-    "title": "Concept Enhancement Engineering: A Lightweight and Efficient Robust Defense Against Jailbreak Attacks in Embodied AI",
+    "title": "CEE: An Inference-Time Jailbreak Defense for Embodied Intelligence via Subspace Concept Rotation",
     "first_author": "Yang",
     "venue": "arXiv",
     "year": 2025,
@@ -8580,7 +8580,7 @@
   },
   {
     "id": "valle-2025-vla-uncertainty-quality",
-    "title": "Evaluating Uncertainty and Quality of Visual Language Action-enabled Robots",
+    "title": "Evaluating Uncertainty and Quality of Vision-Language-Action-enabled Robots",
     "first_author": "Valle",
     "venue": "arXiv",
     "year": 2025,
@@ -13682,7 +13682,7 @@
   },
   {
     "id": "xu-2026-obstacle-aware-harness-safe-manipulation",
-    "title": "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation",
+    "title": "Coding Agents with Harness for Safe Robot Control",
     "first_author": "Xu",
     "venue": "arXiv",
     "year": 2026,

@@ -45,7 +45,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2026] Harness Robotic OS: A Unified Embodied-Agent Runtime for Closed-Loop Quadruped Inspection
 [arXiv 2026] Guardrailed Meta-Agent Loops: Stress-Testing Policy Pinning, Budget Bounds, and Crash Recovery
 [arXiv 2026] SafeManip: A Property-Driven Benchmark for Temporal Safety Evaluation in Robotic Manipulation
-[arXiv 2026] Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation
+[arXiv 2026] Coding Agents with Harness for Safe Robot Control
 [arXiv 2026] SafeStage: Evaluating Safety Before, During, and After Vision-Language-Conditioned Robot Manipulation
 [IROS 2026] SafeLoop: Risk-Aware Rollback for Vision-Language-Action Manipulation
 [arXiv 2026] ProTracer: Proprioception-Guided Failure Diagnosis in Robot Manipulation
@@ -68,7 +68,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2026] ForesightSafety-VLA: A Unified Diagnostic Safety Benchmark for Vision-Language-Action Models
 [arXiv 2026] SafeVLA-Bench: A Benchmark for the Success-Safety Gap in Vision-Language-Action Models
 [arXiv 2026] SafeManip: A Property-Driven Benchmark for Temporal Safety Evaluation in Robotic Manipulation
-[arXiv 2026] Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation
+[arXiv 2026] Coding Agents with Harness for Safe Robot Control
 [arXiv 2026] SafeStage: Evaluating Safety Before, During, and After Vision-Language-Conditioned Robot Manipulation
 [IROS 2026] SafeLoop: Risk-Aware Rollback for Vision-Language-Action Manipulation
 [arXiv 2026] Multi-Link Safety Filtering for VLA Policies Around Moving Hazards
@@ -298,23 +298,23 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [ICRA 2025] Jailbreaking LLM-Controlled Robots
 [arXiv 2025] Adversarial Attacks on Robotic Vision-Language-Action Models
 [IEEE RA-L 2026] Safety Guardrails for LLM-Enabled Robots
-[arXiv 2025] POEX: Towards Policy Executable Jailbreak Attacks Against the LLM-Based Robots
+[arXiv 2025] POEX: Policy Executable Embodied AI Jailbreak Attacks
 [ICLR 2025] BadRobot: Jailbreaking Embodied LLM Agents in the Physical World
 [arXiv 2026] Benchmarking Jailbreak Guardrails for Embodied Agents</title></rect>
 <text x="585.0" y="520.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">7</text>
 <rect x="682" y="491" width="186" height="50" rx="6" fill="#DAD5EF"><title>[ICRA 2025] Jailbreaking LLM-Controlled Robots
 [arXiv 2025] Adversarial Attacks on Robotic Vision-Language-Action Models
-[arXiv 2025] POEX: Towards Policy Executable Jailbreak Attacks Against the LLM-Based Robots
+[arXiv 2025] POEX: Policy Executable Embodied AI Jailbreak Attacks
 [ICLR 2025] BadRobot: Jailbreaking Embodied LLM Agents in the Physical World
-[arXiv 2025] Concept Enhancement Engineering: A Lightweight and Efficient Robust Defense Against Jailbreak Attacks in Embodied AI
+[arXiv 2025] CEE: An Inference-Time Jailbreak Defense for Embodied Intelligence via Subspace Concept Rotation
 [arXiv 2025] SafeMind: Benchmarking and Mitigating Safety Risks in Embodied LLM Agents</title></rect>
 <text x="775.0" y="520.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">6</text>
 <rect x="872" y="491" width="186" height="50" rx="6" fill="#D5CDED"><title>[ICRA 2025] Jailbreaking LLM-Controlled Robots
 [arXiv 2025] Adversarial Attacks on Robotic Vision-Language-Action Models
 [IEEE RA-L 2026] Safety Guardrails for LLM-Enabled Robots
-[arXiv 2025] POEX: Towards Policy Executable Jailbreak Attacks Against the LLM-Based Robots
+[arXiv 2025] POEX: Policy Executable Embodied AI Jailbreak Attacks
 [ICLR 2025] BadRobot: Jailbreaking Embodied LLM Agents in the Physical World
-[arXiv 2025] Concept Enhancement Engineering: A Lightweight and Efficient Robust Defense Against Jailbreak Attacks in Embodied AI
+[arXiv 2025] CEE: An Inference-Time Jailbreak Defense for Embodied Intelligence via Subspace Concept Rotation
 [arXiv 2025] SafeMind: Benchmarking and Mitigating Safety Risks in Embodied LLM Agents
 [arXiv 2026] Benchmarking Jailbreak Guardrails for Embodied Agents</title></rect>
 <text x="965.0" y="520.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">8</text>
