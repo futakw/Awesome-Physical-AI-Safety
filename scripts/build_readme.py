@@ -169,6 +169,8 @@ def render(papers: list[dict]) -> str:
         "",
         f"**[🔎 Explore the interactive research landscape →]({PAGES_URL}/#heatmap)** — open any chart cell to inspect its contributing papers.",
         "",
+        "⭐ **If this catalog is useful to you, please star the repo** — it helps other researchers find it and signals that a maintained taxonomy for this field is worth keeping alive.",
+        "",
         "## Author",
         "",
         "[**Futa Waseda**](https://futa-waseda.netlify.app/) — Project Assistant Professor, National Institute of Informatics (NII), Japan.",
