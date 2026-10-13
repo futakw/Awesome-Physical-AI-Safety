@@ -28,11 +28,14 @@
     .paper-list { max-height:190px; overflow:auto; margin:6px 0 0; padding-left:18px; }
     .paper-list li { margin:2px 0; }
     .doc-frame { width:100%; min-height:900px; border:1px solid var(--line); border-radius:10px; background:#fff; }
+    .gh-link { display:inline-flex; align-items:center; gap:6px; margin-bottom:14px; padding:7px 12px; border:1px solid var(--line); border-radius:8px; background:var(--panel); color:var(--ink); text-decoration:none; font-size:13px; }
+    .gh-link:hover { background:#eef3fa; }
     @media (max-width:620px) { main { padding:25px 12px 40px; } h1 { font-size:26px; } .tooltip { max-width:280px; } }
   </style>
 </head>
 <body>
 <main>
+  <a class="gh-link" href="https://github.com/futakw/Awesome-Responsible-VLA">⭐ View on GitHub — star the repo &amp; see how to cite it</a>
   <h1>Research Landscape</h1>
   <p class="lede">Interactive views of the Awesome Responsible VLA catalog (<span id="paper-count"></span> papers).</p>
   <nav aria-label="Visualization views">
