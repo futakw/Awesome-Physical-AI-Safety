@@ -116,7 +116,7 @@ See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.
 
 </details>
 
-**249 papers in the current catalog.**
+**250 papers in the current catalog.**
 
 <a id="surveys"></a>
 
@@ -249,6 +249,7 @@ See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.
 | Paper | Venue | Evaluated Risk | Threat Model |
 |---|---:|---|---|
 | **[Are Vision-Language-Action Models Robust to One-Step Observation Perturbations?](https://arxiv.org/abs/2609.32550)**<br><sub>Yamabe et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Visual Perception +1](https://img.shields.io/badge/-Visual_Perception_%2B1-3FA89B?style=flat) <br> ![Digital Perturbation +1](https://img.shields.io/badge/-Digital_Perturbation_%2B1-D47A5D?style=flat) &nbsp;→&nbsp; ![VLA policy](https://img.shields.io/badge/-VLA_policy-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
+| **[Does Adversarial Training Improve Generalization in Multi-View VLAs? Revealing and Mitigating View Collapse](https://arxiv.org/abs/2609.33707)**<br><sub>Waseda et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Visual Perception](https://img.shields.io/badge/-Visual_Perception-3FA89B?style=flat) <br> ![Distribution Shift](https://img.shields.io/badge/-Distribution_Shift-D47A5D?style=flat) &nbsp;→&nbsp; ![VLA policy](https://img.shields.io/badge/-VLA_policy-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
 | **[Human-Human & Human-Robot Interaction Transformer (H2INT) for Robot Navigation in Dense and Uncertain Crowds](https://arxiv.org/abs/2609.05300)**<br><sub>Shen et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) ![Physical](https://img.shields.io/badge/-Physical-D96F8A?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![World State](https://img.shields.io/badge/-World_State-3FA89B?style=flat) <br> ![Distribution Shift](https://img.shields.io/badge/-Distribution_Shift-D47A5D?style=flat) &nbsp;→&nbsp; ![Robot Executor](https://img.shields.io/badge/-Robot_Executor-9873D4?style=flat) &nbsp;→&nbsp; ![Collision](https://img.shields.io/badge/-Collision-D96F8A?style=flat) |
 
 <a id="ood-generalization-language-and-instruction-robustness"></a>

@@ -13029,5 +13029,21 @@
     "threat_model": {"kind":"evaluation","coverage":{"lifecycles":["inference","system"],"mechanisms":["constraint-violation","planning-error"],"surfaces":["task-planning","action-interface","execution-control"],"consequences":["policy-violation","unsafe-success"]}},
     "tags": ["trace-refinement","trace-completeness","LTL","RoboGuard","SPINE","false-safe"],
     "evaluation": {"environments":["offline-dataset"],"platforms":["RoboGuard","SPINE","semantic graphs"],"models":["language-enabled robot planner"],"access":["not-applicable"],"metrics":["constraint-violation-rate","recovery-rate"],"physical_validation":false,"curation_status":"paper-verified"}
+  },
+  {
+    "id": "waseda-2026-adversarial-training-multiview-vlas",
+    "title": "Does Adversarial Training Improve Generalization in Multi-View VLAs? Revealing and Mitigating View Collapse",
+    "first_author": "Waseda",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2609.33707",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "OOD and Generalization Benchmarks",
+    "scope": "vla",
+    "risks": ["task-reliability"],
+    "threat_model": {"kind":"non-adversarial","lifecycle":["inference"],"mechanism":["distribution-shift"],"surface":["visual-perception"],"target":["vla-policy"],"consequence":["task-failure"]},
+    "tags": ["multi-view","view-collapse","view-reliance","view-swap","adversarial-training","LIBERO-Plus","Qwen3.5"],
+    "evaluation": {"environments":["simulation"],"platforms":["LIBERO-Plus"],"models":["multi-view VLA adapted from Qwen3.5-0.8B"],"access":["not-applicable"],"metrics":["task-success-rate"],"physical_validation":false,"curation_status":"paper-verified"}
   }
 ]
