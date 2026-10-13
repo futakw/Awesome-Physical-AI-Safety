@@ -163,7 +163,7 @@ function renderTimeline(){
 }
 
 function renderHeatmap(){
-  const width=1160,height=790, margin={top:190,right:35,bottom:70,left:275};
+  const width=1160,height=790, margin={top: currentLang === 'ja' ? 230 : 190,right:35,bottom:70,left:275};
   const svg=d3.select('#heatmap-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Interactive threat model heatmap');
   const concrete=papers.filter(p=>!['survey','evaluation'].includes(p.threat_model.kind));
   const exploded=concrete.flatMap(p=>p.threat_model.mechanism.flatMap(m=>p.threat_model.surface.map(s=>({p,m,s}))));
@@ -225,7 +225,7 @@ function renderBenchmark(){
 }
 
 function renderExtensionMap(container,title,items,rows,cols,rowValues,colValues,aria){
-  const margin={top:190,right:35,bottom:70,left:260}, width=1180, height=Math.max(620,margin.top+rows.length*52+margin.bottom);
+  const margin={top: currentLang === 'ja' ? 230 : 190,right:35,bottom:70,left:260}, width=1180, height=Math.max(620,margin.top+rows.length*52+margin.bottom);
   const svg=d3.select(container).append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label',aria);
   const x=d3.scaleBand().domain(cols).range([margin.left,width-margin.right]).padding(.06), y=d3.scaleBand().domain(rows).range([margin.top,height-margin.bottom]).padding(.06);
   const cells=[]; for(const row of rows) for(const col of cols){const list=items.filter(p=>rowValues(p).includes(row)&&colValues(p).includes(col));cells.push({row,col,list,n:list.length});}
@@ -274,7 +274,7 @@ function activateView(view) {
 d3.selectAll('button[data-view]').on('click', function(){
   const view = this.dataset.view;
   activateView(view);
-  window.location.hash = view;
+  history.replaceState(null, '', '#' + view);
 });
 window.addEventListener('hashchange', () => activateView(window.location.hash.slice(1)));
 activateView(availableViews.has(window.location.hash.slice(1)) ? window.location.hash.slice(1) : 'timeline');
