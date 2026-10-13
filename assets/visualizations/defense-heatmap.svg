@@ -27,14 +27,14 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="343.2" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="388.5" y="187" width="82.5" height="50" rx="6" fill="#B6CEF4"><title>[arXiv 2025] RobustVLA: Robustness-Aware Reinforcement Post-Training for Vision-Language-Action Models
 [arXiv 2026] Lights, Camera, Malfunction: When Illumination Robustness Leaves VLA Models Blind to Color
-[arXiv 2026] Structure-Aware Robust Fine-Tuning
+[arXiv 2026] Structure-Aware Robust Fine-Tuning: Defending Vision-Language-Action Robots Against Physical Attention Hijacking
 [arXiv 2025] MergeVLA: Cross-Skill Model Merging Toward a Generalist Vision-Language-Action Agent
 [arXiv 2025] Robust Finetuning of Vision-Language-Action Robot Policies via Parameter Merging
 [arXiv 2025] VLM-SAFE: Vision-Language Model-Guided Safety-Aware Reinforcement Learning with World Models for Autonomous Driving
 [arXiv 2026] Sensing Which Modality Matters: Evidence-Gated Regularization for Robust VLA Policies
 [arXiv 2026] Adapting Vision-Language-Action Models to Unknown Visual Disruptions During Execution</title></rect>
 <text x="429.8" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">8</text>
-<rect x="475.0" y="187" width="82.5" height="50" rx="6" fill="#D9E5F7"><title>[NeurIPS 2025] SafeVLA: Towards Safety Alignment of Vision-Language-Action Models via Constrained Learning
+<rect x="475.0" y="187" width="82.5" height="50" rx="6" fill="#D9E5F7"><title>[NeurIPS 2025] SafeVLA: Towards Safety Alignment of Vision-Language-Action Model via Constrained Learning
 [arXiv 2024] Safety Optimized Reinforcement Learning via Multi-Objective Policy Optimization</title></rect>
 <text x="516.2" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
 <rect x="561.5" y="187" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
@@ -55,14 +55,14 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <rect x="1080.5" y="187" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1121.8" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="label" x="282" y="270.0" text-anchor="end">Runtime Monitoring</text>
-<rect x="302.0" y="241" width="82.5" height="50" rx="6" fill="#6F9FEF"><title>[Expert Systems with Applications 2026] FPC-VLA: A Vision-Language-Action Framework with a Supervisor for Failure Prediction and Correction
+<rect x="302.0" y="241" width="82.5" height="50" rx="6" fill="#6F9FEF"><title>[Expert Systems with Applications 2025] FPC-VLA: A Vision-Language-Action Framework with a Supervisor for Failure Prediction and Correction
 [arXiv 2025] Guardian: Detecting Robotic Planning and Execution Errors with Vision-Language Models
-[ICLR 2025] AHA: A Vision-Language-Model for Detecting and Reasoning over Failures in Robotic Manipulation
+[ICLR 2024] AHA: A Vision-Language-Model for Detecting and Reasoning over Failures in Robotic Manipulation
 [arXiv 2025] The Horcrux: Mechanistically Interpretable Task Decomposition for Detecting and Mitigating Reward Hacking in Embodied AI Systems
 [arXiv 2025] FailSafe: Reasoning and Recovery from Failures in Vision-Language-Action Models
 [arXiv 2026] RC-NF: Robot-Conditioned Normalizing Flow for Real-Time Anomaly Detection in Robotic Manipulation
 [arXiv 2025] I-FailSense: Towards General Robotic Failure Detection with Vision-Language Models
-[IROS 2024] DoReMi: Grounding Language Model by Detecting and Recovering from Plan-Execution Misalignment
+[IROS 2023] DoReMi: Grounding Language Model by Detecting and Recovering from Plan-Execution Misalignment
 [arXiv 2026] Replanning Human-Robot Collaborative Tasks with Vision-Language Models via Semantic and Physical Dual-Correction
 [arXiv 2024] A Self-Correcting Vision-Language-Action Model for Fast and Slow System Manipulation
 [CVPR 2025] Phoenix: A Motion-based Self-Reflection Framework for Fine-grained Robotic Action Correction
@@ -85,13 +85,13 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="429.8" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="475.0" y="241" width="82.5" height="50" rx="6" fill="#9FBFF2"><title>[arXiv 2026] Pre-Execution Safety Gate &amp; Task Safety Contracts for LLM-Controlled Robot Systems
 [arXiv 2026] PROTEA: Securing Robot Task Planning and Execution
-[arXiv 2025] LogicGuard: Improving Embodied LLM Agents Through Temporal Logic-Based Critics
+[arXiv 2025] LogicGuard: Improving Embodied LLM agents through Temporal Logic based Critics
 [arXiv 2025] SafePlan: Leveraging Formal Logic and Chain-of-Thought Reasoning for Enhanced Safety in LLM-based Robotic Task Planning
 [arXiv 2025] Safe LLM-Controlled Robots with Formal Guarantees via Reachability Analysis
-[arXiv 2024] SafeEmbodAI: Securing LLM-Controlled Mobile Robots against Prompt Injection
+[arXiv 2024] SafeEmbodAI: a Safety Framework for Mobile Robots in Embodied AI Systems
 [arXiv 2025] Constrained Decoding for Safe Robot Navigation Foundation Models
 [RSS Workshop 2025] Ask Before You Act: Token-Level Uncertainty for Intervention in Vision-Language-Action Models
-[arXiv 2025] VLSA: Vision-Language-Action Models with a Plug-and-Play Safety Constraint Layer
+[arXiv 2025] VLSA: Vision-Language-Action Models with Plug-and-Play Safety Constraint Layer
 [arXiv 2025] From Words to Safety: Language-Conditioned Safety Filtering for Robot Navigation
 [arXiv 2026] Video2STL: Grounding VLM-Generated Temporal Specifications for Robot Learning
 [arXiv 2026] DynaHarness: A Dynamic Physical Harness for Self-Evolving Robot Agents
@@ -107,7 +107,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <rect x="734.5" y="241" width="82.5" height="50" rx="6" fill="#D9E5F7"><title>[ICLR 2024] Embodied Active Defense: Leveraging Recurrent Feedback to Counter Adversarial Patches
 [arXiv 2026] Detect and Suppress: A Mechanistic Defense against Adversarial Patches in VLA Models</title></rect>
 <text x="775.8" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
-<rect x="821.0" y="241" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[IEEE RA-L 2026] Safety Guardrails for LLM-Enabled Robots</title></rect>
+<rect x="821.0" y="241" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[IEEE RA-L 2025] Safety Guardrails for LLM-Enabled Robots</title></rect>
 <text x="862.2" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="907.5" y="241" width="82.5" height="50" rx="6" fill="#D2E1F6"><title>[arXiv 2026] Predictive Zonotope Reduction: Precise Runtime Monitoring under Uncertainty
 [AdaptFM@ICML 2026] Adaptive Safety Probing for Resource-Efficient Vision-Language-Action Models
@@ -123,7 +123,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="343.2" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
 <rect x="388.5" y="295" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="429.8" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="475.0" y="295" width="82.5" height="50" rx="6" fill="#B6CEF4"><title>[arXiv 2025] LogicGuard: Improving Embodied LLM Agents Through Temporal Logic-Based Critics
+<rect x="475.0" y="295" width="82.5" height="50" rx="6" fill="#B6CEF4"><title>[arXiv 2025] LogicGuard: Improving Embodied LLM agents through Temporal Logic based Critics
 [arXiv 2025] SafePlan: Leveraging Formal Logic and Chain-of-Thought Reasoning for Enhanced Safety in LLM-based Robotic Task Planning
 [arXiv 2025] Safe LLM-Controlled Robots with Formal Guarantees via Reachability Analysis
 [arXiv 2026] VLPSA: Vision-Language-Poisson-Safe Actions for Full-Body Safety of Learned Policies
@@ -150,13 +150,13 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <rect x="1080.5" y="295" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1121.8" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="label" x="282" y="378.0" text-anchor="end">Failure Recovery</text>
-<rect x="302.0" y="349" width="82.5" height="50" rx="6" fill="#86AEF1"><title>[Expert Systems with Applications 2026] FPC-VLA: A Vision-Language-Action Framework with a Supervisor for Failure Prediction and Correction
+<rect x="302.0" y="349" width="82.5" height="50" rx="6" fill="#86AEF1"><title>[Expert Systems with Applications 2025] FPC-VLA: A Vision-Language-Action Framework with a Supervisor for Failure Prediction and Correction
 [arXiv 2025] Guardian: Detecting Robotic Planning and Execution Errors with Vision-Language Models
-[ICLR 2025] AHA: A Vision-Language-Model for Detecting and Reasoning over Failures in Robotic Manipulation
+[ICLR 2024] AHA: A Vision-Language-Model for Detecting and Reasoning over Failures in Robotic Manipulation
 [arXiv 2025] The Horcrux: Mechanistically Interpretable Task Decomposition for Detecting and Mitigating Reward Hacking in Embodied AI Systems
 [arXiv 2025] FailSafe: Reasoning and Recovery from Failures in Vision-Language-Action Models
 [arXiv 2025] I-FailSense: Towards General Robotic Failure Detection with Vision-Language Models
-[IROS 2024] DoReMi: Grounding Language Model by Detecting and Recovering from Plan-Execution Misalignment
+[IROS 2023] DoReMi: Grounding Language Model by Detecting and Recovering from Plan-Execution Misalignment
 [arXiv 2026] Replanning Human-Robot Collaborative Tasks with Vision-Language Models via Semantic and Physical Dual-Correction
 [arXiv 2024] A Self-Correcting Vision-Language-Action Model for Fast and Slow System Manipulation
 [CVPR 2025] Phoenix: A Motion-based Self-Reflection Framework for Fine-grained Robotic Action Correction

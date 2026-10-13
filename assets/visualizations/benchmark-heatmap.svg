@@ -94,7 +94,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="1116.9" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
 <text class="label" x="282" y="324.0" text-anchor="end">Constraint Violation</text>
 <rect x="302.0" y="295" width="92.11111111111111" height="50" rx="6" fill="#AAC6F3"><title>[arXiv 2025] VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models
-[AAAI 2026] IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents in Daily Household Tasks
+[AAAI 2025] IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents in Daily Household Tasks
 [arXiv 2025] CostNav: A Navigation Benchmark for Real-World Economic-Cost Evaluation of Physical AI Agents
 [arXiv 2026] SafeVLA-Bench: A Benchmark for the Success-Safety Gap in Vision-Language-Action Models
 [arXiv 2026] ExceptionDrive: A Planning-Oriented Counterfactual Corner-Case Benchmark for Autonomous Driving</title></rect>
@@ -107,7 +107,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="540.3" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="590.3333333333334" y="295" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="636.4" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="686.4444444444445" y="295" width="92.11111111111111" height="50" rx="6" fill="#B4CDF4"><title>[AAAI 2026] IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents in Daily Household Tasks
+<rect x="686.4444444444445" y="295" width="92.11111111111111" height="50" rx="6" fill="#B4CDF4"><title>[AAAI 2025] IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents in Daily Household Tasks
 [arXiv 2024] EARBench: Towards Evaluating Physical Risk Awareness for Task Planning of Foundation Model-Based Embodied AI Agents
 [arXiv 2026] SafeStage: Evaluating Safety Before, During, and After Vision-Language-Conditioned Robot Manipulation
 [arXiv 2026] ExceptionDrive: A Planning-Oriented Counterfactual Corner-Case Benchmark for Autonomous Driving</title></rect>
@@ -133,7 +133,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="444.2" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
 <rect x="494.22222222222223" y="349" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="540.3" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="590.3333333333334" y="349" width="92.11111111111111" height="50" rx="6" fill="#CBDCF6"><title>[arXiv 2025] Generating Robot Constitutions and Benchmarks for Semantic Safety
+<rect x="590.3333333333334" y="349" width="92.11111111111111" height="50" rx="6" fill="#CBDCF6"><title>[arXiv 2025] Generating Robot Constitutions &amp; Benchmarks for Semantic Safety
 [arXiv 2026] HazardArena: Evaluating Semantic Safety in Vision-Language-Action Models</title></rect>
 <text x="636.4" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
 <rect x="686.4444444444445" y="349" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[arXiv 2026] HazardArena: Evaluating Semantic Safety in Vision-Language-Action Models</title></rect>
@@ -168,14 +168,14 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <rect x="1070.888888888889" y="403" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[arXiv 2026] ExceptionDrive: A Planning-Oriented Counterfactual Corner-Case Benchmark for Autonomous Driving</title></rect>
 <text x="1116.9" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <text class="label" x="282" y="486.0" text-anchor="end">Hazardous Instruction</text>
-<rect x="302.0" y="457" width="92.11111111111111" height="50" rx="6" fill="#CBDCF6"><title>[arXiv 2025] SafeAgentBench: A Benchmark for Safe Task Planning of Embodied LLM Agents
+<rect x="302.0" y="457" width="92.11111111111111" height="50" rx="6" fill="#CBDCF6"><title>[arXiv 2024] SafeAgentBench: A Benchmark for Safe Task Planning of Embodied LLM Agents
 [arXiv 2025] A Framework for Benchmarking and Aligning Task-Planning Safety in LLM-Based Embodied Agents</title></rect>
 <text x="348.1" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
 <rect x="398.1111111111111" y="457" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[arXiv 2025] A Framework for Benchmarking and Aligning Task-Planning Safety in LLM-Based Embodied Agents</title></rect>
 <text x="444.2" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="494.22222222222223" y="457" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="540.3" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="590.3333333333334" y="457" width="92.11111111111111" height="50" rx="6" fill="#CBDCF6"><title>[arXiv 2025] SafeAgentBench: A Benchmark for Safe Task Planning of Embodied LLM Agents
+<rect x="590.3333333333334" y="457" width="92.11111111111111" height="50" rx="6" fill="#CBDCF6"><title>[arXiv 2024] SafeAgentBench: A Benchmark for Safe Task Planning of Embodied LLM Agents
 [arXiv 2025] AGENTSAFE: Benchmarking the Safety of Embodied Agents on Hazardous Instructions</title></rect>
 <text x="636.4" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
 <rect x="686.4444444444445" y="457" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
