@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this catalog or taxonomy, please cite it as below."
+title: "Awesome Responsible VLA"
+abstract: >-
+  A taxonomy-driven, continuously updated catalog of research on the
+  safety, robustness, security, and responsible deployment of
+  Vision-Language-Action models and closely related embodied agents.
+authors:
+  - family-names: "Waseda"
+    given-names: "Futa"
+repository-code: "https://github.com/futakw/Awesome-Responsible-VLA"
+url: "https://github.com/futakw/Awesome-Responsible-VLA"
+license: MIT
+date-released: "2026-10-13"
