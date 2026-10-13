@@ -11,7 +11,6 @@
     body { margin:0; background:#fff; color:var(--ink); font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
     main { max-width:1180px; margin:0 auto; padding:18px 24px 64px; }
     h1 { margin:0; font-size:21px; font-weight:750; letter-spacing:-.01em; white-space:nowrap; text-align:left; }
-    .lede { color:var(--muted); margin:0 0 14px; font-size:13px; }
     .topbar { position:sticky; top:0; z-index:8; background:#fff; border-bottom:1px solid var(--line); box-shadow:0 1px 0 #20293808; }
     .topbar-inner { max-width:1180px; margin:0 auto; padding:9px 24px 0; }
     .topbar-main { display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; padding-bottom:8px; }
@@ -23,8 +22,6 @@
     .meta-badge strong { background:#eef3fa; color:#243b53; padding:2px 8px; font-size:11px; font-weight:650; }
     .meta-badge:hover strong { background:#dfeafb; }
     .meta-badge.papers strong { background:#3fa89b; color:#fff; }
-    .meta-badge.update strong { background:#d47a5d; color:#fff; }
-    .meta-badge.curation strong { background:#6f9fef; color:#fff; }
     nav { display:flex; gap:6px; flex-wrap:wrap; padding-bottom:9px; }
     .doc-link { border:1px solid var(--line); background:var(--panel); color:var(--ink); border-radius:7px; padding:9px 14px; text-decoration:none; }
     button { border:1px solid var(--line); background:#fff; color:var(--ink); border-radius:7px; padding:6px 12px; cursor:pointer; font:inherit; font-size:13px; }
@@ -57,14 +54,11 @@
     <div class="topbar-main">
       <div class="topbar-left">
         <h1 data-i18n="title">Awesome Physical AI Safety</h1>
-        <a class="gh-link" id="gh-link" href="https://github.com/futakw/Awesome-Physical-AI-Safety" target="_blank" rel="noopener noreferrer">⭐ View on GitHub — star the repo &amp; see how to cite it</a>
+        <a class="gh-link" id="gh-link" href="https://github.com/futakw/Awesome-Physical-AI-Safety" target="_blank" rel="noopener noreferrer" data-i18n="ghlink">⭐ Star on GitHub</a>
       </div>
       <div class="topbar-right">
         <div class="meta-badges" aria-label="Catalog metadata">
-          <a class="meta-badge" href="../LICENSES.md" target="_blank" rel="noopener noreferrer"><span data-i18n="badgeLicenses">Licenses</span><strong>MIT · CC BY 4.0</strong></a>
           <a class="meta-badge papers" href="readme.html" target="_blank" rel="noopener noreferrer"><span data-i18n="badgePapers">Papers</span><strong id="paper-count-badge">—</strong></a>
-          <a class="meta-badge update" href="../docs/daily-curation-workflow.md" target="_blank" rel="noopener noreferrer"><span data-i18n="badgeUpdate">Update</span><strong data-i18n="badgeDaily">Daily</strong></a>
-          <a class="meta-badge curation" href="readme.html" target="_blank" rel="noopener noreferrer"><span data-i18n="badgeCuration">Curation</span><strong data-i18n="badgeLlm">LLM-assisted</strong></a>
         </div>
         <div class="lang-toggle" role="group" aria-label="Language">
           <button type="button" id="lang-en" aria-pressed="true">EN</button>
@@ -82,8 +76,6 @@
   </div>
 </header>
 <main>
-  <p class="lede"><span data-i18n="ledePrefix">Interactive views of the Awesome Physical AI Safety catalog (</span><span id="paper-count"></span><span data-i18n="ledeSuffix"> papers).</span></p>
-  <p class="note" data-i18n="topNote">Charts summarize catalog coverage, not field-wide prevalence. Click a cell to inspect the contributing papers.</p>
   <div class="view-container">
   <section id="timeline" class="active"><p class="note" data-i18n="timelineNote">Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to pin the paper list.</p><div id="timeline-chart"></div></section>
   <section id="heatmap"><p class="note" data-i18n="heatmapNote">Cells show mechanism-surface co-occurrence for concrete threat models. Hover for a preview; click a cell to pin the paper list.</p><div id="heatmap-chart"></div></section>
@@ -113,12 +105,9 @@ function countLabel(n){ return `${n}${I18N[currentLang].papersWord}`; }
 const I18N = {
   en: {
     title: 'Awesome Physical AI Safety',
-    ledePrefix: 'Interactive views of the Awesome Physical AI Safety catalog (',
-    ledeSuffix: ' papers).',
-    ghlink: '⭐ View on GitHub — star the repo & see how to cite it',
+    ghlink: '⭐ Star on GitHub',
     navReadme: 'README', navTaxonomy: 'Taxonomy', navTimeline: 'Field timeline', navHeatmap: 'Threat cross-map', navRisk: 'Threat × measured risk',
     badgeLicenses: 'Licenses', badgePapers: 'Papers', badgeUpdate: 'Update', badgeCuration: 'Curation', badgeDaily: 'Daily', badgeLlm: 'LLM-assisted',
-    topNote: 'Charts summarize catalog coverage, not field-wide prevalence. Click a cell to inspect the contributing papers.',
     timelineNote: 'Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to pin the paper list.',
     heatmapNote: 'Cells show mechanism-surface co-occurrence for concrete threat models. Hover for a preview; click a cell to pin the paper list.',
     riskNote: 'Rows are threat mechanisms and columns are empirically evaluated risk outcomes. Empty cells remain visible.',
@@ -131,12 +120,9 @@ const I18N = {
   },
   ja: {
     title: 'Awesome Physical AI Safety',
-    ledePrefix: 'Awesome Physical AI Safetyカタログのインタラクティブな可視化（',
-    ledeSuffix: '件の論文）。',
-    ghlink: '⭐ GitHubで見る — Starをお願いします。引用方法もこちらから',
+    ghlink: '⭐ GitHubでStar',
     navReadme: 'README', navTaxonomy: 'Taxonomy', navTimeline: 'タイムライン', navHeatmap: '脅威クロスマップ', navRisk: '脅威 × 評価リスク',
     badgeLicenses: 'ライセンス', badgePapers: '論文数', badgeUpdate: '更新頻度', badgeCuration: 'キュレーション', badgeDaily: '毎日', badgeLlm: 'LLM支援',
-    topNote: 'これらのチャートはカタログ内のメタデータの関係性を示すものであり、分野全体での頻度や防御の有効性を示すものではありません。セルをクリックすると元論文を確認できます。',
     timelineNote: 'バブルの大きさは、分野×年のセルに含まれる論文数を表します。ホバーでプレビュー、クリックで論文一覧を固定表示します。',
     heatmapNote: 'セルは具体的なthreat modelにおけるmechanismとsurfaceの共起を示します。ホバーでプレビュー、クリックで固定表示します。',
     riskNote: '行はthreatメカニズム、列は実証的に評価されたリスクアウトカムです。空のセルも表示されます。',
@@ -148,7 +134,6 @@ const I18N = {
     papersWord: '件',
   },
 };
-d3.select('#paper-count').text(papers.length);
 d3.select('#paper-count-badge').text(papers.length);
 const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const paperListHtml = list => `<ul class="paper-list">${list.map(p=>`<li>${p.paper_url?`<a href="${escapeHtml(p.paper_url)}" target="_blank" rel="noopener noreferrer">[${escapeHtml(p.venue)} ${p.year}] ${escapeHtml(p.title)}</a>`:`[${escapeHtml(p.venue)} ${p.year}] ${escapeHtml(p.title)}`}</li>`).join('')}</ul>`;
@@ -306,7 +291,6 @@ function applyStaticI18n(lang){
     const key = el.dataset.i18n;
     if (I18N[lang][key] !== undefined) el.textContent = I18N[lang][key];
   });
-  document.getElementById('gh-link').textContent = I18N[lang].ghlink;
 }
 
 function setLanguage(lang){
