@@ -1,5 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this catalog or taxonomy, please cite it as below."
+type: software
 title: "Awesome Physical AI Safety"
 abstract: >-
   An LLM-assisted, evidence-verified bibliography of safety, security,
