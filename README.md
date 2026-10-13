@@ -6,9 +6,9 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Cite this repository](https://img.shields.io/badge/Cite-CITATION.cff-blue.svg)](CITATION.cff)
 [![LLM-assisted](https://img.shields.io/badge/curation-%F0%9F%A4%96%20LLM--assisted-critical.svg)](docs/daily-curation-workflow.md)
-[![Licenses: MIT + CC BY 4.0](https://img.shields.io/badge/Licenses-MIT%20%2B%20CC%20BY%204.0-3FA89B?style=flat)](LICENSES.md) [![Papers](https://img.shields.io/badge/Papers-250-6F9FEF?style=flat)](docs/index.html) [![Update](https://img.shields.io/badge/Update-Daily-D47A5D?style=flat)](docs/daily-curation-workflow.md)
+[![Licenses: MIT + CC BY 4.0](https://img.shields.io/badge/Licenses-MIT%20%2B%20CC%20BY%204.0-3FA89B?style=flat)](LICENSES.md) [![Papers](https://img.shields.io/badge/Papers-250-6F9FEF?style=flat)](https://futakw.github.io/Awesome-Physical-AI-Safety/) [![Update](https://img.shields.io/badge/Update-Daily-D47A5D?style=flat)](docs/daily-curation-workflow.md)
 
-**[🔎 Explore the interactive research landscape →](docs/index.html#heatmap)** — open any chart cell to inspect its contributing papers.
+**[🔎 Explore the interactive research landscape →](https://futakw.github.io/Awesome-Physical-AI-Safety/#heatmap)** — open any chart cell to inspect its contributing papers.
 
 ## Author
 
@@ -40,17 +40,17 @@ Cite this catalog for its bibliography, taxonomy, metadata, visualizations, or c
 
 These metadata-based views reveal relationships within this catalog—not field-wide prevalence or evidence that a defense works. Open a cell to check its source papers.
 
-[![Cataloged papers by research area and year](assets/visualizations/field-timeline.svg)](docs/index.html#timeline)
+[![Cataloged papers by research area and year](assets/visualizations/field-timeline.svg)](https://futakw.github.io/Awesome-Physical-AI-Safety/#timeline)
 
-Where has this catalog grown over time? [Explore the timeline →](docs/index.html#timeline)
+Where has this catalog grown over time? [Explore the timeline →](https://futakw.github.io/Awesome-Physical-AI-Safety/#timeline)
 
-[![Threat mechanisms by entry surface in this catalog](assets/visualizations/threat-heatmap.svg)](docs/index.html#heatmap)
+[![Threat mechanisms by entry surface in this catalog](assets/visualizations/threat-heatmap.svg)](https://futakw.github.io/Awesome-Physical-AI-Safety/#heatmap)
 
-Which threat mechanisms appear at which entry surfaces? [Explore the cross-map →](docs/index.html#heatmap)
+Which threat mechanisms appear at which entry surfaces? [Explore the cross-map →](https://futakw.github.io/Awesome-Physical-AI-Safety/#heatmap)
 
-[![Threat mechanisms by empirically evaluated risk in this catalog](assets/visualizations/threat-risk-heatmap.svg)](docs/index.html#risk)
+[![Threat mechanisms by empirically evaluated risk in this catalog](assets/visualizations/threat-risk-heatmap.svg)](https://futakw.github.io/Awesome-Physical-AI-Safety/#risk)
 
-Which measured outcomes are reported for each mechanism? [Inspect the underlying papers →](docs/index.html#risk)
+Which measured outcomes are reported for each mechanism? [Inspect the underlying papers →](https://futakw.github.io/Awesome-Physical-AI-Safety/#risk)
 
 ## Taxonomy at a Glance
 
