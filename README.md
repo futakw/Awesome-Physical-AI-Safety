@@ -87,9 +87,6 @@ See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.
 - [🛡️ Defenses and Safety Mechanisms](#defenses)
 - [📊 Benchmarks and Evaluation](#benchmarks)
 - [🔐 System-Level Security, Privacy, and Misuse](#system-security)
-
-**Cross-cutting outcome**
-
 - [⚖️ Ethics & Societal Safety](#ethics-societal-safety)
 
 <details>

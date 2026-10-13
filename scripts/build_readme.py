@@ -251,7 +251,7 @@ def render(papers: list[dict]) -> str:
         icon, title = SECTIONS[key]
         lines.append(f"- [{icon} {title}](#{key})")
     if ethics_groups:
-        lines.extend(["", "**Cross-cutting outcome**", "", "- [⚖️ Ethics & Societal Safety](#ethics-societal-safety)"])
+        lines.append("- [⚖️ Ethics & Societal Safety](#ethics-societal-safety)")
     lines.extend(["", "<details>", '<summary><strong>Show subsection index</strong></summary>', ""])
     for key in present_sections:
         icon, title = SECTIONS[key]
