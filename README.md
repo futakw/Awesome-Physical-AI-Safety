@@ -7,7 +7,7 @@
 [![Cite this repository](https://img.shields.io/badge/Cite-CITATION.cff-blue.svg)](CITATION.cff)
 [![LLM-assisted, evidence-verified](https://img.shields.io/badge/curation-%F0%9F%A4%96%20LLM--assisted%2C%20evidence--verified-critical.svg)](docs/daily-curation-workflow.md)
 
-> We label risks only by outcomes that a paper empirically evaluates, and record threat or failure mechanisms separately. This keeps hypothesized harms and motivations from being mistaken for measured results.
+> Core organizing principle: every record answers two separate questions — **what outcome did the paper measure?** and **what threat or failure mechanism did it study?** Risk labels require a corresponding empirical metric; mechanism labels describe the cause or threat model independently.
 
 ## Author
 
@@ -15,8 +15,13 @@
 
 ## About This Catalog
 
-- **🤖 LLM-assisted, evidence-verified catalog.** Paper discovery, metadata extraction, and taxonomy classification are automated through [the daily curation workflow](docs/daily-curation-workflow.md), with bibliographic fields checked against primary sources before publication. Treat records as provisional; verify anything load-bearing against the primary source. Found an error? Open an issue or PR.
-- The taxonomy, structured threat model schema, and curation methodology were designed by the author; individual entries are maintained through the LLM-assisted workflow.
+This catalog complements broad capability- or pipeline-based surveys by making cross-paper safety evidence explicit and machine-readable.
+
+- **Evidence-coded outcomes:** risk labels are assigned only when the paper reports a corresponding empirical outcome; motivation or hypothetical impact alone is not enough.
+- **Structured threat models:** lifecycle, mechanism, surface, target, and consequence are recorded separately so papers can be compared by how failures arise, not only by application area.
+- **Transfer-oriented scope:** the catalog connects VLA research with relevant work on robots, autonomous systems, embodied agents, and upstream LLM/VLM safety.
+- **🤖 LLM-assisted, evidence-verified maintenance:** paper discovery, metadata extraction, and taxonomy classification are automated through [the daily curation workflow](docs/daily-curation-workflow.md), while bibliographic fields are checked against primary sources before publication.
+- The taxonomy, structured threat model schema, and curation methodology were designed by the author. Found an error? Open an issue or PR.
 - GitHub star badges are live and are shown only for identified official repositories.
 - **Contributions welcome:** new papers, corrections, and taxonomy refinements via pull request — see [CONTRIBUTING.md](CONTRIBUTING.md).
 - **Cite this catalog:** Please cite this repository when you use its curated bibliography, taxonomy, structured metadata, visualizations, or curation methodology in research or publications. For claims about individual papers, please cite the original papers as well. See [CITATION.cff](CITATION.cff) or the BibTeX below.
