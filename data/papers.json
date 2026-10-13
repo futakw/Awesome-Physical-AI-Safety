@@ -4385,7 +4385,7 @@
   },
   {
     "id": "jones-2025-robogcg",
-    "title": "Adversarial Attacks on Robotic Vision-Language-Action Models",
+    "title": "Adversarial Attacks on Robotic Vision Language Action Models",
     "first_author": "Jones",
     "venue": "arXiv",
     "year": 2025,
@@ -4395,8 +4395,6 @@
     "subsection": "Jailbreaks and Prompt Injection",
     "scope": "vla",
     "risks": [
-      "physical-safety",
-      "ethical-societal",
       "security-privacy"
     ],
     "threat_model": {
@@ -4412,13 +4410,10 @@
         "user-instruction"
       ],
       "target": [
-        "task-planner",
         "action-generation"
       ],
       "consequence": [
-        "policy-violation",
-        "control-hijacking",
-        "unsafe-motion"
+        "targeted-action"
       ]
     },
     "tags": [
@@ -4444,10 +4439,7 @@
         "transfer"
       ],
       "metrics": [
-        "attack-success-rate",
-        "clean-task-success-rate",
-        "physical-damage-rate",
-        "collision-rate"
+        "attack-success-rate"
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"

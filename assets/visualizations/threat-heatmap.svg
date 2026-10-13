@@ -438,7 +438,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2025] BadNAVer: Exploring Jailbreak Attacks On Vision-and-Language Navigation
 [arXiv 2026] JailWAM: Jailbreaking World Action Models in Robot Control
 [ICRA 2025] Jailbreaking LLM-Controlled Robots
-[arXiv 2025] Adversarial Attacks on Robotic Vision-Language-Action Models
+[arXiv 2025] Adversarial Attacks on Robotic Vision Language Action Models
 [IEEE RA-L 2026] Safety Guardrails for LLM-Enabled Robots
 [arXiv 2025] POEX: Policy Executable Embodied AI Jailbreak Attacks
 [ICLR 2025] BadRobot: Jailbreaking Embodied LLM Agents in the Physical World

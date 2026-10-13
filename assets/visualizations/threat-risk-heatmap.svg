@@ -294,23 +294,21 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [IEEE RA-L 2026] Safety Guardrails for LLM-Enabled Robots
 [arXiv 2026] Benchmarking Jailbreak Guardrails for Embodied Agents</title></rect>
 <text x="395.0" y="520.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">6</text>
-<rect x="492" y="491" width="186" height="50" rx="6" fill="#D7D1EE"><title>[arXiv 2026] JailWAM: Jailbreaking World Action Models in Robot Control
+<rect x="492" y="491" width="186" height="50" rx="6" fill="#DAD5EF"><title>[arXiv 2026] JailWAM: Jailbreaking World Action Models in Robot Control
 [ICRA 2025] Jailbreaking LLM-Controlled Robots
-[arXiv 2025] Adversarial Attacks on Robotic Vision-Language-Action Models
 [IEEE RA-L 2026] Safety Guardrails for LLM-Enabled Robots
 [arXiv 2025] POEX: Policy Executable Embodied AI Jailbreak Attacks
 [ICLR 2025] BadRobot: Jailbreaking Embodied LLM Agents in the Physical World
 [arXiv 2026] Benchmarking Jailbreak Guardrails for Embodied Agents</title></rect>
-<text x="585.0" y="520.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">7</text>
-<rect x="682" y="491" width="186" height="50" rx="6" fill="#DAD5EF"><title>[ICRA 2025] Jailbreaking LLM-Controlled Robots
-[arXiv 2025] Adversarial Attacks on Robotic Vision-Language-Action Models
+<text x="585.0" y="520.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">6</text>
+<rect x="682" y="491" width="186" height="50" rx="6" fill="#DCD8F0"><title>[ICRA 2025] Jailbreaking LLM-Controlled Robots
 [arXiv 2025] POEX: Policy Executable Embodied AI Jailbreak Attacks
 [ICLR 2025] BadRobot: Jailbreaking Embodied LLM Agents in the Physical World
 [arXiv 2025] CEE: An Inference-Time Jailbreak Defense for Embodied Intelligence via Subspace Concept Rotation
 [arXiv 2025] SafeMind: Benchmarking and Mitigating Safety Risks in Embodied LLM Agents</title></rect>
-<text x="775.0" y="520.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">6</text>
+<text x="775.0" y="520.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">5</text>
 <rect x="872" y="491" width="186" height="50" rx="6" fill="#D5CDED"><title>[ICRA 2025] Jailbreaking LLM-Controlled Robots
-[arXiv 2025] Adversarial Attacks on Robotic Vision-Language-Action Models
+[arXiv 2025] Adversarial Attacks on Robotic Vision Language Action Models
 [IEEE RA-L 2026] Safety Guardrails for LLM-Enabled Robots
 [arXiv 2025] POEX: Policy Executable Embodied AI Jailbreak Attacks
 [ICLR 2025] BadRobot: Jailbreaking Embodied LLM Agents in the Physical World
