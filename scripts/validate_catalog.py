@@ -82,6 +82,7 @@ PRIVATE_MARKERS = {
     "responsible-vla-wiki",
 }
 CJK = re.compile(r"[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff]")
+JAPANESE_FILES = {"README.ja.md", "CONTRIBUTING.ja.md", "docs/taxonomy.ja.md"}
 
 
 def valid_url(value: str | None) -> bool:
@@ -252,7 +253,7 @@ def main() -> int:
                 errors.append(f"{relative}: private marker {marker!r} in path")
             if path.resolve() != Path(__file__).resolve() and marker in text.lower():
                 errors.append(f"{relative}: private marker {marker!r} in content")
-        if path.suffix in {".md", ".json"} and relative != "README.ja.md" and CJK.search(text):
+        if path.suffix in {".md", ".json"} and relative not in JAPANESE_FILES and CJK.search(text):
             errors.append(f"{relative}: contains CJK text; the public repository must be English-only")
 
     if errors:

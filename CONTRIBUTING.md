@@ -1,5 +1,7 @@
 # Contributing
 
+**English (this page)** | [Japanese](CONTRIBUTING.ja.md)
+
 Thank you for helping improve Awesome Physical AI Safety.
 
 For recurring literature maintenance, follow the [daily curation workflow](docs/daily-curation-workflow.md).

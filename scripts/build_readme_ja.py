@@ -1,30 +1,145 @@
 #!/usr/bin/env python3
-"""Generate README.ja.md: a Japanese overview that links out to the English catalog.
+"""Generate README.ja.md: a full Japanese mirror of README.md.
 
-Paper titles, authors, and taxonomy vocabulary values are bibliographic/controlled
-data and are not translated. Only the surrounding explanatory prose is in Japanese.
-This keeps translation maintenance bounded as the catalog grows daily.
+Paper titles, author surnames, venue names, and raw taxonomy vocabulary
+*values* (the data/papers.json strings like `adversarial-patch`) are never
+translated — they are bibliographic/controlled data. Only display labels
+(section/subsection headings, badge text, UI strings) are translated, via the
+dictionaries in labels_ja.py. Any value missing from those dictionaries falls
+back to the English display label automatically, so new taxonomy values or
+subsections added by daily curation degrade gracefully instead of breaking
+the build.
 """
 
 from __future__ import annotations
 
 import argparse
 import json
+from html import escape
 
-from build_readme import DATA_PATH, PAGES_URL, ROOT, badge
+from build_readme import (
+    DATA_PATH,
+    PAGES_URL,
+    RISK_COLORS,
+    ROOT,
+    SECTIONS,
+    THREAT_COLORS,
+    badge,
+    display_label,
+    github_repo,
+    subsection_anchor,
+)
+from labels_ja import (
+    CONSEQUENCE_JA,
+    DISPLAY_LABELS_JA,
+    KIND_JA,
+    LIFECYCLE_JA,
+    MECHANISM_JA,
+    RISK_LABELS_JA,
+    SECTIONS_JA,
+    SUBSECTIONS_JA,
+    SURFACE_JA,
+    TARGET_JA,
+)
 
 README_JA_PATH = ROOT / "README.ja.md"
 
-RISK_COLORS_JA = {
-    "task-reliability": ("タスク", "6F9FEF"),
-    "physical-safety": ("物理的安全性", "D96F8A"),
-    "ethical-societal": ("倫理・社会", "9873D4"),
-    "security-privacy": ("セキュリティ/プライバシー", "B88A24"),
-}
+
+def label_ja(value: str) -> str:
+    return DISPLAY_LABELS_JA.get(value, display_label(value))
 
 
-def render(paper_count: int) -> str:
-    lines = [
+def section_title_ja(key: str) -> str:
+    return SECTIONS_JA.get(key, SECTIONS[key][1])
+
+
+def subsection_title_ja(name: str) -> str:
+    return SUBSECTIONS_JA.get(name, name)
+
+
+def primary_label_ja(values: list[str]) -> str:
+    label = label_ja(values[0])
+    return f"{label} +{len(values) - 1}" if len(values) > 1 else label
+
+
+def risk_cell_ja(risks: list[str]) -> str:
+    if not risks:
+        return "—"
+    return " ".join(
+        badge(RISK_LABELS_JA.get(risk, risk), RISK_COLORS[risk]) for risk in risks
+    )
+
+
+def threat_model_cell_ja(threat_model: dict) -> str:
+    kind = threat_model["kind"]
+    if kind in {"survey", "evaluation"}:
+        coverage = threat_model["coverage"]
+        lifecycles = coverage["lifecycles"]
+        lifecycle = (
+            "複数ライフサイクル"
+            if len(lifecycles) > 2
+            else " → ".join(LIFECYCLE_JA.get(v, v) for v in lifecycles)
+        )
+        surfaces = coverage["surfaces"]
+        surface = (
+            "複数サーフェス"
+            if len(surfaces) > 2
+            else " + ".join(SURFACE_JA.get(v, v) for v in surfaces)
+        )
+        kind_label = KIND_JA.get(kind, kind)
+        return " ".join(
+            [
+                badge(lifecycle, THREAT_COLORS["lifecycle"]),
+                badge(surface, THREAT_COLORS["surface"]),
+                "<br>",
+                badge(f"{kind_label}カバレッジ", THREAT_COLORS[kind]),
+            ]
+        )
+    lifecycle = " → ".join(LIFECYCLE_JA.get(v, v) for v in threat_model["lifecycle"])
+    surface = primary_label_ja(threat_model["surface"])
+    mechanism_values = threat_model["mechanism"]
+    mechanism_label = MECHANISM_JA.get(mechanism_values[0], mechanism_values[0])
+    mechanism = (
+        f"{mechanism_label} +{len(mechanism_values) - 1}"
+        if len(mechanism_values) > 1
+        else mechanism_label
+    )
+    target = TARGET_JA.get(threat_model["target"][0], threat_model["target"][0])
+    consequence = CONSEQUENCE_JA.get(
+        threat_model["consequence"][0], threat_model["consequence"][0]
+    )
+    return " ".join(
+        [
+            badge(lifecycle, THREAT_COLORS["lifecycle"]),
+            badge(surface, THREAT_COLORS["surface"]),
+            "<br>",
+            badge(mechanism, THREAT_COLORS["mechanism"]),
+            "&nbsp;→&nbsp;",
+            badge(target, THREAT_COLORS["target"]),
+            "&nbsp;→&nbsp;",
+            badge(consequence, THREAT_COLORS["consequence"]),
+        ]
+    )
+
+
+def paper_cell(paper: dict) -> str:
+    title = paper["title"].replace("|", "\\|").replace("[", "\\[").replace("]", "\\]")
+    paper_url = paper.get("paper_url")
+    parts = [f"**[{title}]({paper_url})**" if paper_url else f"**{title}**"]
+    code_url = paper.get("code_url")
+    repo = github_repo(code_url)
+    if repo:
+        stars_badge = f"https://img.shields.io/github/stars/{repo}?style=social"
+        parts.append(f"[![GitHub stars]({stars_badge})]({code_url})")
+    elif code_url:
+        parts.append(f"[Project / Code]({code_url})")
+    author = paper["first_author"]
+    author_label = author if author.lower().endswith("et al.") else f"{author} et al."
+    return " ".join(parts) + f"<br><sub>{author_label}</sub>"
+
+
+def render_overview(paper_count: int) -> list[str]:
+    return [
         "# Awesome Physical AI Safety",
         "",
         "[English](README.md) | **日本語（このページ）**",
@@ -42,8 +157,7 @@ def render(paper_count: int) -> str:
         "",
         "⭐ **このカタログが役に立ったら、ぜひリポジトリにStarをお願いします** — この分野のtaxonomyを維持する価値を示すことにもつながります。",
         "",
-        "> この日本語版は概要のみです。**全論文一覧（現在${COUNT}件）は英語版に一本化**しています — 論文タイトル・著者名は公式表記（英語）のまま掲載するのが正確なためです。一覧は [README.md](README.md) または [インタラクティブexplorer]({PAGES}/) からご覧ください。"
-        .replace("${COUNT}", str(paper_count)).replace("{PAGES}", PAGES_URL),
+        "> 論文タイトル・著者名・taxonomyの統制語彙（`adversarial-patch` など）は公式表記（英語）のまま掲載しています。それ以外の見出しや説明文は日本語に翻訳しています。",
         "",
         "## 著者",
         "",
@@ -52,8 +166,8 @@ def render(paper_count: int) -> str:
         "## このカタログについて",
         "",
         "- **🤖 完全LLM自動運用、人間レビューなし。** 論文の検索・メタデータ抽出・taxonomyへの分類・コミットまで、全て自律AIエージェントが[日次キュレーションワークフロー](docs/daily-curation-workflow.md)（英語）に従って実行しています。**コミット前に人間が個別チェックすることはありません。** 掲載内容は暫定的なものとして扱い、重要な判断の際は一次情報（論文本体）を直接ご確認ください。誤りを見つけた場合はissueまたはPRでご報告ください。",
-        "- **taxonomyと手法の設計者。** リスク分類、失敗要因、構造化threat modelスキーマ（`kind`/`lifecycle`/`mechanism`/`surface`/`target`/`consequence`）は**Futa Waseda**が設計し、文献収集・キュレーション手法も同氏が設計しました。詳細は[taxonomy定義](docs/taxonomy.md)（英語）を参照してください。",
-        "- **貢献歓迎。** 新しい論文の追加、既存エントリの修正、taxonomyの改善はPull Requestで歓迎します。詳細は[CONTRIBUTING.md](CONTRIBUTING.md)（英語）を参照してください。",
+        "- **taxonomyと手法の設計者。** リスク分類、失敗要因、構造化threat modelスキーマ（`kind`/`lifecycle`/`mechanism`/`surface`/`target`/`consequence`）は**Futa Waseda**が設計し、文献収集・キュレーション手法も同氏が設計しました。詳細は[taxonomy定義（日本語）](docs/taxonomy.ja.md)を参照してください。",
+        "- **貢献歓迎。** 新しい論文の追加、既存エントリの修正、taxonomyの改善はPull Requestで歓迎します。詳細は[CONTRIBUTING（日本語）](CONTRIBUTING.ja.md)を参照してください。",
         "",
         "## 📚 引用",
         "",
@@ -70,39 +184,173 @@ def render(paper_count: int) -> str:
         "}",
         "```",
         "",
-        "## Taxonomyの概要",
+        "## 🔎 研究ランドスケープ",
         "",
-        "分類体系（taxonomy）そのものの用語は、カタログデータとの一貫性のため英語の統制語彙を使用しています。各用語の定義は以下の通りです。",
+        "これらの可視化はカタログ内のメタデータに基づく関係性を示すものであり、分野全体での頻度や防御手法の有効性を示すものではありません。セルをクリックすると元論文を確認できます。",
         "",
-        "### リスクアウトカム（評価された結果）",
+        f"[![Cataloged papers by research area and year](assets/visualizations/field-timeline.svg)]({PAGES_URL}/#timeline)",
+        "",
+        f"このカタログはどのように成長してきたか？ [タイムラインを見る →]({PAGES_URL}/#timeline)",
+        "",
+        f"[![Threat mechanisms by entry surface in this catalog](assets/visualizations/threat-heatmap.svg)]({PAGES_URL}/#heatmap)",
+        "",
+        f"どの脅威メカニズムがどの侵入面で発生するか？ [クロスマップを見る →]({PAGES_URL}/#heatmap)",
+        "",
+        f"[![Threat mechanisms by empirically evaluated risk in this catalog](assets/visualizations/threat-risk-heatmap.svg)]({PAGES_URL}/#risk)",
+        "",
+        f"各メカニズムについてどの評価済みアウトカムが報告されているか？ [元論文を確認する →]({PAGES_URL}/#risk)",
+        "",
+        "## Taxonomy概観",
+        "",
+        "### リスクアウトカム",
         "",
         "論文が実際に測定した指標に対応する場合のみラベルが付与されます。考察や潜在的な影響への言及だけでは付与されません。",
         "",
+        f"- {badge(RISK_LABELS_JA['task-reliability'], RISK_COLORS['task-reliability'])} タスク・経路の完了、成功率、またはそれに相当する実行結果。",
+        f"- {badge(RISK_LABELS_JA['physical-safety'], RISK_COLORS['physical-safety'])} 衝突、損傷、安全でない動作や力、物理的危害、安全制約違反。",
+        f"- {badge(RISK_LABELS_JA['ethical-societal'], RISK_COLORS['ethical-societal'])} 有害な指示への準拠・拒否、方針違反、または身体化された結果における集団間格差の測定。",
+        f"- {badge(RISK_LABELS_JA['security-privacy'], RISK_COLORS['security-privacy'])} 攻撃成功、バックドア起動、制御乗っ取り、不正アクセス、漏洩、侵害。",
+        "- **—:** 対応する実証的な評価指標がない場合（survey論文や診断のみの研究で一般的）。",
+        "",
+        "### 失敗要因",
+        "",
+        "- **Adversarial（敵対的）:** 入力・学習・状態・行動・システム構成要素への意図的な操作。",
+        "- **Non-adversarial / OOD（非敵対的・分布外）:** 未知の視点・物体・言語・タスク・環境・身体・時間変化下での失敗。",
+        "- **Design / system（設計・システム）:** 目的の誤設定、マルチモーダル不整合、報酬ハッキング、センサ故障、プランナー・実行系の不整合、リカバリ不全。",
+        "",
+        "### Threat Modelバッジ",
+        "",
+        "各具体的なthreat modelは2行で表示されます。`+N`は`data/papers.json`に保持されている追加の値の数を示します。",
+        "",
+        f"{badge('ライフサイクル', THREAT_COLORS['lifecycle'])} {badge('サーフェス', THREAT_COLORS['surface'])}<br>{badge('メカニズム', THREAT_COLORS['mechanism'])} &nbsp;→&nbsp; {badge('ターゲット', THREAT_COLORS['target'])} &nbsp;→&nbsp; {badge('帰結', THREAT_COLORS['consequence'])}",
+        "",
+        "定義と採録基準の詳細は[taxonomy定義（日本語）](docs/taxonomy.ja.md)を参照してください。",
+        "",
+        "## 🧭 目次",
+        "",
     ]
-    for key, (label_ja, color) in RISK_COLORS_JA.items():
-        lines.append(f"- {badge(label_ja, color)}")
+
+
+def render_catalog(papers: list[dict]) -> list[str]:
+    lines: list[str] = []
+    present_sections = [key for key in SECTIONS if any(p["section"] == key for p in papers)]
+    section_order = {key: index for index, key in enumerate(present_sections)}
+    subsection_order: dict[tuple[str, str], int] = {}
+    for paper in papers:
+        key = (paper["section"], paper["subsection"])
+        if key not in subsection_order:
+            subsection_order[key] = len(subsection_order)
+    ethics_papers = sorted(
+        (p for p in papers if "ethical-societal" in p["risks"]),
+        key=lambda p: (
+            section_order[p["section"]],
+            subsection_order[(p["section"], p["subsection"])],
+            -p["year"],
+            p["title"].lower(),
+        ),
+    )
+
+    for key in present_sections:
+        icon, _ = SECTIONS[key]
+        lines.append(f"- [{icon} {section_title_ja(key)}](#{key})")
+    if ethics_papers:
+        lines.append("- [⚖️ 倫理・社会的安全性](#ethics-societal-safety)")
+    lines.extend(["", "<details>", "<summary><strong>サブセクション一覧を表示</strong></summary>", ""])
+    for key in present_sections:
+        icon, _ = SECTIONS[key]
+        lines.append(f"- **{icon} {section_title_ja(key)}**")
+        subsections: list[str] = []
+        for paper in papers:
+            if paper["section"] == key and paper["subsection"] not in subsections:
+                subsections.append(paper["subsection"])
+        for subsection in subsections:
+            lines.append(
+                f"  - [{subsection_title_ja(subsection)}](#{subsection_anchor(key, subsection)})"
+            )
+    lines.extend(["", "</details>", "", f"**現在のカタログには{len(papers)}件の論文があります。**", ""])
+
+    for section_key in present_sections:
+        section_papers = [p for p in papers if p["section"] == section_key]
+        icon, _ = SECTIONS[section_key]
+        lines.extend([f'<a id="{section_key}"></a>', "", f"## {icon} {section_title_ja(section_key)}", ""])
+        subsections = []
+        for paper in section_papers:
+            if paper["subsection"] not in subsections:
+                subsections.append(paper["subsection"])
+        for subsection in subsections:
+            lines.extend(
+                [
+                    f'<a id="{subsection_anchor(section_key, subsection)}"></a>',
+                    "",
+                    f"### {subsection_title_ja(subsection)}",
+                    "",
+                    "| 論文 | 発表先 | 評価されたリスク | Threat Model |",
+                    "|---|---:|---|---|",
+                ]
+            )
+            rows = [p for p in section_papers if p["subsection"] == subsection]
+            rows.sort(key=lambda p: (-p["year"], p["title"].lower()))
+            for paper in rows:
+                risk = risk_cell_ja(paper["risks"])
+                venue = f"{paper['venue']} {paper['year']}"
+                lines.append(
+                    f"| {paper_cell(paper)} | {venue} | {risk} | {threat_model_cell_ja(paper['threat_model'])} |"
+                )
+            lines.append("")
+
+    if ethics_papers:
+        lines.extend(
+            [
+                '<a id="ethics-societal-safety"></a>',
+                "",
+                "## ⚖️ 倫理・社会的安全性",
+                "",
+                f"このテーマ別ビューは`ethical-societal`ラベルが付いた{len(ethics_papers)}件のカタログレコードを再掲載したものです。新しい論文レコードを追加したり、評価ラベルを独自に検証したりするものではありません。",
+                "",
+                "| 論文 | 発表先 | 評価されたリスク | Threat Model |",
+                "|---|---:|---|---|",
+            ]
+        )
+        for paper in ethics_papers:
+            section_key = paper["section"]
+            primary_section_ja = section_title_ja(section_key)
+            primary_anchor = subsection_anchor(section_key, paper["subsection"])
+            paper_info = (
+                f"{paper_cell(paper)}<br>"
+                f'<sub>主掲載: <a href="#{primary_anchor}">'
+                f"{escape(primary_section_ja)} / {escape(subsection_title_ja(paper['subsection']))}</a></sub>"
+            )
+            venue = f"{paper['venue']} {paper['year']}"
+            lines.append(
+                f"| {paper_info} | {venue} | {risk_cell_ja(paper['risks'])} | {threat_model_cell_ja(paper['threat_model'])} |"
+            )
+        lines.append("")
+
     lines.extend(
         [
-            "- **—:** 対応する実証的な評価指標がない場合（survey論文や診断のみの研究で一般的）。",
+            "## スコープとキュレーション方針",
             "",
-            "### 失敗要因",
+            "このカタログは、physical AI全般における安全性・セキュリティ・堅牢性・プライバシー・倫理的/社会的アウトカム・信頼できる実運用を対象とします。VLAを主軸としつつ、身体化された挙動・物理的インタラクション・実運用関連の失敗を扱う限りにおいて、ロボットポリシー、自動運転システム、LLM/VLM駆動の身体性AIエージェントも対象に含みます。physical AIとの明確な関連を持たない汎用LLM/VLM研究はスコープ外です。",
             "",
-            "- **Adversarial（敵対的）:** 入力・学習・状態・行動・システム構成要素への意図的な操作。",
-            "- **Non-adversarial / OOD（非敵対的・分布外）:** 未知の視点・物体・言語・タスク・環境・身体・時間変化下での失敗。",
-            "- **Design / system（設計・システム）:** 目的の誤設定、マルチモーダル不整合、報酬ハッキング、センサ故障、プランナー・実行系の不整合、リカバリ不全。",
+            "各論文は1つのカタログレコードと1つの主たる貢献セクションを持ちます。横断的なテーブルは同じレコードを別の切り口で表示した生成ビューであり、別エントリではありません。",
             "",
-            "### Threat Modelの構造",
+            "Defense・Evaluation・Benchmarkの拡張メタデータについては[docs/metadata-schema.md](docs/metadata-schema.md)（英語）を参照してください。",
             "",
-            "各レコードは `kind`（種別）→ `lifecycle`（発生段階）→ `mechanism`（手法）→ `surface`（侵入面）→ `target`（対象）→ `consequence`（結果）という多軸の構造化データを持ちます。詳細な語彙定義は[taxonomy定義](docs/taxonomy.md)（英語）を参照してください。",
+            "## コントリビューション",
             "",
-            "## 🔎 研究ランドスケープ",
+            "コントリビューションを歓迎します。[CONTRIBUTING（日本語）](CONTRIBUTING.ja.md)をお読みいただき、`data/papers.json`の該当レコードを追加・更新してください。生成されたテーブルを直接編集しないでください。",
             "",
-            "論文数の推移、脅威メカニズムと侵入面の関係、脅威メカニズムと評価されたリスクの関係などをインタラクティブに可視化しています。",
+            "## ライセンス",
             "",
-            f"**[→ インタラクティブexplorerを開く]({PAGES_URL}/)**",
+            "コードは[MIT](LICENSE)、カタログのオリジナルコンテンツは[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)の下でライセンスされています。範囲と帰属表示の詳細は[LICENSES.md](LICENSES.md)（英語）を参照してください。リンク先の論文・サードパーティ素材はそれぞれの条件に従います。",
             "",
         ]
     )
+    return lines
+
+
+def render(papers: list[dict]) -> str:
+    lines = render_overview(len(papers)) + render_catalog(papers)
     return "\n".join(lines) + "\n"
 
 
@@ -112,7 +360,7 @@ def main() -> int:
     args = parser.parse_args()
 
     papers = json.loads(DATA_PATH.read_text(encoding="utf-8"))
-    output = render(len(papers))
+    output = render(papers)
 
     if args.check:
         current = README_JA_PATH.read_text(encoding="utf-8") if README_JA_PATH.exists() else ""

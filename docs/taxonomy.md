@@ -1,5 +1,7 @@
 # Taxonomy and Curation Policy
 
+**English (this page)** | [Japanese](taxonomy.ja.md)
+
 This repository uses a multi-axis taxonomy. A paper's primary section describes its main research contribution; independent metadata describes the outcomes at risk, the failure source, the mechanism, and the evaluation regime.
 
 ## 1. Empirically Evaluated Risk Outcomes
