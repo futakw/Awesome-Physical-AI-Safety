@@ -49,6 +49,8 @@ python3 scripts/verify_bibliography.py
 python3 scripts/validate_catalog.py
 python3 scripts/build_readme.py
 python3 scripts/build_readme.py --check
+python3 scripts/build_readme_ja.py
+python3 scripts/build_readme_ja.py --check
 python3 scripts/build_doc_pages.py
 python3 scripts/build_visualizations.py
 python3 scripts/build_visualizations.py --check
@@ -72,11 +74,12 @@ Review the generated README and confirm:
 - the table of contents includes any new subsection
 - the total paper count is correct
 - the generated landscape figures are current
-- no private marker, local path, CJK text, or personal research content is present
+- no private marker, local path, or personal research content is present
+- `README.md` and all catalog data (`data/papers.json`, taxonomy values, paper titles) remain English-only; `README.ja.md` is the sole intentional exception — it is a generated Japanese overview (see `scripts/build_readme_ja.py`) and legitimately contains Japanese text
 
 ## 5. Commit and Push
 
-Before pushing, verify that the remote repository is still private whenever private maintenance is intended. Commit `data/papers.json` together with the generated `README.md`. Use a concise maintenance commit message, then push the current branch.
+Before pushing, verify that the remote repository is still private whenever private maintenance is intended. Commit `data/papers.json` together with the generated `README.md` and `README.ja.md`. Use a concise maintenance commit message, then push the current branch.
 
 If validation fails, metadata is uncertain, the remote is unexpectedly public, or unrelated local changes are present, do not push. Record the unresolved item in the daily research report instead.
 

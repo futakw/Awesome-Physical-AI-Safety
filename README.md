@@ -1,5 +1,7 @@
 # Awesome Physical AI Safety
 
+**English (this page)** | [Japanese](README.ja.md)
+
 **🤖 An LLM-assisted bibliography of safety, security, robustness, ethical and societal risks, and trustworthy deployment across VLA, robots, autonomous systems, and embodied agents.**
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)

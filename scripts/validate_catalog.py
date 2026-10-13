@@ -252,7 +252,7 @@ def main() -> int:
                 errors.append(f"{relative}: private marker {marker!r} in path")
             if path.resolve() != Path(__file__).resolve() and marker in text.lower():
                 errors.append(f"{relative}: private marker {marker!r} in content")
-        if path.suffix in {".md", ".json"} and CJK.search(text):
+        if path.suffix in {".md", ".json"} and relative != "README.ja.md" and CJK.search(text):
             errors.append(f"{relative}: contains CJK text; the public repository must be English-only")
 
     if errors:
