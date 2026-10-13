@@ -242,9 +242,20 @@ def render(papers: list[dict]) -> str:
     ])
 
     present_sections = [key for key in SECTIONS if any(p["section"] == key for p in papers)]
+    section_order = {key: index for index, key in enumerate(present_sections)}
+    subsection_order: dict[tuple[str, str], int] = {}
+    for paper in papers:
+        key = (paper["section"], paper["subsection"])
+        if key not in subsection_order:
+            subsection_order[key] = len(subsection_order)
     ethics_papers = sorted(
         (p for p in papers if "ethical-societal" in p["risks"]),
-        key=lambda p: (-p["year"], p["title"].lower()),
+        key=lambda p: (
+            section_order[p["section"]],
+            subsection_order[(p["section"], p["subsection"])],
+            -p["year"],
+            p["title"].lower(),
+        ),
     )
     for key in present_sections:
         icon, title = SECTIONS[key]
@@ -264,32 +275,6 @@ def render(papers: list[dict]) -> str:
                 f"  - [{subsection}](#{subsection_anchor(key, subsection)})"
             )
     lines.extend(["", "</details>", "", f"**{len(papers)} papers in the current catalog.**", ""])
-
-    if ethics_papers:
-        lines.extend([
-            '<a id="ethics-societal-safety"></a>',
-            "",
-            "## ⚖️ Ethics & Societal Safety",
-            "",
-            f"This thematic view reuses {len(ethics_papers)} catalog records labeled `ethical-societal`. It does not add separate paper records or independently verify their outcome labels.",
-            "",
-            "| Paper | Venue | Evaluated Risk | Threat Model |",
-            "|---|---:|---|---|",
-        ])
-        for paper in ethics_papers:
-            section_key = paper["section"]
-            primary_section = SECTIONS[section_key][1]
-            primary_anchor = subsection_anchor(section_key, paper["subsection"])
-            paper_info = (
-                f"{paper_cell(paper)}<br>"
-                f'<sub>Primary: <a href="#{primary_anchor}">'
-                f"{escape(primary_section)} / {escape(paper['subsection'])}</a></sub>"
-            )
-            venue = f"{paper['venue']} {paper['year']}"
-            lines.append(
-                f"| {paper_info} | {venue} | {risk_cell(paper['risks'])} | {threat_model_cell(paper['threat_model'])} |"
-            )
-        lines.append("")
 
     for section_key in present_sections:
         section_papers = [p for p in papers if p["section"] == section_key]
@@ -319,6 +304,32 @@ def render(papers: list[dict]) -> str:
                     f"| {paper_cell(paper)} | {venue} | {risk} | {threat_model_cell(paper['threat_model'])} |"
                 )
             lines.append("")
+
+    if ethics_papers:
+        lines.extend([
+            '<a id="ethics-societal-safety"></a>',
+            "",
+            "## ⚖️ Ethics & Societal Safety",
+            "",
+            f"This thematic view reuses {len(ethics_papers)} catalog records labeled `ethical-societal`. It does not add separate paper records or independently verify their outcome labels.",
+            "",
+            "| Paper | Venue | Evaluated Risk | Threat Model |",
+            "|---|---:|---|---|",
+        ])
+        for paper in ethics_papers:
+            section_key = paper["section"]
+            primary_section = SECTIONS[section_key][1]
+            primary_anchor = subsection_anchor(section_key, paper["subsection"])
+            paper_info = (
+                f"{paper_cell(paper)}<br>"
+                f'<sub>Primary: <a href="#{primary_anchor}">'
+                f"{escape(primary_section)} / {escape(paper['subsection'])}</a></sub>"
+            )
+            venue = f"{paper['venue']} {paper['year']}"
+            lines.append(
+                f"| {paper_info} | {venue} | {risk_cell(paper['risks'])} | {threat_model_cell(paper['threat_model'])} |"
+            )
+        lines.append("")
 
     lines.extend(
         [
