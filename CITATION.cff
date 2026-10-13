@@ -1,16 +1,16 @@
 cff-version: 1.2.0
 message: "If you use this catalog or taxonomy, please cite it as below."
-title: "Awesome Responsible VLA"
+title: "Awesome Physical AI Safety"
 abstract: >-
-  A taxonomy-driven, continuously updated catalog of research on the
-  safety, robustness, security, and responsible deployment of
-  Vision-Language-Action models and closely related embodied agents.
+  An LLM-assisted, evidence-verified bibliography of safety, security,
+  ethics, fairness, and trustworthy deployment research for VLA, robots,
+  autonomous systems, and embodied agents.
 authors:
   - family-names: "Waseda"
     given-names: "Futa"
     affiliation: "National Institute of Informatics (NII), Japan"
     website: "https://futa-waseda.netlify.app/"
-repository-code: "https://github.com/futakw/Awesome-Responsible-VLA"
-url: "https://github.com/futakw/Awesome-Responsible-VLA"
+repository-code: "https://github.com/futakw/Awesome-Physical-AI-Safety"
+url: "https://github.com/futakw/Awesome-Physical-AI-Safety"
 license: MIT
 date-released: "2026-10-13"

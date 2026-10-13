@@ -1,6 +1,6 @@
 # Daily Curation Workflow
 
-This document defines the maintenance workflow for incorporating newly discovered literature into Awesome Responsible VLA. The catalog should remain reproducible, evidence-coded, English-only, and safe for eventual public release.
+This document defines the maintenance workflow for incorporating newly discovered literature into Awesome Physical AI Safety. The catalog should remain reproducible, evidence-coded, English-only, and safe for eventual public release.
 
 ## 1. Search and Verify
 

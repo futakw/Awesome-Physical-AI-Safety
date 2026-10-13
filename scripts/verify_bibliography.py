@@ -25,7 +25,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data" / "papers.json"
-USER_AGENT = "Awesome-Responsible-VLA bibliography verifier/1.0"
+USER_AGENT = "Awesome-Physical-AI-Safety bibliography verifier/1.0"
 
 
 class VerificationError(RuntimeError):

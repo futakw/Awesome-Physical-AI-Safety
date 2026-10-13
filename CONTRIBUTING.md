@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for helping improve Awesome Responsible VLA.
+Thank you for helping improve Awesome Physical AI Safety.
 
 For recurring literature maintenance, follow the [daily curation workflow](docs/daily-curation-workflow.md).
 
