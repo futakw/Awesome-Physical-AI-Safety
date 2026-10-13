@@ -10,12 +10,14 @@
     * { box-sizing: border-box; }
     body { margin:0; background:#fff; color:var(--ink); font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
     main { max-width:1180px; margin:0 auto; padding:18px 24px 64px; }
-    h1 { margin:0; font-size:16px; font-weight:700; letter-spacing:-.01em; white-space:nowrap; }
+    h1 { margin:0; font-size:21px; font-weight:750; letter-spacing:-.01em; white-space:nowrap; text-align:left; }
     .lede { color:var(--muted); margin:0 0 14px; font-size:13px; }
     .topbar { position:sticky; top:0; z-index:8; background:#fff; border-bottom:1px solid var(--line); box-shadow:0 1px 0 #20293808; }
     .topbar-inner { max-width:1180px; margin:0 auto; padding:9px 24px 0; }
-    .topbar-main { display:flex; align-items:center; gap:14px; flex-wrap:wrap; padding-bottom:8px; }
-    .meta-badges { display:flex; flex-wrap:wrap; gap:6px; margin-left:auto; }
+    .topbar-main { display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; padding-bottom:8px; }
+    .topbar-left { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+    .topbar-right { display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-left:auto; }
+    .meta-badges { display:flex; flex-wrap:wrap; gap:6px; }
     .meta-badge { display:inline-flex; align-items:stretch; border:1px solid var(--line); border-radius:6px; overflow:hidden; color:var(--ink); text-decoration:none; }
     .meta-badge span { background:#4b5563; color:#fff; padding:2px 7px; font-size:11px; }
     .meta-badge strong { background:#eef3fa; color:#243b53; padding:2px 8px; font-size:11px; font-weight:650; }
@@ -53,17 +55,21 @@
 <header class="topbar">
   <div class="topbar-inner">
     <div class="topbar-main">
-      <a class="gh-link" id="gh-link" href="https://github.com/futakw/Awesome-Physical-AI-Safety" target="_blank" rel="noopener noreferrer">⭐ View on GitHub — star the repo &amp; see how to cite it</a>
-      <h1 data-i18n="title">Awesome Physical AI Safety</h1>
-      <div class="meta-badges" aria-label="Catalog metadata">
-        <a class="meta-badge" href="../LICENSES.md" target="_blank" rel="noopener noreferrer"><span data-i18n="badgeLicenses">Licenses</span><strong>MIT · CC BY 4.0</strong></a>
-        <a class="meta-badge papers" href="readme.html" target="_blank" rel="noopener noreferrer"><span data-i18n="badgePapers">Papers</span><strong id="paper-count-badge">—</strong></a>
-        <a class="meta-badge update" href="../docs/daily-curation-workflow.md" target="_blank" rel="noopener noreferrer"><span data-i18n="badgeUpdate">Update</span><strong data-i18n="badgeDaily">Daily</strong></a>
-        <a class="meta-badge curation" href="readme.html" target="_blank" rel="noopener noreferrer"><span data-i18n="badgeCuration">Curation</span><strong data-i18n="badgeLlm">LLM-assisted</strong></a>
+      <div class="topbar-left">
+        <h1 data-i18n="title">Awesome Physical AI Safety</h1>
+        <a class="gh-link" id="gh-link" href="https://github.com/futakw/Awesome-Physical-AI-Safety" target="_blank" rel="noopener noreferrer">⭐ View on GitHub — star the repo &amp; see how to cite it</a>
       </div>
-      <div class="lang-toggle" role="group" aria-label="Language">
-        <button type="button" id="lang-en" aria-pressed="true">EN</button>
-        <button type="button" id="lang-ja" aria-pressed="false">日本語</button>
+      <div class="topbar-right">
+        <div class="meta-badges" aria-label="Catalog metadata">
+          <a class="meta-badge" href="../LICENSES.md" target="_blank" rel="noopener noreferrer"><span data-i18n="badgeLicenses">Licenses</span><strong>MIT · CC BY 4.0</strong></a>
+          <a class="meta-badge papers" href="readme.html" target="_blank" rel="noopener noreferrer"><span data-i18n="badgePapers">Papers</span><strong id="paper-count-badge">—</strong></a>
+          <a class="meta-badge update" href="../docs/daily-curation-workflow.md" target="_blank" rel="noopener noreferrer"><span data-i18n="badgeUpdate">Update</span><strong data-i18n="badgeDaily">Daily</strong></a>
+          <a class="meta-badge curation" href="readme.html" target="_blank" rel="noopener noreferrer"><span data-i18n="badgeCuration">Curation</span><strong data-i18n="badgeLlm">LLM-assisted</strong></a>
+        </div>
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button type="button" id="lang-en" aria-pressed="true">EN</button>
+          <button type="button" id="lang-ja" aria-pressed="false">日本語</button>
+        </div>
       </div>
     </div>
     <nav aria-label="Visualization views">
@@ -281,6 +287,7 @@ d3.selectAll('button[data-view]').on('click', function(){
   const view = this.dataset.view;
   activateView(view);
   history.replaceState(null, '', '#' + view);
+  window.scrollTo(0, 0);
 });
 window.addEventListener('hashchange', () => activateView(window.location.hash.slice(1)));
 activateView(availableViews.has(window.location.hash.slice(1)) ? window.location.hash.slice(1) : 'timeline');
