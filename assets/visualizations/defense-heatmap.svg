@@ -11,25 +11,25 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 </style>
 <rect width="1200" height="815" fill="#FFFFFF"/>
 <text class="title" x="48" y="48">Defense mechanism × defended threat</text>
-<text class="subtitle" x="48" y="74">Columns follow the Threat Cross-Map order, including empty cells (97 enriched papers).</text>
+<text class="subtitle" x="48" y="74">Columns follow the Threat Cross-Map order, including empty cells (102 enriched papers).</text>
 <text class="axis" text-anchor="start" transform="translate(335.2 167) rotate(-52)">Execution Error</text>
 <text class="axis" text-anchor="start" transform="translate(421.8 167) rotate(-52)">Distribution Shift</text>
 <text class="axis" text-anchor="start" transform="translate(508.2 167) rotate(-52)">Constraint Violation</text>
 <text class="axis" text-anchor="start" transform="translate(594.8 167) rotate(-52)">Backdoor</text>
-<text class="axis" text-anchor="start" transform="translate(681.2 167) rotate(-52)">Jailbreak</text>
+<text class="axis" text-anchor="start" transform="translate(681.2 167) rotate(-52)">Unsafe Policy Behavior</text>
 <text class="axis" text-anchor="start" transform="translate(767.8 167) rotate(-52)">Adversarial Patch</text>
-<text class="axis" text-anchor="start" transform="translate(854.2 167) rotate(-52)">Unsafe Policy Behavior</text>
-<text class="axis" text-anchor="start" transform="translate(940.8 167) rotate(-52)">Data Poisoning</text>
-<text class="axis" text-anchor="start" transform="translate(1027.2 167) rotate(-52)">Indirect Prompt Injection</text>
-<text class="axis" text-anchor="start" transform="translate(1113.8 167) rotate(-52)">Planning Error</text>
+<text class="axis" text-anchor="start" transform="translate(854.2 167) rotate(-52)">Jailbreak</text>
+<text class="axis" text-anchor="start" transform="translate(940.8 167) rotate(-52)">Uncertainty Miscalibration</text>
+<text class="axis" text-anchor="start" transform="translate(1027.2 167) rotate(-52)">Data Poisoning</text>
+<text class="axis" text-anchor="start" transform="translate(1113.8 167) rotate(-52)">Indirect Prompt Injection</text>
 <text class="label" x="282" y="216.0" text-anchor="end">Robust Finetuning</text>
 <rect x="302.0" y="187" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="343.2" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="388.5" y="187" width="82.5" height="50" rx="6" fill="#B6CEF4"><title>[arXiv 2025] RobustVLA: Robustness-Aware Reinforcement Post-Training for Vision-Language-Action Models
-[arXiv 2026] ChromaGuard: Defending VLA Models against Color/Illumination-Induced Blindness
+[arXiv 2026] Lights, Camera, Malfunction: When Illumination Robustness Leaves VLA Models Blind to Color
 [arXiv 2026] Structure-Aware Robust Fine-Tuning
-[arXiv 2025] MergeVLA: Robust Vision-Language-Action Models via Model Merging
-[arXiv 2025] RETAIN: Robust Finetuning of Vision-Language-Action Robot Policies via Parameter Merging
+[arXiv 2025] MergeVLA: Cross-Skill Model Merging Toward a Generalist Vision-Language-Action Agent
+[arXiv 2025] Robust Finetuning of Vision-Language-Action Robot Policies via Parameter Merging
 [arXiv 2025] VLM-SAFE: Vision-Language Model-Guided Safety-Aware Reinforcement Learning with World Models for Autonomous Driving
 [arXiv 2026] Sensing Which Modality Matters: Evidence-Gated Regularization for Robust VLA Policies
 [arXiv 2026] Adapting Vision-Language-Action Models to Unknown Visual Disruptions During Execution</title></rect>
@@ -39,15 +39,15 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="516.2" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
 <rect x="561.5" y="187" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="602.8" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="648.0" y="187" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="689.2" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="734.5" y="187" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="775.8" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="821.0" y="187" width="82.5" height="50" rx="6" fill="#CCDDF6"><title>[arXiv 2025] Human-in-the-Loop Online Rejection Sampling for Robotic Manipulation
+<rect x="648.0" y="187" width="82.5" height="50" rx="6" fill="#CCDDF6"><title>[arXiv 2025] Human-in-the-Loop Online Rejection Sampling for Robotic Manipulation
 [arXiv 2025] EvoVLA: Self-Evolving Vision-Language-Action Model
 [arXiv 2026] VLA-Forget: Vision-Language-Action Unlearning for Embodied Foundation Models
 [NeurIPS 2025] Human-assisted Robotic Policy Refinement via Action Preference Optimization</title></rect>
-<text x="862.2" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">4</text>
+<text x="689.2" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">4</text>
+<rect x="734.5" y="187" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="775.8" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="821.0" y="187" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="862.2" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="907.5" y="187" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="948.8" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="994.0" y="187" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
@@ -58,7 +58,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <rect x="302.0" y="241" width="82.5" height="50" rx="6" fill="#6F9FEF"><title>[Expert Systems with Applications 2026] FPC-VLA: A Vision-Language-Action Framework with a Supervisor for Failure Prediction and Correction
 [arXiv 2025] Guardian: Detecting Robotic Planning and Execution Errors with Vision-Language Models
 [ICLR 2025] AHA: A Vision-Language-Model for Detecting and Reasoning over Failures in Robotic Manipulation
-[arXiv 2025] Horcrux: Robustness/Recovery for Vision-Language-Action Policies
+[arXiv 2025] The Horcrux: Mechanistically Interpretable Task Decomposition for Detecting and Mitigating Reward Hacking in Embodied AI Systems
 [arXiv 2025] FailSafe: Reasoning and Recovery from Failures in Vision-Language-Action Models
 [arXiv 2026] RC-NF: Robot-Conditioned Normalizing Flow for Real-Time Anomaly Detection in Robotic Manipulation
 [arXiv 2025] I-FailSense: Towards General Robotic Failure Detection with Vision-Language Models
@@ -83,13 +83,13 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="343.2" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">25</text>
 <rect x="388.5" y="241" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[arXiv 2025] Affordance Field Intervention: Enabling VLAs to Escape Memory Traps in Robotic Manipulation</title></rect>
 <text x="429.8" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="475.0" y="241" width="82.5" height="50" rx="6" fill="#9FBFF2"><title>[arXiv 2026] Pre-Execution Safety Gate &amp; Task Safety Contracts for LLM-Based Robot Task Planning
+<rect x="475.0" y="241" width="82.5" height="50" rx="6" fill="#9FBFF2"><title>[arXiv 2026] Pre-Execution Safety Gate &amp; Task Safety Contracts for LLM-Controlled Robot Systems
 [arXiv 2026] PROTEA: Securing Robot Task Planning and Execution
 [arXiv 2025] LogicGuard: Improving Embodied LLM Agents Through Temporal Logic-Based Critics
 [arXiv 2025] SafePlan: Leveraging Formal Logic and Chain-of-Thought Reasoning for Enhanced Safety in LLM-based Robotic Task Planning
 [arXiv 2025] Safe LLM-Controlled Robots with Formal Guarantees via Reachability Analysis
 [arXiv 2024] SafeEmbodAI: Securing LLM-Controlled Mobile Robots against Prompt Injection
-[arXiv 2025] SafeDec: Constrained Decoding for Safe Autoregressive Embodied Policies
+[arXiv 2025] Constrained Decoding for Safe Robot Navigation Foundation Models
 [RSS Workshop 2025] Ask Before You Act: Token-Level Uncertainty for Intervention in Vision-Language-Action Models
 [arXiv 2025] VLSA: Vision-Language-Action Models with a Plug-and-Play Safety Constraint Layer
 [arXiv 2025] From Words to Safety: Language-Conditioned Safety Filtering for Robot Navigation
@@ -99,57 +99,61 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="516.2" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">13</text>
 <rect x="561.5" y="241" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="602.8" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="648.0" y="241" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[IEEE RA-L 2026] Safety Guardrails for LLM-Enabled Robots</title></rect>
-<text x="689.2" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="734.5" y="241" width="82.5" height="50" rx="6" fill="#D9E5F7"><title>[ICLR 2024] Embodied Active Defense: Leveraging Recurrent Feedback to Counter Adversarial Patches
-[arXiv 2026] Detect and Suppress: A Mechanistic Defense against Adversarial Patches in VLA Models</title></rect>
-<text x="775.8" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
-<rect x="821.0" y="241" width="82.5" height="50" rx="6" fill="#CCDDF6"><title>[arXiv 2025] ROVER: Regulator-Driven Robust Temporal Verification of Black-Box Robot Policies
+<rect x="648.0" y="241" width="82.5" height="50" rx="6" fill="#CCDDF6"><title>[arXiv 2025] ROVER: Regulator-Driven Robust Temporal Verification of Black-Box Robot Policies
 [AdaptFM@ICML 2026] Adaptive Safety Probing for Resource-Efficient Vision-Language-Action Models
 [arXiv 2026] DynaHarness: A Dynamic Physical Harness for Self-Evolving Robot Agents
 [arXiv 2026] A Safe Action Is Not Enough: Feasible-Future Decoding for Vision-Language-Action Policies</title></rect>
-<text x="862.2" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">4</text>
-<rect x="907.5" y="241" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="948.8" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text x="689.2" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">4</text>
+<rect x="734.5" y="241" width="82.5" height="50" rx="6" fill="#D9E5F7"><title>[ICLR 2024] Embodied Active Defense: Leveraging Recurrent Feedback to Counter Adversarial Patches
+[arXiv 2026] Detect and Suppress: A Mechanistic Defense against Adversarial Patches in VLA Models</title></rect>
+<text x="775.8" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
+<rect x="821.0" y="241" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[IEEE RA-L 2026] Safety Guardrails for LLM-Enabled Robots</title></rect>
+<text x="862.2" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="907.5" y="241" width="82.5" height="50" rx="6" fill="#D2E1F6"><title>[arXiv 2026] Predictive Zonotope Reduction: Precise Runtime Monitoring under Uncertainty
+[AdaptFM@ICML 2026] Adaptive Safety Probing for Resource-Efficient Vision-Language-Action Models
+[arXiv 2026] Predictive Semantic Safety: From Visual Physical Reasoning to Safety-Critical Control</title></rect>
+<text x="948.8" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">3</text>
 <rect x="994.0" y="241" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1035.2" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1080.5" y="241" width="82.5" height="50" rx="6" fill="#CCDDF6"><title>[arXiv 2026] Causal Scene Narration with Runtime Safety Supervision for Vision-Language-Action Driving
-[arXiv 2026] CARE: Experience-Guided Atomic Corrective Execution for Vision-Language-Action Policies
-[arXiv 2026] Realizability Is Not Enough: Encoding, Liveness, and Auditing of Synthesized Robot Supervisors
-[IROS 2026 2026] ProAct-VLM: Pre-Failure Vision-Language Task Replanning with Continuous Perception Feedback</title></rect>
-<text x="1121.8" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">4</text>
+<rect x="1080.5" y="241" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="1121.8" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="label" x="282" y="324.0" text-anchor="end">Formal Verification</text>
 <rect x="302.0" y="295" width="82.5" height="50" rx="6" fill="#D9E5F7"><title>[arXiv 2026] Realizability Is Not Enough: Encoding, Liveness, and Auditing of Synthesized Robot Supervisors
 [arXiv 2026] WBAG: A Whole-Body and Attached-Geometry Safety Framework for Vision-Language-Action Manipulation</title></rect>
 <text x="343.2" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
 <rect x="388.5" y="295" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="429.8" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="475.0" y="295" width="82.5" height="50" rx="6" fill="#C1D5F5"><title>[arXiv 2025] LogicGuard: Improving Embodied LLM Agents Through Temporal Logic-Based Critics
+<rect x="475.0" y="295" width="82.5" height="50" rx="6" fill="#B6CEF4"><title>[arXiv 2025] LogicGuard: Improving Embodied LLM Agents Through Temporal Logic-Based Critics
 [arXiv 2025] SafePlan: Leveraging Formal Logic and Chain-of-Thought Reasoning for Enhanced Safety in LLM-based Robotic Task Planning
 [arXiv 2025] Safe LLM-Controlled Robots with Formal Guarantees via Reachability Analysis
 [arXiv 2026] VLPSA: Vision-Language-Poisson-Safe Actions for Full-Body Safety of Learned Policies
 [arXiv 2026] Video2STL: Grounding VLM-Generated Temporal Specifications for Robot Learning
-[arXiv 2026] WBAG: A Whole-Body and Attached-Geometry Safety Framework for Vision-Language-Action Manipulation</title></rect>
-<text x="516.2" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">6</text>
+[arXiv 2026] WBAG: A Whole-Body and Attached-Geometry Safety Framework for Vision-Language-Action Manipulation
+[arXiv 2026] CSF: Contextual Safety Filtering for Motion Generators
+[arXiv 2026] Neuro-Symbolic Safety Guidance for Vision-Language-Action Models via Constrained Flow Matching</title></rect>
+<text x="516.2" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">8</text>
 <rect x="561.5" y="295" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="602.8" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="648.0" y="295" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="689.2" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="648.0" y="295" width="82.5" height="50" rx="6" fill="#D2E1F6"><title>[arXiv 2025] ROVER: Regulator-Driven Robust Temporal Verification of Black-Box Robot Policies
+[arXiv 2026] CSF: Contextual Safety Filtering for Motion Generators
+[arXiv 2026] Neuro-Symbolic Safety Guidance for Vision-Language-Action Models via Constrained Flow Matching</title></rect>
+<text x="689.2" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">3</text>
 <rect x="734.5" y="295" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="775.8" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="821.0" y="295" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[arXiv 2025] ROVER: Regulator-Driven Robust Temporal Verification of Black-Box Robot Policies</title></rect>
-<text x="862.2" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="907.5" y="295" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="948.8" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="821.0" y="295" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="862.2" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="907.5" y="295" width="82.5" height="50" rx="6" fill="#D9E5F7"><title>[arXiv 2026] Predictive Zonotope Reduction: Precise Runtime Monitoring under Uncertainty
+[arXiv 2026] Predictive Semantic Safety: From Visual Physical Reasoning to Safety-Critical Control</title></rect>
+<text x="948.8" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
 <rect x="994.0" y="295" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1035.2" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1080.5" y="295" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[arXiv 2026] Realizability Is Not Enough: Encoding, Liveness, and Auditing of Synthesized Robot Supervisors</title></rect>
-<text x="1121.8" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="1080.5" y="295" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="1121.8" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="label" x="282" y="378.0" text-anchor="end">Failure Recovery</text>
 <rect x="302.0" y="349" width="82.5" height="50" rx="6" fill="#86AEF1"><title>[Expert Systems with Applications 2026] FPC-VLA: A Vision-Language-Action Framework with a Supervisor for Failure Prediction and Correction
 [arXiv 2025] Guardian: Detecting Robotic Planning and Execution Errors with Vision-Language Models
 [ICLR 2025] AHA: A Vision-Language-Model for Detecting and Reasoning over Failures in Robotic Manipulation
-[arXiv 2025] Horcrux: Robustness/Recovery for Vision-Language-Action Policies
+[arXiv 2025] The Horcrux: Mechanistically Interpretable Task Decomposition for Detecting and Mitigating Reward Hacking in Embodied AI Systems
 [arXiv 2025] FailSafe: Reasoning and Recovery from Failures in Vision-Language-Action Models
 [arXiv 2025] I-FailSense: Towards General Robotic Failure Detection with Vision-Language Models
 [IROS 2024] DoReMi: Grounding Language Model by Detecting and Recovering from Plan-Execution Misalignment
@@ -168,22 +172,24 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="343.2" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">19</text>
 <rect x="388.5" y="349" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[arXiv 2025] Affordance Field Intervention: Enabling VLAs to Escape Memory Traps in Robotic Manipulation</title></rect>
 <text x="429.8" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="475.0" y="349" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[arXiv 2026] DynaHarness: A Dynamic Physical Harness for Self-Evolving Robot Agents</title></rect>
-<text x="516.2" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="475.0" y="349" width="82.5" height="50" rx="6" fill="#D9E5F7"><title>[arXiv 2026] DynaHarness: A Dynamic Physical Harness for Self-Evolving Robot Agents
+[arXiv 2026] FAITH: Feasibility-Aware Safety-Filtered RL for High-Dimensional Systems</title></rect>
+<text x="516.2" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
 <rect x="561.5" y="349" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="602.8" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="648.0" y="349" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="689.2" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="648.0" y="349" width="82.5" height="50" rx="6" fill="#D9E5F7"><title>[arXiv 2026] DynaHarness: A Dynamic Physical Harness for Self-Evolving Robot Agents
+[arXiv 2026] FAITH: Feasibility-Aware Safety-Filtered RL for High-Dimensional Systems</title></rect>
+<text x="689.2" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
 <rect x="734.5" y="349" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[ICLR 2024] Embodied Active Defense: Leveraging Recurrent Feedback to Counter Adversarial Patches</title></rect>
 <text x="775.8" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="821.0" y="349" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[arXiv 2026] DynaHarness: A Dynamic Physical Harness for Self-Evolving Robot Agents</title></rect>
-<text x="862.2" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="821.0" y="349" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="862.2" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="907.5" y="349" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="948.8" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="994.0" y="349" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1035.2" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1080.5" y="349" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[arXiv 2026] CARE: Experience-Guided Atomic Corrective Execution for Vision-Language-Action Policies</title></rect>
-<text x="1121.8" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="1080.5" y="349" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="1121.8" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="label" x="282" y="432.0" text-anchor="end">Representation Steering</text>
 <rect x="302.0" y="403" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[arXiv 2026] FailPatch: Failure Residual Patching for Vision-Language-Action Models</title></rect>
 <text x="343.2" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
@@ -192,18 +198,18 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <rect x="475.0" y="403" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="516.2" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="561.5" y="403" width="82.5" height="50" rx="6" fill="#D2E1F6"><title>[arXiv 2026] When Attention Betrays: Erasing Backdoor Attacks in Robotic Policies by Reconstructing Visual Tokens
-[arXiv 2026] SAFE-Dict: Concept-Based Dictionary Learning for Inference-Time Safety in Vision Language Action Models
+[arXiv 2026] Concept-Based Dictionary Learning for Inference-Time Safety in Vision Language Action Models
 [arXiv 2026] TrustVLA: Mechanism-Guided Inference-Time Defense Against Vision-Language-Action Backdoors</title></rect>
 <text x="602.8" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">3</text>
-<rect x="648.0" y="403" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[arXiv 2025] Concept Enhancement Engineering: A Lightweight and Efficient Robust Defense Against Jailbreak Attacks in Embodied AI</title></rect>
-<text x="689.2" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="648.0" y="403" width="82.5" height="50" rx="6" fill="#D9E5F7"><title>[AdaptFM@ICML 2026] Adaptive Safety Probing for Resource-Efficient Vision-Language-Action Models
+[arXiv 2026] Sparse Feature Policy Unlearning Mitigates State Hallucination in Vision-Language-Action Models</title></rect>
+<text x="689.2" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
 <rect x="734.5" y="403" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[arXiv 2026] Detect and Suppress: A Mechanistic Defense against Adversarial Patches in VLA Models</title></rect>
 <text x="775.8" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="821.0" y="403" width="82.5" height="50" rx="6" fill="#D9E5F7"><title>[AdaptFM@ICML 2026] Adaptive Safety Probing for Resource-Efficient Vision-Language-Action Models
-[arXiv 2026] Sparse Feature Policy Unlearning Mitigates State Hallucination in Vision-Language-Action Models</title></rect>
-<text x="862.2" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
-<rect x="907.5" y="403" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="948.8" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="821.0" y="403" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[arXiv 2025] Concept Enhancement Engineering: A Lightweight and Efficient Robust Defense Against Jailbreak Attacks in Embodied AI</title></rect>
+<text x="862.2" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="907.5" y="403" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[AdaptFM@ICML 2026] Adaptive Safety Probing for Resource-Efficient Vision-Language-Action Models</title></rect>
+<text x="948.8" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="994.0" y="403" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1035.2" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="1080.5" y="403" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
@@ -211,8 +217,8 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text class="label" x="282" y="486.0" text-anchor="end">Model Merging</text>
 <rect x="302.0" y="457" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="343.2" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="388.5" y="457" width="82.5" height="50" rx="6" fill="#D9E5F7"><title>[arXiv 2025] MergeVLA: Robust Vision-Language-Action Models via Model Merging
-[arXiv 2025] RETAIN: Robust Finetuning of Vision-Language-Action Robot Policies via Parameter Merging</title></rect>
+<rect x="388.5" y="457" width="82.5" height="50" rx="6" fill="#D9E5F7"><title>[arXiv 2025] MergeVLA: Cross-Skill Model Merging Toward a Generalist Vision-Language-Action Agent
+[arXiv 2025] Robust Finetuning of Vision-Language-Action Robot Policies via Parameter Merging</title></rect>
 <text x="429.8" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
 <rect x="475.0" y="457" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="516.2" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
@@ -263,29 +269,35 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="343.2" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">8</text>
 <rect x="388.5" y="565" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="429.8" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="475.0" y="565" width="82.5" height="50" rx="6" fill="#BBD1F4"><title>[arXiv 2023] Safe-VLN: Collision Avoidance for Vision-and-Language Navigation of Autonomous Robots Operating in Continuous Environments
+<rect x="475.0" y="565" width="82.5" height="50" rx="6" fill="#ACC8F3"><title>[arXiv 2023] Safe-VLN: Collision Avoidance for Vision-and-Language Navigation of Autonomous Robots Operating in Continuous Environments
 [arXiv 2025] Towards Safe Robot Foundation Models Using Inductive Biases
 [arXiv 2026] CompliantVLA-adaptor: VLM-Guided Variable Impedance Action for Safe Contact-Rich Manipulation
 [arXiv 2026] ElastiQP: An Always-Feasible QP Solver for Constrained Robot Control
 [arXiv 2026] VLPSA: Vision-Language-Poisson-Safe Actions for Full-Body Safety of Learned Policies
 [arXiv 2026] Multi-Link Safety Filtering for VLA Policies Around Moving Hazards
-[arXiv 2026] WBAG: A Whole-Body and Attached-Geometry Safety Framework for Vision-Language-Action Manipulation</title></rect>
-<text x="516.2" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">7</text>
+[arXiv 2026] WBAG: A Whole-Body and Attached-Geometry Safety Framework for Vision-Language-Action Manipulation
+[arXiv 2026] CSF: Contextual Safety Filtering for Motion Generators
+[arXiv 2026] FAITH: Feasibility-Aware Safety-Filtered RL for High-Dimensional Systems
+[arXiv 2026] Neuro-Symbolic Safety Guidance for Vision-Language-Action Models via Constrained Flow Matching</title></rect>
+<text x="516.2" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">10</text>
 <rect x="561.5" y="565" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="602.8" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="648.0" y="565" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="689.2" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="648.0" y="565" width="82.5" height="50" rx="6" fill="#C6D9F5"><title>[arXiv 2026] ResSafe: Learning Safety Filtering with Residual Reinforcement Learning for Humanoids
+[arXiv 2026] A Safe Action Is Not Enough: Feasible-Future Decoding for Vision-Language-Action Policies
+[arXiv 2026] CSF: Contextual Safety Filtering for Motion Generators
+[arXiv 2026] FAITH: Feasibility-Aware Safety-Filtered RL for High-Dimensional Systems
+[arXiv 2026] Neuro-Symbolic Safety Guidance for Vision-Language-Action Models via Constrained Flow Matching</title></rect>
+<text x="689.2" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">5</text>
 <rect x="734.5" y="565" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="775.8" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="821.0" y="565" width="82.5" height="50" rx="6" fill="#D9E5F7"><title>[arXiv 2026] ResSafe: Learning Safety Filtering with Residual Reinforcement Learning for Humanoids
-[arXiv 2026] A Safe Action Is Not Enough: Feasible-Future Decoding for Vision-Language-Action Policies</title></rect>
-<text x="862.2" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
+<rect x="821.0" y="565" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="862.2" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="907.5" y="565" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="948.8" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="994.0" y="565" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1035.2" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1080.5" y="565" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[arXiv 2023] Plug in the Safety Chip: Enforcing Constraints for LLM-Driven Robot Agents</title></rect>
-<text x="1121.8" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="1080.5" y="565" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="1121.8" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="label" x="282" y="648.0" text-anchor="end">Input Filtering</text>
 <rect x="302.0" y="619" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="343.2" y="648.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
@@ -302,10 +314,10 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="775.8" y="648.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="821.0" y="619" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="862.2" y="648.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="907.5" y="619" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[IROS 2026 Workshop 2026] Backdoors in Learning-Based Industrial Robotic Arm Manipulation: An Empirical Security Study</title></rect>
-<text x="948.8" y="648.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="994.0" y="619" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1035.2" y="648.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="907.5" y="619" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="948.8" y="648.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="994.0" y="619" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[IROS 2026 Workshop 2026] Backdoors in Learning-Based Industrial Robotic Arm Manipulation: An Empirical Security Study</title></rect>
+<text x="1035.2" y="648.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="1080.5" y="619" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1121.8" y="648.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="label" x="282" y="702.0" text-anchor="end">Uncertainty Gating</text>
@@ -323,12 +335,12 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="775.8" y="702.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="821.0" y="673" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="862.2" y="702.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="907.5" y="673" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="948.8" y="702.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="907.5" y="673" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[CoRL 2026] Control-Ready Uncertainty for Trajectory Diffusion</title></rect>
+<text x="948.8" y="702.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="994.0" y="673" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1035.2" y="702.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1080.5" y="673" width="82.5" height="50" rx="6" fill="#E1EBF7"><title>[arXiv 2025] Do What? Teaching Vision-Language-Action Models to Reject the Impossible</title></rect>
-<text x="1121.8" y="702.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="1080.5" y="673" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="1121.8" y="702.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="axis" x="732.5" y="765" text-anchor="middle">Defended threat</text>
 <text class="axis" transform="translate(45 455.0) rotate(-90)" text-anchor="middle">Defense mechanism</text>
 </svg>

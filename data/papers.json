@@ -141,8 +141,8 @@
   },
   {
     "id": "pre-execution-safety-gate-task-safety-contracts-for-llm-based-robot-task-pl-2026",
-    "title": "Pre-Execution Safety Gate & Task Safety Contracts for LLM-Based Robot Task Planning",
-    "first_author": "et al.",
+    "title": "Pre-Execution Safety Gate & Task Safety Contracts for LLM-Controlled Robot Systems",
+    "first_author": "Obi",
     "venue": "arXiv",
     "year": 2026,
     "paper_url": "https://arxiv.org/abs/2604.05427",
@@ -219,7 +219,7 @@
   {
     "id": "protea-securing-robot-task-planning-and-execution-2026",
     "title": "PROTEA: Securing Robot Task Planning and Execution",
-    "first_author": "et al.",
+    "first_author": "Altaweel",
     "venue": "arXiv",
     "year": 2026,
     "paper_url": "https://arxiv.org/abs/2601.07186",
@@ -374,7 +374,7 @@
   {
     "id": "safeplan-leveraging-formal-logic-and-chain-of-thought-reasoning-for-enhance-2025",
     "title": "SafePlan: Leveraging Formal Logic and Chain-of-Thought Reasoning for Enhanced Safety in LLM-based Robotic Task Planning",
-    "first_author": "et al.",
+    "first_author": "Obi",
     "venue": "arXiv",
     "year": 2025,
     "paper_url": "https://arxiv.org/abs/2503.06892",
@@ -456,7 +456,7 @@
   {
     "id": "safe-llm-controlled-robots-with-formal-guarantees-via-reachability-analysis-2025",
     "title": "Safe LLM-Controlled Robots with Formal Guarantees via Reachability Analysis",
-    "first_author": "et al.",
+    "first_author": "Hafez",
     "venue": "arXiv",
     "year": 2025,
     "paper_url": "https://arxiv.org/abs/2503.03911",
@@ -540,7 +540,7 @@
   {
     "id": "safeembodai-securing-llm-controlled-mobile-robots-against-prompt-injection-2024",
     "title": "SafeEmbodAI: Securing LLM-Controlled Mobile Robots against Prompt Injection",
-    "first_author": "et al.",
+    "first_author": "Zhang",
     "venue": "arXiv",
     "year": 2024,
     "paper_url": "https://arxiv.org/abs/2409.01630",
@@ -613,8 +613,8 @@
   },
   {
     "id": "trojanrobot-robot-collapse-supply-chain-backdoor-attacks-against-vlm-based--2025",
-    "title": "TrojanRobot / Robot Collapse: Supply-Chain Backdoor Attacks Against VLM-based Robotic Manipulation",
-    "first_author": "et al.",
+    "title": "Robot Collapse: Supply Chain Backdoor Attacks Against VLM-based Robotic Manipulation",
+    "first_author": "Wang",
     "venue": "arXiv",
     "year": 2025,
     "paper_url": "https://arxiv.org/abs/2411.11683",
@@ -680,8 +680,8 @@
   },
   {
     "id": "compromising-llm-driven-embodied-agents-with-contextual-backdoor-attacks-2025",
-    "title": "Compromising LLM Driven Embodied Agents with Contextual Backdoor Attacks",
-    "first_author": "et al.",
+    "title": "Compromising Embodied Agents with Contextual Backdoor Attacks",
+    "first_author": "Liu",
     "venue": "arXiv",
     "year": 2025,
     "paper_url": "https://arxiv.org/abs/2408.02882",
@@ -737,7 +737,7 @@
   {
     "id": "exploring-the-robustness-of-decision-level-through-adversarial-attacks-on-l-2024",
     "title": "Exploring the Robustness of Decision-Level Through Adversarial Attacks on LLM-Based Embodied Models",
-    "first_author": "et al.",
+    "first_author": "Liu",
     "venue": "arXiv",
     "year": 2024,
     "paper_url": "https://arxiv.org/abs/2405.19802",
@@ -796,7 +796,7 @@
   {
     "id": "on-the-vulnerability-of-llm-vlm-controlled-robotics-2024",
     "title": "On the Vulnerability of LLM/VLM-Controlled Robotics",
-    "first_author": "et al.",
+    "first_author": "Wu",
     "venue": "arXiv",
     "year": 2024,
     "paper_url": "https://arxiv.org/abs/2402.10340",
@@ -857,7 +857,7 @@
   {
     "id": "extended-to-reality-prompt-injection-in-3d-environments-2026",
     "title": "Extended to Reality: Prompt Injection in 3D Environments",
-    "first_author": "et al.",
+    "first_author": "Li",
     "venue": "arXiv",
     "year": 2026,
     "paper_url": "https://arxiv.org/abs/2602.07104",
@@ -923,7 +923,7 @@
   {
     "id": "hijacking-robots-with-a-piece-of-paper-a-systematic-study-of-physical-promp-2026",
     "title": "Hijacking Robots with a Piece of Paper: A Systematic Study of Physical Prompt Injection in VLM-Controlled Robots",
-    "first_author": "et al.",
+    "first_author": "Samarakoon",
     "venue": "arXiv",
     "year": 2026,
     "paper_url": "https://arxiv.org/abs/2608.05715",
@@ -984,7 +984,7 @@
   {
     "id": "jailbreaking-embodied-llms-via-action-level-manipulation-2026",
     "title": "Jailbreaking Embodied LLMs via Action-level Manipulation",
-    "first_author": "et al.",
+    "first_author": "Huang",
     "venue": "arXiv",
     "year": 2026,
     "paper_url": "https://arxiv.org/abs/2603.01414",
@@ -1055,8 +1055,8 @@
   },
   {
     "id": "badnaver-jailbreaking-vision-language-navigation-agents-2025",
-    "title": "BadNAVer: Jailbreaking Vision-Language Navigation Agents",
-    "first_author": "et al.",
+    "title": "BadNAVer: Exploring Jailbreak Attacks On Vision-and-Language Navigation",
+    "first_author": "Lyu",
     "venue": "arXiv",
     "year": 2025,
     "paper_url": "https://arxiv.org/abs/2505.12443",
@@ -1122,8 +1122,8 @@
   },
   {
     "id": "beat-visual-backdoor-attacks-on-mllm-embodied-decision-making-via-contrasti-2025",
-    "title": "BEAT: Visual Backdoor Attacks on MLLM Embodied Decision Making via Contrastive Trigger Learning",
-    "first_author": "et al.",
+    "title": "BEAT: Visual Backdoor Attacks on VLM-based Embodied Agents via Contrastive Trigger Learning",
+    "first_author": "Zhan",
     "venue": "arXiv",
     "year": 2025,
     "paper_url": "https://arxiv.org/abs/2510.27623",
@@ -1188,8 +1188,8 @@
   },
   {
     "id": "safedec-constrained-decoding-for-safe-autoregressive-embodied-policies-2025",
-    "title": "SafeDec: Constrained Decoding for Safe Autoregressive Embodied Policies",
-    "first_author": "et al.",
+    "title": "Constrained Decoding for Safe Robot Navigation Foundation Models",
+    "first_author": "Kapoor",
     "venue": "arXiv",
     "year": 2025,
     "paper_url": "https://arxiv.org/abs/2509.01728",
@@ -1426,7 +1426,7 @@
   {
     "id": "guardian-detecting-robotic-planning-and-execution-errors-with-vision-langua-2025",
     "title": "Guardian: Detecting Robotic Planning and Execution Errors with Vision-Language Models",
-    "first_author": "et al.",
+    "first_author": "Pacaud",
     "venue": "arXiv",
     "year": 2025,
     "paper_url": "https://arxiv.org/abs/2512.01946",
@@ -1593,7 +1593,7 @@
   {
     "id": "when-attention-betrays-erasing-backdoor-attacks-in-robotic-policies-by-reco-2026",
     "title": "When Attention Betrays: Erasing Backdoor Attacks in Robotic Policies by Reconstructing Visual Tokens",
-    "first_author": "et al.",
+    "first_author": "Li",
     "venue": "arXiv",
     "year": 2026,
     "paper_url": "https://arxiv.org/abs/2602.03153",
@@ -1676,8 +1676,8 @@
   },
   {
     "id": "chromaguard-defending-vla-models-against-color-illumination-induced-blindne-2026",
-    "title": "ChromaGuard: Defending VLA Models against Color/Illumination-Induced Blindness",
-    "first_author": "et al.",
+    "title": "Lights, Camera, Malfunction: When Illumination Robustness Leaves VLA Models Blind to Color",
+    "first_author": "Watanabe",
     "venue": "arXiv",
     "year": 2026,
     "paper_url": "https://arxiv.org/abs/2607.14698",
@@ -1748,7 +1748,7 @@
   {
     "id": "structure-aware-robust-fine-tuning-2026",
     "title": "Structure-Aware Robust Fine-Tuning",
-    "first_author": "et al.",
+    "first_author": "Zhang",
     "venue": "arXiv",
     "year": 2026,
     "paper_url": "https://arxiv.org/abs/2608.03231",
@@ -1826,8 +1826,8 @@
   },
   {
     "id": "safe-dict-concept-based-dictionary-learning-for-inference-time-safety-in-vi-2026",
-    "title": "SAFE-Dict: Concept-Based Dictionary Learning for Inference-Time Safety in Vision Language Action Models",
-    "first_author": "et al.",
+    "title": "Concept-Based Dictionary Learning for Inference-Time Safety in Vision Language Action Models",
+    "first_author": "Wen",
     "venue": "arXiv",
     "year": 2026,
     "paper_url": "https://arxiv.org/abs/2602.01834",
@@ -1912,8 +1912,8 @@
   },
   {
     "id": "horcrux-robustness-recovery-for-vision-language-action-policies-2025",
-    "title": "Horcrux: Robustness/Recovery for Vision-Language-Action Policies",
-    "first_author": "et al.",
+    "title": "The Horcrux: Mechanistically Interpretable Task Decomposition for Detecting and Mitigating Reward Hacking in Embodied AI Systems",
+    "first_author": "Sahoo",
     "venue": "arXiv",
     "year": 2025,
     "paper_url": "https://arxiv.org/abs/2511.17869",
@@ -1992,8 +1992,8 @@
   },
   {
     "id": "mergevla-robust-vision-language-action-models-via-model-merging-2025",
-    "title": "MergeVLA: Robust Vision-Language-Action Models via Model Merging",
-    "first_author": "et al.",
+    "title": "MergeVLA: Cross-Skill Model Merging Toward a Generalist Vision-Language-Action Agent",
+    "first_author": "Fu",
     "venue": "arXiv",
     "year": 2025,
     "paper_url": "https://arxiv.org/abs/2511.18810",
@@ -2070,8 +2070,8 @@
   },
   {
     "id": "retain-robust-finetuning-of-vision-language-action-robot-policies-via-param-2025",
-    "title": "RETAIN: Robust Finetuning of Vision-Language-Action Robot Policies via Parameter Merging",
-    "first_author": "et al.",
+    "title": "Robust Finetuning of Vision-Language-Action Robot Policies via Parameter Merging",
+    "first_author": "Yadav",
     "venue": "arXiv",
     "year": 2025,
     "paper_url": "https://arxiv.org/abs/2512.08333",
@@ -2143,8 +2143,8 @@
   },
   {
     "id": "drift-derailing-trajectories-of-flow-matching-vlas-with-adversarial-patches-2026",
-    "title": "DRIFT: Derailing Trajectories of Flow-Matching VLAs with Adversarial Patches",
-    "first_author": "et al.",
+    "title": "DRIFT: Derailing Denoising Trajectories of Flow-Matching VLAs with Adversarial Patch Attack",
+    "first_author": "Tae",
     "venue": "arXiv",
     "year": 2026,
     "paper_url": "https://arxiv.org/abs/2608.03207",
@@ -2202,8 +2202,8 @@
   },
   {
     "id": "vlaguard-vasa-visuomotor-attention-guided-semantic-attack-2026",
-    "title": "VLAGuard / VASA: Visuomotor Attention-guided Semantic Attack",
-    "first_author": "et al.",
+    "title": "VLAGuard: A Framework for Evaluating and Mitigating Physical Attention Hijacking in Vision-Language-Action Robots within Wireless Sensor Networks",
+    "first_author": "Yin",
     "venue": "arXiv",
     "year": 2026,
     "paper_url": "https://arxiv.org/abs/2608.01028",
@@ -2265,7 +2265,7 @@
   {
     "id": "saber-2026-vla",
     "title": "SABER: A Stealthy Agentic Black-Box Attack Framework for Vision-Language-Action Models",
-    "first_author": "et al.",
+    "first_author": "Wu",
     "venue": "arXiv",
     "year": 2026,
     "paper_url": "https://arxiv.org/abs/2603.24935",
@@ -2326,7 +2326,7 @@
   {
     "id": "dura-2026-vla",
     "title": "Hidden in Plain Sight: Diffusion-Based Unrestricted Robotic Attacks on Vision-Language-Action Models",
-    "first_author": "et al.",
+    "first_author": "Han",
     "venue": "arXiv",
     "year": 2026,
     "paper_url": "https://arxiv.org/abs/2608.10393",
@@ -2394,8 +2394,8 @@
   },
   {
     "id": "altered-thoughts-actions-2026",
-    "title": "Altered Thoughts, Altered Actions: Probing Chain-of-Thought Vulnerabilities in VLA Robotic Manipulation",
-    "first_author": "et al.",
+    "title": "Altered Thoughts, Altered Actions: Reasoning Chain as Control Surface for a Vision-Language-Action Policy",
+    "first_author": "Trinh",
     "venue": "arXiv",
     "year": 2026,
     "paper_url": "https://arxiv.org/abs/2603.12717",
@@ -2459,8 +2459,8 @@
   },
   {
     "id": "partially-observable-patch-vla-2026",
-    "title": "Partially Observable Adversarial Patch Attacks on Vision-Language-Action Models",
-    "first_author": "et al.",
+    "title": "Partially Observable Adversarial Patch Attacks on Vision-Language-Action Models in Robotics",
+    "first_author": "Wang",
     "venue": "arXiv",
     "year": 2026,
     "paper_url": "https://arxiv.org/abs/2606.03556",
@@ -2521,7 +2521,7 @@
   {
     "id": "world-models-dream-wrong-2026",
     "title": "When World Models Dream Wrong: Physical-Conditioned Adversarial Attacks Against World Models",
-    "first_author": "et al.",
+    "first_author": "Guo",
     "venue": "arXiv",
     "year": 2026,
     "paper_url": "https://arxiv.org/abs/2602.18739",
@@ -2588,7 +2588,7 @@
   {
     "id": "trap-2026-vla-cot-patch",
     "title": "TRAP: Hijacking VLA CoT-Reasoning via Adversarial Patches",
-    "first_author": "et al.",
+    "first_author": "Huang",
     "venue": "arXiv",
     "year": 2026,
     "paper_url": "https://arxiv.org/abs/2603.23117",
@@ -2645,8 +2645,8 @@
   },
   {
     "id": "tex3d-2026-vla",
-    "title": "Tex3D: Physical 3D Texture Attacks on Vision-Language-Action Models",
-    "first_author": "et al.",
+    "title": "Tex3D: Objects as Attack Surfaces via Adversarial 3D Textures for Vision-Language-Action Models",
+    "first_author": "Chen",
     "venue": "arXiv",
     "year": 2026,
     "paper_url": "https://arxiv.org/abs/2604.01618",
@@ -2715,8 +2715,8 @@
   },
   {
     "id": "flowhijack-2026-vla",
-    "title": "FlowHijack: Backdoor Attacks on Flow-Matching Vision-Language-Action Models",
-    "first_author": "et al.",
+    "title": "FlowHijack: A Dynamics-Aware Backdoor Attack on Flow-Matching Vision-Language-Action Models",
+    "first_author": "An",
     "venue": "arXiv",
     "year": 2026,
     "paper_url": "https://arxiv.org/abs/2604.09651",
@@ -2781,7 +2781,7 @@
   {
     "id": "jailwam-2026",
     "title": "JailWAM: Jailbreaking World Action Models in Robot Control",
-    "first_author": "et al.",
+    "first_author": "Liu",
     "venue": "arXiv",
     "year": 2026,
     "paper_url": "https://arxiv.org/abs/2604.05498",
@@ -2853,7 +2853,7 @@
   {
     "id": "pina-2026",
     "title": "PINA: Prompt Injection Attack against Navigation Agents",
-    "first_author": "et al.",
+    "first_author": "Liu",
     "venue": "arXiv",
     "year": 2026,
     "paper_url": "https://arxiv.org/abs/2601.13612",
@@ -2919,7 +2919,7 @@
   {
     "id": "vlaleaks-2026",
     "title": "VLALeaks: Membership Inference Attacks against Vision-Language-Action Models",
-    "first_author": "et al.",
+    "first_author": "Luan",
     "venue": "arXiv",
     "year": 2026,
     "paper_url": "https://arxiv.org/abs/2606.15165",
@@ -2984,7 +2984,7 @@
   {
     "id": "ripa-2026",
     "title": "RIPA: Sensory-Vector Prompt Injection Attacks on LLM-Controlled ROS 2 Robots",
-    "first_author": "et al.",
+    "first_author": "Dorzhiev",
     "venue": "arXiv",
     "year": 2026,
     "paper_url": "https://arxiv.org/abs/2606.28649",
@@ -11695,11 +11695,73 @@
     "section": "defenses",
     "subsection": "Robust Training and Safety Alignment",
     "scope": "vla",
-    "risks": ["task-reliability"],
-    "threat_model": {"kind":"non-adversarial","lifecycle":["inference"],"mechanism":["distribution-shift"],"surface":["visual-perception","proprioception"],"target":["vla-policy"],"consequence":["task-failure"]},
-    "tags": ["modality-entanglement","sensor-corruption","BEHAVIOR-1K","real-robot"],
-    "evaluation": {"environments":["simulation","real-robot"],"platforms":["BEHAVIOR-1K","Kinova","MELFA ASSISTA"],"models":[],"access":["not-applicable"],"metrics":["task-success-rate"],"physical_validation":true,"curation_status":"abstract-verified"},
-    "defense": {"position":["training-time"],"mechanism":["robust-finetuning"],"protected_surface":["visual-perception","proprioception"],"defends_against":["distribution-shift"],"assumptions":["model-access"],"curation_status":"catalog-derived"}
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "visual-perception",
+        "proprioception"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "modality-entanglement",
+      "sensor-corruption",
+      "BEHAVIOR-1K",
+      "real-robot"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "BEHAVIOR-1K",
+        "Kinova",
+        "MELFA ASSISTA"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "training-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "proprioception"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [
+        "model-access"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "xu-2026-task-functional-perception-distillation-privacy",
@@ -11712,11 +11774,74 @@
     "section": "defenses",
     "subsection": "Privacy-Preserving Perception",
     "scope": "robot-perception",
-    "risks": ["security-privacy","task-reliability"],
-    "threat_model": {"kind":"adversarial","lifecycle":["inference","system"],"mechanism":["sensitive-data-exposure"],"surface":["world-state","context-memory-retrieval"],"target":["private-data"],"consequence":["privacy-leakage"]},
-    "tags": ["privacy","representation-export","AI2-THOR","task-utility"],
-    "evaluation": {"environments":["simulation"],"platforms":["AI2-THOR","ProcTHOR"],"models":[],"access":["not-applicable"],"metrics":["task-success-rate"],"physical_validation":false,"curation_status":"abstract-verified"},
-    "defense": {"position":["inference-time","system-level"],"mechanism":["input-filtering"],"protected_surface":["world-state","context-memory-retrieval"],"defends_against":["sensitive-data-exposure"],"assumptions":["none"],"curation_status":"catalog-derived"}
+    "risks": [
+      "security-privacy",
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "inference",
+        "system"
+      ],
+      "mechanism": [
+        "sensitive-data-exposure"
+      ],
+      "surface": [
+        "world-state",
+        "context-memory-retrieval"
+      ],
+      "target": [
+        "private-data"
+      ],
+      "consequence": [
+        "privacy-leakage"
+      ]
+    },
+    "tags": [
+      "privacy",
+      "representation-export",
+      "AI2-THOR",
+      "task-utility"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "AI2-THOR",
+        "ProcTHOR"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "inference-time",
+        "system-level"
+      ],
+      "mechanism": [
+        "input-filtering"
+      ],
+      "protected_surface": [
+        "world-state",
+        "context-memory-retrieval"
+      ],
+      "defends_against": [
+        "sensitive-data-exposure"
+      ],
+      "assumptions": [
+        "none"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "navasardyan-2026-failbench",
@@ -11729,10 +11854,50 @@
     "section": "benchmarks",
     "subsection": "Evaluation Infrastructure",
     "scope": "robot-manipulation",
-    "risks": ["task-reliability"],
-    "threat_model": {"kind":"evaluation","coverage":{"lifecycles":["inference"],"mechanisms":["execution-error"],"surfaces":["visual-perception","world-state"],"consequences":["task-failure","recovery-failure"]}},
-    "tags": ["failure-detection","VLM-judge","contact-rich-manipulation","real-robot"],
-    "evaluation": {"environments":["simulation","real-robot"],"platforms":["FailBench"],"models":[],"access":["not-applicable"],"metrics":[],"physical_validation":true,"curation_status":"abstract-verified"}
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "execution-error"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "world-state"
+        ],
+        "consequences": [
+          "task-failure",
+          "recovery-failure"
+        ]
+      }
+    },
+    "tags": [
+      "failure-detection",
+      "VLM-judge",
+      "contact-rich-manipulation",
+      "real-robot"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "FailBench"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "krsmanovic-2026-predictive-zonotope-reduction",
@@ -11745,11 +11910,73 @@
     "section": "defenses",
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "robot-policy",
-    "risks": ["task-reliability"],
-    "threat_model": {"kind":"system-failure","lifecycle":["inference"],"mechanism":["uncertainty-miscalibration"],"surface":["proprioception","execution-control"],"target":["runtime-monitor"],"consequence":["recovery-failure"]},
-    "tags": ["runtime-monitoring","zonotope","sensor-uncertainty","formal-verification"],
-    "evaluation": {"environments":["simulation"],"platforms":["MuJoCo","Raspberry Pi 5"],"models":[],"access":["not-applicable"],"metrics":["false-positive-rate"],"physical_validation":false,"curation_status":"abstract-verified"},
-    "defense": {"position":["runtime"],"mechanism":["runtime-monitoring","formal-verification"],"protected_surface":["proprioception","execution-control"],"defends_against":["uncertainty-miscalibration"],"assumptions":["runtime-monitor","safety-constraints"],"curation_status":"catalog-derived"}
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "uncertainty-miscalibration"
+      ],
+      "surface": [
+        "proprioception",
+        "execution-control"
+      ],
+      "target": [
+        "runtime-monitor"
+      ],
+      "consequence": [
+        "recovery-failure"
+      ]
+    },
+    "tags": [
+      "runtime-monitoring",
+      "zonotope",
+      "sensor-uncertainty",
+      "formal-verification"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "MuJoCo",
+        "Raspberry Pi 5"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "false-positive-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "formal-verification"
+      ],
+      "protected_surface": [
+        "proprioception",
+        "execution-control"
+      ],
+      "defends_against": [
+        "uncertainty-miscalibration"
+      ],
+      "assumptions": [
+        "runtime-monitor",
+        "safety-constraints"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "zhang-2026-fwbc-vla",
@@ -11762,11 +11989,73 @@
     "section": "defenses",
     "subsection": "Multimodal Perception and Physical Safeguards",
     "scope": "vla",
-    "risks": ["task-reliability"],
-    "threat_model": {"kind":"system-failure","lifecycle":["inference"],"mechanism":["execution-error"],"surface":["proprioception","action-interface","execution-control"],"target":["vla-policy","robot-executor"],"consequence":["unsafe-motion"]},
-    "tags": ["force-aware-control","contact-rich-manipulation","loco-manipulation","real-robot"],
-    "evaluation": {"environments":["real-robot"],"platforms":["wheeled-legged robot"],"models":[],"access":["not-applicable"],"metrics":["task-success-rate"],"physical_validation":true,"curation_status":"abstract-verified"},
-    "defense": {"position":["inference-time"],"mechanism":["action-shielding"],"protected_surface":["proprioception","action-interface","execution-control"],"defends_against":["execution-error"],"assumptions":["safety-constraints"],"curation_status":"catalog-derived"}
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "proprioception",
+        "action-interface",
+        "execution-control"
+      ],
+      "target": [
+        "vla-policy",
+        "robot-executor"
+      ],
+      "consequence": [
+        "unsafe-motion"
+      ]
+    },
+    "tags": [
+      "force-aware-control",
+      "contact-rich-manipulation",
+      "loco-manipulation",
+      "real-robot"
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [
+        "wheeled-legged robot"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "proprioception",
+        "action-interface",
+        "execution-control"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "safety-constraints"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "ma-2026-risk-informed-world-models",
@@ -11780,9 +12069,44 @@
     "subsection": "Position Papers and Research Agendas",
     "scope": "embodied-agent",
     "risks": [],
-    "threat_model": {"kind":"survey","coverage":{"lifecycles":["inference","system"],"mechanisms":["multiple"],"surfaces":["world-state","reasoning-representation","execution-control"],"consequences":["unsafe-motion","recovery-failure"]}},
-    "tags": ["world-models","epistemic-uncertainty","counterfactual-reasoning","runtime-assurance"],
-    "evaluation": {"environments":[],"platforms":[],"models":[],"access":["not-applicable"],"metrics":[],"physical_validation":null,"curation_status":"abstract-verified"}
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": [
+          "inference",
+          "system"
+        ],
+        "mechanisms": [
+          "multiple"
+        ],
+        "surfaces": [
+          "world-state",
+          "reasoning-representation",
+          "execution-control"
+        ],
+        "consequences": [
+          "unsafe-motion",
+          "recovery-failure"
+        ]
+      }
+    },
+    "tags": [
+      "world-models",
+      "epistemic-uncertainty",
+      "counterfactual-reasoning",
+      "runtime-assurance"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "liu-2026-libero-recover",
@@ -11795,10 +12119,54 @@
     "section": "benchmarks",
     "subsection": "Task and Physical Safety",
     "scope": "vla",
-    "risks": ["task-reliability"],
-    "threat_model": {"kind":"evaluation","coverage":{"lifecycles":["inference"],"mechanisms":["execution-error"],"surfaces":["action-interface","execution-control"],"consequences":["task-failure","recovery-failure"]}},
-    "tags": ["failure-recovery","LIBERO","retry","action-adaptation","object-state-recovery","environmental-recovery"],
-    "evaluation": {"environments":["simulation","real-robot"],"platforms":["LIBERO-Recover"],"models":[],"access":["not-applicable"],"metrics":["recovery-rate"],"physical_validation":true,"curation_status":"abstract-verified"}
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "execution-error"
+        ],
+        "surfaces": [
+          "action-interface",
+          "execution-control"
+        ],
+        "consequences": [
+          "task-failure",
+          "recovery-failure"
+        ]
+      }
+    },
+    "tags": [
+      "failure-recovery",
+      "LIBERO",
+      "retry",
+      "action-adaptation",
+      "object-state-recovery",
+      "environmental-recovery"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "LIBERO-Recover"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "recovery-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "ma-2026-failurespot",
@@ -11812,10 +12180,65 @@
     "subsection": "Failure Detection and Recovery",
     "scope": "vla",
     "risks": [],
-    "threat_model": {"kind":"system-failure","lifecycle":["inference"],"mechanism":["execution-error"],"surface":["action-interface","execution-control"],"target":["runtime-monitor"],"consequence":["recovery-failure"]},
-    "tags": ["failure-detection","timestamp-level","weak-supervision","active-learning","action-chunk"],
-    "evaluation": {"environments":["simulation","real-robot"],"platforms":[],"models":[],"access":["not-applicable"],"metrics":[],"physical_validation":true,"curation_status":"abstract-verified"},
-    "defense": {"position":["runtime"],"mechanism":["runtime-monitoring"],"protected_surface":["action-interface","execution-control"],"defends_against":["execution-error"],"assumptions":["runtime-monitor"],"curation_status":"catalog-derived"}
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "target": [
+        "runtime-monitor"
+      ],
+      "consequence": [
+        "recovery-failure"
+      ]
+    },
+    "tags": [
+      "failure-detection",
+      "timestamp-level",
+      "weak-supervision",
+      "active-learning",
+      "action-chunk"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "ma-2026-tacpac",
@@ -11828,11 +12251,76 @@
     "section": "defenses",
     "subsection": "Multimodal Perception and Physical Safeguards",
     "scope": "robot-policy",
-    "risks": ["task-reliability"],
-    "threat_model": {"kind":"system-failure","lifecycle":["inference"],"mechanism":["execution-error"],"surface":["proprioception","action-interface","execution-control"],"target":["action-generation","robot-executor"],"consequence":["unsafe-motion","task-failure"]},
-    "tags": ["tactile","contact-rich-manipulation","real-time-correction","world-action-model","real-robot"],
-    "evaluation": {"environments":["real-robot"],"platforms":["contact-rich manipulation tasks"],"models":[],"access":["not-applicable"],"metrics":["task-success-rate"],"physical_validation":true,"curation_status":"abstract-verified"},
-    "defense": {"position":["inference-time"],"mechanism":["runtime-monitoring","action-shielding"],"protected_surface":["proprioception","action-interface","execution-control"],"defends_against":["execution-error"],"assumptions":["none"],"curation_status":"catalog-derived"}
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "proprioception",
+        "action-interface",
+        "execution-control"
+      ],
+      "target": [
+        "action-generation",
+        "robot-executor"
+      ],
+      "consequence": [
+        "unsafe-motion",
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "tactile",
+      "contact-rich-manipulation",
+      "real-time-correction",
+      "world-action-model",
+      "real-robot"
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [
+        "contact-rich manipulation tasks"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "proprioception",
+        "action-interface",
+        "execution-control"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "none"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "jeung-2026-robormbench",
@@ -11846,11 +12334,48 @@
     "subsection": "Evaluation Infrastructure",
     "scope": "robot-manipulation",
     "risks": [],
-    "threat_model": {"kind":"evaluation","coverage":{"lifecycles":["inference"],"mechanisms":["instruction-ambiguity"],"surfaces":["user-instruction","reasoning-representation"],"consequences":["recovery-failure"]}},
-    "tags": ["reward-model","VLM-judge","paraphrase-robustness","real-robot","progress-labels"],
-    "evaluation": {"environments":["real-robot"],"platforms":["ROBORMBENCH"],"models":[],"access":["not-applicable"],"metrics":[],"physical_validation":true,"curation_status":"abstract-verified"}
-  }
-  ,{
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "instruction-ambiguity"
+        ],
+        "surfaces": [
+          "user-instruction",
+          "reasoning-representation"
+        ],
+        "consequences": [
+          "recovery-failure"
+        ]
+      }
+    },
+    "tags": [
+      "reward-model",
+      "VLM-judge",
+      "paraphrase-robustness",
+      "real-robot",
+      "progress-labels"
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [
+        "ROBORMBENCH"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
     "id": "li-2026-safemem",
     "title": "Safe Task Planning with Long-Term Graph Memory for Embodied Agents",
     "first_author": "Li",
@@ -11861,31 +12386,77 @@
     "section": "defenses",
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "embodied-agent",
-    "risks": ["task-reliability", "physical-safety"],
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
     "threat_model": {
       "kind": "non-adversarial",
-      "lifecycle": ["inference"],
-      "mechanism": ["perception-error"],
-      "surface": ["world-state", "task-planning"],
-      "target": ["task-planner"],
-      "consequence": ["unsafe-success", "policy-violation"]
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "perception-error"
+      ],
+      "surface": [
+        "world-state",
+        "task-planning"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "unsafe-success",
+        "policy-violation"
+      ]
     },
-    "tags": ["safe-task-planning", "graph-memory", "partial-observability", "risk-prediction", "replanning", "IS-Bench"],
+    "tags": [
+      "safe-task-planning",
+      "graph-memory",
+      "partial-observability",
+      "risk-prediction",
+      "replanning",
+      "IS-Bench"
+    ],
     "evaluation": {
-      "environments": ["simulation", "real-robot"],
-      "platforms": ["IS-Bench", "Franka Panda"],
-      "models": ["GPT-4o"],
-      "access": ["black-box"],
-      "metrics": ["task-success-rate", "constraint-violation-rate"],
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "IS-Bench",
+        "Franka Panda"
+      ],
+      "models": [
+        "GPT-4o"
+      ],
+      "access": [
+        "black-box"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "constraint-violation-rate"
+      ],
       "physical_validation": true,
       "curation_status": "paper-verified"
     },
     "defense": {
-      "position": ["runtime"],
-      "mechanism": ["runtime-monitoring"],
-      "protected_surface": ["world-state", "task-planning"],
-      "defends_against": ["perception-error"],
-      "assumptions": ["runtime-monitor"],
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "world-state",
+        "task-planning"
+      ],
+      "defends_against": [
+        "perception-error"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
       "curation_status": "catalog-derived"
     }
   },
@@ -11900,10 +12471,64 @@
     "section": "inference-attacks",
     "subsection": "Planning, Action, and Trajectory Manipulation",
     "scope": "vla",
-    "risks": ["task-reliability", "security-privacy"],
-    "threat_model": {"kind":"adversarial","lifecycle":["inference"],"mechanism":["typographic-injection"],"surface":["user-instruction"],"target":["vla-policy"],"consequence":["targeted-action","task-failure"]},
-    "tags": ["command-preserving-attack","trajectory-redirection","prompt-perturbation","LIBERO","SO-100","CoRL-2026"],
-    "evaluation": {"environments":["simulation","real-robot"],"platforms":["LIBERO","SO-100"],"models":["OpenVLA","MolmoAct","pi0.5","SmolVLA","GR00T-N1"],"access":["black-box"],"metrics":["task-success-rate","attack-success-rate","clean-task-success-rate"],"physical_validation":true,"curation_status":"paper-verified"}
+    "risks": [
+      "task-reliability",
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "typographic-injection"
+      ],
+      "surface": [
+        "user-instruction"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "targeted-action",
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "command-preserving-attack",
+      "trajectory-redirection",
+      "prompt-perturbation",
+      "LIBERO",
+      "SO-100",
+      "CoRL-2026"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "LIBERO",
+        "SO-100"
+      ],
+      "models": [
+        "OpenVLA",
+        "MolmoAct",
+        "pi0.5",
+        "SmolVLA",
+        "GR00T-N1"
+      ],
+      "access": [
+        "black-box"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    }
   },
   {
     "id": "shen-2026-h2int",
@@ -11916,10 +12541,58 @@
     "section": "ood-generalization",
     "subsection": "OOD and Generalization Benchmarks",
     "scope": "robot-navigation",
-    "risks": ["task-reliability", "physical-safety"],
-    "threat_model": {"kind":"non-adversarial","lifecycle":["inference"],"mechanism":["distribution-shift"],"surface":["world-state"],"target":["robot-executor"],"consequence":["collision","task-failure"]},
-    "tags": ["social-navigation","crowd-navigation","human-robot-interaction","partial-observability","response-shift","real-robot"],
-    "evaluation": {"environments":["simulation","real-robot"],"platforms":["CrowdNav Circle Crossing"],"models":["H2INT"],"access":["not-applicable"],"metrics":["task-success-rate","collision-rate"],"physical_validation":true,"curation_status":"paper-verified"}
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "world-state"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "collision",
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "social-navigation",
+      "crowd-navigation",
+      "human-robot-interaction",
+      "partial-observability",
+      "response-shift",
+      "real-robot"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "CrowdNav Circle Crossing"
+      ],
+      "models": [
+        "H2INT"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "collision-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    }
   },
   {
     "id": "ma-2026-actsafeguard",
@@ -11932,10 +12605,56 @@
     "section": "defenses",
     "subsection": "Safety-Aware Policy Learning",
     "scope": "vla",
-    "risks": ["task-reliability", "physical-safety"],
-    "threat_model": {"kind":"system-failure","lifecycle":["inference"],"mechanism":["constraint-violation"],"surface":["action-interface","execution-control"],"target":["vla-policy","robot-executor"],"consequence":["unsafe-motion"]},
-    "tags": ["flow-matching", "training-aligned-safety", "action-feasibility", "pi0.5", "Fast-WAM"],
-    "evaluation": {"environments":["simulation"],"platforms":[],"models":["pi0.5","Fast-WAM"],"access":["not-applicable"],"metrics":["task-success-rate","constraint-violation-rate"],"physical_validation":false,"curation_status":"abstract-verified"}
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "constraint-violation"
+      ],
+      "surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "target": [
+        "vla-policy",
+        "robot-executor"
+      ],
+      "consequence": [
+        "unsafe-motion"
+      ]
+    },
+    "tags": [
+      "flow-matching",
+      "training-aligned-safety",
+      "action-feasibility",
+      "pi0.5",
+      "Fast-WAM"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [],
+      "models": [
+        "pi0.5",
+        "Fast-WAM"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "li-2026-reacthuman",
@@ -11948,10 +12667,56 @@
     "section": "benchmarks",
     "subsection": "Safety and Hazard Benchmarks",
     "scope": "embodied-agent",
-    "risks": ["physical-safety"],
-    "threat_model": {"kind":"evaluation","coverage":{"lifecycles":["inference"],"mechanisms":["unsafe-policy-behavior","distribution-shift"],"surfaces":["visual-perception","world-state","action-interface"],"consequences":["unsafe-motion","physical-damage"]}},
-    "tags": ["reactive-safety", "physical-grounding", "household-hazards", "MLLM", "rigid-body-simulation"],
-    "evaluation": {"environments":["simulation"],"platforms":["ReactHuman"],"models":["embodied MLLMs"],"access":["black-box"],"metrics":["constraint-violation-rate"],"physical_validation":false,"curation_status":"abstract-verified"}
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "unsafe-policy-behavior",
+          "distribution-shift"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "world-state",
+          "action-interface"
+        ],
+        "consequences": [
+          "unsafe-motion",
+          "physical-damage"
+        ]
+      }
+    },
+    "tags": [
+      "reactive-safety",
+      "physical-grounding",
+      "household-hazards",
+      "MLLM",
+      "rigid-body-simulation"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "ReactHuman"
+      ],
+      "models": [
+        "embodied MLLMs"
+      ],
+      "access": [
+        "black-box"
+      ],
+      "metrics": [
+        "constraint-violation-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "wang-2026-obstadiff",
@@ -11964,10 +12729,57 @@
     "section": "defenses",
     "subsection": "Safety-Aware Policy Learning",
     "scope": "robot-manipulation",
-    "risks": ["task-reliability", "physical-safety"],
-    "threat_model": {"kind":"non-adversarial","lifecycle":["inference"],"mechanism":["distribution-shift"],"surface":["visual-perception","execution-control"],"target":["robot-executor"],"consequence":["collision","task-failure"]},
-    "tags": ["obstacle-aware", "diffusion-policy", "clutter", "greenhouse", "CoRL-2026"],
-    "evaluation": {"environments":["real-robot"],"platforms":["greenhouse manipulation"],"models":["diffusion policy"],"access":["not-applicable"],"metrics":["task-success-rate","collision-rate"],"physical_validation":true,"curation_status":"abstract-verified"}
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "visual-perception",
+        "execution-control"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "collision",
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "obstacle-aware",
+      "diffusion-policy",
+      "clutter",
+      "greenhouse",
+      "CoRL-2026"
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [
+        "greenhouse manipulation"
+      ],
+      "models": [
+        "diffusion policy"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "collision-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "haque-2026-dist-gprl",
@@ -11980,10 +12792,59 @@
     "section": "defenses",
     "subsection": "Safety-Aware Policy Learning",
     "scope": "robot-policy",
-    "risks": ["task-reliability", "physical-safety"],
-    "threat_model": {"kind":"system-failure","lifecycle":["inference"],"mechanism":["constraint-violation","distribution-shift"],"surface":["task-planning","execution-control"],"target":["robot-executor"],"consequence":["collision","unsafe-motion"]},
-    "tags": ["Dist-GPRL", "skill-adaptation", "dynamic-obstacles", "Gaussian-process", "real-robot"],
-    "evaluation": {"environments":["simulation","real-robot"],"platforms":["dynamic object manipulation"],"models":["reinforcement-learning policy"],"access":["not-applicable"],"metrics":["task-success-rate","collision-rate"],"physical_validation":true,"curation_status":"abstract-verified"}
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "constraint-violation",
+        "distribution-shift"
+      ],
+      "surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "collision",
+        "unsafe-motion"
+      ]
+    },
+    "tags": [
+      "Dist-GPRL",
+      "skill-adaptation",
+      "dynamic-obstacles",
+      "Gaussian-process",
+      "real-robot"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "dynamic object manipulation"
+      ],
+      "models": [
+        "reinforcement-learning policy"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "collision-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "ghalan-2026-testing-between-test-cases",
@@ -11996,10 +12857,54 @@
     "section": "benchmarks",
     "subsection": "Evaluation Infrastructure",
     "scope": "autonomous-driving",
-    "risks": ["physical-safety"],
-    "threat_model": {"kind":"non-adversarial","lifecycle":["inference"],"mechanism":["distribution-shift"],"surface":["visual-perception","execution-control"],"target":["robot-executor"],"consequence":["unsafe-motion"]},
-    "tags": ["formal-verification", "bound-propagation", "CARLA", "lane-departure", "unseen-conditions"],
-    "evaluation": {"environments":["simulation"],"platforms":["CARLA"],"models":["end-to-end steering networks"],"access":["not-applicable"],"metrics":["constraint-violation-rate"],"physical_validation":false,"curation_status":"abstract-verified"}
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "visual-perception",
+        "execution-control"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "unsafe-motion"
+      ]
+    },
+    "tags": [
+      "formal-verification",
+      "bound-propagation",
+      "CARLA",
+      "lane-departure",
+      "unseen-conditions"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "CARLA"
+      ],
+      "models": [
+        "end-to-end steering networks"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "constraint-violation-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "yan-2026-harness-robotic-os",
@@ -12012,12 +12917,58 @@
     "section": "defenses",
     "subsection": "System and Communication Defenses",
     "scope": "embodied-agent",
-    "risks": ["task-reliability"],
-    "threat_model": {"kind":"system-failure","lifecycle":["inference","system"],"mechanism":["execution-error"],"surface":["context-memory-retrieval","execution-control"],"target":["shared-system-state","robot-executor"],"consequence":["task-failure"]},
-    "tags": ["embodied-runtime", "safety-gated-update", "memory", "quadruped-inspection", "latency"],
-    "evaluation": {"environments":["real-robot"],"platforms":["Vbot quadruped"],"models":["Qwen3-VL"],"access":["not-applicable"],"metrics":["task-success-rate"],"physical_validation":true,"curation_status":"abstract-verified"}
-  }
-  ,{
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference",
+        "system"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "context-memory-retrieval",
+        "execution-control"
+      ],
+      "target": [
+        "shared-system-state",
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "embodied-runtime",
+      "safety-gated-update",
+      "memory",
+      "quadruped-inspection",
+      "latency"
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [
+        "Vbot quadruped"
+      ],
+      "models": [
+        "Qwen3-VL"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
     "id": "srivastava-2026-behavioral-valuation-hazardous-exploration",
     "title": "When Information is Worth the Risk: Behavioral Valuation for Hazardous Robotic Exploration",
     "first_author": "Srivastava",
@@ -12028,12 +12979,61 @@
     "section": "defenses",
     "subsection": "Safety-Aware Policy Learning",
     "scope": "embodied-agent",
-    "risks": ["task-reliability", "physical-safety"],
-    "threat_model": {"kind":"non-adversarial","lifecycle":["inference"],"mechanism":["uncertainty-miscalibration"],"surface":["world-state","task-planning","execution-control"],"target":["task-planner","robot-executor"],"consequence":["task-failure","physical-damage"]},
-    "tags": ["hazardous-exploration", "risk-sensitive-planning", "information-gain", "robot-loss", "ISRR-2026"],
-    "evaluation": {"environments":["simulation"],"platforms":["failure-truncated grid world"],"models":["informative planner"],"access":["not-applicable"],"metrics":["physical-damage-rate","task-success-rate"],"physical_validation":false,"curation_status":"abstract-verified"}
-  }
-  ,{
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "uncertainty-miscalibration"
+      ],
+      "surface": [
+        "world-state",
+        "task-planning",
+        "execution-control"
+      ],
+      "target": [
+        "task-planner",
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure",
+        "physical-damage"
+      ]
+    },
+    "tags": [
+      "hazardous-exploration",
+      "risk-sensitive-planning",
+      "information-gain",
+      "robot-loss",
+      "ISRR-2026"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "failure-truncated grid world"
+      ],
+      "models": [
+        "informative planner"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "physical-damage-rate",
+        "task-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
     "id": "ma-2026-guardrailed-meta-agent-loops",
     "title": "Guardrailed Meta-Agent Loops: Stress-Testing Policy Pinning, Budget Bounds, and Crash Recovery",
     "first_author": "Ma",
@@ -12044,10 +13044,58 @@
     "section": "defenses",
     "subsection": "System and Communication Defenses",
     "scope": "embodied-agent",
-    "risks": ["task-reliability"],
-    "threat_model": {"kind":"evaluation","coverage":{"lifecycles":["inference","system"],"mechanisms":["execution-error","constraint-violation"],"surfaces":["task-planning","execution-control","middleware-network"],"consequences":["recovery-failure","availability-loss"]}},
-    "tags": ["self-improving-agents", "policy-pinning", "compute-budget", "crash-recovery", "trace-integrity"],
-    "evaluation": {"environments":["simulation"],"platforms":["GuardrailLoop"],"models":["meta-agent workflow"],"access":["not-applicable"],"metrics":["task-success-rate","recovery-rate"],"physical_validation":false,"curation_status":"abstract-verified"}
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference",
+          "system"
+        ],
+        "mechanisms": [
+          "execution-error",
+          "constraint-violation"
+        ],
+        "surfaces": [
+          "task-planning",
+          "execution-control",
+          "middleware-network"
+        ],
+        "consequences": [
+          "recovery-failure",
+          "availability-loss"
+        ]
+      }
+    },
+    "tags": [
+      "self-improving-agents",
+      "policy-pinning",
+      "compute-budget",
+      "crash-recovery",
+      "trace-integrity"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "GuardrailLoop"
+      ],
+      "models": [
+        "meta-agent workflow"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "jiang-2026-embodied-benchforge",
@@ -12061,10 +13109,68 @@
     "subsection": "Evaluation Infrastructure",
     "scope": "embodied-agent",
     "risks": [],
-    "threat_model": {"kind":"evaluation","coverage":{"lifecycles":["inference","system"],"mechanisms":["execution-error","perception-error"],"surfaces":["visual-perception","world-state","task-planning","execution-control"],"consequences":["task-failure","recovery-failure"]}},
-    "tags": ["benchmark-construction", "artifact-verification", "provenance", "closed-loop-synthesis", "repair"],
-    "evaluation": {"environments":["offline-dataset","simulation"],"platforms":["Embodied-BenchForge"],"models":["MLLMs","embodied agents"],"access":["black-box"],"metrics":[],"physical_validation":false,"curation_status":"abstract-verified"},
-    "benchmark": {"evaluates":["task-reliability"],"shift_types":["none"],"environment":"simulation","base_platforms":[],"public_data":null,"leaderboard":null,"curation_status":"catalog-derived"}
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference",
+          "system"
+        ],
+        "mechanisms": [
+          "execution-error",
+          "perception-error"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "world-state",
+          "task-planning",
+          "execution-control"
+        ],
+        "consequences": [
+          "task-failure",
+          "recovery-failure"
+        ]
+      }
+    },
+    "tags": [
+      "benchmark-construction",
+      "artifact-verification",
+      "provenance",
+      "closed-loop-synthesis",
+      "repair"
+    ],
+    "evaluation": {
+      "environments": [
+        "offline-dataset",
+        "simulation"
+      ],
+      "platforms": [
+        "Embodied-BenchForge"
+      ],
+      "models": [
+        "MLLMs",
+        "embodied agents"
+      ],
+      "access": [
+        "black-box"
+      ],
+      "metrics": [],
+      "physical_validation": false,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "task-reliability"
+      ],
+      "shift_types": [
+        "none"
+      ],
+      "environment": "simulation",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "sinha-2026-rethinking-safety-generalist-robots",
@@ -12078,8 +13184,34 @@
     "subsection": "Position Papers and Research Agendas",
     "scope": "embodied-agent",
     "risks": [],
-    "threat_model": {"kind":"survey","coverage":{"lifecycles":["training","inference","system"],"mechanisms":["multiple"],"surfaces":["user-instruction","physical-semantic-environment","visual-perception","task-planning","execution-control"],"consequences":[]}},
-    "tags": ["position-paper", "generalist-robots", "embodied-ai-safety", "contextual-safety", "lifecycle"]
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": [
+          "training",
+          "inference",
+          "system"
+        ],
+        "mechanisms": [
+          "multiple"
+        ],
+        "surfaces": [
+          "user-instruction",
+          "physical-semantic-environment",
+          "visual-perception",
+          "task-planning",
+          "execution-control"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "position-paper",
+      "generalist-robots",
+      "embodied-ai-safety",
+      "contextual-safety",
+      "lifecycle"
+    ]
   },
   {
     "id": "eide-2026-arc-autonomous-robotics-compliance",
@@ -12093,8 +13225,32 @@
     "subsection": "Position Papers and Research Agendas",
     "scope": "embodied-agent",
     "risks": [],
-    "threat_model": {"kind":"survey","coverage":{"lifecycles":["inference","system"],"mechanisms":["multiple"],"surfaces":["model-supply-chain","task-planning","execution-control","middleware-network"],"consequences":[]}},
-    "tags": ["governance", "compliance", "deployment-assurance", "certification", "operational-authorization"]
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": [
+          "inference",
+          "system"
+        ],
+        "mechanisms": [
+          "multiple"
+        ],
+        "surfaces": [
+          "model-supply-chain",
+          "task-planning",
+          "execution-control",
+          "middleware-network"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "governance",
+      "compliance",
+      "deployment-assurance",
+      "certification",
+      "operational-authorization"
+    ]
   },
   {
     "id": "qu-2026-ressafe-residual-safety-filtering-humanoids",
@@ -12107,31 +13263,73 @@
     "section": "defenses",
     "subsection": "Action Shielding, Fail-Safes, and Recovery",
     "scope": "embodied-agent",
-    "risks": ["physical-safety"],
+    "risks": [
+      "physical-safety"
+    ],
     "threat_model": {
       "kind": "system-failure",
-      "lifecycle": ["inference"],
-      "mechanism": ["unsafe-policy-behavior"],
-      "surface": ["action-interface", "execution-control"],
-      "target": ["robot-executor"],
-      "consequence": ["unsafe-motion"]
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "unsafe-policy-behavior"
+      ],
+      "surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "unsafe-motion"
+      ]
     },
-    "tags": ["humanoid", "residual-reinforcement-learning", "safety-filter", "sim-to-real", "payload-disturbance"],
+    "tags": [
+      "humanoid",
+      "residual-reinforcement-learning",
+      "safety-filter",
+      "sim-to-real",
+      "payload-disturbance"
+    ],
     "evaluation": {
-      "environments": ["simulation", "real-robot"],
-      "platforms": ["IsaacGym", "Unitree G1"],
-      "models": ["reference motion policy"],
-      "access": ["not-applicable"],
-      "metrics": ["constraint-violation-rate"],
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "IsaacGym",
+        "Unitree G1"
+      ],
+      "models": [
+        "reference motion policy"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "constraint-violation-rate"
+      ],
       "physical_validation": true,
       "curation_status": "paper-verified"
     },
     "defense": {
-      "position": ["inference-time"],
-      "mechanism": ["action-shielding"],
-      "protected_surface": ["action-interface", "execution-control"],
-      "defends_against": ["unsafe-policy-behavior"],
-      "assumptions": ["safety-constraints"],
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "defends_against": [
+        "unsafe-policy-behavior"
+      ],
+      "assumptions": [
+        "safety-constraints"
+      ],
       "curation_status": "catalog-derived"
     }
   },
@@ -12146,10 +13344,58 @@
     "section": "training-attacks",
     "subsection": "Data, Model, and Supply-Chain Attacks",
     "scope": "robot-policy",
-    "risks": ["physical-safety", "security-privacy"],
-    "threat_model": {"kind":"adversarial","lifecycle":["training","inference"],"mechanism":["data-poisoning"],"surface":["model-supply-chain"],"target":["robot-executor","vla-policy"],"consequence":["unsafe-motion","task-failure"]},
-    "tags": ["collision-mesh-poisoning", "3D-asset-supply-chain", "visual-collision-gap", "sim-to-real"],
-    "evaluation": {"environments":["simulation","real-robot"],"platforms":["robotic manipulation simulators"],"models":["learned manipulation policies"],"access":["white-box"],"metrics":["attack-success-rate","task-success-rate"],"physical_validation":true,"curation_status":"abstract-verified"}
+    "risks": [
+      "physical-safety",
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "data-poisoning"
+      ],
+      "surface": [
+        "model-supply-chain"
+      ],
+      "target": [
+        "robot-executor",
+        "vla-policy"
+      ],
+      "consequence": [
+        "unsafe-motion",
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "collision-mesh-poisoning",
+      "3D-asset-supply-chain",
+      "visual-collision-gap",
+      "sim-to-real"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "robotic manipulation simulators"
+      ],
+      "models": [
+        "learned manipulation policies"
+      ],
+      "access": [
+        "white-box"
+      ],
+      "metrics": [
+        "attack-success-rate",
+        "task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "schneider-2026-rafail-relationship-aware-failure-detection",
@@ -12163,9 +13409,50 @@
     "subsection": "Failure Detection and Recovery",
     "scope": "robot-policy",
     "risks": [],
-    "threat_model": {"kind":"system-failure","lifecycle":["inference"],"mechanism":["execution-error"],"surface":["world-state","visual-perception"],"target":["runtime-monitor"],"consequence":["recovery-failure"]},
-    "tags": ["failure-detection", "relationship-aware", "OOD-detection", "point-cloud", "real-world"],
-    "evaluation": {"environments":["real-robot"],"platforms":["UR10e","Azure Kinect"],"models":["imitation-learning policy"],"access":["not-applicable"],"metrics":[],"physical_validation":true,"curation_status":"paper-verified"}
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "world-state",
+        "visual-perception"
+      ],
+      "target": [
+        "runtime-monitor"
+      ],
+      "consequence": [
+        "recovery-failure"
+      ]
+    },
+    "tags": [
+      "failure-detection",
+      "relationship-aware",
+      "OOD-detection",
+      "point-cloud",
+      "real-world"
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [
+        "UR10e",
+        "Azure Kinect"
+      ],
+      "models": [
+        "imitation-learning policy"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    }
   },
   {
     "id": "omahoney-2026-detaug-obstacle-avoidance",
@@ -12178,10 +13465,58 @@
     "section": "defenses",
     "subsection": "Action Shielding, Fail-Safes, and Recovery",
     "scope": "robot-policy",
-    "risks": ["task-reliability", "physical-safety"],
-    "threat_model": {"kind":"non-adversarial","lifecycle":["inference"],"mechanism":["distribution-shift"],"surface":["world-state","execution-control"],"target":["robot-executor"],"consequence":["collision","task-failure"]},
-    "tags": ["obstacle-avoidance", "trajectory-augmentation", "SafeLIBERO", "collision-free-success", "real-hardware"],
-    "evaluation": {"environments":["simulation","real-robot"],"platforms":["robotic manipulation hardware"],"models":["policy trained on free-space trajectories"],"access":["not-applicable"],"metrics":["collision-rate","task-success-rate"],"physical_validation":true,"curation_status":"abstract-verified"}
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "world-state",
+        "execution-control"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "collision",
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "obstacle-avoidance",
+      "trajectory-augmentation",
+      "SafeLIBERO",
+      "collision-free-success",
+      "real-hardware"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "robotic manipulation hardware"
+      ],
+      "models": [
+        "policy trained on free-space trajectories"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "collision-rate",
+        "task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "morton-2026-elastiqp-constrained-robot-control",
@@ -12194,11 +13529,71 @@
     "section": "defenses",
     "subsection": "Action Shielding, Fail-Safes, and Recovery",
     "scope": "robot-policy",
-    "risks": ["physical-safety"],
-    "threat_model": {"kind":"system-failure","lifecycle":["inference"],"mechanism":["constraint-violation"],"surface":["execution-control"],"target":["robot-executor"],"consequence":["unsafe-motion"]},
-    "tags": ["QP-solver", "constraint-handling", "always-feasible", "runtime-control", "open-source"],
-    "evaluation": {"environments":["simulation"],"platforms":["robot control benchmarks"],"models":["constrained QP controllers"],"access":["not-applicable"],"metrics":["constraint-violation-rate"],"physical_validation":false,"curation_status":"paper-verified"},
-    "defense": {"position":["inference-time"],"mechanism":["action-shielding"],"protected_surface":["execution-control"],"defends_against":["constraint-violation"],"assumptions":["safety-constraints"],"curation_status":"catalog-derived"}
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "constraint-violation"
+      ],
+      "surface": [
+        "execution-control"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "unsafe-motion"
+      ]
+    },
+    "tags": [
+      "QP-solver",
+      "constraint-handling",
+      "always-feasible",
+      "runtime-control",
+      "open-source"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "robot control benchmarks"
+      ],
+      "models": [
+        "constrained QP controllers"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "constraint-violation-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "execution-control"
+      ],
+      "defends_against": [
+        "constraint-violation"
+      ],
+      "assumptions": [
+        "safety-constraints"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "huang-2026-safemanip",
@@ -12211,11 +13606,79 @@
     "section": "benchmarks",
     "subsection": "Task and Physical Safety",
     "scope": "vla",
-    "risks": ["task-reliability", "physical-safety"],
-    "threat_model": {"kind":"evaluation","coverage":{"lifecycles":["inference"],"mechanisms":["constraint-violation","execution-error"],"surfaces":["world-state","action-interface","execution-control"],"consequences":["unsafe-success","collision","recovery-failure"]}},
-    "tags": ["benchmark", "temporal-safety", "LTLf", "DFA-monitor", "RoboCasa365", "safe-success"],
-    "evaluation": {"environments":["simulation"],"platforms":["RoboCasa365"],"models":["π0","π0.5","GR00T N1.5"],"access":["not-applicable"],"metrics":["task-success-rate","constraint-violation-rate","physical-damage-rate"],"physical_validation":false,"curation_status":"paper-verified"},
-    "benchmark": {"evaluates":["physical-safety","task-reliability"],"shift_types":["none"],"environment":"simulation","base_platforms":["RoboCasa365"],"public_data":true,"leaderboard":null,"curation_status":"catalog-derived"}
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "constraint-violation",
+          "execution-error"
+        ],
+        "surfaces": [
+          "world-state",
+          "action-interface",
+          "execution-control"
+        ],
+        "consequences": [
+          "unsafe-success",
+          "collision",
+          "recovery-failure"
+        ]
+      }
+    },
+    "tags": [
+      "benchmark",
+      "temporal-safety",
+      "LTLf",
+      "DFA-monitor",
+      "RoboCasa365",
+      "safe-success"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "RoboCasa365"
+      ],
+      "models": [
+        "pi0",
+        "pi0.5",
+        "GR00T N1.5"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "constraint-violation-rate",
+        "physical-damage-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "physical-safety",
+        "task-reliability"
+      ],
+      "shift_types": [
+        "none"
+      ],
+      "environment": "simulation",
+      "base_platforms": [
+        "RoboCasa365"
+      ],
+      "public_data": true,
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "xu-2026-obstacle-aware-harness-safe-manipulation",
@@ -12228,10 +13691,60 @@
     "section": "defenses",
     "subsection": "Action Shielding, Fail-Safes, and Recovery",
     "scope": "embodied-agent",
-    "risks": ["task-reliability", "physical-safety"],
-    "threat_model": {"kind":"system-failure","lifecycle":["inference"],"mechanism":["planning-error","execution-error"],"surface":["task-planning","execution-control"],"target":["task-planner","robot-executor"],"consequence":["collision","task-failure"]},
-    "tags": ["coding-agent", "SafeHarness", "SafeLIBERO", "obstacle-avoidance", "replanning", "contact-execution"],
-    "evaluation": {"environments":["simulation"],"platforms":["SafeLIBERO"],"models":["coding agent with GPT-6"],"access":["not-applicable"],"metrics":["task-success-rate","collision-rate"],"physical_validation":false,"curation_status":"paper-verified"}
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "planning-error",
+        "execution-error"
+      ],
+      "surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "target": [
+        "task-planner",
+        "robot-executor"
+      ],
+      "consequence": [
+        "collision",
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "coding-agent",
+      "SafeHarness",
+      "SafeLIBERO",
+      "obstacle-avoidance",
+      "replanning",
+      "contact-execution"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "SafeLIBERO"
+      ],
+      "models": [
+        "coding agent with GPT-6"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "collision-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    }
   },
   {
     "id": "chauhan-2026-barrierformer",
@@ -12244,10 +13757,56 @@
     "section": "defenses",
     "subsection": "Action Shielding, Fail-Safes, and Recovery",
     "scope": "robot-policy",
-    "risks": ["task-reliability", "physical-safety"],
-    "threat_model": {"kind":"system-failure","lifecycle":["inference"],"mechanism":["constraint-violation"],"surface":["execution-control"],"target":["robot-executor"],"consequence":["collision","task-failure"]},
-    "tags": ["control-barrier-function", "predictive-safety", "transformer-policy", "navigation", "low-latency"],
-    "evaluation": {"environments":["simulation"],"platforms":["2D and 3D dynamical systems"],"models":["BarrierFormer"],"access":["not-applicable"],"metrics":["collision-rate","task-success-rate"],"physical_validation":false,"curation_status":"paper-verified"}
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "constraint-violation"
+      ],
+      "surface": [
+        "execution-control"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "collision",
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "control-barrier-function",
+      "predictive-safety",
+      "transformer-policy",
+      "navigation",
+      "low-latency"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "2D and 3D dynamical systems"
+      ],
+      "models": [
+        "BarrierFormer"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "collision-rate",
+        "task-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    }
   },
   {
     "id": "cai-2026-hyper-redundant-safety-control",
@@ -12260,10 +13819,55 @@
     "section": "defenses",
     "subsection": "Action Shielding, Fail-Safes, and Recovery",
     "scope": "robot-policy",
-    "risks": ["physical-safety"],
-    "threat_model": {"kind":"system-failure","lifecycle":["inference"],"mechanism":["constraint-violation"],"surface":["execution-control"],"target":["robot-executor"],"consequence":["collision","unsafe-motion"]},
-    "tags": ["control-barrier-function", "whole-body-safety", "hyper-redundant-robot", "adaptive-weighting", "real-robot"],
-    "evaluation": {"environments":["simulation","real-robot"],"platforms":["36-body hyper-redundant robot"],"models":["weighted CBF controller"],"access":["not-applicable"],"metrics":["collision-rate"],"physical_validation":true,"curation_status":"paper-verified"}
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "constraint-violation"
+      ],
+      "surface": [
+        "execution-control"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "collision",
+        "unsafe-motion"
+      ]
+    },
+    "tags": [
+      "control-barrier-function",
+      "whole-body-safety",
+      "hyper-redundant-robot",
+      "adaptive-weighting",
+      "real-robot"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "36-body hyper-redundant robot"
+      ],
+      "models": [
+        "weighted CBF controller"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "collision-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    }
   },
   {
     "id": "baral-2026-marginal-calibration-compose",
@@ -12276,10 +13880,53 @@
     "section": "benchmarks",
     "subsection": "Robustness and Uncertainty Evaluation",
     "scope": "robot-policy",
-    "risks": ["physical-safety"],
-    "threat_model": {"kind":"non-adversarial","lifecycle":["inference"],"mechanism":["uncertainty-miscalibration"],"surface":["world-state"],"target":["robot-executor"],"consequence":["collision"]},
-    "tags": ["uncertainty-calibration", "hidden-dependence", "modular-autonomy", "collision-risk", "system-level-evaluation"],
-    "evaluation": {"environments":["simulation"],"platforms":["moving-obstacle navigation"],"models":["modular position and velocity estimators"],"access":["not-applicable"],"metrics":["collision-rate"],"physical_validation":false,"curation_status":"paper-verified"}
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "uncertainty-miscalibration"
+      ],
+      "surface": [
+        "world-state"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "collision"
+      ]
+    },
+    "tags": [
+      "uncertainty-calibration",
+      "hidden-dependence",
+      "modular-autonomy",
+      "collision-risk",
+      "system-level-evaluation"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "moving-obstacle navigation"
+      ],
+      "models": [
+        "modular position and velocity estimators"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "collision-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    }
   },
   {
     "id": "luo-2026-safestage",
@@ -12292,11 +13939,79 @@
     "section": "benchmarks",
     "subsection": "Task and Physical Safety",
     "scope": "vla",
-    "risks": ["task-reliability", "physical-safety"],
-    "threat_model": {"kind":"evaluation","coverage":{"lifecycles":["inference"],"mechanisms":["constraint-violation","execution-error"],"surfaces":["world-state","action-interface","execution-control"],"consequences":["unsafe-success","collision","unsafe-motion"]}},
-    "tags": ["benchmark", "lifecycle-safety", "initial-state-hazard", "execution-time-safety", "final-state-hazard", "unsafe-success"],
-    "evaluation": {"environments":["simulation"],"platforms":["SafeStage"],"models":["direct-action VLA policies","world-model-based policies"],"access":["not-applicable"],"metrics":["task-success-rate","physical-damage-rate","collision-rate","constraint-violation-rate"],"physical_validation":false,"curation_status":"paper-verified"},
-    "benchmark": {"evaluates":["physical-safety","task-reliability"],"shift_types":["none"],"environment":"simulation","base_platforms":["SafeStage"],"public_data":true,"leaderboard":null,"curation_status":"catalog-derived"}
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "constraint-violation",
+          "execution-error"
+        ],
+        "surfaces": [
+          "world-state",
+          "action-interface",
+          "execution-control"
+        ],
+        "consequences": [
+          "unsafe-success",
+          "collision",
+          "unsafe-motion"
+        ]
+      }
+    },
+    "tags": [
+      "benchmark",
+      "lifecycle-safety",
+      "initial-state-hazard",
+      "execution-time-safety",
+      "final-state-hazard",
+      "unsafe-success"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "SafeStage"
+      ],
+      "models": [
+        "direct-action VLA policies",
+        "world-model-based policies"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "physical-damage-rate",
+        "collision-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "physical-safety",
+        "task-reliability"
+      ],
+      "shift_types": [
+        "none"
+      ],
+      "environment": "simulation",
+      "base_platforms": [
+        "SafeStage"
+      ],
+      "public_data": true,
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "lou-2026-safeloop",
@@ -12309,11 +14024,90 @@
     "section": "defenses",
     "subsection": "Failure Detection and Recovery",
     "scope": "vla",
-    "risks": ["task-reliability", "physical-safety"],
-    "threat_model": {"kind":"system-failure","lifecycle":["inference"],"mechanism":["execution-error"],"surface":["visual-perception","proprioception","action-interface","execution-control"],"target":["runtime-monitor","robot-executor"],"consequence":["collision","physical-damage","recovery-failure"]},
-    "tags": ["risk-prediction", "time-to-hazard", "rollback", "safe-waypoint", "frozen-VLA", "real-robot"],
-    "evaluation": {"environments":["simulation","real-robot"],"platforms":["LIBERO","three real-robot manipulation tasks"],"models":["Pi0","OpenVLA-OFT","Pi0.5"],"access":["not-applicable"],"metrics":["task-success-rate","collision-rate","physical-damage-rate","recovery-rate"],"physical_validation":true,"curation_status":"paper-verified"},
-    "defense": {"position":["runtime"],"mechanism":["runtime-monitoring","failure-recovery"],"protected_surface":["visual-perception","proprioception","action-interface","execution-control"],"defends_against":["execution-error"],"assumptions":["runtime-monitor"],"curation_status":"catalog-derived"}
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "visual-perception",
+        "proprioception",
+        "action-interface",
+        "execution-control"
+      ],
+      "target": [
+        "runtime-monitor",
+        "robot-executor"
+      ],
+      "consequence": [
+        "collision",
+        "physical-damage",
+        "recovery-failure"
+      ]
+    },
+    "tags": [
+      "risk-prediction",
+      "time-to-hazard",
+      "rollback",
+      "safe-waypoint",
+      "frozen-VLA",
+      "real-robot"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "LIBERO",
+        "three real-robot manipulation tasks"
+      ],
+      "models": [
+        "pi0",
+        "OpenVLA-OFT",
+        "pi0.5"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "collision-rate",
+        "physical-damage-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "proprioception",
+        "action-interface",
+        "execution-control"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "wilkinson-2026-vlpsa",
@@ -12326,11 +14120,82 @@
     "section": "defenses",
     "subsection": "Action Shielding, Fail-Safes, and Recovery",
     "scope": "vla",
-    "risks": ["task-reliability", "physical-safety"],
-    "threat_model": {"kind":"system-failure","lifecycle":["inference"],"mechanism":["constraint-violation"],"surface":["visual-perception","execution-control"],"target":["robot-executor"],"consequence":["collision","unsafe-motion","task-failure"]},
-    "tags": ["control-barrier-function", "poisson-safety-function", "full-body-safety", "grasped-object", "SafeLIBERO", "dynamic-obstacles"],
-    "evaluation": {"environments":["simulation","real-robot"],"platforms":["SafeLIBERO","Franka FR3"],"models":["pi0.5"],"access":["not-applicable"],"metrics":["task-success-rate","collision-rate"],"physical_validation":true,"curation_status":"paper-verified"},
-    "defense": {"position":["runtime"],"mechanism":["action-shielding","formal-verification"],"protected_surface":["visual-perception","execution-control"],"defends_against":["constraint-violation"],"assumptions":["runtime-monitor","safety-constraints"],"curation_status":"catalog-derived"}
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "constraint-violation"
+      ],
+      "surface": [
+        "visual-perception",
+        "execution-control"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "collision",
+        "unsafe-motion",
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "control-barrier-function",
+      "poisson-safety-function",
+      "full-body-safety",
+      "grasped-object",
+      "SafeLIBERO",
+      "dynamic-obstacles"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "SafeLIBERO",
+        "Franka FR3"
+      ],
+      "models": [
+        "pi0.5"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "collision-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "action-shielding",
+        "formal-verification"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "execution-control"
+      ],
+      "defends_against": [
+        "constraint-violation"
+      ],
+      "assumptions": [
+        "runtime-monitor",
+        "safety-constraints"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "zhang-2026-backdoors-industrial-robotic-manipulation",
@@ -12343,11 +14208,81 @@
     "section": "training-attacks",
     "subsection": "Backdoors and Data Poisoning",
     "scope": "embodied-agent",
-    "risks": ["task-reliability", "security-privacy"],
-    "threat_model": {"kind":"adversarial","lifecycle":["training","inference"],"mechanism":["data-poisoning","backdoor"],"surface":["model-supply-chain","visual-perception"],"target":["vla-policy","action-generation"],"consequence":["targeted-action","task-failure"]},
-    "tags": ["physical-backdoor", "industrial-robot", "FANUC", "xArm", "online-sanitization", "semantic-task-failure"],
-    "evaluation": {"environments":["real-robot"],"platforms":["FANUC LR Mate 200iD","xArm 6"],"models":["visuomotor policy"],"access":["not-applicable"],"metrics":["task-success-rate","attack-success-rate"],"physical_validation":true,"curation_status":"paper-verified"},
-    "defense": {"position":["runtime"],"mechanism":["input-filtering"],"protected_surface":["visual-perception"],"defends_against":["backdoor","data-poisoning"],"assumptions":["none"],"curation_status":"catalog-derived"}
+    "risks": [
+      "task-reliability",
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "data-poisoning",
+        "backdoor"
+      ],
+      "surface": [
+        "model-supply-chain",
+        "visual-perception"
+      ],
+      "target": [
+        "vla-policy",
+        "action-generation"
+      ],
+      "consequence": [
+        "targeted-action",
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "physical-backdoor",
+      "industrial-robot",
+      "FANUC",
+      "xArm",
+      "online-sanitization",
+      "semantic-task-failure"
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [
+        "FANUC LR Mate 200iD",
+        "xArm 6"
+      ],
+      "models": [
+        "visuomotor policy"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "input-filtering"
+      ],
+      "protected_surface": [
+        "visual-perception"
+      ],
+      "defends_against": [
+        "backdoor",
+        "data-poisoning"
+      ],
+      "assumptions": [
+        "none"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "dong-2026-protracer-failure-diagnosis",
@@ -12360,10 +14295,57 @@
     "section": "defenses",
     "subsection": "Failure Detection and Recovery",
     "scope": "robot-policy",
-    "risks": ["task-reliability"],
-    "threat_model": {"kind":"system-failure","lifecycle":["inference"],"mechanism":["execution-error"],"surface":["proprioception","visual-perception"],"target":["runtime-monitor"],"consequence":["task-failure","recovery-failure"]},
-    "tags": ["failure-diagnosis", "failure-onset-localization", "proprioception", "VLM", "FailTime", "training-free"],
-    "evaluation": {"environments":["real-robot"],"platforms":["FailTime benchmark"],"models":["VLM with proprioceptive narratives"],"access":["not-applicable"],"metrics":["task-success-rate","recovery-rate"],"physical_validation":true,"curation_status":"paper-verified"}
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "proprioception",
+        "visual-perception"
+      ],
+      "target": [
+        "runtime-monitor"
+      ],
+      "consequence": [
+        "task-failure",
+        "recovery-failure"
+      ]
+    },
+    "tags": [
+      "failure-diagnosis",
+      "failure-onset-localization",
+      "proprioception",
+      "VLM",
+      "FailTime",
+      "training-free"
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [
+        "FailTime benchmark"
+      ],
+      "models": [
+        "VLM with proprioceptive narratives"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    }
   },
   {
     "id": "xiao-2026-care-corrective-execution",
@@ -12376,11 +14358,89 @@
     "section": "defenses",
     "subsection": "Failure Detection and Recovery",
     "scope": "vla",
-    "risks": ["task-reliability"],
-    "threat_model": {"kind":"system-failure","lifecycle":["inference"],"mechanism":["execution-error","planning-error"],"surface":["world-state","task-planning","execution-control"],"target":["runtime-monitor","vla-policy"],"consequence":["task-failure","recovery-failure"]},
-    "tags": ["recovery", "corrective-execution", "atomic-skills", "3D-monitor", "FSR-Bench", "dual-arm"],
-    "evaluation": {"environments":["simulation","real-robot"],"platforms":["RoboTwin 2.0","RoboFactory","FSR-Bench","dual-arm manipulation"],"models":["pi0","pi0-FAST","ACT","DP","DP3","RDT-1B"],"access":["not-applicable"],"metrics":["task-success-rate"],"physical_validation":true,"curation_status":"paper-verified"},
-    "defense": {"position":["runtime"],"mechanism":["failure-recovery","runtime-monitoring"],"protected_surface":["task-planning","execution-control"],"defends_against":["execution-error","planning-error"],"assumptions":["runtime-monitor"],"curation_status":"catalog-derived"}
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error",
+        "planning-error"
+      ],
+      "surface": [
+        "world-state",
+        "task-planning",
+        "execution-control"
+      ],
+      "target": [
+        "runtime-monitor",
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure",
+        "recovery-failure"
+      ]
+    },
+    "tags": [
+      "recovery",
+      "corrective-execution",
+      "atomic-skills",
+      "3D-monitor",
+      "FSR-Bench",
+      "dual-arm"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "RoboTwin 2.0",
+        "RoboFactory",
+        "FSR-Bench",
+        "dual-arm manipulation"
+      ],
+      "models": [
+        "pi0",
+        "pi0-FAST",
+        "ACT",
+        "DP",
+        "DP3",
+        "RDT-1B"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "failure-recovery",
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "defends_against": [
+        "execution-error",
+        "planning-error"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "zhang-2026-robotwin-phys",
@@ -12393,11 +14453,78 @@
     "section": "benchmarks",
     "subsection": "Robustness and Uncertainty Evaluation",
     "scope": "vla",
-    "risks": ["task-reliability"],
-    "threat_model": {"kind":"non-adversarial","lifecycle":["inference"],"mechanism":["distribution-shift","execution-error"],"surface":["physical-semantic-environment","proprioception","world-state"],"target":["vla-policy","robot-executor"],"consequence":["task-failure"]},
-    "tags": ["benchmark", "physical-condition-shift", "RoboTwin", "13-attributes", "WAM", "VLA", "5k-demonstrations"],
-    "evaluation": {"environments":["simulation"],"platforms":["RoboTwin-Phys"],"models":["Fast-WAM","Motus","FACT","pi0.5","Galaxea-VLA"],"access":["not-applicable"],"metrics":["task-success-rate"],"physical_validation":false,"curation_status":"paper-verified"},
-    "benchmark": {"evaluates":["task-reliability"],"shift_types":["dynamics"],"environment":"simulation","base_platforms":["RoboTwin-Phys"],"public_data":true,"leaderboard":null,"curation_status":"catalog-derived"}
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift",
+        "execution-error"
+      ],
+      "surface": [
+        "physical-semantic-environment",
+        "proprioception",
+        "world-state"
+      ],
+      "target": [
+        "vla-policy",
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "benchmark",
+      "physical-condition-shift",
+      "RoboTwin",
+      "13-attributes",
+      "WAM",
+      "VLA",
+      "5k-demonstrations"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "RoboTwin-Phys"
+      ],
+      "models": [
+        "Fast-WAM",
+        "Motus",
+        "FACT",
+        "pi0.5",
+        "Galaxea-VLA"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "task-reliability"
+      ],
+      "shift_types": [
+        "dynamics"
+      ],
+      "environment": "simulation",
+      "base_platforms": [
+        "RoboTwin-Phys"
+      ],
+      "public_data": true,
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "zhang-2026-self-adaptive-vla",
@@ -12410,22 +14537,60 @@
     "section": "benchmarks",
     "subsection": "Robustness and Uncertainty Evaluation",
     "scope": "vla",
-    "risks": ["task-reliability"],
+    "risks": [
+      "task-reliability"
+    ],
     "threat_model": {
       "kind": "non-adversarial",
-      "lifecycle": ["inference"],
-      "mechanism": ["distribution-shift", "execution-error"],
-      "surface": ["proprioception", "execution-control"],
-      "target": ["vla-policy", "robot-executor"],
-      "consequence": ["task-failure", "recovery-failure"]
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift",
+        "execution-error"
+      ],
+      "surface": [
+        "proprioception",
+        "execution-control"
+      ],
+      "target": [
+        "vla-policy",
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure",
+        "recovery-failure"
+      ]
     },
-    "tags": ["deployment-robustness", "hardware-shift", "actuation-bias", "joint-encoder-offset", "context-adaptation", "proprioception", "bimanual-manipulation"],
+    "tags": [
+      "deployment-robustness",
+      "hardware-shift",
+      "actuation-bias",
+      "joint-encoder-offset",
+      "context-adaptation",
+      "proprioception",
+      "bimanual-manipulation"
+    ],
     "evaluation": {
-      "environments": ["real-robot"],
-      "platforms": ["Piper", "Piper-X", "Marvin", "Wuji Hands", "multiple workstations"],
-      "models": ["diffusion-based VLA"],
-      "access": ["not-applicable"],
-      "metrics": ["task-success-rate"],
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [
+        "Piper",
+        "Piper-X",
+        "Marvin",
+        "Wuji Hands",
+        "multiple workstations"
+      ],
+      "models": [
+        "diffusion-based VLA"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
       "physical_validation": true,
       "curation_status": "paper-verified"
     }
@@ -12441,11 +14606,84 @@
     "section": "defenses",
     "subsection": "System and Communication Defenses",
     "scope": "llm-robot",
-    "risks": ["security-privacy"],
-    "threat_model": {"kind":"adversarial","lifecycle":["inference","system"],"mechanism":["command-hijacking","direct-prompt-injection"],"surface":["user-instruction","context-memory-retrieval","task-planning"],"target":["task-planner","action-generation","shared-system-state"],"consequence":["control-hijacking","targeted-action"]},
-    "tags": ["mission-authorization", "provenance", "mission-hijacking", "dual-gate", "llm-controlled-robot"],
-    "evaluation": {"environments":["simulation"],"platforms":["robot mission planner"],"models":["Claude Haiku 4.5","Qwen2.5-7B"],"access":["black-box","white-box"],"metrics":["attack-success-rate"],"physical_validation":false,"curation_status":"paper-verified"},
-    "defense": {"position":["runtime","system-level"],"mechanism":["runtime-monitoring"],"protected_surface":["user-instruction","task-planning","action-interface"],"defends_against":["command-hijacking","direct-prompt-injection"],"assumptions":["model-access"],"curation_status":"catalog-derived"}
+    "risks": [
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "inference",
+        "system"
+      ],
+      "mechanism": [
+        "command-hijacking",
+        "direct-prompt-injection"
+      ],
+      "surface": [
+        "user-instruction",
+        "context-memory-retrieval",
+        "task-planning"
+      ],
+      "target": [
+        "task-planner",
+        "action-generation",
+        "shared-system-state"
+      ],
+      "consequence": [
+        "control-hijacking",
+        "targeted-action"
+      ]
+    },
+    "tags": [
+      "mission-authorization",
+      "provenance",
+      "mission-hijacking",
+      "dual-gate",
+      "llm-controlled-robot"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "robot mission planner"
+      ],
+      "models": [
+        "Claude Haiku 4.5",
+        "Qwen2.5-7B"
+      ],
+      "access": [
+        "black-box",
+        "white-box"
+      ],
+      "metrics": [
+        "attack-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime",
+        "system-level"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "user-instruction",
+        "task-planning",
+        "action-interface"
+      ],
+      "defends_against": [
+        "command-hijacking",
+        "direct-prompt-injection"
+      ],
+      "assumptions": [
+        "model-access"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "snegirev-2026-kintsugi-vla",
@@ -12458,11 +14696,79 @@
     "section": "defenses",
     "subsection": "Failure Detection and Recovery",
     "scope": "vla",
-    "risks": ["task-reliability"],
-    "threat_model": {"kind":"system-failure","lifecycle":["inference"],"mechanism":["execution-error","unsafe-policy-behavior"],"surface":["world-state","action-interface","execution-control"],"target":["vla-policy","runtime-monitor"],"consequence":["recovery-failure","task-failure"]},
-    "tags": ["recovery-data", "interventional-recoverability", "failed-rollouts", "SmolVLA", "simulation"],
-    "evaluation": {"environments":["simulation"],"platforms":["Franka","custom manipulation simulator"],"models":["SmolVLA"],"access":["not-applicable"],"metrics":["task-success-rate","recovery-rate"],"physical_validation":false,"curation_status":"paper-verified"},
-    "defense": {"position":["training-time"],"mechanism":["failure-recovery"],"protected_surface":["world-state","action-interface"],"defends_against":["execution-error"],"assumptions":["none"],"curation_status":"catalog-derived"}
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error",
+        "unsafe-policy-behavior"
+      ],
+      "surface": [
+        "world-state",
+        "action-interface",
+        "execution-control"
+      ],
+      "target": [
+        "vla-policy",
+        "runtime-monitor"
+      ],
+      "consequence": [
+        "recovery-failure",
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "recovery-data",
+      "interventional-recoverability",
+      "failed-rollouts",
+      "SmolVLA",
+      "simulation"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "Franka",
+        "custom manipulation simulator"
+      ],
+      "models": [
+        "SmolVLA"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "training-time"
+      ],
+      "mechanism": [
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "world-state",
+        "action-interface"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "none"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "park-2026-hide-and-seek-trajectories",
@@ -12476,10 +14782,76 @@
     "subsection": "Failure Detection and Recovery",
     "scope": "vla",
     "risks": [],
-    "threat_model": {"kind":"system-failure","lifecycle":["inference"],"mechanism":["execution-error"],"surface":["action-interface","execution-control"],"target":["runtime-monitor"],"consequence":["recovery-failure"]},
-    "tags": ["failure-detection", "runtime-monitoring", "coarse-supervision", "contrastive-learning", "conformal-prediction", "NeurIPS-2026"],
-    "evaluation": {"environments":["simulation","real-robot"],"platforms":["LIBERO","VLABench","UFactory xArm 6"],"models":["OpenVLA","pi0","pi0.5"],"access":["not-applicable"],"metrics":["false-positive-rate"],"physical_validation":true,"curation_status":"paper-verified"},
-    "defense": {"position":["runtime"],"mechanism":["runtime-monitoring"],"protected_surface":["action-interface","execution-control"],"defends_against":["execution-error"],"assumptions":["none"],"curation_status":"catalog-derived"}
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "target": [
+        "runtime-monitor"
+      ],
+      "consequence": [
+        "recovery-failure"
+      ]
+    },
+    "tags": [
+      "failure-detection",
+      "runtime-monitoring",
+      "coarse-supervision",
+      "contrastive-learning",
+      "conformal-prediction",
+      "NeurIPS-2026"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "LIBERO",
+        "VLABench",
+        "UFactory xArm 6"
+      ],
+      "models": [
+        "OpenVLA",
+        "pi0",
+        "pi0.5"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "false-positive-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "none"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "conner-2026-realizability-not-enough",
@@ -12493,10 +14865,80 @@
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "embodied-agent",
     "risks": [],
-    "threat_model": {"kind":"system-failure","lifecycle":["system","inference"],"mechanism":["planning-error","execution-error"],"surface":["task-planning","execution-control"],"target":["task-planner","robot-executor"],"consequence":["action-freezing","recovery-failure"]},
-    "tags": ["formal-methods", "reactive-synthesis", "GR1", "ROS2", "FlexBE", "liveness", "supervisor-audit"],
-    "evaluation": {"environments":["simulation","real-robot"],"platforms":["ROS 2","FlexBE","quadcopter"],"models":["synthesized supervisor"],"access":["not-applicable"],"metrics":[],"physical_validation":true,"curation_status":"paper-verified"},
-    "defense": {"position":["runtime","system-level"],"mechanism":["formal-verification","runtime-monitoring"],"protected_surface":["task-planning","execution-control"],"defends_against":["planning-error","execution-error"],"assumptions":["safety-constraints"],"curation_status":"catalog-derived"}
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "system",
+        "inference"
+      ],
+      "mechanism": [
+        "planning-error",
+        "execution-error"
+      ],
+      "surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "target": [
+        "task-planner",
+        "robot-executor"
+      ],
+      "consequence": [
+        "action-freezing",
+        "recovery-failure"
+      ]
+    },
+    "tags": [
+      "formal-methods",
+      "reactive-synthesis",
+      "GR1",
+      "ROS2",
+      "FlexBE",
+      "liveness",
+      "supervisor-audit"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "ROS 2",
+        "FlexBE",
+        "quadcopter"
+      ],
+      "models": [
+        "synthesized supervisor"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime",
+        "system-level"
+      ],
+      "mechanism": [
+        "formal-verification",
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "defends_against": [
+        "planning-error",
+        "execution-error"
+      ],
+      "assumptions": [
+        "safety-constraints"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "park-2026-adaptive-safety-probing",
@@ -12510,10 +14952,75 @@
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "vla",
     "risks": [],
-    "threat_model": {"kind":"system-failure","lifecycle":["inference"],"mechanism":["uncertainty-miscalibration","unsafe-policy-behavior"],"surface":["reasoning-representation","visual-perception","action-interface"],"target":["runtime-monitor","vla-policy"],"consequence":["recovery-failure"]},
-    "tags": ["adaptive-monitoring", "resource-efficient", "hidden-state-probe", "attention-monitor", "triggered-defense", "AdaptFM-ICML-2026"],
-    "evaluation": {"environments":["simulation"],"platforms":["robotic foundation-model evaluation"],"models":["frozen VLA"],"access":["white-box"],"metrics":[],"physical_validation":false,"curation_status":"paper-verified"},
-    "defense": {"position":["runtime"],"mechanism":["runtime-monitoring","representation-steering"],"protected_surface":["reasoning-representation","visual-perception","action-interface"],"defends_against":["unsafe-policy-behavior","uncertainty-miscalibration"],"assumptions":["model-access"],"curation_status":"catalog-derived"}
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "uncertainty-miscalibration",
+        "unsafe-policy-behavior"
+      ],
+      "surface": [
+        "reasoning-representation",
+        "visual-perception",
+        "action-interface"
+      ],
+      "target": [
+        "runtime-monitor",
+        "vla-policy"
+      ],
+      "consequence": [
+        "recovery-failure"
+      ]
+    },
+    "tags": [
+      "adaptive-monitoring",
+      "resource-efficient",
+      "hidden-state-probe",
+      "attention-monitor",
+      "triggered-defense",
+      "AdaptFM-ICML-2026"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "robotic foundation-model evaluation"
+      ],
+      "models": [
+        "frozen VLA"
+      ],
+      "access": [
+        "white-box"
+      ],
+      "metrics": [],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "representation-steering"
+      ],
+      "protected_surface": [
+        "reasoning-representation",
+        "visual-perception",
+        "action-interface"
+      ],
+      "defends_against": [
+        "unsafe-policy-behavior",
+        "uncertainty-miscalibration"
+      ],
+      "assumptions": [
+        "model-access"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "yu-2026-failpatch",
@@ -12526,11 +15033,79 @@
     "section": "defenses",
     "subsection": "Failure Detection and Recovery",
     "scope": "vla",
-    "risks": ["task-reliability"],
-    "threat_model": {"kind":"system-failure","lifecycle":["inference"],"mechanism":["execution-error"],"surface":["reasoning-representation","action-interface"],"target":["vla-policy","action-generation"],"consequence":["task-failure","recovery-failure"]},
-    "tags": ["failure-aware-learning", "residual-expert", "hidden-representation", "RoboTwin", "real-robot"],
-    "evaluation": {"environments":["simulation","real-robot"],"platforms":["RoboTwin","three real-world tasks"],"models":["frozen VLA"],"access":["not-applicable"],"metrics":["task-success-rate"],"physical_validation":true,"curation_status":"paper-verified"},
-    "defense": {"position":["training-time","inference-time"],"mechanism":["failure-recovery","representation-steering"],"protected_surface":["reasoning-representation","action-interface"],"defends_against":["execution-error"],"assumptions":["runtime-monitor"],"curation_status":"catalog-derived"}
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "reasoning-representation",
+        "action-interface"
+      ],
+      "target": [
+        "vla-policy",
+        "action-generation"
+      ],
+      "consequence": [
+        "task-failure",
+        "recovery-failure"
+      ]
+    },
+    "tags": [
+      "failure-aware-learning",
+      "residual-expert",
+      "hidden-representation",
+      "RoboTwin",
+      "real-robot"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "RoboTwin",
+        "three real-world tasks"
+      ],
+      "models": [
+        "frozen VLA"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "training-time",
+        "inference-time"
+      ],
+      "mechanism": [
+        "failure-recovery",
+        "representation-steering"
+      ],
+      "protected_surface": [
+        "reasoning-representation",
+        "action-interface"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "kim-2026-predictive-semantic-safety",
@@ -12543,11 +15118,80 @@
     "section": "defenses",
     "subsection": "Action Shielding, Fail-Safes, and Recovery",
     "scope": "robot-policy",
-    "risks": ["physical-safety"],
-    "threat_model": {"kind":"non-adversarial","lifecycle":["inference"],"mechanism":["perception-error","uncertainty-miscalibration"],"surface":["physical-semantic-environment","world-state","execution-control"],"target":["runtime-monitor","robot-executor"],"consequence":["collision","unsafe-motion"]},
-    "tags": ["predictive-safety", "semantic-physical-reasoning", "conformal-prediction", "backup-control", "Unitree-Go1"],
-    "evaluation": {"environments":["simulation"],"platforms":["MuJoCo","Unitree Go1"],"models":["VLM with safety filter"],"access":["not-applicable"],"metrics":["constraint-violation-rate"],"physical_validation":false,"curation_status":"paper-verified"},
-    "defense": {"position":["runtime"],"mechanism":["runtime-monitoring","formal-verification"],"protected_surface":["world-state","execution-control"],"defends_against":["perception-error","uncertainty-miscalibration"],"assumptions":["safety-constraints"],"curation_status":"catalog-derived"}
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "perception-error",
+        "uncertainty-miscalibration"
+      ],
+      "surface": [
+        "physical-semantic-environment",
+        "world-state",
+        "execution-control"
+      ],
+      "target": [
+        "runtime-monitor",
+        "robot-executor"
+      ],
+      "consequence": [
+        "collision",
+        "unsafe-motion"
+      ]
+    },
+    "tags": [
+      "predictive-safety",
+      "semantic-physical-reasoning",
+      "conformal-prediction",
+      "backup-control",
+      "Unitree-Go1"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "MuJoCo",
+        "Unitree Go1"
+      ],
+      "models": [
+        "VLM with safety filter"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "constraint-violation-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "formal-verification"
+      ],
+      "protected_surface": [
+        "world-state",
+        "execution-control"
+      ],
+      "defends_against": [
+        "perception-error",
+        "uncertainty-miscalibration"
+      ],
+      "assumptions": [
+        "safety-constraints"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "tai-2026-same-weights-different-robot",
@@ -12560,10 +15204,63 @@
     "section": "system-security",
     "subsection": "Cross-Layer System Security",
     "scope": "vla",
-    "risks": ["task-reliability"],
-    "threat_model": {"kind":"system-failure","lifecycle":["system","inference"],"mechanism":["multimodal-desynchronization","execution-error"],"surface":["model-supply-chain","action-interface","execution-control"],"target":["action-generation","robot-executor"],"consequence":["task-failure","unsafe-motion"]},
-    "tags": ["deployment-safety", "action-normalization", "metadata-integrity", "controller-contract", "ExecSpec", "LIBERO"],
-    "evaluation": {"environments":["simulation"],"platforms":["LIBERO-Goal","LIBERO-Spatial","LIBERO-Object","LIBERO-Long"],"models":["VLA policy replay"],"access":["not-applicable"],"metrics":["task-success-rate"],"physical_validation":false,"curation_status":"paper-verified"}
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "system",
+        "inference"
+      ],
+      "mechanism": [
+        "multimodal-desynchronization",
+        "execution-error"
+      ],
+      "surface": [
+        "model-supply-chain",
+        "action-interface",
+        "execution-control"
+      ],
+      "target": [
+        "action-generation",
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure",
+        "unsafe-motion"
+      ]
+    },
+    "tags": [
+      "deployment-safety",
+      "action-normalization",
+      "metadata-integrity",
+      "controller-contract",
+      "ExecSpec",
+      "LIBERO"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "LIBERO-Goal",
+        "LIBERO-Spatial",
+        "LIBERO-Object",
+        "LIBERO-Long"
+      ],
+      "models": [
+        "VLA policy replay"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    }
   },
   {
     "id": "ahmed-2026-proact-vlm",
@@ -12576,11 +15273,81 @@
     "section": "defenses",
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "embodied-agent",
-    "risks": ["task-reliability"],
-    "threat_model": {"kind":"system-failure","lifecycle":["inference"],"mechanism":["perception-error","planning-error"],"surface":["world-state","task-planning"],"target":["task-planner","runtime-monitor"],"consequence":["task-failure","recovery-failure"]},
-    "tags": ["pre-failure-replanning", "continuous-perception", "dynamic-manipulation", "IROS-2026", "Franka"],
-    "evaluation": {"environments":["real-robot"],"platforms":["Franka sorting task"],"models":["GPT-4o","Gemini 2.5 Pro","Claude Opus 4","Qwen 2.5-VL","LLaMA Maverick"],"access":["not-applicable"],"metrics":["task-success-rate"],"physical_validation":true,"curation_status":"paper-verified"},
-    "defense": {"position":["runtime"],"mechanism":["runtime-monitoring"],"protected_surface":["world-state","task-planning"],"defends_against":["planning-error","execution-error"],"assumptions":["runtime-monitor"],"curation_status":"catalog-derived"}
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "perception-error",
+        "planning-error"
+      ],
+      "surface": [
+        "world-state",
+        "task-planning"
+      ],
+      "target": [
+        "task-planner",
+        "runtime-monitor"
+      ],
+      "consequence": [
+        "task-failure",
+        "recovery-failure"
+      ]
+    },
+    "tags": [
+      "pre-failure-replanning",
+      "continuous-perception",
+      "dynamic-manipulation",
+      "IROS-2026",
+      "Franka"
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [
+        "Franka sorting task"
+      ],
+      "models": [
+        "GPT-4o",
+        "Gemini 2.5 Pro",
+        "Claude Opus 4",
+        "Qwen 2.5-VL",
+        "LLaMA Maverick"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "world-state",
+        "task-planning"
+      ],
+      "defends_against": [
+        "planning-error",
+        "execution-error"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "sobczak-2026-risk-aware-semantic-grounding",
@@ -12593,11 +15360,79 @@
     "section": "defenses",
     "subsection": "Uncertainty, Abstention, and Human Oversight",
     "scope": "embodied-agent",
-    "risks": ["task-reliability"],
-    "threat_model": {"kind":"system-failure","lifecycle":["inference"],"mechanism":["instruction-ambiguity","semantic-misalignment"],"surface":["user-instruction","world-state","task-planning"],"target":["task-planner","runtime-monitor"],"consequence":["task-failure","policy-violation"]},
-    "tags": ["semantic-grounding", "ambiguity-detection", "clarification", "abstention", "TRUST-NAV"],
-    "evaluation": {"environments":["simulation"],"platforms":["TRUST-NAV"],"models":["LLM robot planners"],"access":["not-applicable"],"metrics":["task-success-rate","false-positive-rate"],"physical_validation":false,"curation_status":"paper-verified"},
-    "defense": {"position":["inference-time"],"mechanism":["uncertainty-gating"],"protected_surface":["user-instruction","task-planning"],"defends_against":["instruction-ambiguity","semantic-misalignment"],"assumptions":["none"],"curation_status":"catalog-derived"}
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "instruction-ambiguity",
+        "semantic-misalignment"
+      ],
+      "surface": [
+        "user-instruction",
+        "world-state",
+        "task-planning"
+      ],
+      "target": [
+        "task-planner",
+        "runtime-monitor"
+      ],
+      "consequence": [
+        "task-failure",
+        "policy-violation"
+      ]
+    },
+    "tags": [
+      "semantic-grounding",
+      "ambiguity-detection",
+      "clarification",
+      "abstention",
+      "TRUST-NAV"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "TRUST-NAV"
+      ],
+      "models": [
+        "LLM robot planners"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "false-positive-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "uncertainty-gating"
+      ],
+      "protected_surface": [
+        "user-instruction",
+        "task-planning"
+      ],
+      "defends_against": [
+        "instruction-ambiguity",
+        "semantic-misalignment"
+      ],
+      "assumptions": [
+        "none"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "atasever-2026-video2stl",
@@ -12610,11 +15445,83 @@
     "section": "defenses",
     "subsection": "Safety-Aware Policy Learning",
     "scope": "robot-policy",
-    "risks": ["task-reliability"],
-    "threat_model": {"kind":"system-failure","lifecycle":["training","inference"],"mechanism":["semantic-misalignment","constraint-violation"],"surface":["physical-semantic-environment","reasoning-representation","execution-control"],"target":["task-planner","runtime-monitor","robot-executor"],"consequence":["task-failure","recovery-failure"]},
-    "tags": ["signal-temporal-logic", "formal-specification", "temporal-monitoring", "video-learning", "cross-embodiment"],
-    "evaluation": {"environments":["simulation"],"platforms":["four manipulation tasks","quadruped locomotion"],"models":["PPO policies"],"access":["not-applicable"],"metrics":["task-success-rate"],"physical_validation":false,"curation_status":"paper-verified"},
-    "defense": {"position":["training-time","runtime"],"mechanism":["formal-verification","runtime-monitoring"],"protected_surface":["task-planning","execution-control"],"defends_against":["constraint-violation","semantic-misalignment"],"assumptions":["safety-constraints"],"curation_status":"catalog-derived"}
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "semantic-misalignment",
+        "constraint-violation"
+      ],
+      "surface": [
+        "physical-semantic-environment",
+        "reasoning-representation",
+        "execution-control"
+      ],
+      "target": [
+        "task-planner",
+        "runtime-monitor",
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure",
+        "recovery-failure"
+      ]
+    },
+    "tags": [
+      "signal-temporal-logic",
+      "formal-specification",
+      "temporal-monitoring",
+      "video-learning",
+      "cross-embodiment"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "four manipulation tasks",
+        "quadruped locomotion"
+      ],
+      "models": [
+        "PPO policies"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "training-time",
+        "runtime"
+      ],
+      "mechanism": [
+        "formal-verification",
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "defends_against": [
+        "constraint-violation",
+        "semantic-misalignment"
+      ],
+      "assumptions": [
+        "safety-constraints"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "luo-2026-exceptiondrive",
@@ -12627,11 +15534,79 @@
     "section": "benchmarks",
     "subsection": "Safety and Hazard Benchmarks",
     "scope": "autonomous-driving",
-    "risks": ["physical-safety","task-reliability"],
-    "threat_model": {"kind":"evaluation","coverage":{"lifecycles":["inference"],"mechanisms":["environment-manipulation","distribution-shift","constraint-violation"],"surfaces":["physical-semantic-environment","world-state","task-planning","execution-control"],"consequences":["collision","unsafe-motion","task-failure"]}},
-    "tags": ["counterfactual-benchmark", "corner-case", "hazard-clearance", "nuScenes", "autonomous-driving"],
-    "evaluation": {"environments":["simulation"],"platforms":["ExceptionDrive"],"models":["seven driving planners"],"access":["not-applicable"],"metrics":["collision-rate","constraint-violation-rate","task-success-rate"],"physical_validation":false,"curation_status":"paper-verified"},
-    "benchmark": {"evaluates":["physical-safety","task-reliability"],"shift_types":["dynamics","state"],"environment":"simulation","base_platforms":["nuScenes"],"public_data":null,"leaderboard":null,"curation_status":"catalog-derived"}
+    "risks": [
+      "physical-safety",
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "environment-manipulation",
+          "distribution-shift",
+          "constraint-violation"
+        ],
+        "surfaces": [
+          "physical-semantic-environment",
+          "world-state",
+          "task-planning",
+          "execution-control"
+        ],
+        "consequences": [
+          "collision",
+          "unsafe-motion",
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [
+      "counterfactual-benchmark",
+      "corner-case",
+      "hazard-clearance",
+      "nuScenes",
+      "autonomous-driving"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "ExceptionDrive"
+      ],
+      "models": [
+        "seven driving planners"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "collision-rate",
+        "constraint-violation-rate",
+        "task-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "physical-safety",
+        "task-reliability"
+      ],
+      "shift_types": [
+        "dynamics",
+        "state"
+      ],
+      "environment": "simulation",
+      "base_platforms": [
+        "nuScenes"
+      ],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "liu-2026-trapvla-configured-failure",
@@ -12644,10 +15619,60 @@
     "section": "training-attacks",
     "subsection": "Backdoors and Data Poisoning",
     "scope": "vla",
-    "risks": ["task-reliability"],
-    "threat_model": {"kind":"adversarial","lifecycle":["training","inference"],"mechanism":["backdoor"],"surface":["model-supply-chain","user-instruction"],"target":["vla-policy"],"consequence":["targeted-action","task-failure"]},
-    "tags": ["configured-failure", "text-trigger", "Trap-LIBERO", "Trap-RoboTwin", "real-robot"],
-    "evaluation": {"environments":["simulation","real-robot"],"platforms":["Trap-LIBERO","Trap-RoboTwin"],"models":["OpenVLA-OFT","pi0.5"],"access":["white-box"],"metrics":["attack-success-rate","clean-task-success-rate"],"physical_validation":true,"curation_status":"paper-verified"}
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "backdoor"
+      ],
+      "surface": [
+        "model-supply-chain",
+        "user-instruction"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "targeted-action",
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "configured-failure",
+      "text-trigger",
+      "Trap-LIBERO",
+      "Trap-RoboTwin",
+      "real-robot"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "Trap-LIBERO",
+        "Trap-RoboTwin"
+      ],
+      "models": [
+        "OpenVLA-OFT",
+        "pi0.5"
+      ],
+      "access": [
+        "white-box"
+      ],
+      "metrics": [
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    }
   },
   {
     "id": "deng-2026-dynaharness",
@@ -12660,11 +15685,89 @@
     "section": "defenses",
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "embodied-agent",
-    "risks": ["task-reliability"],
-    "threat_model": {"kind":"system-failure","lifecycle":["inference","system"],"mechanism":["constraint-violation","execution-error","unsafe-policy-behavior"],"surface":["task-planning","action-interface","execution-control"],"target":["runtime-monitor","robot-executor","vla-policy"],"consequence":["task-failure","recovery-failure","policy-violation"]},
-    "tags": ["physical-execution-contract", "fast-slow-agent", "failure-attribution", "self-evolution", "LIBERO-Pro", "pi0.5"],
-    "evaluation": {"environments":["simulation"],"platforms":["LIBERO-Pro"],"models":["pi0.5","Qwen3-VL-4B"],"access":["not-applicable"],"metrics":["task-success-rate"],"physical_validation":false,"curation_status":"paper-verified"},
-    "defense": {"position":["runtime","system-level"],"mechanism":["runtime-monitoring","failure-recovery"],"protected_surface":["task-planning","action-interface","execution-control"],"defends_against":["constraint-violation","execution-error","unsafe-policy-behavior"],"assumptions":["runtime-monitor","safety-constraints"],"curation_status":"catalog-derived"}
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference",
+        "system"
+      ],
+      "mechanism": [
+        "constraint-violation",
+        "execution-error",
+        "unsafe-policy-behavior"
+      ],
+      "surface": [
+        "task-planning",
+        "action-interface",
+        "execution-control"
+      ],
+      "target": [
+        "runtime-monitor",
+        "robot-executor",
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure",
+        "recovery-failure",
+        "policy-violation"
+      ]
+    },
+    "tags": [
+      "physical-execution-contract",
+      "fast-slow-agent",
+      "failure-attribution",
+      "self-evolution",
+      "LIBERO-Pro",
+      "pi0.5"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "LIBERO-Pro"
+      ],
+      "models": [
+        "pi0.5",
+        "Qwen3-VL-4B"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime",
+        "system-level"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "task-planning",
+        "action-interface",
+        "execution-control"
+      ],
+      "defends_against": [
+        "constraint-violation",
+        "execution-error",
+        "unsafe-policy-behavior"
+      ],
+      "assumptions": [
+        "runtime-monitor",
+        "safety-constraints"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "yang-2026-universal-adversarial-attacks-vla",
@@ -12677,10 +15780,62 @@
     "section": "inference-attacks",
     "subsection": "Visual Perturbations and Patches",
     "scope": "vla",
-    "risks": ["task-reliability", "security-privacy"],
-    "threat_model": {"kind":"adversarial","lifecycle":["inference"],"mechanism":["adversarial-object"],"surface":["visual-perception","physical-semantic-environment"],"target":["vla-policy"],"consequence":["task-failure"]},
-    "tags": ["universal-adversarial-object", "physical-attack", "SPSA", "multi-view", "trajectory-deviation", "Pi0", "RDT", "Aloha"],
-    "evaluation": {"environments":["simulation","real-robot"],"platforms":["13 manipulation tasks","Aloha dual-arm"],"models":["Pi0","RDT"],"access":["black-box"],"metrics":["task-success-rate","attack-success-rate"],"physical_validation":true,"curation_status":"paper-verified"}
+    "risks": [
+      "task-reliability",
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "adversarial-object"
+      ],
+      "surface": [
+        "visual-perception",
+        "physical-semantic-environment"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "universal-adversarial-object",
+      "physical-attack",
+      "SPSA",
+      "multi-view",
+      "trajectory-deviation",
+      "Pi0",
+      "RDT",
+      "Aloha"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "13 manipulation tasks",
+        "Aloha dual-arm"
+      ],
+      "models": [
+        "pi0",
+        "RDT"
+      ],
+      "access": [
+        "black-box"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    }
   },
   {
     "id": "agarwal-2026-multi-link-safety-filtering",
@@ -12693,11 +15848,88 @@
     "section": "defenses",
     "subsection": "Action Shielding, Fail-Safes, and Recovery",
     "scope": "vla",
-    "risks": ["task-reliability","physical-safety"],
-    "threat_model": {"kind":"system-failure","lifecycle":["inference"],"mechanism":["constraint-violation","execution-error"],"surface":["visual-perception","world-state","execution-control"],"target":["runtime-monitor","robot-executor"],"consequence":["collision","unsafe-motion","task-failure"]},
-    "tags": ["moving-hazard","multi-link-shield","control-barrier-function","optical-flow","safe-success","SO-101","real-robot"],
-    "evaluation": {"environments":["simulation","real-robot"],"platforms":["six simulated hazard-motion conditions","SO-101"],"models":["π0.5"],"access":["not-applicable"],"metrics":["collision-rate","task-success-rate"],"physical_validation":true,"curation_status":"paper-verified"},
-    "defense": {"position":["runtime"],"mechanism":["action-shielding","runtime-monitoring"],"protected_surface":["visual-perception","world-state","execution-control"],"defends_against":["constraint-violation","execution-error"],"assumptions":["safety-constraints","runtime-monitor"],"curation_status":"catalog-derived"}
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "constraint-violation",
+        "execution-error"
+      ],
+      "surface": [
+        "visual-perception",
+        "world-state",
+        "execution-control"
+      ],
+      "target": [
+        "runtime-monitor",
+        "robot-executor"
+      ],
+      "consequence": [
+        "collision",
+        "unsafe-motion",
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "moving-hazard",
+      "multi-link-shield",
+      "control-barrier-function",
+      "optical-flow",
+      "safe-success",
+      "SO-101",
+      "real-robot"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "six simulated hazard-motion conditions",
+        "SO-101"
+      ],
+      "models": [
+        "pi0.5"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "collision-rate",
+        "task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "action-shielding",
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "world-state",
+        "execution-control"
+      ],
+      "defends_against": [
+        "constraint-violation",
+        "execution-error"
+      ],
+      "assumptions": [
+        "safety-constraints",
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "zhen-2026-wbag",
@@ -12710,11 +15942,84 @@
     "section": "defenses",
     "subsection": "Action Shielding, Fail-Safes, and Recovery",
     "scope": "vla",
-    "risks": ["task-reliability","physical-safety"],
-    "threat_model": {"kind":"system-failure","lifecycle":["inference"],"mechanism":["constraint-violation","execution-error"],"surface":["world-state","execution-control"],"target":["runtime-monitor","robot-executor"],"consequence":["collision","unsafe-motion","task-failure"]},
-    "tags": ["whole-body-safety","attached-geometry","grasp-conditioned","control-barrier-function","SafeLIBERO","safe-success"],
-    "evaluation": {"environments":["simulation"],"platforms":["SafeLIBERO"],"models":["VLA policies"],"access":["not-applicable"],"metrics":["collision-rate","constraint-violation-rate","task-success-rate"],"physical_validation":false,"curation_status":"paper-verified"},
-    "defense": {"position":["runtime"],"mechanism":["action-shielding","formal-verification"],"protected_surface":["world-state","execution-control"],"defends_against":["constraint-violation","execution-error"],"assumptions":["safety-constraints","runtime-monitor"],"curation_status":"catalog-derived"}
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "constraint-violation",
+        "execution-error"
+      ],
+      "surface": [
+        "world-state",
+        "execution-control"
+      ],
+      "target": [
+        "runtime-monitor",
+        "robot-executor"
+      ],
+      "consequence": [
+        "collision",
+        "unsafe-motion",
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "whole-body-safety",
+      "attached-geometry",
+      "grasp-conditioned",
+      "control-barrier-function",
+      "SafeLIBERO",
+      "safe-success"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "SafeLIBERO"
+      ],
+      "models": [
+        "VLA policies"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "collision-rate",
+        "constraint-violation-rate",
+        "task-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "action-shielding",
+        "formal-verification"
+      ],
+      "protected_surface": [
+        "world-state",
+        "execution-control"
+      ],
+      "defends_against": [
+        "constraint-violation",
+        "execution-error"
+      ],
+      "assumptions": [
+        "safety-constraints",
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "nguyen-2026-feasible-future-decoding-vla",
@@ -12727,11 +16032,81 @@
     "section": "defenses",
     "subsection": "Action Shielding, Fail-Safes, and Recovery",
     "scope": "vla",
-    "risks": ["task-reliability"],
-    "threat_model": {"kind":"system-failure","lifecycle":["inference"],"mechanism":["unsafe-policy-behavior","execution-error"],"surface":["task-planning","action-interface"],"target":["vla-policy","runtime-monitor"],"consequence":["task-failure","recovery-failure"]},
-    "tags": ["feasibility-likelihood-gap", "feasible-future", "VICS", "training-free", "Safety-CHORES", "simulation-only"],
-    "evaluation": {"environments":["simulation"],"platforms":["Safety-CHORES","Fetch"],"models":["frozen VLA policies"],"access":["not-applicable"],"metrics":["task-success-rate"],"physical_validation":false,"curation_status":"paper-verified"},
-    "defense": {"position":["inference-time"],"mechanism":["action-shielding","runtime-monitoring"],"protected_surface":["task-planning","action-interface"],"defends_against":["unsafe-policy-behavior","execution-error"],"assumptions":["runtime-monitor","safety-constraints"],"curation_status":"catalog-derived"}
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "unsafe-policy-behavior",
+        "execution-error"
+      ],
+      "surface": [
+        "task-planning",
+        "action-interface"
+      ],
+      "target": [
+        "vla-policy",
+        "runtime-monitor"
+      ],
+      "consequence": [
+        "task-failure",
+        "recovery-failure"
+      ]
+    },
+    "tags": [
+      "feasibility-likelihood-gap",
+      "feasible-future",
+      "VICS",
+      "training-free",
+      "Safety-CHORES",
+      "simulation-only"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "Safety-CHORES",
+        "Fetch"
+      ],
+      "models": [
+        "frozen VLA policies"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "action-shielding",
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "task-planning",
+        "action-interface"
+      ],
+      "defends_against": [
+        "unsafe-policy-behavior",
+        "execution-error"
+      ],
+      "assumptions": [
+        "runtime-monitor",
+        "safety-constraints"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "lee-2026-salt-visual-disruptions",
@@ -12744,11 +16119,75 @@
     "section": "defenses",
     "subsection": "Runtime Observation Interventions",
     "scope": "vla",
-    "risks": ["task-reliability"],
-    "threat_model": {"kind":"non-adversarial","lifecycle":["inference"],"mechanism":["distribution-shift"],"surface":["visual-perception"],"target":["vla-policy"],"consequence":["task-failure"]},
-    "tags": ["SALT", "test-time-adaptation", "visual-disruption", "action-chunk", "LIBERO-Plus", "real-robot"],
-    "evaluation": {"environments":["simulation","real-robot"],"platforms":["LIBERO-10","LIBERO-Plus"],"models":["SmolVLA","GR00T N1.7"],"access":["not-applicable"],"metrics":["task-success-rate"],"physical_validation":true,"curation_status":"paper-verified"},
-    "defense": {"position":["inference-time"],"mechanism":["robust-finetuning"],"protected_surface":["visual-perception"],"defends_against":["distribution-shift"],"assumptions":["model-access"],"curation_status":"catalog-derived"}
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "visual-perception"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "SALT",
+      "test-time-adaptation",
+      "visual-disruption",
+      "action-chunk",
+      "LIBERO-Plus",
+      "real-robot"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "LIBERO-10",
+        "LIBERO-Plus"
+      ],
+      "models": [
+        "SmolVLA",
+        "GR00T N1.7"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "visual-perception"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [
+        "model-access"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "lee-2026-sparse-feature-policy-unlearning-state-hallucination",
@@ -12761,11 +16200,88 @@
     "section": "defenses",
     "subsection": "Safety-Aware Policy Learning",
     "scope": "vla",
-    "risks": ["task-reliability"],
-    "threat_model": {"kind":"system-failure","lifecycle":["training","inference"],"mechanism":["unsafe-policy-behavior","perception-error"],"surface":["world-state","reasoning-representation","action-interface"],"target":["vla-policy","reasoning-process"],"consequence":["task-failure","recovery-failure"]},
-    "tags": ["SOUL", "state-hallucination", "policy-unlearning", "sparse-autoencoder", "OpenVLA", "pi0.5", "LIBERO-Plus", "RoboCasa", "Franka"],
-    "evaluation": {"environments":["simulation","real-robot"],"platforms":["LIBERO-Plus","RoboCasa","Franka Research 3"],"models":["OpenVLA","π0.5"],"access":["white-box"],"metrics":["task-success-rate","clean-task-success-rate"],"physical_validation":true,"curation_status":"paper-verified"},
-    "defense": {"position":["training-time"],"mechanism":["representation-steering"],"protected_surface":["reasoning-representation","action-interface"],"defends_against":["unsafe-policy-behavior","perception-error"],"assumptions":["model-access"],"curation_status":"catalog-derived"}
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "unsafe-policy-behavior",
+        "perception-error"
+      ],
+      "surface": [
+        "world-state",
+        "reasoning-representation",
+        "action-interface"
+      ],
+      "target": [
+        "vla-policy",
+        "reasoning-process"
+      ],
+      "consequence": [
+        "task-failure",
+        "recovery-failure"
+      ]
+    },
+    "tags": [
+      "SOUL",
+      "state-hallucination",
+      "policy-unlearning",
+      "sparse-autoencoder",
+      "OpenVLA",
+      "pi0.5",
+      "LIBERO-Plus",
+      "RoboCasa",
+      "Franka"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "LIBERO-Plus",
+        "RoboCasa",
+        "Franka Research 3"
+      ],
+      "models": [
+        "OpenVLA",
+        "pi0.5"
+      ],
+      "access": [
+        "white-box"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "training-time"
+      ],
+      "mechanism": [
+        "representation-steering"
+      ],
+      "protected_surface": [
+        "reasoning-representation",
+        "action-interface"
+      ],
+      "defends_against": [
+        "unsafe-policy-behavior",
+        "perception-error"
+      ],
+      "assumptions": [
+        "model-access"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "wulff-2026-vla-instruction-grounding-mechanistic",
@@ -12779,9 +16295,55 @@
     "subsection": "Language and Instruction Robustness",
     "scope": "vla",
     "risks": [],
-    "threat_model": {"kind":"non-adversarial","lifecycle":["inference"],"mechanism":["instruction-ambiguity"],"surface":["user-instruction","reasoning-representation"],"target":["reasoning-process","action-generation"],"consequence":["task-failure"]},
-    "tags": ["instruction-grounding", "mechanistic-interpretability", "activation-patching", "attribution-patching", "CKA", "directional-corruption", "pi0.5", "GR00T-N1.7", "LIBERO-10"],
-    "evaluation": {"environments":["simulation"],"platforms":["LIBERO-10 offline dataset"],"models":["π0.5","GR00T N1.7"],"access":["not-applicable"],"metrics":[],"physical_validation":false,"curation_status":"paper-verified"}
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "instruction-ambiguity"
+      ],
+      "surface": [
+        "user-instruction",
+        "reasoning-representation"
+      ],
+      "target": [
+        "reasoning-process",
+        "action-generation"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "instruction-grounding",
+      "mechanistic-interpretability",
+      "activation-patching",
+      "attribution-patching",
+      "CKA",
+      "directional-corruption",
+      "pi0.5",
+      "GR00T-N1.7",
+      "LIBERO-10"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "LIBERO-10 offline dataset"
+      ],
+      "models": [
+        "pi0.5",
+        "GR00T N1.7"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    }
   },
   {
     "id": "horiba-2026-detect-suppress-adversarial-patches",
@@ -12794,11 +16356,75 @@
     "section": "defenses",
     "subsection": "Representation Steering and Inference-Time Defense",
     "scope": "vla",
-    "risks": ["task-reliability"],
-    "threat_model": {"kind":"adversarial","lifecycle":["inference"],"mechanism":["adversarial-patch"],"surface":["visual-perception"],"target":["vla-policy","reasoning-process"],"consequence":["task-failure"]},
-    "tags": ["mechanistic-defense", "sparse-autoencoder", "conditional-intervention", "adversarial-patch", "LIBERO-10", "linear-probe"],
-    "evaluation": {"environments":["simulation"],"platforms":["LIBERO-10"],"models":["VLA policies"],"access":["white-box"],"metrics":["task-success-rate"],"physical_validation":false,"curation_status":"paper-verified"},
-    "defense": {"position":["inference-time"],"mechanism":["representation-steering","runtime-monitoring"],"protected_surface":["visual-perception","reasoning-representation"],"defends_against":["adversarial-patch"],"assumptions":["model-access"],"curation_status":"catalog-derived"}
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "adversarial-patch"
+      ],
+      "surface": [
+        "visual-perception"
+      ],
+      "target": [
+        "vla-policy",
+        "reasoning-process"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "mechanistic-defense",
+      "sparse-autoencoder",
+      "conditional-intervention",
+      "adversarial-patch",
+      "LIBERO-10",
+      "linear-probe"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "LIBERO-10"
+      ],
+      "models": [
+        "VLA policies"
+      ],
+      "access": [
+        "white-box"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "representation-steering",
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "reasoning-representation"
+      ],
+      "defends_against": [
+        "adversarial-patch"
+      ],
+      "assumptions": [
+        "model-access"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "wang-2026-jailbreak-guardrails-embodied-agents",
@@ -12811,11 +16437,80 @@
     "section": "benchmarks",
     "subsection": "Semantic and Ethical Safety",
     "scope": "embodied-agent",
-    "risks": ["task-reliability", "physical-safety", "security-privacy"],
-    "threat_model": {"kind":"evaluation","coverage":{"lifecycles":["inference"],"mechanisms":["jailbreak","unsafe-policy-behavior"],"surfaces":["user-instruction","task-planning","execution-control"],"consequences":["policy-violation","unsafe-motion","task-failure"]}},
-    "tags": ["jailbreak", "guardrail-benchmark", "hazard-success", "false-positive-rate", "latency", "embodied-agent"],
-    "evaluation": {"environments":["simulation"],"platforms":["embodied-agent simulator"],"models":["embodied agents"],"access":["not-applicable"],"metrics":["attack-success-rate","task-success-rate","false-positive-rate"],"physical_validation":false,"curation_status":"paper-verified"},
-    "benchmark": {"evaluates":["physical-safety","semantic-safety","task-reliability","adversarial-attack"],"shift_types":["instruction"],"environment":"simulation","base_platforms":["embodied-agent simulator"],"public_data":null,"leaderboard":null,"curation_status":"catalog-derived"}
+    "risks": [
+      "task-reliability",
+      "physical-safety",
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "jailbreak",
+          "unsafe-policy-behavior"
+        ],
+        "surfaces": [
+          "user-instruction",
+          "task-planning",
+          "execution-control"
+        ],
+        "consequences": [
+          "policy-violation",
+          "unsafe-motion",
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [
+      "jailbreak",
+      "guardrail-benchmark",
+      "hazard-success",
+      "false-positive-rate",
+      "latency",
+      "embodied-agent"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "embodied-agent simulator"
+      ],
+      "models": [
+        "embodied agents"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "attack-success-rate",
+        "task-success-rate",
+        "false-positive-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "physical-safety",
+        "semantic-safety",
+        "task-reliability",
+        "adversarial-attack"
+      ],
+      "shift_types": [
+        "instruction"
+      ],
+      "environment": "simulation",
+      "base_platforms": [
+        "embodied-agent simulator"
+      ],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "pang-2026-black-box-ancestor-vlm-patches",
@@ -12828,10 +16523,60 @@
     "section": "inference-attacks",
     "subsection": "Upstream VLM Attacks",
     "scope": "vla",
-    "risks": ["task-reliability"],
-    "threat_model": {"kind":"adversarial","lifecycle":["inference"],"mechanism":["adversarial-patch","representation-hijacking"],"surface":["visual-perception","reasoning-representation"],"target":["perception-model","vla-policy"],"consequence":["task-failure"]},
-    "tags": ["black-box", "ancestor-vlm", "transfer-attack", "adversarial-patch", "instruction-grounding", "visual-token"],
-    "evaluation": {"environments":["simulation","offline-dataset"],"platforms":["multiple VLA families"],"models":["VLA policies","ancestor VLMs"],"access":["black-box"],"metrics":["task-success-rate","attack-success-rate"],"physical_validation":false,"curation_status":"paper-verified"}
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "adversarial-patch",
+        "representation-hijacking"
+      ],
+      "surface": [
+        "visual-perception",
+        "reasoning-representation"
+      ],
+      "target": [
+        "perception-model",
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "black-box",
+      "ancestor-vlm",
+      "transfer-attack",
+      "adversarial-patch",
+      "instruction-grounding",
+      "visual-token"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "offline-dataset"
+      ],
+      "platforms": [
+        "multiple VLA families"
+      ],
+      "models": [
+        "VLA policies",
+        "ancestor VLMs"
+      ],
+      "access": [
+        "black-box"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    }
   },
   {
     "id": "yang-2026-contextual-safety-filtering-motion-generators",
@@ -12844,11 +16589,83 @@
     "section": "defenses",
     "subsection": "Action Shielding, Fail-Safes, and Recovery",
     "scope": "embodied-agent",
-    "risks": ["physical-safety"],
-    "threat_model": {"kind":"system-failure","lifecycle":["inference"],"mechanism":["constraint-violation","unsafe-policy-behavior"],"surface":["user-instruction","world-state","execution-control"],"target":["runtime-monitor","robot-executor"],"consequence":["unsafe-motion","collision","policy-violation"]},
-    "tags": ["contextual-safety-filtering","natural-language-safety-rules","reference-trajectory","control-barrier-function","Unitree-G1","real-robot"],
-    "evaluation": {"environments":["real-robot"],"platforms":["four pretrained motion generators","Unitree G1"],"models":["motion generators"],"access":["not-applicable"],"metrics":["constraint-violation-rate"],"physical_validation":true,"curation_status":"paper-verified"},
-    "defense": {"position":["runtime"],"mechanism":["action-shielding","formal-verification"],"protected_surface":["user-instruction","world-state","execution-control"],"defends_against":["constraint-violation","unsafe-policy-behavior"],"assumptions":["safety-constraints"],"curation_status":"catalog-derived"}
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "constraint-violation",
+        "unsafe-policy-behavior"
+      ],
+      "surface": [
+        "user-instruction",
+        "world-state",
+        "execution-control"
+      ],
+      "target": [
+        "runtime-monitor",
+        "robot-executor"
+      ],
+      "consequence": [
+        "unsafe-motion",
+        "collision",
+        "policy-violation"
+      ]
+    },
+    "tags": [
+      "contextual-safety-filtering",
+      "natural-language-safety-rules",
+      "reference-trajectory",
+      "control-barrier-function",
+      "Unitree-G1",
+      "real-robot"
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [
+        "four pretrained motion generators",
+        "Unitree G1"
+      ],
+      "models": [
+        "motion generators"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "constraint-violation-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "action-shielding",
+        "formal-verification"
+      ],
+      "protected_surface": [
+        "user-instruction",
+        "world-state",
+        "execution-control"
+      ],
+      "defends_against": [
+        "constraint-violation",
+        "unsafe-policy-behavior"
+      ],
+      "assumptions": [
+        "safety-constraints"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "xue-2026-control-ready-uncertainty-trajectory-diffusion",
@@ -12862,10 +16679,76 @@
     "subsection": "Uncertainty, Abstention, and Human Oversight",
     "scope": "embodied-agent",
     "risks": [],
-    "threat_model": {"kind":"non-adversarial","lifecycle":["inference"],"mechanism":["uncertainty-miscalibration","unsafe-policy-behavior"],"surface":["world-state","action-interface"],"target":["runtime-monitor","robot-executor"],"consequence":["unsafe-motion","recovery-failure"]},
-    "tags": ["SCOPE","trajectory-diffusion","score-curvature","uncertainty-tube","occupancy-prediction","CoRL-2026"],
-    "evaluation": {"environments":["simulation","real-robot"],"platforms":["pedestrian forecasting","crowd navigation","Maze2D","Franka Panda"],"models":["trajectory diffusion models"],"access":["not-applicable"],"metrics":[],"physical_validation":true,"curation_status":"paper-verified"},
-    "defense": {"position":["inference-time"],"mechanism":["uncertainty-gating"],"protected_surface":["world-state","action-interface"],"defends_against":["uncertainty-miscalibration"],"assumptions":["runtime-monitor"],"curation_status":"catalog-derived"}
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "uncertainty-miscalibration",
+        "unsafe-policy-behavior"
+      ],
+      "surface": [
+        "world-state",
+        "action-interface"
+      ],
+      "target": [
+        "runtime-monitor",
+        "robot-executor"
+      ],
+      "consequence": [
+        "unsafe-motion",
+        "recovery-failure"
+      ]
+    },
+    "tags": [
+      "SCOPE",
+      "trajectory-diffusion",
+      "score-curvature",
+      "uncertainty-tube",
+      "occupancy-prediction",
+      "CoRL-2026"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "pedestrian forecasting",
+        "crowd navigation",
+        "Maze2D",
+        "Franka Panda"
+      ],
+      "models": [
+        "trajectory diffusion models"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "uncertainty-gating"
+      ],
+      "protected_surface": [
+        "world-state",
+        "action-interface"
+      ],
+      "defends_against": [
+        "uncertainty-miscalibration"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "li-2026-pier-evidence-gated-execution-interface",
@@ -12879,9 +16762,57 @@
     "subsection": "Cross-Layer System Security",
     "scope": "embodied-agent",
     "risks": [],
-    "threat_model": {"kind":"system-failure","lifecycle":["inference","system"],"mechanism":["execution-error","state-manipulation"],"surface":["visual-perception","proprioception","execution-control"],"target":["runtime-monitor","robot-executor"],"consequence":["unsafe-success","recovery-failure"]},
-    "tags": ["evidence-gate","execution-authorization","decision-provenance","re-observation","stale-observation","tactile-evidence"],
-    "evaluation": {"environments":["offline-dataset"],"platforms":["synthetic contract traces"],"models":["deterministic authorization gate"],"access":["not-applicable"],"metrics":["false-positive-rate"],"physical_validation":false,"curation_status":"paper-verified"}
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference",
+        "system"
+      ],
+      "mechanism": [
+        "execution-error",
+        "state-manipulation"
+      ],
+      "surface": [
+        "visual-perception",
+        "proprioception",
+        "execution-control"
+      ],
+      "target": [
+        "runtime-monitor",
+        "robot-executor"
+      ],
+      "consequence": [
+        "unsafe-success",
+        "recovery-failure"
+      ]
+    },
+    "tags": [
+      "evidence-gate",
+      "execution-authorization",
+      "decision-provenance",
+      "re-observation",
+      "stale-observation",
+      "tactile-evidence"
+    ],
+    "evaluation": {
+      "environments": [
+        "offline-dataset"
+      ],
+      "platforms": [
+        "synthetic contract traces"
+      ],
+      "models": [
+        "deterministic authorization gate"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "false-positive-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    }
   },
   {
     "id": "li-2026-traceable-world-state",
@@ -12895,9 +16826,56 @@
     "subsection": "Cross-Layer System Security",
     "scope": "embodied-agent",
     "risks": [],
-    "threat_model": {"kind":"system-failure","lifecycle":["system"],"mechanism":["state-manipulation","middleware-compromise"],"surface":["world-state","middleware-network"],"target":["shared-system-state","runtime-monitor"],"consequence":["control-hijacking","recovery-failure"]},
-    "tags": ["world-state","provenance","deterministic-replay","tamper-evident-log","hash-chain","BEHAVIOR-1K","Unitree-G1"],
-    "evaluation": {"environments":["simulation","offline-dataset"],"platforms":["BEHAVIOR-1K","Unitree G1 trajectories"],"models":["Traceable World State runtime"],"access":["not-applicable"],"metrics":[],"physical_validation":false,"curation_status":"paper-verified"}
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "system"
+      ],
+      "mechanism": [
+        "state-manipulation",
+        "middleware-compromise"
+      ],
+      "surface": [
+        "world-state",
+        "middleware-network"
+      ],
+      "target": [
+        "shared-system-state",
+        "runtime-monitor"
+      ],
+      "consequence": [
+        "control-hijacking",
+        "recovery-failure"
+      ]
+    },
+    "tags": [
+      "world-state",
+      "provenance",
+      "deterministic-replay",
+      "tamper-evident-log",
+      "hash-chain",
+      "BEHAVIOR-1K",
+      "Unitree-G1"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "offline-dataset"
+      ],
+      "platforms": [
+        "BEHAVIOR-1K",
+        "Unitree G1 trajectories"
+      ],
+      "models": [
+        "Traceable World State runtime"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    }
   },
   {
     "id": "zhang-2026-faith-safety-filtered-rl",
@@ -12910,11 +16888,89 @@
     "section": "defenses",
     "subsection": "Action Shielding, Fail-Safes, and Recovery",
     "scope": "embodied-agent",
-    "risks": ["task-reliability","physical-safety"],
-    "threat_model": {"kind":"system-failure","lifecycle":["training","inference"],"mechanism":["constraint-violation","unsafe-policy-behavior"],"surface":["action-interface","execution-control"],"target":["runtime-monitor","robot-executor"],"consequence":["unsafe-motion","physical-damage","recovery-failure"]},
-    "tags": ["feasibility-aware","safety-filtered-RL","peak-harm-fallback","high-dimensional-control","humanoid","Unitree-G1"],
-    "evaluation": {"environments":["simulation","real-robot"],"platforms":["Safety Gym","29-DoF humanoid","Unitree G1"],"models":["RL policies"],"access":["not-applicable"],"metrics":["task-success-rate","physical-damage-rate","constraint-violation-rate"],"physical_validation":true,"curation_status":"paper-verified"},
-    "defense": {"position":["training-time","runtime"],"mechanism":["action-shielding","failure-recovery"],"protected_surface":["action-interface","execution-control"],"defends_against":["constraint-violation","unsafe-policy-behavior"],"assumptions":["safety-constraints","runtime-monitor"],"curation_status":"catalog-derived"}
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "constraint-violation",
+        "unsafe-policy-behavior"
+      ],
+      "surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "target": [
+        "runtime-monitor",
+        "robot-executor"
+      ],
+      "consequence": [
+        "unsafe-motion",
+        "physical-damage",
+        "recovery-failure"
+      ]
+    },
+    "tags": [
+      "feasibility-aware",
+      "safety-filtered-RL",
+      "peak-harm-fallback",
+      "high-dimensional-control",
+      "humanoid",
+      "Unitree-G1"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "Safety Gym",
+        "29-DoF humanoid",
+        "Unitree G1"
+      ],
+      "models": [
+        "RL policies"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "physical-damage-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "training-time",
+        "runtime"
+      ],
+      "mechanism": [
+        "action-shielding",
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "defends_against": [
+        "constraint-violation",
+        "unsafe-policy-behavior"
+      ],
+      "assumptions": [
+        "safety-constraints",
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "wu-2026-beyond-patch-removal",
@@ -12927,10 +16983,63 @@
     "section": "inference-attacks",
     "subsection": "Visual Perturbations and Patches",
     "scope": "vla",
-    "risks": ["task-reliability","security-privacy"],
-    "threat_model": {"kind":"adversarial","lifecycle":["inference"],"mechanism":["adversarial-patch","trajectory-manipulation"],"surface":["visual-perception","execution-control"],"target":["vla-policy","robot-executor"],"consequence":["task-failure","recovery-failure"]},
-    "tags": ["persistent-adversarial-effect","state-restoration","recovery-debt","intervention-latency","EDPA","OpenVLA-OFT","LIBERO-Long"],
-    "evaluation": {"environments":["simulation"],"platforms":["LIBERO-Long"],"models":["OpenVLA-OFT","autoregressive OpenVLA"],"access":["white-box"],"metrics":["task-success-rate","attack-success-rate","recovery-rate"],"physical_validation":false,"curation_status":"paper-verified"}
+    "risks": [
+      "task-reliability",
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "adversarial-patch",
+        "trajectory-manipulation"
+      ],
+      "surface": [
+        "visual-perception",
+        "execution-control"
+      ],
+      "target": [
+        "vla-policy",
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure",
+        "recovery-failure"
+      ]
+    },
+    "tags": [
+      "persistent-adversarial-effect",
+      "state-restoration",
+      "recovery-debt",
+      "intervention-latency",
+      "EDPA",
+      "OpenVLA-OFT",
+      "LIBERO-Long"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "LIBERO-Long"
+      ],
+      "models": [
+        "OpenVLA-OFT",
+        "autoregressive OpenVLA"
+      ],
+      "access": [
+        "white-box"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    }
   },
   {
     "id": "yamabe-2026-one-step-observation-perturbations",
@@ -12943,11 +17052,80 @@
     "section": "ood-generalization",
     "subsection": "OOD and Generalization Benchmarks",
     "scope": "vla",
-    "risks": ["task-reliability"],
-    "threat_model": {"kind":"adversarial","lifecycle":["inference"],"mechanism":["digital-perturbation","multimodal-desynchronization"],"surface":["visual-perception","action-interface"],"target":["vla-policy","action-generation"],"consequence":["task-failure","recovery-failure"]},
-    "tags": ["CARE","one-step-perturbation","observation-corruption","action-chunk","adaptive-execution-length","clean-performance"],
-    "evaluation": {"environments":["simulation"],"platforms":["VLA manipulation benchmark"],"models":["VLA policies"],"access":["black-box"],"metrics":["task-success-rate","robust-success-rate"],"physical_validation":false,"curation_status":"paper-verified"},
-    "defense": {"position":["runtime"],"mechanism":["runtime-monitoring","failure-recovery"],"protected_surface":["visual-perception","action-interface"],"defends_against":["digital-perturbation","multimodal-desynchronization"],"assumptions":["runtime-monitor"],"curation_status":"catalog-derived"}
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "digital-perturbation",
+        "multimodal-desynchronization"
+      ],
+      "surface": [
+        "visual-perception",
+        "action-interface"
+      ],
+      "target": [
+        "vla-policy",
+        "action-generation"
+      ],
+      "consequence": [
+        "task-failure",
+        "recovery-failure"
+      ]
+    },
+    "tags": [
+      "CARE",
+      "one-step-perturbation",
+      "observation-corruption",
+      "action-chunk",
+      "adaptive-execution-length",
+      "clean-performance"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "VLA manipulation benchmark"
+      ],
+      "models": [
+        "VLA policies"
+      ],
+      "access": [
+        "black-box"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "robust-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "action-interface"
+      ],
+      "defends_against": [
+        "digital-perturbation",
+        "multimodal-desynchronization"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "english-2026-neurosymbolic-safety-guidance-flow-matching",
@@ -12960,11 +17138,83 @@
     "section": "defenses",
     "subsection": "Action Shielding, Fail-Safes, and Recovery",
     "scope": "vla",
-    "risks": ["task-reliability", "physical-safety"],
-    "threat_model": {"kind":"system-failure","lifecycle":["inference"],"mechanism":["constraint-violation","unsafe-policy-behavior"],"surface":["world-state","action-interface","execution-control"],"target":["vla-policy","action-generation","robot-executor"],"consequence":["collision","unsafe-motion","task-failure"]},
-    "tags": ["predictive-safety-guidance","flow-matching","trajectory-level-cbf","SafeLIBERO","pi0.5"],
-    "evaluation": {"environments":["simulation"],"platforms":["SafeLIBERO"],"models":["pi0.5"],"access":["not-applicable"],"metrics":["collision-rate","task-success-rate"],"physical_validation":false,"curation_status":"paper-verified"},
-    "defense": {"position":["inference-time"],"mechanism":["action-shielding","formal-verification"],"protected_surface":["action-interface","execution-control"],"defends_against":["constraint-violation","unsafe-policy-behavior"],"assumptions":["safety-constraints"],"curation_status":"catalog-derived"}
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "constraint-violation",
+        "unsafe-policy-behavior"
+      ],
+      "surface": [
+        "world-state",
+        "action-interface",
+        "execution-control"
+      ],
+      "target": [
+        "vla-policy",
+        "action-generation",
+        "robot-executor"
+      ],
+      "consequence": [
+        "collision",
+        "unsafe-motion",
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "predictive-safety-guidance",
+      "flow-matching",
+      "trajectory-level-cbf",
+      "SafeLIBERO",
+      "pi0.5"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "SafeLIBERO"
+      ],
+      "models": [
+        "pi0.5"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "collision-rate",
+        "task-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "action-shielding",
+        "formal-verification"
+      ],
+      "protected_surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "defends_against": [
+        "constraint-violation",
+        "unsafe-policy-behavior"
+      ],
+      "assumptions": [
+        "safety-constraints"
+      ],
+      "curation_status": "catalog-derived"
+    }
   },
   {
     "id": "ahmedt-aristizabal-2026-rescue-runtime-monitors",
@@ -12977,10 +17227,61 @@
     "section": "defenses",
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "vla",
-    "risks": ["task-reliability"],
-    "threat_model": {"kind":"evaluation","coverage":{"lifecycles":["inference"],"mechanisms":["execution-error","uncertainty-miscalibration"],"surfaces":["reasoning-representation","action-interface","execution-control"],"consequences":["recovery-failure","task-failure"]}},
-    "tags": ["counterfactual-evaluation","recoverability-horizon","intervention-value","false-alarm-cost","OpenVLA-OFT","pi0.5","LIBERO-Plus"],
-    "evaluation": {"environments":["simulation"],"platforms":["LIBERO-Spatial","LIBERO-Plus"],"models":["OpenVLA-OFT","pi0.5"],"access":["not-applicable"],"metrics":["task-success-rate","recovery-rate"],"physical_validation":false,"curation_status":"paper-verified"}
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "execution-error",
+          "uncertainty-miscalibration"
+        ],
+        "surfaces": [
+          "reasoning-representation",
+          "action-interface",
+          "execution-control"
+        ],
+        "consequences": [
+          "recovery-failure",
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [
+      "counterfactual-evaluation",
+      "recoverability-horizon",
+      "intervention-value",
+      "false-alarm-cost",
+      "OpenVLA-OFT",
+      "pi0.5",
+      "LIBERO-Plus"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "LIBERO-Spatial",
+        "LIBERO-Plus"
+      ],
+      "models": [
+        "OpenVLA-OFT",
+        "pi0.5"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    }
   },
   {
     "id": "rolland-2026-robot-watchdog",
@@ -12994,9 +17295,52 @@
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "robot-policy",
     "risks": [],
-    "threat_model": {"kind":"evaluation","coverage":{"lifecycles":["inference"],"mechanisms":["execution-error","perception-error"],"surfaces":["world-state","execution-control"],"consequences":["recovery-failure","task-failure"]}},
-    "tags": ["failure-detection","object-centric-graph","semantic-failure","AUPR","MCC","conformal-prediction"],
-    "evaluation": {"environments":["offline-dataset"],"platforms":["public failure benchmark","semantically complex manipulation dataset"],"models":["robot policies"],"access":["not-applicable"],"metrics":[],"physical_validation":false,"curation_status":"paper-verified"}
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "execution-error",
+          "perception-error"
+        ],
+        "surfaces": [
+          "world-state",
+          "execution-control"
+        ],
+        "consequences": [
+          "recovery-failure",
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [
+      "failure-detection",
+      "object-centric-graph",
+      "semantic-failure",
+      "AUPR",
+      "MCC",
+      "conformal-prediction"
+    ],
+    "evaluation": {
+      "environments": [
+        "offline-dataset"
+      ],
+      "platforms": [
+        "public failure benchmark",
+        "semantically complex manipulation dataset"
+      ],
+      "models": [
+        "robot policies"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    }
   },
   {
     "id": "hubel-2026-bt-agent",
@@ -13009,10 +17353,62 @@
     "section": "defenses",
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "embodied-agent",
-    "risks": ["task-reliability"],
-    "threat_model": {"kind":"system-failure","lifecycle":["inference","system"],"mechanism":["execution-error","constraint-violation"],"surface":["task-planning","execution-control"],"target":["runtime-monitor","robot-executor"],"consequence":["task-failure","recovery-failure"]},
-    "tags": ["behavior-tree","local-guard","onboard-agent","structured-failure-feedback","fault-injection","Habitat"],
-    "evaluation": {"environments":["simulation","real-robot"],"platforms":["quadruped","Habitat"],"models":["onboard 4B/9B language models"],"access":["not-applicable"],"metrics":["task-success-rate","recovery-rate"],"physical_validation":true,"curation_status":"paper-verified"}
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference",
+        "system"
+      ],
+      "mechanism": [
+        "execution-error",
+        "constraint-violation"
+      ],
+      "surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "target": [
+        "runtime-monitor",
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure",
+        "recovery-failure"
+      ]
+    },
+    "tags": [
+      "behavior-tree",
+      "local-guard",
+      "onboard-agent",
+      "structured-failure-feedback",
+      "fault-injection",
+      "Habitat"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "quadruped",
+        "Habitat"
+      ],
+      "models": [
+        "onboard 4B/9B language models"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    }
   },
   {
     "id": "das-2026-refinement-gap-safe-plans",
@@ -13026,9 +17422,58 @@
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "embodied-agent",
     "risks": [],
-    "threat_model": {"kind":"evaluation","coverage":{"lifecycles":["inference","system"],"mechanisms":["constraint-violation","planning-error"],"surfaces":["task-planning","action-interface","execution-control"],"consequences":["policy-violation","unsafe-success"]}},
-    "tags": ["trace-refinement","trace-completeness","LTL","RoboGuard","SPINE","false-safe"],
-    "evaluation": {"environments":["offline-dataset"],"platforms":["RoboGuard","SPINE","semantic graphs"],"models":["language-enabled robot planner"],"access":["not-applicable"],"metrics":["constraint-violation-rate","recovery-rate"],"physical_validation":false,"curation_status":"paper-verified"}
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference",
+          "system"
+        ],
+        "mechanisms": [
+          "constraint-violation",
+          "planning-error"
+        ],
+        "surfaces": [
+          "task-planning",
+          "action-interface",
+          "execution-control"
+        ],
+        "consequences": [
+          "policy-violation",
+          "unsafe-success"
+        ]
+      }
+    },
+    "tags": [
+      "trace-refinement",
+      "trace-completeness",
+      "LTL",
+      "RoboGuard",
+      "SPINE",
+      "false-safe"
+    ],
+    "evaluation": {
+      "environments": [
+        "offline-dataset"
+      ],
+      "platforms": [
+        "RoboGuard",
+        "SPINE",
+        "semantic graphs"
+      ],
+      "models": [
+        "language-enabled robot planner"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "constraint-violation-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    }
   },
   {
     "id": "waseda-2026-adversarial-training-multiview-vlas",
@@ -13041,9 +17486,54 @@
     "section": "ood-generalization",
     "subsection": "OOD and Generalization Benchmarks",
     "scope": "vla",
-    "risks": ["task-reliability"],
-    "threat_model": {"kind":"non-adversarial","lifecycle":["inference"],"mechanism":["distribution-shift"],"surface":["visual-perception"],"target":["vla-policy"],"consequence":["task-failure"]},
-    "tags": ["multi-view","view-collapse","view-reliance","view-swap","adversarial-training","LIBERO-Plus","Qwen3.5"],
-    "evaluation": {"environments":["simulation"],"platforms":["LIBERO-Plus"],"models":["multi-view VLA adapted from Qwen3.5-0.8B"],"access":["not-applicable"],"metrics":["task-success-rate"],"physical_validation":false,"curation_status":"paper-verified"}
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "visual-perception"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "multi-view",
+      "view-collapse",
+      "view-reliance",
+      "view-swap",
+      "adversarial-training",
+      "LIBERO-Plus",
+      "Qwen3.5"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "LIBERO-Plus"
+      ],
+      "models": [
+        "multi-view VLA adapted from Qwen3.5-0.8B"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    }
   }
 ]
