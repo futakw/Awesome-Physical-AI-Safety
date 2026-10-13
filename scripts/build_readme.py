@@ -7,6 +7,7 @@ import argparse
 import json
 import re
 from collections import OrderedDict
+from html import escape
 from pathlib import Path
 from urllib.parse import quote, urlparse
 
@@ -241,16 +242,14 @@ def render(papers: list[dict]) -> str:
     ])
 
     present_sections = [key for key in SECTIONS if any(p["section"] == key for p in papers)]
-    ethics_groups: OrderedDict[tuple[str, str], int] = OrderedDict()
-    for section_key in present_sections:
-        for paper in papers:
-            if paper["section"] == section_key and "ethical-societal" in paper["risks"]:
-                key = (section_key, paper["subsection"])
-                ethics_groups[key] = ethics_groups.get(key, 0) + 1
+    ethics_papers = sorted(
+        (p for p in papers if "ethical-societal" in p["risks"]),
+        key=lambda p: (-p["year"], p["title"].lower()),
+    )
     for key in present_sections:
         icon, title = SECTIONS[key]
         lines.append(f"- [{icon} {title}](#{key})")
-    if ethics_groups:
+    if ethics_papers:
         lines.append("- [⚖️ Ethics & Societal Safety](#ethics-societal-safety)")
     lines.extend(["", "<details>", '<summary><strong>Show subsection index</strong></summary>', ""])
     for key in present_sections:
@@ -266,18 +265,30 @@ def render(papers: list[dict]) -> str:
             )
     lines.extend(["", "</details>", "", f"**{len(papers)} papers in the current catalog.**", ""])
 
-    if ethics_groups:
-        ethics_count = sum(ethics_groups.values())
+    if ethics_papers:
         lines.extend([
             '<a id="ethics-societal-safety"></a>',
             "",
-            "### ⚖️ Ethics & Societal Safety",
+            "## ⚖️ Ethics & Societal Safety",
             "",
-            f"{ethics_count} catalog records carry the `ethical-societal` outcome label. These links lead to their primary-contribution subsections; the index is not an independent verification of each label.",
+            f"This thematic view reuses {len(ethics_papers)} catalog records labeled `ethical-societal`. It does not add separate paper records or independently verify their outcome labels.",
             "",
+            "| Paper | Venue | Evaluated Risk | Threat Model |",
+            "|---|---:|---|---|",
         ])
-        for (section_key, subsection), count in ethics_groups.items():
-            lines.append(f"- [{subsection}](#{subsection_anchor(section_key, subsection)}) ({count})")
+        for paper in ethics_papers:
+            section_key = paper["section"]
+            primary_section = SECTIONS[section_key][1]
+            primary_anchor = subsection_anchor(section_key, paper["subsection"])
+            paper_info = (
+                f"{paper_cell(paper)}<br>"
+                f'<sub>Primary: <a href="#{primary_anchor}">'
+                f"{escape(primary_section)} / {escape(paper['subsection'])}</a></sub>"
+            )
+            venue = f"{paper['venue']} {paper['year']}"
+            lines.append(
+                f"| {paper_info} | {venue} | {risk_cell(paper['risks'])} | {threat_model_cell(paper['threat_model'])} |"
+            )
         lines.append("")
 
     for section_key in present_sections:
@@ -315,7 +326,7 @@ def render(papers: list[dict]) -> str:
             "",
             "The catalog covers safety, security, robustness, privacy, ethical and societal outcomes, and trustworthy deployment across physical AI. VLA is a major focus, alongside robot policies, autonomous systems, and LLM/VLM-driven embodied agents when the work studies embodied behavior, physical interaction, or deployment-relevant failure. General-purpose LLM/VLM work without a clear physical-AI connection is out of scope.",
             "",
-            "A paper is listed once under its primary contribution. Risk outcomes and mechanisms are represented as multi-label metadata rather than by duplicating the paper across sections.",
+            "Each paper has one catalog record and one primary-contribution section. Cross-cutting tables are generated views of those same records, not separate entries.",
             "",
             "The optional Defense, Evaluation, and Benchmark metadata extensions are documented in [docs/metadata-schema.md](docs/metadata-schema.md).",
             "",

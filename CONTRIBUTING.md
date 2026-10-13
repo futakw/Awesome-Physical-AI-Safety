@@ -33,7 +33,7 @@ python3 scripts/build_explorer.py
 - Add a risk label only when the paper reports a corresponding empirical metric. Do not infer labels from motivation, discussion, threat potential, or the use of a physical robot alone. Use an empty `risks` list for surveys and papers without a matching outcome metric.
 - Structure `threat_model` using the controlled `kind`, `lifecycle`, `mechanism`, `surface`, `target`, and `consequence` vocabularies defined in [the taxonomy](docs/taxonomy.md). For defenses, describe the threat being mitigated rather than the defense method.
 - Use the `survey` or `evaluation` coverage variant when a record spans multiple independent threats and no single threat path is supported. Experimental settings and secondary descriptors belong in `tags`; tags remain structured metadata and are not rendered as a separate table column.
-- List a paper once. Express cross-cutting properties through `risks` and `tags`.
+- Add one catalog record and assign one primary section per paper. Generated thematic tables may display that same record as an additional view.
 
 ## Scope
 

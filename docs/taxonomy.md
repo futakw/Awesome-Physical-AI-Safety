@@ -257,4 +257,4 @@ Generic VLM, LLM, robotics, or capability papers should not be included unless t
 
 ## Classification Rule
 
-List each paper once under its primary contribution. Use `risks` and `tags` for cross-cutting properties instead of duplicating the paper across sections.
+Assign each paper one catalog record and one primary-contribution section. Use `risks` and `tags` for cross-cutting properties; generated thematic tables may display the same record without creating a duplicate entry.

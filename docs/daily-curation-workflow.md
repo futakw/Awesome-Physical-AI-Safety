@@ -65,7 +65,7 @@ full-catalog verification periodically.
 
 Review the generated README and confirm:
 
-- the paper appears once in the correct subsection
+- the paper has one catalog record and appears in its primary subsection; generated thematic views may also display it
 - the table title links to the paper
 - an official code or project link appears beside the title when available
 - Risk and Threat Model remain compact and evidence-consistent
