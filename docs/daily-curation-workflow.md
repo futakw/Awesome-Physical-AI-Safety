@@ -45,6 +45,7 @@ Do not add private research questions, unpublished interpretations, personal wor
 Run all checks from the repository root:
 
 ```bash
+python3 scripts/verify_bibliography.py
 python3 scripts/validate_catalog.py
 python3 scripts/build_readme.py
 python3 scripts/build_readme.py --check
@@ -54,6 +55,13 @@ python3 scripts/build_visualizations.py --check
 python3 scripts/build_explorer.py
 git diff --check
 ```
+
+`verify_bibliography.py` is a fail-closed check. It retrieves canonical metadata
+from the linked primary source and compares the title, first-author surname, and
+year in `data/papers.json`. A mismatch or an unavailable source blocks
+publication; an unavailable source must not be treated as verified. For a daily
+incremental run, pass the changed record IDs with repeated `--id` options. Run a
+full-catalog verification periodically.
 
 Review the generated README and confirm:
 
