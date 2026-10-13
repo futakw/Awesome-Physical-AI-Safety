@@ -5,6 +5,7 @@
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Cite this repository](https://img.shields.io/badge/Cite-CITATION.cff-blue.svg)](CITATION.cff)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23348593.svg)](https://doi.org/10.5281/zenodo.23348593)
 [![LLM-assisted](https://img.shields.io/badge/curation-%F0%9F%A4%96%20LLM--assisted-critical.svg)](docs/daily-curation-workflow.md)
 [![Licenses: MIT + CC BY 4.0](https://img.shields.io/badge/Licenses-MIT%20%2B%20CC%20BY%204.0-3FA89B?style=flat)](LICENSES.md) [![Papers](https://img.shields.io/badge/Papers-250-6F9FEF?style=flat)](https://futakw.github.io/Awesome-Physical-AI-Safety/) [![Update](https://img.shields.io/badge/Update-Daily-D47A5D?style=flat)](docs/daily-curation-workflow.md)
 
@@ -32,7 +33,8 @@ Cite this catalog for its bibliography, taxonomy, metadata, visualizations, or c
   author = {Waseda, Futa},
   title  = {Awesome Physical AI Safety},
   year   = {2026},
-  url    = {https://github.com/futakw/Awesome-Physical-AI-Safety}
+  url    = {https://github.com/futakw/Awesome-Physical-AI-Safety},
+  doi    = {10.5281/zenodo.23348593}
 }
 ```
 

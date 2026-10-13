@@ -12,5 +12,13 @@ authors:
     website: "https://futa-waseda.netlify.app/"
 repository-code: "https://github.com/futakw/Awesome-Physical-AI-Safety"
 url: "https://github.com/futakw/Awesome-Physical-AI-Safety"
+doi: "10.5281/zenodo.23348593"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23348593"
+    description: "Concept DOI — always resolves to the latest archived version."
+  - type: doi
+    value: "10.5281/zenodo.23348594"
+    description: "Version DOI for v2026.10."
 # License terms vary by component; see LICENSES.md.
 date-released: "2026-10-13"
