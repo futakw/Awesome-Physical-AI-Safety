@@ -8,6 +8,8 @@ abstract: >-
 authors:
   - family-names: "Waseda"
     given-names: "Futa"
+    affiliation: "National Institute of Informatics (NII), Japan"
+    website: "https://futa-waseda.netlify.app/"
 repository-code: "https://github.com/futakw/Awesome-Responsible-VLA"
 url: "https://github.com/futakw/Awesome-Responsible-VLA"
 license: MIT

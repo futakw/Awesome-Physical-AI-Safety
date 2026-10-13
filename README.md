@@ -5,18 +5,16 @@ A curated, taxonomy-driven list of research on the safety, robustness, security,
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Cite this repository](https://img.shields.io/badge/Cite-CITATION.cff-blue.svg)](CITATION.cff)
+[![LLM-automated, no human review](https://img.shields.io/badge/curation-%F0%9F%A4%96%20LLM--automated%2C%20no%20human%20review-critical.svg)](docs/daily-curation-workflow.md)
 
 > This list separates **empirically evaluated risk outcomes** (what the paper measures) from **failure sources and mechanisms** (why it goes wrong). GitHub star badges are live and are shown only for identified official repositories.
 
 ## About This Catalog
 
-**Taxonomy and methodology.** The risk-outcome taxonomy, the failure-source categories, and the structured threat model schema (`kind`/`lifecycle`/`mechanism`/`surface`/`target`/`consequence`) were designed by **Futa Waseda**, who also designed the literature collection and curation methodology. See [the full taxonomy](docs/taxonomy.md).
-
-**Automated curation — no per-entry human review.** Day-to-day maintenance (searching for new papers, extracting metadata, classifying each entry against the taxonomy) is performed by an autonomous AI agent following the fixed rules in [the daily curation workflow](docs/daily-curation-workflow.md). Entries are evidence-coded and schema-validated, but **no human reviews each entry before it is committed.** Treat the catalog as provisional and verify anything load-bearing against the primary source. Found a misclassification or an error? Please open an issue or pull request.
-
-**Contributions welcome.** Adding a missing paper, correcting a record, or refining the taxonomy is welcome via pull request — see [CONTRIBUTING.md](CONTRIBUTING.md).
-
-**How to cite.** If this taxonomy or catalog is useful to your work, please cite it:
+- **🤖 Fully LLM-automated catalog — no human review.** Every entry (paper search, metadata extraction, taxonomy classification, commit) is produced by an autonomous AI agent per [the daily curation workflow](docs/daily-curation-workflow.md). **No human checks an entry before it is committed.** Treat records as provisional; verify anything load-bearing against the primary source. Found an error? Open an issue or PR.
+- **Author:** [Futa Waseda](https://futa-waseda.netlify.app/) — Project Assistant Professor, National Institute of Informatics (NII), Japan. Designed the taxonomy, the structured threat model schema, and the curation methodology; did not write individual entries.
+- **Contributions welcome:** new papers, corrections, and taxonomy refinements via pull request — see [CONTRIBUTING.md](CONTRIBUTING.md).
+- **Cite this work:** see [CITATION.cff](CITATION.cff) (GitHub's "Cite this repository" button) or the BibTeX below.
 
 ```bibtex
 @misc{waseda_awesome_responsible_vla,
@@ -26,8 +24,6 @@ A curated, taxonomy-driven list of research on the safety, robustness, security,
   url    = {https://github.com/futakw/Awesome-Responsible-VLA}
 }
 ```
-
-Machine-readable citation metadata is also available in [CITATION.cff](CITATION.cff) (use GitHub's "Cite this repository" button).
 
 ## Research Landscape
 
