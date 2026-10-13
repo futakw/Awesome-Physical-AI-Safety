@@ -16,7 +16,7 @@
 
 ### 🧭 Core Organizing Principle
 
-- **📏 Measured outcomes:** Risk labels represent outcomes reported with an empirical metric, not hypothetical harms.
+- **📏 Measured outcomes:** Risk labels record what a paper measures—such as attack success, task success, collision rate, or constraint violations—not harms it only discusses.
 - **🧩 Threat & failure mechanisms:** Each record traces lifecycle → mechanism → surface → target → consequence.
 - **🔄 Cross-system transfer:** The catalog connects VLA research with relevant robot, autonomous-system, embodied-agent, and LLM/VLM safety work.
 
