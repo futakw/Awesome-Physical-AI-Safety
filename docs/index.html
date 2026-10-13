@@ -43,14 +43,14 @@
 </head>
 <body>
 <main>
-  <a class="gh-link" href="https://github.com/futakw/Awesome-Physical-AI-Safety">⭐ View on GitHub — star the repo &amp; see how to cite it</a>
+  <a class="gh-link" href="https://github.com/futakw/Awesome-Physical-AI-Safety" target="_blank" rel="noopener noreferrer">⭐ View on GitHub — star the repo &amp; see how to cite it</a>
   <h1>Research Landscape</h1>
   <p class="lede">Interactive views of the Awesome Physical AI Safety catalog (<span id="paper-count"></span> papers).</p>
   <div class="meta-badges" aria-label="Catalog metadata">
-    <a class="meta-badge" href="../LICENSE"><span>License</span><strong>MIT</strong></a>
-    <a class="meta-badge papers" href="readme.html"><span>Papers</span><strong id="paper-count-badge">—</strong></a>
-    <a class="meta-badge update" href="../docs/daily-curation-workflow.md"><span>Update</span><strong>Daily</strong></a>
-    <a class="meta-badge curation" href="readme.html"><span>Curation</span><strong>LLM-assisted</strong></a>
+    <a class="meta-badge" href="../LICENSE" target="_blank" rel="noopener noreferrer"><span>License</span><strong>MIT</strong></a>
+    <a class="meta-badge papers" href="readme.html" target="_blank" rel="noopener noreferrer"><span>Papers</span><strong id="paper-count-badge">—</strong></a>
+    <a class="meta-badge update" href="../docs/daily-curation-workflow.md" target="_blank" rel="noopener noreferrer"><span>Update</span><strong>Daily</strong></a>
+    <a class="meta-badge curation" href="readme.html" target="_blank" rel="noopener noreferrer"><span>Curation</span><strong>LLM-assisted</strong></a>
   </div>
   <nav aria-label="Visualization views">
     <button type="button" data-view="readme" aria-pressed="false">README</button>
@@ -75,7 +75,7 @@ const sections = Object.keys(labels), tooltip = d3.select('#tooltip');
 d3.select('#paper-count').text(papers.length);
 d3.select('#paper-count-badge').text(papers.length);
 const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
-const paperListHtml = list => `<ul class="paper-list">${list.map(p=>`<li>${p.paper_url?`<a href="${escapeHtml(p.paper_url)}" target="_blank" rel="noopener">[${escapeHtml(p.venue)} ${p.year}] ${escapeHtml(p.title)}</a>`:`[${escapeHtml(p.venue)} ${p.year}] ${escapeHtml(p.title)}`}</li>`).join('')}</ul>`;
+const paperListHtml = list => `<ul class="paper-list">${list.map(p=>`<li>${p.paper_url?`<a href="${escapeHtml(p.paper_url)}" target="_blank" rel="noopener noreferrer">[${escapeHtml(p.venue)} ${p.year}] ${escapeHtml(p.title)}</a>`:`[${escapeHtml(p.venue)} ${p.year}] ${escapeHtml(p.title)}`}</li>`).join('')}</ul>`;
 const threatValues = (p,field) => ['survey','evaluation'].includes(p.threat_model.kind) ? (p.threat_model.coverage[{lifecycle:'lifecycles',mechanism:'mechanisms',surface:'surfaces',consequence:'consequences'}[field]]||[]) : (p.threat_model[field]||[]);
 const orderedThreatMechanisms = () => { const concrete=papers.filter(p=>p.threat_model.kind!=='survey'); const exploded=concrete.flatMap(p=>threatValues(p,'mechanism').map(m=>({p,m}))); const counts=d3.rollup(exploded,v=>new Set(v.map(d=>d.p.id)).size,d=>d.m); return [...counts].sort((a,b)=>d3.descending(a[1],b[1])).slice(0,10).map(d=>d[0]); };
 let pinned = false;
