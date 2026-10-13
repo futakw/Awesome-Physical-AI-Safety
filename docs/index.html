@@ -9,20 +9,23 @@
     :root { color-scheme: light; --ink:#202938; --muted:#657287; --line:#dce3ec; --panel:#f7f9fc; --blue:#6f9fef; --teal:#3fa89b; --coral:#d47a5d; --violet:#9873d4; --rose:#d96f8a; --gold:#b88a24; }
     * { box-sizing: border-box; }
     body { margin:0; background:#fff; color:var(--ink); font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
-    main { max-width:1180px; margin:0 auto; padding:38px 24px 64px; }
-    h1 { margin:0; font-size:32px; letter-spacing:-.02em; }
-    .lede { color:var(--muted); margin:7px 0 25px; }
-    .meta-badges { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 24px; }
-    .meta-badge { display:inline-flex; align-items:stretch; border:1px solid var(--line); border-radius:7px; overflow:hidden; color:var(--ink); text-decoration:none; box-shadow:0 1px 1px #20293812; }
-    .meta-badge span { background:#4b5563; color:#fff; padding:3px 8px; font-size:12px; }
-    .meta-badge strong { background:#eef3fa; color:#243b53; padding:3px 9px; font-size:12px; font-weight:650; }
+    main { max-width:1180px; margin:0 auto; padding:18px 24px 64px; }
+    h1 { margin:0; font-size:16px; font-weight:700; letter-spacing:-.01em; white-space:nowrap; }
+    .lede { color:var(--muted); margin:0 0 14px; font-size:13px; }
+    .topbar { position:sticky; top:0; z-index:8; background:#fff; border-bottom:1px solid var(--line); box-shadow:0 1px 0 #20293808; }
+    .topbar-inner { max-width:1180px; margin:0 auto; padding:9px 24px 0; }
+    .topbar-main { display:flex; align-items:center; gap:14px; flex-wrap:wrap; padding-bottom:8px; }
+    .meta-badges { display:flex; flex-wrap:wrap; gap:6px; margin-left:auto; }
+    .meta-badge { display:inline-flex; align-items:stretch; border:1px solid var(--line); border-radius:6px; overflow:hidden; color:var(--ink); text-decoration:none; }
+    .meta-badge span { background:#4b5563; color:#fff; padding:2px 7px; font-size:11px; }
+    .meta-badge strong { background:#eef3fa; color:#243b53; padding:2px 8px; font-size:11px; font-weight:650; }
     .meta-badge:hover strong { background:#dfeafb; }
     .meta-badge.papers strong { background:#3fa89b; color:#fff; }
     .meta-badge.update strong { background:#d47a5d; color:#fff; }
     .meta-badge.curation strong { background:#6f9fef; color:#fff; }
-    nav { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px; }
-    .doc-link { border:1px solid var(--line); background:var(--panel); color:var(--ink); border-radius:8px; padding:9px 14px; text-decoration:none; }
-    button { border:1px solid var(--line); background:#fff; color:var(--ink); border-radius:8px; padding:9px 14px; cursor:pointer; font:inherit; }
+    nav { display:flex; gap:6px; flex-wrap:wrap; padding-bottom:9px; }
+    .doc-link { border:1px solid var(--line); background:var(--panel); color:var(--ink); border-radius:7px; padding:9px 14px; text-decoration:none; }
+    button { border:1px solid var(--line); background:#fff; color:var(--ink); border-radius:7px; padding:6px 12px; cursor:pointer; font:inherit; font-size:13px; }
     button[aria-pressed="true"] { background:#eef3fa; border-color:#aebed6; font-weight:600; }
     .view-container { min-height:960px; }
     section { display:none; }
@@ -31,46 +34,49 @@
     svg { width:100%; height:auto; display:block; border:1px solid var(--line); border-radius:10px; background:var(--panel); }
     .axis text,.legend text { fill:var(--muted); font-size:12px; }
     .axis path,.axis line { stroke:var(--line); }
-    .tooltip { position:fixed; pointer-events:auto; max-width:380px; background:#202938; color:#fff; border-radius:8px; padding:11px 13px; box-shadow:0 8px 25px #20293833; font-size:13px; z-index:5; opacity:0; }
+    .tooltip { position:fixed; pointer-events:auto; max-width:380px; background:#202938; color:#fff; border-radius:8px; padding:11px 13px; box-shadow:0 8px 25px #20293833; font-size:13px; z-index:9; opacity:0; }
     .tooltip strong { display:block; font-size:14px; line-height:1.35; margin-bottom:4px; }
     .tooltip a { color:#c8dcff; }
     .paper-list { max-height:190px; overflow:auto; margin:6px 0 0; padding-left:18px; }
     .paper-list li { margin:2px 0; }
     .doc-frame { width:100%; min-height:900px; border:1px solid var(--line); border-radius:10px; background:#fff; }
-    .top-row { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom:14px; }
-    .gh-link { display:inline-flex; align-items:center; gap:6px; padding:7px 12px; border:1px solid var(--line); border-radius:8px; background:var(--panel); color:var(--ink); text-decoration:none; font-size:13px; }
+    .gh-link { display:inline-flex; align-items:center; gap:5px; padding:5px 10px; border:1px solid var(--line); border-radius:7px; background:var(--panel); color:var(--ink); text-decoration:none; font-size:12px; white-space:nowrap; }
     .gh-link:hover { background:#eef3fa; }
-    .lang-toggle { display:inline-flex; border:1px solid var(--line); border-radius:8px; overflow:hidden; }
-    .lang-toggle button { border:none; border-radius:0; padding:7px 13px; font-size:13px; background:#fff; }
+    .lang-toggle { display:inline-flex; border:1px solid var(--line); border-radius:7px; overflow:hidden; flex:none; }
+    .lang-toggle button { border:none; border-radius:0; padding:5px 11px; font-size:12px; background:#fff; }
     .lang-toggle button + button { border-left:1px solid var(--line); }
     .lang-toggle button[aria-pressed="true"] { background:var(--ink); color:#fff; font-weight:650; }
-    @media (max-width:620px) { main { padding:25px 12px 40px; } h1 { font-size:26px; } .tooltip { max-width:280px; } }
+    @media (max-width:620px) { main { padding:14px 12px 40px; } .topbar-inner { padding:8px 12px 0; } .meta-badges { margin-left:0; } .tooltip { max-width:280px; } }
   </style>
 </head>
 <body>
-<main>
-  <div class="top-row">
-    <a class="gh-link" id="gh-link" href="https://github.com/futakw/Awesome-Physical-AI-Safety" target="_blank" rel="noopener noreferrer">⭐ View on GitHub — star the repo &amp; see how to cite it</a>
-    <div class="lang-toggle" role="group" aria-label="Language">
-      <button type="button" id="lang-en" aria-pressed="true">EN</button>
-      <button type="button" id="lang-ja" aria-pressed="false">日本語</button>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-main">
+      <a class="gh-link" id="gh-link" href="https://github.com/futakw/Awesome-Physical-AI-Safety" target="_blank" rel="noopener noreferrer">⭐ View on GitHub — star the repo &amp; see how to cite it</a>
+      <h1 data-i18n="title">Awesome Physical AI Safety</h1>
+      <div class="meta-badges" aria-label="Catalog metadata">
+        <a class="meta-badge" href="../LICENSES.md" target="_blank" rel="noopener noreferrer"><span data-i18n="badgeLicenses">Licenses</span><strong>MIT · CC BY 4.0</strong></a>
+        <a class="meta-badge papers" href="readme.html" target="_blank" rel="noopener noreferrer"><span data-i18n="badgePapers">Papers</span><strong id="paper-count-badge">—</strong></a>
+        <a class="meta-badge update" href="../docs/daily-curation-workflow.md" target="_blank" rel="noopener noreferrer"><span data-i18n="badgeUpdate">Update</span><strong data-i18n="badgeDaily">Daily</strong></a>
+        <a class="meta-badge curation" href="readme.html" target="_blank" rel="noopener noreferrer"><span data-i18n="badgeCuration">Curation</span><strong data-i18n="badgeLlm">LLM-assisted</strong></a>
+      </div>
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" id="lang-en" aria-pressed="true">EN</button>
+        <button type="button" id="lang-ja" aria-pressed="false">日本語</button>
+      </div>
     </div>
+    <nav aria-label="Visualization views">
+      <button type="button" data-view="readme" aria-pressed="false" data-i18n="navReadme">README</button>
+      <button type="button" data-view="taxonomy" aria-pressed="false" data-i18n="navTaxonomy">Taxonomy</button>
+      <button type="button" data-view="timeline" aria-pressed="true" data-i18n="navTimeline">Field timeline</button>
+      <button type="button" data-view="heatmap" aria-pressed="false" data-i18n="navHeatmap">Threat cross-map</button>
+      <button type="button" data-view="risk" aria-pressed="false" data-i18n="navRisk">Threat × measured risk</button>
+    </nav>
   </div>
-  <h1 data-i18n="title">Research Landscape</h1>
+</header>
+<main>
   <p class="lede"><span data-i18n="ledePrefix">Interactive views of the Awesome Physical AI Safety catalog (</span><span id="paper-count"></span><span data-i18n="ledeSuffix"> papers).</span></p>
-  <div class="meta-badges" aria-label="Catalog metadata">
-    <a class="meta-badge" href="../LICENSES.md" target="_blank" rel="noopener noreferrer"><span data-i18n="badgeLicenses">Licenses</span><strong>MIT · CC BY 4.0</strong></a>
-    <a class="meta-badge papers" href="readme.html" target="_blank" rel="noopener noreferrer"><span data-i18n="badgePapers">Papers</span><strong id="paper-count-badge">—</strong></a>
-    <a class="meta-badge update" href="../docs/daily-curation-workflow.md" target="_blank" rel="noopener noreferrer"><span data-i18n="badgeUpdate">Update</span><strong data-i18n="badgeDaily">Daily</strong></a>
-    <a class="meta-badge curation" href="readme.html" target="_blank" rel="noopener noreferrer"><span data-i18n="badgeCuration">Curation</span><strong data-i18n="badgeLlm">LLM-assisted</strong></a>
-  </div>
-  <nav aria-label="Visualization views">
-    <button type="button" data-view="readme" aria-pressed="false" data-i18n="navReadme">README</button>
-    <button type="button" data-view="taxonomy" aria-pressed="false" data-i18n="navTaxonomy">Taxonomy</button>
-    <button type="button" data-view="timeline" aria-pressed="true" data-i18n="navTimeline">Field timeline</button>
-    <button type="button" data-view="heatmap" aria-pressed="false" data-i18n="navHeatmap">Threat cross-map</button>
-    <button type="button" data-view="risk" aria-pressed="false" data-i18n="navRisk">Threat × measured risk</button>
-  </nav>
   <p class="note" data-i18n="topNote">Charts summarize catalog coverage, not field-wide prevalence. Click a cell to inspect the contributing papers.</p>
   <div class="view-container">
   <section id="timeline" class="active"><p class="note" data-i18n="timelineNote">Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to pin the paper list.</p><div id="timeline-chart"></div></section>
@@ -100,7 +106,7 @@ function countLabel(n){ return `${n}${I18N[currentLang].papersWord}`; }
 
 const I18N = {
   en: {
-    title: 'Research Landscape',
+    title: 'Awesome Physical AI Safety',
     ledePrefix: 'Interactive views of the Awesome Physical AI Safety catalog (',
     ledeSuffix: ' papers).',
     ghlink: '⭐ View on GitHub — star the repo & see how to cite it',
@@ -118,7 +124,7 @@ const I18N = {
     papersWord: ' papers',
   },
   ja: {
-    title: '研究ランドスケープ',
+    title: 'Awesome Physical AI Safety',
     ledePrefix: 'Awesome Physical AI Safetyカタログのインタラクティブな可視化（',
     ledeSuffix: '件の論文）。',
     ghlink: '⭐ GitHubで見る — Starをお願いします。引用方法もこちらから',
