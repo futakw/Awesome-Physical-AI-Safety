@@ -174,6 +174,7 @@ def render(papers: list[dict]) -> str:
         "",
         "- **📏 Measured outcomes:** Risk labels record what a paper measures—such as attack success, task success, collision rate, or constraint violations—not harms it only discusses.",
         "- **🧩 Threat & failure mechanisms:** Each record traces lifecycle → mechanism → surface → target → consequence.",
+        "- **🔎 Cross-map views:** Compare mechanisms with measured risks, defenses, benchmarks, and evaluation settings to see patterns and gaps in this catalog.",
         "- **🔄 Cross-system transfer:** The catalog connects VLA research with relevant robot, autonomous-system, embodied-agent, and LLM/VLM safety work.",
         "",
         "### 📚 Citing",
@@ -191,9 +192,9 @@ def render(papers: list[dict]) -> str:
         "",
         "## Research Landscape",
         "",
-        "[![Field timeline of the paper catalog](assets/visualizations/field-timeline.svg)](docs/visualizations.md)",
+        "[![Threat mechanisms by empirically evaluated risk in this catalog](assets/visualizations/threat-risk-heatmap.svg)](docs/index.html)",
         "",
-        "Open the [interactive explorer](docs/index.html) for hoverable paper lists in the field timeline and the Threat, Threat × Risk, Defense, Benchmark, and Evaluation cross-maps.",
+        "This cross-map shows which threat mechanisms appear alongside measured risk outcomes in the catalog. Explore the [interactive cross-maps and field timeline](docs/index.html), or [view all static figures](docs/visualizations.md).",
         "",
     ]
     lines.extend([
