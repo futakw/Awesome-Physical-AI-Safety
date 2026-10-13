@@ -14,6 +14,17 @@ PAGES = [
     (ROOT / 'docs' / 'taxonomy.ja.md', ROOT / 'docs' / 'taxonomy.ja.html', 'Taxonomy (日本語)'),
 ]
 
+# The EN/JA language-switcher line at the top of each source file links to its
+# sibling .md file, which is correct on GitHub (renders natively) but 404s or
+# opens raw Markdown from inside these generated pages. Point the switcher at
+# the rendered sibling .html page instead, only in this generated output.
+SWITCHER_TARGETS = {
+    'README.md': ('README.ja.md', 'readme.ja.html'),
+    'README.ja.md': ('README.md', 'readme.html'),
+    'taxonomy.md': ('taxonomy.ja.md', 'taxonomy.ja.html'),
+    'taxonomy.ja.md': ('taxonomy.md', 'taxonomy.html'),
+}
+
 for source, output, title in PAGES:
     text = source.read_text(encoding='utf-8')
     if source.parent == ROOT:
@@ -21,6 +32,8 @@ for source, output, title in PAGES:
         text = text.replace('](assets/', '](../assets/').replace('](docs/', '](../docs/')
         for filename in ('LICENSE', 'LICENSES.md', 'CONTRIBUTING.md', 'CONTRIBUTING.ja.md', 'CITATION.cff'):
             text = text.replace(f']({filename})', f'](../{filename})')
+    md_target, html_target = SWITCHER_TARGETS[source.name]
+    text = text.replace(f']({md_target})', f']({html_target})')
     lang = 'ja' if source.name.endswith('.ja.md') else 'en'
     output.write_text(TEMPLATE.format(title=title, lang=lang, source=json.dumps(text)), encoding='utf-8')
     print(f'Generated {output.name}')
