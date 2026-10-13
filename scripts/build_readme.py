@@ -152,6 +152,7 @@ def subsection_anchor(section_key: str, subsection: str) -> str:
 
 
 def render(papers: list[dict]) -> str:
+    paper_count = len(papers)
     lines = [
         "# Awesome Physical AI Safety",
         "",
@@ -161,6 +162,7 @@ def render(papers: list[dict]) -> str:
         "[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)",
         "[![Cite this repository](https://img.shields.io/badge/Cite-CITATION.cff-blue.svg)](CITATION.cff)",
         "[![LLM-assisted, evidence-verified](https://img.shields.io/badge/curation-%F0%9F%A4%96%20LLM--assisted%2C%20evidence--verified-critical.svg)](docs/daily-curation-workflow.md)",
+        f"[![Scope](https://img.shields.io/badge/Scope-Physical_AI_Safety-9873D4?style=flat)](docs/taxonomy.md) [![License](https://img.shields.io/badge/License-MIT-3FA89B?style=flat)](LICENSE) [![Papers](https://img.shields.io/badge/Papers-{paper_count}-6F9FEF?style=flat)](docs/index.html) [![Update](https://img.shields.io/badge/Update-Daily-D47A5D?style=flat)](docs/daily-curation-workflow.md) [![Curation](https://img.shields.io/badge/Curation-LLM--assisted-B88A24?style=flat)](docs/daily-curation-workflow.md) [![Maintainer](https://img.shields.io/badge/Maintainer-Futa_Waseda-65A30D?style=flat)](https://futa-waseda.netlify.app/)",
         "",
         "> Core organizing principle:",
         "> - **Measured outcome:** Risk labels are assigned only to outcomes reported with an empirical metric.",
