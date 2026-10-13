@@ -1,6 +1,6 @@
 # Awesome Physical AI Safety
 
-**🤖 An LLM-assisted bibliography of safety, security, ethics, fairness, and trustworthy deployment research for VLA, robots, autonomous systems, and embodied agents.**
+**🤖 An LLM-assisted bibliography of safety, security, robustness, ethical and societal risks, and trustworthy deployment across VLA, robots, autonomous systems, and embodied agents.**
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
@@ -60,7 +60,7 @@ A label is shown only when the paper reports a corresponding empirical outcome m
 
 - ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) task or route completion, success rate, or equivalent execution outcome.
 - ![Physical](https://img.shields.io/badge/-Physical-D96F8A?style=flat) collision, damage, unsafe motion or force, physical harm, or safety-constraint violation.
-- ![Ethics](https://img.shields.io/badge/-Ethics-9873D4?style=flat) harmful-instruction compliance or refusal, prohibited behavior, or policy/constitution violation.
+- ![Ethics](https://img.shields.io/badge/-Ethics-9873D4?style=flat) harmful-instruction compliance or refusal, policy violations, or measured group disparities in embodied outcomes.
 - ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-B88A24?style=flat) attack success, backdoor activation, control hijacking, unauthorized access, leakage, or compromise.
 - **—:** no directly corresponding outcome is empirically evaluated, as is common for surveys and diagnostic-only work.
 
@@ -87,6 +87,10 @@ See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.
 - [🛡️ Defenses and Safety Mechanisms](#defenses)
 - [📊 Benchmarks and Evaluation](#benchmarks)
 - [🔐 System-Level Security, Privacy, and Misuse](#system-security)
+
+**Cross-cutting outcome**
+
+- [⚖️ Ethics & Societal Safety](#ethics-societal-safety)
 
 <details>
 <summary><strong>Show subsection index</strong></summary>
@@ -150,6 +154,18 @@ See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.
 </details>
 
 **250 papers in the current catalog.**
+
+<a id="ethics-societal-safety"></a>
+
+### ⚖️ Ethics & Societal Safety
+
+10 catalog records carry the `ethical-societal` outcome label. These links lead to their primary-contribution subsections; the index is not an independent verification of each label.
+
+- [Jailbreaks and Prompt Injection](#inference-attacks-jailbreaks-and-prompt-injection) (5)
+- [Representation Steering and Inference-Time Defense](#defenses-representation-steering-and-inference-time-defense) (1)
+- [Task and Physical Safety](#benchmarks-task-and-physical-safety) (1)
+- [Semantic and Ethical Safety](#benchmarks-semantic-and-ethical-safety) (1)
+- [Safety and Hazard Benchmarks](#benchmarks-safety-and-hazard-benchmarks) (2)
 
 <a id="surveys"></a>
 
@@ -767,7 +783,7 @@ See [the full taxonomy](docs/taxonomy.md) for definitions and inclusion rules.
 
 ## Scope and Curation Policy
 
-The core scope is VLA safety, robustness, security, and evaluation. Closely related LLM-robot, VLM-driven embodied-agent, autonomous-driving, and robot-policy papers are included when they expose a risk, mechanism, defense, or evaluation principle that transfers directly to VLA systems.
+The catalog covers safety, security, robustness, privacy, ethical and societal outcomes, and trustworthy deployment across physical AI. VLA is a major focus, alongside robot policies, autonomous systems, and LLM/VLM-driven embodied agents when the work studies embodied behavior, physical interaction, or deployment-relevant failure. General-purpose LLM/VLM work without a clear physical-AI connection is out of scope.
 
 A paper is listed once under its primary contribution. Risk outcomes and mechanisms are represented as multi-label metadata rather than by duplicating the paper across sections.
 

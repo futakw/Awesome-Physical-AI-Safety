@@ -37,8 +37,8 @@ python3 scripts/build_explorer.py
 
 ## Scope
 
-The core scope is Responsible VLA. Adjacent embodied-agent, autonomous-driving, and robot-policy work is accepted only when it contributes a directly transferable risk, threat, defense, or evaluation principle.
+The scope is physical-AI safety, security, robustness, privacy, ethical and societal outcomes, and trustworthy deployment. VLA is a major focus; robot-policy, autonomous-driving, and embodied-agent work is also in scope when it studies embodied behavior, physical interaction, or deployment-relevant risk. General-purpose LLM/VLM work needs an explicit physical-AI connection.
 
 ## Pull Requests
 
-Keep each pull request focused. Explain why a new paper belongs in the selected section and identify whether it is core VLA work or adjacent embodied-agent work.
+Keep each pull request focused. Explain why a new paper belongs in the selected section, which physical-AI system it studies, and what risk, mechanism, or evaluation principle it contributes.

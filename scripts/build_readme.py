@@ -156,7 +156,7 @@ def render(papers: list[dict]) -> str:
     lines = [
         "# Awesome Physical AI Safety",
         "",
-        "**🤖 An LLM-assisted bibliography of safety, security, ethics, fairness, and trustworthy deployment research for VLA, robots, autonomous systems, and embodied agents.**",
+        "**🤖 An LLM-assisted bibliography of safety, security, robustness, ethical and societal risks, and trustworthy deployment across VLA, robots, autonomous systems, and embodied agents.**",
         "",
         "[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)",
         "[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)",
@@ -218,7 +218,7 @@ def render(papers: list[dict]) -> str:
         "",
         f"- {badge('Task', RISK_COLORS['task-reliability'])} task or route completion, success rate, or equivalent execution outcome.",
         f"- {badge('Physical', RISK_COLORS['physical-safety'])} collision, damage, unsafe motion or force, physical harm, or safety-constraint violation.",
-        f"- {badge('Ethics', RISK_COLORS['ethical-societal'])} harmful-instruction compliance or refusal, prohibited behavior, or policy/constitution violation.",
+        f"- {badge('Ethics', RISK_COLORS['ethical-societal'])} harmful-instruction compliance or refusal, policy violations, or measured group disparities in embodied outcomes.",
         f"- {badge('Security/Privacy', RISK_COLORS['security-privacy'])} attack success, backdoor activation, control hijacking, unauthorized access, leakage, or compromise.",
         "- **—:** no directly corresponding outcome is empirically evaluated, as is common for surveys and diagnostic-only work.",
         "",
@@ -241,9 +241,17 @@ def render(papers: list[dict]) -> str:
     ])
 
     present_sections = [key for key in SECTIONS if any(p["section"] == key for p in papers)]
+    ethics_groups: OrderedDict[tuple[str, str], int] = OrderedDict()
+    for section_key in present_sections:
+        for paper in papers:
+            if paper["section"] == section_key and "ethical-societal" in paper["risks"]:
+                key = (section_key, paper["subsection"])
+                ethics_groups[key] = ethics_groups.get(key, 0) + 1
     for key in present_sections:
         icon, title = SECTIONS[key]
         lines.append(f"- [{icon} {title}](#{key})")
+    if ethics_groups:
+        lines.extend(["", "**Cross-cutting outcome**", "", "- [⚖️ Ethics & Societal Safety](#ethics-societal-safety)"])
     lines.extend(["", "<details>", '<summary><strong>Show subsection index</strong></summary>', ""])
     for key in present_sections:
         icon, title = SECTIONS[key]
@@ -257,6 +265,20 @@ def render(papers: list[dict]) -> str:
                 f"  - [{subsection}](#{subsection_anchor(key, subsection)})"
             )
     lines.extend(["", "</details>", "", f"**{len(papers)} papers in the current catalog.**", ""])
+
+    if ethics_groups:
+        ethics_count = sum(ethics_groups.values())
+        lines.extend([
+            '<a id="ethics-societal-safety"></a>',
+            "",
+            "### ⚖️ Ethics & Societal Safety",
+            "",
+            f"{ethics_count} catalog records carry the `ethical-societal` outcome label. These links lead to their primary-contribution subsections; the index is not an independent verification of each label.",
+            "",
+        ])
+        for (section_key, subsection), count in ethics_groups.items():
+            lines.append(f"- [{subsection}](#{subsection_anchor(section_key, subsection)}) ({count})")
+        lines.append("")
 
     for section_key in present_sections:
         section_papers = [p for p in papers if p["section"] == section_key]
@@ -291,7 +313,7 @@ def render(papers: list[dict]) -> str:
         [
             "## Scope and Curation Policy",
             "",
-            "The core scope is VLA safety, robustness, security, and evaluation. Closely related LLM-robot, VLM-driven embodied-agent, autonomous-driving, and robot-policy papers are included when they expose a risk, mechanism, defense, or evaluation principle that transfers directly to VLA systems.",
+            "The catalog covers safety, security, robustness, privacy, ethical and societal outcomes, and trustworthy deployment across physical AI. VLA is a major focus, alongside robot policies, autonomous systems, and LLM/VLM-driven embodied agents when the work studies embodied behavior, physical interaction, or deployment-relevant failure. General-purpose LLM/VLM work without a clear physical-AI connection is out of scope.",
             "",
             "A paper is listed once under its primary contribution. Risk outcomes and mechanisms are represented as multi-label metadata rather than by duplicating the paper across sections.",
             "",

@@ -4,7 +4,7 @@ This document defines the maintenance workflow for incorporating newly discovere
 
 ## 1. Search and Verify
 
-1. Search primary sources for new papers and material revisions in Responsible VLA, embodied-agent safety, physical AI security, robustness, OOD generalization, attacks, defenses, privacy, failure detection, and safety evaluation.
+1. Search primary sources for new papers and material revisions in VLA and broader physical-AI safety, embodied-agent security, robustness, OOD generalization, attacks, defenses, privacy, ethics, fairness, failure detection, and safety evaluation.
 2. Prefer arXiv, OpenReview, official proceedings, author project pages, and official repositories.
 3. Confirm the official title, first author, publication year, venue, paper URL, and official project or code URL.
 4. Check `data/papers.json` by normalized title, paper URL, arXiv ID, DOI, and known title changes before adding a record.
@@ -14,11 +14,11 @@ This document defines the maintenance workflow for incorporating newly discovere
 
 Include work that directly contributes at least one of the following:
 
-- VLA safety, robustness, security, privacy, misuse, or trustworthy evaluation
-- transferable embodied-agent or robot-policy failure analysis
-- adversarial or non-adversarial/OOD evaluation relevant to perception-decision-action loops
-- runtime monitoring, guardrails, action shielding, fail-safe behavior, recovery, or uncertainty handling
-- a survey or benchmark that materially organizes Responsible VLA research
+- safety, robustness, security, privacy, misuse, ethics, fairness, or trustworthy evaluation of a VLA, robot policy, autonomous system, or embodied agent
+- embodied failure, attack, or human-impact analysis relevant to physical interaction or deployment
+- adversarial, non-adversarial/OOD, or societal evaluation of physical-AI behavior
+- runtime monitoring, guardrails, action shielding, fail-safe behavior, recovery, or uncertainty handling for embodied systems
+- a survey or benchmark that materially organizes physical-AI safety research
 
 Exclude unrelated uses of the acronym VLA, generic capability papers without a responsible-deployment connection, secondary articles without a traceable primary source, and exact duplicates.
 
@@ -35,7 +35,7 @@ For each record:
 - use `code_url` only for an official or author-maintained repository or project page
 - assign one primary section and subsection
 - assign `risks` only from outcomes empirically measured in the paper
-- write a compact `threat_model` in `Category (primary mechanism or shift)` form
+- use the structured `threat_model` fields and controlled vocabularies defined in [the taxonomy](taxonomy.md)
 - keep experimental settings and secondary descriptors in `tags`
 
 Do not add private research questions, unpublished interpretations, personal work notes, local paths, or content from private research folders.

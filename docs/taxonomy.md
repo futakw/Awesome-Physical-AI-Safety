@@ -16,7 +16,7 @@ Collision, human injury, object or environment damage, unsafe force or motion, p
 
 ### Ethical and Societal Risk
 
-Compliance or refusal under harmful or prohibited instructions, policy or constitution violations, and explicitly measured harmful embodied behavior.
+Compliance or refusal under harmful or prohibited instructions, policy or constitution violations, explicitly measured harmful embodied behavior, or measured disparities across people or groups in access, task success, assistance quality, or exposure to hazards. A fairness motivation, a model's inductive bias, or a benchmark's "fair evaluation" of models does not qualify without a corresponding societal-outcome metric.
 
 ### Security and Privacy Risk
 
@@ -246,14 +246,14 @@ OOD generalization is a first-class section rather than a subtype of attack.
 
 ## Inclusion Criteria
 
-Include a paper when at least one of the following holds:
+Include a paper when it studies physical-AI safety or trustworthy deployment and at least one of the following holds:
 
-1. It directly studies safety, robustness, security, privacy, misuse, or trustworthy evaluation of a VLA model.
-2. It studies an embodied-agent or robot-policy failure that transfers directly to VLA perception-decision-action loops.
-3. It introduces an OOD or evaluation protocol that exposes a Responsible VLA failure mode.
-4. It proposes a defense, runtime monitor, guardrail, action shield, fail-safe, or recovery mechanism relevant to VLA deployment.
+1. It directly studies safety, robustness, security, privacy, misuse, ethics, fairness, or trustworthy evaluation of a VLA, robot policy, autonomous system, or embodied agent.
+2. It analyzes an embodied failure, attack, or human impact relevant to physical interaction or deployment.
+3. It introduces an OOD, safety, or societal evaluation protocol for physical-AI behavior.
+4. It proposes a defense, runtime monitor, guardrail, action shield, fail-safe, or recovery mechanism for an embodied system.
 
-Generic VLM, LLM, robotics, or capability papers should not be included unless their connection to VLA risk is explicit.
+Generic VLM, LLM, robotics, or capability papers should not be included unless their connection to physical-AI risk or trustworthy deployment is explicit.
 
 ## Classification Rule
 
