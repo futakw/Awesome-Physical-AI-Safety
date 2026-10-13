@@ -39,12 +39,21 @@
     .doc-frame { width:100%; min-height:900px; border:1px solid var(--line); border-radius:10px; background:#fff; }
     .gh-link { display:inline-flex; align-items:center; gap:6px; margin-bottom:14px; padding:7px 12px; border:1px solid var(--line); border-radius:8px; background:var(--panel); color:var(--ink); text-decoration:none; font-size:13px; }
     .gh-link:hover { background:#eef3fa; }
+    .lang-banner { display:none; align-items:center; justify-content:space-between; gap:12px; margin-bottom:14px; padding:9px 14px; border:1px solid #aebed6; border-radius:8px; background:#eef3fa; color:var(--ink); font-size:13px; }
+    .lang-banner.show { display:flex; }
+    .lang-banner a { color:#2451a6; font-weight:650; text-decoration:none; }
+    .lang-banner a:hover { text-decoration:underline; }
+    .lang-banner button { border:none; background:transparent; color:var(--muted); font-size:16px; line-height:1; padding:2px 6px; cursor:pointer; }
     @media (max-width:620px) { main { padding:25px 12px 40px; } h1 { font-size:26px; } .tooltip { max-width:280px; } }
   </style>
 </head>
 <body>
 <main>
   <a class="gh-link" href="https://github.com/futakw/Awesome-Physical-AI-Safety" target="_blank" rel="noopener noreferrer">⭐ View on GitHub — star the repo &amp; see how to cite it</a>
+  <div id="lang-banner" class="lang-banner" role="note">
+    <span>🇯🇵 日本語の概要ページがあります。 <a href="https://github.com/futakw/Awesome-Physical-AI-Safety/blob/main/README.ja.md" target="_blank" rel="noopener noreferrer">こちらから</a></span>
+    <button type="button" id="lang-banner-dismiss" aria-label="Dismiss">✕</button>
+  </div>
   <h1>Research Landscape</h1>
   <p class="lede">Interactive views of the Awesome Physical AI Safety catalog (<span id="paper-count"></span> papers).</p>
   <div class="meta-badges" aria-label="Catalog metadata">
@@ -220,6 +229,19 @@ activateView(availableViews.has(window.location.hash.slice(1)) ? window.location
 for (const render of [renderTimeline, renderHeatmap, renderThreatRisk]) {
   try { render(); } catch (error) { console.error('Visualization failed to render:', error); }
 }
+
+(function(){
+  const banner = document.getElementById('lang-banner');
+  const dismissKey = 'lang-banner-dismissed';
+  const isJapanese = [navigator.language, ...(navigator.languages||[])].some(l => (l||'').toLowerCase().startsWith('ja'));
+  if (isJapanese && !localStorage.getItem(dismissKey)) {
+    banner.classList.add('show');
+  }
+  document.getElementById('lang-banner-dismiss').addEventListener('click', () => {
+    banner.classList.remove('show');
+    localStorage.setItem(dismissKey, '1');
+  });
+})();
 </script>
 </body>
 </html>
