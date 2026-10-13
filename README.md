@@ -1,13 +1,15 @@
 # Awesome Physical AI Safety
 
-**An LLM-assisted, evidence-verified bibliography of safety, security, ethics, fairness, and trustworthy deployment research for VLA, robots, autonomous systems, and embodied agents.**
+**🤖 An LLM-assisted, evidence-verified bibliography of safety, security, ethics, fairness, and trustworthy deployment research for VLA, robots, autonomous systems, and embodied agents.**
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Cite this repository](https://img.shields.io/badge/Cite-CITATION.cff-blue.svg)](CITATION.cff)
 [![LLM-assisted, evidence-verified](https://img.shields.io/badge/curation-%F0%9F%A4%96%20LLM--assisted%2C%20evidence--verified-critical.svg)](docs/daily-curation-workflow.md)
 
-> Core organizing principle: every record answers two separate questions — **what outcome did the paper measure?** and **what threat or failure mechanism did it study?** Risk labels require a corresponding empirical metric; mechanism labels describe the cause or threat model independently.
+> Core organizing principle:
+> - **Measured outcome:** Risk labels are assigned only to outcomes reported with an empirical metric.
+> - **Threat or failure mechanism:** Mechanism labels record the studied cause or threat model separately.
 
 ## Author
 
@@ -15,9 +17,7 @@
 
 ## About This Catalog
 
-This catalog complements broad capability- or pipeline-based surveys with explicit, machine-readable safety evidence.
-
-### What Makes This Catalog Different
+### Catalog Design
 
 - **Evidence-coded outcomes:** risk labels are assigned only when the paper reports a corresponding empirical outcome; motivation or hypothetical impact alone is not enough.
 - **Structured threat models:** lifecycle, mechanism, surface, target, and consequence are recorded separately for cross-paper comparison.
@@ -25,9 +25,8 @@ This catalog complements broad capability- or pipeline-based surveys with explic
 
 ### Contributing and Citing
 
-Contributions of new papers, corrections, and taxonomy refinements are welcome via [CONTRIBUTING.md](CONTRIBUTING.md).
-
-Please cite this catalog when using its bibliography, taxonomy, structured metadata, visualizations, or curation methodology; cite original papers for claims about individual papers. See [CITATION.cff](CITATION.cff) or the BibTeX below.
+- **Contribute:** Add papers, corrections, and taxonomy refinements via [CONTRIBUTING.md](CONTRIBUTING.md).
+- **Cite:** Cite this catalog for its bibliography, taxonomy, metadata, visualizations, or curation methodology; cite original papers for individual claims. See [CITATION.cff](CITATION.cff).
 
 ```bibtex
 @misc{waseda_awesome_physical_ai_safety,
