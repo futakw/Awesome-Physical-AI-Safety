@@ -57,7 +57,7 @@
         "task-success-rate",
         "robust-success-rate"
       ],
-      "physical_validation": true,
+      "physical_validation": false,
       "curation_status": "catalog-derived"
     },
     "defense": {
@@ -227,9 +227,7 @@
     "section": "defenses",
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "embodied-agent",
-    "risks": [
-      "task-reliability"
-    ],
+    "risks": [],
     "threat_model": {
       "kind": "system-failure",
       "lifecycle": [
@@ -263,10 +261,7 @@
       "access": [
         "not-applicable"
       ],
-      "metrics": [
-        "task-success-rate",
-        "constraint-violation-rate"
-      ],
+      "metrics": [],
       "physical_validation": null,
       "curation_status": "abstract-verified"
     },
@@ -465,7 +460,7 @@
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "embodied-agent",
     "risks": [
-      "task-reliability"
+      "physical-safety"
     ],
     "threat_model": {
       "kind": "system-failure",
@@ -484,7 +479,7 @@
         "vla-policy"
       ],
       "consequence": [
-        "policy-violation"
+        "collision"
       ]
     },
     "tags": [
@@ -509,8 +504,7 @@
         "not-applicable"
       ],
       "metrics": [
-        "task-success-rate",
-        "constraint-violation-rate"
+        "collision-rate"
       ],
       "physical_validation": true,
       "curation_status": "paper-verified"
@@ -584,10 +578,7 @@
       "access": [
         "not-applicable"
       ],
-      "metrics": [
-        "task-success-rate",
-        "constraint-violation-rate"
-      ],
+      "metrics": [],
       "physical_validation": null,
       "curation_status": "abstract-verified"
     },
@@ -786,8 +777,7 @@
       ],
       "metrics": [
         "task-success-rate",
-        "attack-success-rate",
-        "clean-task-success-rate"
+        "attack-success-rate"
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
@@ -823,7 +813,7 @@
         "task-planner"
       ],
       "consequence": [
-        "control-hijacking"
+        "task-failure"
       ]
     },
     "tags": [
@@ -847,7 +837,6 @@
       ],
       "metrics": [
         "task-success-rate",
-        "attack-success-rate",
         "clean-task-success-rate"
       ],
       "physical_validation": false,
@@ -912,9 +901,7 @@
         "black-box"
       ],
       "metrics": [
-        "task-success-rate",
-        "attack-success-rate",
-        "clean-task-success-rate"
+        "attack-success-rate"
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
@@ -1046,8 +1033,7 @@
       ],
       "metrics": [
         "task-success-rate",
-        "attack-success-rate",
-        "clean-task-success-rate"
+        "attack-success-rate"
       ],
       "physical_validation": true,
       "curation_status": "paper-verified"
@@ -1112,9 +1098,7 @@
         "black-box"
       ],
       "metrics": [
-        "task-success-rate",
-        "attack-success-rate",
-        "clean-task-success-rate"
+        "attack-success-rate"
       ],
       "physical_validation": true,
       "curation_status": "paper-verified"
@@ -2291,7 +2275,6 @@
         "action-generation"
       ],
       "consequence": [
-        "control-hijacking",
         "task-failure"
       ]
     },
@@ -2418,7 +2401,6 @@
         "vla-policy"
       ],
       "consequence": [
-        "control-hijacking",
         "task-failure"
       ]
     },
@@ -2632,7 +2614,7 @@
         "attack-success-rate",
         "task-success-rate"
       ],
-      "physical_validation": false,
+      "physical_validation": true,
       "curation_status": "catalog-derived"
     }
   },
@@ -2648,8 +2630,7 @@
     "subsection": "Visual Perturbations and Patches",
     "scope": "vla",
     "risks": [
-      "task-reliability",
-      "physical-safety"
+      "task-reliability"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -2668,8 +2649,7 @@
         "vla-policy"
       ],
       "consequence": [
-        "task-failure",
-        "unsafe-motion"
+        "task-failure"
       ]
     },
     "tags": [
@@ -2698,9 +2678,7 @@
       "metrics": [
         "task-success-rate",
         "attack-success-rate",
-        "clean-task-success-rate",
-        "physical-damage-rate",
-        "collision-rate"
+        "clean-task-success-rate"
       ],
       "physical_validation": true,
       "curation_status": "paper-verified"
@@ -2833,11 +2811,7 @@
         "black-box"
       ],
       "metrics": [
-        "task-success-rate",
-        "attack-success-rate",
-        "clean-task-success-rate",
-        "physical-damage-rate",
-        "collision-rate"
+        "attack-success-rate"
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
@@ -2964,8 +2938,7 @@
         "white-box"
       ],
       "metrics": [
-        "attack-success-rate",
-        "clean-task-success-rate"
+        "attack-success-rate"
       ],
       "physical_validation": true,
       "curation_status": "paper-verified"
