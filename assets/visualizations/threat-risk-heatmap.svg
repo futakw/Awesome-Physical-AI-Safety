@@ -79,7 +79,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <rect x="872" y="167" width="186" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="965.0" y="196.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="label" x="282" y="250.0" text-anchor="end">Distribution Shift</text>
-<rect x="302" y="221" width="186" height="50" rx="6" fill="#A180D8"><title>[arXiv 2025] RobustVLA: Robustness-Aware Reinforcement Post-Training for Vision-Language-Action Models
+<rect x="302" y="221" width="186" height="50" rx="6" fill="#9F7ED7"><title>[arXiv 2025] RobustVLA: Robustness-Aware Reinforcement Post-Training for Vision-Language-Action Models
 [arXiv 2026] Lights, Camera, Malfunction: When Illumination Robustness Leaves VLA Models Blind to Color
 [arXiv 2026] Structure-Aware Robust Fine-Tuning: Defending Vision-Language-Action Robots Against Physical Attention Hijacking
 [arXiv 2025] MergeVLA: Cross-Skill Model Merging Toward a Generalist Vision-Language-Action Agent
@@ -116,8 +116,9 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2026] Self-Adaptive VLA for Robust Robot Deployment
 [arXiv 2026] ExceptionDrive: A Planning-Oriented Counterfactual Corner-Case Benchmark for Autonomous Driving
 [arXiv 2026] Adapting Vision-Language-Action Models to Unknown Visual Disruptions During Execution
-[arXiv 2026] Does Adversarial Training Improve Generalization in Multi-View VLAs? Revealing and Mitigating View Collapse</title></rect>
-<text x="395.0" y="250.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">38</text>
+[arXiv 2026] Does Adversarial Training Improve Generalization in Multi-View VLAs? Revealing and Mitigating View Collapse
+[arXiv 2026] RARA: Robust Policy Fine-Tuning through Retrieval-Anchored Representation Alignment for Robotic Manipulation</title></rect>
+<text x="395.0" y="250.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">39</text>
 <rect x="492" y="221" width="186" height="50" rx="6" fill="#CCC1EA"><title>[arXiv 2026] ICR-Drive: Instruction Counterfactual Robustness for End-to-End Language-Driven Autonomous Driving
 [arXiv 2026] How VLAs (Really) Work in Open-World Environments
 [arXiv 2025] VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models
@@ -275,8 +276,8 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2026] Black-Box Adversarial Patch Attacks on VLAs via Ancestor VLM Exploitation
 [arXiv 2026] Beyond Patch Removal: Persistent Adversarial Effects in Vision-Language-Action Policies</title></rect>
 <text x="395.0" y="466.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">13</text>
-<rect x="492" y="437" width="186" height="50" rx="6" fill="#E8EBF6"><title>[arXiv 2026] Hidden in Plain Sight: Diffusion-Based Unrestricted Robotic Attacks on Vision-Language-Action Models</title></rect>
-<text x="585.0" y="466.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="492" y="437" width="186" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="585.0" y="466.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="682" y="437" width="186" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="775.0" y="466.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="872" y="437" width="186" height="50" rx="6" fill="#DAD5EF"><title>[ICCV 2024] Exploring the Adversarial Vulnerabilities of Vision-Language-Action Models in Robotics

@@ -11,7 +11,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 </style>
 <rect width="1200" height="1301" fill="#FFFFFF"/>
 <text class="title" x="48" y="48">Threat mechanism × consequence</text>
-<text class="subtitle" x="48" y="74">Benchmark papers only (41 papers).</text>
+<text class="subtitle" x="48" y="74">Benchmark papers only (42 papers).</text>
 <text class="axis" text-anchor="start" transform="translate(340.1 167) rotate(-52)">Task Failure</text>
 <text class="axis" text-anchor="start" transform="translate(436.2 167) rotate(-52)">Physical Damage</text>
 <text class="axis" text-anchor="start" transform="translate(532.3 167) rotate(-52)">Privacy Leakage</text>

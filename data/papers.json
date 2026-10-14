@@ -2335,8 +2335,7 @@
     "subsection": "Visual Perturbations and Patches",
     "scope": "vla",
     "risks": [
-      "task-reliability",
-      "physical-safety"
+      "task-reliability"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -2356,7 +2355,7 @@
       ],
       "consequence": [
         "task-failure",
-        "unsafe-motion"
+        "targeted-action"
       ]
     },
     "tags": [
@@ -2384,9 +2383,7 @@
       "metrics": [
         "task-success-rate",
         "attack-success-rate",
-        "clean-task-success-rate",
-        "physical-damage-rate",
-        "collision-rate"
+        "clean-task-success-rate"
       ],
       "physical_validation": true,
       "curation_status": "paper-verified"
@@ -17527,5 +17524,81 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     }
+  },
+  {
+    "id": "kang-2026-rara",
+    "title": "RARA: Robust Policy Fine-Tuning through Retrieval-Anchored Representation Alignment for Robotic Manipulation",
+    "first_author": "Kang",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.13578",
+    "code_url": "https://shua-kang.github.io/RARA_robot/",
+    "section": "ood-generalization",
+    "subsection": "Representation and Language-Action Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "visual-perception"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "representation-alignment",
+      "visual-ood",
+      "retrieval",
+      "fine-tuning"
+    ]
+  },
+  {
+    "id": "ogunwoye-2026-jittervla",
+    "title": "JitterVLA: A Replay Benchmark for Motion Quality in VLA-Driven Human-Robot Manipulation",
+    "first_author": "Ogunwoye",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.13628",
+    "code_url": "https://faithogunwoye.github.io/JitterVLA/",
+    "section": "benchmarks",
+    "subsection": "Evaluation Infrastructure",
+    "scope": "vla",
+    "risks": [],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference",
+          "system"
+        ],
+        "mechanisms": [
+          "execution-error"
+        ],
+        "surfaces": [
+          "action-interface",
+          "execution-control"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "command-timing",
+      "controller-comparison",
+      "paired-replay",
+      "motion-quality",
+      "latency"
+    ]
   }
 ]

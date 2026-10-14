@@ -308,8 +308,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2026] RESCUE: Is This Alarm Worth Acting On? Counterfactual Evaluation of VLA Runtime Monitors
 [arXiv 2026] BT-Agent: Deploying Onboard Robot Agents with Behavior Trees and Multi-Fidelity Evaluation</title></rect>
 <text x="828.6" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">27</text>
-<rect x="878.6666666666667" y="187" width="92.11111111111111" height="50" rx="6" fill="#C1D5F5"><title>[arXiv 2026] Hidden in Plain Sight: Diffusion-Based Unrestricted Robotic Attacks on Vision-Language-Action Models
-[arXiv 2026] Tex3D: Objects as Attack Surfaces via Adversarial 3D Textures for Vision-Language-Action Models
+<rect x="878.6666666666667" y="187" width="92.11111111111111" height="50" rx="6" fill="#C2D6F5"><title>[arXiv 2026] Tex3D: Objects as Attack Surfaces via Adversarial 3D Textures for Vision-Language-Action Models
 [arXiv 2026] JailWAM: Jailbreaking World Action Models in Robot Control
 [arXiv 2026] PINA: Prompt Injection Attack against Navigation Agents
 [arXiv 2026] RIPA: Sensory-Vector Prompt Injection Attacks on LLM-Controlled ROS 2 Robots
@@ -337,9 +336,8 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2026] SafeStage: Evaluating Safety Before, During, and After Vision-Language-Conditioned Robot Manipulation
 [IROS 2026] SafeLoop: Risk-Aware Rollback for Vision-Language-Action Manipulation
 [arXiv 2026] FAITH: Feasibility-Aware Safety-Filtered RL for High-Dimensional Systems</title></rect>
-<text x="924.7" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">29</text>
-<rect x="974.7777777777778" y="187" width="92.11111111111111" height="50" rx="6" fill="#B9D0F4"><title>[arXiv 2026] Hidden in Plain Sight: Diffusion-Based Unrestricted Robotic Attacks on Vision-Language-Action Models
-[arXiv 2026] Tex3D: Objects as Attack Surfaces via Adversarial 3D Textures for Vision-Language-Action Models
+<text x="924.7" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">28</text>
+<rect x="974.7777777777778" y="187" width="92.11111111111111" height="50" rx="6" fill="#BAD0F4"><title>[arXiv 2026] Tex3D: Objects as Attack Surfaces via Adversarial 3D Textures for Vision-Language-Action Models
 [arXiv 2026] JailWAM: Jailbreaking World Action Models in Robot Control
 [arXiv 2026] PINA: Prompt Injection Attack against Navigation Agents
 [arXiv 2026] RIPA: Sensory-Vector Prompt Injection Attacks on LLM-Controlled ROS 2 Robots
@@ -375,7 +373,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2026] Multi-Link Safety Filtering for VLA Policies Around Moving Hazards
 [arXiv 2026] WBAG: A Whole-Body and Attached-Geometry Safety Framework for Vision-Language-Action Manipulation
 [arXiv 2026] Neuro-Symbolic Safety Guidance for Vision-Language-Action Models via Constrained Flow Matching</title></rect>
-<text x="1020.8" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">37</text>
+<text x="1020.8" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">36</text>
 <rect x="1070.888888888889" y="187" width="92.11111111111111" height="50" rx="6" fill="#E1EBF7"><title>[NeurIPS 2025] SAFE: Multitask Failure Detection for Vision-Language-Action Models
 [arXiv 2026] Predictive Zonotope Reduction: Precise Runtime Monitoring under Uncertainty
 [NeurIPS 2026] Hide-and-Seek in Trajectories: Discovering Failure Signals for VLA Runtime Monitoring
@@ -547,8 +545,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2026] ProTracer: Proprioception-Guided Failure Diagnosis in Robot Manipulation
 [arXiv 2026] BT-Agent: Deploying Onboard Robot Agents with Behavior Trees and Multi-Fidelity Evaluation</title></rect>
 <text x="828.6" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">17</text>
-<rect x="878.6666666666667" y="241" width="92.11111111111111" height="50" rx="6" fill="#D1E0F6"><title>[arXiv 2026] Hidden in Plain Sight: Diffusion-Based Unrestricted Robotic Attacks on Vision-Language-Action Models
-[arXiv 2026] Tex3D: Objects as Attack Surfaces via Adversarial 3D Textures for Vision-Language-Action Models
+<rect x="878.6666666666667" y="241" width="92.11111111111111" height="50" rx="6" fill="#D2E1F6"><title>[arXiv 2026] Tex3D: Objects as Attack Surfaces via Adversarial 3D Textures for Vision-Language-Action Models
 [ICRA 2024] Jailbreaking LLM-Controlled Robots
 [IEEE RA-L 2025] Safety Guardrails for LLM-Enabled Robots
 [arXiv 2023] Plug in the Safety Chip: Enforcing Constraints for LLM-Driven Robot Agents
@@ -563,9 +560,8 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2025] RoboSafe: Safeguarding Embodied Agents via Executable Safety Logic
 [IROS 2026] SafeLoop: Risk-Aware Rollback for Vision-Language-Action Manipulation
 [arXiv 2026] FAITH: Feasibility-Aware Safety-Filtered RL for High-Dimensional Systems</title></rect>
-<text x="924.7" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">16</text>
-<rect x="974.7777777777778" y="241" width="92.11111111111111" height="50" rx="6" fill="#C9DBF5"><title>[arXiv 2026] Hidden in Plain Sight: Diffusion-Based Unrestricted Robotic Attacks on Vision-Language-Action Models
-[arXiv 2026] Tex3D: Objects as Attack Surfaces via Adversarial 3D Textures for Vision-Language-Action Models
+<text x="924.7" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">15</text>
+<rect x="974.7777777777778" y="241" width="92.11111111111111" height="50" rx="6" fill="#CADBF5"><title>[arXiv 2026] Tex3D: Objects as Attack Surfaces via Adversarial 3D Textures for Vision-Language-Action Models
 [ICRA 2024] Jailbreaking LLM-Controlled Robots
 [IEEE RA-L 2025] Safety Guardrails for LLM-Enabled Robots
 [arXiv 2023] Plug in the Safety Chip: Enforcing Constraints for LLM-Driven Robot Agents
@@ -586,7 +582,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [IROS 2026] SafeLoop: Risk-Aware Rollback for Vision-Language-Action Manipulation
 [arXiv 2026] VLPSA: Vision-Language-Poisson-Safe Actions for Full-Body Safety of Learned Policies
 [arXiv 2026] Multi-Link Safety Filtering for VLA Policies Around Moving Hazards</title></rect>
-<text x="1020.8" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">22</text>
+<text x="1020.8" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">21</text>
 <rect x="1070.888888888889" y="241" width="92.11111111111111" height="50" rx="6" fill="#EAF0F8"><title>[NeurIPS 2026] Hide-and-Seek in Trajectories: Discovering Failure Signals for VLA Runtime Monitoring</title></rect>
 <text x="1116.9" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <text class="label" x="282" y="324.0" text-anchor="end">Offline Dataset</text>
