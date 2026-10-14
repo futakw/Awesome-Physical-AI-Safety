@@ -22,7 +22,11 @@
     .meta-badge strong { background:#eef3fa; color:#243b53; padding:2px 8px; font-size:11px; font-weight:650; }
     .meta-badge:hover strong { background:#dfeafb; }
     .meta-badge.papers strong { background:#3fa89b; color:#fff; }
-    nav { display:flex; gap:6px; flex-wrap:wrap; padding-bottom:9px; }
+    .topbar-bottom { display:flex; align-items:flex-end; justify-content:space-between; gap:8px 16px; flex-wrap:wrap; padding-bottom:9px; }
+    nav { display:flex; gap:6px; flex-wrap:wrap; }
+    .author { margin:0 0 0 auto; color:var(--muted); font-size:12px; white-space:nowrap; }
+    .author a { color:var(--ink); text-underline-offset:3px; }
+    .author a:hover { color:#365f99; }
     .doc-link { border:1px solid var(--line); background:var(--panel); color:var(--ink); border-radius:7px; padding:9px 14px; text-decoration:none; }
     button { border:1px solid var(--line); background:#fff; color:var(--ink); border-radius:7px; padding:6px 12px; cursor:pointer; font:inherit; font-size:13px; }
     button[aria-pressed="true"] { background:#eef3fa; border-color:#aebed6; font-weight:600; }
@@ -66,21 +70,24 @@
         </div>
       </div>
     </div>
+    <div class="topbar-bottom">
     <nav aria-label="Visualization views">
-      <button type="button" data-view="readme" aria-pressed="false" data-i18n="navReadme">README</button>
+      <button type="button" data-view="readme" aria-pressed="true" data-i18n="navReadme">README</button>
       <button type="button" data-view="taxonomy" aria-pressed="false" data-i18n="navTaxonomy">Taxonomy</button>
-      <button type="button" data-view="timeline" aria-pressed="true" data-i18n="navTimeline">Field timeline</button>
+      <button type="button" data-view="timeline" aria-pressed="false" data-i18n="navTimeline">Field timeline</button>
       <button type="button" data-view="heatmap" aria-pressed="false" data-i18n="navHeatmap">Threat cross-map</button>
       <button type="button" data-view="risk" aria-pressed="false" data-i18n="navRisk">Threat × measured risk</button>
     </nav>
+    <p class="author">Author: <a href="https://futa-waseda.netlify.app/" target="_blank" rel="noopener noreferrer">Futa Waseda</a></p>
+    </div>
   </div>
 </header>
 <main>
   <div class="view-container">
-  <section id="timeline" class="active"><p class="note" data-i18n="timelineNote">Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to pin the paper list.</p><div id="timeline-chart"></div></section>
+  <section id="timeline"><p class="note" data-i18n="timelineNote">Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to pin the paper list.</p><div id="timeline-chart"></div></section>
   <section id="heatmap"><p class="note" data-i18n="heatmapNote">Cells show mechanism-surface co-occurrence for concrete threat models. Hover for a preview; click a cell to pin the paper list.</p><div id="heatmap-chart"></div></section>
   <section id="risk"><p class="note" data-i18n="riskNote">Rows are threat mechanisms and columns are empirically evaluated risk outcomes. Empty cells remain visible.</p><div id="risk-chart"></div></section>
-  <section id="readme"><iframe class="doc-frame" id="readme-frame" src="readme.html" title="Rendered README"></iframe></section>
+  <section id="readme" class="active"><iframe class="doc-frame" id="readme-frame" src="readme.html" title="Rendered README"></iframe></section>
   <section id="taxonomy"><iframe class="doc-frame" id="taxonomy-frame" src="taxonomy.html" title="Rendered taxonomy"></iframe></section>
   </div>
 </main>
@@ -274,8 +281,12 @@ d3.selectAll('button[data-view]').on('click', function(){
   history.replaceState(null, '', '#' + view);
   window.scrollTo(0, 0);
 });
-window.addEventListener('hashchange', () => activateView(window.location.hash.slice(1)));
-activateView(availableViews.has(window.location.hash.slice(1)) ? window.location.hash.slice(1) : 'timeline');
+function activateViewFromHash() {
+  const view = window.location.hash.slice(1);
+  activateView(availableViews.has(view) ? view : 'readme');
+}
+window.addEventListener('hashchange', activateViewFromHash);
+activateViewFromHash();
 
 function renderAll(){
   for (const id of ['timeline-chart','heatmap-chart','risk-chart']) {
