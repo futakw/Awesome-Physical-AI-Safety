@@ -1962,12 +1962,9 @@
       "access": [
         "not-applicable"
       ],
-      "metrics": [
-        "task-success-rate",
-        "recovery-rate"
-      ],
+      "metrics": [],
       "physical_validation": false,
-      "curation_status": "paper-verified"
+      "curation_status": "catalog-derived"
     },
     "defense": {
       "position": [
@@ -2575,7 +2572,6 @@
         "task-success-rate",
         "attack-success-rate",
         "clean-task-success-rate",
-        "physical-damage-rate",
         "collision-rate"
       ],
       "physical_validation": false,
@@ -2859,8 +2855,7 @@
     "subsection": "Jailbreaks and Prompt Injection",
     "scope": "embodied-agent",
     "risks": [
-      "task-reliability",
-      "physical-safety"
+      "task-reliability"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -2905,9 +2900,7 @@
       "metrics": [
         "task-success-rate",
         "attack-success-rate",
-        "clean-task-success-rate",
-        "physical-damage-rate",
-        "collision-rate"
+        "clean-task-success-rate"
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
@@ -2990,8 +2983,7 @@
     "subsection": "Jailbreaks and Prompt Injection",
     "scope": "llm-robot",
     "risks": [
-      "security-privacy",
-      "physical-safety"
+      "security-privacy"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -3011,8 +3003,7 @@
         "robot-executor"
       ],
       "consequence": [
-        "control-hijacking",
-        "unsafe-motion"
+        "control-hijacking"
       ]
     },
     "tags": [
@@ -3041,9 +3032,7 @@
       ],
       "metrics": [
         "attack-success-rate",
-        "clean-task-success-rate",
-        "physical-damage-rate",
-        "collision-rate"
+        "clean-task-success-rate"
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"

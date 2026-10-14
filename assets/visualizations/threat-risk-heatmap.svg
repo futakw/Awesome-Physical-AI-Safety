@@ -351,8 +351,8 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2026] Jailbreaking Embodied LLMs via Action-level Manipulation
 [arXiv 2025] BadNAVer: Exploring Jailbreak Attacks On Vision-and-Language Navigation</title></rect>
 <text x="395.0" y="682.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">3</text>
-<rect x="492" y="653" width="186" height="50" rx="6" fill="#E8EBF6"><title>[arXiv 2026] RIPA: Sensory-Vector Prompt Injection Attacks on LLM-Controlled ROS 2 Robots</title></rect>
-<text x="585.0" y="682.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="492" y="653" width="186" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="585.0" y="682.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="682" y="653" width="186" height="50" rx="6" fill="#E8EBF6"><title>[arXiv 2025] The Shawshank Redemption of Embodied AI: Understanding and Benchmarking Indirect Environmental Jailbreaks</title></rect>
 <text x="775.0" y="682.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="872" y="653" width="186" height="50" rx="6" fill="#DFDCF2"><title>[arXiv 2026] RIPA: Sensory-Vector Prompt Injection Attacks on LLM-Controlled ROS 2 Robots
