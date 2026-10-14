@@ -229,20 +229,18 @@
     "scope": "embodied-agent",
     "risks": [],
     "threat_model": {
-      "kind": "system-failure",
+      "kind": "adversarial",
       "lifecycle": [
         "inference"
       ],
       "mechanism": [
-        "constraint-violation"
+        "planning-hijacking"
       ],
       "surface": [
-        "task-planning",
-        "execution-control"
+        "task-planning"
       ],
       "target": [
-        "runtime-monitor",
-        "vla-policy"
+        "task-planner"
       ],
       "consequence": [
         "policy-violation"
@@ -273,11 +271,10 @@
         "runtime-monitoring"
       ],
       "protected_surface": [
-        "task-planning",
-        "execution-control"
+        "task-planning"
       ],
       "defends_against": [
-        "constraint-violation"
+        "planning-hijacking"
       ],
       "assumptions": [
         "runtime-monitor"
@@ -546,23 +543,21 @@
       "task-reliability"
     ],
     "threat_model": {
-      "kind": "system-failure",
+      "kind": "adversarial",
       "lifecycle": [
         "inference"
       ],
       "mechanism": [
-        "constraint-violation"
+        "direct-prompt-injection"
       ],
       "surface": [
-        "task-planning",
-        "execution-control"
+        "user-instruction"
       ],
       "target": [
-        "runtime-monitor",
-        "vla-policy"
+        "task-planner"
       ],
       "consequence": [
-        "policy-violation"
+        "task-failure"
       ]
     },
     "tags": [
@@ -590,11 +585,10 @@
         "runtime-monitoring"
       ],
       "protected_surface": [
-        "task-planning",
-        "execution-control"
+        "task-planning"
       ],
       "defends_against": [
-        "constraint-violation"
+        "direct-prompt-injection"
       ],
       "assumptions": [
         "runtime-monitor"
@@ -863,15 +857,13 @@
         "inference"
       ],
       "mechanism": [
-        "jailbreak",
         "indirect-prompt-injection"
       ],
       "surface": [
-        "user-instruction",
-        "visual-perception"
+        "physical-semantic-environment"
       ],
       "target": [
-        "vla-policy"
+        "perception-model"
       ],
       "consequence": [
         "task-failure"
@@ -916,7 +908,7 @@
     "paper_url": "https://arxiv.org/abs/2608.05715",
     "code_url": null,
     "section": "inference-attacks",
-    "subsection": "Visual Perturbations and Patches",
+    "subsection": "Jailbreaks and Prompt Injection",
     "scope": "embodied-agent",
     "risks": [
       "task-reliability"
@@ -927,13 +919,13 @@
         "inference"
       ],
       "mechanism": [
-        "adversarial-patch"
+        "indirect-prompt-injection"
       ],
       "surface": [
-        "visual-perception"
+        "physical-semantic-environment"
       ],
       "target": [
-        "vla-policy"
+        "task-planner"
       ],
       "consequence": [
         "task-failure"
@@ -1673,18 +1665,17 @@
       "task-reliability"
     ],
     "threat_model": {
-      "kind": "non-adversarial",
+      "kind": "adversarial",
       "lifecycle": [
         "inference"
       ],
       "mechanism": [
-        "distribution-shift"
+        "environment-manipulation"
       ],
       "surface": [
         "visual-perception"
       ],
       "target": [
-        "runtime-monitor",
         "vla-policy"
       ],
       "consequence": [
@@ -1712,7 +1703,7 @@
     },
     "defense": {
       "position": [
-        "inference-time"
+        "training-time"
       ],
       "mechanism": [
         "robust-finetuning"
@@ -1721,7 +1712,7 @@
         "visual-perception"
       ],
       "defends_against": [
-        "distribution-shift"
+        "environment-manipulation"
       ],
       "assumptions": [
         "model-access"
@@ -1744,18 +1735,17 @@
       "task-reliability"
     ],
     "threat_model": {
-      "kind": "non-adversarial",
+      "kind": "adversarial",
       "lifecycle": [
         "inference"
       ],
       "mechanism": [
-        "distribution-shift"
+        "adversarial-patch"
       ],
       "surface": [
         "visual-perception"
       ],
       "target": [
-        "runtime-monitor",
         "vla-policy"
       ],
       "consequence": [
@@ -1791,7 +1781,7 @@
     },
     "defense": {
       "position": [
-        "inference-time"
+        "training-time"
       ],
       "mechanism": [
         "robust-finetuning"
@@ -1800,7 +1790,7 @@
         "visual-perception"
       ],
       "defends_against": [
-        "distribution-shift"
+        "adversarial-patch"
       ],
       "assumptions": [
         "model-access"
@@ -1828,18 +1818,16 @@
         "inference"
       ],
       "mechanism": [
-        "backdoor"
+        "jailbreak"
       ],
       "surface": [
-        "visual-perception",
-        "reasoning-representation"
+        "user-instruction"
       ],
       "target": [
-        "runtime-monitor",
         "vla-policy"
       ],
       "consequence": [
-        "targeted-action"
+        "policy-violation"
       ]
     },
     "tags": [
@@ -1882,11 +1870,10 @@
         "representation-steering"
       ],
       "protected_surface": [
-        "visual-perception",
         "reasoning-representation"
       ],
       "defends_against": [
-        "backdoor"
+        "jailbreak"
       ],
       "assumptions": [
         "clean-reference"
@@ -2189,8 +2176,8 @@
     "year": 2026,
     "paper_url": "https://arxiv.org/abs/2608.01028",
     "code_url": null,
-    "section": "inference-attacks",
-    "subsection": "Planning, Action, and Trajectory Manipulation",
+    "section": "defenses",
+    "subsection": "Robust Training and Safety Alignment",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -2201,10 +2188,10 @@
         "inference"
       ],
       "mechanism": [
-        "planning-hijacking"
+        "adversarial-patch"
       ],
       "surface": [
-        "task-planning"
+        "visual-perception"
       ],
       "target": [
         "vla-policy"
@@ -2241,6 +2228,25 @@
       ],
       "physical_validation": true,
       "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "training-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "reasoning-representation"
+      ],
+      "defends_against": [
+        "adversarial-patch"
+      ],
+      "assumptions": [
+        "model-access"
+      ],
+      "curation_status": "catalog-derived"
     }
   },
   {
@@ -2641,7 +2647,6 @@
         "adversarial-object"
       ],
       "surface": [
-        "physical-semantic-environment",
         "visual-perception"
       ],
       "target": [
