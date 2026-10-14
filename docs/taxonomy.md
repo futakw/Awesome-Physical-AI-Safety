@@ -209,7 +209,7 @@ Surveys and broad benchmarks should not be assigned an invented single target or
 
 ### README Rendering
 
-The README retains one `Threat Model` column. The generator renders structured metadata as a compact two-line summary using a clear jewel-tone palette: periwinkle blue for lifecycle, mint teal for surface, coral for mechanism, violet for target, and pink-raspberry for consequence. A `+N` suffix reports additional values stored in `data/papers.json`.
+The README retains one `Threat Model` column. The generator renders structured metadata as a compact two-line summary using a clear jewel-tone palette: periwinkle blue for lifecycle, coral for surface, mint teal for mechanism, violet for target, and pink-raspberry for consequence. A `+N` suffix reports additional values stored in `data/papers.json`.
 
 | Study type | Proposed display |
 |---|---|

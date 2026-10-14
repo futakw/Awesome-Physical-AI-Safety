@@ -45,8 +45,8 @@ RISK_COLORS = {
 
 THREAT_COLORS = {
     "lifecycle": "6F9FEF",
-    "surface": "3FA89B",
-    "mechanism": "D47A5D",
+    "surface": "D47A5D",
+    "mechanism": "3FA89B",
     "target": "9873D4",
     "consequence": "D96F8A",
     "survey": "657A8C",
