@@ -17567,5 +17567,7495 @@
       "motion-quality",
       "latency"
     ]
+  },
+  {
+    "id": "not-what-you-asked-for-typographic-attacks-in-household-robot-manipulation-2026",
+    "title": "Not What You Asked For: Typographic Attacks in Household Robot Manipulation",
+    "first_author": "Iranmanesh",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2605.18593",
+    "code_url": null,
+    "section": "inference-attacks",
+    "subsection": "Visual Perturbations and Patches",
+    "scope": "embodied-agent",
+    "risks": [
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "typographic-injection",
+        "indirect-prompt-injection"
+      ],
+      "surface": [
+        "physical-semantic-environment"
+      ],
+      "target": [
+        "perception-model"
+      ],
+      "consequence": [
+        "targeted-action"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "Habitat",
+        "HomeRobot"
+      ],
+      "models": [
+        "CLIP",
+        "DETIC"
+      ],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "attack-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "advancing-embodied-agent-security-from-safety-benchmarks-to-input-moderation-2025",
+    "title": "Advancing Embodied Agent Security: From Safety Benchmarks to Input Moderation",
+    "first_author": "Wang",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2504.15699",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "jailbreak",
+        "hazardous-instruction"
+      ],
+      "surface": [
+        "user-instruction"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "policy-violation"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "input-filtering"
+      ],
+      "protected_surface": [
+        "user-instruction"
+      ],
+      "defends_against": [
+        "jailbreak",
+        "hazardous-instruction"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "semantic-denial-of-service-in-llm-controlled-robots-2026",
+    "title": "Semantic Denial of Service in LLM-controlled robots",
+    "first_author": "Steinberg",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2604.24790",
+    "code_url": null,
+    "section": "inference-attacks",
+    "subsection": "Jailbreaks and Prompt Injection",
+    "scope": "embodied-agent",
+    "risks": [
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "denial-of-service",
+        "direct-prompt-injection"
+      ],
+      "surface": [
+        "audio-perception"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "availability-loss",
+        "action-freezing"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "attack-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "preventing-robotic-jailbreaking-via-multimodal-domain-adaptation-2025",
+    "title": "Preventing Robotic Jailbreaking via Multimodal Domain Adaptation",
+    "first_author": "Marchiori",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2509.23281",
+    "code_url": "https://j-dapt.github.io",
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "jailbreak"
+      ],
+      "surface": [
+        "user-instruction",
+        "visual-perception"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "policy-violation"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "input-filtering",
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "user-instruction",
+        "visual-perception"
+      ],
+      "defends_against": [
+        "jailbreak"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "safety-security-and-cognitive-risks-in-world-models-2026",
+    "title": "Safety, Security, and Cognitive Risks in World Models",
+    "first_author": "Parmar",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2604.01346",
+    "code_url": null,
+    "section": "surveys",
+    "subsection": "World Model Safety and Security",
+    "scope": "world-model",
+    "risks": [],
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": [
+          "training",
+          "inference",
+          "system"
+        ],
+        "mechanisms": [
+          "backdoor",
+          "data-poisoning",
+          "planning-error",
+          "representation-hijacking"
+        ],
+        "surfaces": [
+          "model-supply-chain",
+          "world-state",
+          "task-planning"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ]
+  },
+  {
+    "id": "trap-tail-aware-ranking-attack-for-world-model-planning-2026",
+    "title": "TRAP: Tail-aware Ranking Attack for World-Model Planning",
+    "first_author": "Duan",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2605.01950",
+    "code_url": null,
+    "section": "training-attacks",
+    "subsection": "Backdoors and Data Poisoning",
+    "scope": "world-model",
+    "risks": [],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "backdoor",
+        "data-poisoning"
+      ],
+      "surface": [
+        "model-supply-chain"
+      ],
+      "target": [
+        "world-state",
+        "task-planner"
+      ],
+      "consequence": [
+        "control-hijacking",
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "the-safety-challenge-of-world-models-for-embodied-ai-agents-a-review-2025",
+    "title": "The Safety Challenge of World Models for Embodied AI Agents: A Review",
+    "first_author": "Baraldi",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2510.05865",
+    "code_url": null,
+    "section": "surveys",
+    "subsection": "World Model Safety and Security",
+    "scope": "world-model",
+    "risks": [],
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": [
+          "training",
+          "inference",
+          "system"
+        ],
+        "mechanisms": [
+          "perception-error",
+          "planning-error"
+        ],
+        "surfaces": [
+          "world-state",
+          "task-planning"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ]
+  },
+  {
+    "id": "safedreamer-safe-reinforcement-learning-with-world-models-2023",
+    "title": "SafeDreamer: Safe Reinforcement Learning with World Models",
+    "first_author": "Huang",
+    "venue": "arXiv",
+    "year": 2023,
+    "paper_url": "https://arxiv.org/abs/2307.07176",
+    "code_url": "https://github.com/PKU-Alignment/SafeDreamer",
+    "section": "defenses",
+    "subsection": "Safety-Aware Policy Learning",
+    "scope": "robot-policy",
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "constraint-violation"
+      ],
+      "surface": [
+        "world-state",
+        "action-interface"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "policy-violation"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [
+        "Safety-Gymnasium"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "constraint-violation-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "world-state",
+        "action-interface"
+      ],
+      "defends_against": [
+        "constraint-violation"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "homeguard-vlm-based-embodied-safeguard-for-identifying-contextual-risk-in-household-task-2026",
+    "title": "HomeGuard: VLM-based Embodied Safeguard for Identifying Contextual Risk in Household Task",
+    "first_author": "Lu",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2603.14367",
+    "code_url": "https://github.com/AI45Lab/HomeGuard",
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "perception-error",
+        "planning-error"
+      ],
+      "surface": [
+        "visual-perception",
+        "physical-semantic-environment",
+        "task-planning"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "policy-violation"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "physical-semantic-environment",
+        "task-planning"
+      ],
+      "defends_against": [
+        "perception-error",
+        "planning-error"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "heal-an-empirical-study-on-hallucinations-in-embodied-agents-driven-by-large-language-models-2025",
+    "title": "HEAL: An Empirical Study on Hallucinations in Embodied Agents Driven by Large Language Models",
+    "first_author": "Chakraborty",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2506.15065",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Semantic and Ethical Safety",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "semantic-misalignment",
+          "planning-error"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "user-instruction",
+          "task-planning"
+        ],
+        "consequences": [
+          "task-failure",
+          "policy-violation"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "semantic-safety"
+      ],
+      "shift_types": [],
+      "environment": "simulation",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "using-large-language-models-for-embodied-planning-introduces-systematic-safety-risks-2026",
+    "title": "Using large language models for embodied planning introduces systematic safety risks",
+    "first_author": "Zhang",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2604.18463",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Semantic and Ethical Safety",
+    "scope": "embodied-agent",
+    "risks": [
+      "task-reliability",
+      "physical-safety",
+      "ethical-societal"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "hazardous-instruction",
+          "planning-error",
+          "constraint-violation"
+        ],
+        "surfaces": [
+          "user-instruction",
+          "task-planning"
+        ],
+        "consequences": [
+          "task-failure",
+          "policy-violation"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "physical-safety",
+        "semantic-safety",
+        "task-reliability"
+      ],
+      "shift_types": [],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "hasard-a-benchmark-for-vision-based-safe-reinforcement-learning-in-embodied-agents-2025",
+    "title": "HASARD: A Benchmark for Vision-Based Safe Reinforcement Learning in Embodied Agents",
+    "first_author": "Tomilin",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2503.08241",
+    "code_url": "https://sites.google.com/view/hasard-bench/",
+    "section": "benchmarks",
+    "subsection": "Task and Physical Safety",
+    "scope": "embodied-agent",
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "unsafe-policy-behavior",
+          "constraint-violation"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "action-interface"
+        ],
+        "consequences": [
+          "unsafe-motion",
+          "policy-violation"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": false,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "physical-safety"
+      ],
+      "shift_types": [],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "mutrap-multi-trigger-trojans-attacking-robot-task-planning-systems-2025",
+    "title": "MuTRAP: Multi-trigger Trojans Attacking Robot Task Planning Systems",
+    "first_author": "Nahian",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2504.17070",
+    "code_url": "https://mutrap.github.io/MuTRAP/",
+    "section": "training-attacks",
+    "subsection": "Backdoors and Data Poisoning",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "backdoor",
+        "data-poisoning"
+      ],
+      "surface": [
+        "model-supply-chain",
+        "user-instruction"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "targeted-action"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "enhancing-reliability-in-llm-integrated-robotic-systems-a-unified-approach-to-security-and-safety-2025",
+    "title": "Enhancing Reliability in LLM-Integrated Robotic Systems: A Unified Approach to Security and Safety",
+    "first_author": "Zhang",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2509.02163",
+    "code_url": "https://llmeyesim.vercel.app/",
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "direct-prompt-injection"
+      ],
+      "surface": [
+        "user-instruction",
+        "task-planning"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "control-hijacking"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "input-filtering",
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "user-instruction",
+        "task-planning"
+      ],
+      "defends_against": [
+        "direct-prompt-injection"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "malicious-path-manipulations-via-exploitation-of-representation-vulnerabilities-of-vision-language-naviga-2024",
+    "title": "Malicious Path Manipulations via Exploitation of Representation Vulnerabilities of Vision-Language Navigation Systems",
+    "first_author": "Islam",
+    "venue": "arXiv",
+    "year": 2024,
+    "paper_url": "https://arxiv.org/abs/2407.07392",
+    "code_url": null,
+    "section": "inference-attacks",
+    "subsection": "Visual Perturbations and Patches",
+    "scope": "embodied-agent",
+    "risks": [
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "digital-perturbation",
+        "representation-hijacking"
+      ],
+      "surface": [
+        "visual-perception"
+      ],
+      "target": [
+        "perception-model",
+        "task-planner"
+      ],
+      "consequence": [
+        "control-hijacking"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "benchmarking-the-safety-of-large-language-models-for-robotic-health-attendant-control-2026",
+    "title": "Benchmarking the Safety of Large Language Models for Robotic Health Attendant Control",
+    "first_author": "Nakao",
+    "venue": "Royal Society Open Science",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2604.26577",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Semantic and Ethical Safety",
+    "scope": "embodied-agent",
+    "risks": [
+      "ethical-societal"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "hazardous-instruction"
+        ],
+        "surfaces": [
+          "user-instruction",
+          "task-planning"
+        ],
+        "consequences": [
+          "policy-violation"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "constraint-violation-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "semantic-safety"
+      ],
+      "shift_types": [],
+      "environment": "simulation",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "robojailbench-benchmarking-adversarial-attacks-and-defenses-in-embodied-robotic-agents-2026",
+    "title": "RoboJailBench: Benchmarking Adversarial Attacks and Defenses in Embodied Robotic Agents",
+    "first_author": "Yeke",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2605.19328",
+    "code_url": "https://purseclab.github.io/benchmark-for-robotics-security",
+    "section": "benchmarks",
+    "subsection": "Adversarial and Physical Robustness",
+    "scope": "embodied-agent",
+    "risks": [
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "jailbreak",
+          "hazardous-instruction"
+        ],
+        "surfaces": [
+          "user-instruction",
+          "visual-perception"
+        ],
+        "consequences": [
+          "policy-violation",
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "attack-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "adversarial-attack"
+      ],
+      "shift_types": [],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "how-secure-are-large-language-models-llms-for-navigation-in-urban-environments-2024",
+    "title": "How Secure Are Large Language Models (LLMs) for Navigation in Urban Environments?",
+    "first_author": "Wen",
+    "venue": "arXiv",
+    "year": 2024,
+    "paper_url": "https://arxiv.org/abs/2402.09546",
+    "code_url": null,
+    "section": "inference-attacks",
+    "subsection": "Jailbreaks and Prompt Injection",
+    "scope": "embodied-agent",
+    "risks": [
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "direct-prompt-injection"
+      ],
+      "surface": [
+        "user-instruction"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "control-hijacking"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [
+        "Touchdown",
+        "Map2Seq"
+      ],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "attack-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "a-study-on-prompt-injection-attack-against-llm-integrated-mobile-robotic-systems-2024",
+    "title": "A Study on Prompt Injection Attack Against LLM-Integrated Mobile Robotic Systems",
+    "first_author": "Zhang",
+    "venue": "arXiv",
+    "year": 2024,
+    "paper_url": "https://arxiv.org/abs/2408.03515",
+    "code_url": null,
+    "section": "inference-attacks",
+    "subsection": "Jailbreaks and Prompt Injection",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "direct-prompt-injection"
+      ],
+      "surface": [
+        "user-instruction"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "control-hijacking"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "advgrasp-adversarial-attacks-on-robotic-grasping-from-a-physical-perspective-2025",
+    "title": "AdvGrasp: Adversarial Attacks on Robotic Grasping from a Physical Perspective",
+    "first_author": "Wang",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2507.09857",
+    "code_url": null,
+    "section": "inference-attacks",
+    "subsection": "Sensor, State, and Physical Interventions",
+    "scope": "robot-policy",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "adversarial-object",
+        "environment-manipulation"
+      ],
+      "surface": [
+        "physical-semantic-environment"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "pre-vla-preemptive-runtime-verification-for-reliable-vision-language-action-and-world-model-rollouts-2026",
+    "title": "Pre-VLA: Preemptive Runtime Verification for Reliable Vision-Language-Action and World-Model Rollouts",
+    "first_author": "Sun",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2605.22446",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "action-interface"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [
+        "LIBERO"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "uncertainty-gating"
+      ],
+      "protected_surface": [
+        "action-interface"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "uncovering-linguistic-fragility-in-vision-language-action-models-via-diversity-aware-red-teaming-2026",
+    "title": "Uncovering Linguistic Fragility in Vision-Language-Action Models via Diversity-Aware Red Teaming",
+    "first_author": "Tong",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2604.05595",
+    "code_url": null,
+    "section": "inference-attacks",
+    "subsection": "Jailbreaks and Prompt Injection",
+    "scope": "vla",
+    "risks": [
+      "task-reliability",
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "instruction-ambiguity",
+        "semantic-misalignment"
+      ],
+      "surface": [
+        "user-instruction"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [],
+      "models": [
+        "pi0",
+        "OpenVLA"
+      ],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "from-prompt-to-physical-action-structured-backdoor-attacks-on-llm-mediated-robotic-control-systems-2026",
+    "title": "From Prompt to Physical Action: Structured Backdoor Attacks on LLM-Mediated Robotic Control Systems",
+    "first_author": "Xie",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2604.03890",
+    "code_url": null,
+    "section": "training-attacks",
+    "subsection": "Backdoors and Data Poisoning",
+    "scope": "embodied-agent",
+    "risks": [
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "backdoor",
+        "data-poisoning"
+      ],
+      "surface": [
+        "model-supply-chain",
+        "user-instruction"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "control-hijacking",
+        "targeted-action"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "attack-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "strong-vla-decoupled-robustness-learning-for-vision-language-action-models-under-multimodal-perturbations-2026",
+    "title": "STRONG-VLA: Decoupled Robustness Learning for Vision-Language-Action Models under Multimodal Perturbations",
+    "first_author": "Xie",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2604.10055",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Robust Training and Safety Alignment",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "visual-perception",
+        "user-instruction"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [
+        "LIBERO",
+        "AIRBOT"
+      ],
+      "models": [
+        "OpenVLA",
+        "OpenVLA-OFT",
+        "pi0"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "training-time",
+        "inference-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "user-instruction"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "libero-x-robustness-litmus-for-vision-language-action-models-2026",
+    "title": "LIBERO-X: Robustness Litmus for Vision-Language-Action Models",
+    "first_author": "Wang",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2602.06556",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "OOD and Generalization Benchmarks",
+    "scope": "vla",
+    "risks": [],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "distribution-shift"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "user-instruction",
+          "world-state"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [
+        "LIBERO"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "ood"
+      ],
+      "shift_types": [],
+      "environment": "unspecified",
+      "base_platforms": [
+        "LIBERO"
+      ],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "annie-be-careful-of-your-robots-2025",
+    "title": "ANNIE: Be Careful of Your Robots",
+    "first_author": "Huang",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2509.03383",
+    "code_url": "https://github.com/RLCLab/Annie",
+    "section": "inference-attacks",
+    "subsection": "Visual Perturbations and Patches",
+    "scope": "embodied-agent",
+    "risks": [
+      "physical-safety",
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "digital-perturbation"
+      ],
+      "surface": [
+        "visual-perception"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "unsafe-motion",
+        "collision"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "attack-success-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "embodied-red-teaming-for-auditing-robotic-foundation-models-2024",
+    "title": "Embodied Red Teaming for Auditing Robotic Foundation Models",
+    "first_author": "Karnik",
+    "venue": "arXiv",
+    "year": 2024,
+    "paper_url": "https://arxiv.org/abs/2411.18676",
+    "code_url": "https://s-karnik.github.io/embodied-red-team-project-page",
+    "section": "benchmarks",
+    "subsection": "Adversarial and Physical Robustness",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "instruction-ambiguity",
+          "unsafe-policy-behavior"
+        ],
+        "surfaces": [
+          "user-instruction",
+          "task-planning"
+        ],
+        "consequences": [
+          "task-failure",
+          "unsafe-motion"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "adversarial-attack"
+      ],
+      "shift_types": [],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "how-vulnerable-is-my-learned-policy-universal-adversarial-perturbation-attacks-on-modern-behavior-cloning-2025",
+    "title": "How Vulnerable Is My Learned Policy? Universal Adversarial Perturbation Attacks On Modern Behavior Cloning Policies",
+    "first_author": "Kalra",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2502.03698",
+    "code_url": "https://sites.google.com/view/uap-attacks-on-bc",
+    "section": "inference-attacks",
+    "subsection": "Visual Perturbations and Patches",
+    "scope": "robot-policy",
+    "risks": [
+      "task-reliability",
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "digital-perturbation"
+      ],
+      "surface": [
+        "visual-perception"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [
+        "Vanilla BC",
+        "LSTM-GMM",
+        "IBC",
+        "Diffusion Policy",
+        "VQ-BET"
+      ],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "libero-plus-in-depth-robustness-analysis-of-vision-language-action-models-2025",
+    "title": "LIBERO-Plus: In-depth Robustness Analysis of Vision-Language-Action Models",
+    "first_author": "Fei",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2510.13626",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "OOD and Generalization Benchmarks",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "distribution-shift"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "user-instruction",
+          "world-state"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "ood",
+        "task-reliability"
+      ],
+      "shift_types": [],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "attention-guided-patch-wise-sparse-adversarial-attacks-on-vision-language-action-models-2025",
+    "title": "Attention-Guided Patch-Wise Sparse Adversarial Attacks on Vision-Language-Action Models",
+    "first_author": "Zhang",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2511.21663",
+    "code_url": null,
+    "section": "inference-attacks",
+    "subsection": "Visual Perturbations and Patches",
+    "scope": "vla",
+    "risks": [
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "digital-perturbation",
+        "representation-hijacking"
+      ],
+      "surface": [
+        "visual-perception",
+        "reasoning-representation"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "attack-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "diffusion-policy-attacker-crafting-adversarial-attacks-for-diffusion-based-policies-2024",
+    "title": "Diffusion Policy Attacker: Crafting Adversarial Attacks for Diffusion-based Policies",
+    "first_author": "Chen",
+    "venue": "arXiv",
+    "year": 2024,
+    "paper_url": "https://arxiv.org/abs/2405.19424",
+    "code_url": "https://sites.google.com/view/diffusion-policy-attacker",
+    "section": "inference-attacks",
+    "subsection": "Visual Perturbations and Patches",
+    "scope": "robot-policy",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "digital-perturbation",
+        "adversarial-patch"
+      ],
+      "surface": [
+        "visual-perception"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "rethinking-the-intermediate-features-in-adversarial-attacks-misleading-robotic-models-via-adversarial-dis-2024",
+    "title": "Rethinking the Intermediate Features in Adversarial Attacks: Misleading Robotic Models via Adversarial Distillation",
+    "first_author": "Zhao",
+    "venue": "arXiv",
+    "year": 2024,
+    "paper_url": "https://arxiv.org/abs/2411.15222",
+    "code_url": null,
+    "section": "inference-attacks",
+    "subsection": "Jailbreaks and Prompt Injection",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "direct-prompt-injection",
+        "representation-hijacking"
+      ],
+      "surface": [
+        "user-instruction"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "targeted-action",
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [
+        "VIMA"
+      ],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "dreaming-the-unseen-world-model-regularized-diffusion-policy-for-out-of-distribution-robustness-2026",
+    "title": "Dreaming the Unseen: World Model-regularized Diffusion Policy for Out-of-Distribution Robustness",
+    "first_author": "Hu",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2603.21017",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Robust Training and Safety Alignment",
+    "scope": "robot-policy",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "visual-perception",
+        "world-state"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [
+        "MetaWorld"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "training-time",
+        "inference-time"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "world-state"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "agentspec-customizable-runtime-enforcement-for-safe-and-reliable-llm-agents-2025",
+    "title": "AgentSpec: Customizable Runtime Enforcement for Safe and Reliable LLM Agents",
+    "first_author": "Wang",
+    "venue": "ICSE",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2503.18666",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "embodied-agent",
+    "risks": [
+      "physical-safety",
+      "ethical-societal"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "constraint-violation",
+        "unsafe-policy-behavior"
+      ],
+      "surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "target": [
+        "runtime-monitor"
+      ],
+      "consequence": [
+        "policy-violation"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "constraint-violation-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "defends_against": [
+        "constraint-violation",
+        "unsafe-policy-behavior"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "how-far-are-vlms-from-privacy-awareness-in-the-physical-world-an-empirical-study-2026",
+    "title": "How Far Are VLMs from Privacy Awareness in the Physical World? An Empirical Study",
+    "first_author": "Wang",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2605.05340",
+    "code_url": "https://github.com/immersed-privacy/immersed-privacy",
+    "section": "benchmarks",
+    "subsection": "Privacy and Data Leakage",
+    "scope": "embodied-agent",
+    "risks": [
+      "ethical-societal"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "sensitive-data-exposure",
+          "semantic-misalignment"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "user-instruction"
+        ],
+        "consequences": [
+          "privacy-leakage",
+          "policy-violation"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "offline-dataset"
+      ],
+      "platforms": [],
+      "models": [
+        "gemini-3.1-pro"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": false,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "semantic-safety"
+      ],
+      "shift_types": [],
+      "environment": "simulation",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "embodiedgovbench-a-benchmark-for-governance-recovery-and-upgrade-safety-in-embodied-agent-systems-2026",
+    "title": "EmbodiedGovBench: A Benchmark for Governance, Recovery, and Upgrade Safety in Embodied Agent Systems",
+    "first_author": "Qin",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2604.11174",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Governance and Deployment Assurance",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "constraint-violation",
+          "execution-error",
+          "multi-agent-propagation"
+        ],
+        "surfaces": [
+          "execution-control",
+          "middleware-network",
+          "multi-agent-communication"
+        ],
+        "consequences": [
+          "policy-violation",
+          "recovery-failure"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [],
+      "shift_types": [],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "red-teaming-vision-language-action-models-via-quality-diversity-prompt-generation-for-robust-robot-polici-2026",
+    "title": "Red-Teaming Vision-Language-Action Models via Quality Diversity Prompt Generation for Robust Robot Policies",
+    "first_author": "Srikanth",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2603.12510",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Adversarial and Physical Robustness",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "instruction-ambiguity",
+          "semantic-misalignment"
+        ],
+        "surfaces": [
+          "user-instruction"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "adversarial-attack",
+        "task-reliability"
+      ],
+      "shift_types": [],
+      "environment": "mixed",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "the-yes-man-syndrome-benchmarking-abstention-in-embodied-robotic-agents-2026",
+    "title": "The Yes-Man Syndrome: Benchmarking Abstention in Embodied Robotic Agents",
+    "first_author": "Yeke",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2605.20544",
+    "code_url": "https://purseclab.github.io/RoboAbstention/",
+    "section": "benchmarks",
+    "subsection": "Uncertainty, Abstention, and Human Oversight",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "instruction-ambiguity",
+          "planning-error",
+          "semantic-misalignment"
+        ],
+        "surfaces": [
+          "user-instruction",
+          "visual-perception",
+          "task-planning"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "offline-dataset"
+      ],
+      "platforms": [],
+      "models": [
+        "Gemini 2.5 Flash",
+        "Gemini Robotics ER 1.6 Preview",
+        "GPT 5.4 Mini"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [],
+      "shift_types": [],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "position-embodied-ai-requires-a-privacy-utility-trade-off-2026",
+    "title": "Position: Embodied AI Requires a Privacy-Utility Trade-off",
+    "first_author": "Fan",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2605.05017",
+    "code_url": "https://github.com/rminshen03/EAI_Privacy_Position",
+    "section": "surveys",
+    "subsection": "Privacy, Fairness, and Human-Robot Trust",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": [
+          "inference",
+          "system"
+        ],
+        "mechanisms": [
+          "sensitive-data-exposure",
+          "memorized-data-retention"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "context-memory-retrieval",
+          "execution-control"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ]
+  },
+  {
+    "id": "sok-cybersecurity-assessment-of-humanoid-ecosystem-2025",
+    "title": "SoK: Cybersecurity Assessment of Humanoid Ecosystem",
+    "first_author": "Surve",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2508.17481",
+    "code_url": null,
+    "section": "surveys",
+    "subsection": "Embodied AI Safety and Security",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": [
+          "training",
+          "inference",
+          "system"
+        ],
+        "mechanisms": [
+          "multiple"
+        ],
+        "surfaces": [
+          "middleware-network",
+          "execution-control",
+          "model-supply-chain"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ]
+  },
+  {
+    "id": "towards-physically-realizable-adversarial-attacks-in-embodied-vision-navigation-2024",
+    "title": "Towards Physically Realizable Adversarial Attacks in Embodied Vision Navigation",
+    "first_author": "Chen",
+    "venue": "arXiv",
+    "year": 2024,
+    "paper_url": "https://arxiv.org/abs/2409.10071",
+    "code_url": "https://github.com/chen37058/Physical-Attacks-in-Embodied-Nav",
+    "section": "inference-attacks",
+    "subsection": "Visual Perturbations and Patches",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "adversarial-patch"
+      ],
+      "surface": [
+        "visual-perception"
+      ],
+      "target": [
+        "perception-model",
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "security-considerations-in-ai-robotics-a-survey-of-current-methods-challenges-and-opportunities-2023",
+    "title": "Security Considerations in AI-Robotics: A Survey of Current Methods, Challenges, and Opportunities",
+    "first_author": "Neupane",
+    "venue": "arXiv",
+    "year": 2023,
+    "paper_url": "https://arxiv.org/abs/2310.08565",
+    "code_url": null,
+    "section": "surveys",
+    "subsection": "Embodied AI Safety and Security",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": [
+          "training",
+          "inference",
+          "system"
+        ],
+        "mechanisms": [
+          "multiple"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "task-planning",
+          "execution-control"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ]
+  },
+  {
+    "id": "safety-of-embodied-navigation-a-survey-2025",
+    "title": "Safety of Embodied Navigation: A Survey",
+    "first_author": "Wang",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2508.05855",
+    "code_url": null,
+    "section": "surveys",
+    "subsection": "Embodied AI Safety and Security",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": [
+          "training",
+          "inference",
+          "system"
+        ],
+        "mechanisms": [
+          "multiple"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "task-planning",
+          "execution-control"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ]
+  },
+  {
+    "id": "embodied-ai-emerging-risks-and-opportunities-for-policy-action-2025",
+    "title": "Embodied AI: Emerging Risks and Opportunities for Policy Action",
+    "first_author": "Perlo",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2509.00117",
+    "code_url": null,
+    "section": "surveys",
+    "subsection": "Position Papers and Research Agendas",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": [
+          "inference",
+          "system"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "task-planning",
+          "execution-control"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ]
+  },
+  {
+    "id": "safedojo-safe-reinforcement-learning-for-vla-via-interactive-world-model-2026",
+    "title": "SafeDojo: Safe Reinforcement Learning for VLA via Interactive World Model",
+    "first_author": "Tang",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2606.20698",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety-Aware Policy Learning",
+    "scope": "vla",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "unsafe-policy-behavior",
+        "constraint-violation"
+      ],
+      "surface": [
+        "action-interface"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "unsafe-motion",
+        "policy-violation"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [
+        "LIBERO",
+        "Franka"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "training-time",
+        "inference-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "action-interface"
+      ],
+      "defends_against": [
+        "unsafe-policy-behavior",
+        "constraint-violation"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "argos-automated-functional-safety-requirement-synthesis-for-embodied-ai-via-attribute-guided-combinatoria-2026",
+    "title": "ARGOS: Automated Functional Safety Requirement Synthesis for Embodied AI via Attribute-Guided Combinatorial Reasoning",
+    "first_author": "Chen",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2602.07007",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety Requirements and Assurance",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "planning-error"
+      ],
+      "surface": [
+        "user-instruction",
+        "physical-semantic-environment",
+        "task-planning"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "policy-violation"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "system-level"
+      ],
+      "mechanism": [],
+      "protected_surface": [
+        "user-instruction",
+        "physical-semantic-environment",
+        "task-planning"
+      ],
+      "defends_against": [
+        "planning-error"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "auditing-demographic-bias-in-facial-landmark-detection-for-fair-human-robot-interaction-2026",
+    "title": "Auditing Demographic Bias in Facial Landmark Detection for Fair Human-Robot Interaction",
+    "first_author": "Parte",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2604.06961",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Human-Robot Trust and Fairness",
+    "scope": "embodied-agent",
+    "risks": [
+      "ethical-societal"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "perception-error"
+        ],
+        "surfaces": [
+          "visual-perception"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "offline-dataset"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "semantic-safety"
+      ],
+      "shift_types": [],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "back-to-the-familiar-future-failure-recovery-for-vla-policies-via-pre-imagined-milestone-selection-2026",
+    "title": "Back to the Familiar Future: Failure Recovery for VLA Policies via Pre-Imagined Milestone Selection",
+    "first_author": "Shin",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2606.09258",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection and Recovery",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "world-state",
+        "visual-perception",
+        "execution-control"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "recovery-failure"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [
+        "LIBERO"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "world-state",
+        "visual-perception",
+        "execution-control"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "can-ai-perceive-physical-danger-and-intervene-2025",
+    "title": "Can AI Perceive Physical Danger and Intervene?",
+    "first_author": "Jindal",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2509.21651",
+    "code_url": "https://asimov-benchmark.github.io/v2",
+    "section": "benchmarks",
+    "subsection": "Safety and Hazard Benchmarks",
+    "scope": "embodied-agent",
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "hazardous-instruction",
+          "constraint-violation"
+        ],
+        "surfaces": [
+          "user-instruction",
+          "physical-semantic-environment"
+        ],
+        "consequences": [
+          "policy-violation",
+          "unsafe-motion"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "physical-safety"
+      ],
+      "shift_types": [],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "egosafetybench-a-diagnostic-egocentric-video-benchmark-for-evaluating-embodied-vlms-as-runtime-safety-gua-2026",
+    "title": "EgoSafetyBench: A Diagnostic Egocentric Video Benchmark for Evaluating Embodied VLMs as Runtime Safety Guards",
+    "first_author": "Panpatil",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2607.00218",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Safety-Critical Perception Evaluation",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "perception-error",
+          "semantic-misalignment"
+        ],
+        "surfaces": [
+          "visual-perception"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [],
+      "shift_types": [],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "embodied-hazard-mitigation-using-vision-language-models-for-autonomous-mobile-robots-2025",
+    "title": "Embodied Hazard Mitigation using Vision-Language Models for Autonomous Mobile Robots",
+    "first_author": "Sotomi",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2509.06768",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Multimodal Perception and Physical Safeguards",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "perception-error"
+      ],
+      "surface": [
+        "visual-perception",
+        "physical-semantic-environment"
+      ],
+      "target": [
+        "runtime-monitor"
+      ],
+      "consequence": [
+        "unsafe-motion"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "physical-semantic-environment"
+      ],
+      "defends_against": [
+        "perception-error"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "eva-vla-evaluating-vision-language-action-models-robustness-under-real-world-physical-variations-2025",
+    "title": "Eva-VLA: Evaluating Vision-Language-Action Models' Robustness Under Real-World Physical Variations",
+    "first_author": "Liu",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2509.18953",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "OOD and Generalization Benchmarks",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "environment-manipulation",
+          "distribution-shift"
+        ],
+        "surfaces": [
+          "physical-semantic-environment",
+          "world-state"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [
+        "LIBERO-Long",
+        "LIBERO"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "ood",
+        "adversarial-attack",
+        "task-reliability"
+      ],
+      "shift_types": [],
+      "environment": "unspecified",
+      "base_platforms": [
+        "LIBERO-Long",
+        "LIBERO"
+      ],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "faer-benchmarking-vlms-for-failure-aware-embodied-reasoning-2026",
+    "title": "FAER: Benchmarking VLMs for Failure-Aware Embodied Reasoning",
+    "first_author": "Song",
+    "venue": "Findings of ACL",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.18653/v1/2026.findings-acl.948",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Failure Detection and Recovery",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "execution-error"
+        ],
+        "surfaces": [
+          "execution-control"
+        ],
+        "consequences": [
+          "task-failure",
+          "recovery-failure"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "offline-dataset"
+      ],
+      "platforms": [],
+      "models": [
+        "GPT-4o"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [],
+      "shift_types": [],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "fine-tuning-robot-policies-while-maintaining-user-privacy-2025",
+    "title": "Fine-Tuning Robot Policies While Maintaining User Privacy",
+    "first_author": "Christie",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2509.18311",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Model Unlearning and Data Governance",
+    "scope": "robot-policy",
+    "risks": [],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "sensitive-data-exposure"
+      ],
+      "surface": [
+        "model-supply-chain",
+        "action-interface"
+      ],
+      "target": [
+        "private-data"
+      ],
+      "consequence": [
+        "privacy-leakage"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "training-time",
+        "inference-time"
+      ],
+      "mechanism": [],
+      "protected_surface": [
+        "model-supply-chain",
+        "action-interface"
+      ],
+      "defends_against": [
+        "sensitive-data-exposure"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "foresight-failure-detection-for-long-horizon-robotic-manipulation-with-action-conditioned-world-model-lat-2026",
+    "title": "Foresight: Failure Detection for Long-Horizon Robotic Manipulation with Action-Conditioned World Model Latents",
+    "first_author": "Zhang",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2606.23085",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection and Recovery",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "action-interface",
+        "world-state"
+      ],
+      "target": [
+        "runtime-monitor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "LIBERO-Long",
+        "LIBERO",
+        "ManiSkill-Long",
+        "BEHAVIOR-1K",
+        "Franka",
+        "ReactorX-200"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "action-interface",
+        "world-state"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "grounding-multimodal-llms-to-embodied-agents-that-ask-for-help-with-reinforcement-learning-2025",
+    "title": "Grounding Multimodal LLMs to Embodied Agents that Ask for Help with Reinforcement Learning",
+    "first_author": "Ramrakhya",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2504.00907",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Uncertainty, Abstention, and Human Oversight",
+    "scope": "embodied-agent",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "instruction-ambiguity"
+      ],
+      "surface": [
+        "user-instruction"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [
+        "GPT-4o"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "uncertainty-gating"
+      ],
+      "protected_surface": [
+        "user-instruction"
+      ],
+      "defends_against": [
+        "instruction-ambiguity"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "homesafebench-benchmarking-embodied-vision-language-models-in-free-exploration-home-safety-inspection-2025",
+    "title": "HomeSafeBench: Benchmarking Embodied Vision-Language Models in Free-Exploration Home Safety Inspection",
+    "first_author": "Yao",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2509.23690",
+    "code_url": "https://github.com/BITHLP/HomeSafeBench",
+    "section": "benchmarks",
+    "subsection": "Safety and Hazard Benchmarks",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "perception-error"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "physical-semantic-environment"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "VirtualHome"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [],
+      "shift_types": [],
+      "environment": "simulation",
+      "base_platforms": [
+        "VirtualHome"
+      ],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "improving-robotic-manipulation-robustness-via-nice-scene-surgery-2025",
+    "title": "Improving Robotic Manipulation Robustness via NICE Scene Surgery",
+    "first_author": "Pakdamansavoji",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2511.22777",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Robust Training and Safety Alignment",
+    "scope": "robot-policy",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "visual-perception"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "task-failure",
+        "collision"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "collision-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "training-time",
+        "inference-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "visual-perception"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "is-the-robot-spying-on-me-a-study-on-perceived-privacy-in-telepresence-scenarios-in-a-care-setting-with-m-2025",
+    "title": "Is the Robot Spying on me? A Study on Perceived Privacy in Telepresence Scenarios in a Care Setting with Mobile and Humanoid Robots",
+    "first_author": "Agraz",
+    "venue": "International Journal of Social Robotics",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/s12369-024-01153-x",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Human-Robot Privacy and Trust",
+    "scope": "hri",
+    "risks": [],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "visual-perception"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [
+        "Ameca",
+        "Temi"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [],
+      "shift_types": [],
+      "environment": "real-robot",
+      "base_platforms": [
+        "Ameca",
+        "Temi"
+      ],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "labrobfail-a-benchmark-for-robotic-failure-analysis-in-chemical-self-driving-laboratory-2026",
+    "title": "LabRobFail: A Benchmark for Robotic Failure Analysis in Chemical Self-driving Laboratory",
+    "first_author": "Wang",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2607.23704",
+    "code_url": "https://github.com/Su-ISE-2001/SciRobo",
+    "section": "benchmarks",
+    "subsection": "Failure Detection and Recovery",
+    "scope": "embodied-agent",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "execution-error"
+        ],
+        "surfaces": [
+          "execution-control"
+        ],
+        "consequences": [
+          "task-failure",
+          "recovery-failure"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "task-reliability"
+      ],
+      "shift_types": [],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "language-as-cost-proactive-hazard-mapping-using-vlm-for-robot-navigation-2025",
+    "title": "Language as Cost: Proactive Hazard Mapping using VLM for Robot Navigation",
+    "first_author": "Oh",
+    "venue": "IROS",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1109/iros60139.2025.11246665",
+    "code_url": "https://github.com/Taekmino/LaC",
+    "section": "defenses",
+    "subsection": "Multimodal Perception and Physical Safeguards",
+    "scope": "embodied-agent",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "perception-error",
+        "planning-error"
+      ],
+      "surface": [
+        "physical-semantic-environment",
+        "visual-perception",
+        "task-planning"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "unsafe-motion"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "physical-semantic-environment",
+        "visual-perception",
+        "task-planning"
+      ],
+      "defends_against": [
+        "perception-error",
+        "planning-error"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "learning-actionable-manipulation-recovery-via-counterfactual-failure-synthesis-2026",
+    "title": "Learning Actionable Manipulation Recovery via Counterfactual Failure Synthesis",
+    "first_author": "Li",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2603.13528",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection and Recovery",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "recovery-failure"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "recovery-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "training-time",
+        "inference-time"
+      ],
+      "mechanism": [
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "llm-driven-robots-risk-enacting-discrimination-violence-and-unlawful-actions-2025",
+    "title": "LLM-Driven Robots Risk Enacting Discrimination, Violence, and Unlawful Actions",
+    "first_author": "Hundt",
+    "venue": "International Journal of Social Robotics",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/s12369-025-01301-x",
+    "code_url": "https://github.com/rumaisa-azeem/llm-robots-discrimination-safety",
+    "section": "benchmarks",
+    "subsection": "Human-Robot Trust and Fairness",
+    "scope": "embodied-agent",
+    "risks": [
+      "ethical-societal"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "semantic-misalignment",
+          "hazardous-instruction"
+        ],
+        "surfaces": [
+          "user-instruction"
+        ],
+        "consequences": [
+          "policy-violation"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "semantic-safety"
+      ],
+      "shift_types": [],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "madra-multi-agent-debate-for-risk-aware-embodied-planning-2026",
+    "title": "MADRA: Multi-Agent Debate for Risk-Aware Embodied Planning",
+    "first_author": "Wang",
+    "venue": "Findings of ACL",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.18653/v1/2026.findings-acl.340",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "embodied-agent",
+    "risks": [
+      "ethical-societal"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "semantic-misalignment",
+        "planning-error"
+      ],
+      "surface": [
+        "task-planning",
+        "multi-agent-communication"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "policy-violation"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "task-planning",
+        "multi-agent-communication"
+      ],
+      "defends_against": [
+        "semantic-misalignment",
+        "planning-error"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "mulrobbench-a-decision-level-benchmark-for-safe-and-security-policy-compliant-multimodal-uav-agents-2026",
+    "title": "MulRobBench: A Decision-Level Benchmark for Safe and Security-Policy-Compliant Multimodal UAV Agents",
+    "first_author": "Alsinglawi",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2607.23870",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Semantic and Ethical Safety",
+    "scope": "embodied-agent",
+    "risks": [
+      "physical-safety",
+      "ethical-societal"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "constraint-violation",
+          "distribution-shift"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "user-instruction",
+          "task-planning"
+        ],
+        "consequences": [
+          "policy-violation",
+          "unsafe-motion"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "offline-dataset"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "constraint-violation-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "physical-safety",
+        "semantic-safety"
+      ],
+      "shift_types": [],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "perturbation-based-epistemic-uncertainty-for-failure-detection-in-vision-language-action-models-2026",
+    "title": "Perturbation-Based Epistemic Uncertainty for Failure Detection in Vision-Language-Action Models",
+    "first_author": "Lee",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2606.20754",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Uncertainty, Abstention, and Human Oversight",
+    "scope": "vla",
+    "risks": [],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift",
+        "uncertainty-miscalibration"
+      ],
+      "surface": [
+        "visual-perception",
+        "action-interface"
+      ],
+      "target": [
+        "runtime-monitor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [
+        "LIBERO-PRO",
+        "LIBERO"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "action-interface"
+      ],
+      "defends_against": [
+        "distribution-shift",
+        "uncertainty-miscalibration"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "privacy-risks-in-reinforcement-learning-for-household-robots-2024",
+    "title": "Privacy Risks in Reinforcement Learning for Household Robots",
+    "first_author": "Li",
+    "venue": "ICRA",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1109/icra57147.2024.10610832",
+    "code_url": null,
+    "section": "training-attacks",
+    "subsection": "Privacy and Data Leakage",
+    "scope": "robot-policy",
+    "risks": [
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "training"
+      ],
+      "mechanism": [
+        "sensitive-data-exposure"
+      ],
+      "surface": [
+        "model-supply-chain"
+      ],
+      "target": [
+        "private-data"
+      ],
+      "consequence": [
+        "privacy-leakage"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "privacy-preserving-robot-vision-with-anonymized-faces-by-extreme-low-resolution-2019",
+    "title": "Privacy-Preserving Robot Vision with Anonymized Faces by Extreme Low Resolution",
+    "first_author": "Kim",
+    "venue": "IROS",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.1109/iros40897.2019.8967681",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Privacy-Preserving Perception",
+    "scope": "robot-policy",
+    "risks": [],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "sensitive-data-exposure"
+      ],
+      "surface": [
+        "visual-perception"
+      ],
+      "target": [
+        "private-data"
+      ],
+      "consequence": [
+        "privacy-leakage"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "input-filtering"
+      ],
+      "protected_surface": [
+        "visual-perception"
+      ],
+      "defends_against": [
+        "sensitive-data-exposure"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "responsiblerobotbench-benchmarking-responsible-robot-manipulation-using-multi-modal-large-language-models-2025",
+    "title": "ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation using Multi-modal Large Language Models",
+    "first_author": "Zhang",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2512.04308",
+    "code_url": "https://sites.google.com/view/responsible-robotbench",
+    "section": "benchmarks",
+    "subsection": "Task and Physical Safety",
+    "scope": "embodied-agent",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "planning-error",
+          "unsafe-policy-behavior"
+        ],
+        "surfaces": [
+          "task-planning",
+          "execution-control"
+        ],
+        "consequences": [
+          "task-failure",
+          "policy-violation"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "physical-safety",
+        "task-reliability"
+      ],
+      "shift_types": [],
+      "environment": "simulation",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "robochemist-long-horizon-and-safety-compliant-robotic-chemical-experimentation-2025",
+    "title": "RoboChemist: Long-Horizon and Safety-Compliant Robotic Chemical Experimentation",
+    "first_author": "Zhang",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2509.08820",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "embodied-agent",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "constraint-violation",
+        "execution-error"
+      ],
+      "surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "policy-violation",
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "defends_against": [
+        "constraint-violation",
+        "execution-error"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "robustnav-towards-benchmarking-robustness-in-embodied-navigation-2021",
+    "title": "RobustNav: Towards Benchmarking Robustness in Embodied Navigation",
+    "first_author": "Chattopadhyay",
+    "venue": "ICCV",
+    "year": 2021,
+    "paper_url": "https://doi.org/10.1109/iccv48922.2021.01540",
+    "code_url": "https://github.com/allenai/robustnav",
+    "section": "benchmarks",
+    "subsection": "OOD and Generalization Benchmarks",
+    "scope": "embodied-agent",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "distribution-shift"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "world-state"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "ood",
+        "task-reliability"
+      ],
+      "shift_types": [],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "robustness-of-embodied-point-navigation-agents-2023",
+    "title": "Robustness of Embodied Point Navigation Agents",
+    "first_author": "Rajič",
+    "venue": "Lecture Notes in Computer Science",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1007/978-3-031-25075-0_15",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "OOD and Generalization Benchmarks",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "distribution-shift"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "proprioception"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [
+        "Habitat"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "ood"
+      ],
+      "shift_types": [],
+      "environment": "unspecified",
+      "base_platforms": [
+        "Habitat"
+      ],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "robustvla-on-robustness-of-vision-language-action-model-against-multi-modal-perturbations-2025",
+    "title": "RobustVLA: On Robustness of Vision-Language-Action Model against Multi-Modal Perturbations",
+    "first_author": "Guo",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2510.00037",
+    "code_url": "https://github.com/gakakulicc/RobustVLA",
+    "section": "defenses",
+    "subsection": "Robust Training and Safety Alignment",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "visual-perception",
+        "user-instruction"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [
+        "LIBERO",
+        "FR5"
+      ],
+      "models": [
+        "pi0"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "training-time",
+        "inference-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "user-instruction"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "safegen-llm-enhancing-safety-generalization-in-task-planning-for-robotic-systems-2026",
+    "title": "SafeGen-LLM: Enhancing Safety Generalization in Task Planning for Robotic Systems",
+    "first_author": "Fan",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2602.24235",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Robust Training and Safety Alignment",
+    "scope": "embodied-agent",
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "constraint-violation"
+      ],
+      "surface": [
+        "task-planning"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "policy-violation"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "constraint-violation-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "training-time",
+        "inference-time"
+      ],
+      "mechanism": [
+        "robust-finetuning",
+        "formal-verification"
+      ],
+      "protected_surface": [
+        "task-planning"
+      ],
+      "defends_against": [
+        "constraint-violation"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "saferelbench-a-spatial-relation-aware-benchmark-for-process-level-safety-in-vlm-driven-embodied-agents-2026",
+    "title": "SafeRelBench: A Spatial-Relation-Aware Benchmark for Process-Level Safety in VLM-Driven Embodied Agents",
+    "first_author": "Yang",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2607.14543",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Semantic and Ethical Safety",
+    "scope": "embodied-agent",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "constraint-violation",
+          "planning-error"
+        ],
+        "surfaces": [
+          "world-state",
+          "task-planning"
+        ],
+        "consequences": [
+          "task-failure",
+          "policy-violation"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "physical-safety",
+        "semantic-safety",
+        "task-reliability"
+      ],
+      "shift_types": [],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "safety-aware-task-planning-via-large-language-models-in-robotics-2025",
+    "title": "Safety Aware Task Planning via Large Language Models in Robotics",
+    "first_author": "Khan",
+    "venue": "IROS",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1109/iros60139.2025.11246041",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "embodied-agent",
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "planning-error",
+        "constraint-violation"
+      ],
+      "surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "policy-violation"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "constraint-violation-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "defends_against": [
+        "planning-error",
+        "constraint-violation"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "safety-case-patterns-for-vla-based-driving-systems-insights-from-simlingo-2026",
+    "title": "Safety Case Patterns for VLA-based driving systems: Insights from SimLingo",
+    "first_author": "Yu",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2603.16013",
+    "code_url": null,
+    "section": "surveys",
+    "subsection": "Governance and Deployment Assurance",
+    "scope": "vla",
+    "risks": [],
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": [
+          "inference",
+          "system"
+        ],
+        "mechanisms": [
+          "planning-error",
+          "unsafe-policy-behavior"
+        ],
+        "surfaces": [
+          "user-instruction",
+          "task-planning",
+          "execution-control"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ]
+  },
+  {
+    "id": "safety-control-of-service-robots-with-llms-and-embodied-knowledge-graphs-2024",
+    "title": "Safety Control of Service Robots with LLMs and Embodied Knowledge Graphs",
+    "first_author": "Qi",
+    "venue": "arXiv",
+    "year": 2024,
+    "paper_url": "https://arxiv.org/abs/2405.17846",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "embodied-agent",
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "constraint-violation"
+      ],
+      "surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "policy-violation"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "constraint-violation-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "defends_against": [
+        "constraint-violation"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "safetyalfred-evaluating-safety-conscious-planning-of-vision-language-models-2026",
+    "title": "SafetyALFRED: Evaluating Safety-Conscious Planning of Vision Language Models",
+    "first_author": "Torres-Fonseca",
+    "venue": "Findings of ACL",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.18653/v1/2026.findings-acl.1852",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Safety and Hazard Benchmarks",
+    "scope": "embodied-agent",
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "perception-error",
+          "planning-error"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "task-planning"
+        ],
+        "consequences": [
+          "policy-violation",
+          "unsafe-motion"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [
+        "Qwen",
+        "Gemma",
+        "Gemini"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "constraint-violation-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "physical-safety"
+      ],
+      "shift_types": [],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "shifting-uncertainty-to-critical-moments-towards-reliable-uncertainty-quantification-for-vla-model-2026",
+    "title": "Shifting Uncertainty to Critical Moments: Towards Reliable Uncertainty Quantification for VLA Model",
+    "first_author": "Tang",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2603.18342",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Uncertainty, Abstention, and Human Oversight",
+    "scope": "vla",
+    "risks": [],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "uncertainty-miscalibration"
+      ],
+      "surface": [
+        "action-interface"
+      ],
+      "target": [
+        "runtime-monitor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [
+        "LIBERO"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "action-interface"
+      ],
+      "defends_against": [
+        "uncertainty-miscalibration"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "show-your-work-mechanistic-transparency-in-llm-powered-human-robot-interaction-2026",
+    "title": "Show Your Work: Mechanistic Transparency in LLM-Powered Human-Robot Interaction",
+    "first_author": "Yıldız",
+    "venue": "HRI Companion",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1145/3776734.3794439",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Human-Robot Trust and Fairness",
+    "scope": "hri",
+    "risks": [],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "reasoning-representation",
+          "user-instruction"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot",
+        "offline-dataset"
+      ],
+      "platforms": [
+        "Pepper"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [],
+      "shift_types": [],
+      "environment": "real-robot",
+      "base_platforms": [
+        "Pepper"
+      ],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "subtle-risks-critical-failures-a-framework-for-diagnosing-physical-safety-of-llms-for-embodied-decision-m-2025",
+    "title": "Subtle Risks, Critical Failures: A Framework for Diagnosing Physical Safety of LLMs for Embodied Decision Making",
+    "first_author": "Son",
+    "venue": "EMNLP",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.18653/v1/2025.emnlp-main.1305",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Semantic and Ethical Safety",
+    "scope": "embodied-agent",
+    "risks": [
+      "physical-safety",
+      "ethical-societal"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "hazardous-instruction",
+          "planning-error",
+          "constraint-violation"
+        ],
+        "surfaces": [
+          "user-instruction",
+          "task-planning"
+        ],
+        "consequences": [
+          "policy-violation"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "constraint-violation-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "physical-safety",
+        "semantic-safety"
+      ],
+      "shift_types": [],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "the-roles-of-fairness-and-effectiveness-in-promoting-legitimacy-and-cooperation-with-security-robotic-aut-2026",
+    "title": "The Roles of Fairness and Effectiveness in Promoting Legitimacy and Cooperation with Security Robotic Authority",
+    "first_author": "Ye",
+    "venue": "HRI",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1145/3757279.3788657",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Human-Robot Trust and Fairness",
+    "scope": "hri",
+    "risks": [],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "user-instruction",
+          "execution-control"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "offline-dataset"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": false,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [],
+      "shift_types": [],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "towards-a-cognitive-model-for-inferring-dynamic-fairness-perception-to-support-fairer-human-robot-collabo-2026",
+    "title": "Towards a Cognitive Model for Inferring Dynamic Fairness Perception to Support Fairer Human-Robot Collaboration",
+    "first_author": "Ahmad",
+    "venue": "HRI Companion",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1145/3776734.3794398",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Human-Robot Trust and Fairness",
+    "scope": "hri",
+    "risks": [],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "user-instruction",
+          "execution-control"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "offline-dataset"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [],
+      "shift_types": [],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "towards-worker-centered-warehouse-robots-a-user-study-on-privacy-inclusivity-and-safety-2026",
+    "title": "Towards Worker-Centered Warehouse Robots: A User Study on Privacy, Inclusivity and Safety",
+    "first_author": "Malik",
+    "venue": "International Journal of Social Robotics",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/s12369-026-01359-1",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Human-Robot Trust and Fairness",
+    "scope": "hri",
+    "risks": [],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "sensitive-data-exposure",
+          "semantic-misalignment"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "execution-control"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [],
+      "shift_types": [],
+      "environment": "real-robot",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "uncertainty-in-action-confidence-elicitation-in-embodied-agents-2025",
+    "title": "Uncertainty in Action: Confidence Elicitation in Embodied Agents",
+    "first_author": "Yu",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2503.10628",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Uncertainty, Abstention, and Human Oversight",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "uncertainty-miscalibration"
+      ],
+      "surface": [
+        "reasoning-representation"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [
+        "Minecraft"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "uncertainty-gating"
+      ],
+      "protected_surface": [
+        "reasoning-representation"
+      ],
+      "defends_against": [
+        "uncertainty-miscalibration"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "verifiable-foundation-models-for-robot-safety-2026",
+    "title": "Verifiable Foundation Models for Robot Safety",
+    "first_author": "Corsi",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2606.23754",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "unsafe-policy-behavior"
+      ],
+      "surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "target": [
+        "runtime-monitor"
+      ],
+      "consequence": [
+        "collision"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "formal-verification"
+      ],
+      "protected_surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "defends_against": [
+        "unsafe-policy-behavior"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "verifiably-following-complex-robot-instructions-with-foundation-models-2025",
+    "title": "Verifiably Following Complex Robot Instructions with Foundation Models",
+    "first_author": "Quartey",
+    "venue": "ICRA",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1109/icra55743.2025.11127418",
+    "code_url": "https://robotlimp.github.io",
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "embodied-agent",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "instruction-ambiguity",
+        "planning-error"
+      ],
+      "surface": [
+        "user-instruction",
+        "task-planning"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "formal-verification"
+      ],
+      "protected_surface": [
+        "user-instruction",
+        "task-planning"
+      ],
+      "defends_against": [
+        "instruction-ambiguity",
+        "planning-error"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "vla-fail-efficient-task-failure-detection-for-finetuned-vision-language-action-models-2026",
+    "title": "VLA-FAIL: Efficient Task Failure Detection for Finetuned Vision-Language-Action Models",
+    "first_author": "Seligmann",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2606.21386",
+    "code_url": "https://vla-fail.github.io/vla-fail-2026",
+    "section": "defenses",
+    "subsection": "Failure Detection and Recovery",
+    "scope": "vla",
+    "risks": [],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "action-interface",
+        "reasoning-representation"
+      ],
+      "target": [
+        "runtime-monitor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "action-interface",
+        "reasoning-representation"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "when-robots-say-no-the-empathic-ethical-disobedience-benchmark-2026",
+    "title": "When Robots Say No: The Empathic Ethical Disobedience Benchmark",
+    "first_author": "Kuzmenko",
+    "venue": "HRI",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1145/3757279.3785547",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Semantic and Ethical Safety",
+    "scope": "embodied-agent",
+    "risks": [
+      "ethical-societal"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "hazardous-instruction",
+          "constraint-violation"
+        ],
+        "surfaces": [
+          "user-instruction",
+          "execution-control"
+        ],
+        "consequences": [
+          "policy-violation"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "constraint-violation-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "semantic-safety"
+      ],
+      "shift_types": [],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "your-model-already-knows-attention-guided-safety-filter-for-vision-language-action-models-2026",
+    "title": "Your Model Already Knows: Attention-Guided Safety Filter for Vision-Language-Action Models",
+    "first_author": "Park",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2606.09749",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "scope": "vla",
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "unsafe-policy-behavior"
+      ],
+      "surface": [
+        "visual-perception",
+        "action-interface"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "collision"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "LIBERO"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "collision-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "action-interface"
+      ],
+      "defends_against": [
+        "unsafe-policy-behavior"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "designing-social-robots-with-ethical-user-adaptive-explainability-in-the-era-of-foundation-models-2026",
+    "title": "Designing Social Robots with Ethical, User-Adaptive Explainability in the Era of Foundation Models",
+    "first_author": "Doğan",
+    "venue": "HRI Companion",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1145/3776734.3794453",
+    "code_url": null,
+    "section": "surveys",
+    "subsection": "Privacy, Fairness, and Human-Robot Trust",
+    "scope": "hri",
+    "risks": [],
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": [
+          "inference",
+          "system"
+        ],
+        "mechanisms": [
+          "semantic-misalignment"
+        ],
+        "surfaces": [
+          "user-instruction",
+          "context-memory-retrieval",
+          "reasoning-representation"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ]
+  },
+  {
+    "id": "ehazop-a-proof-of-concept-ethical-hazard-analysis-of-an-assistive-robot-2024",
+    "title": "EHAZOP: A Proof of Concept Ethical Hazard Analysis of an Assistive Robot",
+    "first_author": "Menon",
+    "venue": "arXiv",
+    "year": 2024,
+    "paper_url": "https://arxiv.org/abs/2406.09239",
+    "code_url": null,
+    "section": "surveys",
+    "subsection": "Governance and Deployment Assurance",
+    "scope": "hri",
+    "risks": [],
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": [
+          "inference",
+          "system"
+        ],
+        "mechanisms": [
+          "sensitive-data-exposure",
+          "semantic-misalignment"
+        ],
+        "surfaces": [
+          "physical-semantic-environment",
+          "execution-control"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ]
+  },
+  {
+    "id": "explainable-embodied-agents-through-social-cues-2021",
+    "title": "Explainable Embodied Agents Through Social Cues",
+    "first_author": "Wallkötter",
+    "venue": "ACM Transactions on Human-Robot Interaction",
+    "year": 2021,
+    "paper_url": "https://doi.org/10.1145/3457188",
+    "code_url": null,
+    "section": "surveys",
+    "subsection": "Privacy, Fairness, and Human-Robot Trust",
+    "scope": "hri",
+    "risks": [],
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": [
+          "inference",
+          "system"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "reasoning-representation",
+          "execution-control"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ]
+  },
+  {
+    "id": "from-screens-to-scenes-a-survey-of-embodied-ai-in-healthcare-2025",
+    "title": "From screens to scenes: A survey of embodied AI in healthcare",
+    "first_author": "Liu",
+    "venue": "Information Fusion",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1016/j.inffus.2025.103033",
+    "code_url": null,
+    "section": "surveys",
+    "subsection": "Domain-Specific Surveys",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": [
+          "training",
+          "inference",
+          "system"
+        ],
+        "mechanisms": [
+          "multiple"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "task-planning",
+          "execution-control"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ]
+  },
+  {
+    "id": "privacy-beyond-data-assessment-and-mitigation-of-privacy-risks-in-robotic-technology-for-elderly-care-2025",
+    "title": "Privacy beyond Data: Assessment and Mitigation of Privacy Risks in Robotic Technology for Elderly Care",
+    "first_author": "Grabler",
+    "venue": "ACM Transactions on Human-Robot Interaction",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1145/3689216",
+    "code_url": null,
+    "section": "surveys",
+    "subsection": "Privacy, Fairness, and Human-Robot Trust",
+    "scope": "hri",
+    "risks": [],
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": [
+          "inference",
+          "system"
+        ],
+        "mechanisms": [
+          "sensitive-data-exposure"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "context-memory-retrieval"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ]
+  },
+  {
+    "id": "safe-embodied-ai-for-long-horizon-tasks-a-cross-layer-analysis-of-robotic-manipulation-2026",
+    "title": "Safe Embodied AI for Long-horizon Tasks: A Cross-layer Analysis of Robotic Manipulation",
+    "first_author": "Kim",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2606.05660",
+    "code_url": null,
+    "section": "surveys",
+    "subsection": "Embodied AI Safety and Security",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": [
+          "training",
+          "inference",
+          "system"
+        ],
+        "mechanisms": [
+          "planning-error",
+          "execution-error",
+          "unsafe-policy-behavior"
+        ],
+        "surfaces": [
+          "task-planning",
+          "action-interface",
+          "execution-control"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ]
+  },
+  {
+    "id": "the-challenges-and-opportunities-of-human-centered-ai-for-trustworthy-robots-and-autonomous-systems-2022",
+    "title": "The Challenges and Opportunities of Human-Centered AI for Trustworthy Robots and Autonomous Systems",
+    "first_author": "He",
+    "venue": "IEEE Transactions on Cognitive and Developmental Systems",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1109/tcds.2021.3132282",
+    "code_url": null,
+    "section": "surveys",
+    "subsection": "Privacy, Fairness, and Human-Robot Trust",
+    "scope": "mixed",
+    "risks": [],
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": [
+          "inference",
+          "system"
+        ],
+        "mechanisms": [
+          "multiple"
+        ],
+        "surfaces": [
+          "execution-control",
+          "middleware-network",
+          "user-instruction"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ]
+  },
+  {
+    "id": "whos-in-charge-here-a-survey-on-trustworthy-ai-in-variable-autonomy-robotic-systems-2024",
+    "title": "Who’s in Charge Here? A Survey on Trustworthy AI in Variable Autonomy Robotic Systems",
+    "first_author": "Methnani",
+    "venue": "ACM Computing Surveys",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1145/3645090",
+    "code_url": null,
+    "section": "surveys",
+    "subsection": "Privacy, Fairness, and Human-Robot Trust",
+    "scope": "hri",
+    "risks": [],
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": [
+          "inference",
+          "system"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "user-instruction",
+          "execution-control"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ]
+  },
+  {
+    "id": "safety-in-embodied-ai-a-survey-of-risks-attacks-and-defenses-2026",
+    "title": "Safety in Embodied AI: A Survey of Risks, Attacks, and Defenses",
+    "first_author": "Li",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2605.02900",
+    "code_url": null,
+    "section": "surveys",
+    "subsection": "Embodied AI Safety and Security",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": [
+          "training",
+          "inference",
+          "system"
+        ],
+        "mechanisms": [
+          "multiple"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "task-planning",
+          "execution-control"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ]
+  },
+  {
+    "id": "rethinking-robustness-assessment-adversarial-attacks-on-learning-based-quadrupedal-locomotion-controllers-2024",
+    "title": "Rethinking Robustness Assessment: Adversarial Attacks on Learning-based Quadrupedal Locomotion Controllers",
+    "first_author": "Shi",
+    "venue": "arXiv",
+    "year": 2024,
+    "paper_url": "https://arxiv.org/abs/2405.12424",
+    "code_url": "https://fanshi14.github.io/me/rss24.html",
+    "section": "inference-attacks",
+    "subsection": "Sensor, State, and Physical Interventions",
+    "scope": "robot-policy",
+    "risks": [],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "state-manipulation"
+      ],
+      "surface": [
+        "proprioception"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "robots-enact-malignant-stereotypes-2022",
+    "title": "Robots Enact Malignant Stereotypes",
+    "first_author": "Hundt",
+    "venue": "2022 ACM Conference on Fairness Accountability and Transparency",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1145/3531146.3533138",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Human-Robot Trust and Fairness",
+    "scope": "embodied-agent",
+    "risks": [
+      "ethical-societal"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "semantic-misalignment"
+        ],
+        "surfaces": [
+          "user-instruction",
+          "visual-perception"
+        ],
+        "consequences": [
+          "policy-violation"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "offline-dataset"
+      ],
+      "platforms": [],
+      "models": [
+        "CLIP"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "semantic-safety"
+      ],
+      "shift_types": [],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "don-t-let-your-robot-be-harmful-responsible-robotic-manipulation-via-safety-as-policy-2024",
+    "title": "Don't Let Your Robot be Harmful: Responsible Robotic Manipulation via Safety-as-Policy",
+    "first_author": "Ni",
+    "venue": "arXiv",
+    "year": 2024,
+    "paper_url": "https://arxiv.org/abs/2411.18289",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety-Aware Policy Learning",
+    "scope": "embodied-agent",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "hazardous-instruction",
+        "planning-error"
+      ],
+      "surface": [
+        "user-instruction",
+        "physical-semantic-environment",
+        "task-planning"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "unsafe-motion",
+        "policy-violation"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "training-time",
+        "inference-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "user-instruction",
+        "physical-semantic-environment",
+        "task-planning"
+      ],
+      "defends_against": [
+        "hazardous-instruction",
+        "planning-error"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "humanoid-safe-stop-via-learned-stoppability-value-2026",
+    "title": "Humanoid Safe Stop via Learned Stoppability Value",
+    "first_author": "Long",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2609.02358",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "scope": "robot-policy",
+    "risks": [],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "unsafe-policy-behavior"
+      ],
+      "surface": [
+        "proprioception",
+        "execution-control"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "unsafe-motion"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "proprioception",
+        "execution-control"
+      ],
+      "defends_against": [
+        "unsafe-policy-behavior"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "do-better-imagined-rollouts-mean-better-robot-control-a-controlled-study-of-world-model-evaluation-under--2026",
+    "title": "Do Better Imagined Rollouts Mean Better Robot Control? A Controlled Study of World-Model Evaluation Under Feedback",
+    "first_author": "Raghavan",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2609.02811",
+    "code_url": "https://github.com/rdharini2001/Robot_World_Model",
+    "section": "benchmarks",
+    "subsection": "Robustness and Uncertainty Evaluation",
+    "scope": "robot-policy",
+    "risks": [],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "distribution-shift",
+          "perception-error"
+        ],
+        "surfaces": [
+          "world-state",
+          "proprioception"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": false,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "ood"
+      ],
+      "shift_types": [],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "benchmarking-robots-for-everyday-environments-from-lab-experiments-to-real-world-operations-2026",
+    "title": "Benchmarking Robots for Everyday Environments: From Lab Experiments to Real-World Operations",
+    "first_author": "Memmesheimer",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2609.26490",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Governance and Deployment Assurance",
+    "scope": "mixed",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "execution-error",
+          "unsafe-policy-behavior"
+        ],
+        "surfaces": [
+          "execution-control",
+          "physical-semantic-environment"
+        ],
+        "consequences": [
+          "task-failure",
+          "policy-violation"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "task-reliability"
+      ],
+      "shift_types": [],
+      "environment": "real-robot",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "navsafe-infty-benchmarking-closed-loop-driving-safety-in-photorealistic-environments-2026",
+    "title": "NavSafe-$\\infty$: Benchmarking Closed-Loop Driving Safety in Photorealistic Environments",
+    "first_author": "Bao",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2609.26618",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Task and Physical Safety",
+    "scope": "autonomous-driving",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "planning-error",
+          "unsafe-policy-behavior"
+        ],
+        "surfaces": [
+          "task-planning",
+          "execution-control"
+        ],
+        "consequences": [
+          "collision",
+          "recovery-failure"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "collision-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "physical-safety",
+        "task-reliability"
+      ],
+      "shift_types": [],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "calm-configuration-aware-human-intervention-boundaries-during-robot-approach-2026",
+    "title": "CALM: Configuration-Aware Human Intervention Boundaries During Robot Approach",
+    "first_author": "Gao",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2609.07430",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Human-Robot Trust and Fairness",
+    "scope": "hri",
+    "risks": [],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "physical-semantic-environment",
+          "execution-control"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [],
+      "shift_types": [],
+      "environment": "real-robot",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "safety-critical-scenarios-emerge-from-initial-scenes-2026",
+    "title": "Safety-Critical Scenarios Emerge from Initial Scenes",
+    "first_author": "Wu",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2609.20103",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Geometry and Object-Centric Stress Testing",
+    "scope": "autonomous-driving",
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "environment-manipulation"
+        ],
+        "surfaces": [
+          "physical-semantic-environment",
+          "world-state"
+        ],
+        "consequences": [
+          "collision"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "Waymo"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "collision-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "adversarial-attack",
+        "physical-safety"
+      ],
+      "shift_types": [],
+      "environment": "simulation",
+      "base_platforms": [
+        "Waymo"
+      ],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "vla-scope-shift-aware-failure-prediction-for-vision-language-action-models-2026",
+    "title": "VLA-Scope: Shift-Aware Failure Prediction for Vision-Language-Action Models",
+    "first_author": "Zhu",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2609.21246",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection and Recovery",
+    "scope": "vla",
+    "risks": [],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "visual-perception",
+        "user-instruction"
+      ],
+      "target": [
+        "runtime-monitor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [
+        "LIBERO-Spatial",
+        "LIBERO"
+      ],
+      "models": [
+        "OpenVLA"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "user-instruction"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "commitflow-semantic-commitment-verification-and-local-correction-for-long-horizon-robot-manipulation-vla--2026",
+    "title": "CommitFlow: Semantic Commitment Verification and Local Correction for Long-Horizon Robot Manipulation VLA Execution",
+    "first_author": "Zhao",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2609.21908",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection and Recovery",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error",
+        "planning-error"
+      ],
+      "surface": [
+        "world-state",
+        "execution-control"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [
+        "RoboTwin 2.0"
+      ],
+      "models": [
+        "pi0.5"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "world-state",
+        "execution-control"
+      ],
+      "defends_against": [
+        "execution-error",
+        "planning-error"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "turning-safety-into-competence-minimally-exploitable-robot-policies-via-safety-filtered-reinforcement-lea-2026",
+    "title": "Turning Safety into Competence: Minimally Exploitable Robot Policies via Safety-Filtered Reinforcement Learning",
+    "first_author": "Wu",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2609.27312",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety-Aware Policy Learning",
+    "scope": "robot-policy",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "unsafe-policy-behavior"
+      ],
+      "surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "unsafe-motion"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "training-time",
+        "inference-time"
+      ],
+      "mechanism": [
+        "adversarial-training",
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "defends_against": [
+        "unsafe-policy-behavior"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "crosssafe-towards-cross-embodiment-latent-safety-filters-2026",
+    "title": "CrossSafe: Towards Cross-Embodiment Latent Safety Filters",
+    "first_author": "Tabbara",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2609.28984",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety-Aware Policy Learning",
+    "scope": "embodied-agent",
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "unsafe-policy-behavior"
+      ],
+      "surface": [
+        "action-interface",
+        "proprioception"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "collision"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "collision-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "training-time",
+        "inference-time"
+      ],
+      "mechanism": [
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "action-interface",
+        "proprioception"
+      ],
+      "defends_against": [
+        "unsafe-policy-behavior"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "conflictvla-bench-benchmarking-behavioral-responses-of-vision-language-action-models-to-premise-conflicts-2026",
+    "title": "ConflictVLA-Bench: Benchmarking Behavioral Responses of Vision-Language-Action Models to Premise Conflicts",
+    "first_author": "Hou",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2609.31792",
+    "code_url": "https://github.com/EmbodiedAISurvey/ConflictVLA-Bench",
+    "section": "benchmarks",
+    "subsection": "Semantic and Ethical Safety",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "instruction-ambiguity",
+          "semantic-misalignment"
+        ],
+        "surfaces": [
+          "user-instruction",
+          "physical-semantic-environment"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [
+        "LIBERO"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "semantic-safety",
+        "task-reliability"
+      ],
+      "shift_types": [],
+      "environment": "unspecified",
+      "base_platforms": [
+        "LIBERO"
+      ],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "planguard-a-guardrail-for-multi-step-plan-safety-in-embodied-agents-2026",
+    "title": "PlanGuard: A Guardrail for Multi-Step Plan Safety in Embodied Agents",
+    "first_author": "Chen",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2609.32801",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "planning-error"
+      ],
+      "surface": [
+        "task-planning",
+        "physical-semantic-environment"
+      ],
+      "target": [
+        "runtime-monitor"
+      ],
+      "consequence": [
+        "policy-violation"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "input-filtering"
+      ],
+      "protected_surface": [
+        "task-planning",
+        "physical-semantic-environment"
+      ],
+      "defends_against": [
+        "planning-error"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "popnavshift-stress-testing-social-navigation-under-behavioral-population-shift-2026",
+    "title": "PopNavShift: Stress-Testing Social Navigation under Behavioral Population Shift",
+    "first_author": "Tan",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2609.21838",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness and Uncertainty Evaluation",
+    "scope": "robot-policy",
+    "risks": [
+      "ethical-societal"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "distribution-shift"
+        ],
+        "surfaces": [
+          "physical-semantic-environment",
+          "world-state"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "ood",
+        "semantic-safety"
+      ],
+      "shift_types": [],
+      "environment": "simulation",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "safe-chem-uncertainty-aware-policy-switching-for-robust-robotic-chemistry-2026",
+    "title": "SAFE-CHEM: Uncertainty-Aware Policy Switching for Robust Robotic Chemistry",
+    "first_author": "Jones",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2608.09303",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "scope": "robot-policy",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "unsafe-policy-behavior",
+        "uncertainty-miscalibration"
+      ],
+      "surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "policy-violation"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [
+        "Franka"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "uncertainty-gating",
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "defends_against": [
+        "unsafe-policy-behavior",
+        "uncertainty-miscalibration"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "benchmarking-vision-language-action-models-on-so-101-failure-and-recovery-analysis-2026",
+    "title": "Benchmarking Vision-Language-Action Models on SO-101: Failure and Recovery Analysis",
+    "first_author": "Yu",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2606.08881",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Failure Detection and Recovery",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "execution-error"
+        ],
+        "surfaces": [
+          "execution-control"
+        ],
+        "consequences": [
+          "task-failure",
+          "recovery-failure"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "SO-101"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "task-reliability"
+      ],
+      "shift_types": [],
+      "environment": "mixed",
+      "base_platforms": [
+        "SO-101"
+      ],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "actprobe-action-space-probe-for-early-failure-detection-of-generative-robot-policies-2026",
+    "title": "ActProbe: Action-Space Probe for Early Failure Detection of Generative Robot Policies",
+    "first_author": "Huang",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2606.08508",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection and Recovery",
+    "scope": "robot-policy",
+    "risks": [],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "action-interface"
+      ],
+      "target": [
+        "runtime-monitor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "action-interface"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "embedding-iso-10218-safety-compliance-in-robots-via-control-barrier-functions-for-human-robot-collaborati-2026",
+    "title": "Embedding ISO 10218 Safety Compliance in Robots via Control Barrier Functions for Human-Robot Collaboration",
+    "first_author": "Parma",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2606.13203",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "scope": "robot-policy",
+    "risks": [],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "unsafe-policy-behavior"
+      ],
+      "surface": [
+        "proprioception",
+        "execution-control"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "unsafe-motion"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "UR10e"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "proprioception",
+        "execution-control"
+      ],
+      "defends_against": [
+        "unsafe-policy-behavior"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "robosemanticbench-diagnosing-semantic-grounding-in-action-prediction-for-vla-models-2026",
+    "title": "RoboSemanticBench: Diagnosing Semantic Grounding in Action Prediction for VLA Models",
+    "first_author": "Yu",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2606.02277",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Semantic and Ethical Safety",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "semantic-misalignment"
+        ],
+        "surfaces": [
+          "user-instruction",
+          "visual-perception",
+          "action-interface"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "semantic-safety",
+        "task-reliability"
+      ],
+      "shift_types": [],
+      "environment": "unspecified",
+      "base_platforms": [],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "pact-self-evolving-physical-safety-alignment-for-diffusion-policies-in-embodied-manipulation-2026",
+    "title": "PACT: Self-Evolving Physical Safety Alignment for Diffusion Policies in Embodied Manipulation",
+    "first_author": "Wu",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2606.08414",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Robust Training and Safety Alignment",
+    "scope": "robot-policy",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "unsafe-policy-behavior"
+      ],
+      "surface": [
+        "action-interface"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "policy-violation",
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "training-time",
+        "inference-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "action-interface"
+      ],
+      "defends_against": [
+        "unsafe-policy-behavior"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "safe-learning-for-contact-rich-robot-tasks-a-survey-from-classical-learning-based-methods-to-safe-foundat-2025",
+    "title": "Safe Learning for Contact-Rich Robot Tasks: A Survey from Classical Learning-Based Methods to Safe Foundation Models",
+    "first_author": "Zhang",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2512.11908",
+    "code_url": "https://github.com/jack-sherman01/Awesome-Learning4Safe-Contact-rich-tasks",
+    "section": "surveys",
+    "subsection": "Embodied AI Safety and Security",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": [
+          "training",
+          "inference",
+          "system"
+        ],
+        "mechanisms": [
+          "multiple"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "task-planning",
+          "execution-control"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ]
+  },
+  {
+    "id": "a-comprehensive-survey-on-physical-risk-control-in-the-era-of-foundation-model-enabled-robotics-2025",
+    "title": "A Comprehensive Survey on Physical Risk Control in the Era of Foundation Model-enabled Robotics",
+    "first_author": "Kojima",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2505.12583",
+    "code_url": null,
+    "section": "surveys",
+    "subsection": "Embodied AI Safety and Security",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": [
+          "training",
+          "inference",
+          "system"
+        ],
+        "mechanisms": [
+          "multiple"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "task-planning",
+          "execution-control"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ]
+  },
+  {
+    "id": "guided-by-guardrails-control-barrier-functions-as-safety-instructors-for-robotic-learning-2025",
+    "title": "Guided by Guardrails: Control Barrier Functions as Safety Instructors for Robotic Learning",
+    "first_author": "Guerrier",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2505.18858",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety-Aware Policy Learning",
+    "scope": "robot-policy",
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "unsafe-policy-behavior"
+      ],
+      "surface": [
+        "action-interface"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "collision"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "constraint-violation-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "training-time",
+        "inference-time"
+      ],
+      "mechanism": [
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "action-interface"
+      ],
+      "defends_against": [
+        "unsafe-policy-behavior"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "towards-safe-robot-foundation-models-2025",
+    "title": "Towards Safe Robot Foundation Models",
+    "first_author": "Tölle",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2503.07404",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "scope": "robot-policy",
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "unsafe-policy-behavior"
+      ],
+      "surface": [
+        "action-interface"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "collision"
+      ]
+    },
+    "tags": [
+      "priority-literature-review-2026-10",
+      "abstract-verified"
+    ],
+    "evaluation": {
+      "environments": [],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "collision-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "action-interface"
+      ],
+      "defends_against": [
+        "unsafe-policy-behavior"
+      ],
+      "assumptions": [],
+      "curation_status": "abstract-verified"
+    }
   }
 ]

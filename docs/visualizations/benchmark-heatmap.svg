@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 1200 1301">
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 1200 1355">
 <title id="title">Threat mechanism × consequence</title>
 <desc id="desc">Benchmark threat and consequence cross-map.</desc>
 <style>
@@ -9,9 +9,9 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 .label { font-size: 13px; fill: #202938; }
 .small { font-size: 11px; fill: #657287; }
 </style>
-<rect width="1200" height="1301" fill="#FFFFFF"/>
+<rect width="1200" height="1355" fill="#FFFFFF"/>
 <text class="title" x="48" y="48">Threat mechanism × consequence</text>
-<text class="subtitle" x="48" y="74">Benchmark papers only (42 papers).</text>
+<text class="subtitle" x="48" y="74">Benchmark papers only (85 papers).</text>
 <text class="axis" text-anchor="start" transform="translate(340.1 167) rotate(-52)">Task Failure</text>
 <text class="axis" text-anchor="start" transform="translate(436.2 167) rotate(-52)">Physical Damage</text>
 <text class="axis" text-anchor="start" transform="translate(532.3 167) rotate(-52)">Privacy Leakage</text>
@@ -33,29 +33,36 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2024] Manipulation Facing Threats: Evaluating Physical Vulnerabilities in End-to-End Vision Language Action Models
 [arXiv 2026] RoboTwin-Phys: Do WAMs and VLAs Understand the Physical World?
 [arXiv 2026] Self-Adaptive VLA for Robust Robot Deployment
-[arXiv 2026] ExceptionDrive: A Planning-Oriented Counterfactual Corner-Case Benchmark for Autonomous Driving</title></rect>
-<text x="348.1" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">12</text>
-<rect x="398.1111111111111" y="187" width="92.11111111111111" height="50" rx="6" fill="#CBDCF6"><title>[arXiv 2025] VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models
+[arXiv 2026] ExceptionDrive: A Planning-Oriented Counterfactual Corner-Case Benchmark for Autonomous Driving
+[arXiv 2026] LIBERO-X: Robustness Litmus for Vision-Language-Action Models
+[arXiv 2025] LIBERO-Plus: In-depth Robustness Analysis of Vision-Language-Action Models
+[arXiv 2025] Eva-VLA: Evaluating Vision-Language-Action Models&#x27; Robustness Under Real-World Physical Variations
+[ICCV 2021] RobustNav: Towards Benchmarking Robustness in Embodied Navigation
+[Lecture Notes in Computer Science 2023] Robustness of Embodied Point Navigation Agents
+[arXiv 2026] Do Better Imagined Rollouts Mean Better Robot Control? A Controlled Study of World-Model Evaluation Under Feedback</title></rect>
+<text x="348.1" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">18</text>
+<rect x="398.1111111111111" y="187" width="92.11111111111111" height="50" rx="6" fill="#D4E2F6"><title>[arXiv 2025] VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models
 [arXiv 2026] ReactHuman: A Physics-Grounded Benchmark for Human-Like Reactive Decision-Making in Embodied Multimodal LLMs</title></rect>
 <text x="444.2" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
-<rect x="494.22222222222223" y="187" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[arXiv 2024] Manipulation Facing Threats: Evaluating Physical Vulnerabilities in End-to-End Vision Language Action Models</title></rect>
+<rect x="494.22222222222223" y="187" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2024] Manipulation Facing Threats: Evaluating Physical Vulnerabilities in End-to-End Vision Language Action Models</title></rect>
 <text x="540.3" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="590.3333333333334" y="187" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="636.4" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="686.4444444444445" y="187" width="92.11111111111111" height="50" rx="6" fill="#BFD4F5"><title>[arXiv 2026] ReactHuman: A Physics-Grounded Benchmark for Human-Like Reactive Decision-Making in Embodied Multimodal LLMs
+<rect x="590.3333333333334" y="187" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2026] MulRobBench: A Decision-Level Benchmark for Safe and Security-Policy-Compliant Multimodal UAV Agents</title></rect>
+<text x="636.4" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="686.4444444444445" y="187" width="92.11111111111111" height="50" rx="6" fill="#C3D7F5"><title>[arXiv 2026] ReactHuman: A Physics-Grounded Benchmark for Human-Like Reactive Decision-Making in Embodied Multimodal LLMs
 [arXiv 2026] Testing Between the Test Cases: Proving End-to-End Steering in Conditions You Never Drove
-[arXiv 2026] ExceptionDrive: A Planning-Oriented Counterfactual Corner-Case Benchmark for Autonomous Driving</title></rect>
-<text x="732.5" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">3</text>
-<rect x="782.5555555555555" y="187" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[arXiv 2026] Self-Adaptive VLA for Robust Robot Deployment</title></rect>
+[arXiv 2026] ExceptionDrive: A Planning-Oriented Counterfactual Corner-Case Benchmark for Autonomous Driving
+[arXiv 2026] MulRobBench: A Decision-Level Benchmark for Safe and Security-Policy-Compliant Multimodal UAV Agents</title></rect>
+<text x="732.5" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">4</text>
+<rect x="782.5555555555555" y="187" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2026] Self-Adaptive VLA for Robust Robot Deployment</title></rect>
 <text x="828.6" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="878.6666666666667" y="187" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="924.7" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="974.7777777777778" y="187" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1020.8" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1070.888888888889" y="187" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[arXiv 2026] ExceptionDrive: A Planning-Oriented Counterfactual Corner-Case Benchmark for Autonomous Driving</title></rect>
+<rect x="1070.888888888889" y="187" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2026] ExceptionDrive: A Planning-Oriented Counterfactual Corner-Case Benchmark for Autonomous Driving</title></rect>
 <text x="1116.9" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <text class="label" x="282" y="270.0" text-anchor="end">Execution Error</text>
-<rect x="302.0" y="241" width="92.11111111111111" height="50" rx="6" fill="#7FA9F0"><title>[arXiv 2025] VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models
+<rect x="302.0" y="241" width="92.11111111111111" height="50" rx="6" fill="#84ADF0"><title>[arXiv 2025] VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models
 [arXiv 2025] CostNav: A Navigation Benchmark for Real-World Economic-Cost Evaluation of Physical AI Agents
 [ECCV 2026] LIBERO-Safety: A Comprehensive Benchmark for Physical and Semantic Safety in Vision-Language-Action Models
 [arXiv 2026] ForesightSafety-VLA: A Unified Diagnostic Safety Benchmark for Vision-Language-Action Models
@@ -64,9 +71,13 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2026] LIBERO-RECOVER: Beyond Task Success Towards Failure Recovery in Robotic Manipulation Models
 [arXiv 2026] Embodied-BenchForge: A Closed-Loop Agentic Workflow for Embodied Benchmark Construction
 [arXiv 2026] RoboTwin-Phys: Do WAMs and VLAs Understand the Physical World?
-[arXiv 2026] Self-Adaptive VLA for Robust Robot Deployment</title></rect>
-<text x="348.1" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">10</text>
-<rect x="398.1111111111111" y="241" width="92.11111111111111" height="50" rx="6" fill="#AAC6F3"><title>[arXiv 2025] VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models
+[arXiv 2026] Self-Adaptive VLA for Robust Robot Deployment
+[Findings of ACL 2026] FAER: Benchmarking VLMs for Failure-Aware Embodied Reasoning
+[arXiv 2026] LabRobFail: A Benchmark for Robotic Failure Analysis in Chemical Self-driving Laboratory
+[arXiv 2026] Benchmarking Robots for Everyday Environments: From Lab Experiments to Real-World Operations
+[arXiv 2026] Benchmarking Vision-Language-Action Models on SO-101: Failure and Recovery Analysis</title></rect>
+<text x="348.1" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">14</text>
+<rect x="398.1111111111111" y="241" width="92.11111111111111" height="50" rx="6" fill="#BCD2F4"><title>[arXiv 2025] VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models
 [arXiv 2025] CostNav: A Navigation Benchmark for Real-World Economic-Cost Evaluation of Physical AI Agents
 [ECCV 2026] LIBERO-Safety: A Comprehensive Benchmark for Physical and Semantic Safety in Vision-Language-Action Models
 [arXiv 2026] ForesightSafety-VLA: A Unified Diagnostic Safety Benchmark for Vision-Language-Action Models
@@ -74,69 +85,96 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="444.2" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">5</text>
 <rect x="494.22222222222223" y="241" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="540.3" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="590.3333333333334" y="241" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="636.4" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="686.4444444444445" y="241" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[arXiv 2026] SafeStage: Evaluating Safety Before, During, and After Vision-Language-Conditioned Robot Manipulation</title></rect>
+<rect x="590.3333333333334" y="241" width="92.11111111111111" height="50" rx="6" fill="#D4E2F6"><title>[arXiv 2026] EmbodiedGovBench: A Benchmark for Governance, Recovery, and Upgrade Safety in Embodied Agent Systems
+[arXiv 2026] Benchmarking Robots for Everyday Environments: From Lab Experiments to Real-World Operations</title></rect>
+<text x="636.4" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
+<rect x="686.4444444444445" y="241" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2026] SafeStage: Evaluating Safety Before, During, and After Vision-Language-Conditioned Robot Manipulation</title></rect>
 <text x="732.5" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="782.5555555555555" y="241" width="92.11111111111111" height="50" rx="6" fill="#AAC6F3"><title>[arXiv 2026] FailBench: How Reliable are VLMs at Judging Robot Task Success?
+<rect x="782.5555555555555" y="241" width="92.11111111111111" height="50" rx="6" fill="#A1C0F3"><title>[arXiv 2026] FailBench: How Reliable are VLMs at Judging Robot Task Success?
 [arXiv 2026] LIBERO-RECOVER: Beyond Task Success Towards Failure Recovery in Robotic Manipulation Models
 [arXiv 2026] Embodied-BenchForge: A Closed-Loop Agentic Workflow for Embodied Benchmark Construction
 [arXiv 2026] SafeManip: A Property-Driven Benchmark for Temporal Safety Evaluation in Robotic Manipulation
-[arXiv 2026] Self-Adaptive VLA for Robust Robot Deployment</title></rect>
-<text x="828.6" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">5</text>
+[arXiv 2026] Self-Adaptive VLA for Robust Robot Deployment
+[arXiv 2026] EmbodiedGovBench: A Benchmark for Governance, Recovery, and Upgrade Safety in Embodied Agent Systems
+[Findings of ACL 2026] FAER: Benchmarking VLMs for Failure-Aware Embodied Reasoning
+[arXiv 2026] LabRobFail: A Benchmark for Robotic Failure Analysis in Chemical Self-driving Laboratory
+[arXiv 2026] Benchmarking Vision-Language-Action Models on SO-101: Failure and Recovery Analysis</title></rect>
+<text x="828.6" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">9</text>
 <rect x="878.6666666666667" y="241" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="924.7" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="974.7777777777778" y="241" width="92.11111111111111" height="50" rx="6" fill="#CBDCF6"><title>[arXiv 2026] SafeManip: A Property-Driven Benchmark for Temporal Safety Evaluation in Robotic Manipulation
+<rect x="974.7777777777778" y="241" width="92.11111111111111" height="50" rx="6" fill="#D4E2F6"><title>[arXiv 2026] SafeManip: A Property-Driven Benchmark for Temporal Safety Evaluation in Robotic Manipulation
 [arXiv 2026] SafeStage: Evaluating Safety Before, During, and After Vision-Language-Conditioned Robot Manipulation</title></rect>
 <text x="1020.8" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
-<rect x="1070.888888888889" y="241" width="92.11111111111111" height="50" rx="6" fill="#CBDCF6"><title>[arXiv 2026] SafeManip: A Property-Driven Benchmark for Temporal Safety Evaluation in Robotic Manipulation
+<rect x="1070.888888888889" y="241" width="92.11111111111111" height="50" rx="6" fill="#D4E2F6"><title>[arXiv 2026] SafeManip: A Property-Driven Benchmark for Temporal Safety Evaluation in Robotic Manipulation
 [arXiv 2026] SafeStage: Evaluating Safety Before, During, and After Vision-Language-Conditioned Robot Manipulation</title></rect>
 <text x="1116.9" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
 <text class="label" x="282" y="324.0" text-anchor="end">Constraint Violation</text>
-<rect x="302.0" y="295" width="92.11111111111111" height="50" rx="6" fill="#AAC6F3"><title>[arXiv 2025] VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models
+<rect x="302.0" y="295" width="92.11111111111111" height="50" rx="6" fill="#AEC8F3"><title>[arXiv 2025] VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models
 [AAAI 2025] IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents in Daily Household Tasks
 [arXiv 2025] CostNav: A Navigation Benchmark for Real-World Economic-Cost Evaluation of Physical AI Agents
 [arXiv 2026] SafeVLA-Bench: A Benchmark for the Success-Safety Gap in Vision-Language-Action Models
-[arXiv 2026] ExceptionDrive: A Planning-Oriented Counterfactual Corner-Case Benchmark for Autonomous Driving</title></rect>
-<text x="348.1" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">5</text>
-<rect x="398.1111111111111" y="295" width="92.11111111111111" height="50" rx="6" fill="#BFD4F5"><title>[arXiv 2025] VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models
+[arXiv 2026] ExceptionDrive: A Planning-Oriented Counterfactual Corner-Case Benchmark for Autonomous Driving
+[arXiv 2026] Using large language models for embodied planning introduces systematic safety risks
+[arXiv 2026] SafeRelBench: A Spatial-Relation-Aware Benchmark for Process-Level Safety in VLM-Driven Embodied Agents</title></rect>
+<text x="348.1" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">7</text>
+<rect x="398.1111111111111" y="295" width="92.11111111111111" height="50" rx="6" fill="#CBDCF6"><title>[arXiv 2025] VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models
 [arXiv 2025] CostNav: A Navigation Benchmark for Real-World Economic-Cost Evaluation of Physical AI Agents
 [arXiv 2026] SafeVLA-Bench: A Benchmark for the Success-Safety Gap in Vision-Language-Action Models</title></rect>
 <text x="444.2" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">3</text>
 <rect x="494.22222222222223" y="295" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="540.3" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="590.3333333333334" y="295" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="636.4" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="686.4444444444445" y="295" width="92.11111111111111" height="50" rx="6" fill="#B4CDF4"><title>[AAAI 2025] IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents in Daily Household Tasks
+<rect x="590.3333333333334" y="295" width="92.11111111111111" height="50" rx="6" fill="#A7C4F3"><title>[arXiv 2026] Using large language models for embodied planning introduces systematic safety risks
+[arXiv 2025] HASARD: A Benchmark for Vision-Based Safe Reinforcement Learning in Embodied Agents
+[arXiv 2026] EmbodiedGovBench: A Benchmark for Governance, Recovery, and Upgrade Safety in Embodied Agent Systems
+[arXiv 2025] Can AI Perceive Physical Danger and Intervene?
+[arXiv 2026] MulRobBench: A Decision-Level Benchmark for Safe and Security-Policy-Compliant Multimodal UAV Agents
+[arXiv 2026] SafeRelBench: A Spatial-Relation-Aware Benchmark for Process-Level Safety in VLM-Driven Embodied Agents
+[EMNLP 2025] Subtle Risks, Critical Failures: A Framework for Diagnosing Physical Safety of LLMs for Embodied Decision Making
+[HRI 2026] When Robots Say No: The Empathic Ethical Disobedience Benchmark</title></rect>
+<text x="636.4" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">8</text>
+<rect x="686.4444444444445" y="295" width="92.11111111111111" height="50" rx="6" fill="#AEC8F3"><title>[AAAI 2025] IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents in Daily Household Tasks
 [arXiv 2024] EARBench: Towards Evaluating Physical Risk Awareness for Task Planning of Foundation Model-Based Embodied AI Agents
 [arXiv 2026] SafeStage: Evaluating Safety Before, During, and After Vision-Language-Conditioned Robot Manipulation
-[arXiv 2026] ExceptionDrive: A Planning-Oriented Counterfactual Corner-Case Benchmark for Autonomous Driving</title></rect>
-<text x="732.5" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">4</text>
-<rect x="782.5555555555555" y="295" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[arXiv 2026] SafeManip: A Property-Driven Benchmark for Temporal Safety Evaluation in Robotic Manipulation</title></rect>
-<text x="828.6" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+[arXiv 2026] ExceptionDrive: A Planning-Oriented Counterfactual Corner-Case Benchmark for Autonomous Driving
+[arXiv 2025] HASARD: A Benchmark for Vision-Based Safe Reinforcement Learning in Embodied Agents
+[arXiv 2025] Can AI Perceive Physical Danger and Intervene?
+[arXiv 2026] MulRobBench: A Decision-Level Benchmark for Safe and Security-Policy-Compliant Multimodal UAV Agents</title></rect>
+<text x="732.5" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">7</text>
+<rect x="782.5555555555555" y="295" width="92.11111111111111" height="50" rx="6" fill="#D4E2F6"><title>[arXiv 2026] SafeManip: A Property-Driven Benchmark for Temporal Safety Evaluation in Robotic Manipulation
+[arXiv 2026] EmbodiedGovBench: A Benchmark for Governance, Recovery, and Upgrade Safety in Embodied Agent Systems</title></rect>
+<text x="828.6" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
 <rect x="878.6666666666667" y="295" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="924.7" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="974.7777777777778" y="295" width="92.11111111111111" height="50" rx="6" fill="#CBDCF6"><title>[arXiv 2026] SafeManip: A Property-Driven Benchmark for Temporal Safety Evaluation in Robotic Manipulation
+<rect x="974.7777777777778" y="295" width="92.11111111111111" height="50" rx="6" fill="#D4E2F6"><title>[arXiv 2026] SafeManip: A Property-Driven Benchmark for Temporal Safety Evaluation in Robotic Manipulation
 [arXiv 2026] SafeStage: Evaluating Safety Before, During, and After Vision-Language-Conditioned Robot Manipulation</title></rect>
 <text x="1020.8" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
-<rect x="1070.888888888889" y="295" width="92.11111111111111" height="50" rx="6" fill="#BFD4F5"><title>[arXiv 2026] SafeManip: A Property-Driven Benchmark for Temporal Safety Evaluation in Robotic Manipulation
+<rect x="1070.888888888889" y="295" width="92.11111111111111" height="50" rx="6" fill="#CBDCF6"><title>[arXiv 2026] SafeManip: A Property-Driven Benchmark for Temporal Safety Evaluation in Robotic Manipulation
 [arXiv 2026] SafeStage: Evaluating Safety Before, During, and After Vision-Language-Conditioned Robot Manipulation
 [arXiv 2026] ExceptionDrive: A Planning-Oriented Counterfactual Corner-Case Benchmark for Autonomous Driving</title></rect>
 <text x="1116.9" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">3</text>
 <text class="label" x="282" y="378.0" text-anchor="end">Semantic Misalignment</text>
-<rect x="302.0" y="349" width="92.11111111111111" height="50" rx="6" fill="#BFD4F5"><title>[arXiv 2026] HazardArena: Evaluating Semantic Safety in Vision-Language-Action Models
+<rect x="302.0" y="349" width="92.11111111111111" height="50" rx="6" fill="#A7C4F3"><title>[arXiv 2026] HazardArena: Evaluating Semantic Safety in Vision-Language-Action Models
 [ECCV 2026] LIBERO-Safety: A Comprehensive Benchmark for Physical and Semantic Safety in Vision-Language-Action Models
-[arXiv 2026] ForesightSafety-VLA: A Unified Diagnostic Safety Benchmark for Vision-Language-Action Models</title></rect>
-<text x="348.1" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">3</text>
-<rect x="398.1111111111111" y="349" width="92.11111111111111" height="50" rx="6" fill="#CBDCF6"><title>[ECCV 2026] LIBERO-Safety: A Comprehensive Benchmark for Physical and Semantic Safety in Vision-Language-Action Models
+[arXiv 2026] ForesightSafety-VLA: A Unified Diagnostic Safety Benchmark for Vision-Language-Action Models
+[arXiv 2025] HEAL: An Empirical Study on Hallucinations in Embodied Agents Driven by Large Language Models
+[arXiv 2026] Red-Teaming Vision-Language-Action Models via Quality Diversity Prompt Generation for Robust Robot Policies
+[arXiv 2026] The Yes-Man Syndrome: Benchmarking Abstention in Embodied Robotic Agents
+[arXiv 2026] ConflictVLA-Bench: Benchmarking Behavioral Responses of Vision-Language-Action Models to Premise Conflicts
+[arXiv 2026] RoboSemanticBench: Diagnosing Semantic Grounding in Action Prediction for VLA Models</title></rect>
+<text x="348.1" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">8</text>
+<rect x="398.1111111111111" y="349" width="92.11111111111111" height="50" rx="6" fill="#D4E2F6"><title>[ECCV 2026] LIBERO-Safety: A Comprehensive Benchmark for Physical and Semantic Safety in Vision-Language-Action Models
 [arXiv 2026] ForesightSafety-VLA: A Unified Diagnostic Safety Benchmark for Vision-Language-Action Models</title></rect>
 <text x="444.2" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
-<rect x="494.22222222222223" y="349" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="540.3" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="590.3333333333334" y="349" width="92.11111111111111" height="50" rx="6" fill="#CBDCF6"><title>[arXiv 2025] Generating Robot Constitutions &amp; Benchmarks for Semantic Safety
-[arXiv 2026] HazardArena: Evaluating Semantic Safety in Vision-Language-Action Models</title></rect>
-<text x="636.4" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
-<rect x="686.4444444444445" y="349" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[arXiv 2026] HazardArena: Evaluating Semantic Safety in Vision-Language-Action Models</title></rect>
+<rect x="494.22222222222223" y="349" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2026] How Far Are VLMs from Privacy Awareness in the Physical World? An Empirical Study</title></rect>
+<text x="540.3" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="590.3333333333334" y="349" width="92.11111111111111" height="50" rx="6" fill="#B4CDF4"><title>[arXiv 2025] Generating Robot Constitutions &amp; Benchmarks for Semantic Safety
+[arXiv 2026] HazardArena: Evaluating Semantic Safety in Vision-Language-Action Models
+[arXiv 2025] HEAL: An Empirical Study on Hallucinations in Embodied Agents Driven by Large Language Models
+[arXiv 2026] How Far Are VLMs from Privacy Awareness in the Physical World? An Empirical Study
+[International Journal of Social Robotics 2025] LLM-Driven Robots Risk Enacting Discrimination, Violence, and Unlawful Actions
+[2022 ACM Conference on Fairness Accountability and Transparency 2022] Robots Enact Malignant Stereotypes</title></rect>
+<text x="636.4" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">6</text>
+<rect x="686.4444444444445" y="349" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2026] HazardArena: Evaluating Semantic Safety in Vision-Language-Action Models</title></rect>
 <text x="732.5" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="782.5555555555555" y="349" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="828.6" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
@@ -146,160 +184,193 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="1020.8" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="1070.888888888889" y="349" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1116.9" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<text class="label" x="282" y="432.0" text-anchor="end">Environment Manipulation</text>
-<rect x="302.0" y="403" width="92.11111111111111" height="50" rx="6" fill="#CBDCF6"><title>[OpenReview 2026] VLA-Risk: Benchmarking Vision-Language-Action Models with Physical Robustness
-[arXiv 2026] ExceptionDrive: A Planning-Oriented Counterfactual Corner-Case Benchmark for Autonomous Driving</title></rect>
-<text x="348.1" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
-<rect x="398.1111111111111" y="403" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="444.2" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="494.22222222222223" y="403" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[OpenReview 2026] VLA-Risk: Benchmarking Vision-Language-Action Models with Physical Robustness</title></rect>
-<text x="540.3" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="590.3333333333334" y="403" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="636.4" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="686.4444444444445" y="403" width="92.11111111111111" height="50" rx="6" fill="#CBDCF6"><title>[arXiv 2026] RedVLA: Physical Red Teaming for Vision-Language-Action Models
-[arXiv 2026] ExceptionDrive: A Planning-Oriented Counterfactual Corner-Case Benchmark for Autonomous Driving</title></rect>
-<text x="732.5" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
+<text class="label" x="282" y="432.0" text-anchor="end">Hazardous Instruction</text>
+<rect x="302.0" y="403" width="92.11111111111111" height="50" rx="6" fill="#C3D7F5"><title>[arXiv 2024] SafeAgentBench: A Benchmark for Safe Task Planning of Embodied LLM Agents
+[arXiv 2025] A Framework for Benchmarking and Aligning Task-Planning Safety in LLM-Based Embodied Agents
+[arXiv 2026] Using large language models for embodied planning introduces systematic safety risks
+[arXiv 2026] RoboJailBench: Benchmarking Adversarial Attacks and Defenses in Embodied Robotic Agents</title></rect>
+<text x="348.1" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">4</text>
+<rect x="398.1111111111111" y="403" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2025] A Framework for Benchmarking and Aligning Task-Planning Safety in LLM-Based Embodied Agents</title></rect>
+<text x="444.2" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="494.22222222222223" y="403" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="540.3" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="590.3333333333334" y="403" width="92.11111111111111" height="50" rx="6" fill="#A1C0F3"><title>[arXiv 2024] SafeAgentBench: A Benchmark for Safe Task Planning of Embodied LLM Agents
+[arXiv 2025] AGENTSAFE: Benchmarking the Safety of Embodied Agents on Hazardous Instructions
+[arXiv 2026] Using large language models for embodied planning introduces systematic safety risks
+[Royal Society Open Science 2026] Benchmarking the Safety of Large Language Models for Robotic Health Attendant Control
+[arXiv 2026] RoboJailBench: Benchmarking Adversarial Attacks and Defenses in Embodied Robotic Agents
+[arXiv 2025] Can AI Perceive Physical Danger and Intervene?
+[International Journal of Social Robotics 2025] LLM-Driven Robots Risk Enacting Discrimination, Violence, and Unlawful Actions
+[EMNLP 2025] Subtle Risks, Critical Failures: A Framework for Diagnosing Physical Safety of LLMs for Embodied Decision Making
+[HRI 2026] When Robots Say No: The Empathic Ethical Disobedience Benchmark</title></rect>
+<text x="636.4" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">9</text>
+<rect x="686.4444444444445" y="403" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2025] Can AI Perceive Physical Danger and Intervene?</title></rect>
+<text x="732.5" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="782.5555555555555" y="403" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="828.6" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="878.6666666666667" y="403" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[arXiv 2026] RedVLA: Physical Red Teaming for Vision-Language-Action Models</title></rect>
-<text x="924.7" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="878.6666666666667" y="403" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="924.7" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="974.7777777777778" y="403" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1020.8" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1070.888888888889" y="403" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[arXiv 2026] ExceptionDrive: A Planning-Oriented Counterfactual Corner-Case Benchmark for Autonomous Driving</title></rect>
-<text x="1116.9" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<text class="label" x="282" y="486.0" text-anchor="end">Hazardous Instruction</text>
-<rect x="302.0" y="457" width="92.11111111111111" height="50" rx="6" fill="#CBDCF6"><title>[arXiv 2024] SafeAgentBench: A Benchmark for Safe Task Planning of Embodied LLM Agents
-[arXiv 2025] A Framework for Benchmarking and Aligning Task-Planning Safety in LLM-Based Embodied Agents</title></rect>
-<text x="348.1" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
-<rect x="398.1111111111111" y="457" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[arXiv 2025] A Framework for Benchmarking and Aligning Task-Planning Safety in LLM-Based Embodied Agents</title></rect>
+<rect x="1070.888888888889" y="403" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="1116.9" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text class="label" x="282" y="486.0" text-anchor="end">Planning Error</text>
+<rect x="302.0" y="457" width="92.11111111111111" height="50" rx="6" fill="#AEC8F3"><title>[arXiv 2024] VLABench: A Large-Scale Benchmark for Language-Conditioned Robotics Manipulation with Long-Horizon Reasoning Tasks
+[arXiv 2025] A Framework for Benchmarking and Aligning Task-Planning Safety in LLM-Based Embodied Agents
+[arXiv 2025] HEAL: An Empirical Study on Hallucinations in Embodied Agents Driven by Large Language Models
+[arXiv 2026] Using large language models for embodied planning introduces systematic safety risks
+[arXiv 2026] The Yes-Man Syndrome: Benchmarking Abstention in Embodied Robotic Agents
+[arXiv 2025] ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation using Multi-modal Large Language Models
+[arXiv 2026] SafeRelBench: A Spatial-Relation-Aware Benchmark for Process-Level Safety in VLM-Driven Embodied Agents</title></rect>
+<text x="348.1" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">7</text>
+<rect x="398.1111111111111" y="457" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2025] A Framework for Benchmarking and Aligning Task-Planning Safety in LLM-Based Embodied Agents</title></rect>
 <text x="444.2" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="494.22222222222223" y="457" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="540.3" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="590.3333333333334" y="457" width="92.11111111111111" height="50" rx="6" fill="#CBDCF6"><title>[arXiv 2024] SafeAgentBench: A Benchmark for Safe Task Planning of Embodied LLM Agents
-[arXiv 2025] AGENTSAFE: Benchmarking the Safety of Embodied Agents on Hazardous Instructions</title></rect>
-<text x="636.4" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
-<rect x="686.4444444444445" y="457" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="732.5" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="782.5555555555555" y="457" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="828.6" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="590.3333333333334" y="457" width="92.11111111111111" height="50" rx="6" fill="#B4CDF4"><title>[arXiv 2025] HEAL: An Empirical Study on Hallucinations in Embodied Agents Driven by Large Language Models
+[arXiv 2026] Using large language models for embodied planning introduces systematic safety risks
+[arXiv 2025] ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation using Multi-modal Large Language Models
+[arXiv 2026] SafeRelBench: A Spatial-Relation-Aware Benchmark for Process-Level Safety in VLM-Driven Embodied Agents
+[Findings of ACL 2026] SafetyALFRED: Evaluating Safety-Conscious Planning of Vision Language Models
+[EMNLP 2025] Subtle Risks, Critical Failures: A Framework for Diagnosing Physical Safety of LLMs for Embodied Decision Making</title></rect>
+<text x="636.4" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">6</text>
+<rect x="686.4444444444445" y="457" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[Findings of ACL 2026] SafetyALFRED: Evaluating Safety-Conscious Planning of Vision Language Models</title></rect>
+<text x="732.5" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="782.5555555555555" y="457" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2026] NavSafe-$\infty$: Benchmarking Closed-Loop Driving Safety in Photorealistic Environments</title></rect>
+<text x="828.6" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="878.6666666666667" y="457" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="924.7" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="974.7777777777778" y="457" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1020.8" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1070.888888888889" y="457" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1116.9" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<text class="label" x="282" y="540.0" text-anchor="end">Uncertainty Miscalibration</text>
-<rect x="302.0" y="511" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[arXiv 2025] Confidence Calibration in Vision-Language-Action Models</title></rect>
-<text x="348.1" y="540.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="398.1111111111111" y="511" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="444.2" y="540.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="1070.888888888889" y="457" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2026] NavSafe-$\infty$: Benchmarking Closed-Loop Driving Safety in Photorealistic Environments</title></rect>
+<text x="1116.9" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<text class="label" x="282" y="540.0" text-anchor="end">Perception Error</text>
+<rect x="302.0" y="511" width="92.11111111111111" height="50" rx="6" fill="#CBDCF6"><title>[arXiv 2026] ForesightSafety-VLA: A Unified Diagnostic Safety Benchmark for Vision-Language-Action Models
+[arXiv 2026] Embodied-BenchForge: A Closed-Loop Agentic Workflow for Embodied Benchmark Construction
+[arXiv 2026] Do Better Imagined Rollouts Mean Better Robot Control? A Controlled Study of World-Model Evaluation Under Feedback</title></rect>
+<text x="348.1" y="540.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">3</text>
+<rect x="398.1111111111111" y="511" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2026] ForesightSafety-VLA: A Unified Diagnostic Safety Benchmark for Vision-Language-Action Models</title></rect>
+<text x="444.2" y="540.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="494.22222222222223" y="511" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="540.3" y="540.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="590.3333333333334" y="511" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="636.4" y="540.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="686.4444444444445" y="511" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="732.5" y="540.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="782.5555555555555" y="511" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[arXiv 2025] Evaluating Uncertainty and Quality of Vision-Language-Action-enabled Robots</title></rect>
+<rect x="590.3333333333334" y="511" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[Findings of ACL 2026] SafetyALFRED: Evaluating Safety-Conscious Planning of Vision Language Models</title></rect>
+<text x="636.4" y="540.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="686.4444444444445" y="511" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[Findings of ACL 2026] SafetyALFRED: Evaluating Safety-Conscious Planning of Vision Language Models</title></rect>
+<text x="732.5" y="540.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="782.5555555555555" y="511" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2026] Embodied-BenchForge: A Closed-Loop Agentic Workflow for Embodied Benchmark Construction</title></rect>
 <text x="828.6" y="540.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="878.6666666666667" y="511" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="924.7" y="540.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="974.7777777777778" y="511" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1020.8" y="540.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1070.888888888889" y="511" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[IROS 2026 Workshop 2026] Marginal Calibration Does Not Compose: Hidden Dependence in Modular Robot Navigation</title></rect>
-<text x="1116.9" y="540.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<text class="label" x="282" y="594.0" text-anchor="end">Perception Error</text>
-<rect x="302.0" y="565" width="92.11111111111111" height="50" rx="6" fill="#CBDCF6"><title>[arXiv 2026] ForesightSafety-VLA: A Unified Diagnostic Safety Benchmark for Vision-Language-Action Models
-[arXiv 2026] Embodied-BenchForge: A Closed-Loop Agentic Workflow for Embodied Benchmark Construction</title></rect>
-<text x="348.1" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
-<rect x="398.1111111111111" y="565" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[arXiv 2026] ForesightSafety-VLA: A Unified Diagnostic Safety Benchmark for Vision-Language-Action Models</title></rect>
+<rect x="1070.888888888889" y="511" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="1116.9" y="540.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text class="label" x="282" y="594.0" text-anchor="end">Unsafe Policy Behavior</text>
+<rect x="302.0" y="565" width="92.11111111111111" height="50" rx="6" fill="#C3D7F5"><title>[arXiv 2026] Benchmarking Jailbreak Guardrails for Embodied Agents
+[arXiv 2024] Embodied Red Teaming for Auditing Robotic Foundation Models
+[arXiv 2025] ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation using Multi-modal Large Language Models
+[arXiv 2026] Benchmarking Robots for Everyday Environments: From Lab Experiments to Real-World Operations</title></rect>
+<text x="348.1" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">4</text>
+<rect x="398.1111111111111" y="565" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2026] ReactHuman: A Physics-Grounded Benchmark for Human-Like Reactive Decision-Making in Embodied Multimodal LLMs</title></rect>
 <text x="444.2" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="494.22222222222223" y="565" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="540.3" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="590.3333333333334" y="565" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="636.4" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="686.4444444444445" y="565" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="732.5" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="782.5555555555555" y="565" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[arXiv 2026] Embodied-BenchForge: A Closed-Loop Agentic Workflow for Embodied Benchmark Construction</title></rect>
+<rect x="590.3333333333334" y="565" width="92.11111111111111" height="50" rx="6" fill="#C3D7F5"><title>[arXiv 2026] Benchmarking Jailbreak Guardrails for Embodied Agents
+[arXiv 2025] HASARD: A Benchmark for Vision-Based Safe Reinforcement Learning in Embodied Agents
+[arXiv 2025] ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation using Multi-modal Large Language Models
+[arXiv 2026] Benchmarking Robots for Everyday Environments: From Lab Experiments to Real-World Operations</title></rect>
+<text x="636.4" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">4</text>
+<rect x="686.4444444444445" y="565" width="92.11111111111111" height="50" rx="6" fill="#C3D7F5"><title>[arXiv 2026] ReactHuman: A Physics-Grounded Benchmark for Human-Like Reactive Decision-Making in Embodied Multimodal LLMs
+[arXiv 2026] Benchmarking Jailbreak Guardrails for Embodied Agents
+[arXiv 2025] HASARD: A Benchmark for Vision-Based Safe Reinforcement Learning in Embodied Agents
+[arXiv 2024] Embodied Red Teaming for Auditing Robotic Foundation Models</title></rect>
+<text x="732.5" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">4</text>
+<rect x="782.5555555555555" y="565" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2026] NavSafe-$\infty$: Benchmarking Closed-Loop Driving Safety in Photorealistic Environments</title></rect>
 <text x="828.6" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="878.6666666666667" y="565" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="924.7" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="974.7777777777778" y="565" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1020.8" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1070.888888888889" y="565" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1116.9" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<text class="label" x="282" y="648.0" text-anchor="end">Typographic Injection</text>
+<rect x="1070.888888888889" y="565" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2026] NavSafe-$\infty$: Benchmarking Closed-Loop Driving Safety in Photorealistic Environments</title></rect>
+<text x="1116.9" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<text class="label" x="282" y="648.0" text-anchor="end">Environment Manipulation</text>
 <rect x="302.0" y="619" width="92.11111111111111" height="50" rx="6" fill="#CBDCF6"><title>[OpenReview 2026] VLA-Risk: Benchmarking Vision-Language-Action Models with Physical Robustness
-[arXiv 2024] Manipulation Facing Threats: Evaluating Physical Vulnerabilities in End-to-End Vision Language Action Models</title></rect>
-<text x="348.1" y="648.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
+[arXiv 2026] ExceptionDrive: A Planning-Oriented Counterfactual Corner-Case Benchmark for Autonomous Driving
+[arXiv 2025] Eva-VLA: Evaluating Vision-Language-Action Models&#x27; Robustness Under Real-World Physical Variations</title></rect>
+<text x="348.1" y="648.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">3</text>
 <rect x="398.1111111111111" y="619" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="444.2" y="648.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="494.22222222222223" y="619" width="92.11111111111111" height="50" rx="6" fill="#CBDCF6"><title>[OpenReview 2026] VLA-Risk: Benchmarking Vision-Language-Action Models with Physical Robustness
-[arXiv 2024] Manipulation Facing Threats: Evaluating Physical Vulnerabilities in End-to-End Vision Language Action Models</title></rect>
-<text x="540.3" y="648.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
+<rect x="494.22222222222223" y="619" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[OpenReview 2026] VLA-Risk: Benchmarking Vision-Language-Action Models with Physical Robustness</title></rect>
+<text x="540.3" y="648.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="590.3333333333334" y="619" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="636.4" y="648.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="686.4444444444445" y="619" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="732.5" y="648.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="686.4444444444445" y="619" width="92.11111111111111" height="50" rx="6" fill="#D4E2F6"><title>[arXiv 2026] RedVLA: Physical Red Teaming for Vision-Language-Action Models
+[arXiv 2026] ExceptionDrive: A Planning-Oriented Counterfactual Corner-Case Benchmark for Autonomous Driving</title></rect>
+<text x="732.5" y="648.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
 <rect x="782.5555555555555" y="619" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="828.6" y="648.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="878.6666666666667" y="619" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="924.7" y="648.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="878.6666666666667" y="619" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2026] RedVLA: Physical Red Teaming for Vision-Language-Action Models</title></rect>
+<text x="924.7" y="648.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="974.7777777777778" y="619" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1020.8" y="648.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1070.888888888889" y="619" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1116.9" y="648.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<text class="label" x="282" y="702.0" text-anchor="end">Digital Perturbation</text>
-<rect x="302.0" y="673" width="92.11111111111111" height="50" rx="6" fill="#CBDCF6"><title>[arXiv 2024] VLATest: Testing and Evaluating Vision-Language-Action Models for Robotic Manipulation
-[arXiv 2025] AttackVLA: Benchmarking Adversarial and Backdoor Attacks on Vision-Language-Action Models</title></rect>
-<text x="348.1" y="702.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
+<rect x="1070.888888888889" y="619" width="92.11111111111111" height="50" rx="6" fill="#D4E2F6"><title>[arXiv 2026] ExceptionDrive: A Planning-Oriented Counterfactual Corner-Case Benchmark for Autonomous Driving
+[arXiv 2026] Safety-Critical Scenarios Emerge from Initial Scenes</title></rect>
+<text x="1116.9" y="648.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
+<text class="label" x="282" y="702.0" text-anchor="end">Instruction Ambiguity</text>
+<rect x="302.0" y="673" width="92.11111111111111" height="50" rx="6" fill="#C3D7F5"><title>[arXiv 2024] Embodied Red Teaming for Auditing Robotic Foundation Models
+[arXiv 2026] Red-Teaming Vision-Language-Action Models via Quality Diversity Prompt Generation for Robust Robot Policies
+[arXiv 2026] The Yes-Man Syndrome: Benchmarking Abstention in Embodied Robotic Agents
+[arXiv 2026] ConflictVLA-Bench: Benchmarking Behavioral Responses of Vision-Language-Action Models to Premise Conflicts</title></rect>
+<text x="348.1" y="702.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">4</text>
 <rect x="398.1111111111111" y="673" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="444.2" y="702.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="494.22222222222223" y="673" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[arXiv 2025] AttackVLA: Benchmarking Adversarial and Backdoor Attacks on Vision-Language-Action Models</title></rect>
-<text x="540.3" y="702.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="494.22222222222223" y="673" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="540.3" y="702.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="590.3333333333334" y="673" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="636.4" y="702.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="686.4444444444445" y="673" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="732.5" y="702.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="782.5555555555555" y="673" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="828.6" y="702.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="686.4444444444445" y="673" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2024] Embodied Red Teaming for Auditing Robotic Foundation Models</title></rect>
+<text x="732.5" y="702.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="782.5555555555555" y="673" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2026] Same Trajectory, Contradictory Rewards (ROBORMBENCH): Paraphrase Fragility in Vision Language Reward Models</title></rect>
+<text x="828.6" y="702.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="878.6666666666667" y="673" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="924.7" y="702.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="974.7777777777778" y="673" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1020.8" y="702.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="1070.888888888889" y="673" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1116.9" y="702.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<text class="label" x="282" y="756.0" text-anchor="end">Jailbreak</text>
-<rect x="302.0" y="727" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[arXiv 2026] Benchmarking Jailbreak Guardrails for Embodied Agents</title></rect>
+<text class="label" x="282" y="756.0" text-anchor="end">Uncertainty Miscalibration</text>
+<rect x="302.0" y="727" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2025] Confidence Calibration in Vision-Language-Action Models</title></rect>
 <text x="348.1" y="756.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="398.1111111111111" y="727" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="444.2" y="756.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="494.22222222222223" y="727" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="540.3" y="756.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="590.3333333333334" y="727" width="92.11111111111111" height="50" rx="6" fill="#CBDCF6"><title>[arXiv 2025] SafeMind: Benchmarking and Mitigating Safety Risks in Embodied LLM Agents
-[arXiv 2026] Benchmarking Jailbreak Guardrails for Embodied Agents</title></rect>
-<text x="636.4" y="756.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
-<rect x="686.4444444444445" y="727" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[arXiv 2026] Benchmarking Jailbreak Guardrails for Embodied Agents</title></rect>
-<text x="732.5" y="756.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="782.5555555555555" y="727" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="828.6" y="756.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="590.3333333333334" y="727" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="636.4" y="756.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="686.4444444444445" y="727" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="732.5" y="756.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="782.5555555555555" y="727" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2025] Evaluating Uncertainty and Quality of Vision-Language-Action-enabled Robots</title></rect>
+<text x="828.6" y="756.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="878.6666666666667" y="727" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="924.7" y="756.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="974.7777777777778" y="727" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1020.8" y="756.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1070.888888888889" y="727" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1116.9" y="756.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<text class="label" x="282" y="810.0" text-anchor="end">Planning Error</text>
-<rect x="302.0" y="781" width="92.11111111111111" height="50" rx="6" fill="#CBDCF6"><title>[arXiv 2024] VLABench: A Large-Scale Benchmark for Language-Conditioned Robotics Manipulation with Long-Horizon Reasoning Tasks
-[arXiv 2025] A Framework for Benchmarking and Aligning Task-Planning Safety in LLM-Based Embodied Agents</title></rect>
+<rect x="1070.888888888889" y="727" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[IROS 2026 Workshop 2026] Marginal Calibration Does Not Compose: Hidden Dependence in Modular Robot Navigation</title></rect>
+<text x="1116.9" y="756.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<text class="label" x="282" y="810.0" text-anchor="end">Jailbreak</text>
+<rect x="302.0" y="781" width="92.11111111111111" height="50" rx="6" fill="#D4E2F6"><title>[arXiv 2026] Benchmarking Jailbreak Guardrails for Embodied Agents
+[arXiv 2026] RoboJailBench: Benchmarking Adversarial Attacks and Defenses in Embodied Robotic Agents</title></rect>
 <text x="348.1" y="810.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
-<rect x="398.1111111111111" y="781" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[arXiv 2025] A Framework for Benchmarking and Aligning Task-Planning Safety in LLM-Based Embodied Agents</title></rect>
-<text x="444.2" y="810.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="398.1111111111111" y="781" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="444.2" y="810.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="494.22222222222223" y="781" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="540.3" y="810.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="590.3333333333334" y="781" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="636.4" y="810.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="686.4444444444445" y="781" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="732.5" y="810.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="590.3333333333334" y="781" width="92.11111111111111" height="50" rx="6" fill="#CBDCF6"><title>[arXiv 2025] SafeMind: Benchmarking and Mitigating Safety Risks in Embodied LLM Agents
+[arXiv 2026] Benchmarking Jailbreak Guardrails for Embodied Agents
+[arXiv 2026] RoboJailBench: Benchmarking Adversarial Attacks and Defenses in Embodied Robotic Agents</title></rect>
+<text x="636.4" y="810.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">3</text>
+<rect x="686.4444444444445" y="781" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2026] Benchmarking Jailbreak Guardrails for Embodied Agents</title></rect>
+<text x="732.5" y="810.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="782.5555555555555" y="781" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="828.6" y="810.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="878.6666666666667" y="781" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
@@ -308,18 +379,18 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="1020.8" y="810.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="1070.888888888889" y="781" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1116.9" y="810.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<text class="label" x="282" y="864.0" text-anchor="end">Unsafe Policy Behavior</text>
-<rect x="302.0" y="835" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[arXiv 2026] Benchmarking Jailbreak Guardrails for Embodied Agents</title></rect>
-<text x="348.1" y="864.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="398.1111111111111" y="835" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[arXiv 2026] ReactHuman: A Physics-Grounded Benchmark for Human-Like Reactive Decision-Making in Embodied Multimodal LLMs</title></rect>
-<text x="444.2" y="864.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="494.22222222222223" y="835" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="540.3" y="864.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="590.3333333333334" y="835" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[arXiv 2026] Benchmarking Jailbreak Guardrails for Embodied Agents</title></rect>
+<text class="label" x="282" y="864.0" text-anchor="end">Sensitive Data Exposure</text>
+<rect x="302.0" y="835" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="348.1" y="864.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="398.1111111111111" y="835" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="444.2" y="864.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="494.22222222222223" y="835" width="92.11111111111111" height="50" rx="6" fill="#D4E2F6"><title>[arXiv 2025] Privacy Risks of Robot Vision: A User Study on Image Modalities and Resolution
+[arXiv 2026] How Far Are VLMs from Privacy Awareness in the Physical World? An Empirical Study</title></rect>
+<text x="540.3" y="864.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
+<rect x="590.3333333333334" y="835" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2026] How Far Are VLMs from Privacy Awareness in the Physical World? An Empirical Study</title></rect>
 <text x="636.4" y="864.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="686.4444444444445" y="835" width="92.11111111111111" height="50" rx="6" fill="#CBDCF6"><title>[arXiv 2026] ReactHuman: A Physics-Grounded Benchmark for Human-Like Reactive Decision-Making in Embodied Multimodal LLMs
-[arXiv 2026] Benchmarking Jailbreak Guardrails for Embodied Agents</title></rect>
-<text x="732.5" y="864.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
+<rect x="686.4444444444445" y="835" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="732.5" y="864.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="782.5555555555555" y="835" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="828.6" y="864.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="878.6666666666667" y="835" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
@@ -328,13 +399,15 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="1020.8" y="864.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="1070.888888888889" y="835" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1116.9" y="864.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<text class="label" x="282" y="918.0" text-anchor="end">Sensor Spoofing</text>
-<rect x="302.0" y="889" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[OpenReview 2026] VLA-Risk: Benchmarking Vision-Language-Action Models with Physical Robustness</title></rect>
-<text x="348.1" y="918.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<text class="label" x="282" y="918.0" text-anchor="end">Typographic Injection</text>
+<rect x="302.0" y="889" width="92.11111111111111" height="50" rx="6" fill="#D4E2F6"><title>[OpenReview 2026] VLA-Risk: Benchmarking Vision-Language-Action Models with Physical Robustness
+[arXiv 2024] Manipulation Facing Threats: Evaluating Physical Vulnerabilities in End-to-End Vision Language Action Models</title></rect>
+<text x="348.1" y="918.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
 <rect x="398.1111111111111" y="889" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="444.2" y="918.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="494.22222222222223" y="889" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[OpenReview 2026] VLA-Risk: Benchmarking Vision-Language-Action Models with Physical Robustness</title></rect>
-<text x="540.3" y="918.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="494.22222222222223" y="889" width="92.11111111111111" height="50" rx="6" fill="#D4E2F6"><title>[OpenReview 2026] VLA-Risk: Benchmarking Vision-Language-Action Models with Physical Robustness
+[arXiv 2024] Manipulation Facing Threats: Evaluating Physical Vulnerabilities in End-to-End Vision Language Action Models</title></rect>
+<text x="540.3" y="918.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
 <rect x="590.3333333333334" y="889" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="636.4" y="918.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="686.4444444444445" y="889" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
@@ -347,12 +420,13 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="1020.8" y="918.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="1070.888888888889" y="889" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1116.9" y="918.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<text class="label" x="282" y="972.0" text-anchor="end">Backdoor</text>
-<rect x="302.0" y="943" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[arXiv 2025] AttackVLA: Benchmarking Adversarial and Backdoor Attacks on Vision-Language-Action Models</title></rect>
-<text x="348.1" y="972.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<text class="label" x="282" y="972.0" text-anchor="end">Digital Perturbation</text>
+<rect x="302.0" y="943" width="92.11111111111111" height="50" rx="6" fill="#D4E2F6"><title>[arXiv 2024] VLATest: Testing and Evaluating Vision-Language-Action Models for Robotic Manipulation
+[arXiv 2025] AttackVLA: Benchmarking Adversarial and Backdoor Attacks on Vision-Language-Action Models</title></rect>
+<text x="348.1" y="972.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
 <rect x="398.1111111111111" y="943" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="444.2" y="972.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="494.22222222222223" y="943" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[arXiv 2025] AttackVLA: Benchmarking Adversarial and Backdoor Attacks on Vision-Language-Action Models</title></rect>
+<rect x="494.22222222222223" y="943" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2025] AttackVLA: Benchmarking Adversarial and Backdoor Attacks on Vision-Language-Action Models</title></rect>
 <text x="540.3" y="972.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="590.3333333333334" y="943" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="636.4" y="972.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
@@ -366,31 +440,31 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="1020.8" y="972.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="1070.888888888889" y="943" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1116.9" y="972.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<text class="label" x="282" y="1026.0" text-anchor="end">Adversarial Object</text>
-<rect x="302.0" y="997" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="348.1" y="1026.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text class="label" x="282" y="1026.0" text-anchor="end">Sensor Spoofing</text>
+<rect x="302.0" y="997" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[OpenReview 2026] VLA-Risk: Benchmarking Vision-Language-Action Models with Physical Robustness</title></rect>
+<text x="348.1" y="1026.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="398.1111111111111" y="997" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="444.2" y="1026.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="494.22222222222223" y="997" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="540.3" y="1026.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="494.22222222222223" y="997" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[OpenReview 2026] VLA-Risk: Benchmarking Vision-Language-Action Models with Physical Robustness</title></rect>
+<text x="540.3" y="1026.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="590.3333333333334" y="997" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="636.4" y="1026.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="686.4444444444445" y="997" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[arXiv 2026] RedVLA: Physical Red Teaming for Vision-Language-Action Models</title></rect>
-<text x="732.5" y="1026.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="686.4444444444445" y="997" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="732.5" y="1026.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="782.5555555555555" y="997" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="828.6" y="1026.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="878.6666666666667" y="997" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[arXiv 2026] RedVLA: Physical Red Teaming for Vision-Language-Action Models</title></rect>
-<text x="924.7" y="1026.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="878.6666666666667" y="997" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="924.7" y="1026.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="974.7777777777778" y="997" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1020.8" y="1026.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="1070.888888888889" y="997" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1116.9" y="1026.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<text class="label" x="282" y="1080.0" text-anchor="end">Adversarial Patch</text>
-<rect x="302.0" y="1051" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[arXiv 2024] Manipulation Facing Threats: Evaluating Physical Vulnerabilities in End-to-End Vision Language Action Models</title></rect>
+<text class="label" x="282" y="1080.0" text-anchor="end">Backdoor</text>
+<rect x="302.0" y="1051" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2025] AttackVLA: Benchmarking Adversarial and Backdoor Attacks on Vision-Language-Action Models</title></rect>
 <text x="348.1" y="1080.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="398.1111111111111" y="1051" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="444.2" y="1080.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="494.22222222222223" y="1051" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[arXiv 2024] Manipulation Facing Threats: Evaluating Physical Vulnerabilities in End-to-End Vision Language Action Models</title></rect>
+<rect x="494.22222222222223" y="1051" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2025] AttackVLA: Benchmarking Adversarial and Backdoor Attacks on Vision-Language-Action Models</title></rect>
 <text x="540.3" y="1080.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="590.3333333333334" y="1051" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="636.4" y="1080.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
@@ -404,42 +478,61 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="1020.8" y="1080.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="1070.888888888889" y="1051" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1116.9" y="1080.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<text class="label" x="282" y="1134.0" text-anchor="end">Sensitive Data Exposure</text>
+<text class="label" x="282" y="1134.0" text-anchor="end">Adversarial Object</text>
 <rect x="302.0" y="1105" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="348.1" y="1134.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="398.1111111111111" y="1105" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="444.2" y="1134.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="494.22222222222223" y="1105" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[arXiv 2025] Privacy Risks of Robot Vision: A User Study on Image Modalities and Resolution</title></rect>
-<text x="540.3" y="1134.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="494.22222222222223" y="1105" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="540.3" y="1134.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="590.3333333333334" y="1105" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="636.4" y="1134.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="686.4444444444445" y="1105" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="732.5" y="1134.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="686.4444444444445" y="1105" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2026] RedVLA: Physical Red Teaming for Vision-Language-Action Models</title></rect>
+<text x="732.5" y="1134.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="782.5555555555555" y="1105" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="828.6" y="1134.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="878.6666666666667" y="1105" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="924.7" y="1134.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="878.6666666666667" y="1105" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2026] RedVLA: Physical Red Teaming for Vision-Language-Action Models</title></rect>
+<text x="924.7" y="1134.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="974.7777777777778" y="1105" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1020.8" y="1134.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="1070.888888888889" y="1105" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1116.9" y="1134.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<text class="label" x="282" y="1188.0" text-anchor="end">Instruction Ambiguity</text>
-<rect x="302.0" y="1159" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="348.1" y="1188.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text class="label" x="282" y="1188.0" text-anchor="end">Adversarial Patch</text>
+<rect x="302.0" y="1159" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2024] Manipulation Facing Threats: Evaluating Physical Vulnerabilities in End-to-End Vision Language Action Models</title></rect>
+<text x="348.1" y="1188.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="398.1111111111111" y="1159" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="444.2" y="1188.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="494.22222222222223" y="1159" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="540.3" y="1188.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="494.22222222222223" y="1159" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2024] Manipulation Facing Threats: Evaluating Physical Vulnerabilities in End-to-End Vision Language Action Models</title></rect>
+<text x="540.3" y="1188.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="590.3333333333334" y="1159" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="636.4" y="1188.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="686.4444444444445" y="1159" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="732.5" y="1188.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="782.5555555555555" y="1159" width="92.11111111111111" height="50" rx="6" fill="#D9E5F6"><title>[arXiv 2026] Same Trajectory, Contradictory Rewards (ROBORMBENCH): Paraphrase Fragility in Vision Language Reward Models</title></rect>
-<text x="828.6" y="1188.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="782.5555555555555" y="1159" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="828.6" y="1188.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="878.6666666666667" y="1159" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="924.7" y="1188.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="974.7777777777778" y="1159" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1020.8" y="1188.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="1070.888888888889" y="1159" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1116.9" y="1188.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<text class="label" x="282" y="1242.0" text-anchor="end">Multi Agent Propagation</text>
+<rect x="302.0" y="1213" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="348.1" y="1242.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="398.1111111111111" y="1213" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="444.2" y="1242.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="494.22222222222223" y="1213" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="540.3" y="1242.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="590.3333333333334" y="1213" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2026] EmbodiedGovBench: A Benchmark for Governance, Recovery, and Upgrade Safety in Embodied Agent Systems</title></rect>
+<text x="636.4" y="1242.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="686.4444444444445" y="1213" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="732.5" y="1242.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="782.5555555555555" y="1213" width="92.11111111111111" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2026] EmbodiedGovBench: A Benchmark for Governance, Recovery, and Upgrade Safety in Embodied Agent Systems</title></rect>
+<text x="828.6" y="1242.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="878.6666666666667" y="1213" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="924.7" y="1242.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="974.7777777777778" y="1213" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="1020.8" y="1242.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="1070.888888888889" y="1213" width="92.11111111111111" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="1116.9" y="1242.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 </svg>

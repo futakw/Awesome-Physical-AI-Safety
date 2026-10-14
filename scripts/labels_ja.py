@@ -18,6 +18,12 @@ SECTIONS_JA = {
 }
 
 SUBSECTIONS_JA = {
+    "Safety Requirements and Assurance": "安全要件と安全保証",
+    "Governance and Deployment Assurance": "ガバナンスと実運用の保証",
+    "World Model Safety and Security": "World Modelの安全性とセキュリティ",
+    "Privacy, Fairness, and Human-Robot Trust": "プライバシー・公平性・人とロボットの信頼",
+    "Human-Robot Privacy and Trust": "人とロボットのプライバシー・信頼",
+    "Human-Robot Trust and Fairness": "人とロボットの信頼・公平性",
     "Action Shielding, Fail-Safes, and Recovery": "行動シールディング・フェイルセーフ・リカバリ",
     "Action and Spatial Generalization": "行動・空間汎化",
     "Active Perception and Recovery": "能動知覚とリカバリ",

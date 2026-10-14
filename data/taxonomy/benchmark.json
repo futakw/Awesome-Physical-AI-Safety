@@ -1,7 +1,38 @@
 {
-  "evaluates": ["ood", "adversarial-attack", "backdoor", "physical-safety", "semantic-safety", "task-reliability"],
-  "shift_types": ["object", "background", "instruction", "camera", "lighting", "dynamics", "action", "state", "none"],
-  "environments": ["simulation", "real-robot", "mixed", "unspecified"],
-  "availability": [true, false, null],
-  "curation_statuses": ["paper-verified", "catalog-derived", "reference-only"]
+  "evaluates": [
+    "ood",
+    "adversarial-attack",
+    "backdoor",
+    "physical-safety",
+    "semantic-safety",
+    "task-reliability"
+  ],
+  "shift_types": [
+    "object",
+    "background",
+    "instruction",
+    "camera",
+    "lighting",
+    "dynamics",
+    "action",
+    "state",
+    "none"
+  ],
+  "environments": [
+    "simulation",
+    "real-robot",
+    "mixed",
+    "unspecified"
+  ],
+  "availability": [
+    true,
+    false,
+    null
+  ],
+  "curation_statuses": [
+    "paper-verified",
+    "catalog-derived",
+    "reference-only",
+    "abstract-verified"
+  ]
 }

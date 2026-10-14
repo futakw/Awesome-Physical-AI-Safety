@@ -129,7 +129,7 @@ def validate_threat_model(errors: list[str], label: str, threat_model: object) -
         if mechanisms == ["multiple"]:
             pass
         else:
-            validate_string_list(errors, label, "coverage.mechanisms", mechanisms, MECHANISMS, empty_ok=kind == "survey")
+            validate_string_list(errors, label, "coverage.mechanisms", mechanisms, MECHANISMS, empty_ok=True)
         validate_string_list(errors, label, "coverage.surfaces", coverage.get("surfaces"), SURFACES)
         validate_string_list(errors, label, "coverage.consequences", coverage.get("consequences"), CONSEQUENCES, empty_ok=True)
         return

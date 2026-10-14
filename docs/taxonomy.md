@@ -260,3 +260,5 @@ Generic VLM, LLM, robotics, or capability papers should not be included unless t
 ## Classification Rule
 
 Assign each paper one catalog record and one primary-contribution section. Use `risks` and `tags` for cross-cutting properties; generated thematic tables may display the same record without creating a duplicate entry.
+
+Evaluation records that study human perceptions, trust, or fairness without establishing a specific threat or failure mechanism may use an empty `coverage.mechanisms` list. This leaves the mechanism unasserted rather than inventing an attack or causal failure path.

@@ -15,3 +15,5 @@ Within `evaluation`, `models` stores explicitly named evaluated target models or
 For `survey` and `evaluation` threat models, `coverage` contains `lifecycles`, `mechanisms`, `surfaces`, and `consequences`. This keeps benchmark threat/consequence aggregation aligned with concrete threat-model records.
 
 The optional extension contract is documented in [`paper-extensions.schema.json`](../data/schema/paper-extensions.schema.json), while `scripts/validate_catalog.py` enforces the controlled vocabularies.
+
+`abstract-verified` is also supported for defense and benchmark extensions when the primary abstract establishes the method or evaluation scope but the full paper has not been audited. Unmentioned metrics, platforms, models, and artifact availability are left empty or null rather than inferred.
