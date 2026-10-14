@@ -51,9 +51,10 @@ python3 scripts/build_readme.py
 python3 scripts/build_readme.py --check
 python3 scripts/build_readme_ja.py
 python3 scripts/build_readme_ja.py --check
-python3 scripts/build_doc_pages.py
 python3 scripts/build_visualizations.py
 python3 scripts/build_visualizations.py --check
+python3 scripts/build_doc_pages.py
+python3 scripts/build_doc_pages.py --check
 python3 scripts/build_explorer.py
 git diff --check
 ```

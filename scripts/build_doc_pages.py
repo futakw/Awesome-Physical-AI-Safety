@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Build self-contained rendered views of Markdown docs for the explorer."""
+import argparse
 import json
 from pathlib import Path
 
@@ -25,15 +26,37 @@ SWITCHER_TARGETS = {
     'taxonomy.ja.md': ('taxonomy.md', 'taxonomy.html'),
 }
 
-for source, output, title in PAGES:
-    text = source.read_text(encoding='utf-8')
-    if source.parent == ROOT:
-        # The rendered page lives under docs/, so adjust repository-root links.
-        text = text.replace('](assets/', '](../assets/').replace('](docs/', '](../docs/')
-        for filename in ('LICENSE', 'LICENSES.md', 'CONTRIBUTING.md', 'CONTRIBUTING.ja.md', 'CITATION.cff'):
-            text = text.replace(f']({filename})', f'](../{filename})')
-    md_target, html_target = SWITCHER_TARGETS[source.name]
-    text = text.replace(f']({md_target})', f']({html_target})')
-    lang = 'ja' if source.name.endswith('.ja.md') else 'en'
-    output.write_text(TEMPLATE.format(title=title, lang=lang, source=json.dumps(text)), encoding='utf-8')
-    print(f'Generated {output.name}')
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--check', action='store_true', help='Fail if rendered documentation is stale')
+    args = parser.parse_args()
+    stale = []
+    for source, output, title in PAGES:
+        text = source.read_text(encoding='utf-8')
+        if source.parent == ROOT:
+            # GitHub Pages publishes docs/ only; use the mirrored SVGs there.
+            text = text.replace('](assets/visualizations/', '](visualizations/').replace('](docs/', '](../docs/')
+            for filename in ('LICENSE', 'LICENSES.md', 'CONTRIBUTING.md', 'CONTRIBUTING.ja.md', 'CITATION.cff'):
+                text = text.replace(f']({filename})', f'](../{filename})')
+        md_target, html_target = SWITCHER_TARGETS[source.name]
+        text = text.replace(f']({md_target})', f']({html_target})')
+        lang = 'ja' if source.name.endswith('.ja.md') else 'en'
+        rendered = TEMPLATE.format(title=title, lang=lang, source=json.dumps(text))
+        if args.check:
+            if not output.exists() or output.read_text(encoding='utf-8') != rendered:
+                stale.append(output.relative_to(ROOT))
+        else:
+            output.write_text(rendered, encoding='utf-8')
+            print(f'Generated {output.name}')
+    if stale:
+        print('Generated documentation is stale:')
+        for path in stale:
+            print(f'- {path}')
+        return 1
+    if args.check:
+        print(f'Verified {len(PAGES)} rendered documentation pages')
+    return 0
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())

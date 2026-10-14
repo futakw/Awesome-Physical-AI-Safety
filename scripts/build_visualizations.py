@@ -14,6 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data" / "papers.json"
 OUTPUT_DIR = ROOT / "assets" / "visualizations"
+PAGES_OUTPUT_DIR = ROOT / "docs" / "visualizations"
 
 SECTION_ORDER = [
     "surveys", "ood-generalization", "training-attacks", "inference-attacks",
@@ -328,11 +329,13 @@ def main() -> int:
     rendered = outputs(papers)
     stale = []
     for path, content in rendered.items():
-        if args.check:
-            if not path.exists() or path.read_text(encoding="utf-8") != content:
-                stale.append(path.relative_to(ROOT))
-        else:
-            path.write_text(content, encoding="utf-8")
+        for target in (path, PAGES_OUTPUT_DIR / path.name):
+            if args.check:
+                if not target.exists() or target.read_text(encoding="utf-8") != content:
+                    stale.append(target.relative_to(ROOT))
+            else:
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_text(content, encoding="utf-8")
     if stale:
         print("Generated visualizations are stale:")
         for path in stale:
