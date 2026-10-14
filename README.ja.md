@@ -26,8 +26,8 @@
 VLA・ロボット・自動運転・身体性AIエージェントを対象に、**Physical AIがどのように失敗するか**、**各研究がどのリスクを評価しているか**を整理するLLM支援の研究カタログです。
 
 <p align="center">
-  <a href="assets/visualizations/physical-ai-safety-overview.webp">
-    <img src="assets/visualizations/physical-ai-safety-overview.webp" alt="Physical AI Safetyの構造化された脅威・失敗taxonomyと評価されたリスクアウトカムの概観" width="750">
+  <a href="assets/visualizations/physical-ai-safety-overview.png">
+    <img src="assets/visualizations/physical-ai-safety-overview.png" alt="Physical AI Safetyの構造化された脅威・失敗taxonomyと評価されたリスクアウトカムの概観" width="750">
   </a>
 </p>
 
