@@ -21,12 +21,17 @@
 
 ## About This Catalog
 
-### 💡 Core Organizing Principle
+This LLM-assisted catalog helps researchers explore **how physical AI systems fail** and **which risk outcomes are evaluated** across VLAs, robots, autonomous systems, and embodied agents.
 
-- **📏 Measured outcomes:** Risk labels record what a paper measures—such as attack success, task success, collision rate, or constraint violations—not harms it only discusses.
-- **🧩 Threat & failure mechanisms:** Each record traces lifecycle → mechanism → surface → target → consequence.
-- **🔎 Cross-map views:** Trace threat mechanisms to entry surfaces and measured outcomes, with the contributing papers one click away.
-- **🔄 Cross-system transfer:** The catalog connects VLA research with relevant robot, autonomous-system, embodied-agent, and LLM/VLM safety work.
+<p align="center">
+  <a href="assets/visualizations/physical-ai-safety-overview.webp">
+    <img src="assets/visualizations/physical-ai-safety-overview.webp" alt="Awesome Physical AI Safety overview: structured threat and failure taxonomy, and evaluated risk outcomes" width="750">
+  </a>
+</p>
+
+The five-part threat taxonomy describes studied failure paths; **Evaluated Risk Outcomes** are classified separately using the metrics reported in each paper. See the [taxonomy and labeling criteria](docs/taxonomy.md) for details.
+
+*Curation note:* Taxonomy and workflow design are author-maintained, while paper collection and classification are updated through an LLM-assisted process without individual human review before each update. Metadata may contain errors; please verify important details against the original papers. [Corrections and contributions](CONTRIBUTING.md) are welcome.
 
 ## 📚 Citing
 

@@ -36,6 +36,7 @@ def main() -> int:
         if source.parent == ROOT:
             # GitHub Pages publishes docs/ only; use the mirrored SVGs there.
             text = text.replace('](assets/visualizations/', '](visualizations/').replace('](docs/', '](../docs/')
+            text = text.replace('="assets/visualizations/', '="visualizations/')
             for filename in ('LICENSE', 'LICENSES.md', 'CONTRIBUTING.md', 'CONTRIBUTING.ja.md', 'CITATION.cff'):
                 text = text.replace(f']({filename})', f'](../{filename})')
         md_target, html_target = SWITCHER_TARGETS[source.name]
