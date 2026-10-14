@@ -74,10 +74,10 @@ VLA・ロボット・自動運転・身体性AIエージェントを対象に、
 
 リスクラベルは、各論文で評価されたアウトカムを要約します。
 
-- **Task:** タスクまたは経路の成功。
-- **Physical:** 衝突、損傷、安全でない動作。
-- **Ethics:** 有害な指示への準拠、方針違反、格差。
-- **Security/Privacy:** 攻撃成功、乗っ取り、情報漏洩。
+- ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat): タスクまたは経路の成功。
+- ![Physical](https://img.shields.io/badge/-Physical-B88A24?style=flat): 衝突、損傷、安全でない動作。
+- ![Ethics](https://img.shields.io/badge/-Ethics-9873D4?style=flat): 有害な指示への準拠、方針違反、格差。
+- ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-D96F8A?style=flat): 攻撃成功、乗っ取り、情報漏洩。
 
 **—** は、報告された評価指標から対応するリスクアウトカムが特定されないことを示します。
 
@@ -85,9 +85,7 @@ VLA・ロボット・自動運転・身体性AIエージェントを対象に、
 
 各エントリは、構造化された脅威・失敗taxonomyを2行で要約します。
 
-**Lifecycle（ライフサイクル）** · **Surface（サーフェス）**
-
-**Mechanism（メカニズム）** → **Target（ターゲット）** → **Consequence（帰結）**
+![ライフサイクル](https://img.shields.io/badge/-%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B5%E3%82%A4%E3%82%AF%E3%83%AB-6F9FEF?style=flat) · ![サーフェス](https://img.shields.io/badge/-%E3%82%B5%E3%83%BC%E3%83%95%E3%82%A7%E3%82%B9-3FA89B?style=flat)<br>![メカニズム](https://img.shields.io/badge/-%E3%83%A1%E3%82%AB%E3%83%8B%E3%82%BA%E3%83%A0-D47A5D?style=flat) &nbsp;→&nbsp; ![ターゲット](https://img.shields.io/badge/-%E3%82%BF%E3%83%BC%E3%82%B2%E3%83%83%E3%83%88-9873D4?style=flat) &nbsp;→&nbsp; ![帰結](https://img.shields.io/badge/-%E5%B8%B0%E7%B5%90-D96F8A?style=flat)
 
 `+N` は、`data/papers.json` に保存された追加の値の数を示します。
 

@@ -72,10 +72,10 @@ Each paper is organized by its primary contribution, with two complementary meta
 
 Risk labels summarize the outcomes evaluated in each paper:
 
-- **Task:** Task or route success.
-- **Physical:** Collisions, damage, or unsafe motion.
-- **Ethics:** Harmful compliance, policy violations, or disparities.
-- **Security/Privacy:** Attack success, hijacking, or information leakage.
+- ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat): Task or route success.
+- ![Physical](https://img.shields.io/badge/-Physical-B88A24?style=flat): Collisions, damage, or unsafe motion.
+- ![Ethics](https://img.shields.io/badge/-Ethics-9873D4?style=flat): Harmful compliance, policy violations, or disparities.
+- ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-D96F8A?style=flat): Attack success, hijacking, or information leakage.
 
 **—** indicates that no corresponding risk outcome is identified from the reported metrics.
 
@@ -83,9 +83,7 @@ Risk labels summarize the outcomes evaluated in each paper:
 
 Each entry summarizes the structured threat and failure taxonomy in two lines:
 
-**Lifecycle** · **Surface**
-
-**Mechanism** → **Target** → **Consequence**
+![Lifecycle](https://img.shields.io/badge/-Lifecycle-6F9FEF?style=flat) · ![Surface](https://img.shields.io/badge/-Surface-3FA89B?style=flat)<br>![Mechanism](https://img.shields.io/badge/-Mechanism-D47A5D?style=flat) &nbsp;→&nbsp; ![Target](https://img.shields.io/badge/-Target-9873D4?style=flat) &nbsp;→&nbsp; ![Consequence](https://img.shields.io/badge/-Consequence-D96F8A?style=flat)
 
 A `+N` suffix indicates additional values stored in `data/papers.json`.
 
