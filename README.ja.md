@@ -33,7 +33,17 @@ VLA・ロボット・自動運転・身体性AIエージェントを対象に、
 
 5軸の脅威・失敗taxonomyで研究が扱う失敗経路を記述し、**Evaluated Risk Outcomes** は論文が報告した評価指標に基づいて別途分類します。定義と付与基準は[Taxonomyの詳細](docs/taxonomy.ja.md)をご覧ください。
 
-*キュレーションについて:* taxonomyと更新手法は著者が設計し、論文収集・メタデータ抽出・分類はLLM支援のワークフローで更新しています。更新時に個々の論文を人間が事前レビューする運用ではないため、分類に誤りが含まれる可能性があります。重要な情報は元論文をご確認ください。[修正・追加の提案](CONTRIBUTING.ja.md)を歓迎します。
+### スコープ
+
+このカタログは、**Foundation Modelに基づくPhysical AI**の安全性と信頼性を中心に、**Perception → Cognition → Planning → Action**の流れで捉えます。この流れは概念上の枠組みであり、独立したモジュール構成を要求しません。VLAやLLM/VLM駆動の身体性AIを対象とし、人との協働・複数ロボット・自動運転も含みます。Physical AIとの明確な関連を持たない汎用LLM/VLM研究はスコープ外です。
+
+### キュレーション方針
+
+taxonomyと更新手法は著者が設計し、論文収集・メタデータ抽出・分類はLLM支援のワークフローで更新しています。更新時に個々の論文を人間が事前レビューする運用ではないため、分類に誤りが含まれる可能性があります。重要な情報は元論文をご確認ください。[修正・追加の提案](CONTRIBUTING.ja.md)を歓迎します。
+
+各論文は1つのカタログレコードと1つの主たる貢献セクションを持ちます。横断的なテーブルは同じレコードを別の切り口で表示した生成ビューであり、別エントリではありません。
+
+Defense・Evaluation・Benchmarkの拡張メタデータについては[docs/metadata-schema.md](docs/metadata-schema.md)（英語）を参照してください。
 
 ## 📚 引用
 
@@ -1032,14 +1042,6 @@ VLA・ロボット・自動運転・身体性AIエージェントを対象に、
 | **[Auditing Demographic Bias in Facial Landmark Detection for Fair Human-Robot Interaction](https://arxiv.org/abs/2604.06961)**<br><sub>Parte et al.</sub><br><sub>主掲載: <a href="#benchmarks-human-robot-trust-and-fairness">ベンチマークと評価 / 人とロボットの信頼・公平性</a></sub> | arXiv 2026 | ![倫理・社会](https://img.shields.io/badge/-%E5%80%AB%E7%90%86%E3%83%BB%E7%A4%BE%E4%BC%9A-9873D4?style=flat) | ![推論](https://img.shields.io/badge/-%E6%8E%A8%E8%AB%96-6F9FEF?style=flat) ![視覚](https://img.shields.io/badge/-%E8%A6%96%E8%A6%9A-D47A5D?style=flat) <br> ![評価カバレッジ](https://img.shields.io/badge/-%E8%A9%95%E4%BE%A1%E3%82%AB%E3%83%90%E3%83%AC%E3%83%83%E3%82%B8-2F7F9B?style=flat) |
 | **[LLM-Driven Robots Risk Enacting Discrimination, Violence, and Unlawful Actions](https://doi.org/10.1007/s12369-025-01301-x)** [![GitHub stars](https://img.shields.io/github/stars/rumaisa-azeem/llm-robots-discrimination-safety?style=social)](https://github.com/rumaisa-azeem/llm-robots-discrimination-safety)<br><sub>Hundt et al.</sub><br><sub>主掲載: <a href="#benchmarks-human-robot-trust-and-fairness">ベンチマークと評価 / 人とロボットの信頼・公平性</a></sub> | International Journal of Social Robotics 2025 | ![倫理・社会](https://img.shields.io/badge/-%E5%80%AB%E7%90%86%E3%83%BB%E7%A4%BE%E4%BC%9A-9873D4?style=flat) | ![推論](https://img.shields.io/badge/-%E6%8E%A8%E8%AB%96-6F9FEF?style=flat) ![ユーザー指示](https://img.shields.io/badge/-%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E6%8C%87%E7%A4%BA-D47A5D?style=flat) <br> ![評価カバレッジ](https://img.shields.io/badge/-%E8%A9%95%E4%BE%A1%E3%82%AB%E3%83%90%E3%83%AC%E3%83%83%E3%82%B8-2F7F9B?style=flat) |
 | **[Robots Enact Malignant Stereotypes](https://doi.org/10.1145/3531146.3533138)**<br><sub>Hundt et al.</sub><br><sub>主掲載: <a href="#benchmarks-human-robot-trust-and-fairness">ベンチマークと評価 / 人とロボットの信頼・公平性</a></sub> | 2022 ACM Conference on Fairness Accountability and Transparency 2022 | ![倫理・社会](https://img.shields.io/badge/-%E5%80%AB%E7%90%86%E3%83%BB%E7%A4%BE%E4%BC%9A-9873D4?style=flat) | ![推論](https://img.shields.io/badge/-%E6%8E%A8%E8%AB%96-6F9FEF?style=flat) ![ユーザー指示 + 視覚](https://img.shields.io/badge/-%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E6%8C%87%E7%A4%BA_%2B_%E8%A6%96%E8%A6%9A-D47A5D?style=flat) <br> ![評価カバレッジ](https://img.shields.io/badge/-%E8%A9%95%E4%BE%A1%E3%82%AB%E3%83%90%E3%83%AC%E3%83%83%E3%82%B8-2F7F9B?style=flat) |
-
-## スコープとキュレーション方針
-
-このカタログは、physical AI全般における安全性・セキュリティ・堅牢性・プライバシー・倫理的/社会的アウトカム・信頼できる実運用を対象とします。VLAを主軸としつつ、身体化された挙動・物理的インタラクション・実運用関連の失敗を扱う限りにおいて、ロボットポリシー、自動運転システム、LLM/VLM駆動の身体性AIエージェントも対象に含みます。physical AIとの明確な関連を持たない汎用LLM/VLM研究はスコープ外です。
-
-各論文は1つのカタログレコードと1つの主たる貢献セクションを持ちます。横断的なテーブルは同じレコードを別の切り口で表示した生成ビューであり、別エントリではありません。
-
-Defense・Evaluation・Benchmarkの拡張メタデータについては[docs/metadata-schema.md](docs/metadata-schema.md)（英語）を参照してください。
 
 ## コントリビューション
 

@@ -31,7 +31,17 @@ This LLM-assisted catalog helps researchers explore **how physical AI systems fa
 
 The five-part threat taxonomy describes studied failure paths; **Evaluated Risk Outcomes** are classified separately using the metrics reported in each paper. See the [taxonomy and labeling criteria](docs/taxonomy.md) for details.
 
-*Curation note:* Taxonomy and workflow design are author-maintained, while paper collection and classification are updated through an LLM-assisted process without individual human review before each update. Metadata may contain errors; please verify important details against the original papers. [Corrections and contributions](CONTRIBUTING.md) are welcome.
+### Scope
+
+This catalog focuses on the safety and trustworthiness of **foundation model–based Physical AI**, viewed through **Perception → Cognition → Planning → Action**. This is a conceptual pipeline, not a required modular architecture, and includes VLA models and LLM/VLM-driven embodied systems in human–robot interaction, multi-robot collaboration, and autonomous driving. General-purpose LLM/VLM work without a clear physical-AI connection is out of scope.
+
+### Curation Policy
+
+Taxonomy and workflow design are author-maintained, while paper collection and classification are updated through an LLM-assisted process without individual human review before each update. Metadata may contain errors; please verify important details against the original papers. [Corrections and contributions](CONTRIBUTING.md) are welcome.
+
+Each paper has one catalog record and one primary-contribution section. Cross-cutting tables are generated views of those same records, not separate entries.
+
+The optional Defense, Evaluation, and Benchmark metadata extensions are documented in [docs/metadata-schema.md](docs/metadata-schema.md).
 
 ## 📚 Citing
 
@@ -1030,14 +1040,6 @@ This thematic view reuses 21 catalog records labeled `ethical-societal`. It does
 | **[Auditing Demographic Bias in Facial Landmark Detection for Fair Human-Robot Interaction](https://arxiv.org/abs/2604.06961)**<br><sub>Parte et al.</sub><br><sub>Primary: <a href="#benchmarks-human-robot-trust-and-fairness">Benchmarks and Evaluation / Human-Robot Trust and Fairness</a></sub> | arXiv 2026 | ![Ethics](https://img.shields.io/badge/-Ethics-9873D4?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Visual Perception](https://img.shields.io/badge/-Visual_Perception-D47A5D?style=flat) <br> ![Evaluation coverage](https://img.shields.io/badge/-Evaluation_coverage-2F7F9B?style=flat) |
 | **[LLM-Driven Robots Risk Enacting Discrimination, Violence, and Unlawful Actions](https://doi.org/10.1007/s12369-025-01301-x)** [![GitHub stars](https://img.shields.io/github/stars/rumaisa-azeem/llm-robots-discrimination-safety?style=social)](https://github.com/rumaisa-azeem/llm-robots-discrimination-safety)<br><sub>Hundt et al.</sub><br><sub>Primary: <a href="#benchmarks-human-robot-trust-and-fairness">Benchmarks and Evaluation / Human-Robot Trust and Fairness</a></sub> | International Journal of Social Robotics 2025 | ![Ethics](https://img.shields.io/badge/-Ethics-9873D4?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![User Instruction](https://img.shields.io/badge/-User_Instruction-D47A5D?style=flat) <br> ![Evaluation coverage](https://img.shields.io/badge/-Evaluation_coverage-2F7F9B?style=flat) |
 | **[Robots Enact Malignant Stereotypes](https://doi.org/10.1145/3531146.3533138)**<br><sub>Hundt et al.</sub><br><sub>Primary: <a href="#benchmarks-human-robot-trust-and-fairness">Benchmarks and Evaluation / Human-Robot Trust and Fairness</a></sub> | 2022 ACM Conference on Fairness Accountability and Transparency 2022 | ![Ethics](https://img.shields.io/badge/-Ethics-9873D4?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![User Instruction + Visual Perception](https://img.shields.io/badge/-User_Instruction_%2B_Visual_Perception-D47A5D?style=flat) <br> ![Evaluation coverage](https://img.shields.io/badge/-Evaluation_coverage-2F7F9B?style=flat) |
-
-## Scope and Curation Policy
-
-The catalog covers safety, security, robustness, privacy, ethical and societal outcomes, and trustworthy deployment across physical AI. VLA is a major focus, alongside robot policies, autonomous systems, and LLM/VLM-driven embodied agents when the work studies embodied behavior, physical interaction, or deployment-relevant failure. General-purpose LLM/VLM work without a clear physical-AI connection is out of scope.
-
-Each paper has one catalog record and one primary-contribution section. Cross-cutting tables are generated views of those same records, not separate entries.
-
-The optional Defense, Evaluation, and Benchmark metadata extensions are documented in [docs/metadata-schema.md](docs/metadata-schema.md).
 
 ## Contributing
 
