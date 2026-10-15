@@ -25057,5 +25057,1026 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     }
+  },
+  {
+    "id": "arxiv-2411.18275",
+    "title": "Visual Adversarial Attack on Vision-Language Models for Autonomous Driving",
+    "first_author": "Zhang",
+    "venue": "arXiv",
+    "year": 2024,
+    "paper_url": "https://arxiv.org/abs/2411.18275",
+    "code_url": null,
+    "section": "inference-attacks",
+    "subsection": "Visual Perturbations and Patches",
+    "scope": "autonomous-driving",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "digital-perturbation"
+      ],
+      "surface": [
+        "visual-perception"
+      ],
+      "target": [
+        "perception-model",
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure",
+        "collision"
+      ]
+    },
+    "tags": [
+      "foundation-model-based",
+      "candidate-audit-follow-up",
+      "autonomous-driving",
+      "advlm"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "offline-dataset",
+        "real-robot"
+      ],
+      "platforms": [
+        "CARLA",
+        "LangAuto-Tiny"
+      ],
+      "models": [
+        "DriveLM",
+        "Dolphins"
+      ],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "collision-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2409.19471",
+    "title": "SELP: Generating Safe and Efficient Task Plans for Robot Agents with Large Language Models",
+    "first_author": "Wu",
+    "venue": "arXiv",
+    "year": 2024,
+    "paper_url": "https://arxiv.org/abs/2409.19471",
+    "code_url": "https://github.com/lt-asset/selp",
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "constraint-violation"
+      ],
+      "surface": [
+        "user-instruction",
+        "task-planning"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "policy-violation",
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "foundation-model-based",
+      "candidate-audit-follow-up"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [],
+      "models": [
+        "Llama2-7b",
+        "GPT-3.5",
+        "GPT-4"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "training-time",
+        "inference-time"
+      ],
+      "mechanism": [
+        "formal-verification",
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "user-instruction",
+        "task-planning"
+      ],
+      "defends_against": [
+        "constraint-violation"
+      ],
+      "assumptions": [
+        "safety-constraints",
+        "model-access"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2407.12784",
+    "title": "AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases",
+    "first_author": "Chen",
+    "venue": "arXiv",
+    "year": 2024,
+    "paper_url": "https://arxiv.org/abs/2407.12784",
+    "code_url": null,
+    "section": "inference-attacks",
+    "subsection": "Jailbreaks and Prompt Injection",
+    "scope": "autonomous-driving",
+    "risks": [
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "memory-poisoning",
+        "retrieval-poisoning",
+        "backdoor"
+      ],
+      "surface": [
+        "context-memory-retrieval",
+        "user-instruction"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "targeted-action"
+      ]
+    },
+    "tags": [
+      "foundation-model-based",
+      "candidate-audit-follow-up",
+      "memory-security",
+      "autonomous-driving"
+    ],
+    "evaluation": {
+      "environments": [
+        "offline-dataset"
+      ],
+      "platforms": [],
+      "models": [
+        "Agent-Driver",
+        "GPT-3.5",
+        "Llama3"
+      ],
+      "access": [
+        "unspecified"
+      ],
+      "metrics": [
+        "attack-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2404.14547",
+    "title": "Integrating Disambiguation and User Preferences into Large Language Models for Robot Motion Planning",
+    "first_author": "Abugurain",
+    "venue": "arXiv",
+    "year": 2024,
+    "paper_url": "https://arxiv.org/abs/2404.14547",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Uncertainty, Abstention, and Human Oversight",
+    "scope": "llm-robot",
+    "risks": [],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "instruction-ambiguity"
+        ],
+        "surfaces": [
+          "user-instruction",
+          "context-memory-retrieval"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "foundation-model-based",
+      "candidate-audit-follow-up",
+      "human-robot-interaction",
+      "instruction-disambiguation"
+    ],
+    "evaluation": {
+      "environments": [
+        "offline-dataset"
+      ],
+      "platforms": [],
+      "models": [
+        "GPT-4"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2505.22503",
+    "title": "Communication-Efficient Desire Alignment for Embodied Agent-Human Adaptation",
+    "first_author": "Wang",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2505.22503",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Uncertainty, Abstention, and Human Oversight",
+    "scope": "embodied-agent",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "instruction-ambiguity"
+      ],
+      "surface": [
+        "user-instruction",
+        "context-memory-retrieval"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "foundation-model-based",
+      "candidate-audit-follow-up",
+      "human-robot-interaction",
+      "user-adaptation"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "HA-Desire",
+        "VirtualHome"
+      ],
+      "models": [
+        "GPT-4o"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2607.05396",
+    "title": "From Fixed to Free Cameras: Calibration-Free View-Robust Vision-Language-Action Model",
+    "first_author": "Li",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2607.05396",
+    "code_url": "https://alibaba-damo-academy.github.io/CamVLA/",
+    "section": "ood-generalization",
+    "subsection": "Action and Spatial Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "visual-perception"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "foundation-model-based",
+      "candidate-audit-follow-up",
+      "camera-shift"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [
+        "CamVLA",
+        "pi0",
+        "GR00T N1.7"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "robust-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2512.01119",
+    "title": "World Model Robustness via Surprise Recognition",
+    "first_author": "Zollicoffer",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2512.01119",
+    "code_url": "https://github.com/Bluefin-Tuna/WISER",
+    "section": "defenses",
+    "subsection": "Runtime Observation Interventions",
+    "scope": "world-model",
+    "risks": [],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "visual-perception"
+      ],
+      "target": [
+        "world-state"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "foundation-model-based",
+      "candidate-audit-follow-up",
+      "sensor-noise",
+      "surprise-recognition"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "CARLA",
+        "Safety-Gymnasium"
+      ],
+      "models": [
+        "Cosmos",
+        "DreamerV3"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "input-filtering",
+        "uncertainty-gating"
+      ],
+      "protected_surface": [
+        "visual-perception"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [
+        "model-access"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2501.09167",
+    "title": "Embodied Scene Understanding for Vision Language Models via MetaVQA",
+    "first_author": "Wang",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2501.09167",
+    "code_url": "https://metadriverse.github.io/metavqa",
+    "section": "benchmarks",
+    "subsection": "Safety-Critical Perception Evaluation",
+    "scope": "autonomous-driving",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "perception-error"
+        ],
+        "surfaces": [
+          "visual-perception"
+        ],
+        "consequences": [
+          "task-failure",
+          "collision"
+        ]
+      }
+    },
+    "tags": [
+      "foundation-model-based",
+      "candidate-audit-follow-up",
+      "autonomous-driving",
+      "closed-loop-evaluation"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "offline-dataset"
+      ],
+      "platforms": [
+        "nuScenes",
+        "Waymo"
+      ],
+      "models": [
+        "Llama3.2",
+        "Qwen2",
+        "InternVL2"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "collision-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2406.19693",
+    "title": "MMRo: Are Multimodal LLMs Eligible as the Brain for In-Home Robotics?",
+    "first_author": "Li",
+    "venue": "arXiv",
+    "year": 2024,
+    "paper_url": "https://arxiv.org/abs/2406.19693",
+    "code_url": "https://mm-robobench.github.io/",
+    "section": "benchmarks",
+    "subsection": "Safety and Hazard Benchmarks",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "perception-error"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "task-planning"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "foundation-model-based",
+      "candidate-audit-follow-up",
+      "hazard-recognition",
+      "safety-proxy"
+    ],
+    "evaluation": {
+      "environments": [
+        "offline-dataset"
+      ],
+      "platforms": [],
+      "models": [
+        "GPT-4V"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2511.11520",
+    "title": "Scalable Policy Evaluation with Video World Models",
+    "first_author": "Tseng",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2511.11520",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Evaluation Infrastructure",
+    "scope": "world-model",
+    "risks": [],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "action-interface",
+          "visual-perception"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "foundation-model-based",
+      "candidate-audit-follow-up",
+      "policy-ranking",
+      "world-model-evaluation"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "offline-dataset"
+      ],
+      "platforms": [],
+      "models": [
+        "Cosmos-Predict2-2B"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2412.10726",
+    "title": "NoisyEQA: Benchmarking Embodied Question Answering Against Noisy Queries",
+    "first_author": "Wu",
+    "venue": "arXiv",
+    "year": 2024,
+    "paper_url": "https://arxiv.org/abs/2412.10726",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness and Uncertainty Evaluation",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "instruction-ambiguity",
+          "perception-error"
+        ],
+        "surfaces": [
+          "user-instruction"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "foundation-model-based",
+      "candidate-audit-follow-up",
+      "noisy-instructions",
+      "noise-detection",
+      "noise-correction"
+    ],
+    "evaluation": {
+      "environments": [
+        "offline-dataset"
+      ],
+      "platforms": [],
+      "models": [
+        "Llama2-EQA",
+        "GPT-4o-EQA"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2401.12963",
+    "title": "AutoRT: Embodied Foundation Models for Large Scale Orchestration of Robotic Agents",
+    "first_author": "Ahn",
+    "venue": "arXiv",
+    "year": 2024,
+    "paper_url": "https://arxiv.org/abs/2401.12963",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety Requirements and Assurance",
+    "scope": "embodied-agent",
+    "risks": [
+      "ethical-societal"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "hazardous-instruction"
+      ],
+      "surface": [
+        "user-instruction",
+        "task-planning"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "policy-violation"
+      ]
+    },
+    "tags": [
+      "foundation-model-based",
+      "candidate-audit-follow-up",
+      "multi-robot",
+      "constitutional-prompting",
+      "safe-task-screening"
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [
+        "PaLI",
+        "FlexCap"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "constraint-violation-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "system-level"
+      ],
+      "mechanism": [
+        "input-filtering"
+      ],
+      "protected_surface": [
+        "user-instruction",
+        "task-planning"
+      ],
+      "defends_against": [
+        "hazardous-instruction"
+      ],
+      "assumptions": [
+        "safety-constraints",
+        "human-oversight"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2607.19876",
+    "title": "KineBench: Benchmarking Embodied World Models via IDM-Free Kinematic Grounding",
+    "first_author": "Liu",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2607.19876",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness and Uncertainty Evaluation",
+    "scope": "world-model",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "distribution-shift"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "action-interface"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [
+      "foundation-model-based",
+      "candidate-audit-follow-up",
+      "world-model-evaluation",
+      "kinematic-feasibility",
+      "visual-ood"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "ManiSkill3"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2609.37433",
+    "title": "FP2: Equipping Robotic Foundation Models with Force Control",
+    "first_author": "Fang",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2609.37433",
+    "code_url": "https://force-policy.github.io/fp2",
+    "section": "defenses",
+    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "scope": "robot-foundation-model",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "execution-control",
+        "proprioception"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "foundation-model-based",
+      "candidate-audit-follow-up",
+      "force-control",
+      "normalized-force-error",
+      "contact-rich-manipulation"
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2404.00210",
+    "title": "VLM-Social-Nav: Socially Aware Robot Navigation through Scoring using Vision-Language Models",
+    "first_author": "Song",
+    "venue": "arXiv",
+    "year": 2024,
+    "paper_url": "https://arxiv.org/abs/2404.00210",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety-Aware Policy Learning",
+    "scope": "embodied-agent",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "unsafe-policy-behavior"
+      ],
+      "surface": [
+        "execution-control"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "collision",
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "foundation-model-based",
+      "candidate-audit-follow-up",
+      "human-robot-interaction",
+      "social-navigation"
+    ],
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [
+        "TurtleBot",
+        "DWA"
+      ],
+      "models": [
+        "GPT-4V"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "collision-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2409.17004",
+    "title": "A Model-Agnostic Approach for Semantically Driven Disambiguation in Human-Robot Interaction",
+    "first_author": "Dogan",
+    "venue": "arXiv",
+    "year": 2024,
+    "paper_url": "https://arxiv.org/abs/2409.17004",
+    "code_url": "https://github.com/IrmakDogan/ExpressionDataset",
+    "section": "defenses",
+    "subsection": "Uncertainty, Abstention, and Human Oversight",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "instruction-ambiguity"
+      ],
+      "surface": [
+        "user-instruction"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "foundation-model-based",
+      "candidate-audit-follow-up",
+      "human-robot-interaction",
+      "instruction-disambiguation"
+    ],
+    "evaluation": {
+      "environments": [
+        "unspecified"
+      ],
+      "platforms": [],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": null,
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "fernandez-becerra-accountability-explainability-2026",
+    "title": "Improving accountability and explainability in robots through encryption, large language models, and visual language models",
+    "first_author": "Fernández-Becerra",
+    "venue": "Logic Journal of the IGPL",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1093/jigpal/jzaf016",
+    "code_url": null,
+    "section": "system-security",
+    "subsection": "Cross-Layer System Security",
+    "scope": "llm-robot",
+    "risks": [],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "system"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "middleware-network",
+          "reasoning-representation"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "foundation-model-based",
+      "candidate-audit-follow-up",
+      "accountability",
+      "explainability",
+      "encrypted-logging"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "ROS 2"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    }
   }
 ]
