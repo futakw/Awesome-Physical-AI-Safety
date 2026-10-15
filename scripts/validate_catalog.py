@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+from datetime import date
 import json
 import re
 import sys
@@ -15,6 +16,8 @@ DATA_PATH = ROOT / "data" / "papers.json"
 TAXONOMY_DIR = ROOT / "data" / "taxonomy"
 
 REQUIRED = {
+    "first_submission_date",
+    "first_submission_source",
     "id",
     "title",
     "first_author",
@@ -90,6 +93,23 @@ def valid_url(value: str | None) -> bool:
         return True
     parsed = urlparse(value)
     return parsed.scheme == "https" and bool(parsed.netloc)
+
+
+def validate_submission(errors: list[str], label: str, paper: dict) -> None:
+    value = paper.get("first_submission_date")
+    source = paper.get("first_submission_source")
+    if value is None:
+        if source is not None:
+            errors.append(f"{label}: unknown submission date requires null source")
+        return
+    try:
+        if not isinstance(value, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", value):
+            raise ValueError
+        date.fromisoformat(value)
+    except ValueError:
+        errors.append(f"{label}: invalid first_submission_date")
+    if not isinstance(source, str) or not valid_url(source):
+        errors.append(f"{label}: verified submission date requires HTTPS source")
 
 
 def validate_string_list(
@@ -233,6 +253,7 @@ def main() -> int:
             errors.append(f"{label}: tags must not be empty")
         validate_threat_model(errors, label, paper.get("threat_model"))
         validate_extensions(errors, label, paper, taxonomies)
+        validate_submission(errors, label, paper)
         if not isinstance(paper.get("year"), int) or not 2000 <= paper.get("year", 0) <= 2100:
             errors.append(f"{label}: invalid year")
         for field in ("paper_url", "code_url"):

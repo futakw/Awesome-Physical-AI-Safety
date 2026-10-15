@@ -1,9 +1,16 @@
 #!/usr/bin/env python3
 """Verify catalog bibliographic fields against the linked primary source.
 
-The catalog remains hand-curated, but title, first-author surname, and year are
-checked against the paper URL before publication.  Network failures are fatal:
-an unavailable source is not evidence that metadata is correct.
+The catalog remains hand-curated, but title and first-author surname are always
+checked against the paper URL before publication. `year` is checked against it
+too, except when `paper_url` is an arXiv/OpenReview preprint and `venue`
+already names a different, confirmed venue — that preprint's own year can
+legitimately differ from its eventual venue year, so `year` stays
+curator-verified against the venue's own listing instead (see
+docs/metadata-schema.md#venue-and-year). When the source itself is the venue
+record (DOI/Crossref, ACL Anthology, CVF proceedings, etc.), `year` is always
+checked against it. Network failures are fatal: an unavailable source is not
+evidence that metadata is correct.
 """
 
 from __future__ import annotations
@@ -19,6 +26,7 @@ import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
+from datetime import datetime
 from pathlib import Path
 from typing import Any
 
@@ -38,6 +46,7 @@ class SourceMetadata:
     first_author: str | None
     year: int | None
     source_url: str
+    first_submission_date: str | None = None
 
 
 def fetch(url: str, *, accept: str = "text/html,application/xhtml+xml,application/xml") -> bytes:
@@ -65,6 +74,21 @@ def surname(value: str) -> str:
     return value.split()[-1].strip(".,") if value else ""
 
 
+def parse_arxiv_v1_date(text: str) -> str | None:
+    """Read the original submission, never the revised date or citation year."""
+    block = re.search(r'<div class="submission-history">(.*?)</div>', text, re.S)
+    if not block:
+        return None
+    plain = html.unescape(re.sub(r'<[^>]*>', ' ', block.group(1)))
+    match = re.search(r'\[v1\]\s*(?:\w+,\s*)?(\d{1,2}\s+\w+\s+\d{4})\s+\d{2}:\d{2}:\d{2}\s+UTC', plain)
+    if not match:
+        return None
+    try:
+        return datetime.strptime(match.group(1), "%d %b %Y").date().isoformat()
+    except ValueError:
+        return None
+
+
 def parse_arxiv(url: str) -> SourceMetadata:
     match = re.search(r"arxiv\.org/(?:abs|pdf|html)/(\d{4}\.\d{4,5})(?:v\d+)?", url)
     if not match:
@@ -83,6 +107,7 @@ def parse_arxiv(url: str) -> SourceMetadata:
         first_author=authors[0] if authors else None,
         year=int(date_match.group(1)) if date_match else None,
         source_url=abs_url,
+        first_submission_date=parse_arxiv_v1_date(text),
     )
 
 
@@ -119,13 +144,32 @@ def meta_content(text: str, name: str) -> list[str]:
     return [html.unescape(a or b) for a, b in re.findall(pattern, text, flags=re.IGNORECASE)]
 
 
+def proceedings_url_year(url: str) -> int | None:
+    """Some proceedings sites stamp pages with a page-publish date rather than
+    the conference edition (e.g. a NeurIPS 2025 paper's citation_publication_date
+    can read 2026-04-23, the day its camera-ready page went live) — the same
+    drift this script otherwise guards against for arXiv. Their URL path
+    encodes the actual edition reliably, so prefer that over page metadata."""
+    host = urllib.parse.urlparse(url).netloc.casefold()
+    if host.endswith("proceedings.neurips.cc"):
+        match = re.search(r"/paper(?:_files)?/paper/(\d{4})/", url)
+        return int(match.group(1)) if match else None
+    if host.endswith("openaccess.thecvf.com"):
+        match = re.search(r"/content/[A-Za-z]+(\d{4})/", url)
+        return int(match.group(1)) if match else None
+    return None
+
+
 def parse_html_source(url: str) -> SourceMetadata:
     text = fetch(url).decode("utf-8", errors="replace")
     titles = meta_content(text, "citation_title") or meta_content(text, "og:title")
     authors = meta_content(text, "citation_author")
-    dates = meta_content(text, "citation_publication_date") or meta_content(text, "citation_date")
     if not titles:
         raise VerificationError(f"canonical title metadata not found at {url}")
+    url_year = proceedings_url_year(url)
+    if url_year is not None:
+        return SourceMetadata(titles[0], authors[0] if authors else None, url_year, url)
+    dates = meta_content(text, "citation_publication_date") or meta_content(text, "citation_date")
     year_match = re.search(r"(20\d{2})", dates[0]) if dates else None
     return SourceMetadata(titles[0], authors[0] if authors else None, int(year_match.group(1)) if year_match else None, url)
 
@@ -162,8 +206,26 @@ def verify_record(record: dict[str, Any]) -> list[str]:
     source_author = surname(source.first_author or "")
     if catalog_author and source_author and catalog_author.casefold() != source_author.casefold():
         errors.append(f"{label}: first_author mismatch\n  catalog: {record['first_author']}\n  source:  {source.first_author}\n  source_url: {source.source_url}")
-    if source.year is not None and record.get("year") != source.year:
+    # A preprint host's own posted year can legitimately differ from a later
+    # conference/journal acceptance year (see
+    # docs/metadata-schema.md#venue-and-year). Skip the automated year check
+    # only when `paper_url` points at that preprint AND the catalog already
+    # names a different, confirmed venue — the venue's own proceedings year
+    # is curator-verified instead, not machine-checked against the preprint.
+    # When the source itself is the venue record (Crossref/DOI, ACL
+    # Anthology, CVF proceedings, etc.), it remains authoritative and year is
+    # always checked against it.
+    source_host = urllib.parse.urlparse(source.source_url).netloc.casefold()
+    is_preprint_source = source_host.endswith(("arxiv.org", "openreview.net"))
+    skip_year_check = is_preprint_source and record.get("venue") not in ("arXiv", "OpenReview")
+    if not skip_year_check and source.year is not None and record.get("year") != source.year:
         errors.append(f"{label}: year mismatch\n  catalog: {record['year']}\n  source:  {source.year}\n  source_url: {source.source_url}")
+    expected_date = record.get("first_submission_date")
+    if expected_date is not None:
+        date_url = record.get("first_submission_source")
+        date_source = source if date_url == source.source_url or date_url == record["paper_url"] else source_metadata(date_url)
+        if date_source.first_submission_date != expected_date:
+            errors.append(f"{label}: first_submission_date mismatch or unavailable\n  catalog: {expected_date}\n  source:  {date_source.first_submission_date}\n  source_url: {date_url}")
     return errors
 
 

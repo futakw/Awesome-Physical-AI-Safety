@@ -23,6 +23,7 @@ def main() -> int:
 
     labels_payload = {
         "sections": L.SECTIONS_JA,
+        "subsections": L.SUBSECTIONS_JA,
         "risks": L.RISK_LABELS_JA,
         "lifecycle": L.LIFECYCLE_JA,
         "surface": L.SURFACE_JA,

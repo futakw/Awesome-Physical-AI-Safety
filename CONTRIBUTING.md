@@ -31,6 +31,7 @@ python3 scripts/build_explorer.py
 
 - Authors are displayed as `FirstAuthor et al.`; store the first author's surname in `first_author`.
 - Use the official paper title and confirmed venue. The generated table links the title directly to `paper_url`; use `arXiv` when no accepted venue is confirmed.
+- Set `year` to the confirmed venue's own proceedings/program year (from the official proceedings, DBLP, or the venue's acceptance page) — not the arXiv posting year. An arXiv preprint and its eventual conference appearance can fall in different calendar years; when a record's `venue` moves from `arXiv`/`OpenReview` to a named venue, update `year` to match at the same time. See [the metadata schema](docs/metadata-schema.md#venue-and-year).
 - Link only an official or author-maintained implementation as `code_url`.
 - Leave `code_url` as `null` when no official repository is known.
 - GitHub star badges and other project/code links are generated beside the paper title from `code_url`.

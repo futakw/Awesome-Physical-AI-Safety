@@ -35,13 +35,37 @@
     section.active { display:block; }
     .note { color:var(--muted); font-size:13px; margin:0 0 12px; }
     svg { width:100%; height:auto; display:block; border:1px solid var(--line); border-radius:10px; background:var(--panel); }
-    .axis text,.legend text { fill:var(--muted); font-size:12px; }
+    .axis text,.legend text { fill:var(--muted); font-size:11px; }
     .axis path,.axis line { stroke:var(--line); }
     .tooltip { position:fixed; pointer-events:auto; max-width:380px; background:#202938; color:#fff; border-radius:8px; padding:11px 13px; box-shadow:0 8px 25px #20293833; font-size:13px; z-index:9; opacity:0; }
     .tooltip strong { display:block; font-size:14px; line-height:1.35; margin-bottom:4px; }
     .tooltip a { color:#c8dcff; }
     .paper-list { max-height:190px; overflow:auto; margin:6px 0 0; padding-left:18px; }
     .paper-list li { margin:2px 0; }
+    .catalog-table-wrap { margin-top:18px; border:1px solid var(--line); border-radius:10px; background:#fff; overflow:hidden; }
+    .catalog-table-head { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 14px; border-bottom:1px solid var(--line); background:var(--panel); }
+    .catalog-table-head strong { font-size:14px; }
+    .catalog-table-head span { color:var(--muted); font-size:12px; }
+    .catalog-table-scroll { overflow:auto; max-height:620px; }
+    .section-groups { overflow:auto; max-height:620px; }
+    .section-group { border-bottom:1px solid var(--line); }
+    .section-group:last-child { border-bottom:0; }
+    .section-group > summary { position:sticky; top:0; z-index:4; cursor:pointer; list-style-position:inside; padding:11px 14px; background:#f7f9fc; font-weight:700; box-shadow:0 2px 3px #2029380a; }
+    .section-group > summary:hover { background:#eef3fa; }
+    .section-group > summary span { margin-left:6px; color:var(--muted); font-size:12px; font-weight:500; }
+    .subsection-group { padding:0 12px 14px; }
+    .subsection-title { position:sticky; z-index:3; display:flex; align-items:center; gap:7px; min-height:40px; margin:0; padding:10px 2px 7px; border-bottom:1px solid var(--line); background:#fff; box-shadow:0 2px 3px #2029380a; color:#3c4a5d; font-size:12px; font-weight:700; }
+    .subsection-title span { color:var(--muted); font-weight:500; }
+    .catalog-table { width:100%; border-collapse:collapse; font-size:13px; }
+    .catalog-table th { position:sticky; z-index:2; background:#f1f4f8; color:var(--muted); text-align:left; font-size:11px; letter-spacing:.02em; text-transform:uppercase; }
+    .catalog-table th,.catalog-table td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; }
+    .catalog-table tr:last-child td { border-bottom:0; }
+    .catalog-table .paper-title { color:var(--ink); font-weight:650; text-decoration:none; }
+    .catalog-table .paper-title:hover { color:#365f99; text-decoration:underline; }
+    .catalog-table .paper-author,.catalog-table .code-link { display:block; margin-top:3px; color:var(--muted); font-size:11px; }
+    .catalog-table .code-link { display:inline-block; color:#365f99; }
+    .tag { display:inline-block; margin:0 4px 4px 0; padding:2px 7px; border-radius:999px; background:#eef3fa; color:#36506f; font-size:11px; white-space:nowrap; }
+    .empty { color:var(--muted); }
     .doc-frame { width:100%; min-height:900px; border:1px solid var(--line); border-radius:10px; background:#fff; }
     .gh-link { display:inline-flex; align-items:center; gap:5px; padding:5px 10px; border:1px solid var(--line); border-radius:7px; background:var(--panel); color:var(--ink); text-decoration:none; font-size:12px; white-space:nowrap; }
     .gh-link:hover { background:#eef3fa; }
@@ -84,9 +108,9 @@
 </header>
 <main>
   <div class="view-container">
-  <section id="timeline"><p class="note" data-i18n="timelineNote">Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to pin the paper list.</p><div id="timeline-chart"></div></section>
-  <section id="heatmap"><p class="note" data-i18n="heatmapNote">Cells show mechanism-surface co-occurrence for concrete threat models. Hover for a preview; click a cell to pin the paper list.</p><div id="heatmap-chart"></div></section>
-  <section id="risk"><p class="note" data-i18n="riskNote">Rows are threat mechanisms and columns are empirically evaluated risk outcomes. Empty cells remain visible.</p><div id="risk-chart"></div></section>
+  <section id="timeline"><p class="note" data-i18n="timelineNote">Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to filter the table.</p><div id="timeline-chart"></div><div id="timeline-table"></div></section>
+  <section id="heatmap"><p class="note" data-i18n="heatmapNote">Cells show mechanism-surface co-occurrence for concrete threat models. Hover for a preview; click a cell to filter the table.</p><div id="heatmap-chart"></div><div id="heatmap-table"></div></section>
+  <section id="risk"><p class="note" data-i18n="riskNote">Rows are threat mechanisms and columns are empirically evaluated risk outcomes. Click a cell to filter the table.</p><div id="risk-chart"></div><div id="risk-table"></div></section>
   <section id="readme" class="active"><iframe class="doc-frame" id="readme-frame" src="readme.html" title="Rendered README"></iframe></section>
   <section id="taxonomy"><iframe class="doc-frame" id="taxonomy-frame" src="taxonomy.html" title="Rendered taxonomy"></iframe></section>
   </div>
@@ -96,6 +120,8 @@
 const papers = __PAPERS_JSON__;
 const labelsJa = __LABELS_JA_JSON__;
 const colors = {surveys:'#657A8C', 'ood-generalization':'#3FA89B', 'training-attacks':'#9873D4', 'inference-attacks':'#D47A5D', defenses:'#6F9FEF', benchmarks:'#B88A24', 'system-security':'#D96F8A'};
+const THREAT_TAG_COLORS = {lifecycle:{bg:'#eaf1fd',fg:'#2f5fa8'},surface:{bg:'#fbece4',fg:'#9a4b2c'},mechanism:{bg:'#e6f5f3',fg:'#1f6f66'},target:{bg:'#f1eafb',fg:'#6b3fb3'},consequence:{bg:'#fbe8ed',fg:'#a23f5c'},survey:{bg:'#eceff2',fg:'#4c5c6b'},evaluation:{bg:'#e3f1f5',fg:'#205c70'}};
+const RISK_TAG_COLORS = {'task-reliability':{bg:'#eaf1fd',fg:'#2f5fa8'},'physical-safety':{bg:'#faf1df',fg:'#8a6512'},'ethical-societal':{bg:'#f1eafb',fg:'#6b3fb3'},'security-privacy':{bg:'#fbe8ed',fg:'#a23f5c'}};
 const labels = {surveys:'Surveys','ood-generalization':'OOD Generalization','training-attacks':'Training Attacks','inference-attacks':'Inference Attacks',defenses:'Defenses',benchmarks:'Benchmarks','system-security':'System Security'};
 const sections = Object.keys(labels), tooltip = d3.select('#tooltip');
 
@@ -105,8 +131,24 @@ function dlabel(raw){
   if (currentLang === 'ja') return dlabelFlat[raw] || (labelsJa.risks && labelsJa.risks[raw]) || (labelsJa.kind && labelsJa.kind[raw]) || raw.replaceAll('-',' ');
   return raw.replaceAll('-',' ');
 }
+function splitLabel(text, maxLen=14){
+  if (text.length<=maxLen) return [text];
+  const words=text.split(/\s+/);
+  if (words.length<2) return [text];
+  let best=0, bestDiff=Infinity, acc=0;
+  for (let i=0;i<words.length-1;i++){ acc+=words[i].length+1; const diff=Math.abs(acc-text.length/2); if (diff<bestDiff){ bestDiff=diff; best=i; } }
+  return [words.slice(0,best+1).join(' '), words.slice(best+1).join(' ')];
+}
+function rotatedAxisLabel(selection, getText){
+  selection.each(function(d){
+    const lines=splitLabel(getText(d));
+    const node=d3.select(this);
+    lines.forEach((line,i)=>node.append('tspan').attr('x',0).attr('dy',i===0?'0em':'1.05em').text(line));
+  });
+}
 const sectionsShortJa = {surveys:'サーベイ','ood-generalization':'OOD汎化','training-attacks':'学習時攻撃','inference-attacks':'推論時攻撃',defenses:'防御・安全機構',benchmarks:'ベンチマーク','system-security':'システムセキュリティ'};
 function sectionLabel(key){ return currentLang === 'ja' ? (sectionsShortJa[key] || labels[key]) : labels[key]; }
+function subsectionLabel(key){ return currentLang === 'ja' ? ((labelsJa.subsections && labelsJa.subsections[key]) || key) : key; }
 function countLabel(n){ return `${n}${I18N[currentLang].papersWord}`; }
 
 const I18N = {
@@ -115,36 +157,88 @@ const I18N = {
     ghlink: '⭐ Star on GitHub',
     navReadme: 'README', navTaxonomy: 'Taxonomy', navTimeline: 'Field timeline', navHeatmap: 'Threat cross-map', navRisk: 'Threat × measured risk',
     badgeLicenses: 'Licenses', badgePapers: 'Papers', badgeUpdate: 'Update', badgeCuration: 'Curation', badgeDaily: 'Daily', badgeLlm: 'LLM-assisted',
-    timelineNote: 'Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to pin the paper list.',
-    heatmapNote: 'Cells show mechanism-surface co-occurrence for concrete threat models. Hover for a preview; click a cell to pin the paper list.',
-    riskNote: 'Rows are threat mechanisms and columns are empirically evaluated risk outcomes. Empty cells remain visible.',
+    timelineNote: 'Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to filter the table.',
+    heatmapNote: 'Cells show mechanism-surface co-occurrence for concrete threat models. Hover for a preview; click a cell to filter the table.',
+    riskNote: 'Rows are threat mechanisms and columns are empirically evaluated risk outcomes. Click a cell to filter the table.',
     chartTimelineTitle: 'Field timeline',
     chartHeatmapTitle: 'Threat coverage: mechanism × surface',
     chartHeatmapHint: 'Hover a cell to inspect contributing papers.',
     chartRiskTitle: 'Threat mechanism × evaluated risk',
     enrichedSuffix: ' enriched papers; hover or click a cell for the paper list.',
-    papersWord: ' papers',
+    papersWord: ' papers', tablePaper: 'Paper', tableVenue: 'Venue', tableRisk: 'Evaluated Risk', tableThreat: 'Threat Model', tableAll: 'All papers in this view', tableShowing: 'Showing', tableReset: 'Reset filter', tableCode: 'Project / Code', tableNone: 'None reported',
   },
   ja: {
     title: 'Awesome Physical AI Safety',
     ghlink: '⭐ GitHubでStar',
     navReadme: 'README', navTaxonomy: 'Taxonomy', navTimeline: 'タイムライン', navHeatmap: '脅威クロスマップ', navRisk: '脅威 × 評価リスク',
     badgeLicenses: 'ライセンス', badgePapers: '論文数', badgeUpdate: '更新頻度', badgeCuration: 'キュレーション', badgeDaily: '毎日', badgeLlm: 'LLM支援',
-    timelineNote: 'バブルの大きさは、分野×年のセルに含まれる論文数を表します。ホバーでプレビュー、クリックで論文一覧を固定表示します。',
-    heatmapNote: 'セルは具体的なthreat modelにおけるmechanismとsurfaceの共起を示します。ホバーでプレビュー、クリックで固定表示します。',
-    riskNote: '行はthreatメカニズム、列は実証的に評価されたリスクアウトカムです。空のセルも表示されます。',
+    timelineNote: 'バブルの大きさは、分野×年のセルに含まれる論文数を表します。ホバーでプレビュー、クリックで下の表を絞り込みます。',
+    heatmapNote: 'セルは具体的なthreat modelにおけるmechanismとsurfaceの共起を示します。ホバーでプレビュー、クリックで下の表を絞り込みます。',
+    riskNote: '行はthreatメカニズム、列は実証的に評価されたリスクアウトカムです。クリックで下の表を絞り込みます。',
     chartTimelineTitle: 'フィールドタイムライン',
     chartHeatmapTitle: '脅威カバレッジ: メカニズム × サーフェス',
     chartHeatmapHint: 'セルにホバーすると該当論文を確認できます。',
     chartRiskTitle: '脅威メカニズム × 評価されたリスク',
     enrichedSuffix: '件の拡張済み論文。ホバーまたはクリックで論文一覧を表示します。',
-    papersWord: '件',
+    papersWord: '件', tablePaper: '論文', tableVenue: 'Venue', tableRisk: '評価リスク', tableThreat: '脅威モデル', tableAll: 'このビューの全論文', tableShowing: '表示中', tableReset: '絞り込み解除', tableCode: 'Project / Code', tableNone: '報告なし',
   },
 };
 d3.select('#paper-count-badge').text(papers.length);
 const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const paperListHtml = list => `<ul class="paper-list">${list.map(p=>`<li>${p.paper_url?`<a href="${escapeHtml(p.paper_url)}" target="_blank" rel="noopener noreferrer">[${escapeHtml(p.venue)} ${p.year}] ${escapeHtml(p.title)}</a>`:`[${escapeHtml(p.venue)} ${p.year}] ${escapeHtml(p.title)}`}</li>`).join('')}</ul>`;
 const threatValues = (p,field) => ['survey','evaluation'].includes(p.threat_model.kind) ? (p.threat_model.coverage[{lifecycle:'lifecycles',mechanism:'mechanisms',surface:'surfaces',consequence:'consequences'}[field]]||[]) : (p.threat_model[field]||[]);
+const tableDefaults = {
+  timeline: papers,
+  heatmap: papers.filter(p=>!['survey','evaluation'].includes(p.threat_model.kind)),
+  risk: papers.filter(p=>p.threat_model.kind!=='survey'),
+};
+function tagsHtml(items) { return items.length ? items.map(({value,bg,fg})=>`<span class="tag" style="background:${bg};color:${fg}">${escapeHtml(dlabel(value))}</span>`).join('') : `<span class="empty">${I18N[currentLang].tableNone}</span>`; }
+function riskTagItems(p) { return (p.risks||[]).map(value=>({value,...(RISK_TAG_COLORS[value]||{bg:'#eef3fa',fg:'#36506f'})})); }
+function threatTagItems(p) {
+  const items=[];
+  const push=(field,category)=>threatValues(p,field).forEach(value=>items.push({value,...THREAT_TAG_COLORS[category]}));
+  push('lifecycle','lifecycle'); push('surface','surface');
+  if (!['survey','evaluation'].includes(p.threat_model.kind)) { push('mechanism','mechanism'); push('target','target'); push('consequence','consequence'); }
+  return items;
+}
+function renderPaperTable(view, list=tableDefaults[view], filterLabel='') {
+  const paperRows=papersInGroup=>papersInGroup.map(p=>{
+    const code=p.code_url?`<a class="code-link" href="${escapeHtml(p.code_url)}" target="_blank" rel="noopener noreferrer">${I18N[currentLang].tableCode}</a>`:'';
+    return `<tr><td><a class="paper-title" href="${escapeHtml(p.paper_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.title)}</a>${code}<span class="paper-author">${escapeHtml(p.first_author)}</span></td><td>${escapeHtml(p.venue)} ${p.year}</td><td>${tagsHtml(riskTagItems(p))}</td><td>${tagsHtml(threatTagItems(p))}</td></tr>`;
+  }).join('');
+  const bySection=d3.group(list,p=>p.section);
+  const sectionSummary=sections.filter(section=>bySection.has(section)).map(section=>`${sectionLabel(section)} ${bySection.get(section).length}`).join(' · ');
+  const groups=sections.filter(section=>bySection.has(section)).map(section=>{
+    const sectionPapers=bySection.get(section);
+    const bySubsection=d3.group(sectionPapers,p=>p.subsection);
+    const subsections=[...bySubsection].sort((a,b)=>d3.descending(a[1].length,b[1].length)||d3.ascending(a[0],b[0]));
+    const contents=subsections.map(([subsection,subsectionPapers])=>{
+      const sorted=[...subsectionPapers].sort((a,b)=>d3.descending(a.year,b.year)||d3.ascending(a.title,b.title));
+      return `<div class="subsection-group"><div class="subsection-title">${escapeHtml(subsectionLabel(subsection))} <span>· ${countLabel(sorted.length)}</span></div><table class="catalog-table"><thead><tr><th>${I18N[currentLang].tablePaper}</th><th>${I18N[currentLang].tableVenue}</th><th>${I18N[currentLang].tableRisk}</th><th>${I18N[currentLang].tableThreat}</th></tr></thead><tbody>${paperRows(sorted)}</tbody></table></div>`;
+    }).join('');
+    return `<details class="section-group" open><summary>${escapeHtml(sectionLabel(section))}<span>${countLabel(sectionPapers.length)}</span></summary>${contents}</details>`;
+  }).join('');
+  const reset=filterLabel?`<button type="button" class="table-reset" data-table-view="${view}">${I18N[currentLang].tableReset}</button>`:'';
+  const distribution=sectionSummary?`<span>· ${escapeHtml(sectionSummary)}</span>`:'';
+  const empty=list.length?'':`<div class="subsection-group empty">${I18N[currentLang].tableNone}</div>`;
+  document.getElementById(`${view}-table`).innerHTML=`<div class="catalog-table-wrap"><div class="catalog-table-head"><div><strong>${escapeHtml(filterLabel||I18N[currentLang].tableAll)}</strong> <span>· ${I18N[currentLang].tableShowing} ${countLabel(list.length)}</span>${distribution}</div>${reset}</div><div class="section-groups">${groups}${empty}</div></div>`;
+  document.querySelector(`#${view}-table .table-reset`)?.addEventListener('click',()=>renderPaperTable(view));
+  applyStickyOffsets(view);
+}
+function applyStickyOffsets(view){
+  document.querySelectorAll(`#${view}-table .section-group`).forEach(group=>{
+    const summary=group.querySelector(':scope > summary');
+    const summaryH=summary?summary.offsetHeight:0;
+    group.querySelectorAll(':scope > .subsection-group').forEach(subgroup=>{
+      const title=subgroup.querySelector('.subsection-title');
+      if(!title) return;
+      title.style.top=`${summaryH}px`;
+      const titleH=title.offsetHeight;
+      subgroup.querySelectorAll('.catalog-table th').forEach(th=>{ th.style.top=`${summaryH+titleH}px`; });
+    });
+  });
+}
+function filterPaperTable(view,list,label){ renderPaperTable(view,list,label); document.getElementById(`${view}-table`).scrollIntoView({behavior:'smooth',block:'start'}); pinned=false; tooltip.style('opacity',0); }
 const orderedThreatMechanisms = () => { const concrete=papers.filter(p=>p.threat_model.kind!=='survey'); const exploded=concrete.flatMap(p=>threatValues(p,'mechanism').map(m=>({p,m}))); const counts=d3.rollup(exploded,v=>new Set(v.map(d=>d.p.id)).size,d=>d.m); return [...counts].sort((a,b)=>d3.descending(a[1],b[1])).slice(0,10).map(d=>d[0]); };
 let pinned = false;
 const placeTooltip = (event, html) => tooltip.html(html).style('opacity',1).style('left',`${Math.max(8,Math.min(event.clientX+14,window.innerWidth-400))}px`).style('top',`${Math.max(8,Math.min(event.clientY+14,window.innerHeight-220))}px`);
@@ -153,21 +247,21 @@ const pinTooltip = (event, html) => { pinned = true; placeTooltip(event, html); 
 const hideTooltip = () => { if (!pinned) tooltip.style('opacity',0); };
 document.addEventListener('pointerdown', event => { if (!event.target.closest('.tooltip') && !event.target.closest('.cell')) { pinned = false; tooltip.style('opacity',0); } });
 function renderTimeline(){
-  const width=1160,height=690, margin={top:105,right:35,bottom:54,left: currentLang === 'ja' ? 235 : 205};
+  const width=1160,height=440, margin={top:70,right:35,bottom:34,left: currentLang === 'ja' ? 235 : 205};
   const svg=d3.select('#timeline-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Interactive field timeline');
   const years=[...new Set(papers.map(p=>p.year))].sort(), grouped=d3.rollup(papers,v=>v,p=>p.section,p=>p.year);
   const x=d3.scalePoint().domain(years).range([margin.left,width-margin.right]); const y=d3.scalePoint().domain(sections).range([margin.top,height-margin.bottom]).padding(.5);
   const max=d3.max([...grouped.values()].flatMap(v=>[...v.values()].map(a=>a.length)))||1;
-  svg.append('text').attr('x',margin.left).attr('y',30).attr('font-size',24).attr('font-weight',650).attr('fill','#202938').text(I18N[currentLang].chartTimelineTitle);
-  years.forEach(year=>{svg.append('line').attr('x1',x(year)).attr('x2',x(year)).attr('y1',margin.top-20).attr('y2',height-margin.bottom+12).attr('stroke','#dce3ec');svg.append('text').attr('class','axis').attr('x',x(year)).attr('y',margin.top-32).attr('text-anchor','middle').text(year);});
-  sections.forEach(s=>{svg.append('line').attr('x1',margin.left).attr('x2',width-margin.right).attr('y1',y(s)).attr('y2',y(s)).attr('stroke','#dce3ec');svg.append('text').attr('class','axis').attr('x',margin.left-20).attr('y',y(s)+5).attr('text-anchor','end').text(sectionLabel(s));});
+  svg.append('text').attr('x',margin.left).attr('y',24).attr('font-size',19).attr('font-weight',650).attr('fill','#202938').text(I18N[currentLang].chartTimelineTitle);
+  years.forEach(year=>{svg.append('line').attr('x1',x(year)).attr('x2',x(year)).attr('y1',margin.top-16).attr('y2',height-margin.bottom+10).attr('stroke','#dce3ec');svg.append('text').attr('class','axis').attr('x',x(year)).attr('y',margin.top-26).attr('text-anchor','middle').text(year);});
+  sections.forEach(s=>{svg.append('line').attr('x1',margin.left).attr('x2',width-margin.right).attr('y1',y(s)).attr('y2',y(s)).attr('stroke','#dce3ec');svg.append('text').attr('class','axis').attr('x',margin.left-20).attr('y',y(s)+4).attr('text-anchor','end').text(sectionLabel(s));});
   const cells=[]; for(const s of sections) for(const year of years){const list=(grouped.get(s)?.get(year))||[]; if(list.length) cells.push({s,year,list});}
-  svg.selectAll('circle.cell').data(cells).join('circle').attr('class','cell').attr('cx',d=>x(d.year)).attr('cy',d=>y(d.s)).attr('r',d=>8+22*Math.sqrt(d.list.length/max)).attr('fill',d=>colors[d.s]).attr('fill-opacity',.88).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${sectionLabel(d.s)} · ${d.year} · ${countLabel(d.list.length)}</strong>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();pinTooltip(event,`<strong>${sectionLabel(d.s)} · ${d.year} · ${countLabel(d.list.length)}</strong>${paperListHtml(d.list)}`);});
-  svg.selectAll('text.count').data(cells).join('text').attr('class','count').attr('x',d=>x(d.year)).attr('y',d=>y(d.s)+5).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',650).attr('fill','#fff').style('pointer-events','none').text(d=>d.list.length);
+  svg.selectAll('circle.cell').data(cells).join('circle').attr('class','cell').attr('cx',d=>x(d.year)).attr('cy',d=>y(d.s)).attr('r',d=>7+18*Math.sqrt(d.list.length/max)).attr('fill',d=>colors[d.s]).attr('fill-opacity',.88).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${sectionLabel(d.s)} · ${d.year} · ${countLabel(d.list.length)}</strong>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();filterPaperTable('timeline',d.list,`${sectionLabel(d.s)} · ${d.year}`);});
+  svg.selectAll('text.count').data(cells).join('text').attr('class','count').attr('x',d=>x(d.year)).attr('y',d=>y(d.s)+4).attr('text-anchor','middle').attr('font-size',11).attr('font-weight',650).attr('fill','#fff').style('pointer-events','none').text(d=>d.list.length);
 }
 
 function renderHeatmap(){
-  const width=1160,height=790, margin={top: currentLang === 'ja' ? 230 : 190,right:35,bottom:70,left:275};
+  const width=1160,height=510, margin={top: currentLang === 'ja' ? 180 : 150,right:95,bottom:20,left:260};
   const svg=d3.select('#heatmap-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Interactive threat model heatmap');
   const concrete=papers.filter(p=>!['survey','evaluation'].includes(p.threat_model.kind));
   const exploded=concrete.flatMap(p=>p.threat_model.mechanism.flatMap(m=>p.threat_model.surface.map(s=>({p,m,s}))));
@@ -178,12 +272,12 @@ function renderHeatmap(){
   const x=d3.scaleBand().domain(surfaces).range([margin.left,width-margin.right]).padding(.06), y=d3.scaleBand().domain(mechanisms).range([margin.top,height-margin.bottom]).padding(.06);
   const cellData=[]; for(const m of mechanisms) for(const s of surfaces){const list=concrete.filter(p=>p.threat_model.mechanism.includes(m)&&p.threat_model.surface.includes(s));cellData.push({m,s,list,n:list.length});}
   const max=d3.max(cellData,d=>d.n)||1, fill=d3.scaleSequential().domain([0,max]).interpolator(d3.interpolate('#eef3f8','#6f9fef'));
-  svg.append('text').attr('x',margin.left).attr('y',35).attr('font-size',24).attr('font-weight',650).attr('fill','#202938').text(I18N[currentLang].chartHeatmapTitle);
-  svg.append('text').attr('x',margin.left).attr('y',57).attr('font-size',13).attr('fill','#657287').text(I18N[currentLang].chartHeatmapHint);
-  svg.selectAll('text.surface').data(surfaces).join('text').attr('class','axis').attr('text-anchor','start').attr('transform',s=>`translate(${x(s)+8},${margin.top-18}) rotate(-52)`).text(s=>dlabel(s));
+  svg.append('text').attr('x',margin.left).attr('y',28).attr('font-size',19).attr('font-weight',650).attr('fill','#202938').text(I18N[currentLang].chartHeatmapTitle);
+  svg.append('text').attr('x',margin.left).attr('y',48).attr('font-size',12).attr('fill','#657287').text(I18N[currentLang].chartHeatmapHint);
+  svg.selectAll('text.surface').data(surfaces).join('text').attr('class','axis').attr('text-anchor','start').attr('transform',s=>`translate(${x(s)+8},${margin.top-16}) rotate(-30)`).call(rotatedAxisLabel, s=>dlabel(s));
   svg.selectAll('text.mechanism').data(mechanisms).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',m=>y(m)+y.bandwidth()/2+4).text(m=>dlabel(m));
-  svg.selectAll('rect.cell').data(cellData).join('rect').attr('class','cell').attr('x',d=>x(d.s)).attr('y',d=>y(d.m)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${dlabel(d.m)} × ${dlabel(d.s)}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();pinTooltip(event,`<strong>${dlabel(d.m)} × ${dlabel(d.s)}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`);});
-  svg.selectAll('text.value').data(cellData.filter(d=>d.n)).join('text').attr('class','value').attr('x',d=>x(d.s)+x.bandwidth()/2).attr('y',d=>y(d.m)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',650).attr('fill',d=>d.n/max>.48?'#fff':'#202938').style('pointer-events','none').text(d=>d.n);
+  svg.selectAll('rect.cell').data(cellData).join('rect').attr('class','cell').attr('x',d=>x(d.s)).attr('y',d=>y(d.m)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${dlabel(d.m)} × ${dlabel(d.s)}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();filterPaperTable('heatmap',d.list,`${dlabel(d.m)} × ${dlabel(d.s)}`);});
+  svg.selectAll('text.value').data(cellData.filter(d=>d.n)).join('text').attr('class','value').attr('x',d=>x(d.s)+x.bandwidth()/2).attr('y',d=>y(d.m)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',11).attr('font-weight',650).attr('fill',d=>d.n/max>.48?'#fff':'#202938').style('pointer-events','none').text(d=>d.n);
 }
 
 function renderDefense(){
@@ -201,7 +295,7 @@ function renderDefense(){
   const max=d3.max(cellData,d=>d.n)||1, fill=d3.scaleSequential().domain([0,max]).interpolator(d3.interpolate('#eef3f8','#6f9fef'));
   svg.append('text').attr('x',margin.left).attr('y',35).attr('font-size',24).attr('font-weight',650).attr('fill','#202938').text('Defense subsection × addressed threat');
   svg.append('text').attr('x',margin.left).attr('y',57).attr('font-size',13).attr('fill','#657287').text('Hover a cell to inspect contributing papers.');
-  svg.selectAll('text.mechanism').data(mechanisms).join('text').attr('class','axis').attr('text-anchor','start').attr('transform',m=>`translate(${x(m)+8},${margin.top-18}) rotate(-52)`).text(m=>m.replaceAll('-',' '));
+  svg.selectAll('text.mechanism').data(mechanisms).join('text').attr('class','axis').attr('text-anchor','start').attr('transform',m=>`translate(${x(m)+8},${margin.top-18}) rotate(-38)`).text(m=>m.replaceAll('-',' '));
   svg.selectAll('text.subsection').data(subsections).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',s=>y(s)+y.bandwidth()/2+4).text(s=>s);
   svg.selectAll('rect.cell').data(cellData).join('rect').attr('class','cell').attr('x',d=>x(d.mechanism)).attr('y',d=>y(d.sub)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(d.sub)} × ${escapeHtml(d.mechanism.replaceAll('-',' '))}</strong><div>${d.n} papers</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();pinTooltip(event,`<strong>${escapeHtml(d.sub)} × ${escapeHtml(d.mechanism.replaceAll('-',' '))}</strong><div>${d.n} papers</div>${paperListHtml(d.list)}`);});
   svg.selectAll('text.value').data(cellData.filter(d=>d.n)).join('text').attr('class','value').attr('x',d=>x(d.mechanism)+x.bandwidth()/2).attr('y',d=>y(d.sub)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',650).attr('fill',d=>d.n/max>.48?'#fff':'#202938').style('pointer-events','none').text(d=>d.n);
@@ -222,24 +316,24 @@ function renderBenchmark(){
   const max=d3.max(cellData,d=>d.n)||1, fill=d3.scaleSequential().domain([0,max]).interpolator(d3.interpolate('#eef3f8','#6f9fef'));
   svg.append('text').attr('x',margin.left).attr('y',35).attr('font-size',24).attr('font-weight',650).attr('fill','#202938').text('Benchmark subsection × threat');
   svg.append('text').attr('x',margin.left).attr('y',57).attr('font-size',13).attr('fill','#657287').text('Hover a cell to inspect contributing papers.');
-  svg.selectAll('text.mechanism').data(mechanisms).join('text').attr('class','axis').attr('text-anchor','start').attr('transform',m=>`translate(${x(m)+8},${margin.top-18}) rotate(-52)`).text(m=>m.replaceAll('-',' '));
+  svg.selectAll('text.mechanism').data(mechanisms).join('text').attr('class','axis').attr('text-anchor','start').attr('transform',m=>`translate(${x(m)+8},${margin.top-18}) rotate(-38)`).text(m=>m.replaceAll('-',' '));
   svg.selectAll('text.subsection').data(subsections).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',s=>y(s)+y.bandwidth()/2+4).text(s=>s);
   svg.selectAll('rect.cell').data(cellData).join('rect').attr('class','cell').attr('x',d=>x(d.mechanism)).attr('y',d=>y(d.sub)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(d.sub)} × ${escapeHtml(d.mechanism.replaceAll('-',' '))}</strong><div>${d.n} papers</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();pinTooltip(event,`<strong>${escapeHtml(d.sub)} × ${escapeHtml(d.mechanism.replaceAll('-',' '))}</strong><div>${d.n} papers</div>${paperListHtml(d.list)}`);});
   svg.selectAll('text.value').data(cellData.filter(d=>d.n)).join('text').attr('class','value').attr('x',d=>x(d.mechanism)+x.bandwidth()/2).attr('y',d=>y(d.sub)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',650).attr('fill',d=>d.n/max>.48?'#fff':'#202938').style('pointer-events','none').text(d=>d.n);
 }
 
-function renderExtensionMap(container,title,items,rows,cols,rowValues,colValues,aria){
-  const margin={top: currentLang === 'ja' ? 230 : 190,right:35,bottom:70,left:260}, width=1180, height=Math.max(620,margin.top+rows.length*52+margin.bottom);
+function renderExtensionMap(container,title,items,rows,cols,rowValues,colValues,aria,tableView=''){
+  const margin={top:104,right:55,bottom:20,left:245}, width=1180, height=Math.max(320,margin.top+rows.length*36+margin.bottom);
   const svg=d3.select(container).append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label',aria);
   const x=d3.scaleBand().domain(cols).range([margin.left,width-margin.right]).padding(.06), y=d3.scaleBand().domain(rows).range([margin.top,height-margin.bottom]).padding(.06);
   const cells=[]; for(const row of rows) for(const col of cols){const list=items.filter(p=>rowValues(p).includes(row)&&colValues(p).includes(col));cells.push({row,col,list,n:list.length});}
   const max=d3.max(cells,d=>d.n)||1, fill=d3.scaleSequential().domain([0,max]).interpolator(d3.interpolate('#eef3f8','#6f9fef'));
-  svg.append('text').attr('x',margin.left).attr('y',35).attr('font-size',24).attr('font-weight',650).attr('fill','#202938').text(title);
-  svg.append('text').attr('x',margin.left).attr('y',57).attr('font-size',13).attr('fill','#657287').text(`${items.length}${I18N[currentLang].enrichedSuffix}`);
-  svg.selectAll('text.col').data(cols).join('text').attr('class','axis').attr('text-anchor','start').attr('transform',d=>`translate(${x(d)+8},${margin.top-18}) rotate(-52)`).text(d=>dlabel(d));
+  svg.append('text').attr('x',margin.left).attr('y',28).attr('font-size',19).attr('font-weight',650).attr('fill','#202938').text(title);
+  svg.append('text').attr('x',margin.left).attr('y',48).attr('font-size',12).attr('fill','#657287').text(`${items.length}${I18N[currentLang].enrichedSuffix}`);
+  svg.selectAll('text.col').data(cols).join('text').attr('class','axis').attr('text-anchor','middle').attr('x',d=>x(d)+x.bandwidth()/2).attr('y',margin.top-30).text(d=>dlabel(d));
   svg.selectAll('text.row').data(rows).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',d=>y(d)+y.bandwidth()/2+4).text(d=>dlabel(d));
-  svg.selectAll('rect.cell').data(cells).join('rect').attr('class','cell').attr('x',d=>x(d.col)).attr('y',d=>y(d.row)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(dlabel(d.row))} × ${escapeHtml(dlabel(d.col))}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();pinTooltip(event,`<strong>${escapeHtml(dlabel(d.row))} × ${escapeHtml(dlabel(d.col))}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`);});
-  svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.col)+x.bandwidth()/2).attr('y',d=>y(d.row)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',650).attr('fill',d=>d.n/max>.48?'#fff':'#202938').style('pointer-events','none').text(d=>d.n);
+  svg.selectAll('rect.cell').data(cells).join('rect').attr('class','cell').attr('x',d=>x(d.col)).attr('y',d=>y(d.row)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(dlabel(d.row))} × ${escapeHtml(dlabel(d.col))}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();if(tableView)filterPaperTable(tableView,d.list,`${dlabel(d.row)} × ${dlabel(d.col)}`);else pinTooltip(event,`<strong>${escapeHtml(dlabel(d.row))} × ${escapeHtml(dlabel(d.col))}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`);});
+  svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.col)+x.bandwidth()/2).attr('y',d=>y(d.row)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',11).attr('font-weight',650).attr('fill',d=>d.n/max>.48?'#fff':'#202938').style('pointer-events','none').text(d=>d.n);
 }
 
 function renderDefenseV2(){
@@ -249,7 +343,7 @@ function renderDefenseV2(){
 function renderThreatRisk(){
   const items=papers.filter(p=>p.threat_model.kind!=='survey');
   const rows=orderedThreatMechanisms(), cols=['task-reliability','physical-safety','ethical-societal','security-privacy'];
-  renderExtensionMap('#risk-chart',I18N[currentLang].chartRiskTitle,items,rows,cols,p=>threatValues(p,'mechanism'),p=>p.risks,'Threat mechanism and evaluated risk cross-map');
+  renderExtensionMap('#risk-chart',I18N[currentLang].chartRiskTitle,items,rows,cols,p=>threatValues(p,'mechanism'),p=>p.risks,'Threat mechanism and evaluated risk cross-map','risk');
 }
 function renderBenchmarkV2(){
   const items=papers.filter(p=>p.section==='benchmarks');
@@ -295,6 +389,7 @@ function renderAll(){
   for (const render of [renderTimeline, renderHeatmap, renderThreatRisk]) {
     try { render(); } catch (error) { console.error('Visualization failed to render:', error); }
   }
+  for (const view of ['timeline','heatmap','risk']) renderPaperTable(view);
 }
 
 function applyStaticI18n(lang){

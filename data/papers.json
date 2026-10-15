@@ -78,7 +78,9 @@
         "model-access"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-11-03",
+    "first_submission_source": "https://arxiv.org/abs/2511.01331"
   },
   {
     "id": "clean-action-backdoor-attacks-on-vision-language-action-models-via-sequenti-2025",
@@ -137,7 +139,9 @@
       ],
       "physical_validation": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "pre-execution-safety-gate-task-safety-contracts-for-llm-based-robot-task-pl-2026",
@@ -214,7 +218,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-04-07",
+    "first_submission_source": "https://arxiv.org/abs/2604.05427"
   },
   {
     "id": "protea-securing-robot-task-planning-and-execution-2026",
@@ -280,7 +286,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-01-12",
+    "first_submission_source": "https://arxiv.org/abs/2601.07186"
   },
   {
     "id": "logicguard-improving-embodied-llm-agents-through-temporal-logic-based-criti-2026",
@@ -361,7 +369,9 @@
         "safety-constraints"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-07-04",
+    "first_submission_source": "https://arxiv.org/abs/2507.03293"
   },
   {
     "id": "safeplan-leveraging-formal-logic-and-chain-of-thought-reasoning-for-enhance-2025",
@@ -443,7 +453,9 @@
         "safety-constraints"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-03-10",
+    "first_submission_source": "https://arxiv.org/abs/2503.06892"
   },
   {
     "id": "safe-llm-controlled-robots-with-formal-guarantees-via-reachability-analysis-2025",
@@ -526,7 +538,9 @@
         "safety-constraints"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-03-05",
+    "first_submission_source": "https://arxiv.org/abs/2503.03911"
   },
   {
     "id": "safeembodai-securing-llm-controlled-mobile-robots-against-prompt-injection-2024",
@@ -594,7 +608,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2024-09-03",
+    "first_submission_source": "https://arxiv.org/abs/2409.01630"
   },
   {
     "id": "trojanrobot-robot-collapse-supply-chain-backdoor-attacks-against-vlm-based--2025",
@@ -661,7 +677,9 @@
       ],
       "physical_validation": true,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2024-11-18",
+    "first_submission_source": "https://arxiv.org/abs/2411.11683"
   },
   {
     "id": "compromising-llm-driven-embodied-agents-with-contextual-backdoor-attacks-2025",
@@ -717,7 +735,9 @@
       ],
       "physical_validation": true,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2024-08-06",
+    "first_submission_source": "https://arxiv.org/abs/2408.02882"
   },
   {
     "id": "exploring-the-robustness-of-decision-level-through-adversarial-attacks-on-l-2024",
@@ -775,7 +795,9 @@
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2024-05-30",
+    "first_submission_source": "https://arxiv.org/abs/2405.19802"
   },
   {
     "id": "on-the-vulnerability-of-llm-vlm-controlled-robotics-2024",
@@ -835,7 +857,9 @@
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2024-02-15",
+    "first_submission_source": "https://arxiv.org/abs/2402.10340"
   },
   {
     "id": "extended-to-reality-prompt-injection-in-3d-environments-2026",
@@ -897,7 +921,9 @@
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-02-06",
+    "first_submission_source": "https://arxiv.org/abs/2602.07104"
   },
   {
     "id": "hijacking-robots-with-a-piece-of-paper-a-systematic-study-of-physical-promp-2026",
@@ -958,7 +984,9 @@
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-08-06",
+    "first_submission_source": "https://arxiv.org/abs/2608.05715"
   },
   {
     "id": "jailbreaking-embodied-llms-via-action-level-manipulation-2026",
@@ -1029,7 +1057,9 @@
       ],
       "physical_validation": true,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-03-02",
+    "first_submission_source": "https://arxiv.org/abs/2603.01414"
   },
   {
     "id": "badnaver-jailbreaking-vision-language-navigation-agents-2025",
@@ -1094,7 +1124,9 @@
       ],
       "physical_validation": true,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2025-05-18",
+    "first_submission_source": "https://arxiv.org/abs/2505.12443"
   },
   {
     "id": "beat-visual-backdoor-attacks-on-mllm-embodied-decision-making-via-contrasti-2025",
@@ -1160,7 +1192,9 @@
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2025-10-31",
+    "first_submission_source": "https://arxiv.org/abs/2510.27623"
   },
   {
     "id": "safedec-constrained-decoding-for-safe-autoregressive-embodied-policies-2025",
@@ -1236,7 +1270,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-09-01",
+    "first_submission_source": "https://arxiv.org/abs/2509.01728"
   },
   {
     "id": "ask-before-you-act-token-level-uncertainty-for-intervention-in-vision-langu-2025",
@@ -1313,14 +1349,16 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "fpc-vla-a-vision-language-action-framework-with-a-supervisor-for-failure-pr-2026",
     "title": "FPC-VLA: A Vision-Language-Action Framework with a Supervisor for Failure Prediction and Correction",
     "first_author": "Yang",
     "venue": "Expert Systems with Applications",
-    "year": 2025,
+    "year": 2026,
     "paper_url": "https://arxiv.org/abs/2509.04018",
     "code_url": "https://fpcvla.github.io/",
     "section": "defenses",
@@ -1397,7 +1435,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-09-04",
+    "first_submission_source": "https://arxiv.org/abs/2509.04018"
   },
   {
     "id": "guardian-detecting-robotic-planning-and-execution-errors-with-vision-langua-2025",
@@ -1479,14 +1519,16 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-12-01",
+    "first_submission_source": "https://arxiv.org/abs/2512.01946"
   },
   {
     "id": "aha-a-vision-language-model-for-detecting-and-reasoning-over-failures-in-ro-2024",
     "title": "AHA: A Vision-Language-Model for Detecting and Reasoning over Failures in Robotic Manipulation",
     "first_author": "Duan",
     "venue": "ICLR",
-    "year": 2024,
+    "year": 2025,
     "paper_url": "https://arxiv.org/abs/2410.00371",
     "code_url": "https://github.com/NVlabs/AHA",
     "section": "defenses",
@@ -1564,7 +1606,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2024-10-01",
+    "first_submission_source": "https://arxiv.org/abs/2410.00371"
   },
   {
     "id": "when-attention-betrays-erasing-backdoor-attacks-in-robotic-policies-by-reco-2026",
@@ -1648,7 +1692,9 @@
         "clean-reference"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-02-03",
+    "first_submission_source": "https://arxiv.org/abs/2602.03153"
   },
   {
     "id": "chromaguard-defending-vla-models-against-color-illumination-induced-blindne-2026",
@@ -1718,7 +1764,9 @@
         "model-access"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-07-16",
+    "first_submission_source": "https://arxiv.org/abs/2607.14698"
   },
   {
     "id": "structure-aware-robust-fine-tuning-2026",
@@ -1796,7 +1844,9 @@
         "model-access"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-08-04",
+    "first_submission_source": "https://arxiv.org/abs/2608.03231"
   },
   {
     "id": "safe-dict-concept-based-dictionary-learning-for-inference-time-safety-in-vi-2026",
@@ -1879,7 +1929,9 @@
         "clean-reference"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-02-02",
+    "first_submission_source": "https://arxiv.org/abs/2602.01834"
   },
   {
     "id": "horcrux-robustness-recovery-for-vision-language-action-policies-2025",
@@ -1956,7 +2008,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-11-22",
+    "first_submission_source": "https://arxiv.org/abs/2511.17869"
   },
   {
     "id": "mergevla-robust-vision-language-action-models-via-model-merging-2025",
@@ -2034,7 +2088,9 @@
         "model-access"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-11-24",
+    "first_submission_source": "https://arxiv.org/abs/2511.18810"
   },
   {
     "id": "retain-robust-finetuning-of-vision-language-action-robot-policies-via-param-2025",
@@ -2107,7 +2163,9 @@
         "model-access"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-12-09",
+    "first_submission_source": "https://arxiv.org/abs/2512.08333"
   },
   {
     "id": "drift-derailing-trajectories-of-flow-matching-vlas-with-adversarial-patches-2026",
@@ -2166,7 +2224,9 @@
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-08-04",
+    "first_submission_source": "https://arxiv.org/abs/2608.03207"
   },
   {
     "id": "vlaguard-vasa-visuomotor-attention-guided-semantic-attack-2026",
@@ -2247,7 +2307,9 @@
         "model-access"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-08-02",
+    "first_submission_source": "https://arxiv.org/abs/2608.01028"
   },
   {
     "id": "saber-2026-vla",
@@ -2307,7 +2369,9 @@
       ],
       "physical_validation": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-03-26",
+    "first_submission_source": "https://arxiv.org/abs/2603.24935"
   },
   {
     "id": "dura-2026-vla",
@@ -2373,7 +2437,9 @@
       ],
       "physical_validation": true,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-08-11",
+    "first_submission_source": "https://arxiv.org/abs/2608.10393"
   },
   {
     "id": "altered-thoughts-actions-2026",
@@ -2437,7 +2503,9 @@
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-03-13",
+    "first_submission_source": "https://arxiv.org/abs/2603.12717"
   },
   {
     "id": "partially-observable-patch-vla-2026",
@@ -2498,7 +2566,9 @@
       ],
       "physical_validation": true,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-06-02",
+    "first_submission_source": "https://arxiv.org/abs/2606.03556"
   },
   {
     "id": "world-models-dream-wrong-2026",
@@ -2564,7 +2634,9 @@
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-02-21",
+    "first_submission_source": "https://arxiv.org/abs/2602.18739"
   },
   {
     "id": "trap-2026-vla-cot-patch",
@@ -2622,7 +2694,9 @@
       ],
       "physical_validation": true,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-03-24",
+    "first_submission_source": "https://arxiv.org/abs/2603.23117"
   },
   {
     "id": "tex3d-2026-vla",
@@ -2687,7 +2761,9 @@
       ],
       "physical_validation": true,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-04-02",
+    "first_submission_source": "https://arxiv.org/abs/2604.01618"
   },
   {
     "id": "flowhijack-2026-vla",
@@ -2752,7 +2828,9 @@
       ],
       "physical_validation": true,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-03-30",
+    "first_submission_source": "https://arxiv.org/abs/2604.09651"
   },
   {
     "id": "jailwam-2026",
@@ -2820,7 +2898,9 @@
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-04-07",
+    "first_submission_source": "https://arxiv.org/abs/2604.05498"
   },
   {
     "id": "pina-2026",
@@ -2883,7 +2963,9 @@
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-01-20",
+    "first_submission_source": "https://arxiv.org/abs/2601.13612"
   },
   {
     "id": "vlaleaks-2026",
@@ -2947,7 +3029,9 @@
       ],
       "physical_validation": true,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-06-13",
+    "first_submission_source": "https://arxiv.org/abs/2606.15165"
   },
   {
     "id": "ripa-2026",
@@ -3014,7 +3098,9 @@
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-06-26",
+    "first_submission_source": "https://arxiv.org/abs/2606.28649"
   },
   {
     "id": "gong-2026-sok-security-privacy-foundation-model-powered-robots",
@@ -3054,7 +3140,9 @@
       "security",
       "privacy",
       "foundation-model-robotics"
-    ]
+    ],
+    "first_submission_date": "2026-06-15",
+    "first_submission_source": "https://arxiv.org/abs/2606.16788"
   },
   {
     "id": "ling-2026-toward-secure-llm-agents",
@@ -3095,7 +3183,9 @@
       "llm-agents",
       "threat-model",
       "defense"
-    ]
+    ],
+    "first_submission_date": "2026-06-09",
+    "first_submission_source": "https://arxiv.org/abs/2606.10749"
   },
   {
     "id": "liu-2026-security-world-model-embodied-ai",
@@ -3136,7 +3226,9 @@
       "world-model",
       "lifecycle",
       "security"
-    ]
+    ],
+    "first_submission_date": "2026-07-30",
+    "first_submission_source": "https://arxiv.org/abs/2607.28226"
   },
   {
     "id": "trust-llm-controlled-robotics-2026",
@@ -3175,7 +3267,9 @@
       "trust",
       "llm-robotics",
       "mitigation"
-    ]
+    ],
+    "first_submission_date": "2025-12-17",
+    "first_submission_source": "https://arxiv.org/abs/2601.02377"
   },
   {
     "id": "li-2026-vla-safety-survey",
@@ -3222,7 +3316,9 @@
     "tags": [
       "survey",
       "taxonomy"
-    ]
+    ],
+    "first_submission_date": "2026-04-26",
+    "first_submission_source": "https://arxiv.org/abs/2604.23775"
   },
   {
     "id": "xing-2025-robust-secure-embodied-ai",
@@ -3269,7 +3365,9 @@
     "tags": [
       "survey",
       "vulnerability-taxonomy"
-    ]
+    ],
+    "first_submission_date": "2025-02-18",
+    "first_submission_source": "https://arxiv.org/abs/2502.13175"
   },
   {
     "id": "ma-2026-what-breaks-embodied-ai",
@@ -3307,7 +3405,9 @@
     "tags": [
       "perspective",
       "closed-loop-safety"
-    ]
+    ],
+    "first_submission_date": "2026-02-19",
+    "first_submission_source": "https://arxiv.org/abs/2602.17345"
   },
   {
     "id": "dalal-2026-anchor-align",
@@ -3367,7 +3467,9 @@
       ],
       "physical_validation": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-07-15",
+    "first_submission_source": "https://arxiv.org/abs/2607.13429"
   },
   {
     "id": "niu-2026-fan-vla",
@@ -3420,7 +3522,9 @@
       ],
       "physical_validation": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-04-02",
+    "first_submission_source": "https://arxiv.org/abs/2604.01570"
   },
   {
     "id": "zhou-2025-libero-pro",
@@ -3494,7 +3598,9 @@
       "public_data": true,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-10-04",
+    "first_submission_source": "https://arxiv.org/abs/2510.03827"
   },
   {
     "id": "fei-2026-libero-plus",
@@ -3580,7 +3686,9 @@
       "public_data": true,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "goel-2025-geometric-red-teaming",
@@ -3634,7 +3742,9 @@
       ],
       "physical_validation": true,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-09-15",
+    "first_submission_source": "https://arxiv.org/abs/2509.12379"
   },
   {
     "id": "hamid-2026-icr-drive",
@@ -3697,7 +3807,9 @@
       ],
       "physical_validation": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-04-07",
+    "first_submission_source": "https://arxiv.org/abs/2604.05378"
   },
   {
     "id": "rasouli-2026-open-world-vla",
@@ -3758,7 +3870,9 @@
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-04-23",
+    "first_submission_source": "https://arxiv.org/abs/2604.21192"
   },
   {
     "id": "zhou-2025-badvla",
@@ -3820,7 +3934,9 @@
       ],
       "physical_validation": false,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-05-22",
+    "first_submission_source": "https://arxiv.org/abs/2505.16640"
   },
   {
     "id": "xu-2025-dropvla",
@@ -3886,7 +4002,9 @@
       ],
       "physical_validation": true,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2025-10-13",
+    "first_submission_source": "https://arxiv.org/abs/2510.10932"
   },
   {
     "id": "guo-2026-state-backdoor",
@@ -3950,7 +4068,9 @@
       ],
       "physical_validation": true,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-01-07",
+    "first_submission_source": "https://arxiv.org/abs/2601.04266"
   },
   {
     "id": "xu-2026-silentdrift",
@@ -4013,14 +4133,16 @@
       ],
       "physical_validation": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-01-20",
+    "first_submission_source": "https://arxiv.org/abs/2601.14323"
   },
   {
     "id": "wang-2025-vla-adversarial-vulnerabilities",
     "title": "Exploring the Adversarial Vulnerabilities of Vision-Language-Action Models in Robotics",
     "first_author": "Wang",
     "venue": "ICCV",
-    "year": 2024,
+    "year": 2025,
     "paper_url": "https://arxiv.org/abs/2411.13587",
     "code_url": "https://github.com/William-wAng618/roboticAttack",
     "section": "inference-attacks",
@@ -4076,7 +4198,9 @@
       ],
       "physical_validation": true,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2024-11-18",
+    "first_submission_source": "https://arxiv.org/abs/2411.13587"
   },
   {
     "id": "yan-2025-when-alignment-fails",
@@ -4137,7 +4261,9 @@
       ],
       "physical_validation": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2025-11-20",
+    "first_submission_source": "https://arxiv.org/abs/2511.16203"
   },
   {
     "id": "wang-2025-freezevla",
@@ -4199,14 +4325,16 @@
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2025-09-24",
+    "first_submission_source": "https://arxiv.org/abs/2509.19870"
   },
   {
     "id": "lu-2026-phantom-menace",
     "title": "Phantom Menace: Exploring and Enhancing the Robustness of VLA Models Against Physical Sensor Attacks",
     "first_author": "Lu",
     "venue": "AAAI",
-    "year": 2025,
+    "year": 2026,
     "paper_url": "https://arxiv.org/abs/2511.10008",
     "code_url": null,
     "section": "inference-attacks",
@@ -4278,14 +4406,16 @@
         "attack-samples"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-11-13",
+    "first_submission_source": "https://arxiv.org/abs/2511.10008"
   },
   {
     "id": "robey-2025-robopair",
     "title": "Jailbreaking LLM-Controlled Robots",
     "first_author": "Robey",
     "venue": "ICRA",
-    "year": 2024,
+    "year": 2025,
     "paper_url": "https://arxiv.org/abs/2410.13691",
     "code_url": "https://github.com/arobey1/robopair",
     "section": "inference-attacks",
@@ -4345,7 +4475,9 @@
       ],
       "physical_validation": true,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2024-10-17",
+    "first_submission_source": "https://arxiv.org/abs/2410.13691"
   },
   {
     "id": "jones-2025-robogcg",
@@ -4407,14 +4539,16 @@
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2025-06-03",
+    "first_submission_source": "https://arxiv.org/abs/2506.03350"
   },
   {
     "id": "burbano-2026-chai",
     "title": "CHAI: Command Hijacking Against Embodied AI",
     "first_author": "Burbano",
     "venue": "SaTML",
-    "year": 2025,
+    "year": 2026,
     "paper_url": "https://arxiv.org/abs/2510.00181",
     "code_url": "https://github.com/Cyphysecurity/chai",
     "section": "inference-attacks",
@@ -4463,7 +4597,9 @@
       ],
       "physical_validation": true,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2025-09-30",
+    "first_submission_source": "https://arxiv.org/abs/2510.00181"
   },
   {
     "id": "wang-2025-advedm",
@@ -4518,7 +4654,9 @@
       ],
       "physical_validation": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-09-20",
+    "first_submission_source": "https://arxiv.org/abs/2509.16645"
   },
   {
     "id": "xu-2025-edpa",
@@ -4597,7 +4735,9 @@
         "attack-samples"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-10-15",
+    "first_submission_source": "https://arxiv.org/abs/2510.13237"
   },
   {
     "id": "zhang-2025-safevla",
@@ -4677,7 +4817,9 @@
         "model-access"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-03-05",
+    "first_submission_source": "https://arxiv.org/abs/2503.03480"
   },
   {
     "id": "hu-2025-vlsa",
@@ -4755,14 +4897,16 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-12-09",
+    "first_submission_source": "https://arxiv.org/abs/2512.11891"
   },
   {
     "id": "ravichandran-2026-safety-guardrails",
     "title": "Safety Guardrails for LLM-Enabled Robots",
     "first_author": "Ravichandran",
     "venue": "IEEE RA-L",
-    "year": 2025,
+    "year": 2026,
     "paper_url": "https://arxiv.org/abs/2503.07885",
     "code_url": null,
     "section": "defenses",
@@ -4844,7 +4988,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-03-10",
+    "first_submission_source": "https://arxiv.org/abs/2503.07885"
   },
   {
     "id": "yang-2023-safety-chip",
@@ -4921,7 +5067,9 @@
         "safety-constraints"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2023-09-18",
+    "first_submission_source": "https://arxiv.org/abs/2309.09919"
   },
   {
     "id": "gu-2025-safe-failure-detection",
@@ -4997,7 +5145,9 @@
         "safety-constraints"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-06-11",
+    "first_submission_source": "https://arxiv.org/abs/2506.09937"
   },
   {
     "id": "zhang-2025-vla-arena",
@@ -5072,7 +5222,9 @@
       "public_data": true,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-12-27",
+    "first_submission_source": "https://arxiv.org/abs/2512.22539"
   },
   {
     "id": "ru-2026-vla-risk",
@@ -5147,7 +5299,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "yin-2025-safeagentbench",
@@ -5217,14 +5371,16 @@
       "public_data": true,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2024-12-17",
+    "first_submission_source": "https://arxiv.org/abs/2412.13178"
   },
   {
     "id": "lu-2026-is-bench",
     "title": "IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents in Daily Household Tasks",
     "first_author": "Lu",
     "venue": "AAAI",
-    "year": 2025,
+    "year": 2026,
     "paper_url": "https://arxiv.org/abs/2506.16402",
     "code_url": null,
     "section": "benchmarks",
@@ -5298,7 +5454,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-06-19",
+    "first_submission_source": "https://arxiv.org/abs/2506.16402"
   },
   {
     "id": "zhu-2024-earbench",
@@ -5368,7 +5526,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2024-08-08",
+    "first_submission_source": "https://arxiv.org/abs/2408.04449"
   },
   {
     "id": "sermanet-2025-asimov",
@@ -5433,7 +5593,9 @@
       "public_data": true,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-03-11",
+    "first_submission_source": "https://arxiv.org/abs/2503.08663"
   },
   {
     "id": "li-2024-simpler",
@@ -5505,7 +5667,9 @@
       "public_data": true,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2024-05-09",
+    "first_submission_source": "https://arxiv.org/abs/2405.05941"
   },
   {
     "id": "liu-2023-libero",
@@ -5578,7 +5742,9 @@
       "public_data": true,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2023-06-05",
+    "first_submission_source": "https://arxiv.org/abs/2306.03310"
   },
   {
     "id": "huang-2025-ten-deadly-sins",
@@ -5640,14 +5806,16 @@
       ],
       "physical_validation": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-12-06",
+    "first_submission_source": "https://arxiv.org/abs/2512.06387"
   },
   {
     "id": "chang-2026-cyber-physical-steganography",
     "title": "Cyber-Physical Steganography in Robotic Motion Control",
     "first_author": "Chang",
     "venue": "IEICE Transactions",
-    "year": 2025,
+    "year": 2026,
     "paper_url": "https://arxiv.org/abs/2501.04541",
     "code_url": null,
     "section": "system-security",
@@ -5706,7 +5874,9 @@
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2025-01-08",
+    "first_submission_source": "https://arxiv.org/abs/2501.04541"
   },
   {
     "id": "wang-2026-navigating-embodied-intelligence",
@@ -5746,7 +5916,9 @@
       "survey",
       "security",
       "privacy"
-    ]
+    ],
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "tan-2025-safe-trustworthy-embodied-ai",
@@ -5786,7 +5958,9 @@
       "survey",
       "trustworthiness",
       "maturity-model"
-    ]
+    ],
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "jiang-2025-vla-autonomous-driving-survey",
@@ -5828,7 +6002,9 @@
       "survey",
       "autonomous-driving",
       "closed-loop-control"
-    ]
+    ],
+    "first_submission_date": "2025-06-30",
+    "first_submission_source": "https://arxiv.org/abs/2506.24044"
   },
   {
     "id": "black-2025-pi05",
@@ -5885,14 +6061,16 @@
       ],
       "physical_validation": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-04-22",
+    "first_submission_source": "https://arxiv.org/abs/2504.16054"
   },
   {
     "id": "jiao-2025-bald",
     "title": "Can We Trust Embodied Agents? Exploring Backdoor Attacks Against Embodied LLM-Based Decision-Making Systems",
     "first_author": "Jiao",
     "venue": "ICLR",
-    "year": 2024,
+    "year": 2025,
     "paper_url": "https://arxiv.org/abs/2405.20774",
     "code_url": "https://github.com/ASGuard-UCI/BALD",
     "section": "training-attacks",
@@ -5946,14 +6124,16 @@
       ],
       "physical_validation": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2024-05-27",
+    "first_submission_source": "https://arxiv.org/abs/2405.20774"
   },
   {
     "id": "lu-2026-upa-rfas",
     "title": "When Robots Obey the Patch: Universal Transferable Patch Attacks on Vision-Language-Action Models",
     "first_author": "Lu",
     "venue": "CVPR",
-    "year": 2025,
+    "year": 2026,
     "paper_url": "https://arxiv.org/abs/2511.21192",
     "code_url": "https://github.com/yuyi-sd/UPA-RFAS",
     "section": "inference-attacks",
@@ -6004,7 +6184,9 @@
       ],
       "physical_validation": true,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-11-26",
+    "first_submission_source": "https://arxiv.org/abs/2511.21192"
   },
   {
     "id": "lu-2025-poex",
@@ -6064,14 +6246,16 @@
       ],
       "physical_validation": true,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2024-12-21",
+    "first_submission_source": "https://arxiv.org/abs/2412.16633"
   },
   {
     "id": "zhang-2025-badrobot",
     "title": "BadRobot: Jailbreaking Embodied LLM Agents in the Physical World",
     "first_author": "Zhang",
     "venue": "ICLR",
-    "year": 2024,
+    "year": 2025,
     "paper_url": "https://arxiv.org/abs/2407.20242",
     "code_url": "https://github.com/Rookie143/BadRobot",
     "section": "inference-attacks",
@@ -6131,14 +6315,16 @@
       ],
       "physical_validation": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2024-07-16",
+    "first_submission_source": "https://arxiv.org/abs/2407.20242"
   },
   {
     "id": "xie-2025-chain-of-attack",
     "title": "Chain of Attack: On the Robustness of Vision-Language Models Against Transfer-Based Adversarial Attacks",
     "first_author": "Xie",
     "venue": "CVPR",
-    "year": 2024,
+    "year": 2025,
     "paper_url": "https://arxiv.org/abs/2411.15720",
     "code_url": "https://github.com/Shelton1013/Chain_of_Attack",
     "section": "inference-attacks",
@@ -6187,7 +6373,9 @@
       ],
       "physical_validation": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2024-11-24",
+    "first_submission_source": "https://arxiv.org/abs/2411.15720"
   },
   {
     "id": "yang-2025-cee",
@@ -6269,7 +6457,9 @@
         "clean-reference"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-04-15",
+    "first_submission_source": "https://arxiv.org/abs/2504.13201"
   },
   {
     "id": "mao-2025-agentsafe",
@@ -6353,7 +6543,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-03-06",
+    "first_submission_source": "https://arxiv.org/abs/2503.04392"
   },
   {
     "id": "wu-2024-embodied-active-defense",
@@ -6428,7 +6620,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2024-03-31",
+    "first_submission_source": "https://arxiv.org/abs/2404.00540"
   },
   {
     "id": "zhou-2025-goba",
@@ -6493,7 +6687,9 @@
       ],
       "physical_validation": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2025-10-10",
+    "first_submission_source": "https://arxiv.org/abs/2510.09269"
   },
   {
     "id": "yu-2026-safe-night-vla",
@@ -6570,7 +6766,9 @@
         "clean-reference"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-03-05",
+    "first_submission_source": "https://arxiv.org/abs/2603.05754"
   },
   {
     "id": "lu-2025-hi-ors",
@@ -6641,7 +6839,9 @@
         "model-access"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-10-30",
+    "first_submission_source": "https://arxiv.org/abs/2510.26406"
   },
   {
     "id": "chang-2026-visual-injection-trust-boundary",
@@ -6696,7 +6896,9 @@
       ],
       "physical_validation": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-04-21",
+    "first_submission_source": "https://arxiv.org/abs/2604.19844"
   },
   {
     "id": "feng-2025-words-to-safety",
@@ -6776,7 +6978,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-11-08",
+    "first_submission_source": "https://arxiv.org/abs/2511.05889"
   },
   {
     "id": "zhang-2026-linguistic-grounding",
@@ -6858,7 +7062,9 @@
         "clean-reference"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-03-06",
+    "first_submission_source": "https://arxiv.org/abs/2603.06001"
   },
   {
     "id": "hancock-2024-byovla",
@@ -6929,7 +7135,9 @@
         "clean-reference"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2024-10-02",
+    "first_submission_source": "https://arxiv.org/abs/2410.01971"
   },
   {
     "id": "xu-2025-affordance-field-intervention",
@@ -7008,7 +7216,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-12-08",
+    "first_submission_source": "https://arxiv.org/abs/2512.07472"
   },
   {
     "id": "lin-2025-failsafe",
@@ -7095,7 +7305,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-10-02",
+    "first_submission_source": "https://arxiv.org/abs/2510.01642"
   },
   {
     "id": "zhou-2026-rc-nf",
@@ -7170,7 +7382,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-03-11",
+    "first_submission_source": "https://arxiv.org/abs/2603.11106"
   },
   {
     "id": "chen-2026-hazardarena",
@@ -7244,7 +7458,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-04-14",
+    "first_submission_source": "https://arxiv.org/abs/2604.12447"
   },
   {
     "id": "wang-2024-vlatest",
@@ -7313,7 +7529,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2024-09-19",
+    "first_submission_source": "https://arxiv.org/abs/2409.12894"
   },
   {
     "id": "sakano-2025-rover",
@@ -7392,7 +7610,9 @@
         "safety-constraints"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-11-21",
+    "first_submission_source": "https://arxiv.org/abs/2511.17781"
   },
   {
     "id": "zollo-2025-vla-calibration",
@@ -7467,7 +7687,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-07-23",
+    "first_submission_source": "https://arxiv.org/abs/2507.17383"
   },
   {
     "id": "ying-2025-agentsafe-benchmark",
@@ -7536,7 +7758,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-06-17",
+    "first_submission_source": "https://arxiv.org/abs/2506.14697"
   },
   {
     "id": "chen-2025-safemind",
@@ -7608,7 +7832,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-09-30",
+    "first_submission_source": "https://arxiv.org/abs/2509.25885"
   },
   {
     "id": "liu-2025-evovla",
@@ -7684,7 +7910,9 @@
         "model-access"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-11-20",
+    "first_submission_source": "https://arxiv.org/abs/2511.16166"
   },
   {
     "id": "yasarla-2026-gero",
@@ -7740,7 +7968,9 @@
       ],
       "physical_validation": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-01-16",
+    "first_submission_source": "https://arxiv.org/abs/2601.11475"
   },
   {
     "id": "honari-2024-sorl",
@@ -7823,7 +8053,9 @@
         "model-access"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2024-02-23",
+    "first_submission_source": "https://arxiv.org/abs/2402.15197"
   },
   {
     "id": "ranjan-2026-vla-forget",
@@ -7903,7 +8135,9 @@
         "model-access"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-04-05",
+    "first_submission_source": "https://arxiv.org/abs/2604.03956"
   },
   {
     "id": "xia-2025-apo",
@@ -7975,7 +8209,9 @@
         "model-access"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "yue-2023-safe-vln",
@@ -8062,7 +8298,9 @@
         "safety-constraints"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2023-11-06",
+    "first_submission_source": "https://arxiv.org/abs/2311.02817"
   },
   {
     "id": "liu-2023-reflect",
@@ -8140,7 +8378,9 @@
         "safety-constraints"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "li-2026-causal-scene-narration",
@@ -8225,7 +8465,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-04-02",
+    "first_submission_source": "https://arxiv.org/abs/2604.01723"
   },
   {
     "id": "tolle-2025-safe-rfm",
@@ -8310,7 +8552,9 @@
         "safety-constraints"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-05-15",
+    "first_submission_source": "https://arxiv.org/abs/2505.10219"
   },
   {
     "id": "mehboob-2026-dronevla",
@@ -8385,7 +8629,9 @@
         "clean-reference"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-01-20",
+    "first_submission_source": "https://arxiv.org/abs/2601.13809"
   },
   {
     "id": "zhang-2026-compliantvla",
@@ -8469,7 +8715,9 @@
         "safety-constraints"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-01-21",
+    "first_submission_source": "https://arxiv.org/abs/2601.15541"
   },
   {
     "id": "bui-2026-construction-vlm",
@@ -8532,7 +8780,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-01-15",
+    "first_submission_source": "https://arxiv.org/abs/2601.10835"
   },
   {
     "id": "valle-2025-vla-uncertainty-quality",
@@ -8597,7 +8847,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-07-22",
+    "first_submission_source": "https://arxiv.org/abs/2507.17049"
   },
   {
     "id": "lu-2025-sensor-attacks",
@@ -8655,7 +8907,9 @@
       ],
       "physical_validation": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "zhang-2024-vlabench",
@@ -8727,7 +8981,9 @@
       "public_data": true,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2024-12-24",
+    "first_submission_source": "https://arxiv.org/abs/2412.18194"
   },
   {
     "id": "seong-2025-costnav",
@@ -8806,7 +9062,9 @@
       "public_data": true,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-11-25",
+    "first_submission_source": "https://arxiv.org/abs/2511.20216"
   },
   {
     "id": "li-2025-shawshank",
@@ -8864,7 +9122,9 @@
       ],
       "physical_validation": false,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2025-11-20",
+    "first_submission_source": "https://arxiv.org/abs/2511.16347"
   },
   {
     "id": "cui-2026-libero-safety",
@@ -8944,7 +9204,9 @@
       "public_data": true,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-06-22",
+    "first_submission_source": "https://arxiv.org/abs/2606.23686"
   },
   {
     "id": "lyu-2026-foresight-safety-vla",
@@ -9023,7 +9285,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-06-25",
+    "first_submission_source": "https://arxiv.org/abs/2606.27079"
   },
   {
     "id": "kim-2026-libero-para",
@@ -9095,7 +9359,9 @@
       "public_data": true,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-03-30",
+    "first_submission_source": "https://arxiv.org/abs/2603.28301"
   },
   {
     "id": "li-2025-attackvla",
@@ -9177,7 +9443,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-11-15",
+    "first_submission_source": "https://arxiv.org/abs/2511.12149"
   },
   {
     "id": "zhang-2026-redvla",
@@ -9266,7 +9534,9 @@
       "public_data": true,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-04-24",
+    "first_submission_source": "https://arxiv.org/abs/2604.22591"
   },
   {
     "id": "fan-2026-safevla-bench",
@@ -9345,7 +9615,9 @@
       "public_data": true,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-05-30",
+    "first_submission_source": "https://arxiv.org/abs/2606.00773"
   },
   {
     "id": "fu-2026-trustvla",
@@ -9429,7 +9701,9 @@
         "clean-reference"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-07-14",
+    "first_submission_source": "https://arxiv.org/abs/2607.12571"
   },
   {
     "id": "zhou-2026-infuse",
@@ -9490,7 +9764,9 @@
       ],
       "physical_validation": true,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-01-31",
+    "first_submission_source": "https://arxiv.org/abs/2602.00500"
   },
   {
     "id": "qu-2025-vlm-safe",
@@ -9573,7 +9849,9 @@
         "model-access"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-05-22",
+    "first_submission_source": "https://arxiv.org/abs/2505.16377"
   },
   {
     "id": "huang-2025-safe-beal",
@@ -9650,7 +9928,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-04-20",
+    "first_submission_source": "https://arxiv.org/abs/2504.14650"
   },
   {
     "id": "wang-2026-auto-horizon",
@@ -9729,7 +10009,9 @@
         "safety-constraints"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-02-24",
+    "first_submission_source": "https://arxiv.org/abs/2602.21445"
   },
   {
     "id": "kachaev-2025-dont-blind-vla",
@@ -9784,7 +10066,9 @@
       ],
       "physical_validation": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-10-29",
+    "first_submission_source": "https://arxiv.org/abs/2510.25616"
   },
   {
     "id": "cheng-2024-manipulation-facing-threats",
@@ -9857,7 +10141,9 @@
       "public_data": true,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2024-09-20",
+    "first_submission_source": "https://arxiv.org/abs/2409.13174"
   },
   {
     "id": "huang-2025-ulr-privacy",
@@ -9931,7 +10217,9 @@
         "clean-reference"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-07-21",
+    "first_submission_source": "https://arxiv.org/abs/2507.16034"
   },
   {
     "id": "huang-2025-robot-vision-privacy",
@@ -9993,7 +10281,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-05-12",
+    "first_submission_source": "https://arxiv.org/abs/2505.07766"
   },
   {
     "id": "choi-2025-pcvs",
@@ -10067,7 +10357,9 @@
         "clean-reference"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-05-08",
+    "first_submission_source": "https://arxiv.org/abs/2505.05519"
   },
   {
     "id": "zhang-2025-dynamic-privacy",
@@ -10104,14 +10396,16 @@
       "privacy",
       "human-robot-interaction",
       "dynamic-learning"
-    ]
+    ],
+    "first_submission_date": "2025-09-23",
+    "first_submission_source": "https://arxiv.org/abs/2509.19041"
   },
   {
     "id": "brunke-2025-semantic-safety-filter",
     "title": "Semantically Safe Robot Manipulation: From Semantic Scene Understanding to Motion Safeguards",
     "first_author": "Brunke",
-    "venue": "ICRA",
-    "year": 2024,
+    "venue": "IEEE RA-L",
+    "year": 2025,
     "paper_url": "https://arxiv.org/abs/2410.15185",
     "code_url": "https://utiasdsl.github.io/semantic-manipulation/",
     "section": "defenses",
@@ -10188,7 +10482,9 @@
         "safety-constraints"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2024-10-19",
+    "first_submission_source": "https://arxiv.org/abs/2410.15185"
   },
   {
     "id": "grislain-2025-i-failsense",
@@ -10265,7 +10561,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-09-19",
+    "first_submission_source": "https://arxiv.org/abs/2509.16072"
   },
   {
     "id": "wang-2025-robosafe",
@@ -10357,14 +10655,16 @@
         "safety-constraints"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-12-24",
+    "first_submission_source": "https://arxiv.org/abs/2512.21220"
   },
   {
     "id": "guo-2024-doremi",
     "title": "DoReMi: Grounding Language Model by Detecting and Recovering from Plan-Execution Misalignment",
     "first_author": "Guo",
     "venue": "IROS",
-    "year": 2023,
+    "year": 2024,
     "paper_url": "https://arxiv.org/abs/2307.00329",
     "code_url": "https://sites.google.com/view/doremi-paper",
     "section": "defenses",
@@ -10438,7 +10738,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2023-07-01",
+    "first_submission_source": "https://arxiv.org/abs/2307.00329"
   },
   {
     "id": "ren-2023-knowno",
@@ -10516,7 +10818,9 @@
         "none"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2023-07-04",
+    "first_submission_source": "https://arxiv.org/abs/2307.01928"
   },
   {
     "id": "kato-2026-dual-correction",
@@ -10598,14 +10902,16 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-02-16",
+    "first_submission_source": "https://arxiv.org/abs/2602.14551"
   },
   {
     "id": "lin-2026-ask-to-clarify",
     "title": "Ask-to-Clarify: Resolving Instruction Ambiguity through Multi-turn Dialogue",
     "first_author": "Lin",
     "venue": "IROS",
-    "year": 2025,
+    "year": 2026,
     "paper_url": "https://arxiv.org/abs/2509.15061",
     "code_url": null,
     "section": "defenses",
@@ -10671,7 +10977,9 @@
         "none"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-09-18",
+    "first_submission_source": "https://arxiv.org/abs/2509.15061"
   },
   {
     "id": "hsieh-2025-iva",
@@ -10750,7 +11058,9 @@
         "none"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-08-22",
+    "first_submission_source": "https://arxiv.org/abs/2508.16292"
   },
   {
     "id": "li-2024-sc-vla",
@@ -10830,7 +11140,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2024-05-27",
+    "first_submission_source": "https://arxiv.org/abs/2405.17418"
   },
   {
     "id": "xia-2025-phoenix",
@@ -10914,7 +11226,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2025-04-20",
+    "first_submission_source": "https://arxiv.org/abs/2504.14588"
   },
   {
     "id": "sapkota-2025-vla-review",
@@ -10952,7 +11266,9 @@
       "vla",
       "applications",
       "challenges"
-    ]
+    ],
+    "first_submission_date": "2025-05-07",
+    "first_submission_source": "https://arxiv.org/abs/2505.04769"
   },
   {
     "id": "shao-2025-large-vlm-vla-survey",
@@ -10988,7 +11304,9 @@
       "vlm",
       "robotic-manipulation",
       "architecture"
-    ]
+    ],
+    "first_submission_date": "2025-08-18",
+    "first_submission_source": "https://arxiv.org/abs/2508.13073"
   },
   {
     "id": "xiang-2025-vla-post-training-survey",
@@ -11022,7 +11340,9 @@
       "post-training",
       "adaptation",
       "motor-learning"
-    ]
+    ],
+    "first_submission_date": "2025-06-26",
+    "first_submission_source": "https://arxiv.org/abs/2506.20966"
   },
   {
     "id": "zhong-2025-action-tokenization-survey",
@@ -11056,7 +11376,9 @@
       "action-tokenization",
       "policy-representation",
       "vla"
-    ]
+    ],
+    "first_submission_date": "2025-07-02",
+    "first_submission_source": "https://arxiv.org/abs/2507.01925"
   },
   {
     "id": "din-2025-vla-systematic-review",
@@ -11092,7 +11414,9 @@
       "systematic-review",
       "robotic-manipulation",
       "vla"
-    ]
+    ],
+    "first_submission_date": "2025-07-14",
+    "first_submission_source": "https://arxiv.org/abs/2507.10672"
   },
   {
     "id": "zhang-2025-pure-vla-survey",
@@ -11128,7 +11452,9 @@
       "end-to-end",
       "taxonomy",
       "vla"
-    ]
+    ],
+    "first_submission_date": "2025-09-23",
+    "first_submission_source": "https://arxiv.org/abs/2509.19012"
   },
   {
     "id": "yu-2025-efficient-vla-survey",
@@ -11165,7 +11491,9 @@
       "efficiency",
       "inference",
       "deployment"
-    ]
+    ],
+    "first_submission_date": "2025-10-27",
+    "first_submission_source": "https://arxiv.org/abs/2510.24795"
   },
   {
     "id": "kawaharazuka-2025-real-world-vla-review",
@@ -11206,7 +11534,9 @@
       "real-world",
       "robotics",
       "deployment"
-    ]
+    ],
+    "first_submission_date": "2025-10-08",
+    "first_submission_source": "https://arxiv.org/abs/2510.07077"
   },
   {
     "id": "zhao-2026-flare",
@@ -11296,7 +11626,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-08-27",
+    "first_submission_source": "https://arxiv.org/abs/2608.26645"
   },
   {
     "id": "zhang-2026-harness-vla",
@@ -11384,7 +11716,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-07-09",
+    "first_submission_source": "https://arxiv.org/abs/2607.08448"
   },
   {
     "id": "hao-2026-far",
@@ -11462,7 +11796,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-07-01",
+    "first_submission_source": "https://arxiv.org/abs/2607.01111"
   },
   {
     "id": "canevaro-2026-shift-drift",
@@ -11520,7 +11856,9 @@
       ],
       "physical_validation": false,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-07-08",
+    "first_submission_source": "https://arxiv.org/abs/2607.07844"
   },
   {
     "id": "lu-2026-aspire",
@@ -11602,7 +11940,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-06-30",
+    "first_submission_source": "https://arxiv.org/abs/2607.00272"
   },
   {
     "id": "ma-2024-vla-embodied-ai-survey",
@@ -11638,7 +11978,9 @@
       "embodied-ai",
       "benchmark",
       "vla"
-    ]
+    ],
+    "first_submission_date": "2024-05-23",
+    "first_submission_source": "https://arxiv.org/abs/2405.14093"
   },
   {
     "id": "yang-2026-evidence-gated-regularization-vla",
@@ -11717,7 +12059,9 @@
         "model-access"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-09-02",
+    "first_submission_source": "https://arxiv.org/abs/2609.03142"
   },
   {
     "id": "xu-2026-task-functional-perception-distillation-privacy",
@@ -11797,7 +12141,9 @@
         "none"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-09-02",
+    "first_submission_source": "https://arxiv.org/abs/2609.03055"
   },
   {
     "id": "navasardyan-2026-failbench",
@@ -11853,7 +12199,9 @@
       "metrics": [],
       "physical_validation": true,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-09-03",
+    "first_submission_source": "https://arxiv.org/abs/2609.03611"
   },
   {
     "id": "krsmanovic-2026-predictive-zonotope-reduction",
@@ -11932,7 +12280,9 @@
         "safety-constraints"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-09-03",
+    "first_submission_source": "https://arxiv.org/abs/2609.03699"
   },
   {
     "id": "zhang-2026-fwbc-vla",
@@ -12011,7 +12361,9 @@
         "safety-constraints"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-09-03",
+    "first_submission_source": "https://arxiv.org/abs/2609.03889"
   },
   {
     "id": "ma-2026-risk-informed-world-models",
@@ -12062,7 +12414,9 @@
       "metrics": [],
       "physical_validation": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-09-03",
+    "first_submission_source": "https://arxiv.org/abs/2609.03774"
   },
   {
     "id": "liu-2026-libero-recover",
@@ -12122,7 +12476,9 @@
       ],
       "physical_validation": true,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-09-04",
+    "first_submission_source": "https://arxiv.org/abs/2609.05178"
   },
   {
     "id": "ma-2026-failurespot",
@@ -12194,7 +12550,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-09-03",
+    "first_submission_source": "https://arxiv.org/abs/2609.04277"
   },
   {
     "id": "ma-2026-tacpac",
@@ -12276,7 +12634,9 @@
         "none"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-09-04",
+    "first_submission_source": "https://arxiv.org/abs/2609.05266"
   },
   {
     "id": "jeung-2026-robormbench",
@@ -12329,7 +12689,9 @@
       "metrics": [],
       "physical_validation": true,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-09-04",
+    "first_submission_source": "https://arxiv.org/abs/2609.05401"
   },
   {
     "id": "li-2026-safemem",
@@ -12414,7 +12776,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-09-08",
+    "first_submission_source": "https://arxiv.org/abs/2609.08444"
   },
   {
     "id": "puthumanaillam-2026-trajectory-redirection-vla",
@@ -12484,7 +12848,9 @@
       ],
       "physical_validation": true,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-06-11",
+    "first_submission_source": "https://arxiv.org/abs/2606.12978"
   },
   {
     "id": "shen-2026-h2int",
@@ -12548,7 +12914,9 @@
       ],
       "physical_validation": true,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-09-04",
+    "first_submission_source": "https://arxiv.org/abs/2609.05300"
   },
   {
     "id": "ma-2026-actsafeguard",
@@ -12610,7 +12978,9 @@
       ],
       "physical_validation": false,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-09-10",
+    "first_submission_source": "https://arxiv.org/abs/2609.11697"
   },
   {
     "id": "li-2026-reacthuman",
@@ -12672,7 +13042,9 @@
       ],
       "physical_validation": false,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-09-09",
+    "first_submission_source": "https://arxiv.org/abs/2609.10895"
   },
   {
     "id": "wang-2026-obstadiff",
@@ -12735,7 +13107,9 @@
       ],
       "physical_validation": true,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-09-10",
+    "first_submission_source": "https://arxiv.org/abs/2609.10918"
   },
   {
     "id": "haque-2026-dist-gprl",
@@ -12800,7 +13174,9 @@
       ],
       "physical_validation": true,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-09-10",
+    "first_submission_source": "https://arxiv.org/abs/2609.11433"
   },
   {
     "id": "ghalan-2026-testing-between-test-cases",
@@ -12860,7 +13236,9 @@
       ],
       "physical_validation": false,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-09-10",
+    "first_submission_source": "https://arxiv.org/abs/2609.10951"
   },
   {
     "id": "yan-2026-harness-robotic-os",
@@ -12922,7 +13300,9 @@
       ],
       "physical_validation": true,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-09-10",
+    "first_submission_source": "https://arxiv.org/abs/2609.11225"
   },
   {
     "id": "srivastava-2026-behavioral-valuation-hazardous-exploration",
@@ -12987,7 +13367,9 @@
       ],
       "physical_validation": false,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-09-09",
+    "first_submission_source": "https://arxiv.org/abs/2609.10726"
   },
   {
     "id": "ma-2026-guardrailed-meta-agent-loops",
@@ -13051,7 +13433,9 @@
       ],
       "physical_validation": false,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-09-10",
+    "first_submission_source": "https://arxiv.org/abs/2609.12216"
   },
   {
     "id": "jiang-2026-embodied-benchforge",
@@ -13126,7 +13510,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-09-11",
+    "first_submission_source": "https://arxiv.org/abs/2609.13082"
   },
   {
     "id": "sinha-2026-rethinking-safety-generalist-robots",
@@ -13167,7 +13553,9 @@
       "embodied-ai-safety",
       "contextual-safety",
       "lifecycle"
-    ]
+    ],
+    "first_submission_date": "2026-09-06",
+    "first_submission_source": "https://arxiv.org/abs/2609.06326"
   },
   {
     "id": "eide-2026-arc-autonomous-robotics-compliance",
@@ -13206,7 +13594,9 @@
       "deployment-assurance",
       "certification",
       "operational-authorization"
-    ]
+    ],
+    "first_submission_date": "2026-09-11",
+    "first_submission_source": "https://arxiv.org/abs/2609.12932"
   },
   {
     "id": "qu-2026-ressafe-residual-safety-filtering-humanoids",
@@ -13287,7 +13677,9 @@
         "safety-constraints"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-09-14",
+    "first_submission_source": "https://arxiv.org/abs/2609.15988"
   },
   {
     "id": "xu-2026-collision-mesh-poisoning-robotic-manipulation",
@@ -13351,7 +13743,9 @@
       ],
       "physical_validation": true,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-09-16",
+    "first_submission_source": "https://arxiv.org/abs/2609.18122"
   },
   {
     "id": "schneider-2026-rafail-relationship-aware-failure-detection",
@@ -13408,7 +13802,9 @@
       "metrics": [],
       "physical_validation": true,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-09-16",
+    "first_submission_source": "https://arxiv.org/abs/2609.18324"
   },
   {
     "id": "omahoney-2026-detaug-obstacle-avoidance",
@@ -13472,7 +13868,9 @@
       ],
       "physical_validation": true,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-09-16",
+    "first_submission_source": "https://arxiv.org/abs/2609.18395"
   },
   {
     "id": "morton-2026-elastiqp-constrained-robot-control",
@@ -13549,7 +13947,9 @@
         "safety-constraints"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-09-16",
+    "first_submission_source": "https://arxiv.org/abs/2609.19080"
   },
   {
     "id": "huang-2026-safemanip",
@@ -13634,7 +14034,9 @@
       "public_data": true,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-05-12",
+    "first_submission_source": "https://arxiv.org/abs/2605.12386"
   },
   {
     "id": "xu-2026-obstacle-aware-harness-safe-manipulation",
@@ -13700,7 +14102,9 @@
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-09-17",
+    "first_submission_source": "https://arxiv.org/abs/2609.20822"
   },
   {
     "id": "chauhan-2026-barrierformer",
@@ -13762,7 +14166,9 @@
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-09-20",
+    "first_submission_source": "https://arxiv.org/abs/2609.23896"
   },
   {
     "id": "cai-2026-hyper-redundant-safety-control",
@@ -13823,7 +14229,9 @@
       ],
       "physical_validation": true,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-09-21",
+    "first_submission_source": "https://arxiv.org/abs/2609.24062"
   },
   {
     "id": "baral-2026-marginal-calibration-compose",
@@ -13882,7 +14290,9 @@
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-09-20",
+    "first_submission_source": "https://arxiv.org/abs/2609.23731"
   },
   {
     "id": "luo-2026-safestage",
@@ -13967,7 +14377,9 @@
       "public_data": true,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-09-18",
+    "first_submission_source": "https://arxiv.org/abs/2609.21223"
   },
   {
     "id": "lou-2026-safeloop",
@@ -14063,7 +14475,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-09-22",
+    "first_submission_source": "https://arxiv.org/abs/2609.26313"
   },
   {
     "id": "wilkinson-2026-vlpsa",
@@ -14151,7 +14565,9 @@
         "safety-constraints"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-09-18",
+    "first_submission_source": "https://arxiv.org/abs/2609.22462"
   },
   {
     "id": "zhang-2026-backdoors-industrial-robotic-manipulation",
@@ -14238,7 +14654,9 @@
         "none"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-09-22",
+    "first_submission_source": "https://arxiv.org/abs/2609.26868"
   },
   {
     "id": "dong-2026-protracer-failure-diagnosis",
@@ -14301,7 +14719,9 @@
       ],
       "physical_validation": true,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-09-18",
+    "first_submission_source": "https://arxiv.org/abs/2609.21369"
   },
   {
     "id": "xiao-2026-care-corrective-execution",
@@ -14396,7 +14816,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-09-21",
+    "first_submission_source": "https://arxiv.org/abs/2609.24118"
   },
   {
     "id": "zhang-2026-robotwin-phys",
@@ -14480,7 +14902,9 @@
       "public_data": true,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-09-22",
+    "first_submission_source": "https://arxiv.org/abs/2609.26292"
   },
   {
     "id": "zhang-2026-self-adaptive-vla",
@@ -14549,7 +14973,9 @@
       ],
       "physical_validation": true,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-09-24",
+    "first_submission_source": "https://arxiv.org/abs/2609.30092"
   },
   {
     "id": "chepuri-2026-authguard-r",
@@ -14639,7 +15065,9 @@
         "model-access"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-09-25",
+    "first_submission_source": "https://arxiv.org/abs/2609.31110"
   },
   {
     "id": "snegirev-2026-kintsugi-vla",
@@ -14724,7 +15152,9 @@
         "none"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-09-25",
+    "first_submission_source": "https://arxiv.org/abs/2609.31048"
   },
   {
     "id": "park-2026-hide-and-seek-trajectories",
@@ -14807,7 +15237,9 @@
         "none"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-05-29",
+    "first_submission_source": "https://arxiv.org/abs/2605.30834"
   },
   {
     "id": "conner-2026-realizability-not-enough",
@@ -14894,7 +15326,9 @@
         "safety-constraints"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-09-24",
+    "first_submission_source": "https://arxiv.org/abs/2609.30460"
   },
   {
     "id": "park-2026-adaptive-safety-probing",
@@ -14976,7 +15410,9 @@
         "model-access"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "yu-2026-failpatch",
@@ -15061,7 +15497,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-09-28",
+    "first_submission_source": "https://arxiv.org/abs/2609.34175"
   },
   {
     "id": "kim-2026-predictive-semantic-safety",
@@ -15147,7 +15585,9 @@
         "safety-constraints"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-09-28",
+    "first_submission_source": "https://arxiv.org/abs/2609.34356"
   },
   {
     "id": "tai-2026-same-weights-different-robot",
@@ -15216,7 +15656,9 @@
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-06-02",
+    "first_submission_source": "https://arxiv.org/abs/2606.03724"
   },
   {
     "id": "ahmed-2026-proact-vlm",
@@ -15303,7 +15745,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-09-29",
+    "first_submission_source": "https://arxiv.org/abs/2609.37681"
   },
   {
     "id": "sobczak-2026-risk-aware-semantic-grounding",
@@ -15388,7 +15832,9 @@
         "none"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-09-29",
+    "first_submission_source": "https://arxiv.org/abs/2609.37554"
   },
   {
     "id": "atasever-2026-video2stl",
@@ -15477,7 +15923,9 @@
         "safety-constraints"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-09-29",
+    "first_submission_source": "https://arxiv.org/abs/2609.37519"
   },
   {
     "id": "luo-2026-exceptiondrive",
@@ -15562,7 +16010,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-09-29",
+    "first_submission_source": "https://arxiv.org/abs/2609.37871"
   },
   {
     "id": "liu-2026-trapvla-configured-failure",
@@ -15628,7 +16078,9 @@
       ],
       "physical_validation": true,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-08-27",
+    "first_submission_source": "https://arxiv.org/abs/2608.26578"
   },
   {
     "id": "deng-2026-dynaharness",
@@ -15723,7 +16175,9 @@
         "safety-constraints"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-09-30",
+    "first_submission_source": "https://arxiv.org/abs/2609.40306"
   },
   {
     "id": "yang-2026-universal-adversarial-attacks-vla",
@@ -15791,7 +16245,9 @@
       ],
       "physical_validation": true,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-09-30",
+    "first_submission_source": "https://arxiv.org/abs/2609.39178"
   },
   {
     "id": "agarwal-2026-multi-link-safety-filtering",
@@ -15885,7 +16341,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-09-30",
+    "first_submission_source": "https://arxiv.org/abs/2609.40007"
   },
   {
     "id": "zhen-2026-wbag",
@@ -15975,7 +16433,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-10-01",
+    "first_submission_source": "https://arxiv.org/abs/2610.01083"
   },
   {
     "id": "nguyen-2026-feasible-future-decoding-vla",
@@ -16062,7 +16522,9 @@
         "safety-constraints"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-10-04",
+    "first_submission_source": "https://arxiv.org/abs/2610.05166"
   },
   {
     "id": "lee-2026-salt-visual-disruptions",
@@ -16143,7 +16605,9 @@
         "model-access"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-10-06",
+    "first_submission_source": "https://arxiv.org/abs/2610.07946"
   },
   {
     "id": "lee-2026-sparse-feature-policy-unlearning-state-hallucination",
@@ -16237,7 +16701,9 @@
         "model-access"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-10-07",
+    "first_submission_source": "https://arxiv.org/abs/2610.09496"
   },
   {
     "id": "wulff-2026-vla-instruction-grounding-mechanistic",
@@ -16299,7 +16765,9 @@
       "metrics": [],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-10-07",
+    "first_submission_source": "https://arxiv.org/abs/2610.10178"
   },
   {
     "id": "horiba-2026-detect-suppress-adversarial-patches",
@@ -16380,7 +16848,9 @@
         "model-access"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-10-02",
+    "first_submission_source": "https://arxiv.org/abs/2610.03498"
   },
   {
     "id": "wang-2026-jailbreak-guardrails-embodied-agents",
@@ -16466,7 +16936,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-10-05",
+    "first_submission_source": "https://arxiv.org/abs/2610.06122"
   },
   {
     "id": "pang-2026-black-box-ancestor-vlm-patches",
@@ -16532,7 +17004,9 @@
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-10-07",
+    "first_submission_source": "https://arxiv.org/abs/2610.09708"
   },
   {
     "id": "yang-2026-contextual-safety-filtering-motion-generators",
@@ -16621,7 +17095,9 @@
         "safety-constraints"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-10-08",
+    "first_submission_source": "https://arxiv.org/abs/2610.12467"
   },
   {
     "id": "xue-2026-control-ready-uncertainty-trajectory-diffusion",
@@ -16704,7 +17180,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-10-08",
+    "first_submission_source": "https://arxiv.org/abs/2610.12431"
   },
   {
     "id": "li-2026-pier-evidence-gated-execution-interface",
@@ -16768,7 +17246,9 @@
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-10-08",
+    "first_submission_source": "https://arxiv.org/abs/2610.12123"
   },
   {
     "id": "li-2026-traceable-world-state",
@@ -16831,7 +17311,9 @@
       "metrics": [],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-10-08",
+    "first_submission_source": "https://arxiv.org/abs/2610.12033"
   },
   {
     "id": "zhang-2026-faith-safety-filtered-rl",
@@ -16926,7 +17408,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-10-08",
+    "first_submission_source": "https://arxiv.org/abs/2610.12432"
   },
   {
     "id": "wu-2026-beyond-patch-removal",
@@ -16995,7 +17479,9 @@
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-09-17",
+    "first_submission_source": "https://arxiv.org/abs/2609.19669"
   },
   {
     "id": "yamabe-2026-one-step-observation-perturbations",
@@ -17081,7 +17567,9 @@
         "runtime-monitor"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-09-26",
+    "first_submission_source": "https://arxiv.org/abs/2609.32550"
   },
   {
     "id": "english-2026-neurosymbolic-safety-guidance-flow-matching",
@@ -17170,7 +17658,9 @@
         "safety-constraints"
       ],
       "curation_status": "catalog-derived"
-    }
+    },
+    "first_submission_date": "2026-07-01",
+    "first_submission_source": "https://arxiv.org/abs/2607.01378"
   },
   {
     "id": "ahmedt-aristizabal-2026-rescue-runtime-monitors",
@@ -17237,7 +17727,9 @@
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-10-09",
+    "first_submission_source": "https://arxiv.org/abs/2610.13516"
   },
   {
     "id": "rolland-2026-robot-watchdog",
@@ -17296,7 +17788,9 @@
       "metrics": [],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-10-09",
+    "first_submission_source": "https://arxiv.org/abs/2610.13403"
   },
   {
     "id": "hubel-2026-bt-agent",
@@ -17364,7 +17858,9 @@
       ],
       "physical_validation": true,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-10-09",
+    "first_submission_source": "https://arxiv.org/abs/2610.13862"
   },
   {
     "id": "das-2026-refinement-gap-safe-plans",
@@ -17429,7 +17925,9 @@
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-10-02",
+    "first_submission_source": "https://arxiv.org/abs/2610.02662"
   },
   {
     "id": "waseda-2026-adversarial-training-multiview-vlas",
@@ -17490,7 +17988,9 @@
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-09-27",
+    "first_submission_source": "https://arxiv.org/abs/2609.33707"
   },
   {
     "id": "kang-2026-rara",
@@ -17529,7 +18029,9 @@
       "visual-ood",
       "retrieval",
       "fine-tuning"
-    ]
+    ],
+    "first_submission_date": "2026-10-09",
+    "first_submission_source": "https://arxiv.org/abs/2610.13578"
   },
   {
     "id": "ogunwoye-2026-jittervla",
@@ -17566,7 +18068,9 @@
       "paired-replay",
       "motion-quality",
       "latency"
-    ]
+    ],
+    "first_submission_date": "2026-10-09",
+    "first_submission_source": "https://arxiv.org/abs/2610.13628"
   },
   {
     "id": "not-what-you-asked-for-typographic-attacks-in-household-robot-manipulation-2026",
@@ -17625,7 +18129,9 @@
       ],
       "physical_validation": false,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-05-18",
+    "first_submission_source": "https://arxiv.org/abs/2605.18593"
   },
   {
     "id": "advancing-embodied-agent-security-from-safety-benchmarks-to-input-moderation-2025",
@@ -17689,7 +18195,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2025-04-22",
+    "first_submission_source": "https://arxiv.org/abs/2504.15699"
   },
   {
     "id": "semantic-denial-of-service-in-llm-controlled-robots-2026",
@@ -17741,7 +18249,9 @@
       ],
       "physical_validation": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-04-25",
+    "first_submission_source": "https://arxiv.org/abs/2604.24790"
   },
   {
     "id": "preventing-robotic-jailbreaking-via-multimodal-domain-adaptation-2025",
@@ -17806,7 +18316,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2025-09-27",
+    "first_submission_source": "https://arxiv.org/abs/2509.23281"
   },
   {
     "id": "safety-security-and-cognitive-risks-in-world-models-2026",
@@ -17845,7 +18357,9 @@
     "tags": [
       "priority-literature-review-2026-10",
       "abstract-verified"
-    ]
+    ],
+    "first_submission_date": "2026-04-01",
+    "first_submission_source": "https://arxiv.org/abs/2604.01346"
   },
   {
     "id": "trap-tail-aware-ranking-attack-for-world-model-planning-2026",
@@ -17895,7 +18409,9 @@
       "metrics": [],
       "physical_validation": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-05-03",
+    "first_submission_source": "https://arxiv.org/abs/2605.01950"
   },
   {
     "id": "the-safety-challenge-of-world-models-for-embodied-ai-agents-a-review-2025",
@@ -17931,7 +18447,9 @@
     "tags": [
       "priority-literature-review-2026-10",
       "abstract-verified"
-    ]
+    ],
+    "first_submission_date": "2025-10-07",
+    "first_submission_source": "https://arxiv.org/abs/2510.05865"
   },
   {
     "id": "safedreamer-safe-reinforcement-learning-with-world-models-2023",
@@ -18001,7 +18519,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2023-07-14",
+    "first_submission_source": "https://arxiv.org/abs/2307.07176"
   },
   {
     "id": "homeguard-vlm-based-embodied-safeguard-for-identifying-contextual-risk-in-household-task-2026",
@@ -18069,7 +18589,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-03-15",
+    "first_submission_source": "https://arxiv.org/abs/2603.14367"
   },
   {
     "id": "heal-an-empirical-study-on-hallucinations-in-embodied-agents-driven-by-large-language-models-2025",
@@ -18131,7 +18653,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2025-06-18",
+    "first_submission_source": "https://arxiv.org/abs/2506.15065"
   },
   {
     "id": "using-large-language-models-for-embodied-planning-introduces-systematic-safety-risks-2026",
@@ -18200,7 +18724,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-04-20",
+    "first_submission_source": "https://arxiv.org/abs/2604.18463"
   },
   {
     "id": "hasard-a-benchmark-for-vision-based-safe-reinforcement-learning-in-embodied-agents-2025",
@@ -18261,7 +18787,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2025-03-11",
+    "first_submission_source": "https://arxiv.org/abs/2503.08241"
   },
   {
     "id": "mutrap-multi-trigger-trojans-attacking-robot-task-planning-systems-2025",
@@ -18310,7 +18838,9 @@
       "metrics": [],
       "physical_validation": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2025-04-23",
+    "first_submission_source": "https://arxiv.org/abs/2504.17070"
   },
   {
     "id": "enhancing-reliability-in-llm-integrated-robotic-systems-a-unified-approach-to-security-and-safety-2025",
@@ -18377,7 +18907,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2025-09-02",
+    "first_submission_source": "https://arxiv.org/abs/2509.02163"
   },
   {
     "id": "malicious-path-manipulations-via-exploitation-of-representation-vulnerabilities-of-vision-language-naviga-2024",
@@ -18427,7 +18959,9 @@
       "metrics": [],
       "physical_validation": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2024-07-10",
+    "first_submission_source": "https://arxiv.org/abs/2407.07392"
   },
   {
     "id": "benchmarking-the-safety-of-large-language-models-for-robotic-health-attendant-control-2026",
@@ -18490,7 +19024,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-04-29",
+    "first_submission_source": "https://arxiv.org/abs/2604.26577"
   },
   {
     "id": "robojailbench-benchmarking-adversarial-attacks-and-defenses-in-embodied-robotic-agents-2026",
@@ -18553,7 +19089,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-05-19",
+    "first_submission_source": "https://arxiv.org/abs/2605.19328"
   },
   {
     "id": "how-secure-are-large-language-models-llms-for-navigation-in-urban-environments-2024",
@@ -18606,7 +19144,9 @@
       ],
       "physical_validation": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2024-02-14",
+    "first_submission_source": "https://arxiv.org/abs/2402.09546"
   },
   {
     "id": "a-study-on-prompt-injection-attack-against-llm-integrated-mobile-robotic-systems-2024",
@@ -18652,7 +19192,9 @@
       "metrics": [],
       "physical_validation": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2024-08-07",
+    "first_submission_source": "https://arxiv.org/abs/2408.03515"
   },
   {
     "id": "advgrasp-adversarial-attacks-on-robotic-grasping-from-a-physical-perspective-2025",
@@ -18705,7 +19247,9 @@
       ],
       "physical_validation": true,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2025-07-14",
+    "first_submission_source": "https://arxiv.org/abs/2507.09857"
   },
   {
     "id": "pre-vla-preemptive-runtime-verification-for-reliable-vision-language-action-and-world-model-rollouts-2026",
@@ -18773,7 +19317,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-05-21",
+    "first_submission_source": "https://arxiv.org/abs/2605.22446"
   },
   {
     "id": "uncovering-linguistic-fragility-in-vision-language-action-models-via-diversity-aware-red-teaming-2026",
@@ -18831,7 +19377,9 @@
       ],
       "physical_validation": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-04-07",
+    "first_submission_source": "https://arxiv.org/abs/2604.05595"
   },
   {
     "id": "from-prompt-to-physical-action-structured-backdoor-attacks-on-llm-mediated-robotic-control-systems-2026",
@@ -18888,7 +19436,9 @@
       ],
       "physical_validation": true,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-04-04",
+    "first_submission_source": "https://arxiv.org/abs/2604.03890"
   },
   {
     "id": "strong-vla-decoupled-robustness-learning-for-vision-language-action-models-under-multimodal-perturbations-2026",
@@ -18966,7 +19516,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-04-11",
+    "first_submission_source": "https://arxiv.org/abs/2604.10055"
   },
   {
     "id": "libero-x-robustness-litmus-for-vision-language-action-models-2026",
@@ -19028,7 +19580,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-02-06",
+    "first_submission_source": "https://arxiv.org/abs/2602.06556"
   },
   {
     "id": "annie-be-careful-of-your-robots-2025",
@@ -19083,7 +19637,9 @@
       ],
       "physical_validation": true,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2025-09-03",
+    "first_submission_source": "https://arxiv.org/abs/2509.03383"
   },
   {
     "id": "embodied-red-teaming-for-auditing-robotic-foundation-models-2024",
@@ -19142,7 +19698,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2024-11-27",
+    "first_submission_source": "https://arxiv.org/abs/2411.18676"
   },
   {
     "id": "how-vulnerable-is-my-learned-policy-universal-adversarial-perturbation-attacks-on-modern-behavior-cloning-2025",
@@ -19200,7 +19758,9 @@
       ],
       "physical_validation": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2025-02-06",
+    "first_submission_source": "https://arxiv.org/abs/2502.03698"
   },
   {
     "id": "libero-plus-in-depth-robustness-analysis-of-vision-language-action-models-2025",
@@ -19263,7 +19823,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2025-10-15",
+    "first_submission_source": "https://arxiv.org/abs/2510.13626"
   },
   {
     "id": "attention-guided-patch-wise-sparse-adversarial-attacks-on-vision-language-action-models-2025",
@@ -19315,7 +19877,9 @@
       ],
       "physical_validation": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2025-11-26",
+    "first_submission_source": "https://arxiv.org/abs/2511.21663"
   },
   {
     "id": "diffusion-policy-attacker-crafting-adversarial-attacks-for-diffusion-based-policies-2024",
@@ -19366,7 +19930,9 @@
       ],
       "physical_validation": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2024-05-29",
+    "first_submission_source": "https://arxiv.org/abs/2405.19424"
   },
   {
     "id": "rethinking-the-intermediate-features-in-adversarial-attacks-misleading-robotic-models-via-adversarial-dis-2024",
@@ -19416,7 +19982,9 @@
       "metrics": [],
       "physical_validation": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2024-11-21",
+    "first_submission_source": "https://arxiv.org/abs/2411.15222"
   },
   {
     "id": "dreaming-the-unseen-world-model-regularized-diffusion-policy-for-out-of-distribution-robustness-2026",
@@ -19490,7 +20058,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-03-22",
+    "first_submission_source": "https://arxiv.org/abs/2603.21017"
   },
   {
     "id": "agentspec-customizable-runtime-enforcement-for-safe-and-reliable-llm-agents-2025",
@@ -19561,7 +20131,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2025-03-24",
+    "first_submission_source": "https://arxiv.org/abs/2503.18666"
   },
   {
     "id": "how-far-are-vlms-from-privacy-awareness-in-the-physical-world-an-empirical-study-2026",
@@ -19627,7 +20199,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-05-06",
+    "first_submission_source": "https://arxiv.org/abs/2605.05340"
   },
   {
     "id": "embodiedgovbench-a-benchmark-for-governance-recovery-and-upgrade-safety-in-embodied-agent-systems-2026",
@@ -19686,7 +20260,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-04-13",
+    "first_submission_source": "https://arxiv.org/abs/2604.11174"
   },
   {
     "id": "red-teaming-vision-language-action-models-via-quality-diversity-prompt-generation-for-robust-robot-polici-2026",
@@ -19751,7 +20327,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-03-12",
+    "first_submission_source": "https://arxiv.org/abs/2603.12510"
   },
   {
     "id": "the-yes-man-syndrome-benchmarking-abstention-in-embodied-robotic-agents-2026",
@@ -19815,7 +20393,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-05-19",
+    "first_submission_source": "https://arxiv.org/abs/2605.20544"
   },
   {
     "id": "position-embodied-ai-requires-a-privacy-utility-trade-off-2026",
@@ -19851,7 +20431,9 @@
     "tags": [
       "priority-literature-review-2026-10",
       "abstract-verified"
-    ]
+    ],
+    "first_submission_date": "2026-05-06",
+    "first_submission_source": "https://arxiv.org/abs/2605.05017"
   },
   {
     "id": "sok-cybersecurity-assessment-of-humanoid-ecosystem-2025",
@@ -19887,7 +20469,9 @@
     "tags": [
       "priority-literature-review-2026-10",
       "abstract-verified"
-    ]
+    ],
+    "first_submission_date": "2025-08-24",
+    "first_submission_source": "https://arxiv.org/abs/2508.17481"
   },
   {
     "id": "towards-physically-realizable-adversarial-attacks-in-embodied-vision-navigation-2024",
@@ -19934,7 +20518,9 @@
       "metrics": [],
       "physical_validation": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2024-09-16",
+    "first_submission_source": "https://arxiv.org/abs/2409.10071"
   },
   {
     "id": "security-considerations-in-ai-robotics-a-survey-of-current-methods-challenges-and-opportunities-2023",
@@ -19970,7 +20556,9 @@
     "tags": [
       "priority-literature-review-2026-10",
       "abstract-verified"
-    ]
+    ],
+    "first_submission_date": "2023-10-12",
+    "first_submission_source": "https://arxiv.org/abs/2310.08565"
   },
   {
     "id": "safety-of-embodied-navigation-a-survey-2025",
@@ -20006,7 +20594,9 @@
     "tags": [
       "priority-literature-review-2026-10",
       "abstract-verified"
-    ]
+    ],
+    "first_submission_date": "2025-08-07",
+    "first_submission_source": "https://arxiv.org/abs/2508.05855"
   },
   {
     "id": "embodied-ai-emerging-risks-and-opportunities-for-policy-action-2025",
@@ -20038,7 +20628,9 @@
     "tags": [
       "priority-literature-review-2026-10",
       "abstract-verified"
-    ]
+    ],
+    "first_submission_date": "2025-08-28",
+    "first_submission_source": "https://arxiv.org/abs/2509.00117"
   },
   {
     "id": "safedojo-safe-reinforcement-learning-for-vla-via-interactive-world-model-2026",
@@ -20114,7 +20706,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-06-15",
+    "first_submission_source": "https://arxiv.org/abs/2606.20698"
   },
   {
     "id": "argos-automated-functional-safety-requirement-synthesis-for-embodied-ai-via-attribute-guided-combinatoria-2026",
@@ -20178,7 +20772,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-01-30",
+    "first_submission_source": "https://arxiv.org/abs/2602.07007"
   },
   {
     "id": "auditing-demographic-bias-in-facial-landmark-detection-for-fair-human-robot-interaction-2026",
@@ -20236,7 +20832,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-04-08",
+    "first_submission_source": "https://arxiv.org/abs/2604.06961"
   },
   {
     "id": "back-to-the-familiar-future-failure-recovery-for-vla-policies-via-pre-imagined-milestone-selection-2026",
@@ -20309,7 +20907,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-06-08",
+    "first_submission_source": "https://arxiv.org/abs/2606.09258"
   },
   {
     "id": "can-ai-perceive-physical-danger-and-intervene-2025",
@@ -20370,7 +20970,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2025-09-25",
+    "first_submission_source": "https://arxiv.org/abs/2509.21651"
   },
   {
     "id": "egosafetybench-a-diagnostic-egocentric-video-benchmark-for-evaluating-embodied-vlms-as-runtime-safety-gua-2026",
@@ -20423,7 +21025,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-06-30",
+    "first_submission_source": "https://arxiv.org/abs/2607.00218"
   },
   {
     "id": "embodied-hazard-mitigation-using-vision-language-models-for-autonomous-mobile-robots-2025",
@@ -20489,7 +21093,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2025-09-08",
+    "first_submission_source": "https://arxiv.org/abs/2509.06768"
   },
   {
     "id": "eva-vla-evaluating-vision-language-action-models-robustness-under-real-world-physical-variations-2025",
@@ -20559,7 +21165,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2025-09-23",
+    "first_submission_source": "https://arxiv.org/abs/2509.18953"
   },
   {
     "id": "faer-benchmarking-vlms-for-failure-aware-embodied-reasoning-2026",
@@ -20618,7 +21226,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "fine-tuning-robot-policies-while-maintaining-user-privacy-2025",
@@ -20682,7 +21292,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2025-09-22",
+    "first_submission_source": "https://arxiv.org/abs/2509.18311"
   },
   {
     "id": "foresight-failure-detection-for-long-horizon-robotic-manipulation-with-action-conditioned-world-model-lat-2026",
@@ -20756,7 +21368,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-06-22",
+    "first_submission_source": "https://arxiv.org/abs/2606.23085"
   },
   {
     "id": "grounding-multimodal-llms-to-embodied-agents-that-ask-for-help-with-reinforcement-learning-2025",
@@ -20824,7 +21438,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2025-04-01",
+    "first_submission_source": "https://arxiv.org/abs/2504.00907"
   },
   {
     "id": "homesafebench-benchmarking-embodied-vision-language-models-in-free-exploration-home-safety-inspection-2025",
@@ -20883,7 +21499,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2025-09-28",
+    "first_submission_source": "https://arxiv.org/abs/2509.23690"
   },
   {
     "id": "improving-robotic-manipulation-robustness-via-nice-scene-surgery-2025",
@@ -20956,7 +21574,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2025-11-27",
+    "first_submission_source": "https://arxiv.org/abs/2511.22777"
   },
   {
     "id": "is-the-robot-spying-on-me-a-study-on-perceived-privacy-in-telepresence-scenarios-in-a-care-setting-with-m-2025",
@@ -21014,7 +21634,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "labrobfail-a-benchmark-for-robotic-failure-analysis-in-chemical-self-driving-laboratory-2026",
@@ -21075,7 +21697,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-07-26",
+    "first_submission_source": "https://arxiv.org/abs/2607.23704"
   },
   {
     "id": "language-as-cost-proactive-hazard-mapping-using-vlm-for-robot-navigation-2025",
@@ -21150,7 +21774,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "learning-actionable-manipulation-recovery-via-counterfactual-failure-synthesis-2026",
@@ -21220,7 +21846,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-03-13",
+    "first_submission_source": "https://arxiv.org/abs/2603.13528"
   },
   {
     "id": "llm-driven-robots-risk-enacting-discrimination-violence-and-unlawful-actions-2025",
@@ -21279,7 +21907,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "madra-multi-agent-debate-for-risk-aware-embodied-planning-2026",
@@ -21347,7 +21977,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "mulrobbench-a-decision-level-benchmark-for-safe-and-security-policy-compliant-multimodal-uav-agents-2026",
@@ -21415,7 +22047,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-07-26",
+    "first_submission_source": "https://arxiv.org/abs/2607.23870"
   },
   {
     "id": "perturbation-based-epistemic-uncertainty-for-failure-detection-in-vision-language-action-models-2026",
@@ -21486,7 +22120,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-06-18",
+    "first_submission_source": "https://arxiv.org/abs/2606.20754"
   },
   {
     "id": "privacy-risks-in-reinforcement-learning-for-household-robots-2024",
@@ -21536,7 +22172,9 @@
       "metrics": [],
       "physical_validation": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "privacy-preserving-robot-vision-with-anonymized-faces-by-extreme-low-resolution-2019",
@@ -21600,7 +22238,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "responsiblerobotbench-benchmarking-responsible-robot-manipulation-using-multi-modal-large-language-models-2025",
@@ -21668,7 +22308,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2025-12-03",
+    "first_submission_source": "https://arxiv.org/abs/2512.04308"
   },
   {
     "id": "robochemist-long-horizon-and-safety-compliant-robotic-chemical-experimentation-2025",
@@ -21743,7 +22385,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2025-09-10",
+    "first_submission_source": "https://arxiv.org/abs/2509.08820"
   },
   {
     "id": "robustnav-towards-benchmarking-robustness-in-embodied-navigation-2021",
@@ -21805,7 +22449,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "robustness-of-embodied-point-navigation-agents-2023",
@@ -21866,7 +22512,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "robustvla-on-robustness-of-vision-language-action-model-against-multi-modal-perturbations-2025",
@@ -21942,7 +22590,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2025-09-26",
+    "first_submission_source": "https://arxiv.org/abs/2510.00037"
   },
   {
     "id": "safegen-llm-enhancing-safety-generalization-in-task-planning-for-robotic-systems-2026",
@@ -22011,7 +22661,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-02-27",
+    "first_submission_source": "https://arxiv.org/abs/2602.24235"
   },
   {
     "id": "saferelbench-a-spatial-relation-aware-benchmark-for-process-level-safety-in-vlm-driven-embodied-agents-2026",
@@ -22078,7 +22730,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-07-16",
+    "first_submission_source": "https://arxiv.org/abs/2607.14543"
   },
   {
     "id": "safety-aware-task-planning-via-large-language-models-in-robotics-2025",
@@ -22151,7 +22805,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "safety-case-patterns-for-vla-based-driving-systems-insights-from-simlingo-2026",
@@ -22187,7 +22843,9 @@
     "tags": [
       "priority-literature-review-2026-10",
       "abstract-verified"
-    ]
+    ],
+    "first_submission_date": "2026-03-16",
+    "first_submission_source": "https://arxiv.org/abs/2603.16013"
   },
   {
     "id": "safety-control-of-service-robots-with-llms-and-embodied-knowledge-graphs-2024",
@@ -22257,7 +22915,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2024-05-28",
+    "first_submission_source": "https://arxiv.org/abs/2405.17846"
   },
   {
     "id": "safetyalfred-evaluating-safety-conscious-planning-of-vision-language-models-2026",
@@ -22324,7 +22984,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "shifting-uncertainty-to-critical-moments-towards-reliable-uncertainty-quantification-for-vla-model-2026",
@@ -22388,7 +23050,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-03-18",
+    "first_submission_source": "https://arxiv.org/abs/2603.18342"
   },
   {
     "id": "show-your-work-mechanistic-transparency-in-llm-powered-human-robot-interaction-2026",
@@ -22446,7 +23110,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "subtle-risks-critical-failures-a-framework-for-diagnosing-physical-safety-of-llms-for-embodied-decision-m-2025",
@@ -22511,7 +23177,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "the-roles-of-fairness-and-effectiveness-in-promoting-legitimacy-and-cooperation-with-security-robotic-aut-2026",
@@ -22564,7 +23232,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "towards-a-cognitive-model-for-inferring-dynamic-fairness-perception-to-support-fairer-human-robot-collabo-2026",
@@ -22617,7 +23287,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "towards-worker-centered-warehouse-robots-a-user-study-on-privacy-inclusivity-and-safety-2026",
@@ -22673,7 +23345,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "uncertainty-in-action-confidence-elicitation-in-embodied-agents-2025",
@@ -22737,7 +23411,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2025-03-13",
+    "first_submission_source": "https://arxiv.org/abs/2503.10628"
   },
   {
     "id": "verifiable-foundation-models-for-robot-safety-2026",
@@ -22804,7 +23480,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-06-22",
+    "first_submission_source": "https://arxiv.org/abs/2606.23754"
   },
   {
     "id": "verifiably-following-complex-robot-instructions-with-foundation-models-2025",
@@ -22876,7 +23554,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "vla-fail-efficient-task-failure-detection-for-finetuned-vision-language-action-models-2026",
@@ -22943,7 +23623,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-06-19",
+    "first_submission_source": "https://arxiv.org/abs/2606.21386"
   },
   {
     "id": "when-robots-say-no-the-empathic-ethical-disobedience-benchmark-2026",
@@ -23005,7 +23687,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "your-model-already-knows-attention-guided-safety-filter-for-vision-language-action-models-2026",
@@ -23077,7 +23761,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-06-08",
+    "first_submission_source": "https://arxiv.org/abs/2606.09749"
   },
   {
     "id": "designing-social-robots-with-ethical-user-adaptive-explainability-in-the-era-of-foundation-models-2026",
@@ -23112,7 +23798,9 @@
     "tags": [
       "priority-literature-review-2026-10",
       "abstract-verified"
-    ]
+    ],
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "ehazop-a-proof-of-concept-ethical-hazard-analysis-of-an-assistive-robot-2024",
@@ -23147,7 +23835,9 @@
     "tags": [
       "priority-literature-review-2026-10",
       "abstract-verified"
-    ]
+    ],
+    "first_submission_date": "2024-06-13",
+    "first_submission_source": "https://arxiv.org/abs/2406.09239"
   },
   {
     "id": "explainable-embodied-agents-through-social-cues-2021",
@@ -23179,7 +23869,9 @@
     "tags": [
       "priority-literature-review-2026-10",
       "abstract-verified"
-    ]
+    ],
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "from-screens-to-scenes-a-survey-of-embodied-ai-in-healthcare-2025",
@@ -23215,7 +23907,9 @@
     "tags": [
       "priority-literature-review-2026-10",
       "abstract-verified"
-    ]
+    ],
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "privacy-beyond-data-assessment-and-mitigation-of-privacy-risks-in-robotic-technology-for-elderly-care-2025",
@@ -23249,7 +23943,9 @@
     "tags": [
       "priority-literature-review-2026-10",
       "abstract-verified"
-    ]
+    ],
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "safe-embodied-ai-for-long-horizon-tasks-a-cross-layer-analysis-of-robotic-manipulation-2026",
@@ -23287,7 +23983,9 @@
     "tags": [
       "priority-literature-review-2026-10",
       "abstract-verified"
-    ]
+    ],
+    "first_submission_date": "2026-06-04",
+    "first_submission_source": "https://arxiv.org/abs/2606.05660"
   },
   {
     "id": "the-challenges-and-opportunities-of-human-centered-ai-for-trustworthy-robots-and-autonomous-systems-2022",
@@ -23322,7 +24020,9 @@
     "tags": [
       "priority-literature-review-2026-10",
       "abstract-verified"
-    ]
+    ],
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "whos-in-charge-here-a-survey-on-trustworthy-ai-in-variable-autonomy-robotic-systems-2024",
@@ -23354,7 +24054,9 @@
     "tags": [
       "priority-literature-review-2026-10",
       "abstract-verified"
-    ]
+    ],
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "safety-in-embodied-ai-a-survey-of-risks-attacks-and-defenses-2026",
@@ -23390,7 +24092,9 @@
     "tags": [
       "priority-literature-review-2026-10",
       "abstract-verified"
-    ]
+    ],
+    "first_submission_date": "2026-03-28",
+    "first_submission_source": "https://arxiv.org/abs/2605.02900"
   },
   {
     "id": "rethinking-robustness-assessment-adversarial-attacks-on-learning-based-quadrupedal-locomotion-controllers-2024",
@@ -23439,7 +24143,9 @@
       "metrics": [],
       "physical_validation": true,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2024-05-21",
+    "first_submission_source": "https://arxiv.org/abs/2405.12424"
   },
   {
     "id": "robots-enact-malignant-stereotypes-2022",
@@ -23502,7 +24208,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": null,
+    "first_submission_source": null
   },
   {
     "id": "don-t-let-your-robot-be-harmful-responsible-robotic-manipulation-via-safety-as-policy-2024",
@@ -23580,7 +24288,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2024-11-27",
+    "first_submission_source": "https://arxiv.org/abs/2411.18289"
   },
   {
     "id": "humanoid-safe-stop-via-learned-stoppability-value-2026",
@@ -23644,7 +24354,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-09-02",
+    "first_submission_source": "https://arxiv.org/abs/2609.02358"
   },
   {
     "id": "do-better-imagined-rollouts-mean-better-robot-control-a-controlled-study-of-world-model-evaluation-under--2026",
@@ -23702,7 +24414,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-09-02",
+    "first_submission_source": "https://arxiv.org/abs/2609.02811"
   },
   {
     "id": "benchmarking-robots-for-everyday-environments-from-lab-experiments-to-real-world-operations-2026",
@@ -23767,7 +24481,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-09-22",
+    "first_submission_source": "https://arxiv.org/abs/2609.26490"
   },
   {
     "id": "navsafe-infty-benchmarking-closed-loop-driving-safety-in-photorealistic-environments-2026",
@@ -23833,7 +24549,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-09-22",
+    "first_submission_source": "https://arxiv.org/abs/2609.26618"
   },
   {
     "id": "calm-configuration-aware-human-intervention-boundaries-during-robot-approach-2026",
@@ -23886,7 +24604,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-09-07",
+    "first_submission_source": "https://arxiv.org/abs/2609.07430"
   },
   {
     "id": "safety-critical-scenarios-emerge-from-initial-scenes-2026",
@@ -23954,7 +24674,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-09-17",
+    "first_submission_source": "https://arxiv.org/abs/2609.20103"
   },
   {
     "id": "vla-scope-shift-aware-failure-prediction-for-vision-language-action-models-2026",
@@ -24023,7 +24745,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-09-18",
+    "first_submission_source": "https://arxiv.org/abs/2609.21246"
   },
   {
     "id": "commitflow-semantic-commitment-verification-and-local-correction-for-long-horizon-robot-manipulation-vla--2026",
@@ -24098,7 +24822,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-09-18",
+    "first_submission_source": "https://arxiv.org/abs/2609.21908"
   },
   {
     "id": "turning-safety-into-competence-minimally-exploitable-robot-policies-via-safety-filtered-reinforcement-lea-2026",
@@ -24172,7 +24898,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-09-23",
+    "first_submission_source": "https://arxiv.org/abs/2609.27312"
   },
   {
     "id": "crosssafe-towards-cross-embodiment-latent-safety-filters-2026",
@@ -24242,7 +24970,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-09-24",
+    "first_submission_source": "https://arxiv.org/abs/2609.28984"
   },
   {
     "id": "conflictvla-bench-benchmarking-behavioral-responses-of-vision-language-action-models-to-premise-conflicts-2026",
@@ -24309,7 +25039,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-09-25",
+    "first_submission_source": "https://arxiv.org/abs/2609.31792"
   },
   {
     "id": "planguard-a-guardrail-for-multi-step-plan-safety-in-embodied-agents-2026",
@@ -24373,7 +25105,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-09-26",
+    "first_submission_source": "https://arxiv.org/abs/2609.32801"
   },
   {
     "id": "popnavshift-stress-testing-social-navigation-under-behavioral-population-shift-2026",
@@ -24433,7 +25167,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-09-18",
+    "first_submission_source": "https://arxiv.org/abs/2609.21838"
   },
   {
     "id": "safe-chem-uncertainty-aware-policy-switching-for-robust-robotic-chemistry-2026",
@@ -24510,7 +25246,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-08-10",
+    "first_submission_source": "https://arxiv.org/abs/2608.09303"
   },
   {
     "id": "benchmarking-vision-language-action-models-on-so-101-failure-and-recovery-analysis-2026",
@@ -24579,7 +25317,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-06-07",
+    "first_submission_source": "https://arxiv.org/abs/2606.08881"
   },
   {
     "id": "actprobe-action-space-probe-for-early-failure-detection-of-generative-robot-policies-2026",
@@ -24641,7 +25381,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-06-07",
+    "first_submission_source": "https://arxiv.org/abs/2606.08508"
   },
   {
     "id": "embedding-iso-10218-safety-compliance-in-robots-via-control-barrier-functions-for-human-robot-collaborati-2026",
@@ -24710,7 +25452,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-06-11",
+    "first_submission_source": "https://arxiv.org/abs/2606.13203"
   },
   {
     "id": "robosemanticbench-diagnosing-semantic-grounding-in-action-prediction-for-vla-models-2026",
@@ -24773,7 +25517,9 @@
       "public_data": null,
       "leaderboard": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-06-01",
+    "first_submission_source": "https://arxiv.org/abs/2606.02277"
   },
   {
     "id": "pact-self-evolving-physical-safety-alignment-for-diffusion-policies-in-embodied-manipulation-2026",
@@ -24847,7 +25593,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2026-06-07",
+    "first_submission_source": "https://arxiv.org/abs/2606.08414"
   },
   {
     "id": "safe-learning-for-contact-rich-robot-tasks-a-survey-from-classical-learning-based-methods-to-safe-foundat-2025",
@@ -24883,7 +25631,9 @@
     "tags": [
       "priority-literature-review-2026-10",
       "abstract-verified"
-    ]
+    ],
+    "first_submission_date": "2025-12-10",
+    "first_submission_source": "https://arxiv.org/abs/2512.11908"
   },
   {
     "id": "a-comprehensive-survey-on-physical-risk-control-in-the-era-of-foundation-model-enabled-robotics-2025",
@@ -24919,7 +25669,9 @@
     "tags": [
       "priority-literature-review-2026-10",
       "abstract-verified"
-    ]
+    ],
+    "first_submission_date": "2025-05-19",
+    "first_submission_source": "https://arxiv.org/abs/2505.12583"
   },
   {
     "id": "guided-by-guardrails-control-barrier-functions-as-safety-instructors-for-robotic-learning-2025",
@@ -24990,7 +25742,9 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2025-05-24",
+    "first_submission_source": "https://arxiv.org/abs/2505.18858"
   },
   {
     "id": "towards-safe-robot-foundation-models-2025",
@@ -25056,7 +25810,590 @@
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2025-03-10",
+    "first_submission_source": "https://arxiv.org/abs/2503.07404"
+  },
+  {
+    "id": "arxiv-2610-18843",
+    "title": "LIBERO-RIG: A Hardware-Setup Robustness Benchmark for Vision-Language-Action Models",
+    "first_author": "Cui",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.18843",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "OOD and Generalization Benchmarks",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference",
+          "system"
+        ],
+        "mechanisms": [
+          "distribution-shift"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "proprioception",
+          "execution-control"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [
+      "full-text-reviewed"
+    ],
+    "first_submission_date": "2026-10-13",
+    "first_submission_source": "https://arxiv.org/abs/2610.18843"
+  },
+  {
+    "id": "arxiv-2610-18866",
+    "title": "AutoAgent0: An Agentic Runtime for Safe Closed-Loop Driving",
+    "first_author": "Liu",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.18866",
+    "code_url": "https://jiagengliu02.github.io/AutoAgent0/",
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "autonomous-driving",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference",
+        "system"
+      ],
+      "mechanism": [
+        "perception-error",
+        "planning-error"
+      ],
+      "surface": [
+        "world-state",
+        "task-planning"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "collision",
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "full-text-reviewed"
+    ],
+    "first_submission_date": "2026-10-13",
+    "first_submission_source": "https://arxiv.org/abs/2610.18866"
+  },
+  {
+    "id": "arxiv-2610-18650",
+    "title": "ForkCast: Predictive Recovery for Vision-Language-Action Policies via Counterfactual Futures",
+    "first_author": "Wen",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.18650",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "visual-perception",
+        "world-state"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "full-text-reviewed"
+    ],
+    "first_submission_date": "2026-10-13",
+    "first_submission_source": "https://arxiv.org/abs/2610.18650"
+  },
+  {
+    "id": "arxiv-2610-18321",
+    "title": "CoSMO: Conformal Semantic Mapping for Open-World Safe Robot Navigation",
+    "first_author": "Wang",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.18321",
+    "code_url": "https://yangming911.github.io/cosmo-page/",
+    "section": "defenses",
+    "subsection": "Uncertainty, Abstention, and Human Oversight",
+    "scope": "embodied-agent",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "uncertainty-miscalibration",
+        "distribution-shift"
+      ],
+      "surface": [
+        "visual-perception",
+        "world-state"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "collision"
+      ]
+    },
+    "tags": [
+      "full-text-reviewed"
+    ],
+    "first_submission_date": "2026-10-13",
+    "first_submission_source": "https://arxiv.org/abs/2610.18321"
+  },
+  {
+    "id": "arxiv-2610-17806",
+    "title": "Which Trajectory Is Safer? Combining Rule and Learning for Safety Evaluation",
+    "first_author": "Luo",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.17806",
+    "code_url": "https://github.com/Xuewen2025/safety-evaluation",
+    "section": "benchmarks",
+    "subsection": "Safety and Hazard Benchmarks",
+    "scope": "autonomous-driving",
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "unsafe-policy-behavior"
+        ],
+        "surfaces": [
+          "execution-control"
+        ],
+        "consequences": [
+          "collision"
+        ]
+      }
+    },
+    "tags": [
+      "full-text-reviewed"
+    ],
+    "first_submission_date": "2026-10-13",
+    "first_submission_source": "https://arxiv.org/abs/2610.17806"
+  },
+  {
+    "id": "arxiv-2610-17799",
+    "title": "Beyond Safe Execution: Safe Online Reinforcement Learning for Autonomous Driving with Value Calibration and Adaptive Guidance",
+    "first_author": "Li",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.17799",
+    "code_url": "https://lzqw.github.io/SOAR-Flow/",
+    "section": "defenses",
+    "subsection": "Safety-Aware Policy Learning",
+    "scope": "autonomous-driving",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "unsafe-policy-behavior"
+      ],
+      "surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "collision",
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "full-text-reviewed"
+    ],
+    "first_submission_date": "2026-10-13",
+    "first_submission_source": "https://arxiv.org/abs/2610.17799"
+  },
+  {
+    "id": "arxiv-2610-17746",
+    "title": "The Human--VLA Communication Gap: What Humans Leave Implicit and What Policies Cannot Recover",
+    "first_author": "Xu",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.17746",
+    "code_url": "https://commgap.github.io/",
+    "section": "benchmarks",
+    "subsection": "Language and Instruction Robustness",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "instruction-ambiguity"
+      ],
+      "surface": [
+        "user-instruction"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "full-text-reviewed"
+    ],
+    "first_submission_date": "2026-10-13",
+    "first_submission_source": "https://arxiv.org/abs/2610.17746"
+  },
+  {
+    "id": "arxiv-2610-17326",
+    "title": "Evaluating Long-Horizon Robot Planning under Uncertainty",
+    "first_author": "Muriki",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.17326",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness and Uncertainty Evaluation",
+    "scope": "embodied-agent",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "planning-error",
+          "distribution-shift"
+        ],
+        "surfaces": [
+          "context-memory-retrieval",
+          "world-state"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [
+      "full-text-reviewed"
+    ],
+    "first_submission_date": "2026-10-12",
+    "first_submission_source": "https://arxiv.org/abs/2610.17326"
+  },
+  {
+    "id": "arxiv-2610-16334",
+    "title": "Toward Study on the Effects of Robot's Humorous Apology on Human's Trust Recovery",
+    "first_author": "Kim",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.16334",
+    "code_url": null,
+    "section": "surveys",
+    "subsection": "Position Papers and Research Agendas",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "execution-control"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "study-protocol",
+      "no-empirical-results"
+    ],
+    "first_submission_date": "2026-10-12",
+    "first_submission_source": "https://arxiv.org/abs/2610.16334"
+  },
+  {
+    "id": "arxiv-2610-16309",
+    "title": "ReAP: From Visual Failure Recognition to Action-Conditioned Risk Prediction for Runtime Failure Monitoring",
+    "first_author": "Liu",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.16309",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection and Recovery",
+    "scope": "robot-policy",
+    "risks": [],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "action-interface",
+        "visual-perception"
+      ],
+      "target": [
+        "runtime-monitor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "full-text-reviewed"
+    ],
+    "first_submission_date": "2026-10-12",
+    "first_submission_source": "https://arxiv.org/abs/2610.16309"
+  },
+  {
+    "id": "arxiv-2610-15814",
+    "title": "ReTrace: Cross-Stage Failure Attribution for Self-Improving Robotic Manipulation",
+    "first_author": "Yu",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.15814",
+    "code_url": "https://github.com/anonymous-report-421/eval-of-gpt-6-astra-as-policy",
+    "section": "defenses",
+    "subsection": "Failure Detection and Recovery",
+    "scope": "embodied-agent",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "planning-error"
+      ],
+      "surface": [
+        "task-planning"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "full-text-reviewed"
+    ],
+    "first_submission_date": "2026-10-11",
+    "first_submission_source": "https://arxiv.org/abs/2610.15814"
+  },
+  {
+    "id": "arxiv-2610-15675",
+    "title": "Recovering Low-Bit Failures in Vision-Language-Action Policies via Quantization-Conditioned Reinforcement Learning",
+    "first_author": "Park",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.15675",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Reliability-Oriented Policy Refinement",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error",
+        "distribution-shift"
+      ],
+      "surface": [
+        "model-supply-chain",
+        "visual-perception"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [
+      "full-text-reviewed"
+    ],
+    "first_submission_date": "2026-10-11",
+    "first_submission_source": "https://arxiv.org/abs/2610.15675"
+  },
+  {
+    "id": "arxiv-2610-14682",
+    "title": "Successful but Unsafe: An Analytical Benchmark for Revealing Collisions in Vision-and-Language Navigation",
+    "first_author": "Pham",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.14682",
+    "code_url": "https://github.com/dinhieufam/vln-safe",
+    "section": "benchmarks",
+    "subsection": "Safety and Hazard Benchmarks",
+    "scope": "embodied-agent",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "unsafe-policy-behavior"
+      ],
+      "surface": [
+        "execution-control"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "collision",
+        "unsafe-success"
+      ]
+    },
+    "tags": [
+      "full-text-reviewed"
+    ],
+    "first_submission_date": "2026-10-10",
+    "first_submission_source": "https://arxiv.org/abs/2610.14682"
+  },
+  {
+    "id": "arxiv-2610-14034",
+    "title": "Building Trustworthy Household Robots through Open-World Safety",
+    "first_author": "Tsai",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.14034",
+    "code_url": null,
+    "section": "surveys",
+    "subsection": "Position Papers and Research Agendas",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": [
+          "inference",
+          "system"
+        ],
+        "mechanisms": [
+          "multiple"
+        ],
+        "surfaces": [
+          "world-state",
+          "context-memory-retrieval",
+          "execution-control"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [
+      "full-text-reviewed"
+    ],
+    "first_submission_date": "2026-10-01",
+    "first_submission_source": "https://arxiv.org/abs/2610.14034"
+  },
+  {
+    "id": "arxiv-2610-16567",
+    "title": "VLA-GAUGE: Systematically Evaluating Generalization and Robustness in Vision-Language-Action Models",
+    "first_author": "Xiao",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.16567",
+    "code_url": "https://vla-gauge-site.pages.dev/",
+    "section": "benchmarks",
+    "subsection": "OOD and Generalization Benchmarks",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "distribution-shift"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "user-instruction",
+          "execution-control"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [
+      "full-text-reviewed"
+    ],
+    "first_submission_date": "2026-10-12",
+    "first_submission_source": "https://arxiv.org/abs/2610.16567"
   },
   {
     "id": "arxiv-2411.18275",
@@ -25121,7 +26458,9 @@
       ],
       "physical_validation": true,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2024-11-27",
+    "first_submission_source": "https://arxiv.org/abs/2411.18275"
   },
   {
     "id": "arxiv-2409.19471",
@@ -25202,7 +26541,9 @@
         "model-access"
       ],
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2024-09-28",
+    "first_submission_source": "https://arxiv.org/abs/2409.19471"
   },
   {
     "id": "arxiv-2407.12784",
@@ -25263,7 +26604,9 @@
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2024-07-17",
+    "first_submission_source": "https://arxiv.org/abs/2407.12784"
   },
   {
     "id": "arxiv-2404.14547",
@@ -25313,7 +26656,9 @@
       "metrics": [],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2024-04-22",
+    "first_submission_source": "https://arxiv.org/abs/2404.14547"
   },
   {
     "id": "arxiv-2505.22503",
@@ -25373,7 +26718,9 @@
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2025-05-28",
+    "first_submission_source": "https://arxiv.org/abs/2505.22503"
   },
   {
     "id": "arxiv-2607.05396",
@@ -25431,7 +26778,9 @@
       ],
       "physical_validation": true,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-07-06",
+    "first_submission_source": "https://arxiv.org/abs/2607.05396"
   },
   {
     "id": "arxiv-2512.01119",
@@ -25506,7 +26855,9 @@
         "model-access"
       ],
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2025-11-30",
+    "first_submission_source": "https://arxiv.org/abs/2512.01119"
   },
   {
     "id": "arxiv-2501.09167",
@@ -25569,7 +26920,9 @@
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2025-01-15",
+    "first_submission_source": "https://arxiv.org/abs/2501.09167"
   },
   {
     "id": "arxiv-2406.19693",
@@ -25619,7 +26972,9 @@
       "metrics": [],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2024-06-28",
+    "first_submission_source": "https://arxiv.org/abs/2406.19693"
   },
   {
     "id": "arxiv-2511.11520",
@@ -25668,7 +27023,9 @@
       "metrics": [],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2025-11-14",
+    "first_submission_source": "https://arxiv.org/abs/2511.11520"
   },
   {
     "id": "arxiv-2412.10726",
@@ -25720,7 +27077,9 @@
       "metrics": [],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2024-12-14",
+    "first_submission_source": "https://arxiv.org/abs/2412.10726"
   },
   {
     "id": "arxiv-2401.12963",
@@ -25799,7 +27158,9 @@
         "human-oversight"
       ],
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2024-01-23",
+    "first_submission_source": "https://arxiv.org/abs/2401.12963"
   },
   {
     "id": "arxiv-2607.19876",
@@ -25856,7 +27217,9 @@
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-07-22",
+    "first_submission_source": "https://arxiv.org/abs/2607.19876"
   },
   {
     "id": "arxiv-2609.37433",
@@ -25912,7 +27275,9 @@
       ],
       "physical_validation": true,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2026-09-29",
+    "first_submission_source": "https://arxiv.org/abs/2609.37433"
   },
   {
     "id": "arxiv-2404.00210",
@@ -25974,7 +27339,9 @@
       ],
       "physical_validation": true,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": "2024-03-30",
+    "first_submission_source": "https://arxiv.org/abs/2404.00210"
   },
   {
     "id": "arxiv-2409.17004",
@@ -26028,7 +27395,9 @@
       ],
       "physical_validation": null,
       "curation_status": "abstract-verified"
-    }
+    },
+    "first_submission_date": "2024-09-25",
+    "first_submission_source": "https://arxiv.org/abs/2409.17004"
   },
   {
     "id": "fernandez-becerra-accountability-explainability-2026",
@@ -26077,6 +27446,8 @@
       "metrics": [],
       "physical_validation": false,
       "curation_status": "paper-verified"
-    }
+    },
+    "first_submission_date": null,
+    "first_submission_source": null
   }
 ]

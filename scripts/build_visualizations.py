@@ -8,6 +8,7 @@ import html
 import json
 import math
 from collections import Counter
+from datetime import date
 from pathlib import Path
 
 
@@ -41,6 +42,29 @@ def esc(value: object) -> str:
 def label(value: str) -> str:
     overrides = {"vla": "VLA", "ood": "OOD", "llm": "LLM", "vlm": "VLM"}
     return " ".join(overrides.get(part, part.capitalize()) for part in value.split("-"))
+
+
+def split_label(text: str, max_len: int = 14) -> list[str]:
+    if len(text) <= max_len:
+        return [text]
+    words = text.split(" ")
+    if len(words) < 2:
+        return [text]
+    best, best_diff, acc = 0, float("inf"), 0
+    for i in range(len(words) - 1):
+        acc += len(words[i]) + 1
+        diff = abs(acc - len(text) / 2)
+        if diff < best_diff:
+            best_diff, best = diff, i
+    return [" ".join(words[: best + 1]), " ".join(words[best + 1 :])]
+
+
+def rotated_axis_label(x: float, y: float, angle: float, text: str) -> str:
+    lines = split_label(text)
+    tspans = "".join(
+        f'<tspan x="0" dy="{"0" if i == 0 else "1.05"}em">{esc(line)}</tspan>' for i, line in enumerate(lines)
+    )
+    return f'<text class="axis" text-anchor="start" transform="translate({x:.1f} {y:.1f}) rotate({angle})">{tspans}</text>'
 
 
 def svg_document(title: str, description: str, width: int, height: int, body: list[str]) -> str:
@@ -119,7 +143,7 @@ def blend(low: str, high: str, fraction: float) -> str:
 
 
 def render_heatmap(papers: list[dict]) -> str:
-    width, height = 1200, 850
+    width, height = 1200, 720
     body = header("Where threats enter and how they act", "Mechanism × surface co-occurrence for concrete threat models; survey coverage is excluded.")
     concrete = [p for p in papers if p["threat_model"]["kind"] not in {"survey", "evaluation"}]
     mechanism_counts = Counter(v for p in concrete for v in threat_values(p, "mechanism"))
@@ -128,10 +152,10 @@ def render_heatmap(papers: list[dict]) -> str:
     surfaces = [value for value, _ in surface_counts.most_common(10)]
     cells = Counter((mechanism, surface) for paper in concrete for mechanism in threat_values(paper, "mechanism") for surface in threat_values(paper, "surface"))
     max_value = max(cells[(m, s)] for m in mechanisms for s in surfaces)
-    left, top, cell_w, cell_h = 300, 275, 82, 51
+    left, top, cell_w, cell_h = 300, 180, 82, 46
     for col, surface in enumerate(surfaces):
         x = left + col * cell_w + cell_w / 2
-        body.append(f'<text class="axis" text-anchor="start" transform="translate({x - 8:.1f} {top - 18}) rotate(-55)">{esc(label(surface))}</text>')
+        body.append(rotated_axis_label(x - 8, top - 14, -30, label(surface)))
     for row, mechanism in enumerate(mechanisms):
         y = top + row * cell_h
         body.append(f'<text class="label" x="{left - 18}" y="{y + cell_h / 2 + 5:.1f}" text-anchor="end">{esc(label(mechanism))}</text>')
@@ -310,8 +334,46 @@ def render_benchmark_threat_consequence(papers: list[dict]) -> str:
     return svg_document("Threat mechanism × consequence", "Benchmark threat and consequence cross-map.", width, height, body)
 
 
+def render_submission_growth(papers: list[dict]) -> str:
+    counts = Counter(p["first_submission_date"] for p in papers if p.get("first_submission_date"))
+    width, height = 1200, 270
+    known = sum(counts.values())
+    body = [f'<text x="48" y="35" font-size="22" font-weight="650" fill="{TEXT}">Papers by first submission date</text>',
+            f'<text class="subtitle" x="48" y="59">Cumulative papers in this catalog · {known} dated · {len(papers) - known} unknown dates excluded</text>']
+    if not counts:
+        body.append('<text class="label" x="48" y="140">No verified submission dates available.</text>')
+        return svg_document("Submission history", "No verified dates.", width, height, body)
+    days = sorted(counts)
+    start, end = date.fromisoformat(days[0]), date.fromisoformat(days[-1])
+    left, right, top, bottom = 74, 1110, 84, 208
+    span = max((end - start).days, 1)
+    x = lambda d: left + (d - start).days / span * (right - left)
+    ceiling = max(50, math.ceil(known / 50) * 50)
+    y = lambda n: bottom - n / ceiling * (bottom - top)
+    for n in range(0, ceiling + 1, max(50, ceiling // 4 // 50 * 50)):
+        yy = y(n)
+        body += [f'<line x1="{left}" y1="{yy:.2f}" x2="{right}" y2="{yy:.2f}" stroke="{GRID}"/>',
+                 f'<text class="axis" x="{left - 12}" y="{yy + 4:.2f}" text-anchor="end">{n}</text>']
+    path = f'M {left} {bottom}'
+    total = 0
+    for day in days:
+        total += counts[day]
+        path += f' H {x(date.fromisoformat(day)):.2f} V {y(total):.2f}'
+    body += [f'<path d="{path} L {right} {bottom} Z" fill="#2F7D73" fill-opacity="0.10"/>',
+             f'<path d="{path}" fill="none" stroke="#2F7D73" stroke-width="2.5"/>',
+             f'<text class="label" x="{right + 10}" y="{y(total) + 4:.2f}">{total}</text>']
+    ticks = [start] + [date(year, 1, 1) for year in range(start.year + 1, end.year + 1)] + [end]
+    for d in ticks:
+        if d != end and d != start and min((d-start).days, (end-d).days) < span * .09:
+            continue
+        body.append(f'<text class="axis" x="{x(d):.2f}" y="230" text-anchor="middle">{d.isoformat() if d in (start, end) else str(d.year)}</text>')
+    body.append('<text class="small" x="48" y="256">arXiv v1 dates (UTC). This is the current curated sample, not catalog-addition history or field-wide publication volume.</text>')
+    return svg_document("Papers by first submission date", f"Cumulative initial submissions: {known} dated papers; {len(papers)-known} unknown dates excluded.", width, height, body)
+
+
 def outputs(papers: list[dict]) -> dict[Path, str]:
     return {
+        OUTPUT_DIR / "submission-growth.svg": render_submission_growth(papers),
         OUTPUT_DIR / "field-timeline.svg": render_timeline(papers),
         OUTPUT_DIR / "threat-heatmap.svg": render_heatmap(papers),
         OUTPUT_DIR / "threat-risk-heatmap.svg": render_threat_risk_heatmap(papers),

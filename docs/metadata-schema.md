@@ -17,3 +17,42 @@ For `survey` and `evaluation` threat models, `coverage` contains `lifecycles`, `
 The optional extension contract is documented in [`paper-extensions.schema.json`](../data/schema/paper-extensions.schema.json), while `scripts/validate_catalog.py` enforces the controlled vocabularies.
 
 `abstract-verified` is also supported for defense and benchmark extensions when the primary abstract establishes the method or evaluation scope but the full paper has not been audited. Unmentioned metrics, platforms, models, and artifact availability are left empty or null rather than inferred.
+
+## Venue and year
+
+`venue` and `year` together describe where and when the work was published, not
+when it first appeared online. `year` is the year of the stated `venue`:
+
+- If `venue` is a named conference or journal (e.g. `CVPR`, `ICCV`, `NeurIPS`),
+  `year` is that venue's own year — the year printed on its proceedings or
+  program, confirmed from the official proceedings page, DBLP, or the venue's
+  acceptance notification, never inferred from the arXiv post date.
+- If `venue` is `arXiv` or `OpenReview` (acceptance unverified), `year` is the
+  year of the cited arXiv/OpenReview version.
+
+An arXiv preprint and its eventual conference appearance routinely fall in
+different calendar years (e.g. posted to arXiv in 2025, accepted at CVPR
+2026); `year` must track the confirmed venue, not the preprint. Whenever a
+record's `venue` is changed away from `arXiv`/`OpenReview` to a named
+venue — including updating an existing record once a preprint is accepted —
+re-derive `year` from that venue's own listing; do not carry over the old
+arXiv-based year.
+
+## Initial submission metadata
+
+Every record contains `first_submission_date` (ISO `YYYY-MM-DD`, or `null`) and
+`first_submission_source` (official evidence URL, or `null`). Both are null when
+unverified. The date is the earliest verified submission of this same work,
+not catalog addition, latest revision, acceptance, or proceedings publication.
+For arXiv use the UTC date of `[v1]` in Submission history. Keep `year` unchanged:
+it serves a separate bibliographic purpose. A later version or retitling must
+not reset the initial date. For other sources, do not substitute publication
+or generic record-creation dates for submission dates.
+
+The current machine verifier supports arXiv v1 histories. Other sources remain
+null until their submission semantics and an appropriate verifier are established.
+Missing dates are excluded from submission-date charts and counted explicitly.
+`verify_bibliography.py` checks every populated date against its evidence source;
+a missing or mismatched source date fails verification. The focused command
+`python3 scripts/verify_submission_dates.py` checks all populated dates without
+claiming that other bibliographic fields passed.

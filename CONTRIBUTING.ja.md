@@ -31,6 +31,7 @@ python3 scripts/build_explorer.py
 
 - 著者は`FirstAuthor et al.`の形式で表示されます。`first_author`には第一著者の姓を格納してください。
 - 公式の論文タイトルと確認済みのvenueを使用してください。生成されたテーブルはタイトルを`paper_url`に直接リンクします。採録venueが未確認の場合は`arXiv`を使用してください。
+- `year`には確認済みvenue自体の年（公式proceedings、DBLP、またはvenueのacceptanceページに基づくproceedings/program年）を設定してください。arXiv投稿年ではありません。同じ論文でもarXivプレプリントと実際の採録venueでは年が異なることがよくあります。レコードの`venue`を`arXiv`/`OpenReview`から正式なvenueに変更する際は、同時に`year`もそのvenueの年に更新してください。詳細は[メタデータスキーマ](docs/metadata-schema.md#venue-and-year)を参照してください。
 - `code_url`には公式または著者自身がメンテナンスする実装のみをリンクしてください。
 - 公式リポジトリが不明な場合は`code_url`を`null`のままにしてください。
 - GitHub starバッジおよびその他のproject/codeリンクは、`code_url`から論文タイトルの横に自動生成されます。

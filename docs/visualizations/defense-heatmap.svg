@@ -20,8 +20,8 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text class="axis" text-anchor="start" transform="translate(767.8 167) rotate(-52)">Planning Error</text>
 <text class="axis" text-anchor="start" transform="translate(854.2 167) rotate(-52)">Adversarial Patch</text>
 <text class="axis" text-anchor="start" transform="translate(940.8 167) rotate(-52)">Jailbreak</text>
-<text class="axis" text-anchor="start" transform="translate(1027.2 167) rotate(-52)">Digital Perturbation</text>
-<text class="axis" text-anchor="start" transform="translate(1113.8 167) rotate(-52)">Uncertainty Miscalibration</text>
+<text class="axis" text-anchor="start" transform="translate(1027.2 167) rotate(-52)">Uncertainty Miscalibration</text>
+<text class="axis" text-anchor="start" transform="translate(1113.8 167) rotate(-52)">Digital Perturbation</text>
 <text class="label" x="282" y="216.0" text-anchor="end">Robust Finetuning</text>
 <rect x="302.0" y="187" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="343.2" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
@@ -62,14 +62,14 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <rect x="1080.5" y="187" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="1121.8" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="label" x="282" y="270.0" text-anchor="end">Runtime Monitoring</text>
-<rect x="302.0" y="241" width="82.5" height="50" rx="6" fill="#6F9FEF"><title>[Expert Systems with Applications 2025] FPC-VLA: A Vision-Language-Action Framework with a Supervisor for Failure Prediction and Correction
+<rect x="302.0" y="241" width="82.5" height="50" rx="6" fill="#6F9FEF"><title>[Expert Systems with Applications 2026] FPC-VLA: A Vision-Language-Action Framework with a Supervisor for Failure Prediction and Correction
 [arXiv 2025] Guardian: Detecting Robotic Planning and Execution Errors with Vision-Language Models
-[ICLR 2024] AHA: A Vision-Language-Model for Detecting and Reasoning over Failures in Robotic Manipulation
+[ICLR 2025] AHA: A Vision-Language-Model for Detecting and Reasoning over Failures in Robotic Manipulation
 [arXiv 2025] The Horcrux: Mechanistically Interpretable Task Decomposition for Detecting and Mitigating Reward Hacking in Embodied AI Systems
 [arXiv 2025] FailSafe: Reasoning and Recovery from Failures in Vision-Language-Action Models
 [arXiv 2026] RC-NF: Robot-Conditioned Normalizing Flow for Real-Time Anomaly Detection in Robotic Manipulation
 [arXiv 2025] I-FailSense: Towards General Robotic Failure Detection with Vision-Language Models
-[IROS 2023] DoReMi: Grounding Language Model by Detecting and Recovering from Plan-Execution Misalignment
+[IROS 2024] DoReMi: Grounding Language Model by Detecting and Recovering from Plan-Execution Misalignment
 [arXiv 2026] Replanning Human-Robot Collaborative Tasks with Vision-Language Models via Semantic and Physical Dual-Correction
 [arXiv 2024] A Self-Correcting Vision-Language-Action Model for Fast and Slow System Manipulation
 [CVPR 2025] Phoenix: A Motion-based Self-Reflection Framework for Fine-grained Robotic Action Correction
@@ -134,16 +134,16 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <rect x="821.0" y="241" width="82.5" height="50" rx="6" fill="#DCE7F7"><title>[ICLR 2024] Embodied Active Defense: Leveraging Recurrent Feedback to Counter Adversarial Patches
 [arXiv 2026] Detect and Suppress: A Mechanistic Defense against Adversarial Patches in VLA Models</title></rect>
 <text x="862.2" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
-<rect x="907.5" y="241" width="82.5" height="50" rx="6" fill="#E3ECF7"><title>[IEEE RA-L 2025] Safety Guardrails for LLM-Enabled Robots</title></rect>
+<rect x="907.5" y="241" width="82.5" height="50" rx="6" fill="#E3ECF7"><title>[IEEE RA-L 2026] Safety Guardrails for LLM-Enabled Robots</title></rect>
 <text x="948.8" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="994.0" y="241" width="82.5" height="50" rx="6" fill="#E3ECF7"><title>[arXiv 2026] Are Vision-Language-Action Models Robust to One-Step Observation Perturbations?</title></rect>
-<text x="1035.2" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="1080.5" y="241" width="82.5" height="50" rx="6" fill="#CBDCF6"><title>[arXiv 2026] Predictive Zonotope Reduction: Precise Runtime Monitoring under Uncertainty
+<rect x="994.0" y="241" width="82.5" height="50" rx="6" fill="#CBDCF6"><title>[arXiv 2026] Predictive Zonotope Reduction: Precise Runtime Monitoring under Uncertainty
 [AdaptFM@ICML 2026] Adaptive Safety Probing for Resource-Efficient Vision-Language-Action Models
 [arXiv 2026] Predictive Semantic Safety: From Visual Physical Reasoning to Safety-Critical Control
 [arXiv 2026] Perturbation-Based Epistemic Uncertainty for Failure Detection in Vision-Language-Action Models
 [arXiv 2026] Shifting Uncertainty to Critical Moments: Towards Reliable Uncertainty Quantification for VLA Model</title></rect>
-<text x="1121.8" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">5</text>
+<text x="1035.2" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">5</text>
+<rect x="1080.5" y="241" width="82.5" height="50" rx="6" fill="#E3ECF7"><title>[arXiv 2026] Are Vision-Language-Action Models Robust to One-Step Observation Perturbations?</title></rect>
+<text x="1121.8" y="270.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <text class="label" x="282" y="324.0" text-anchor="end">Formal Verification</text>
 <rect x="302.0" y="295" width="82.5" height="50" rx="6" fill="#DCE7F7"><title>[arXiv 2026] Realizability Is Not Enough: Encoding, Liveness, and Auditing of Synthesized Robot Supervisors
 [arXiv 2026] WBAG: A Whole-Body and Attached-Geometry Safety Framework for Vision-Language-Action Manipulation</title></rect>
@@ -175,19 +175,19 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="862.2" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="907.5" y="295" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="948.8" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="994.0" y="295" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1035.2" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1080.5" y="295" width="82.5" height="50" rx="6" fill="#DCE7F7"><title>[arXiv 2026] Predictive Zonotope Reduction: Precise Runtime Monitoring under Uncertainty
+<rect x="994.0" y="295" width="82.5" height="50" rx="6" fill="#DCE7F7"><title>[arXiv 2026] Predictive Zonotope Reduction: Precise Runtime Monitoring under Uncertainty
 [arXiv 2026] Predictive Semantic Safety: From Visual Physical Reasoning to Safety-Critical Control</title></rect>
-<text x="1121.8" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
+<text x="1035.2" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
+<rect x="1080.5" y="295" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="1121.8" y="324.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="label" x="282" y="378.0" text-anchor="end">Failure Recovery</text>
-<rect x="302.0" y="349" width="82.5" height="50" rx="6" fill="#88B0F1"><title>[Expert Systems with Applications 2025] FPC-VLA: A Vision-Language-Action Framework with a Supervisor for Failure Prediction and Correction
+<rect x="302.0" y="349" width="82.5" height="50" rx="6" fill="#88B0F1"><title>[Expert Systems with Applications 2026] FPC-VLA: A Vision-Language-Action Framework with a Supervisor for Failure Prediction and Correction
 [arXiv 2025] Guardian: Detecting Robotic Planning and Execution Errors with Vision-Language Models
-[ICLR 2024] AHA: A Vision-Language-Model for Detecting and Reasoning over Failures in Robotic Manipulation
+[ICLR 2025] AHA: A Vision-Language-Model for Detecting and Reasoning over Failures in Robotic Manipulation
 [arXiv 2025] The Horcrux: Mechanistically Interpretable Task Decomposition for Detecting and Mitigating Reward Hacking in Embodied AI Systems
 [arXiv 2025] FailSafe: Reasoning and Recovery from Failures in Vision-Language-Action Models
 [arXiv 2025] I-FailSense: Towards General Robotic Failure Detection with Vision-Language Models
-[IROS 2023] DoReMi: Grounding Language Model by Detecting and Recovering from Plan-Execution Misalignment
+[IROS 2024] DoReMi: Grounding Language Model by Detecting and Recovering from Plan-Execution Misalignment
 [arXiv 2026] Replanning Human-Robot Collaborative Tasks with Vision-Language Models via Semantic and Physical Dual-Correction
 [arXiv 2024] A Self-Correcting Vision-Language-Action Model for Fast and Slow System Manipulation
 [CVPR 2025] Phoenix: A Motion-based Self-Reflection Framework for Fine-grained Robotic Action Correction
@@ -222,10 +222,10 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="862.2" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <rect x="907.5" y="349" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="948.8" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="994.0" y="349" width="82.5" height="50" rx="6" fill="#E3ECF7"><title>[arXiv 2026] Are Vision-Language-Action Models Robust to One-Step Observation Perturbations?</title></rect>
-<text x="1035.2" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
-<rect x="1080.5" y="349" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1121.8" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="994.0" y="349" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="1035.2" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
+<rect x="1080.5" y="349" width="82.5" height="50" rx="6" fill="#E3ECF7"><title>[arXiv 2026] Are Vision-Language-Action Models Robust to One-Step Observation Perturbations?</title></rect>
+<text x="1121.8" y="378.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
 <text class="label" x="282" y="432.0" text-anchor="end">Representation Steering</text>
 <rect x="302.0" y="403" width="82.5" height="50" rx="6" fill="#E3ECF7"><title>[arXiv 2026] FailPatch: Failure Residual Patching for Vision-Language-Action Models</title></rect>
 <text x="343.2" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
@@ -246,10 +246,10 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <rect x="907.5" y="403" width="82.5" height="50" rx="6" fill="#DCE7F7"><title>[arXiv 2026] Concept-Based Dictionary Learning for Inference-Time Safety in Vision Language Action Models
 [arXiv 2025] CEE: An Inference-Time Jailbreak Defense for Embodied Intelligence via Subspace Concept Rotation</title></rect>
 <text x="948.8" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">2</text>
-<rect x="994.0" y="403" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1035.2" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1080.5" y="403" width="82.5" height="50" rx="6" fill="#E3ECF7"><title>[AdaptFM@ICML 2026] Adaptive Safety Probing for Resource-Efficient Vision-Language-Action Models</title></rect>
-<text x="1121.8" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="994.0" y="403" width="82.5" height="50" rx="6" fill="#E3ECF7"><title>[AdaptFM@ICML 2026] Adaptive Safety Probing for Resource-Efficient Vision-Language-Action Models</title></rect>
+<text x="1035.2" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="1080.5" y="403" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="1121.8" y="432.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="label" x="282" y="486.0" text-anchor="end">Model Merging</text>
 <rect x="302.0" y="457" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="343.2" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
@@ -342,10 +342,10 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="862.2" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="907.5" y="565" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="948.8" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="994.0" y="565" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1035.2" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1080.5" y="565" width="82.5" height="50" rx="6" fill="#E3ECF7"><title>[arXiv 2026] SAFE-CHEM: Uncertainty-Aware Policy Switching for Robust Robotic Chemistry</title></rect>
-<text x="1121.8" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="994.0" y="565" width="82.5" height="50" rx="6" fill="#E3ECF7"><title>[arXiv 2026] SAFE-CHEM: Uncertainty-Aware Policy Switching for Robust Robotic Chemistry</title></rect>
+<text x="1035.2" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">1</text>
+<rect x="1080.5" y="565" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="1121.8" y="594.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="label" x="282" y="648.0" text-anchor="end">Input Filtering</text>
 <rect x="302.0" y="619" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="343.2" y="648.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
@@ -387,12 +387,12 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="862.2" y="702.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <rect x="907.5" y="673" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="948.8" y="702.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="994.0" y="673" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="1035.2" y="702.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
-<rect x="1080.5" y="673" width="82.5" height="50" rx="6" fill="#D6E3F6"><title>[CoRL 2026] Control-Ready Uncertainty for Trajectory Diffusion
+<rect x="994.0" y="673" width="82.5" height="50" rx="6" fill="#D6E3F6"><title>[CoRL 2026] Control-Ready Uncertainty for Trajectory Diffusion
 [arXiv 2025] Uncertainty in Action: Confidence Elicitation in Embodied Agents
 [arXiv 2026] SAFE-CHEM: Uncertainty-Aware Policy Switching for Robust Robotic Chemistry</title></rect>
-<text x="1121.8" y="702.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">3</text>
+<text x="1035.2" y="702.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938">3</text>
+<rect x="1080.5" y="673" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
+<text x="1121.8" y="702.0" text-anchor="middle" font-size="12" font-weight="600" fill="#202938"></text>
 <text class="axis" x="732.5" y="765" text-anchor="middle">Defended threat</text>
 <text class="axis" transform="translate(45 455.0) rotate(-90)" text-anchor="middle">Defense mechanism</text>
 </svg>

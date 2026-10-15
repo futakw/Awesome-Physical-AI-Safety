@@ -30,7 +30,9 @@ For each record:
 
 - use a stable, unique `id`
 - store the official title and first-author surname
+- collect `first_submission_date` and `first_submission_source` following [the metadata schema](metadata-schema.md); use arXiv v1 UTC dates, retain the initial date on revisions, and use null for unverified dates; never substitute publication dates
 - use the confirmed venue, or `arXiv` when acceptance is unverified
+- set `year` to the confirmed venue's own year (proceedings/program year for a named conference or journal; the cited version's year for `arXiv`/`OpenReview`) — never the arXiv posting year once a named venue is confirmed; see [the metadata schema](metadata-schema.md#venue-and-year). When updating an existing record's `venue` away from `arXiv`/`OpenReview` because a preprint was accepted, re-derive `year` from the venue at the same time — do not leave the old arXiv-based year in place
 - link the title to the primary paper source through `paper_url`
 - use `code_url` only for an official or author-maintained repository or project page
 - assign one primary section and subsection
@@ -60,9 +62,17 @@ git diff --check
 ```
 
 `verify_bibliography.py` is a fail-closed check. It retrieves canonical metadata
-from the linked primary source and compares the title, first-author surname, and
-year in `data/papers.json`. A mismatch or an unavailable source blocks
-publication; an unavailable source must not be treated as verified. For a daily
+from the linked primary source (`paper_url`) and compares the title,
+first-author surname, and populated initial submission dates in
+`data/papers.json`. `year` is included in that automated comparison too,
+except when `paper_url` is an arXiv/OpenReview preprint and `venue` already
+names a different, confirmed venue — that preprint's own year can legitimately
+differ from the venue's, so `year` stays curator-verified against the venue's
+own listing instead of being machine-checked against the preprint. When
+`paper_url` is itself the venue record (a DOI/Crossref link, ACL Anthology,
+CVF proceedings, etc.), `year` is always checked against it. A mismatch or an
+unavailable source blocks publication; an unavailable source must not be
+treated as verified. For a daily
 incremental run, pass the changed record IDs with repeated `--id` options. Run a
 full-catalog verification periodically.
 
@@ -72,6 +82,7 @@ Review the generated README and confirm:
 - the table title links to the paper
 - an official code or project link appears beside the title when available
 - Risk and Threat Model remain compact and evidence-consistent
+- for every record with a named conference/journal `venue`, `year` matches that venue's own proceedings/program year, not an arXiv posting year
 - the table of contents includes any new subsection
 - the total paper count is correct
 - the generated landscape figures are current
