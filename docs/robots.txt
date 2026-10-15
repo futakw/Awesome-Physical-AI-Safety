@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://futakw.github.io/Awesome-Physical-AI-Safety/sitemap.xml
