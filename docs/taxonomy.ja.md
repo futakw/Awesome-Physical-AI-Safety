@@ -264,3 +264,25 @@ physical AIリスクや信頼できる実運用との明示的な関連がない
 各論文には1つのカタログレコードと1つの主たる貢献セクションを割り当てます。横断的な性質は`risks`と`tags`で表現し、生成されたテーマ別ビューは重複エントリを作成することなく同じレコードを表示できます。
 
 人の主観的なprivacy・trust・fairnessを扱い、特定の脅威・失敗mechanismを実証していない評価研究では、`coverage.mechanisms` を空リストにできます。攻撃や因果的な失敗経路を推測で割り当てることを避けるための扱いです。
+
+### Subsection
+
+主たる`section`の中で、各レコードにはさらに細かい`subsection`を1つ割り当てます。これはsection内のテーブルを閲覧しやすくするための2段階目の分類です。`section`と同様に`subsection`もクローズド語彙で、現在の正式な一覧は`scripts/validate_catalog.py`の`SUBSECTIONS[section]`にあります。以下は参照用に転記したものです。
+
+**surveys**: Domain-Specific Surveys · Embodied AI Safety and Security · General VLA Surveys · Governance and Deployment Assurance · Position Papers and Research Agendas · Privacy, Fairness, and Human-Robot Trust · Training and Adaptation Surveys · World Model Safety and Security
+
+**ood-generalization**: Action and Spatial Generalization · Driving Robustness and Generalization · Language and Instruction Generalization · OOD and Generalization · Open-World Evaluation · Reliability-Oriented Policy Refinement · Representation and Language-Action Generalization
+
+**training-attacks**: Backdoors and Data Poisoning · Privacy and Data Leakage
+
+**inference-attacks**: Jailbreaks and Prompt Injection · Planning, Action, and Trajectory Manipulation · Privacy and Data Leakage · Sensor, State, and Physical Interventions · Upstream VLM Attacks · Visual Perturbations and Patches
+
+**defenses**: Failure Detection, Shielding, and Recovery · Model Unlearning and Data Governance · Multimodal Perception and Physical Safeguards · Privacy-Preserving Perception · Representation Steering and Inference-Time Defense · Runtime Monitoring and Guardrails · Safety Requirements and Assurance · Safety-Aligned and Robust Policy Training · System and Communication Defenses · Uncertainty, Abstention, and Human Oversight
+
+**benchmarks**: Adversarial and Physical Robustness · Evaluation Infrastructure · Failure Detection and Recovery · Governance and Deployment Assurance · Human-Robot Trust and Fairness · Privacy and Data Leakage · Robustness, Uncertainty, and OOD Generalization · Safety-Critical Perception Evaluation · Semantic and Ethical Safety · Task and Physical Safety
+
+**system-security**: Cross-Layer System Security · Privacy, Misuse, and Covert Channels
+
+同じsubsection名が複数のsectionにまたがって存在することがあります（例: "Failure Detection and Recovery"は`defenses`と`benchmarks`の両方、"Privacy and Data Leakage"は3つの攻撃・ベンチマーク系sectionに存在）。これは同じテーマを異なる貢献タイプ（防御する／ベンチマークする／攻撃に利用する）から扱っているためであり、重複ではありません。
+
+論文をキュレーションする際は、既存のsubsectionに妥当に当てはまる場合はそれを再利用してください。本当にどれにも当てはまらない場合のみ新しい値を追加し、その際は同じコミットで`scripts/validate_catalog.py`の`SUBSECTIONS[section]`と`scripts/labels_ja.py`の`SUBSECTIONS_JA`の両方を更新してください。運用ルールの詳細は[メタデータスキーマ](metadata-schema.md#subsection)を参照してください。

@@ -262,3 +262,25 @@ Generic VLM, LLM, robotics, or capability papers should not be included unless t
 Assign each paper one catalog record and one primary-contribution section. Use `risks` and `tags` for cross-cutting properties; generated thematic tables may display the same record without creating a duplicate entry.
 
 Evaluation records that study human perceptions, trust, or fairness without establishing a specific threat or failure mechanism may use an empty `coverage.mechanisms` list. This leaves the mechanism unasserted rather than inventing an attack or causal failure path.
+
+### Subsection
+
+Within its primary `section`, assign each record one `subsection` — a second, finer-grained grouping used for browsing within that section's table. Like `section`, `subsection` is a closed vocabulary: the current, authoritative list lives in `SUBSECTIONS[section]` in `scripts/validate_catalog.py`, reproduced here for reference.
+
+**surveys**: Domain-Specific Surveys · Embodied AI Safety and Security · General VLA Surveys · Governance and Deployment Assurance · Position Papers and Research Agendas · Privacy, Fairness, and Human-Robot Trust · Training and Adaptation Surveys · World Model Safety and Security
+
+**ood-generalization**: Action and Spatial Generalization · Driving Robustness and Generalization · Language and Instruction Generalization · OOD and Generalization · Open-World Evaluation · Reliability-Oriented Policy Refinement · Representation and Language-Action Generalization
+
+**training-attacks**: Backdoors and Data Poisoning · Privacy and Data Leakage
+
+**inference-attacks**: Jailbreaks and Prompt Injection · Planning, Action, and Trajectory Manipulation · Privacy and Data Leakage · Sensor, State, and Physical Interventions · Upstream VLM Attacks · Visual Perturbations and Patches
+
+**defenses**: Failure Detection, Shielding, and Recovery · Model Unlearning and Data Governance · Multimodal Perception and Physical Safeguards · Privacy-Preserving Perception · Representation Steering and Inference-Time Defense · Runtime Monitoring and Guardrails · Safety Requirements and Assurance · Safety-Aligned and Robust Policy Training · System and Communication Defenses · Uncertainty, Abstention, and Human Oversight
+
+**benchmarks**: Adversarial and Physical Robustness · Evaluation Infrastructure · Failure Detection and Recovery · Governance and Deployment Assurance · Human-Robot Trust and Fairness · Privacy and Data Leakage · Robustness, Uncertainty, and OOD Generalization · Safety-Critical Perception Evaluation · Semantic and Ethical Safety · Task and Physical Safety
+
+**system-security**: Cross-Layer System Security · Privacy, Misuse, and Covert Channels
+
+The same subsection name can legitimately recur under more than one section (e.g. "Failure Detection and Recovery" under both `defenses` and `benchmarks`, or "Privacy and Data Leakage" under three attack/benchmark sections) — these describe the same topic approached as a different contribution type (defending against it vs. benchmarking it vs. attacking via it) and are not duplicates of each other.
+
+When curating a record, reuse an existing subsection whenever the paper reasonably fits one; only add a new value when it genuinely doesn't fit any existing option for that section, and do so by adding it to both `SUBSECTIONS[section]` in `scripts/validate_catalog.py` and `SUBSECTIONS_JA` in `scripts/labels_ja.py` in the same commit — see [the metadata schema](metadata-schema.md#subsection) for the full operational rule.

@@ -10,7 +10,7 @@ Awesome Physical AI Safetyの改善にご協力いただきありがとうござ
 
 1. `data/papers.json`を編集する。
 2. 安定した`id`、公式タイトル、第一著者の姓、venue、年、論文URL、（可能であれば）公式のプロジェクトまたはGitHub URLを持つ1件のレコードを追加する。
-3. 1つの主たる`section`と`subsection`を割り当てる。
+3. 1つの主たる`section`を割り当て、そのsectionのクローズド語彙（`scripts/validate_catalog.py`の`SUBSECTIONS[section]`）から`subsection`を選ぶ。論文が既存の値に妥当に当てはまる場合はそれを再利用し、本当にどれにも当てはまらない場合のみ新しい値を追加する。追加する際は、同じコミットで`validate_catalog.py`と`scripts/labels_ja.py`の両方を更新すること（詳細は[メタデータスキーマ](docs/metadata-schema.md#subsection)を参照）。
 4. 実証的に評価されたリスクアウトカム（または空の`risks`リスト）、構造化された`threat_model`、焦点を絞ったmechanism・OODタグを追加する。
 5. 以下を実行する:
 

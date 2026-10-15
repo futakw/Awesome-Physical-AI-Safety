@@ -8,7 +8,7 @@
     "paper_url": "https://arxiv.org/abs/2511.01331",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Robust Training and Safety Alignment",
+    "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -1362,7 +1362,7 @@
     "paper_url": "https://arxiv.org/abs/2509.04018",
     "code_url": "https://fpcvla.github.io/",
     "section": "defenses",
-    "subsection": "Failure Detection and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -1448,7 +1448,7 @@
     "paper_url": "https://arxiv.org/abs/2512.01946",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Failure Detection and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "embodied-agent",
     "risks": [
       "task-reliability"
@@ -1532,7 +1532,7 @@
     "paper_url": "https://arxiv.org/abs/2410.00371",
     "code_url": "https://github.com/NVlabs/AHA",
     "section": "defenses",
-    "subsection": "Failure Detection and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "embodied-agent",
     "risks": [
       "task-reliability"
@@ -1705,7 +1705,7 @@
     "paper_url": "https://arxiv.org/abs/2607.14698",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Robust Training and Safety Alignment",
+    "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -1777,7 +1777,7 @@
     "paper_url": "https://arxiv.org/abs/2608.03231",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Robust Training and Safety Alignment",
+    "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "embodied-agent",
     "risks": [
       "task-reliability"
@@ -1942,7 +1942,7 @@
     "paper_url": "https://arxiv.org/abs/2511.17869",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Failure Detection and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -2021,7 +2021,7 @@
     "paper_url": "https://arxiv.org/abs/2511.18810",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Robust Training and Safety Alignment",
+    "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -2101,7 +2101,7 @@
     "paper_url": "https://arxiv.org/abs/2512.08333",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Robust Training and Safety Alignment",
+    "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -2237,7 +2237,7 @@
     "paper_url": "https://arxiv.org/abs/2608.01028",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Robust Training and Safety Alignment",
+    "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -3280,7 +3280,7 @@
     "paper_url": "https://arxiv.org/abs/2604.23775",
     "code_url": "https://github.com/LiQiiiii/Awesome-VLA-Safety",
     "section": "surveys",
-    "subsection": "VLA Safety Surveys",
+    "subsection": "Embodied AI Safety and Security",
     "scope": "vla",
     "risks": [],
     "threat_model": {
@@ -3535,7 +3535,7 @@
     "paper_url": "https://arxiv.org/abs/2510.03827",
     "code_url": "https://github.com/Zxy-MLlab/LIBERO-PRO",
     "section": "benchmarks",
-    "subsection": "OOD and Generalization Benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -3611,7 +3611,7 @@
     "paper_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Fei_LIBERO-Plus_A_Progressive_Robustness_Benchmark_for_Visual-Language-Action_Models_CVPR_2026_paper.html",
     "code_url": "https://github.com/sylvestf/LIBERO-plus",
     "section": "benchmarks",
-    "subsection": "OOD and Generalization Benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -3699,7 +3699,7 @@
     "paper_url": "https://arxiv.org/abs/2509.12379",
     "code_url": null,
     "section": "ood-generalization",
-    "subsection": "Geometry and Object-Centric Stress Testing",
+    "subsection": "OOD and Generalization",
     "scope": "robot-policy",
     "risks": [
       "task-reliability"
@@ -4748,7 +4748,7 @@
     "paper_url": "https://arxiv.org/abs/2503.03480",
     "code_url": "https://github.com/PKU-Alignment/SafeVLA",
     "section": "defenses",
-    "subsection": "Robust Training and Safety Alignment",
+    "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "vla",
     "risks": [
       "task-reliability",
@@ -5001,7 +5001,7 @@
     "paper_url": "https://arxiv.org/abs/2309.09919",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "llm-robot",
     "risks": [
       "physical-safety"
@@ -5080,7 +5080,7 @@
     "paper_url": "https://arxiv.org/abs/2506.09937",
     "code_url": "https://github.com/vla-safe/SAFE",
     "section": "defenses",
-    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "vla",
     "risks": [],
     "threat_model": {
@@ -5158,7 +5158,7 @@
     "paper_url": "https://arxiv.org/abs/2512.22539",
     "code_url": "https://github.com/PKU-Alignment/VLA-Arena",
     "section": "benchmarks",
-    "subsection": "Comprehensive VLA Evaluation",
+    "subsection": "Evaluation Infrastructure",
     "scope": "vla",
     "risks": [
       "task-reliability",
@@ -6556,7 +6556,7 @@
     "paper_url": "https://arxiv.org/abs/2404.00540",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Active Perception and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "embodied-agent",
     "risks": [
       "task-reliability",
@@ -6779,7 +6779,7 @@
     "paper_url": "https://arxiv.org/abs/2510.26406",
     "code_url": "https://hiors-project.github.io/",
     "section": "defenses",
-    "subsection": "Human-in-the-Loop Safety Refinement",
+    "subsection": "Uncertainty, Abstention, and Human Oversight",
     "scope": "robot-policy",
     "risks": [
       "task-reliability"
@@ -7075,7 +7075,7 @@
     "paper_url": "https://arxiv.org/abs/2410.01971",
     "code_url": "https://github.com/irom-princeton/byovla",
     "section": "defenses",
-    "subsection": "Runtime Observation Interventions",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -7148,7 +7148,7 @@
     "paper_url": "https://arxiv.org/abs/2512.07472",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Active Perception and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -7229,7 +7229,7 @@
     "paper_url": "https://arxiv.org/abs/2510.01642",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Active Perception and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -7395,7 +7395,7 @@
     "paper_url": "https://arxiv.org/abs/2604.12447",
     "code_url": null,
     "section": "benchmarks",
-    "subsection": "Safety and Hazard Benchmarks",
+    "subsection": "Semantic and Ethical Safety",
     "scope": "vla",
     "risks": [
       "task-reliability",
@@ -7471,7 +7471,7 @@
     "paper_url": "https://arxiv.org/abs/2409.12894",
     "code_url": null,
     "section": "benchmarks",
-    "subsection": "Robustness and Uncertainty Evaluation",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -7623,7 +7623,7 @@
     "paper_url": "https://arxiv.org/abs/2507.17383",
     "code_url": null,
     "section": "benchmarks",
-    "subsection": "Robustness and Uncertainty Evaluation",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -7700,7 +7700,7 @@
     "paper_url": "https://arxiv.org/abs/2506.14697",
     "code_url": null,
     "section": "benchmarks",
-    "subsection": "Safety and Hazard Benchmarks",
+    "subsection": "Semantic and Ethical Safety",
     "scope": "embodied-agent",
     "risks": [
       "ethical-societal"
@@ -7771,7 +7771,7 @@
     "paper_url": "https://arxiv.org/abs/2509.25885",
     "code_url": null,
     "section": "benchmarks",
-    "subsection": "Safety and Hazard Benchmarks",
+    "subsection": "Task and Physical Safety",
     "scope": "llm-robot",
     "risks": [
       "ethical-societal",
@@ -7845,7 +7845,7 @@
     "paper_url": "https://arxiv.org/abs/2511.16166",
     "code_url": "https://github.com/AIGeeksGroup/EvoVLA",
     "section": "defenses",
-    "subsection": "Reliability-Oriented Policy Refinement",
+    "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -7981,7 +7981,7 @@
     "paper_url": "https://arxiv.org/abs/2402.15197",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Robust Training and Safety Alignment",
+    "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "robot-policy",
     "risks": [
       "physical-safety"
@@ -8148,7 +8148,7 @@
     "paper_url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/347110fb894281e5e937f6ccd998a6eb-Abstract-Conference.html",
     "code_url": "https://github.com/GeWu-Lab/Action-Preference-Optimization",
     "section": "defenses",
-    "subsection": "Human-in-the-Loop Safety Refinement",
+    "subsection": "Uncertainty, Abstention, and Human Oversight",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -8222,7 +8222,7 @@
     "paper_url": "https://arxiv.org/abs/2311.02817",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "vision-language-navigation",
     "risks": [
       "task-reliability",
@@ -8311,7 +8311,7 @@
     "paper_url": "https://proceedings.mlr.press/v229/liu23g.html",
     "code_url": "https://github.com/real-stanford/reflect",
     "section": "defenses",
-    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "llm-robot",
     "risks": [
       "task-reliability"
@@ -8478,7 +8478,7 @@
     "paper_url": "https://arxiv.org/abs/2505.10219",
     "code_url": "https://sites.google.com/view/safe-robot-foundation-models",
     "section": "defenses",
-    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "robot-foundation-model",
     "risks": [
       "physical-safety"
@@ -8642,7 +8642,7 @@
     "paper_url": "https://arxiv.org/abs/2601.15541",
     "code_url": "https://sites.google.com/view/compliantvla",
     "section": "defenses",
-    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "vla",
     "risks": [
       "task-reliability",
@@ -8793,7 +8793,7 @@
     "paper_url": "https://arxiv.org/abs/2507.17049",
     "code_url": null,
     "section": "benchmarks",
-    "subsection": "Robustness and Uncertainty Evaluation",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
     "scope": "vla",
     "risks": [],
     "threat_model": {
@@ -8920,7 +8920,7 @@
     "paper_url": "https://arxiv.org/abs/2412.18194",
     "code_url": "https://github.com/OpenMOSS/VLABench",
     "section": "benchmarks",
-    "subsection": "Comprehensive VLA Evaluation",
+    "subsection": "Evaluation Infrastructure",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -9298,7 +9298,7 @@
     "paper_url": "https://arxiv.org/abs/2603.28301",
     "code_url": "https://github.com/cau-hai-lab/LIBERO-Para",
     "section": "benchmarks",
-    "subsection": "OOD and Generalization Benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -9777,7 +9777,7 @@
     "paper_url": "https://arxiv.org/abs/2505.16377",
     "code_url": "https://ys-qu.github.io/vlsafe-website/",
     "section": "defenses",
-    "subsection": "Safety-Aware Policy Learning",
+    "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "autonomous-driving",
     "risks": [
       "task-reliability",
@@ -9941,7 +9941,7 @@
     "paper_url": "https://arxiv.org/abs/2602.21445",
     "code_url": "https://hatchetproject.github.io/autohorizon/",
     "section": "defenses",
-    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -10409,7 +10409,7 @@
     "paper_url": "https://arxiv.org/abs/2410.15185",
     "code_url": "https://utiasdsl.github.io/semantic-manipulation/",
     "section": "defenses",
-    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "robot-manipulation",
     "risks": [
       "task-reliability",
@@ -10495,7 +10495,7 @@
     "paper_url": "https://arxiv.org/abs/2509.16072",
     "code_url": "https://clemgris.github.io/I-FailSense/",
     "section": "defenses",
-    "subsection": "Failure Detection and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "robot-manipulation",
     "risks": [
       "task-reliability"
@@ -10574,7 +10574,7 @@
     "paper_url": "https://arxiv.org/abs/2512.21220",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "embodied-agent",
     "risks": [
       "task-reliability",
@@ -10668,7 +10668,7 @@
     "paper_url": "https://arxiv.org/abs/2307.00329",
     "code_url": "https://sites.google.com/view/doremi-paper",
     "section": "defenses",
-    "subsection": "Failure Detection and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "llm-robot",
     "risks": [
       "task-reliability"
@@ -10831,7 +10831,7 @@
     "paper_url": "https://arxiv.org/abs/2602.14551",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Failure Detection and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "llm-robot",
     "risks": [
       "task-reliability"
@@ -11071,7 +11071,7 @@
     "paper_url": "https://arxiv.org/abs/2405.17418",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Failure Detection and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -11153,7 +11153,7 @@
     "paper_url": "https://arxiv.org/abs/2504.14588",
     "code_url": "https://github.com/GeWu-Lab/Motion-based-Self-Reflection-Framework",
     "section": "defenses",
-    "subsection": "Failure Detection and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "robot-manipulation",
     "risks": [
       "task-reliability"
@@ -11547,7 +11547,7 @@
     "paper_url": "https://arxiv.org/abs/2608.26645",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Failure Detection and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -11639,7 +11639,7 @@
     "paper_url": "https://arxiv.org/abs/2607.08448",
     "code_url": "https://github.com/RLinf/RPent",
     "section": "defenses",
-    "subsection": "Failure Detection and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -11729,7 +11729,7 @@
     "paper_url": "https://arxiv.org/abs/2607.01111",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Failure Detection and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "robot-policy",
     "risks": [
       "task-reliability"
@@ -11869,7 +11869,7 @@
     "paper_url": "https://arxiv.org/abs/2607.00272",
     "code_url": "https://research.nvidia.com/labs/gear/ASPIRE/",
     "section": "defenses",
-    "subsection": "Failure Detection and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "embodied-agent",
     "risks": [
       "task-reliability"
@@ -11991,7 +11991,7 @@
     "paper_url": "https://arxiv.org/abs/2609.03142",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Robust Training and Safety Alignment",
+    "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -12489,7 +12489,7 @@
     "paper_url": "https://arxiv.org/abs/2609.04277",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Failure Detection and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "vla",
     "risks": [],
     "threat_model": {
@@ -12861,7 +12861,7 @@
     "paper_url": "https://arxiv.org/abs/2609.05300",
     "code_url": null,
     "section": "ood-generalization",
-    "subsection": "OOD and Generalization Benchmarks",
+    "subsection": "OOD and Generalization",
     "scope": "robot-navigation",
     "risks": [
       "task-reliability",
@@ -12927,7 +12927,7 @@
     "paper_url": "https://arxiv.org/abs/2609.11697",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Safety-Aware Policy Learning",
+    "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "vla",
     "risks": [
       "task-reliability",
@@ -12991,7 +12991,7 @@
     "paper_url": "https://arxiv.org/abs/2609.10895",
     "code_url": null,
     "section": "benchmarks",
-    "subsection": "Safety and Hazard Benchmarks",
+    "subsection": "Task and Physical Safety",
     "scope": "embodied-agent",
     "risks": [
       "physical-safety"
@@ -13055,7 +13055,7 @@
     "paper_url": "https://arxiv.org/abs/2609.10918",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Safety-Aware Policy Learning",
+    "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "robot-manipulation",
     "risks": [
       "task-reliability",
@@ -13120,7 +13120,7 @@
     "paper_url": "https://arxiv.org/abs/2609.11433",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Safety-Aware Policy Learning",
+    "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "robot-policy",
     "risks": [
       "task-reliability",
@@ -13313,7 +13313,7 @@
     "paper_url": "https://arxiv.org/abs/2609.10726",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Safety-Aware Policy Learning",
+    "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "embodied-agent",
     "risks": [
       "task-reliability",
@@ -13607,7 +13607,7 @@
     "paper_url": "https://arxiv.org/abs/2609.15988",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "embodied-agent",
     "risks": [
       "physical-safety"
@@ -13690,7 +13690,7 @@
     "paper_url": "https://arxiv.org/abs/2609.18122",
     "code_url": null,
     "section": "training-attacks",
-    "subsection": "Data, Model, and Supply-Chain Attacks",
+    "subsection": "Backdoors and Data Poisoning",
     "scope": "robot-policy",
     "risks": [
       "physical-safety",
@@ -13756,7 +13756,7 @@
     "paper_url": "https://arxiv.org/abs/2609.18324",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Failure Detection and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "robot-policy",
     "risks": [],
     "threat_model": {
@@ -13815,7 +13815,7 @@
     "paper_url": "https://arxiv.org/abs/2609.18395",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "robot-policy",
     "risks": [
       "task-reliability",
@@ -13881,7 +13881,7 @@
     "paper_url": "https://arxiv.org/abs/2609.19080",
     "code_url": "https://github.com/StanfordASL/elastiqp",
     "section": "defenses",
-    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "robot-policy",
     "risks": [
       "physical-safety"
@@ -14047,7 +14047,7 @@
     "paper_url": "https://arxiv.org/abs/2609.20822",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "embodied-agent",
     "risks": [
       "task-reliability",
@@ -14115,7 +14115,7 @@
     "paper_url": "https://arxiv.org/abs/2609.23896",
     "code_url": "https://safe-robotics-group-at-asu.github.io/BarrierFormer-website/",
     "section": "defenses",
-    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "robot-policy",
     "risks": [
       "task-reliability",
@@ -14179,7 +14179,7 @@
     "paper_url": "https://arxiv.org/abs/2609.24062",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "robot-policy",
     "risks": [
       "physical-safety"
@@ -14242,7 +14242,7 @@
     "paper_url": "https://arxiv.org/abs/2609.23731",
     "code_url": null,
     "section": "benchmarks",
-    "subsection": "Robustness and Uncertainty Evaluation",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
     "scope": "robot-policy",
     "risks": [
       "physical-safety"
@@ -14390,7 +14390,7 @@
     "paper_url": "https://arxiv.org/abs/2609.26313",
     "code_url": "https://github.com/Loule0-0/SafeLoop",
     "section": "defenses",
-    "subsection": "Failure Detection and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "vla",
     "risks": [
       "task-reliability",
@@ -14488,7 +14488,7 @@
     "paper_url": "https://arxiv.org/abs/2609.22462",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "vla",
     "risks": [
       "task-reliability",
@@ -14667,7 +14667,7 @@
     "paper_url": "https://arxiv.org/abs/2609.21369",
     "code_url": "https://protracer-failure.github.io",
     "section": "defenses",
-    "subsection": "Failure Detection and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "robot-policy",
     "risks": [
       "task-reliability"
@@ -14732,7 +14732,7 @@
     "paper_url": "https://arxiv.org/abs/2609.24118",
     "code_url": "https://github.com/xiaojunlan/care",
     "section": "defenses",
-    "subsection": "Failure Detection and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -14829,7 +14829,7 @@
     "paper_url": "https://arxiv.org/abs/2609.26292",
     "code_url": null,
     "section": "benchmarks",
-    "subsection": "Robustness and Uncertainty Evaluation",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -14915,7 +14915,7 @@
     "paper_url": "https://arxiv.org/abs/2609.30092",
     "code_url": null,
     "section": "benchmarks",
-    "subsection": "Robustness and Uncertainty Evaluation",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -15078,7 +15078,7 @@
     "paper_url": "https://arxiv.org/abs/2609.31048",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Failure Detection and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -15165,7 +15165,7 @@
     "paper_url": "https://arxiv.org/abs/2605.30834",
     "code_url": "https://seongheon-96.github.io/hide_and_seek_site/",
     "section": "defenses",
-    "subsection": "Failure Detection and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "vla",
     "risks": [],
     "threat_model": {
@@ -15423,7 +15423,7 @@
     "paper_url": "https://arxiv.org/abs/2609.34175",
     "code_url": "https://github.com/yupeng-2003/FailPatch",
     "section": "defenses",
-    "subsection": "Failure Detection and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -15510,7 +15510,7 @@
     "paper_url": "https://arxiv.org/abs/2609.34356",
     "code_url": "https://www.taekyung.me",
     "section": "defenses",
-    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "robot-policy",
     "risks": [
       "physical-safety"
@@ -15845,7 +15845,7 @@
     "paper_url": "https://arxiv.org/abs/2609.37519",
     "code_url": "https://video2stl.github.io/",
     "section": "defenses",
-    "subsection": "Safety-Aware Policy Learning",
+    "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "robot-policy",
     "risks": [
       "task-reliability"
@@ -15936,7 +15936,7 @@
     "paper_url": "https://arxiv.org/abs/2609.37871",
     "code_url": null,
     "section": "benchmarks",
-    "subsection": "Safety and Hazard Benchmarks",
+    "subsection": "Task and Physical Safety",
     "scope": "autonomous-driving",
     "risks": [
       "physical-safety",
@@ -16258,7 +16258,7 @@
     "paper_url": "https://arxiv.org/abs/2609.40007",
     "code_url": "https://yathag.github.io/multilink-safety-filter/",
     "section": "defenses",
-    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "vla",
     "risks": [
       "task-reliability",
@@ -16354,7 +16354,7 @@
     "paper_url": "https://arxiv.org/abs/2610.01083",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "vla",
     "risks": [
       "task-reliability",
@@ -16446,7 +16446,7 @@
     "paper_url": "https://arxiv.org/abs/2610.05166",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -16535,7 +16535,7 @@
     "paper_url": "https://arxiv.org/abs/2610.07946",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Runtime Observation Interventions",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -16618,7 +16618,7 @@
     "paper_url": "https://arxiv.org/abs/2610.09496",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Safety-Aware Policy Learning",
+    "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -16714,7 +16714,7 @@
     "paper_url": "https://arxiv.org/abs/2610.10178",
     "code_url": null,
     "section": "ood-generalization",
-    "subsection": "Language and Instruction Robustness",
+    "subsection": "Language and Instruction Generalization",
     "scope": "vla",
     "risks": [],
     "threat_model": {
@@ -17017,7 +17017,7 @@
     "paper_url": "https://arxiv.org/abs/2610.12467",
     "code_url": "https://lzyang2000.github.io/",
     "section": "defenses",
-    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "embodied-agent",
     "risks": [
       "physical-safety"
@@ -17324,7 +17324,7 @@
     "paper_url": "https://arxiv.org/abs/2610.12432",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "embodied-agent",
     "risks": [
       "task-reliability",
@@ -17492,7 +17492,7 @@
     "paper_url": "https://arxiv.org/abs/2609.32550",
     "code_url": null,
     "section": "ood-generalization",
-    "subsection": "OOD and Generalization Benchmarks",
+    "subsection": "OOD and Generalization",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -17580,7 +17580,7 @@
     "paper_url": "https://arxiv.org/abs/2607.01378",
     "code_url": "https://willenglish.tech/SafetyGuidedFlowMatching/",
     "section": "defenses",
-    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "vla",
     "risks": [
       "task-reliability",
@@ -17938,7 +17938,7 @@
     "paper_url": "https://arxiv.org/abs/2609.33707",
     "code_url": null,
     "section": "ood-generalization",
-    "subsection": "OOD and Generalization Benchmarks",
+    "subsection": "OOD and Generalization",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -18460,7 +18460,7 @@
     "paper_url": "https://arxiv.org/abs/2307.07176",
     "code_url": "https://github.com/PKU-Alignment/SafeDreamer",
     "section": "defenses",
-    "subsection": "Safety-Aware Policy Learning",
+    "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "robot-policy",
     "risks": [
       "physical-safety"
@@ -19449,7 +19449,7 @@
     "paper_url": "https://arxiv.org/abs/2604.10055",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Robust Training and Safety Alignment",
+    "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -19529,7 +19529,7 @@
     "paper_url": "https://arxiv.org/abs/2602.06556",
     "code_url": null,
     "section": "benchmarks",
-    "subsection": "OOD and Generalization Benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
     "scope": "vla",
     "risks": [],
     "threat_model": {
@@ -19771,7 +19771,7 @@
     "paper_url": "https://arxiv.org/abs/2510.13626",
     "code_url": null,
     "section": "benchmarks",
-    "subsection": "OOD and Generalization Benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -19995,7 +19995,7 @@
     "paper_url": "https://arxiv.org/abs/2603.21017",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Robust Training and Safety Alignment",
+    "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "robot-policy",
     "risks": [
       "task-reliability"
@@ -20340,7 +20340,7 @@
     "paper_url": "https://arxiv.org/abs/2605.20544",
     "code_url": "https://purseclab.github.io/RoboAbstention/",
     "section": "benchmarks",
-    "subsection": "Uncertainty, Abstention, and Human Oversight",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
     "scope": "embodied-agent",
     "risks": [],
     "threat_model": {
@@ -20641,7 +20641,7 @@
     "paper_url": "https://arxiv.org/abs/2606.20698",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Safety-Aware Policy Learning",
+    "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "vla",
     "risks": [
       "task-reliability",
@@ -20845,7 +20845,7 @@
     "paper_url": "https://arxiv.org/abs/2606.09258",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Failure Detection and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -20920,7 +20920,7 @@
     "paper_url": "https://arxiv.org/abs/2509.21651",
     "code_url": "https://asimov-benchmark.github.io/v2",
     "section": "benchmarks",
-    "subsection": "Safety and Hazard Benchmarks",
+    "subsection": "Task and Physical Safety",
     "scope": "embodied-agent",
     "risks": [
       "physical-safety"
@@ -21106,7 +21106,7 @@
     "paper_url": "https://arxiv.org/abs/2509.18953",
     "code_url": null,
     "section": "benchmarks",
-    "subsection": "OOD and Generalization Benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -21305,7 +21305,7 @@
     "paper_url": "https://arxiv.org/abs/2606.23085",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Failure Detection and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "embodied-agent",
     "risks": [],
     "threat_model": {
@@ -21451,7 +21451,7 @@
     "paper_url": "https://arxiv.org/abs/2509.23690",
     "code_url": "https://github.com/BITHLP/HomeSafeBench",
     "section": "benchmarks",
-    "subsection": "Safety and Hazard Benchmarks",
+    "subsection": "Task and Physical Safety",
     "scope": "embodied-agent",
     "risks": [],
     "threat_model": {
@@ -21512,7 +21512,7 @@
     "paper_url": "https://arxiv.org/abs/2511.22777",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Robust Training and Safety Alignment",
+    "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "robot-policy",
     "risks": [
       "task-reliability",
@@ -21587,7 +21587,7 @@
     "paper_url": "https://doi.org/10.1007/s12369-024-01153-x",
     "code_url": null,
     "section": "benchmarks",
-    "subsection": "Human-Robot Privacy and Trust",
+    "subsection": "Human-Robot Trust and Fairness",
     "scope": "hri",
     "risks": [],
     "threat_model": {
@@ -21787,7 +21787,7 @@
     "paper_url": "https://arxiv.org/abs/2603.13528",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Failure Detection and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "embodied-agent",
     "risks": [],
     "threat_model": {
@@ -22398,7 +22398,7 @@
     "paper_url": "https://doi.org/10.1109/iccv48922.2021.01540",
     "code_url": "https://github.com/allenai/robustnav",
     "section": "benchmarks",
-    "subsection": "OOD and Generalization Benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
     "scope": "embodied-agent",
     "risks": [
       "task-reliability"
@@ -22462,7 +22462,7 @@
     "paper_url": "https://doi.org/10.1007/978-3-031-25075-0_15",
     "code_url": null,
     "section": "benchmarks",
-    "subsection": "OOD and Generalization Benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
     "scope": "embodied-agent",
     "risks": [],
     "threat_model": {
@@ -22525,7 +22525,7 @@
     "paper_url": "https://arxiv.org/abs/2510.00037",
     "code_url": "https://github.com/gakakulicc/RobustVLA",
     "section": "defenses",
-    "subsection": "Robust Training and Safety Alignment",
+    "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -22603,7 +22603,7 @@
     "paper_url": "https://arxiv.org/abs/2602.24235",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Robust Training and Safety Alignment",
+    "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "embodied-agent",
     "risks": [
       "physical-safety"
@@ -22928,7 +22928,7 @@
     "paper_url": "https://doi.org/10.18653/v1/2026.findings-acl.1852",
     "code_url": null,
     "section": "benchmarks",
-    "subsection": "Safety and Hazard Benchmarks",
+    "subsection": "Task and Physical Safety",
     "scope": "embodied-agent",
     "risks": [
       "physical-safety"
@@ -23567,7 +23567,7 @@
     "paper_url": "https://arxiv.org/abs/2606.21386",
     "code_url": "https://vla-fail.github.io/vla-fail-2026",
     "section": "defenses",
-    "subsection": "Failure Detection and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "vla",
     "risks": [],
     "threat_model": {
@@ -23700,7 +23700,7 @@
     "paper_url": "https://arxiv.org/abs/2606.09749",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "vla",
     "risks": [
       "physical-safety"
@@ -24221,7 +24221,7 @@
     "paper_url": "https://arxiv.org/abs/2411.18289",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Safety-Aware Policy Learning",
+    "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "embodied-agent",
     "risks": [
       "task-reliability",
@@ -24301,7 +24301,7 @@
     "paper_url": "https://arxiv.org/abs/2609.02358",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "robot-policy",
     "risks": [],
     "threat_model": {
@@ -24367,7 +24367,7 @@
     "paper_url": "https://arxiv.org/abs/2609.02811",
     "code_url": "https://github.com/rdharini2001/Robot_World_Model",
     "section": "benchmarks",
-    "subsection": "Robustness and Uncertainty Evaluation",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
     "scope": "robot-policy",
     "risks": [],
     "threat_model": {
@@ -24617,7 +24617,7 @@
     "paper_url": "https://arxiv.org/abs/2609.20103",
     "code_url": null,
     "section": "benchmarks",
-    "subsection": "Geometry and Object-Centric Stress Testing",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
     "scope": "autonomous-driving",
     "risks": [
       "physical-safety"
@@ -24687,7 +24687,7 @@
     "paper_url": "https://arxiv.org/abs/2609.21246",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Failure Detection and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "vla",
     "risks": [],
     "threat_model": {
@@ -24758,7 +24758,7 @@
     "paper_url": "https://arxiv.org/abs/2609.21908",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Failure Detection and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -24835,7 +24835,7 @@
     "paper_url": "https://arxiv.org/abs/2609.27312",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Safety-Aware Policy Learning",
+    "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "robot-policy",
     "risks": [
       "task-reliability"
@@ -24911,7 +24911,7 @@
     "paper_url": "https://arxiv.org/abs/2609.28984",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Safety-Aware Policy Learning",
+    "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "embodied-agent",
     "risks": [
       "physical-safety"
@@ -25118,7 +25118,7 @@
     "paper_url": "https://arxiv.org/abs/2609.21838",
     "code_url": null,
     "section": "benchmarks",
-    "subsection": "Robustness and Uncertainty Evaluation",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
     "scope": "robot-policy",
     "risks": [
       "ethical-societal"
@@ -25180,7 +25180,7 @@
     "paper_url": "https://arxiv.org/abs/2608.09303",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "robot-policy",
     "risks": [
       "task-reliability",
@@ -25330,7 +25330,7 @@
     "paper_url": "https://arxiv.org/abs/2606.08508",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Failure Detection and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "robot-policy",
     "risks": [],
     "threat_model": {
@@ -25394,7 +25394,7 @@
     "paper_url": "https://arxiv.org/abs/2606.13203",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "robot-policy",
     "risks": [],
     "threat_model": {
@@ -25530,7 +25530,7 @@
     "paper_url": "https://arxiv.org/abs/2606.08414",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Robust Training and Safety Alignment",
+    "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "robot-policy",
     "risks": [
       "task-reliability",
@@ -25682,7 +25682,7 @@
     "paper_url": "https://arxiv.org/abs/2505.18858",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Safety-Aware Policy Learning",
+    "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "robot-policy",
     "risks": [
       "physical-safety"
@@ -25755,7 +25755,7 @@
     "paper_url": "https://arxiv.org/abs/2503.07404",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "robot-policy",
     "risks": [
       "physical-safety"
@@ -25823,7 +25823,7 @@
     "paper_url": "https://arxiv.org/abs/2610.18843",
     "code_url": null,
     "section": "benchmarks",
-    "subsection": "OOD and Generalization Benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -25906,7 +25906,7 @@
     "paper_url": "https://arxiv.org/abs/2610.18650",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -25986,7 +25986,7 @@
     "paper_url": "https://arxiv.org/abs/2610.17806",
     "code_url": "https://github.com/Xuewen2025/safety-evaluation",
     "section": "benchmarks",
-    "subsection": "Safety and Hazard Benchmarks",
+    "subsection": "Task and Physical Safety",
     "scope": "autonomous-driving",
     "risks": [
       "physical-safety"
@@ -26023,7 +26023,7 @@
     "paper_url": "https://arxiv.org/abs/2610.17799",
     "code_url": "https://lzqw.github.io/SOAR-Flow/",
     "section": "defenses",
-    "subsection": "Safety-Aware Policy Learning",
+    "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "autonomous-driving",
     "risks": [
       "task-reliability",
@@ -26065,7 +26065,7 @@
     "paper_url": "https://arxiv.org/abs/2610.17746",
     "code_url": "https://commgap.github.io/",
     "section": "benchmarks",
-    "subsection": "Language and Instruction Robustness",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -26103,7 +26103,7 @@
     "paper_url": "https://arxiv.org/abs/2610.17326",
     "code_url": null,
     "section": "benchmarks",
-    "subsection": "Robustness and Uncertainty Evaluation",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
     "scope": "embodied-agent",
     "risks": [
       "task-reliability"
@@ -26174,7 +26174,7 @@
     "paper_url": "https://arxiv.org/abs/2610.16309",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Failure Detection and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "robot-policy",
     "risks": [],
     "threat_model": {
@@ -26211,7 +26211,7 @@
     "paper_url": "https://arxiv.org/abs/2610.15814",
     "code_url": "https://github.com/anonymous-report-421/eval-of-gpt-6-astra-as-policy",
     "section": "defenses",
-    "subsection": "Failure Detection and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "embodied-agent",
     "risks": [
       "task-reliability"
@@ -26289,7 +26289,7 @@
     "paper_url": "https://arxiv.org/abs/2610.14682",
     "code_url": "https://github.com/dinhieufam/vln-safe",
     "section": "benchmarks",
-    "subsection": "Safety and Hazard Benchmarks",
+    "subsection": "Task and Physical Safety",
     "scope": "embodied-agent",
     "risks": [
       "task-reliability",
@@ -26365,7 +26365,7 @@
     "paper_url": "https://arxiv.org/abs/2610.16567",
     "code_url": "https://vla-gauge-site.pages.dev/",
     "section": "benchmarks",
-    "subsection": "OOD and Generalization Benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
     "scope": "vla",
     "risks": [
       "task-reliability"
@@ -26791,7 +26791,7 @@
     "paper_url": "https://arxiv.org/abs/2512.01119",
     "code_url": "https://github.com/Bluefin-Tuna/WISER",
     "section": "defenses",
-    "subsection": "Runtime Observation Interventions",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "world-model",
     "risks": [],
     "threat_model": {
@@ -26933,7 +26933,7 @@
     "paper_url": "https://arxiv.org/abs/2406.19693",
     "code_url": "https://mm-robobench.github.io/",
     "section": "benchmarks",
-    "subsection": "Safety and Hazard Benchmarks",
+    "subsection": "Task and Physical Safety",
     "scope": "embodied-agent",
     "risks": [],
     "threat_model": {
@@ -27036,7 +27036,7 @@
     "paper_url": "https://arxiv.org/abs/2412.10726",
     "code_url": null,
     "section": "benchmarks",
-    "subsection": "Robustness and Uncertainty Evaluation",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
     "scope": "embodied-agent",
     "risks": [],
     "threat_model": {
@@ -27171,7 +27171,7 @@
     "paper_url": "https://arxiv.org/abs/2607.19876",
     "code_url": null,
     "section": "benchmarks",
-    "subsection": "Robustness and Uncertainty Evaluation",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
     "scope": "world-model",
     "risks": [
       "task-reliability"
@@ -27230,7 +27230,7 @@
     "paper_url": "https://arxiv.org/abs/2609.37433",
     "code_url": "https://force-policy.github.io/fp2",
     "section": "defenses",
-    "subsection": "Action Shielding, Fail-Safes, and Recovery",
+    "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "robot-foundation-model",
     "risks": [
       "task-reliability"
@@ -27288,7 +27288,7 @@
     "paper_url": "https://arxiv.org/abs/2404.00210",
     "code_url": null,
     "section": "defenses",
-    "subsection": "Safety-Aware Policy Learning",
+    "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "embodied-agent",
     "risks": [
       "task-reliability",

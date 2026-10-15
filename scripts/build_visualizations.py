@@ -98,7 +98,7 @@ def threat_values(paper: dict, field: str) -> list[str]:
 
 
 def render_timeline(papers: list[dict]) -> str:
-    width, height = 1200, 650
+    width, height = 1200, 430
     body = header("Field timeline", "Bubble area represents the number of cataloged papers in each research area and year.")
     years = sorted({paper["year"] for paper in papers})
     groups = {
@@ -106,7 +106,7 @@ def render_timeline(papers: list[dict]) -> str:
         for section in SECTION_ORDER
         for year in years
     }
-    left, right, top, row_gap = 250, 1120, 128, 64
+    left, right, top, row_gap = 250, 1120, 92, 44
     x_positions = {year: left + i * (right - left) / (len(years) - 1) for i, year in enumerate(years)}
     max_count = max(len(group) for group in groups.values())
     for year, x in x_positions.items():
@@ -143,7 +143,7 @@ def blend(low: str, high: str, fraction: float) -> str:
 
 
 def render_heatmap(papers: list[dict]) -> str:
-    width, height = 1200, 720
+    width, height = 1200, 560
     body = header("Where threats enter and how they act", "Mechanism × surface co-occurrence for concrete threat models; survey coverage is excluded.")
     concrete = [p for p in papers if p["threat_model"]["kind"] not in {"survey", "evaluation"}]
     mechanism_counts = Counter(v for p in concrete for v in threat_values(p, "mechanism"))
@@ -152,7 +152,7 @@ def render_heatmap(papers: list[dict]) -> str:
     surfaces = [value for value, _ in surface_counts.most_common(10)]
     cells = Counter((mechanism, surface) for paper in concrete for mechanism in threat_values(paper, "mechanism") for surface in threat_values(paper, "surface"))
     max_value = max(cells[(m, s)] for m in mechanisms for s in surfaces)
-    left, top, cell_w, cell_h = 300, 180, 82, 46
+    left, top, cell_w, cell_h = 300, 145, 82, 36
     for col, surface in enumerate(surfaces):
         x = left + col * cell_w + cell_w / 2
         body.append(rotated_axis_label(x - 8, top - 14, -30, label(surface)))
@@ -276,9 +276,9 @@ def render_threat_risk_heatmap(papers: list[dict]) -> str:
     concrete = [paper for paper in papers if paper["threat_model"]["kind"] != "survey"]
     rows = ordered_threat_mechanisms(papers)
     cols = ["task-reliability", "physical-safety", "ethical-societal", "security-privacy"]
-    width, left, top, cell_h = 1200, 300, 165, 54
+    width, left, top, cell_h = 1200, 300, 112, 38
     cell_w = 190
-    height = max(720, int(top + len(rows) * cell_h + 90))
+    height = max(430, int(top + len(rows) * cell_h + 70))
     body = header("Threat mechanism × evaluated risk", "Empirically evaluated outcome families; empty cells remain visible.")
     cells = {
         (row, col): [
@@ -290,7 +290,7 @@ def render_threat_risk_heatmap(papers: list[dict]) -> str:
     max_value = max((len(value) for value in cells.values()), default=1)
     for index, col in enumerate(cols):
         x = left + index * cell_w + cell_w / 2
-        body.append(f'<text class="axis" x="{x:.1f}" y="{top - 20}" text-anchor="middle">{esc(label(col))}</text>')
+        body.append(f'<text class="axis" x="{x:.1f}" y="{top - 12}" text-anchor="middle">{esc(label(col))}</text>')
     for rindex, row in enumerate(rows):
         y = top + rindex * cell_h
         body.append(f'<text class="label" x="{left - 18}" y="{y + cell_h / 2 + 4:.1f}" text-anchor="end">{esc(label(row))}</text>')

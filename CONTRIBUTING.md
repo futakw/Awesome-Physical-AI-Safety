@@ -10,7 +10,7 @@ For recurring literature maintenance, follow the [daily curation workflow](docs/
 
 1. Edit `data/papers.json`.
 2. Add one record with a stable ID, official title, first-author surname, venue, year, paper URL, and—when available—the official project or GitHub URL.
-3. Assign one primary `section` and `subsection`.
+3. Assign one primary `section`, then a `subsection` chosen from that section's closed vocabulary (`SUBSECTIONS[section]` in `scripts/validate_catalog.py`) — reuse an existing value when the paper reasonably fits one; only add a new value when it genuinely doesn't, and add it to both `validate_catalog.py` and `scripts/labels_ja.py` in the same commit (see [the metadata schema](docs/metadata-schema.md#subsection)).
 4. Add empirically evaluated risk outcomes (or an empty `risks` list), a structured `threat_model`, and focused mechanism or OOD tags.
 5. Run:
 

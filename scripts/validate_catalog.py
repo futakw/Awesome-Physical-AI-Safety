@@ -41,6 +41,71 @@ SECTIONS = {
     "benchmarks",
     "system-security",
 }
+# subsection is a closed vocabulary scoped per section. Add a new value here
+# (and its translation in scripts/labels_ja.py's SUBSECTIONS_JA) only after
+# checking this list for an existing subsection that already fits — see
+# docs/daily-curation-workflow.md and docs/metadata-schema.md#subsection.
+SUBSECTIONS = {
+    "surveys": {
+        "Embodied AI Safety and Security",
+        "Position Papers and Research Agendas",
+        "Privacy, Fairness, and Human-Robot Trust",
+        "General VLA Surveys",
+        "Domain-Specific Surveys",
+        "Training and Adaptation Surveys",
+        "World Model Safety and Security",
+        "Governance and Deployment Assurance",
+    },
+    "ood-generalization": {
+        "Representation and Language-Action Generalization",
+        "OOD and Generalization",
+        "Action and Spatial Generalization",
+        "Open-World Evaluation",
+        "Driving Robustness and Generalization",
+        "Language and Instruction Generalization",
+        "Reliability-Oriented Policy Refinement",
+    },
+    "training-attacks": {
+        "Backdoors and Data Poisoning",
+        "Privacy and Data Leakage",
+    },
+    "inference-attacks": {
+        "Jailbreaks and Prompt Injection",
+        "Visual Perturbations and Patches",
+        "Planning, Action, and Trajectory Manipulation",
+        "Sensor, State, and Physical Interventions",
+        "Upstream VLM Attacks",
+        "Privacy and Data Leakage",
+    },
+    "defenses": {
+        "Runtime Monitoring and Guardrails",
+        "Failure Detection, Shielding, and Recovery",
+        "Safety-Aligned and Robust Policy Training",
+        "Uncertainty, Abstention, and Human Oversight",
+        "Representation Steering and Inference-Time Defense",
+        "Multimodal Perception and Physical Safeguards",
+        "System and Communication Defenses",
+        "Privacy-Preserving Perception",
+        "Model Unlearning and Data Governance",
+        "Safety Requirements and Assurance",
+    },
+    "benchmarks": {
+        "Task and Physical Safety",
+        "Semantic and Ethical Safety",
+        "Human-Robot Trust and Fairness",
+        "Robustness, Uncertainty, and OOD Generalization",
+        "Evaluation Infrastructure",
+        "Adversarial and Physical Robustness",
+        "Safety-Critical Perception Evaluation",
+        "Failure Detection and Recovery",
+        "Governance and Deployment Assurance",
+        "Privacy and Data Leakage",
+    },
+    "system-security": {
+        "Cross-Layer System Security",
+        "Privacy, Misuse, and Covert Channels",
+    },
+}
 RISKS = {"task-reliability", "physical-safety", "ethical-societal", "security-privacy"}
 THREAT_KINDS = {"adversarial", "non-adversarial", "system-failure", "evaluation", "survey"}
 LIFECYCLES = {"training", "inference", "system"}
@@ -241,8 +306,11 @@ def main() -> int:
             errors.append(f"{label}: duplicate paper_url {paper_url!r}")
         if paper_url:
             seen_paper_urls.add(paper_url)
-        if paper.get("section") not in SECTIONS:
-            errors.append(f"{label}: invalid section {paper.get('section')!r}")
+        section = paper.get("section")
+        if section not in SECTIONS:
+            errors.append(f"{label}: invalid section {section!r}")
+        elif paper.get("subsection") not in SUBSECTIONS[section]:
+            errors.append(f"{label}: invalid subsection {paper.get('subsection')!r} for section {section!r}")
         if not isinstance(paper.get("risks"), list):
             errors.append(f"{label}: risks must be a list")
         else:
