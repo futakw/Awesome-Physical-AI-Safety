@@ -923,7 +923,27 @@
       "curation_status": "paper-verified"
     },
     "first_submission_date": "2026-02-06",
-    "first_submission_source": "https://arxiv.org/abs/2602.07104"
+    "first_submission_source": "https://arxiv.org/abs/2602.07104",
+    "defense": {
+      "position": [
+        "inference-time",
+        "runtime"
+      ],
+      "mechanism": [
+        "representation-steering",
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "physical-semantic-environment"
+      ],
+      "defends_against": [
+        "indirect-prompt-injection"
+      ],
+      "assumptions": [
+        "known-attack"
+      ],
+      "curation_status": "paper-verified"
+    }
   },
   {
     "id": "hijacking-robots-with-a-piece-of-paper-a-systematic-study-of-physical-promp-2026",
@@ -986,7 +1006,28 @@
       "curation_status": "paper-verified"
     },
     "first_submission_date": "2026-08-06",
-    "first_submission_source": "https://arxiv.org/abs/2608.05715"
+    "first_submission_source": "https://arxiv.org/abs/2608.05715",
+    "defense": {
+      "position": [
+        "inference-time",
+        "runtime"
+      ],
+      "mechanism": [
+        "representation-steering",
+        "input-filtering",
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "physical-semantic-environment"
+      ],
+      "defends_against": [
+        "indirect-prompt-injection"
+      ],
+      "assumptions": [
+        "none"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "jailbreaking-embodied-llms-via-action-level-manipulation-2026",
@@ -3100,7 +3141,29 @@
       "curation_status": "paper-verified"
     },
     "first_submission_date": "2026-06-26",
-    "first_submission_source": "https://arxiv.org/abs/2606.28649"
+    "first_submission_source": "https://arxiv.org/abs/2606.28649",
+    "defense": {
+      "position": [
+        "runtime",
+        "system-level"
+      ],
+      "mechanism": [
+        "input-filtering",
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "middleware-network"
+      ],
+      "defends_against": [
+        "indirect-prompt-injection",
+        "command-hijacking"
+      ],
+      "assumptions": [
+        "known-attack"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "gong-2026-sok-security-privacy-foundation-model-powered-robots",
@@ -3744,7 +3807,27 @@
       "curation_status": "catalog-derived"
     },
     "first_submission_date": "2025-09-15",
-    "first_submission_source": "https://arxiv.org/abs/2509.12379"
+    "first_submission_source": "https://arxiv.org/abs/2509.12379",
+    "defense": {
+      "position": [
+        "training-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "world-state"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [
+        "model-access",
+        "attack-samples"
+      ],
+      "curation_status": "paper-verified"
+    }
   },
   {
     "id": "hamid-2026-icr-drive",
@@ -5528,7 +5611,27 @@
       "curation_status": "catalog-derived"
     },
     "first_submission_date": "2024-08-08",
-    "first_submission_source": "https://arxiv.org/abs/2408.04449"
+    "first_submission_source": "https://arxiv.org/abs/2408.04449",
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "representation-steering"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "user-instruction",
+        "world-state"
+      ],
+      "defends_against": [
+        "constraint-violation"
+      ],
+      "assumptions": [
+        "safety-constraints"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "sermanet-2025-asimov",
@@ -6126,7 +6229,32 @@
       "curation_status": "abstract-verified"
     },
     "first_submission_date": "2024-05-27",
-    "first_submission_source": "https://arxiv.org/abs/2405.20774"
+    "first_submission_source": "https://arxiv.org/abs/2405.20774",
+    "defense": {
+      "position": [
+        "training-time",
+        "inference-time"
+      ],
+      "mechanism": [
+        "adversarial-training",
+        "robust-finetuning",
+        "input-filtering",
+        "representation-steering"
+      ],
+      "protected_surface": [
+        "model-supply-chain",
+        "user-instruction"
+      ],
+      "defends_against": [
+        "backdoor"
+      ],
+      "assumptions": [
+        "known-attack",
+        "model-access",
+        "attack-samples"
+      ],
+      "curation_status": "paper-verified"
+    }
   },
   {
     "id": "lu-2026-upa-rfas",
@@ -6248,7 +6376,28 @@
       "curation_status": "catalog-derived"
     },
     "first_submission_date": "2024-12-21",
-    "first_submission_source": "https://arxiv.org/abs/2412.16633"
+    "first_submission_source": "https://arxiv.org/abs/2412.16633",
+    "defense": {
+      "position": [
+        "inference-time",
+        "runtime"
+      ],
+      "mechanism": [
+        "representation-steering",
+        "input-filtering",
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "user-instruction"
+      ],
+      "defends_against": [
+        "jailbreak"
+      ],
+      "assumptions": [
+        "safety-constraints"
+      ],
+      "curation_status": "paper-verified"
+    }
   },
   {
     "id": "zhang-2025-badrobot",
@@ -6898,7 +7047,27 @@
       "curation_status": "abstract-verified"
     },
     "first_submission_date": "2026-04-21",
-    "first_submission_source": "https://arxiv.org/abs/2604.19844"
+    "first_submission_source": "https://arxiv.org/abs/2604.19844",
+    "defense": {
+      "position": [
+        "runtime",
+        "system-level"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "physical-semantic-environment"
+      ],
+      "defends_against": [
+        "indirect-prompt-injection",
+        "typographic-injection"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "feng-2025-words-to-safety",
@@ -7834,7 +8003,27 @@
       "curation_status": "catalog-derived"
     },
     "first_submission_date": "2025-09-30",
-    "first_submission_source": "https://arxiv.org/abs/2509.25885"
+    "first_submission_source": "https://arxiv.org/abs/2509.25885",
+    "defense": {
+      "position": [
+        "runtime",
+        "system-level"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "user-instruction"
+      ],
+      "defends_against": [
+        "jailbreak"
+      ],
+      "assumptions": [
+        "safety-constraints"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "liu-2025-evovla",
@@ -9536,7 +9725,29 @@
       "curation_status": "catalog-derived"
     },
     "first_submission_date": "2026-04-24",
-    "first_submission_source": "https://arxiv.org/abs/2604.22591"
+    "first_submission_source": "https://arxiv.org/abs/2604.22591",
+    "defense": {
+      "position": [
+        "training-time",
+        "runtime"
+      ],
+      "mechanism": [
+        "robust-finetuning",
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "physical-semantic-environment",
+        "visual-perception"
+      ],
+      "defends_against": [
+        "adversarial-object",
+        "environment-manipulation"
+      ],
+      "assumptions": [
+        "attack-samples"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "fan-2026-safevla-bench",
@@ -9930,7 +10141,28 @@
       "curation_status": "catalog-derived"
     },
     "first_submission_date": "2025-04-20",
-    "first_submission_source": "https://arxiv.org/abs/2504.14650"
+    "first_submission_source": "https://arxiv.org/abs/2504.14650",
+    "defense": {
+      "position": [
+        "training-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "user-instruction",
+        "task-planning"
+      ],
+      "defends_against": [
+        "hazardous-instruction",
+        "planning-error"
+      ],
+      "assumptions": [
+        "model-access",
+        "safety-constraints"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "wang-2026-auto-horizon",
@@ -10068,7 +10300,27 @@
       "curation_status": "catalog-derived"
     },
     "first_submission_date": "2025-10-29",
-    "first_submission_source": "https://arxiv.org/abs/2510.25616"
+    "first_submission_source": "https://arxiv.org/abs/2510.25616",
+    "defense": {
+      "position": [
+        "training-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "reasoning-representation"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [
+        "model-access",
+        "clean-reference"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "cheng-2024-manipulation-facing-threats",
@@ -12980,7 +13232,29 @@
       "curation_status": "abstract-verified"
     },
     "first_submission_date": "2026-09-10",
-    "first_submission_source": "https://arxiv.org/abs/2609.11697"
+    "first_submission_source": "https://arxiv.org/abs/2609.11697",
+    "defense": {
+      "position": [
+        "training-time",
+        "runtime"
+      ],
+      "mechanism": [
+        "robust-finetuning",
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "defends_against": [
+        "constraint-violation"
+      ],
+      "assumptions": [
+        "model-access",
+        "safety-constraints"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "li-2026-reacthuman",
@@ -13109,7 +13383,26 @@
       "curation_status": "abstract-verified"
     },
     "first_submission_date": "2026-09-10",
-    "first_submission_source": "https://arxiv.org/abs/2609.10918"
+    "first_submission_source": "https://arxiv.org/abs/2609.10918",
+    "defense": {
+      "position": [
+        "training-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "execution-control"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [
+        "model-access"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "haque-2026-dist-gprl",
@@ -13176,7 +13469,29 @@
       "curation_status": "abstract-verified"
     },
     "first_submission_date": "2026-09-10",
-    "first_submission_source": "https://arxiv.org/abs/2609.11433"
+    "first_submission_source": "https://arxiv.org/abs/2609.11433",
+    "defense": {
+      "position": [
+        "training-time"
+      ],
+      "mechanism": [
+        "robust-finetuning",
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "defends_against": [
+        "constraint-violation",
+        "distribution-shift"
+      ],
+      "assumptions": [
+        "model-access",
+        "safety-constraints"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "ghalan-2026-testing-between-test-cases",
@@ -13302,7 +13617,29 @@
       "curation_status": "abstract-verified"
     },
     "first_submission_date": "2026-09-10",
-    "first_submission_source": "https://arxiv.org/abs/2609.11225"
+    "first_submission_source": "https://arxiv.org/abs/2609.11225",
+    "defense": {
+      "position": [
+        "runtime",
+        "system-level"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "context-memory-retrieval",
+        "execution-control"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "runtime-monitor",
+        "safety-constraints"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "srivastava-2026-behavioral-valuation-hazardous-exploration",
@@ -13369,7 +13706,27 @@
       "curation_status": "abstract-verified"
     },
     "first_submission_date": "2026-09-09",
-    "first_submission_source": "https://arxiv.org/abs/2609.10726"
+    "first_submission_source": "https://arxiv.org/abs/2609.10726",
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "uncertainty-gating"
+      ],
+      "protected_surface": [
+        "world-state",
+        "task-planning",
+        "execution-control"
+      ],
+      "defends_against": [
+        "uncertainty-miscalibration"
+      ],
+      "assumptions": [
+        "safety-constraints"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "ma-2026-guardrailed-meta-agent-loops",
@@ -13435,7 +13792,31 @@
       "curation_status": "abstract-verified"
     },
     "first_submission_date": "2026-09-10",
-    "first_submission_source": "https://arxiv.org/abs/2609.12216"
+    "first_submission_source": "https://arxiv.org/abs/2609.12216",
+    "defense": {
+      "position": [
+        "runtime",
+        "system-level"
+      ],
+      "mechanism": [
+        "formal-verification",
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "task-planning",
+        "execution-control",
+        "middleware-network"
+      ],
+      "defends_against": [
+        "execution-error",
+        "constraint-violation"
+      ],
+      "assumptions": [
+        "runtime-monitor",
+        "safety-constraints"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "jiang-2026-embodied-benchforge",
@@ -13745,7 +14126,28 @@
       "curation_status": "abstract-verified"
     },
     "first_submission_date": "2026-09-16",
-    "first_submission_source": "https://arxiv.org/abs/2609.18122"
+    "first_submission_source": "https://arxiv.org/abs/2609.18122",
+    "defense": {
+      "position": [
+        "training-time",
+        "system-level"
+      ],
+      "mechanism": [
+        "input-filtering",
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "model-supply-chain"
+      ],
+      "defends_against": [
+        "data-poisoning"
+      ],
+      "assumptions": [
+        "known-attack",
+        "clean-reference"
+      ],
+      "curation_status": "paper-verified"
+    }
   },
   {
     "id": "schneider-2026-rafail-relationship-aware-failure-detection",
@@ -13804,7 +14206,27 @@
       "curation_status": "paper-verified"
     },
     "first_submission_date": "2026-09-16",
-    "first_submission_source": "https://arxiv.org/abs/2609.18324"
+    "first_submission_source": "https://arxiv.org/abs/2609.18324",
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "world-state",
+        "visual-perception"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "clean-reference",
+        "runtime-monitor"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "omahoney-2026-detaug-obstacle-avoidance",
@@ -13870,7 +14292,29 @@
       "curation_status": "abstract-verified"
     },
     "first_submission_date": "2026-09-16",
-    "first_submission_source": "https://arxiv.org/abs/2609.18395"
+    "first_submission_source": "https://arxiv.org/abs/2609.18395",
+    "defense": {
+      "position": [
+        "training-time",
+        "inference-time"
+      ],
+      "mechanism": [
+        "robust-finetuning",
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "world-state",
+        "execution-control"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [
+        "model-access",
+        "safety-constraints"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "morton-2026-elastiqp-constrained-robot-control",
@@ -14104,7 +14548,28 @@
       "curation_status": "paper-verified"
     },
     "first_submission_date": "2026-09-17",
-    "first_submission_source": "https://arxiv.org/abs/2609.20822"
+    "first_submission_source": "https://arxiv.org/abs/2609.20822",
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "action-shielding",
+        "formal-verification"
+      ],
+      "protected_surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "defends_against": [
+        "planning-error",
+        "execution-error"
+      ],
+      "assumptions": [
+        "safety-constraints"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "chauhan-2026-barrierformer",
@@ -14168,7 +14633,28 @@
       "curation_status": "paper-verified"
     },
     "first_submission_date": "2026-09-20",
-    "first_submission_source": "https://arxiv.org/abs/2609.23896"
+    "first_submission_source": "https://arxiv.org/abs/2609.23896",
+    "defense": {
+      "position": [
+        "training-time",
+        "inference-time"
+      ],
+      "mechanism": [
+        "robust-finetuning",
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "execution-control"
+      ],
+      "defends_against": [
+        "constraint-violation"
+      ],
+      "assumptions": [
+        "model-access",
+        "safety-constraints"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "cai-2026-hyper-redundant-safety-control",
@@ -14231,7 +14717,25 @@
       "curation_status": "paper-verified"
     },
     "first_submission_date": "2026-09-21",
-    "first_submission_source": "https://arxiv.org/abs/2609.24062"
+    "first_submission_source": "https://arxiv.org/abs/2609.24062",
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "execution-control"
+      ],
+      "defends_against": [
+        "constraint-violation"
+      ],
+      "assumptions": [
+        "safety-constraints"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "baral-2026-marginal-calibration-compose",
@@ -14721,7 +15225,26 @@
       "curation_status": "paper-verified"
     },
     "first_submission_date": "2026-09-18",
-    "first_submission_source": "https://arxiv.org/abs/2609.21369"
+    "first_submission_source": "https://arxiv.org/abs/2609.21369",
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "proprioception",
+        "visual-perception"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "xiao-2026-care-corrective-execution",
@@ -14975,7 +15498,30 @@
       "curation_status": "paper-verified"
     },
     "first_submission_date": "2026-09-24",
-    "first_submission_source": "https://arxiv.org/abs/2609.30092"
+    "first_submission_source": "https://arxiv.org/abs/2609.30092",
+    "defense": {
+      "position": [
+        "training-time",
+        "inference-time"
+      ],
+      "mechanism": [
+        "robust-finetuning",
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "proprioception",
+        "execution-control"
+      ],
+      "defends_against": [
+        "distribution-shift",
+        "execution-error"
+      ],
+      "assumptions": [
+        "model-access",
+        "runtime-monitor"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "chepuri-2026-authguard-r",
@@ -16938,7 +17484,31 @@
       "curation_status": "catalog-derived"
     },
     "first_submission_date": "2026-10-05",
-    "first_submission_source": "https://arxiv.org/abs/2610.06122"
+    "first_submission_source": "https://arxiv.org/abs/2610.06122",
+    "defense": {
+      "position": [
+        "inference-time",
+        "runtime"
+      ],
+      "mechanism": [
+        "input-filtering",
+        "runtime-monitoring",
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "user-instruction",
+        "task-planning",
+        "execution-control"
+      ],
+      "defends_against": [
+        "jailbreak",
+        "unsafe-policy-behavior"
+      ],
+      "assumptions": [
+        "safety-constraints"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "pang-2026-black-box-ancestor-vlm-patches",
@@ -17729,7 +18299,28 @@
       "curation_status": "paper-verified"
     },
     "first_submission_date": "2026-10-09",
-    "first_submission_source": "https://arxiv.org/abs/2610.13516"
+    "first_submission_source": "https://arxiv.org/abs/2610.13516",
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "reasoning-representation",
+        "action-interface",
+        "execution-control"
+      ],
+      "defends_against": [
+        "execution-error",
+        "uncertainty-miscalibration"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "rolland-2026-robot-watchdog",
@@ -17790,7 +18381,27 @@
       "curation_status": "paper-verified"
     },
     "first_submission_date": "2026-10-09",
-    "first_submission_source": "https://arxiv.org/abs/2610.13403"
+    "first_submission_source": "https://arxiv.org/abs/2610.13403",
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "world-state",
+        "execution-control"
+      ],
+      "defends_against": [
+        "execution-error",
+        "perception-error"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "hubel-2026-bt-agent",
@@ -17860,7 +18471,31 @@
       "curation_status": "paper-verified"
     },
     "first_submission_date": "2026-10-09",
-    "first_submission_source": "https://arxiv.org/abs/2610.13862"
+    "first_submission_source": "https://arxiv.org/abs/2610.13862",
+    "defense": {
+      "position": [
+        "runtime",
+        "system-level"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "action-shielding",
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "defends_against": [
+        "execution-error",
+        "constraint-violation"
+      ],
+      "assumptions": [
+        "runtime-monitor",
+        "safety-constraints"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "das-2026-refinement-gap-safe-plans",
@@ -17927,7 +18562,30 @@
       "curation_status": "paper-verified"
     },
     "first_submission_date": "2026-10-02",
-    "first_submission_source": "https://arxiv.org/abs/2610.02662"
+    "first_submission_source": "https://arxiv.org/abs/2610.02662",
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "formal-verification"
+      ],
+      "protected_surface": [
+        "task-planning",
+        "action-interface",
+        "execution-control"
+      ],
+      "defends_against": [
+        "constraint-violation",
+        "planning-error"
+      ],
+      "assumptions": [
+        "runtime-monitor",
+        "safety-constraints"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "waseda-2026-adversarial-training-multiview-vlas",
@@ -17990,7 +18648,26 @@
       "curation_status": "paper-verified"
     },
     "first_submission_date": "2026-09-27",
-    "first_submission_source": "https://arxiv.org/abs/2609.33707"
+    "first_submission_source": "https://arxiv.org/abs/2609.33707",
+    "defense": {
+      "position": [
+        "training-time"
+      ],
+      "mechanism": [
+        "adversarial-training"
+      ],
+      "protected_surface": [
+        "visual-perception"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [
+        "model-access",
+        "attack-samples"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "kang-2026-rara",
@@ -18031,7 +18708,26 @@
       "fine-tuning"
     ],
     "first_submission_date": "2026-10-09",
-    "first_submission_source": "https://arxiv.org/abs/2610.13578"
+    "first_submission_source": "https://arxiv.org/abs/2610.13578",
+    "defense": {
+      "position": [
+        "training-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "visual-perception"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [
+        "model-access",
+        "clean-reference"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "ogunwoye-2026-jittervla",
@@ -18251,7 +18947,26 @@
       "curation_status": "abstract-verified"
     },
     "first_submission_date": "2026-04-25",
-    "first_submission_source": "https://arxiv.org/abs/2604.24790"
+    "first_submission_source": "https://arxiv.org/abs/2604.24790",
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "representation-steering"
+      ],
+      "protected_surface": [
+        "audio-perception"
+      ],
+      "defends_against": [
+        "denial-of-service",
+        "direct-prompt-injection"
+      ],
+      "assumptions": [
+        "none"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "preventing-robotic-jailbreaking-via-multimodal-domain-adaptation-2025",
@@ -19026,7 +19741,26 @@
       "curation_status": "abstract-verified"
     },
     "first_submission_date": "2026-04-29",
-    "first_submission_source": "https://arxiv.org/abs/2604.26577"
+    "first_submission_source": "https://arxiv.org/abs/2604.26577",
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "representation-steering"
+      ],
+      "protected_surface": [
+        "user-instruction",
+        "task-planning"
+      ],
+      "defends_against": [
+        "hazardous-instruction"
+      ],
+      "assumptions": [
+        "none"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "robojailbench-benchmarking-adversarial-attacks-and-defenses-in-embodied-robotic-agents-2026",
@@ -19091,7 +19825,30 @@
       "curation_status": "abstract-verified"
     },
     "first_submission_date": "2026-05-19",
-    "first_submission_source": "https://arxiv.org/abs/2605.19328"
+    "first_submission_source": "https://arxiv.org/abs/2605.19328",
+    "defense": {
+      "position": [
+        "inference-time",
+        "runtime"
+      ],
+      "mechanism": [
+        "representation-steering",
+        "runtime-monitoring",
+        "formal-verification"
+      ],
+      "protected_surface": [
+        "user-instruction",
+        "visual-perception"
+      ],
+      "defends_against": [
+        "jailbreak",
+        "hazardous-instruction"
+      ],
+      "assumptions": [
+        "safety-constraints"
+      ],
+      "curation_status": "paper-verified"
+    }
   },
   {
     "id": "how-secure-are-large-language-models-llms-for-navigation-in-urban-environments-2024",
@@ -19146,7 +19903,25 @@
       "curation_status": "abstract-verified"
     },
     "first_submission_date": "2024-02-14",
-    "first_submission_source": "https://arxiv.org/abs/2402.09546"
+    "first_submission_source": "https://arxiv.org/abs/2402.09546",
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "representation-steering"
+      ],
+      "protected_surface": [
+        "user-instruction"
+      ],
+      "defends_against": [
+        "direct-prompt-injection"
+      ],
+      "assumptions": [
+        "known-attack"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "a-study-on-prompt-injection-attack-against-llm-integrated-mobile-robotic-systems-2024",
@@ -19194,7 +19969,26 @@
       "curation_status": "abstract-verified"
     },
     "first_submission_date": "2024-08-07",
-    "first_submission_source": "https://arxiv.org/abs/2408.03515"
+    "first_submission_source": "https://arxiv.org/abs/2408.03515",
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "representation-steering",
+        "input-filtering"
+      ],
+      "protected_surface": [
+        "user-instruction"
+      ],
+      "defends_against": [
+        "direct-prompt-injection"
+      ],
+      "assumptions": [
+        "known-attack"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "advgrasp-adversarial-attacks-on-robotic-grasping-from-a-physical-perspective-2025",
@@ -19438,7 +20232,28 @@
       "curation_status": "abstract-verified"
     },
     "first_submission_date": "2026-04-04",
-    "first_submission_source": "https://arxiv.org/abs/2604.03890"
+    "first_submission_source": "https://arxiv.org/abs/2604.03890",
+    "defense": {
+      "position": [
+        "runtime",
+        "system-level"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "model-supply-chain",
+        "user-instruction"
+      ],
+      "defends_against": [
+        "backdoor",
+        "data-poisoning"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "strong-vla-decoupled-robustness-learning-for-vision-language-action-models-under-multimodal-perturbations-2026",
@@ -20329,7 +21144,27 @@
       "curation_status": "abstract-verified"
     },
     "first_submission_date": "2026-03-12",
-    "first_submission_source": "https://arxiv.org/abs/2603.12510"
+    "first_submission_source": "https://arxiv.org/abs/2603.12510",
+    "defense": {
+      "position": [
+        "training-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "user-instruction"
+      ],
+      "defends_against": [
+        "instruction-ambiguity",
+        "semantic-misalignment"
+      ],
+      "assumptions": [
+        "model-access",
+        "attack-samples"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "the-yes-man-syndrome-benchmarking-abstention-in-embodied-robotic-agents-2026",
@@ -20395,7 +21230,30 @@
       "curation_status": "abstract-verified"
     },
     "first_submission_date": "2026-05-19",
-    "first_submission_source": "https://arxiv.org/abs/2605.20544"
+    "first_submission_source": "https://arxiv.org/abs/2605.20544",
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "representation-steering",
+        "uncertainty-gating"
+      ],
+      "protected_surface": [
+        "user-instruction",
+        "visual-perception",
+        "task-planning"
+      ],
+      "defends_against": [
+        "instruction-ambiguity",
+        "planning-error",
+        "semantic-misalignment"
+      ],
+      "assumptions": [
+        "none"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "position-embodied-ai-requires-a-privacy-utility-trade-off-2026",
@@ -20972,7 +21830,28 @@
       "curation_status": "abstract-verified"
     },
     "first_submission_date": "2025-09-25",
-    "first_submission_source": "https://arxiv.org/abs/2509.21651"
+    "first_submission_source": "https://arxiv.org/abs/2509.21651",
+    "defense": {
+      "position": [
+        "training-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "user-instruction",
+        "physical-semantic-environment"
+      ],
+      "defends_against": [
+        "hazardous-instruction",
+        "constraint-violation"
+      ],
+      "assumptions": [
+        "model-access",
+        "safety-constraints"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "egosafetybench-a-diagnostic-egocentric-video-benchmark-for-evaluating-embodied-vlms-as-runtime-safety-gua-2026",
@@ -21167,7 +22046,28 @@
       "curation_status": "abstract-verified"
     },
     "first_submission_date": "2025-09-23",
-    "first_submission_source": "https://arxiv.org/abs/2509.18953"
+    "first_submission_source": "https://arxiv.org/abs/2509.18953",
+    "defense": {
+      "position": [
+        "training-time"
+      ],
+      "mechanism": [
+        "adversarial-training"
+      ],
+      "protected_surface": [
+        "physical-semantic-environment",
+        "world-state"
+      ],
+      "defends_against": [
+        "environment-manipulation",
+        "distribution-shift"
+      ],
+      "assumptions": [
+        "model-access",
+        "attack-samples"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "faer-benchmarking-vlms-for-failure-aware-embodied-reasoning-2026",
@@ -22451,7 +23351,27 @@
       "curation_status": "abstract-verified"
     },
     "first_submission_date": null,
-    "first_submission_source": null
+    "first_submission_source": null,
+    "defense": {
+      "position": [
+        "training-time",
+        "inference-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "world-state"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [
+        "model-access"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "robustness-of-embodied-point-navigation-agents-2023",
@@ -23689,7 +24609,29 @@
       "curation_status": "abstract-verified"
     },
     "first_submission_date": null,
-    "first_submission_source": null
+    "first_submission_source": null,
+    "defense": {
+      "position": [
+        "training-time",
+        "runtime"
+      ],
+      "mechanism": [
+        "robust-finetuning",
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "user-instruction",
+        "execution-control"
+      ],
+      "defends_against": [
+        "hazardous-instruction",
+        "constraint-violation"
+      ],
+      "assumptions": [
+        "safety-constraints"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "your-model-already-knows-attention-guided-safety-filter-for-vision-language-action-models-2026",
@@ -24551,7 +25493,27 @@
       "curation_status": "abstract-verified"
     },
     "first_submission_date": "2026-09-22",
-    "first_submission_source": "https://arxiv.org/abs/2609.26618"
+    "first_submission_source": "https://arxiv.org/abs/2609.26618",
+    "defense": {
+      "position": [
+        "training-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "defends_against": [
+        "planning-error",
+        "unsafe-policy-behavior"
+      ],
+      "assumptions": [
+        "model-access"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "calm-configuration-aware-human-intervention-boundaries-during-robot-approach-2026",
@@ -25895,7 +26857,31 @@
       "full-text-reviewed"
     ],
     "first_submission_date": "2026-10-13",
-    "first_submission_source": "https://arxiv.org/abs/2610.18866"
+    "first_submission_source": "https://arxiv.org/abs/2610.18866",
+    "defense": {
+      "position": [
+        "runtime",
+        "system-level"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "action-shielding",
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "world-state",
+        "task-planning"
+      ],
+      "defends_against": [
+        "perception-error",
+        "planning-error"
+      ],
+      "assumptions": [
+        "runtime-monitor",
+        "safety-constraints"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "arxiv-2610-18650",
@@ -25934,7 +26920,27 @@
       "full-text-reviewed"
     ],
     "first_submission_date": "2026-10-13",
-    "first_submission_source": "https://arxiv.org/abs/2610.18650"
+    "first_submission_source": "https://arxiv.org/abs/2610.18650",
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "world-state"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "arxiv-2610-18321",
@@ -25975,7 +26981,29 @@
       "full-text-reviewed"
     ],
     "first_submission_date": "2026-10-13",
-    "first_submission_source": "https://arxiv.org/abs/2610.18321"
+    "first_submission_source": "https://arxiv.org/abs/2610.18321",
+    "defense": {
+      "position": [
+        "inference-time",
+        "runtime"
+      ],
+      "mechanism": [
+        "uncertainty-gating",
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "world-state"
+      ],
+      "defends_against": [
+        "uncertainty-miscalibration",
+        "distribution-shift"
+      ],
+      "assumptions": [
+        "safety-constraints"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "arxiv-2610-17806",
@@ -26054,7 +27082,29 @@
       "full-text-reviewed"
     ],
     "first_submission_date": "2026-10-13",
-    "first_submission_source": "https://arxiv.org/abs/2610.17799"
+    "first_submission_source": "https://arxiv.org/abs/2610.17799",
+    "defense": {
+      "position": [
+        "training-time",
+        "runtime"
+      ],
+      "mechanism": [
+        "robust-finetuning",
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "defends_against": [
+        "unsafe-policy-behavior"
+      ],
+      "assumptions": [
+        "model-access",
+        "safety-constraints"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "arxiv-2610-17746",
@@ -26200,7 +27250,26 @@
       "full-text-reviewed"
     ],
     "first_submission_date": "2026-10-12",
-    "first_submission_source": "https://arxiv.org/abs/2610.16309"
+    "first_submission_source": "https://arxiv.org/abs/2610.16309",
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "action-interface",
+        "visual-perception"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "arxiv-2610-15814",
@@ -26238,7 +27307,26 @@
       "full-text-reviewed"
     ],
     "first_submission_date": "2026-10-11",
-    "first_submission_source": "https://arxiv.org/abs/2610.15814"
+    "first_submission_source": "https://arxiv.org/abs/2610.15814",
+    "defense": {
+      "position": [
+        "inference-time",
+        "runtime"
+      ],
+      "mechanism": [
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "task-planning"
+      ],
+      "defends_against": [
+        "planning-error"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "arxiv-2610-15675",
@@ -26318,7 +27406,25 @@
       "full-text-reviewed"
     ],
     "first_submission_date": "2026-10-10",
-    "first_submission_source": "https://arxiv.org/abs/2610.14682"
+    "first_submission_source": "https://arxiv.org/abs/2610.14682",
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "execution-control"
+      ],
+      "defends_against": [
+        "unsafe-policy-behavior"
+      ],
+      "assumptions": [
+        "safety-constraints"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "arxiv-2610-14034",
@@ -26393,7 +27499,27 @@
       "full-text-reviewed"
     ],
     "first_submission_date": "2026-10-12",
-    "first_submission_source": "https://arxiv.org/abs/2610.16567"
+    "first_submission_source": "https://arxiv.org/abs/2610.16567",
+    "defense": {
+      "position": [
+        "training-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "user-instruction",
+        "execution-control"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [
+        "model-access"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "arxiv-2411.18275",
@@ -26658,7 +27784,26 @@
       "curation_status": "paper-verified"
     },
     "first_submission_date": "2024-04-22",
-    "first_submission_source": "https://arxiv.org/abs/2404.14547"
+    "first_submission_source": "https://arxiv.org/abs/2404.14547",
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "uncertainty-gating"
+      ],
+      "protected_surface": [
+        "user-instruction",
+        "context-memory-retrieval"
+      ],
+      "defends_against": [
+        "instruction-ambiguity"
+      ],
+      "assumptions": [
+        "human-oversight"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "arxiv-2505.22503",
@@ -26720,7 +27865,27 @@
       "curation_status": "paper-verified"
     },
     "first_submission_date": "2025-05-28",
-    "first_submission_source": "https://arxiv.org/abs/2505.22503"
+    "first_submission_source": "https://arxiv.org/abs/2505.22503",
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "uncertainty-gating",
+        "representation-steering"
+      ],
+      "protected_surface": [
+        "user-instruction",
+        "context-memory-retrieval"
+      ],
+      "defends_against": [
+        "instruction-ambiguity"
+      ],
+      "assumptions": [
+        "human-oversight"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "arxiv-2607.05396",
@@ -27079,7 +28244,26 @@
       "curation_status": "paper-verified"
     },
     "first_submission_date": "2024-12-14",
-    "first_submission_source": "https://arxiv.org/abs/2412.10726"
+    "first_submission_source": "https://arxiv.org/abs/2412.10726",
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "representation-steering"
+      ],
+      "protected_surface": [
+        "user-instruction"
+      ],
+      "defends_against": [
+        "instruction-ambiguity",
+        "perception-error"
+      ],
+      "assumptions": [
+        "none"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "arxiv-2401.12963",
@@ -27277,7 +28461,27 @@
       "curation_status": "paper-verified"
     },
     "first_submission_date": "2026-09-29",
-    "first_submission_source": "https://arxiv.org/abs/2609.37433"
+    "first_submission_source": "https://arxiv.org/abs/2609.37433",
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "execution-control",
+        "proprioception"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "runtime-monitor",
+        "safety-constraints"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "arxiv-2404.00210",
@@ -27341,7 +28545,25 @@
       "curation_status": "paper-verified"
     },
     "first_submission_date": "2024-03-30",
-    "first_submission_source": "https://arxiv.org/abs/2404.00210"
+    "first_submission_source": "https://arxiv.org/abs/2404.00210",
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "execution-control"
+      ],
+      "defends_against": [
+        "unsafe-policy-behavior"
+      ],
+      "assumptions": [
+        "safety-constraints"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "arxiv-2409.17004",
@@ -27397,7 +28619,25 @@
       "curation_status": "abstract-verified"
     },
     "first_submission_date": "2024-09-25",
-    "first_submission_source": "https://arxiv.org/abs/2409.17004"
+    "first_submission_source": "https://arxiv.org/abs/2409.17004",
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "uncertainty-gating"
+      ],
+      "protected_surface": [
+        "user-instruction"
+      ],
+      "defends_against": [
+        "instruction-ambiguity"
+      ],
+      "assumptions": [
+        "human-oversight"
+      ],
+      "curation_status": "abstract-verified"
+    }
   },
   {
     "id": "fernandez-becerra-accountability-explainability-2026",

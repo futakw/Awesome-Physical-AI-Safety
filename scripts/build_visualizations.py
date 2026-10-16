@@ -34,6 +34,31 @@ SECTION_COLORS = {
 
 BG, PANEL, TEXT, MUTED, GRID = "#FFFFFF", "#F7F9FC", "#202938", "#657287", "#DCE3EC"
 
+# Canonical family groupings from docs/taxonomy.md — chart axes are ordered
+# and grouped by these, not by raw frequency, so related values sit together.
+# mechanism is grouped by the nature of the technique (how), surface by where
+# it sits in the perceive -> reason -> act pipeline (where) — a deliberately
+# different, orthogonal axis. Both are the actual aggregation unit for the
+# cross-map charts below, not just a sort/divider hint. Mirrors
+# docs/taxonomy.md and docs/explorer_template.html's MECHANISM_GROUPS/SURFACE_GROUPS.
+MECHANISM_GROUPS = [
+    {"name": "data-model-corruption", "label": "Data & Model Corruption", "values": ["data-poisoning", "backdoor", "malicious-adapter", "checkpoint-compromise", "reward-manipulation", "memory-poisoning", "retrieval-poisoning"]},
+    {"name": "perturbation-spoofing", "label": "Perturbation & Spoofing", "values": ["digital-perturbation", "adversarial-patch", "adversarial-object", "typographic-injection", "sensor-spoofing", "feedback-spoofing", "environment-manipulation"]},
+    {"name": "instruction-semantic-manipulation", "label": "Instruction & Semantic Manipulation", "values": ["jailbreak", "direct-prompt-injection", "indirect-prompt-injection", "hazardous-instruction", "command-hijacking"]},
+    {"name": "hijacking-redirection", "label": "Hijacking & Redirection", "values": ["representation-hijacking", "planning-hijacking", "action-manipulation", "action-freezing", "trajectory-manipulation", "state-manipulation"]},
+    {"name": "system-infrastructure-attack", "label": "System & Infrastructure Attack", "values": ["middleware-compromise", "network-attack", "multi-agent-propagation", "denial-of-service", "sensitive-data-exposure", "memorized-data-retention", "covert-channel", "multimodal-desynchronization"]},
+    {"name": "non-adversarial-failure", "label": "Non-Adversarial Failure", "values": ["distribution-shift", "instruction-ambiguity", "perception-error", "semantic-misalignment", "uncertainty-miscalibration", "planning-error", "execution-error", "constraint-violation", "unsafe-policy-behavior"]},
+]
+SURFACE_GROUPS = [
+    {"name": "training-infrastructure", "label": "Training & Infrastructure", "values": ["model-supply-chain", "middleware-network"]},
+    {"name": "perception", "label": "Perception", "values": ["visual-perception", "audio-perception", "physical-semantic-environment"]},
+    {"name": "language", "label": "Language", "values": ["user-instruction", "context-memory-retrieval", "multi-agent-communication"]},
+    {"name": "proprioception", "label": "Proprioception", "values": ["proprioception"]},
+    {"name": "planning-state", "label": "Planning & State", "values": ["world-state", "task-planning"]},
+    {"name": "reasoning", "label": "Reasoning", "values": ["reasoning-representation"]},
+    {"name": "action-control", "label": "Action & Control", "values": ["action-interface", "execution-control"]},
+]
+
 
 def esc(value: object) -> str:
     return html.escape(str(value), quote=True)
@@ -65,6 +90,24 @@ def rotated_axis_label(x: float, y: float, angle: float, text: str) -> str:
         f'<tspan x="0" dy="{"0" if i == 0 else "1.05"}em">{esc(line)}</tspan>' for i, line in enumerate(lines)
     )
     return f'<text class="axis" text-anchor="start" transform="translate({x:.1f} {y:.1f}) rotate({angle})">{tspans}</text>'
+
+
+def family_label(group: dict) -> str:
+    return group["label"]
+
+
+def family_of(value: str, groups: list[dict]) -> dict | None:
+    return next((g for g in groups if value in g["values"]), None)
+
+
+def wrapped_end_label(x: float, y: float, text: str, max_len: int = 24) -> str:
+    lines = split_label(text, max_len)
+    if len(lines) == 1:
+        return f'<text class="axis" text-anchor="end" x="{x:.1f}" y="{y:.1f}">{esc(lines[0])}</text>'
+    tspans = "".join(
+        f'<tspan x="{x:.1f}" dy="{"-0.35" if i == 0 else "1.1"}em">{esc(line)}</tspan>' for i, line in enumerate(lines)
+    )
+    return f'<text class="axis" text-anchor="end" x="{x:.1f}" y="{y:.1f}">{tspans}</text>'
 
 
 def svg_document(title: str, description: str, width: int, height: int, body: list[str]) -> str:
@@ -143,43 +186,46 @@ def blend(low: str, high: str, fraction: float) -> str:
 
 
 def render_heatmap(papers: list[dict]) -> str:
-    width, height = 1200, 560
-    body = header("Where threats enter and how they act", "Mechanism × surface co-occurrence for concrete threat models; survey coverage is excluded.")
+    width, height = 1200, 610
+    body = header("Where threats enter and how they act", "Mechanism family × surface family co-occurrence for concrete threat models; survey coverage is excluded.")
     concrete = [p for p in papers if p["threat_model"]["kind"] not in {"survey", "evaluation"}]
-    mechanism_counts = Counter(v for p in concrete for v in threat_values(p, "mechanism"))
-    surface_counts = Counter(v for p in concrete for v in threat_values(p, "surface"))
-    mechanisms = [value for value, _ in mechanism_counts.most_common(10)]
-    surfaces = [value for value, _ in surface_counts.most_common(10)]
-    cells = Counter((mechanism, surface) for paper in concrete for mechanism in threat_values(paper, "mechanism") for surface in threat_values(paper, "surface"))
-    max_value = max(cells[(m, s)] for m in mechanisms for s in surfaces)
-    left, top, cell_w, cell_h = 300, 145, 82, 36
-    for col, surface in enumerate(surfaces):
-        x = left + col * cell_w + cell_w / 2
-        body.append(rotated_axis_label(x - 8, top - 14, -30, label(surface)))
-    for row, mechanism in enumerate(mechanisms):
-        y = top + row * cell_h
-        body.append(f'<text class="label" x="{left - 18}" y="{y + cell_h / 2 + 5:.1f}" text-anchor="end">{esc(label(mechanism))}</text>')
-        for col, surface in enumerate(surfaces):
+    mechanisms, surfaces = MECHANISM_GROUPS, SURFACE_GROUPS
+    left, top, cell_w, cell_h = 330, 195, 110, 50
+    cell_data = []
+    for mech_group in mechanisms:
+        for surf_group in surfaces:
             matching = [
                 paper for paper in concrete
-                if mechanism in threat_values(paper, "mechanism") and surface in threat_values(paper, "surface")
+                if any(m in mech_group["values"] for m in threat_values(paper, "mechanism"))
+                and any(s in surf_group["values"] for s in threat_values(paper, "surface"))
             ]
-            value = len(matching)
-            fraction = value / max_value if max_value else 0
-            color = blend("#EEF3F8", "#4F67A5", fraction ** 0.72)
-            x = left + col * cell_w
-            text_color = "#FFFFFF" if fraction > 0.48 else TEXT
-            papers_title = "\n".join(f"[{paper['venue']} {paper['year']}] {paper['title']}" for paper in matching)
-            body += [
-                f'<rect x="{x + 2}" y="{y + 2}" width="{cell_w - 4}" height="{cell_h - 4}" rx="6" fill="{color}"><title>{esc(papers_title)}</title></rect>',
-                f'<text x="{x + cell_w / 2:.1f}" y="{y + cell_h / 2 + 5:.1f}" text-anchor="middle" font-size="12" font-weight="600" fill="{text_color}">{value if value else ""}</text>',
-            ]
+            cell_data.append((mech_group, surf_group, matching))
+    max_value = max((len(matching) for _, _, matching in cell_data), default=1) or 1
+    for col, surf_group in enumerate(surfaces):
+        x = left + col * cell_w + cell_w / 2
+        body.append(rotated_axis_label(x - 8, top - 16, -30, family_label(surf_group)))
+    for row, mech_group in enumerate(mechanisms):
+        y = top + row * cell_h
+        body.append(wrapped_end_label(left - 18, y + cell_h / 2 + 5, family_label(mech_group)))
+    for mech_group, surf_group, matching in cell_data:
+        row, col = mechanisms.index(mech_group), surfaces.index(surf_group)
+        y = top + row * cell_h
+        x = left + col * cell_w
+        value = len(matching)
+        fraction = value / max_value if max_value else 0
+        color = blend("#EEF3F8", "#4F67A5", fraction ** 0.72)
+        text_color = "#FFFFFF" if fraction > 0.48 else TEXT
+        papers_title = "\n".join(f"[{paper['venue']} {paper['year']}] {paper['title']}" for paper in matching)
+        body += [
+            f'<rect x="{x + 2}" y="{y + 2}" width="{cell_w - 4}" height="{cell_h - 4}" rx="6" fill="{color}"><title>{esc(papers_title)}</title></rect>',
+            f'<text x="{x + cell_w / 2:.1f}" y="{y + cell_h / 2 + 5:.1f}" text-anchor="middle" font-size="12" font-weight="600" fill="{text_color}">{value if value else ""}</text>',
+        ]
     body += [
-        f'<text class="axis" x="{left + 5 * cell_w}" y="{height - 45}" text-anchor="middle">Threat surface</text>',
-        f'<text class="axis" transform="translate(48 {top + 5 * cell_h}) rotate(-90)" text-anchor="middle">Mechanism</text>',
-        f'<text class="small" x="{left}" y="{height - 18}">Top 10 mechanisms and surfaces by paper frequency; multi-label records contribute to each applicable cell.</text>',
+        f'<text class="axis" x="{left + len(surfaces) * cell_w / 2}" y="{top + len(mechanisms) * cell_h + 42}" text-anchor="middle">Threat surface family</text>',
+        f'<text class="axis" transform="translate(48 {top + len(mechanisms) * cell_h / 2}) rotate(-90)" text-anchor="middle">Mechanism family</text>',
+        f'<text class="small" x="{left}" y="{top + len(mechanisms) * cell_h + 64}">All {len(mechanisms)} mechanism and {len(surfaces)} surface families are shown; multi-label records contribute to each applicable cell.</text>',
     ]
-    return svg_document("Threat mechanism and surface heatmap", "Heatmap of mechanism and surface co-occurrence counts.", width, height, body)
+    return svg_document("Threat mechanism and surface heatmap", "Heatmap of mechanism family and surface family co-occurrence counts.", width, height, body)
 
 
 def render_defense_heatmap(papers: list[dict]) -> str:
@@ -265,25 +311,32 @@ def render_extension_heatmap(papers, extension, title, subtitle, row_field, col_
     return svg_document(title, subtitle, width, height, body)
 
 
+def order_by_groups(values: list[str], groups: list[dict]) -> list[str]:
+    order = [v for group in groups for v in group["values"]]
+    present = set(values)
+    return [v for v in order if v in present]
+
+
 def ordered_threat_mechanisms(papers: list[dict]) -> list[str]:
     concrete = [paper for paper in papers if paper["threat_model"]["kind"] not in {"survey", "evaluation"}]
-    return [value for value, _ in Counter(value for paper in concrete for value in threat_values(paper, "mechanism")).most_common(10)]
+    top = [value for value, _ in Counter(value for paper in concrete for value in threat_values(paper, "mechanism")).most_common(10)]
+    return order_by_groups(top, MECHANISM_GROUPS)
 
 
 def render_threat_risk_heatmap(papers: list[dict]) -> str:
     # Include benchmark/evaluation records: their threat coverage and evaluated
     # risks are precisely what this cross-map is intended to summarize.
     concrete = [paper for paper in papers if paper["threat_model"]["kind"] != "survey"]
-    rows = ordered_threat_mechanisms(papers)
+    rows = MECHANISM_GROUPS
     cols = ["task-reliability", "physical-safety", "ethical-societal", "security-privacy"]
-    width, left, top, cell_h = 1200, 300, 112, 38
+    width, left, top, cell_h = 1200, 330, 112, 50
     cell_w = 190
     height = max(430, int(top + len(rows) * cell_h + 70))
-    body = header("Threat mechanism × evaluated risk", "Empirically evaluated outcome families; empty cells remain visible.")
+    body = header("Threat mechanism family × evaluated risk", "Empirically evaluated outcome families; empty cells remain visible.")
     cells = {
-        (row, col): [
+        (row["name"], col): [
             paper for paper in concrete
-            if row in threat_values(paper, "mechanism") and col in paper.get("risks", [])
+            if any(m in row["values"] for m in threat_values(paper, "mechanism")) and col in paper.get("risks", [])
         ]
         for row in rows for col in cols
     }
@@ -293,9 +346,9 @@ def render_threat_risk_heatmap(papers: list[dict]) -> str:
         body.append(f'<text class="axis" x="{x:.1f}" y="{top - 12}" text-anchor="middle">{esc(label(col))}</text>')
     for rindex, row in enumerate(rows):
         y = top + rindex * cell_h
-        body.append(f'<text class="label" x="{left - 18}" y="{y + cell_h / 2 + 4:.1f}" text-anchor="end">{esc(label(row))}</text>')
+        body.append(wrapped_end_label(left - 18, y + cell_h / 2 + 5, family_label(row)))
         for cindex, col in enumerate(cols):
-            matching = cells[(row, col)]
+            matching = cells[(row["name"], col)]
             value = len(matching)
             fraction = value / max_value if max_value else 0
             x = left + cindex * cell_w
@@ -308,10 +361,10 @@ def render_threat_risk_heatmap(papers: list[dict]) -> str:
             ]
     body += [
         f'<text class="axis" x="{left + len(cols) * cell_w / 2}" y="{top + len(rows) * cell_h + 40}" text-anchor="middle">Evaluated risk</text>',
-        f'<text class="axis" transform="translate(45 {top + len(rows) * cell_h / 2}) rotate(-90)" text-anchor="middle">Threat mechanism</text>',
-        f'<text class="small" x="{left}" y="{height - 18}">Top 10 mechanisms by frequency; risk labels require a corresponding empirical outcome metric.</text>',
+        f'<text class="axis" transform="translate(45 {top + len(rows) * cell_h / 2}) rotate(-90)" text-anchor="middle">Mechanism family</text>',
+        f'<text class="small" x="{left}" y="{height - 18}">All {len(rows)} mechanism families are shown; risk labels require a corresponding empirical outcome metric.</text>',
     ]
-    return svg_document("Threat mechanism × evaluated risk", "Cross-map of threat mechanisms and empirically evaluated risk outcomes.", width, height, body)
+    return svg_document("Threat mechanism family × evaluated risk", "Cross-map of threat mechanism families and empirically evaluated risk outcomes.", width, height, body)
 
 
 def render_benchmark_threat_consequence(papers: list[dict]) -> str:

@@ -1,53 +1,70 @@
 # Daily Curation Workflow
 
-This document defines the maintenance workflow for incorporating newly discovered literature into Awesome Physical AI Safety. The catalog should remain reproducible, evidence-coded, English-only, and safe for eventual public release.
+This document is the operational source of truth for recurring literature curation in Awesome Physical AI Safety. Keep automation prompts short: they should provide local execution context and point here rather than duplicate these rules.
 
-## 1. Search and Verify
+## 1. Read Before Working
 
-1. Search primary sources for new papers and material revisions in VLA and broader physical-AI safety, embodied-agent security, robustness, OOD generalization, attacks, defenses, privacy, ethics, fairness, failure detection, and safety evaluation.
-2. Prefer arXiv, OpenReview, official proceedings, author project pages, and official repositories.
-3. Confirm the official title, first author, publication year, venue, paper URL, and official project or code URL.
-4. Check `data/papers.json` by normalized title, paper URL, arXiv ID, DOI, and known title changes before adding a record.
-5. Update an existing record for a material revision or renamed paper. Do not create a second entry for the same work.
+From the repository root, read:
 
-## 2. Decide Scope
+- `AGENTS.md`
+- the Scope and Curation Policy in `README.md`
+- `CONTRIBUTING.md`
+- `docs/taxonomy.md`
+- `docs/metadata-schema.md`
+- `data/papers.json`
 
-Include work that directly contributes at least one of the following:
+Inspect the current branch, remote, and working tree before editing. Preserve unrelated changes; do not reset or overwrite them.
 
-- safety, robustness, security, privacy, misuse, ethics, fairness, or trustworthy evaluation of a VLA, robot policy, autonomous system, or embodied agent
-- embodied failure, attack, or human-impact analysis relevant to physical interaction or deployment
-- adversarial, non-adversarial/OOD, or societal evaluation of physical-AI behavior
-- runtime monitoring, guardrails, action shielding, fail-safe behavior, recovery, or uncertainty handling for embodied systems
-- a survey or benchmark that materially organizes physical-AI safety research
+## 2. Search and Verify
 
-Exclude unrelated uses of the acronym VLA, generic capability papers without a responsible-deployment connection, secondary articles without a traceable primary source, and exact duplicates.
+1. Search primary sources for new papers and material revisions since the previous run.
+2. Prefer arXiv, OpenReview, official proceedings, publisher pages, author project pages, and official or author-maintained repositories.
+3. Read the abstract and inspect the method, experiments, and limitations when needed for scope or metadata decisions. Do not report abstract review as full-paper review.
+4. Confirm the official title, first-author surname, paper identity, publication state, paper URL, and any official project or code URL.
+5. Check normalized title, paper URL, arXiv ID, DOI, OpenReview ID, and title history before adding a record. Update renamed or materially revised work in place.
 
-## 3. Add Catalog Metadata
+Crossref, search results, and other reading lists are discovery aids, not substitutes for a primary source.
 
-Add or update records only in `data/papers.json`. Follow [the taxonomy](taxonomy.md) and [the contribution rules](../CONTRIBUTING.md).
+## 3. Decide Scope
 
-For each record:
+Use the current Scope in `README.md` and contribution rules in `CONTRIBUTING.md`. The catalog focuses on safety and trustworthiness of foundation model-based Physical AI. General LLM/VLM safety, conventional robotics, HRI, driving, or multi-robot work requires a concrete connection to the catalog scope.
+
+Exclude unrelated uses of “VLA,” generic capability work without a responsible-deployment contribution, untraceable secondary sources, and duplicate or pre-rename versions of the same paper.
+
+## 4. Add or Update Metadata
+
+Edit `data/papers.json`; do not hand-edit generated README or documentation pages.
+
+For every new or updated record:
 
 - use a stable, unique `id`
 - store the official title and first-author surname
-- collect `first_submission_date` and `first_submission_source` following [the metadata schema](metadata-schema.md); use arXiv v1 UTC dates, retain the initial date on revisions, and use null for unverified dates; never substitute publication dates
-- use the confirmed venue, or `arXiv` when acceptance is unverified
-- set `year` to the confirmed venue's own year (proceedings/program year for a named conference or journal; the cited version's year for `arXiv`/`OpenReview`) — never the arXiv posting year once a named venue is confirmed; see [the metadata schema](metadata-schema.md#venue-and-year). When updating an existing record's `venue` away from `arXiv`/`OpenReview` because a preprint was accepted, re-derive `year` from the venue at the same time — do not leave the old arXiv-based year in place
-- link the title to the primary paper source through `paper_url`
-- use `code_url` only for an official or author-maintained repository or project page
-- assign one primary `section`, then a `subsection` chosen from that section's closed vocabulary (`SUBSECTIONS[section]` in `scripts/validate_catalog.py`) — reuse an existing value whenever the paper reasonably fits one; only propose a new value when it genuinely doesn't, and add it to both `validate_catalog.py` and `labels_ja.py` in the same commit (see [the metadata schema](metadata-schema.md#subsection))
-- assign `risks` only from outcomes empirically measured in the paper
-- use the structured `threat_model` fields and controlled vocabularies defined in [the taxonomy](taxonomy.md)
+- collect `first_submission_date` and `first_submission_source` as defined in `docs/metadata-schema.md`; use the arXiv v1 UTC date, never the revision, publication, or catalog-addition date
+- use the confirmed venue and venue year; use `arXiv` when acceptance is unverified
+- use a primary `paper_url` and only an official or author-maintained `code_url`
+- assign one primary `section` and one valid `subsection`
+- assign `risks` only for empirically evaluated outcomes
+- use the controlled structured `threat_model` from `docs/taxonomy.md`
+- audit secondary defense contributions regardless of primary section; add `defense` when the paper proposes or experimentally evaluates a substantive mitigation, and omit it after review when no such contribution exists
+- exclude discussion-only recommendations, future-work suggestions, and survey coverage from `defense`
 - keep experimental settings and secondary descriptors in `tags`
+- set extension `curation_status` to the actual evidence depth
 
-Do not add private research questions, unpublished interpretations, personal work notes, local paths, or content from private research folders.
+Never publish personal research questions, unpublished interpretations, private notes, local paths, or content from private research folders.
 
-## 4. Regenerate and Validate
+If a new section, subsection, or controlled value is genuinely required, update its validator and Japanese label in the same change. Do not leave translation warnings unresolved.
 
-Run all checks from the repository root:
+## 5. Regenerate and Validate
+
+Verify each changed record by passing its ID explicitly:
 
 ```bash
-python3 scripts/verify_bibliography.py
+python3 scripts/verify_bibliography.py --id <record-id-1> --id <record-id-2>
+```
+
+Then run:
+
+```bash
 python3 scripts/validate_catalog.py
 python3 scripts/build_readme.py
 python3 scripts/build_readme.py --check
@@ -61,52 +78,45 @@ python3 scripts/build_explorer.py
 git diff --check
 ```
 
-`verify_bibliography.py` is a fail-closed check. It retrieves canonical metadata
-from the linked primary source (`paper_url`) and compares the title,
-first-author surname, and populated initial submission dates in
-`data/papers.json`. `year` is included in that automated comparison too,
-except when `paper_url` is an arXiv/OpenReview preprint and `venue` already
-names a different, confirmed venue — that preprint's own year can legitimately
-differ from the venue's, so `year` stays curator-verified against the venue's
-own listing instead of being machine-checked against the preprint. When
-`paper_url` is itself the venue record (a DOI/Crossref link, ACL Anthology,
-CVF proceedings, etc.), `year` is always checked against it. A mismatch or an
-unavailable source blocks publication; an unavailable source must not be
-treated as verified. For a daily
-incremental run, pass the changed record IDs with repeated `--id` options. Run a
-full-catalog verification periodically.
+Bibliography verification is fail-closed. A title, first-author, year, initial-submission-date, identity, retrieval, or parsing failure blocks publication for that record. Do not treat an unavailable primary source as verified.
 
-Review the generated README and confirm:
+Review generated outputs for duplicate records, correct placement, working paper and code links, evidence-supported risks and threat metadata, matching English/Japanese counts, current visualizations, untranslated values, English-only public catalog fields, and absence of private information or local paths.
 
-- the paper has one catalog record and appears in its primary subsection; generated thematic views may also display it
-- the table title links to the paper
-- an official code or project link appears beside the title when available
-- Risk and Threat Model remain compact and evidence-consistent
-- for every record with a named conference/journal `venue`, `year` matches that venue's own proceedings/program year, not an arXiv posting year
-- the table of contents includes any new subsection
-- the total paper count is correct
-- the generated landscape figures are current
-- no private marker, local path, or personal research content is present
-- `README.md` and all catalog data (`data/papers.json`, taxonomy values, paper titles) remain English-only; `README.ja.md`, `docs/taxonomy.ja.md`, and `CONTRIBUTING.ja.md` are the intentional exceptions and legitimately contain Japanese text
+## 6. Commit and Push
 
-`README.ja.md` is generated by `scripts/build_readme_ja.py` from the same `data/papers.json` and the translation tables in `scripts/labels_ja.py` — regenerate it like `README.md`, never hand-edit it. `section`, `subsection`, `risks`, and every `threat_model` field (`kind`/`lifecycle`/`mechanism`/`surface`/`target`/`consequence`) are closed vocabularies enforced by `validate_catalog.py` (`subsection` scoped per `section` via its `SUBSECTIONS` dict), and every currently valid value already has a translation in `labels_ja.py`, so those can't silently drift out of sync. If you do add a new `subsection` value (see [the metadata schema](metadata-schema.md#subsection)), add its Japanese translation to `labels_ja.py`'s `SUBSECTIONS_JA` in the same commit — `validate_catalog.py` fails the record without a `SUBSECTIONS[section]` entry, and `scripts/build_readme_ja.py` prints a `WARNING` for any value still missing its translation, so check its output before pushing. `docs/taxonomy.ja.md` and `CONTRIBUTING.ja.md` are hand-translated prose, not generated — they are not auto-synced with `docs/taxonomy.md` / `CONTRIBUTING.md` and only need updating when those English files change materially.
+The repository is publicly operated. Before pushing, confirm:
 
-## 5. Commit and Push
+```bash
+git remote -v
+gh repo view futakw/Awesome-Physical-AI-Safety --json visibility
+```
 
-Before pushing, verify that the remote repository is still private whenever private maintenance is intended. Commit `data/papers.json` together with the generated `README.md` and `README.ja.md`. Use a concise maintenance commit message, then push the current branch.
+The expected repository is `futakw/Awesome-Physical-AI-Safety`, and visibility must be `PUBLIC`. Do not change repository visibility automatically.
 
-If validation fails, metadata is uncertain, the remote is unexpectedly public, or unrelated local changes are present, do not push. Record the unresolved item in the daily research report instead.
+Commit and push only when:
 
-## 6. Daily Report
+- every changed record passes primary-source bibliography verification
+- catalog, README, documentation, visualization, explorer, and diff checks pass
+- metadata identity and scope are certain
+- no private or local information is present
+- only changes belonging to the current work can be committed safely
+- the remote and visibility are expected
 
-Report only the operational result:
+Do not force-push, rewrite history, disable validation, discard unrelated changes, or publish around authentication, metadata, or primary-source failures. If safe isolation is not possible, leave the changes local and report the blocker.
+
+If no verified new or materially revised record exists, leave the public repository unchanged and do not create a commit.
+
+## 7. Report
+
+Report:
 
 - search date and coverage window
-- number of new papers and updated records
-- titles of newly added papers
-- uncertain or excluded candidates and the reason
-- catalog count after validation
-- validation result
+- new records and material revisions
+- added or updated titles
+- held or excluded candidates and reasons
+- catalog count
+- bibliography and validation results
+- generated-output and translation status
 - commit hash and push result, or the exact blocker
 
-An empty update is valid. If no verified new paper is found, leave the catalog unchanged and report the searched sources and date range.
+An empty update is valid when the search and its evidence are recorded.

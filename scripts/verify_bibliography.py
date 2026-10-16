@@ -67,6 +67,7 @@ def normalize_title(value: str) -> str:
 
 
 def surname(value: str) -> str:
+    value = html.unescape(value)
     value = re.sub(r"\s+et\s+al\.?\s*$", "", value, flags=re.IGNORECASE).strip()
     value = re.sub(r"\s+", " ", value)
     if "," in value:

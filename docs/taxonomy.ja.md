@@ -8,23 +8,14 @@
 
 ## 1. 実証的に評価されたリスクアウトカム
 
-`risks`フィールドはevidence-coded（証拠に基づく）であり、起こりうる結果の一覧ではありません。論文の実験が当該アウトカムの指標を報告している場合にのみラベルが付与されます。4つのリスクすべてを論じるsurvey論文は空のリストを持つ一方、攻撃論文がタスク成功率と攻撃成功率の両方を報告していれば`Task Success`と`Security & Privacy`の両方が付与されることがあります。物理環境での実行だけでは`Physical Safety`ラベルの根拠にはなりません。
+`risks`フィールドはevidence-coded（証拠に基づく）であり、起こりうる結果の一覧ではありません。論文の実験が当該アウトカムの指標を報告している場合にのみラベルが付与されます。4つのリスクすべてを論じるsurvey論文は空のリストを持つ一方、攻撃論文がタスク成功率と攻撃成功率の両方を報告していれば`task-reliability`と`security-privacy`の両方が付与されることがあります。物理環境での実行だけでは`physical-safety`ラベルの根拠にはなりません。
 
-### タスク・信頼性リスク（Task and Reliability Risk）
-
-タスクまたは経路の完了、成功率、またはそれに相当するend-to-endの実行結果。行動の逸脱、検知精度、キャリブレーション誤差、攻撃成功のみでは該当しません。
-
-### 物理的安全性リスク（Physical Safety Risk）
-
-衝突、人への傷害、物体・環境への損害、安全でない力や動作、物理的危害の実行、安全制約違反、または明示的な物理リスクの代理指標。
-
-### 倫理・社会的リスク（Ethical and Societal Risk）
-
-有害または禁止された指示への準拠・拒否、方針や憲章（constitution）の違反、明示的に測定された有害な身体化行動、またはアクセス・タスク成功・支援品質・危険への曝露における人や集団間の測定された格差。公平性への動機、モデルの帰納バイアス、ベンチマークによる「公平な評価」を謳う文言だけでは、対応する社会的アウトカムの指標がない限り該当しません。
-
-### セキュリティ・プライバシーリスク（Security and Privacy Risk）
-
-攻撃成功、バックドア起動、不正な制御、コマンド乗っ取り、情報漏洩、秘密裏の通信、メモリや通信の侵害、システム侵害。
+| ラベル | 値 | 該当する条件 |
+|---|---|---|
+| **タスク・信頼性** | `task-reliability` | タスクまたは経路の完了、成功率、またはそれに相当するend-to-endの実行結果。行動の逸脱、検知精度、キャリブレーション誤差、攻撃成功のみでは該当しません。 |
+| **物理的安全性** | `physical-safety` | 衝突、人への傷害、物体・環境への損害、安全でない力や動作、物理的危害の実行、安全制約違反、または明示的な物理リスクの代理指標。 |
+| **倫理・社会** | `ethical-societal` | 有害または禁止された指示への準拠・拒否、方針や憲章（constitution）の違反、明示的に測定された有害な身体化行動、またはアクセス・タスク成功・支援品質・危険への曝露における人や集団間の測定された格差。公平性への動機、モデルの帰納バイアス、ベンチマークによる「公平な評価」を謳う文言だけでは、対応する社会的アウトカムの指標がない限り該当しません。 |
+| **セキュリティ/プライバシー** | `security-privacy` | 攻撃成功、バックドア起動、不正な制御、コマンド乗っ取り、情報漏洩、秘密裏の通信、メモリや通信の侵害、システム侵害。 |
 
 ### 付与ルール
 
@@ -35,34 +26,30 @@
 
 ## 2. 失敗要因
 
-### Adversarial（敵対的・悪意のある操作）
+論文の`threat_model.kind`は3つの失敗要因のいずれかです（複数の脅威にまたがるレコード用の`survey`/`evaluation`もあります。詳細は[Threat Kinds](#threat-kinds脅威の種別)を参照）。
 
-攻撃者が入力・学習データ・モデル状態・行動・環境・システム構成要素を意図的に操作する。
-
-### Non-Adversarial（非敵対的）・OOD
-
-攻撃者を想定せず、未知の視点・見た目・物体・幾何・言語・タスク・環境・身体・時間変化のもとでシステムが失敗する。
-
-### Design, Training, or System Failure（設計・学習・システムの失敗）
-
-目的の誤設定、マルチモーダル不整合、報酬ハッキング、センサ故障、プランナー・実行系の不整合、または不十分なランタイムリカバリから生じる失敗。
+| ラベル | 値 | 定義 |
+|---|---|---|
+| **Adversarial（敵対的・悪意のある操作）** | `adversarial` | 攻撃者が入力・学習データ・モデル状態・行動・環境・システム構成要素を意図的に操作する。 |
+| **Non-Adversarial（非敵対的）・OOD** | `non-adversarial` | 攻撃者を想定せず、未知の視点・見た目・物体・幾何・言語・タスク・環境・身体・時間変化のもとでシステムが失敗する。 |
+| **設計・学習・システムの失敗** | `system-failure` | 目的の誤設定、マルチモーダル不整合、報酬ハッキング、センサ故障、プランナー・実行系の不整合、または不十分なランタイムリカバリから生じる失敗。 |
 
 ## 3. 構造化されたThreat Model
 
 > **ステータス: 採用済み。** 全てのカタログレコードとREADME生成器はこのスキーマを使用します。
 
-`threat_model`フィールドはコンパクトな自由記述文字列ではなく、構造化されたオブジェクトです。脅威が「いつ」発生し、「どのように」作用し、「どのシステム境界」を使い、「何を」標的とし、「どんな帰結」を生むかを分離します。
+`threat_model`フィールドはコンパクトな自由記述文字列ではなく、構造化されたオブジェクトです。5つのフィールドが脅威・失敗経路に関する5つの問いに答えます——**いつ**発生するか（When）、**どこから**侵入するか（Where）、**どのように**作用するか（How）、**何に**影響するか（What is affected）、**どんな帰結**を生むか（What follows）。加えて`kind`は、このレコードがどの種類に属するかを表す別フィールドです。
 
 ### コアフィールド
 
-| フィールド | 型 | 具体的な研究で必須か | 意味 | 例 |
-|---|---|---:|---|---|
-| `kind` | string | Yes | 失敗の大まかな発生源、またはレコードの範囲 | `adversarial` |
-| `lifecycle` | 文字列の配列 | Yes | 脅威が導入・発動される段階、または失敗が評価される段階 | `training`, `inference` |
-| `mechanism` | 文字列の配列 | Yes | 攻撃・シフト・失敗がどのように生じるか | `adversarial-patch` |
-| `surface` | 文字列の配列 | Yes | 脅威・シフト・失敗が導入または観測される直接のシステム境界 | `visual-perception` |
-| `target` | 文字列の配列 | Yes | 影響を受ける、または評価されるコンポーネント・表現・資産 | `vla-policy` |
-| `consequence` | 文字列の配列 | Yes | 脅威・失敗連鎖の具体的な到達点 | `task-failure` |
+| フィールド | 問い | 型 | 具体的な研究で必須か | 意味 | 例 |
+|---|---|---|---:|---|---|
+| `lifecycle` | いつ？（When?） | 文字列の配列 | Yes | 脅威が導入・発動される段階、または失敗が評価される段階 | `training`, `inference` |
+| `surface` | どこから？（Where?） | 文字列の配列 | Yes | 脅威・シフト・失敗が導入または観測される直接のシステム境界 | `visual-perception` |
+| `mechanism` | どのように？（How?） | 文字列の配列 | Yes | 攻撃・シフト・失敗がどのように生じるか | `adversarial-patch` |
+| `target` | 何に影響？（What is affected?） | 文字列の配列 | Yes | 影響を受ける、または評価されるコンポーネント・表現・資産 | `vla-policy` |
+| `consequence` | どんな帰結？（What follows?） | 文字列の配列 | Yes | 脅威・失敗連鎖の具体的な到達点 | `task-failure` |
+| `kind` | *（レコードの種類、5つの問いとは別）* | string | Yes | 失敗の大まかな発生源、またはレコードの範囲 | `adversarial` |
 
 このリポジトリは記述的な意味ラベルを使用します。個々の論文やサーベイが定義した番号付きサーフェスコードを正規のメタデータとしては使用しません。
 
@@ -76,7 +63,7 @@
 | `evaluation` | ベンチマークが複数の異なる脅威をカバーし、単一の主要な脅威経路を持たない。 |
 | `survey` | サーベイやポジションペーパーが、単一の具体的な脅威ではなく脅威のランドスケープを記述する。 |
 
-### Lifecycle語彙
+### いつ？（When?）— Lifecycle語彙
 
 | 値 | 定義 |
 |---|---|
@@ -86,70 +73,135 @@
 
 `lifecycle`はマルチラベルです。バックドアは`training`中に埋め込まれ、`inference`中に発動することがあります。
 
-### Surface語彙
+### どこから？（Where?）— Surface語彙
+
+以下は「知覚→推論→行動」という一連の流れに沿って、上流の学習・インフラ層から下流の行動・制御層まで区分ごとに並べています。
 
 | 値 | 表す境界 |
 |---|---|
+| **訓練・インフラ** | |
 | `model-supply-chain` | 学習データ、アダプタ、チェックポイント、事前学習済みコンポーネント、またはモデル配布。 |
-| `user-instruction` | 現在のタスクや制御意図として受理される、認証済みのテキストまたは音声。 |
-| `context-memory-retrieval` | インタラクション履歴、永続メモリ、ICL例、RAGドキュメント、またはツール結果。 |
-| `physical-semantic-environment` | シーン中のテキスト、標識、ラベル、ディスプレイ、QRコードなど、正しく知覚された意味的コンテンツ。 |
+| `middleware-network` | ROS/ROS2、DDS、ドライバ、認証情報、クラウドモデル、リモートAPI、または通信。 |
+| **知覚** | |
 | `visual-perception` | 画像、動画、カメラ、視覚トークン、パッチ、テクスチャ、または光学信号。 |
 | `audio-perception` | 音声、マイク、音響信号、または音声特徴量。 |
-| `proprioception` | 関節状態、力、触覚フィードバック、またはロボット内部のセンシング。 |
-| `world-state` | 物体間の関係、占有状況、位置推定、シーングラフ、アフォーダンス、または予測された状態。 |
-| `reasoning-representation` | 隠れ状態、アテンション、chain-of-thought、またはクロスモーダル表現。 |
-| `task-planning` | 目標、タスク分解、行動順序、経路、またはリカバリ戦略。 |
-| `action-interface` | 行動トークン、行動チャンク、コード、ツール呼び出し、API、スキル、または連続制御。 |
-| `middleware-network` | ROS/ROS2、DDS、ドライバ、認証情報、クラウドモデル、リモートAPI、または通信。 |
+| `physical-semantic-environment` | シーン中のテキスト、標識、ラベル、ディスプレイ、QRコードなど、正しく知覚された、環境中の意味的コンテンツ。 |
+| **言語** | |
+| `user-instruction` | 現在のタスクや制御意図として受理される、認証済みのテキストまたは音声。 |
+| `context-memory-retrieval` | インタラクション履歴、永続メモリ、ICL例、RAGドキュメント、またはツール結果。 |
 | `multi-agent-communication` | ロボット間メッセージ、共有メモリ、主張、または協調状態。 |
+| **固有受容感覚** | |
+| `proprioception` | 関節状態、力、触覚フィードバック、またはロボット内部のセンシング。 |
+| **計画・状態** | |
+| `world-state` | 物体間の関係、占有状況、位置推定、シーングラフ、アフォーダンス、または予測された状態。 |
+| `task-planning` | 目標、タスク分解、行動順序、経路、またはリカバリ戦略。 |
+| **推論** | |
+| `reasoning-representation` | 隠れ状態、アテンション、chain-of-thought、またはクロスモーダル表現。 |
+| **行動・制御** | |
+| `action-interface` | 行動トークン、行動チャンク、コード、ツール呼び出し、API、スキル、または連続制御。 |
 | `execution-control` | 軌道、アクチュエータコマンド、安全停止、フリーズ、またはリソース可用性。 |
 
 `surface`は研究が直接操作・シフト・破損・評価したインターフェースのみを記録します。推測される内部伝播経路はエンコードしません。異なるlifecycle段階で異なるインターフェースが使われる場合、複数の値が許容されます。例えば、視覚的に発動するバックドアは学習時に`model-supply-chain`、推論時に`visual-perception`の両方を使うことがあります。
 
-### Mechanism語彙
+### どのように？（How?）— Mechanism語彙
 
-| ファミリー | 値の例 |
+`mechanism`は「手口の性質」（どのような汚染・なりすまし・操作・失敗か）で分類しています。これは`surface`（知覚→推論→行動のパイプライン上の「どこで」起きるか）とは意図的に別軸です。1つのmechanismファミリーが1つのsurfaceファミリーに対応するわけではありません。例えば`jailbreak`と`sensor-spoofing`はどちらも知覚に近いsurfaceに触れ得ますが、手口が異なるため別のmechanismファミリーに属します。
+
+| 値 | 攻撃・失敗がどう生み出されるか |
 |---|---|
-| 学習・サプライチェーン | `data-poisoning`, `backdoor`, `malicious-adapter`, `checkpoint-compromise`, `reward-manipulation` |
-| 視覚・物理入力 | `digital-perturbation`, `adversarial-patch`, `adversarial-object`, `typographic-injection`, `environment-manipulation` |
-| 言語・文脈 | `jailbreak`, `direct-prompt-injection`, `indirect-prompt-injection`, `command-hijacking`, `memory-poisoning`, `retrieval-poisoning` |
-| センサー・状態 | `sensor-spoofing`, `state-manipulation`, `feedback-spoofing`, `multimodal-desynchronization` |
-| 推論・計画・行動 | `representation-hijacking`, `planning-hijacking`, `action-manipulation`, `action-freezing`, `trajectory-manipulation` |
-| システム・通信 | `middleware-compromise`, `network-attack`, `multi-agent-propagation`, `denial-of-service`, `sensitive-data-exposure`, `memorized-data-retention`, `covert-channel` |
-| 非敵対的・システム失敗 | `distribution-shift`, `instruction-ambiguity`, `perception-error`, `semantic-misalignment`, `planning-error`, `execution-error`, `constraint-violation`, `uncertainty-miscalibration`, `unsafe-policy-behavior` |
+| **データ・モデル汚染** | |
+| `data-poisoning` | 学習データを汚染し、あらかじめ定めた失敗や挙動を誘発する。 |
+| `backdoor` | トリガー条件を埋め込み、攻撃者が選んだ挙動を発動させる。 |
+| `malicious-adapter` | 隠れた有害な挙動を持つファインチューニング済みアダプタ・LoRAモジュール・プラグインを配布する。 |
+| `checkpoint-compromise` | 事前学習済み・共有されたモデルチェックポイントを配布前に改ざんする。 |
+| `reward-manipulation` | 学習信号や報酬関数を汚染し、安全でない挙動を形作る。 |
+| `memory-poisoning` | 永続メモリや長期コンテキストストアを悪意あるコンテンツで汚染する。 |
+| `retrieval-poisoning` | 検索コーパス内の文書や例を汚染し、取得される内容に偏りを生じさせる。 |
+| **摂動・なりすまし** | |
+| `digital-perturbation` | 知覚できない、または制約されたノイズをデジタル入力に加える。 |
+| `adversarial-patch` | 知覚を欺くために作り込まれた目に見えるパッチやテクスチャを配置する。 |
+| `adversarial-object` | 狙った失敗を引き起こすよう設計された物理的物体を用いる。 |
+| `typographic-injection` | シーン中に描画されたテキストでvision-languageモデルの出力を操作する。 |
+| `sensor-spoofing` | 物理センサー（GPS、LiDAR、IMU等）に偽の信号を与える。 |
+| `feedback-spoofing` | 内部・外部のフィードバック信号を偽装してシステムを欺く。 |
+| `environment-manipulation` | 物理的な物体やシーンの配置を変更し、失敗を誘発する。 |
+| **命令・意味操作** | |
+| `jailbreak` | プロンプトにより安全性学習を回避し、制限された挙動を引き出す。 |
+| `direct-prompt-injection` | 悪意ある指示をユーザー入力として直接与える。 |
+| `indirect-prompt-injection` | 悪意ある指示を、システムが後で処理するコンテンツに埋め込む。 |
+| `hazardous-instruction` | 一見無害な指示が、物理的・社会的に有害な結果につながる。 |
+| `command-hijacking` | 攻撃者が正規のコマンドや目標を差し替え・上書きする。 |
+| **ハイジャック・乗っ取り** | |
+| `representation-hijacking` | 内部の隠れ状態やクロスモーダル表現を直接操作する。 |
+| `planning-hijacking` | 計画・タスク分解プロセスを攻撃者の目標へ誘導する。 |
+| `action-manipulation` | 出力される行動トークンやコマンドを実行前に改変する。 |
+| `action-freezing` | ポリシーを無行動・停止状態に追い込む。 |
+| `trajectory-manipulation` | 生成された運動軌道を意図した経路から逸脱させる。 |
+| `state-manipulation` | センシングとは独立に、システムの内部の信念・状態表現を汚染する。 |
+| **システム・インフラ攻撃** | |
+| `middleware-compromise` | ミドルウェア、ドライバ、通信層を侵害する。 |
+| `network-attack` | ネットワーク通信を傍受・改ざん・妨害する。 |
+| `multi-agent-propagation` | 共有通信や共有状態を通じて、侵害が1つのエージェントから他へ伝播する。 |
+| `denial-of-service` | リソース枯渇やフラッディングにより可用性を低下・遮断する。 |
+| `sensitive-data-exposure` | システムの脆弱性により保護されたデータが意図せず露出する。 |
+| `memorized-data-retention` | 学習データがモデルに保持され、後で抽出可能になる。 |
+| `covert-channel` | 認可されていない経路で情報を秘密裏に持ち出す、または通信する。 |
+| `multimodal-desynchronization` | モダリティ間の時間的・意味的整合が崩れ、統合理解が汚染される。 |
+| **非敵対的な失敗** | |
+| `distribution-shift` | 攻撃者を想定せず、テスト時の条件が学習時の分布と異なる。 |
+| `instruction-ambiguity` | 悪意のない自然な指示が、記述不足または曖昧である。 |
+| `perception-error` | 敵対的な原因なしに、知覚が誤認識・誤定位する。 |
+| `semantic-misalignment` | 敵対的な原因なしに、言語と視覚・行動のグラウンディングが乖離する。 |
+| `uncertainty-miscalibration` | システムの確信度が実際の信頼性と一致しない。 |
+| `planning-error` | 攻撃者なしに、プランナーが実行不可能・非最適・安全でない計画を生成する。 |
+| `execution-error` | 攻撃者なしに、低レベルの実行が意図した行動から逸脱する。 |
+| `constraint-violation` | 攻撃者なしに、安全制約やタスク制約に違反する。 |
+| `unsafe-policy-behavior` | 学習されたポリシーが、個別のエラーとしてではなく創発的な性質として安全でない挙動を示す。 |
 
-### Target語彙
+`kind`はmechanismファミリーと相関はしますが、厳密な上位階層ではありません。`adversarial`は上記5つの攻撃系ファミリーすべてにまたがり（1つに限定されない）、`non-adversarial`/`system-failure`はほぼ「非敵対的な失敗」ファミリーに集中しますが完全ではなく、`survey`/`evaluation`は`coverage.mechanisms`を通じて複数ファミリーを同時にカバーすることがあります。`kind`は`mechanism`の上位階層ではなく、別の軸（レコードの種類）として扱ってください。
+
+### 何に影響？（What is affected?）— Target語彙
 
 | 値 | 対象 |
 |---|---|
+| **知覚・理解** | |
 | `perception-model` | 視覚・音声・マルチモーダル知覚コンポーネント。 |
 | `world-state` | 下流の意思決定に使われる構造化・予測された状態。 |
 | `reasoning-process` | 内部推論、アテンション、またはマルチモーダル整合。 |
+| **計画・ポリシー** | |
 | `task-planner` | 目標選択、タスク分解、経路、または高レベルのポリシー意図。 |
 | `vla-policy` | end-to-end、または部分的に公開されたVLAポリシー。 |
 | `action-generation` | 行動トークン、チャンク、軌道、コード、またはツール生成。 |
+| **実行・安全インフラ** | |
 | `runtime-monitor` | ガードレール、検証器、検知器、または安全性判定器。 |
 | `robot-executor` | コントローラー、アクチュエータ、安全停止、または実行プロセス。 |
+| **システム・データ** | |
 | `shared-system-state` | メモリ、ミドルウェア、クラウドサービス、またはマルチエージェント間の共有状態。 |
 | `private-data` | 学習メンバーシップ、観測、識別情報、位置情報などの機微データ。 |
 
-### Consequence語彙
+### どんな帰結？（What follows?）— Consequence語彙
+
+`unsafe-success`と`policy-violation`は`control-hijacking`とは別のグループにしています。両者とも「エージェント自身の行動が安全・倫理規範に違反する」ことを表し、外部の攻撃者が原因かどうかを問いません。一方`control-hijacking`は「外部主体が制御権を得る」ことを明示的に指します。`ethical-societal`リスクはほぼ`policy-violation`に集中し、`control-hijacking`にはほとんど現れません。
 
 | 値 | 具体的な到達点 |
 |---|---|
+| **タスク・リカバリの結果** | |
 | `task-failure` | 割り当てられたタスクや経路が完了しない。 |
-| `targeted-action` | システムが攻撃者の選択した行動または行動系列を実行する。 |
-| `action-freezing` | ポリシーが停止する、または危険な無行動を生じる。 |
-| `unsafe-success` | 安全性を損なった状態でタスクが成功する。 |
+| `recovery-failure` | 検知・緩和・再計画・リカバリが安全な動作を回復できない。 |
+| **物理的被害** | |
 | `collision` | ロボットが障害物・人・禁止された物体に接触する。 |
 | `unsafe-motion` | 安全でない力・速度・姿勢・軌道・制御挙動が発生する。 |
 | `physical-damage` | 人・ロボット・物体・環境に危害や損害が生じる。 |
+| **制御の乗っ取り** | |
+| `targeted-action` | システムが攻撃者の選択した行動または行動系列を実行する。 |
+| `action-freezing` | ポリシーが停止する、または危険な無行動を生じる。 |
 | `control-hijacking` | 権限のない主体がロボットの挙動への影響力を得る。 |
+| **安全・規範違反** | |
+| `unsafe-success` | 安全性を損なった状態でタスクが成功する。 |
 | `policy-violation` | エージェントが明示的に禁止された、または有害な行動を実行する。 |
+| **システム・プライバシー** | |
 | `privacy-leakage` | 機微な情報が推測・露出・送信される。 |
 | `availability-loss` | システムがフリーズ・停止・遅延、またはサービス拒否状態になる。 |
-| `recovery-failure` | 検知・緩和・再計画・リカバリが安全な動作を回復できない。 |
 
 既存の`risks`フィールドは別個のまま残ります。`risks`は実証的に評価されたアウトカムのファミリーを記録し、`consequence`は脅威経路が表す具体的な到達点を記録します。
 

@@ -30,6 +30,7 @@ def main() -> int:
         "mechanism": L.MECHANISM_JA,
         "target": L.TARGET_JA,
         "consequence": L.CONSEQUENCE_JA,
+        "defense_mechanism": L.DEFENSE_MECHANISM_JA,
         "kind": L.KIND_JA,
     }
 

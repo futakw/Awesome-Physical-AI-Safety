@@ -39,6 +39,7 @@ python3 scripts/build_explorer.py
 - Structure `threat_model` using the controlled `kind`, `lifecycle`, `mechanism`, `surface`, `target`, and `consequence` vocabularies defined in [the taxonomy](docs/taxonomy.md). For defenses, describe the threat being mitigated rather than the defense method.
 - Use the `survey` or `evaluation` coverage variant when a record spans multiple independent threats and no single threat path is supported. Experimental settings and secondary descriptors belong in `tags`; tags remain structured metadata and are not rendered as a separate table column.
 - Add one catalog record and assign one primary section per paper. Generated thematic tables may display that same record as an additional view.
+- Audit every paper for a secondary defense contribution regardless of its primary section. Add `defense` when the paper proposes or experimentally evaluates a substantive mitigation; omit it after review when no such contribution exists. Discussion-only recommendations and survey coverage do not qualify.
 
 ## Scope
 

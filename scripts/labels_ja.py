@@ -75,20 +75,23 @@ LIFECYCLE_JA = {
     "system": "システム",
 }
 
+# Ordered to match the perceive -> reason -> act grouping in docs/taxonomy.md
+# (training & infrastructure -> perception -> language -> proprioception ->
+# planning & state -> reasoning -> action & control).
 SURFACE_JA = {
     "model-supply-chain": "モデルサプライチェーン",
-    "user-instruction": "ユーザー指示",
-    "context-memory-retrieval": "文脈・メモリ・検索",
-    "physical-semantic-environment": "物理的意味環境",
+    "middleware-network": "ミドルウェア・ネットワーク",
     "visual-perception": "視覚",
     "audio-perception": "聴覚",
+    "physical-semantic-environment": "環境中の意味的コンテンツ",
+    "user-instruction": "ユーザー指示",
+    "context-memory-retrieval": "文脈・メモリ・検索",
+    "multi-agent-communication": "マルチエージェント通信",
     "proprioception": "固有受容感覚",
     "world-state": "世界状態",
-    "reasoning-representation": "推論表現",
     "task-planning": "タスク計画",
+    "reasoning-representation": "推論表現",
     "action-interface": "行動インターフェース",
-    "middleware-network": "ミドルウェア・ネットワーク",
-    "multi-agent-communication": "マルチエージェント通信",
     "execution-control": "実行制御",
 }
 
@@ -160,7 +163,23 @@ CONSEQUENCE_JA = {
     "unsafe-success": "安全性を損なう成功",
 }
 
+DEFENSE_MECHANISM_JA = {
+    "adversarial-training": "敵対的学習",
+    "robust-finetuning": "頑健性ファインチューニング",
+    "input-filtering": "入力フィルタリング",
+    "representation-steering": "表現ステアリング",
+    "runtime-monitoring": "実行時監視",
+    "uncertainty-gating": "不確実性ゲーティング",
+    "action-shielding": "行動シールド",
+    "formal-verification": "形式検証",
+    "failure-recovery": "失敗回復",
+    "model-merging": "モデルマージ",
+}
+
 KIND_JA = {
+    "adversarial": "敵対的",
+    "non-adversarial": "非敵対的",
+    "system-failure": "システム障害",
     "survey": "サーベイ",
     "evaluation": "評価",
 }
@@ -171,6 +190,7 @@ for table in (
     MECHANISM_JA,
     TARGET_JA,
     CONSEQUENCE_JA,
+    DEFENSE_MECHANISM_JA,
     LIFECYCLE_JA,
 ):
     DISPLAY_LABELS_JA.update(table)

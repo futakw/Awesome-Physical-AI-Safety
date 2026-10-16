@@ -6,23 +6,14 @@ This repository uses a multi-axis taxonomy. A paper's primary section describes 
 
 ## 1. Empirically Evaluated Risk Outcomes
 
-The `risks` field is evidence-coded, not a list of plausible consequences. A label is assigned only when the paper's experiments report a metric for that outcome. A survey that discusses all four risks therefore has an empty list, while an attack paper may receive both `Task Success` and `Security & Privacy` when it reports task success and attack success rate. Physical deployment alone does not justify a `Physical Safety` label.
+The `risks` field is evidence-coded, not a list of plausible consequences. A label is assigned only when the paper's experiments report a metric for that outcome. A survey that discusses all four risks therefore has an empty list, while an attack paper may receive both `task-reliability` and `security-privacy` when it reports task success and attack success rate. Physical deployment alone does not justify a `physical-safety` label.
 
-### Task and Reliability Risk
-
-Task or route completion, success rate, or an equivalent end-to-end execution outcome. Action deviation, detection accuracy, calibration error, and attack success alone do not qualify.
-
-### Physical Safety Risk
-
-Collision, human injury, object or environment damage, unsafe force or motion, physical-harm execution, safety-constraint violation, or an explicit physical-risk proxy.
-
-### Ethical and Societal Risk
-
-Compliance or refusal under harmful or prohibited instructions, policy or constitution violations, explicitly measured harmful embodied behavior, or measured disparities across people or groups in access, task success, assistance quality, or exposure to hazards. A fairness motivation, a model's inductive bias, or a benchmark's "fair evaluation" of models does not qualify without a corresponding societal-outcome metric.
-
-### Security and Privacy Risk
-
-Attack success, backdoor activation, unauthorized control, command hijacking, information leakage, covert communication, compromised memory or communication, and system compromise.
+| Label | Value | Qualifies when the paper reports |
+|---|---|---|
+| **Task & Reliability** | `task-reliability` | Task or route completion, success rate, or an equivalent end-to-end execution outcome. Action deviation, detection accuracy, calibration error, and attack success alone do not qualify. |
+| **Physical Safety** | `physical-safety` | Collision, human injury, object or environment damage, unsafe force or motion, physical-harm execution, safety-constraint violation, or an explicit physical-risk proxy. |
+| **Ethical & Societal** | `ethical-societal` | Compliance or refusal under harmful or prohibited instructions, policy or constitution violations, explicitly measured harmful embodied behavior, or measured disparities across people or groups in access, task success, assistance quality, or exposure to hazards. A fairness motivation, a model's inductive bias, or a benchmark's "fair evaluation" of models does not qualify without a corresponding societal-outcome metric. |
+| **Security & Privacy** | `security-privacy` | Attack success, backdoor activation, unauthorized control, command hijacking, information leakage, covert communication, compromised memory or communication, and system compromise. |
 
 ### Assignment Rule
 
@@ -33,34 +24,30 @@ Attack success, backdoor activation, unauthorized control, command hijacking, in
 
 ## 2. Failure Sources
 
-### Adversarial or Malicious
+A paper's `threat_model.kind` is one of three failure sources (plus `survey`/`evaluation` for records that span several threats — see [Threat Kinds](#threat-kinds)):
 
-An attacker intentionally manipulates inputs, training data, model states, actions, the environment, or system components.
-
-### Non-Adversarial or OOD
-
-The system fails under unseen viewpoints, visual appearances, objects, geometries, language, tasks, environments, embodiments, or temporal dynamics without assuming an attacker.
-
-### Design, Training, or System Failure
-
-The failure arises from objective misspecification, multimodal misalignment, reward hacking, sensor faults, planner-executor mismatch, or insufficient runtime recovery.
+| Label | Value | Definition |
+|---|---|---|
+| **Adversarial / Malicious** | `adversarial` | An attacker intentionally manipulates inputs, training data, model states, actions, the environment, or system components. |
+| **Non-Adversarial / OOD** | `non-adversarial` | The system fails under unseen viewpoints, visual appearances, objects, geometries, language, tasks, environments, embodiments, or temporal dynamics without assuming an attacker. |
+| **Design, Training, or System Failure** | `system-failure` | The failure arises from objective misspecification, multimodal misalignment, reward hacking, sensor faults, planner-executor mismatch, or insufficient runtime recovery. |
 
 ## 3. Structured Threat Model
 
 > **Status: Adopted.** All catalog records and the README generator use this schema.
 
-The `threat_model` field should be a structured object rather than a compact free-text string. It separates when a threat occurs, how it operates, which system boundary or boundaries it uses, what it targets, and what consequence it produces.
+The `threat_model` field should be a structured object rather than a compact free-text string. Five fields answer five questions about the threat or failure path — **when** it occurs, **where** it enters, **how** it operates, **what** it affects, and **what follows** — plus `kind`, a separate field for what broad category of record this is.
 
 ### Core Fields
 
-| Field | Type | Required for a concrete study | Meaning | Example |
-|---|---|---:|---|---|
-| `kind` | string | Yes | Broad source of failure or scope of the record | `adversarial` |
-| `lifecycle` | array of strings | Yes | Stages in which a threat is introduced or activated, or a failure is evaluated | `training`, `inference` |
-| `mechanism` | array of strings | Yes | How the attack, shift, or failure is produced | `adversarial-patch` |
-| `surface` | array of strings | Yes | Direct system boundary or boundaries through which the threat, shift, or failure is introduced or observed | `visual-perception` |
-| `target` | array of strings | Yes | Component, representation, or asset affected or evaluated | `vla-policy` |
-| `consequence` | array of strings | Yes | Concrete endpoint of the threat or failure chain | `task-failure` |
+| Field | Question | Type | Required for a concrete study | Meaning | Example |
+|---|---|---|---:|---|---|
+| `lifecycle` | When? | array of strings | Yes | Stages in which a threat is introduced or activated, or a failure is evaluated | `training`, `inference` |
+| `surface` | Where? | array of strings | Yes | Direct system boundary or boundaries through which the threat, shift, or failure is introduced or observed | `visual-perception` |
+| `mechanism` | How? | array of strings | Yes | How the attack, shift, or failure is produced | `adversarial-patch` |
+| `target` | What is affected? | array of strings | Yes | Component, representation, or asset affected or evaluated | `vla-policy` |
+| `consequence` | What follows? | array of strings | Yes | Concrete endpoint of the threat or failure chain | `task-failure` |
+| `kind` | *(record type, not part of the five)* | string | Yes | Broad source of failure or scope of the record | `adversarial` |
 
 The repository uses descriptive semantic labels. Numbered surface codes defined by an individual paper or survey are not used as canonical metadata.
 
@@ -74,7 +61,7 @@ The repository uses descriptive semantic labels. Numbered surface codes defined 
 | `evaluation` | A benchmark covers several distinct threats and has no single primary threat path. |
 | `survey` | A survey or position paper describes a threat landscape rather than one concrete threat. |
 
-### Lifecycle Vocabulary
+### When? — Lifecycle Vocabulary
 
 | Value | Definition |
 |---|---|
@@ -84,70 +71,135 @@ The repository uses descriptive semantic labels. Numbered surface codes defined 
 
 `lifecycle` is multi-label. A backdoor can be implanted during `training` and activated during `inference`.
 
-### Surface Vocabulary
+### Where? — Surface Vocabulary
+
+Values are grouped below by where they sit in the perceive → reason → act pipeline, from upstream training/infrastructure through to downstream action and control.
 
 | Value | Boundary represented |
 |---|---|
+| **Training & Infrastructure** | |
 | `model-supply-chain` | Training data, adapters, checkpoints, pretrained components, or model distribution. |
-| `user-instruction` | Authenticated text or speech accepted as the current task or control intent. |
-| `context-memory-retrieval` | Interaction history, persistent memory, ICL examples, RAG documents, or tool results. |
-| `physical-semantic-environment` | Scene text, signs, labels, displays, QR codes, or other correctly perceived semantic content. |
+| `middleware-network` | ROS/ROS2, DDS, drivers, credentials, cloud models, remote APIs, or transport. |
+| **Perception** | |
 | `visual-perception` | Images, video, cameras, visual tokens, patches, textures, or optical signals. |
 | `audio-perception` | Speech, microphones, acoustic signals, or audio features. |
-| `proprioception` | Joint state, force, tactile feedback, or internal robot sensing. |
-| `world-state` | Object relations, occupancy, localization, scene graphs, affordances, or predicted state. |
-| `reasoning-representation` | Hidden states, attention, chain-of-thought, or cross-modal representations. |
-| `task-planning` | Goals, task decomposition, action order, paths, or recovery strategies. |
-| `action-interface` | Action tokens, action chunks, code, tool calls, APIs, skills, or continuous controls. |
-| `middleware-network` | ROS/ROS2, DDS, drivers, credentials, cloud models, remote APIs, or transport. |
+| `physical-semantic-environment` | Scene text, signs, labels, displays, QR codes, or other correctly perceived semantic content. |
+| **Language** | |
+| `user-instruction` | Authenticated text or speech accepted as the current task or control intent. |
+| `context-memory-retrieval` | Interaction history, persistent memory, ICL examples, RAG documents, or tool results. |
 | `multi-agent-communication` | Robot-to-robot messages, shared memory, claims, or collaborative state. |
+| **Proprioception** | |
+| `proprioception` | Joint state, force, tactile feedback, or internal robot sensing. |
+| **Planning & State** | |
+| `world-state` | Object relations, occupancy, localization, scene graphs, affordances, or predicted state. |
+| `task-planning` | Goals, task decomposition, action order, paths, or recovery strategies. |
+| **Reasoning** | |
+| `reasoning-representation` | Hidden states, attention, chain-of-thought, or cross-modal representations. |
+| **Action & Control** | |
+| `action-interface` | Action tokens, action chunks, code, tool calls, APIs, skills, or continuous controls. |
 | `execution-control` | Trajectories, actuator commands, safety stops, freezing, or resource availability. |
 
 `surface` records only interfaces directly manipulated, shifted, corrupted, or evaluated by the study. It does not encode an inferred internal propagation path. Multiple values are allowed when distinct lifecycle stages use different interfaces. For example, a visually activated backdoor can use both `model-supply-chain` during training and `visual-perception` during inference.
 
-### Mechanism Vocabulary
+### How? — Mechanism Vocabulary
 
-| Family | Example values |
+`mechanism` is grouped by the *nature of the technique* — what kind of corruption, spoofing, manipulation, or failure is involved — which is a deliberately different axis from `surface` (grouped by *where* it occurs in the perceive → reason → act pipeline). A mechanism family does not correspond to one surface family; e.g. `jailbreak` and `sensor-spoofing` can both touch perception-adjacent surfaces while belonging to different mechanism families, because they differ in technique, not location.
+
+| Value | How the failure or attack is produced |
 |---|---|
-| Training and supply chain | `data-poisoning`, `backdoor`, `malicious-adapter`, `checkpoint-compromise`, `reward-manipulation` |
-| Visual and physical input | `digital-perturbation`, `adversarial-patch`, `adversarial-object`, `typographic-injection`, `environment-manipulation` |
-| Language and context | `jailbreak`, `direct-prompt-injection`, `indirect-prompt-injection`, `command-hijacking`, `memory-poisoning`, `retrieval-poisoning` |
-| Sensor and state | `sensor-spoofing`, `state-manipulation`, `feedback-spoofing`, `multimodal-desynchronization` |
-| Reasoning, planning, and action | `representation-hijacking`, `planning-hijacking`, `action-manipulation`, `action-freezing`, `trajectory-manipulation` |
-| System and communication | `middleware-compromise`, `network-attack`, `multi-agent-propagation`, `denial-of-service`, `sensitive-data-exposure`, `memorized-data-retention`, `covert-channel` |
-| Non-adversarial and system failure | `distribution-shift`, `instruction-ambiguity`, `perception-error`, `semantic-misalignment`, `planning-error`, `execution-error`, `constraint-violation`, `uncertainty-miscalibration`, `unsafe-policy-behavior` |
+| **Data & Model Corruption** | |
+| `data-poisoning` | Training data is corrupted to induce a predetermined failure or behavior. |
+| `backdoor` | A trigger condition is implanted to activate attacker-chosen behavior. |
+| `malicious-adapter` | A fine-tuned adapter, LoRA module, or plugin is distributed with hidden harmful behavior. |
+| `checkpoint-compromise` | A pretrained or shared model checkpoint is tampered with before distribution. |
+| `reward-manipulation` | Training signals or reward functions are corrupted to shape unsafe behavior. |
+| `memory-poisoning` | Persistent memory or long-term context store is corrupted with malicious content. |
+| `retrieval-poisoning` | Documents or examples in a retrieval corpus are corrupted to bias retrieved content. |
+| **Perturbation & Spoofing** | |
+| `digital-perturbation` | Imperceptible or constrained noise is added to digital input. |
+| `adversarial-patch` | A crafted visible patch or texture is placed to fool perception. |
+| `adversarial-object` | A physical object is engineered to trigger a targeted failure. |
+| `typographic-injection` | Text rendered in the scene manipulates a vision-language model's output. |
+| `sensor-spoofing` | A physical sensor (e.g. GPS, LiDAR, IMU) is fed falsified signals. |
+| `feedback-spoofing` | Internal or external feedback signals are falsified to mislead the system. |
+| `environment-manipulation` | Physical objects or scene layout are altered to induce a failure. |
+| **Instruction & Semantic Manipulation** | |
+| `jailbreak` | Prompting circumvents safety training to elicit restricted behavior. |
+| `direct-prompt-injection` | A malicious instruction is given directly as user input. |
+| `indirect-prompt-injection` | A malicious instruction is embedded in content the system later processes. |
+| `hazardous-instruction` | A benign-seeming instruction leads to a physically or socially harmful outcome. |
+| `command-hijacking` | An attacker substitutes or overrides a legitimate command or goal. |
+| **Hijacking & Redirection** | |
+| `representation-hijacking` | Internal hidden states or cross-modal representations are directly manipulated. |
+| `planning-hijacking` | The planning or task-decomposition process is redirected toward attacker goals. |
+| `action-manipulation` | Output action tokens or commands are altered before execution. |
+| `action-freezing` | The policy is forced into inaction or stalling. |
+| `trajectory-manipulation` | A generated motion trajectory is redirected from its intended path. |
+| `state-manipulation` | The system's internal belief or state representation is corrupted independent of sensing. |
+| **System & Infrastructure Attack** | |
+| `middleware-compromise` | Middleware, drivers, or transport layers are compromised. |
+| `network-attack` | Network communication is intercepted, altered, or disrupted. |
+| `multi-agent-propagation` | A compromise spreads from one agent to others via shared communication or state. |
+| `denial-of-service` | Availability is degraded or blocked through resource exhaustion or flooding. |
+| `sensitive-data-exposure` | Protected data is unintentionally exposed through a system weakness. |
+| `memorized-data-retention` | Training data is retained and later extractable from the model. |
+| `covert-channel` | Hidden information is exfiltrated or communicated outside authorized channels. |
+| `multimodal-desynchronization` | Modalities fall out of time or semantic alignment, corrupting fused understanding. |
+| **Non-Adversarial Failure** | |
+| `distribution-shift` | Test-time conditions differ from the training distribution without an attacker. |
+| `instruction-ambiguity` | A natural, non-malicious instruction is underspecified or vague. |
+| `perception-error` | Perception misidentifies or mislocalizes without adversarial cause. |
+| `semantic-misalignment` | Language and visual or action grounding diverge without adversarial cause. |
+| `uncertainty-miscalibration` | The system's confidence does not match its actual reliability. |
+| `planning-error` | The planner produces an infeasible, suboptimal, or unsafe plan without an attacker. |
+| `execution-error` | Low-level execution deviates from the intended action without an attacker. |
+| `constraint-violation` | A safety or task constraint is violated without an attacker. |
+| `unsafe-policy-behavior` | The learned policy exhibits unsafe behavior as an emergent property, not a discrete error. |
 
-### Target Vocabulary
+`kind` correlates with mechanism family but is not a strict parent of it: `adversarial` records span all five attack-technique families above (not just one), `non-adversarial`/`system-failure` records concentrate in — but aren't perfectly confined to — Non-Adversarial Failure, and `survey`/`evaluation` records can cover mechanisms from several families at once via `coverage.mechanisms`. Treat `kind` as a separate axis (what *kind* of record this is), not as a level above `mechanism`.
+
+### What Is Affected? — Target Vocabulary
 
 | Value | Target object |
 |---|---|
+| **Perception & Understanding** | |
 | `perception-model` | Visual, audio, or multimodal perception component. |
 | `world-state` | Structured or predicted state used for downstream decisions. |
 | `reasoning-process` | Internal reasoning, attention, or multimodal alignment. |
+| **Planning & Policy** | |
 | `task-planner` | Goal selection, task decomposition, path, or high-level policy intent. |
 | `vla-policy` | End-to-end or partially exposed VLA policy. |
 | `action-generation` | Action token, chunk, trajectory, code, or tool generation. |
+| **Execution & Safety Infrastructure** | |
 | `runtime-monitor` | Guardrail, verifier, detector, or safety judge. |
 | `robot-executor` | Controller, actuator, safety stop, or execution process. |
+| **System & Data** | |
 | `shared-system-state` | Memory, middleware, cloud service, or multi-agent shared state. |
 | `private-data` | Training membership, observations, identity, location, or other sensitive data. |
 
-### Consequence Vocabulary
+### What Follows? — Consequence Vocabulary
+
+`unsafe-success` and `policy-violation` are grouped together, separately from `control-hijacking`: both describe the agent's own behavior violating a safety or ethical norm, regardless of whether an external attacker caused it, while `control-hijacking` specifically means an outside party gained influence. `ethical-societal` risk outcomes concentrate almost entirely in `policy-violation`, not in `control-hijacking`.
 
 | Value | Concrete endpoint |
 |---|---|
+| **Task & Recovery Outcome** | |
 | `task-failure` | The assigned task or route is not completed. |
-| `targeted-action` | The system performs an attacker-selected action or action sequence. |
-| `action-freezing` | The policy stops or produces dangerous inaction. |
-| `unsafe-success` | The task succeeds while violating a safety property. |
+| `recovery-failure` | Detection, mitigation, replanning, or recovery does not restore safe operation. |
+| **Physical Harm** | |
 | `collision` | The robot contacts an obstacle, person, or prohibited object. |
 | `unsafe-motion` | Unsafe force, speed, pose, trajectory, or control behavior occurs. |
 | `physical-damage` | A person, robot, object, or environment is harmed or damaged. |
+| **Control Hijack** | |
+| `targeted-action` | The system performs an attacker-selected action or action sequence. |
+| `action-freezing` | The policy stops or produces dangerous inaction. |
 | `control-hijacking` | An unauthorized source gains influence over robot behavior. |
+| **Safety/Policy Violation** | |
+| `unsafe-success` | The task succeeds while violating a safety property. |
 | `policy-violation` | The agent performs explicitly prohibited or harmful behavior. |
+| **System & Privacy** | |
 | `privacy-leakage` | Sensitive information is inferred, exposed, or transmitted. |
 | `availability-loss` | The system is frozen, stopped, delayed, or denied service. |
-| `recovery-failure` | Detection, mitigation, replanning, or recovery does not restore safe operation. |
 
 The existing `risks` field remains separate. `risks` records empirically evaluated outcome families, while `consequence` records the specific endpoint represented by the threat path.
 

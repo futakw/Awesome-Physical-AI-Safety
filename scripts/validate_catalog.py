@@ -123,12 +123,18 @@ MECHANISMS = {
     "sensitive-data-exposure", "state-manipulation", "trajectory-manipulation", "typographic-injection",
     "uncertainty-miscalibration", "unsafe-policy-behavior",
 }
+# Ordered to match the perceive -> reason -> act grouping in docs/taxonomy.md
+# (training & infrastructure -> perception -> language -> proprioception ->
+# planning & state -> reasoning -> action & control). A set, so this order
+# has no runtime effect; it's kept for readability/consistency with the docs.
 SURFACES = {
-    "model-supply-chain", "user-instruction", "context-memory-retrieval",
-    "physical-semantic-environment", "visual-perception", "audio-perception",
-    "proprioception", "world-state", "reasoning-representation", "task-planning",
-    "action-interface", "middleware-network", "multi-agent-communication",
-    "execution-control",
+    "model-supply-chain", "middleware-network",
+    "visual-perception", "audio-perception", "physical-semantic-environment",
+    "user-instruction", "context-memory-retrieval", "multi-agent-communication",
+    "proprioception",
+    "world-state", "task-planning",
+    "reasoning-representation",
+    "action-interface", "execution-control",
 }
 TARGETS = {
     "perception-model", "world-state", "reasoning-process", "task-planner", "vla-policy",
@@ -238,6 +244,8 @@ def validate_values(errors: list[str], label: str, field: str, value: object, al
 
 
 def validate_extensions(errors: list[str], label: str, paper: dict, taxonomies: dict) -> None:
+    if "defense" in paper and paper["defense"] is None:
+        errors.append(f"{label}: defense must be an object or omitted after audit; null is not publishable")
     defense = paper.get("defense")
     if defense is not None:
         expected = {"position", "mechanism", "protected_surface", "defends_against", "assumptions", "curation_status"}
