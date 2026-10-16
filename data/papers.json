@@ -879,7 +879,7 @@
         "physical-semantic-environment"
       ],
       "target": [
-        "perception-model"
+        "task-planner"
       ],
       "consequence": [
         "task-failure"
@@ -4742,7 +4742,6 @@
         "visual-perception"
       ],
       "target": [
-        "reasoning-process",
         "task-planner"
       ],
       "consequence": [
@@ -6540,8 +6539,7 @@
         "visual-perception"
       ],
       "target": [
-        "perception-model",
-        "reasoning-process"
+        "perception-model"
       ],
       "consequence": [
         "control-hijacking"
@@ -19716,7 +19714,6 @@
         "visual-perception"
       ],
       "target": [
-        "perception-model",
         "task-planner"
       ],
       "consequence": [
@@ -27630,7 +27627,6 @@
         "visual-perception"
       ],
       "target": [
-        "perception-model",
         "task-planner"
       ],
       "consequence": [

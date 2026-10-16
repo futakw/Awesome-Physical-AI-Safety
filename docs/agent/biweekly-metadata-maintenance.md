@@ -20,9 +20,9 @@ Review only records matching at least one condition:
 
 Do not perform broad new-paper searches. Use existing paper IDs and URLs to reach primary sources directly.
 
-### Mechanism Vocabulary Stability
+### Mechanism and Target Vocabulary Stability
 
-Do not run a recurring full-catalog `mechanism` reclassification. Recheck a record's `mechanism` only when: the record is already under review for another reason above and new primary-source evidence changes the picture; an ambiguity is resolved by newly available information; validation reports an invalid or deprecated value; or a formal taxonomy migration has been explicitly approved. When a `mechanism` assignment is corrected, update `threat_model.curation_status` to reflect the evidence actually checked.
+Do not run a recurring full-catalog `mechanism` or `target` reclassification. Recheck a record's `mechanism` or `target` only when: the record is already under review for another reason above and new primary-source evidence changes the picture; an ambiguity is resolved by newly available information; validation reports an invalid or deprecated value; or a formal taxonomy migration has been explicitly approved. When a `mechanism` or `target` assignment is corrected, update `threat_model.curation_status` to reflect the evidence actually checked.
 
 ## 3. Check Updates
 

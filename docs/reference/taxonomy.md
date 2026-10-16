@@ -38,6 +38,18 @@ A paper's `threat_model.kind` is one of three failure sources (plus `survey`/`ev
 
 The `threat_model` field should be a structured object rather than a compact free-text string. Five fields answer five questions about the threat or failure path — **when** it occurs, **where** it enters, **how** it operates, **what** it affects, and **what follows** — plus `kind`, a separate field for what broad category of record this is.
 
+### Role Separation
+
+Each field answers a distinct question and is assigned from distinct evidence; none is inferred from another by a fixed mapping rule:
+
+- **`surface` (where)**: the system boundary or interface through which the threat is introduced, shifted, or observed — the entry point or delivery channel.
+- **`mechanism` (how)**: the attack technique or failure mode the paper studies.
+- **`target` (what is targeted)**: the component, capability, or asset the paper's stated objective, loss function, or evaluation protocol explicitly names — not every component plausibly affected along the way.
+- **`consequence` (what follows)**: the specific endpoint the threat or failure path reaches.
+- **`risks` (what is measured, Section 1)**: the broad empirically evaluated risk domain, independent of `threat_model`.
+
+A perceptual delivery channel (`surface`) does not make perception the `target`; a downstream effect does not make it a second `mechanism` label; a risk domain does not determine which `consequence` occurred. See the per-field assignment rules under each vocabulary below for the concrete do/don't boundaries.
+
 ### Core Fields
 
 | Field | Question | Type | Required for a concrete study | Meaning | Example |
@@ -167,50 +179,59 @@ A handful of labels are defined but may have zero current users — a label stay
 
 `threat_model.curation_status` records how thoroughly the current `mechanism` (and the rest of the structured threat model) assignment was checked against a primary source, using the same scale as the `defense`/`evaluation`/`benchmark` extensions: `paper-verified`, `abstract-verified`, `catalog-derived`, `reference-only`. This distinguishes a record that has not yet been re-checked under the current vocabulary (`catalog-derived`) from one that was reviewed and found to have no evidence-supported technique (`paper-verified` with an empty `mechanism` list) — both are valid states, but they mean different things for future curation.
 
-### What Is Affected? — Target Vocabulary
+### What Is Affected? — Target Vocabulary (objective-oriented)
+
+`target` is the component, capability, or asset **explicitly targeted or evaluated** by the paper's stated attack objective, defense goal, or evaluation design — not every component a causal chain might plausibly pass through, and not a mechanistic claim about internal model behavior.
+
+**Assignment rules:**
+
+1. Identify the paper's explicitly stated attack objective, loss function, or evaluation protocol, and assign `target` from what that objective names — not from `surface` (where the attack is delivered) or `consequence` (what results).
+2. Do not assign `perception-model` merely because an attack is delivered through an image, sound, or other perceptual channel; assign it only when perception/recognition accuracy is itself what the paper attacks or measures.
+3. Do not assign `reasoning-process` or `task-planner` merely because the observed failure happens to look planning- or reasoning-related; assign them when the paper's objective or evaluation protocol explicitly concerns reasoning or planning (e.g. a stated goal of redirecting a task plan, or a success metric over plan/decision correctness).
+4. Multiple targets are allowed only when the paper explicitly attacks, defends, or evaluates more than one component — not as a hedge.
+5. `vla-policy` remains appropriate whenever the overall policy or its task-level behavior is explicitly the subject and no narrower target is established by the paper; do not replace it with a narrower label by inferring internal computation the paper does not state.
 
 | Value | Target object |
 |---|---|
 | **Perception & Understanding** | |
 | `perception-model` | Visual, audio, or multimodal perception component. |
-| `world-state` | Structured or predicted state used for downstream decisions. |
-| `reasoning-process` | Internal reasoning, attention, or multimodal alignment. |
-| **Planning & Policy** | |
+| **Reasoning, Planning & Policy** | |
 | `task-planner` | Goal selection, task decomposition, path, or high-level policy intent. |
-| `vla-policy` | End-to-end or partially exposed VLA policy. |
+| `reasoning-process` | Internal reasoning, attention, or multimodal alignment, when explicitly the stated objective or evaluation target. |
+| `world-state` | Structured or predicted state used for downstream decisions, including world models used for planning. |
+| `vla-policy` | End-to-end or partially exposed VLA policy, used when the overall policy or its task-level behavior is explicitly targeted and no narrower label is established. |
+| **Action & System Operation** | |
 | `action-generation` | Action token, chunk, trajectory, code, or tool generation. |
-| **Execution & Safety Infrastructure** | |
-| `runtime-monitor` | Guardrail, verifier, detector, or safety judge. |
 | `robot-executor` | Controller, actuator, safety stop, or execution process. |
-| **System & Data** | |
+| `runtime-monitor` | Guardrail, verifier, detector, or safety judge. |
 | `shared-system-state` | Memory, middleware, cloud service, or multi-agent shared state. |
+| **Data & Privacy Assets** | |
 | `private-data` | Training membership, observations, identity, location, or other sensitive data. |
 
-### What Follows? — Consequence Vocabulary
+`vla-policy` sits in Reasoning, Planning & Policy rather than a model/data family: across the catalog it is overwhelmingly used for the policy's *behavior* (task success or failure under attack or shift), not for extracting or corrupting it as a stored artifact — that narrower case already has its own labels (`backdoor`, `data-poisoning`, `checkpoint-compromise`, `membership-inference` under `mechanism`). `private-data` is kept as its own single-leaf family rather than folded into another one, the same way `proprioception` stands alone in the Surface vocabulary — it names a distinct concern (data/privacy exposure) that does not fit the perception, reasoning/planning, or action/infrastructure families.
 
-`unsafe-success` and `policy-violation` are grouped together, separately from `control-hijacking`: both describe the agent's own behavior violating a safety or ethical norm, regardless of whether an external attacker caused it, while `control-hijacking` specifically means an outside party gained influence. `ethical-societal` risk outcomes concentrate almost entirely in `policy-violation`, not in `control-hijacking`.
+
+
+### What Follows? — Consequence Vocabulary (flat controlled vocabulary)
+
+`consequence` is a **flat** controlled vocabulary with no family grouping. `risks` (Section 1) already gives the broad risk-domain view — Task & Reliability, Physical Safety, Ethical & Societal, Security & Privacy — so grouping `consequence` into similar families would duplicate that role rather than add information. `consequence` instead records the specific endpoint of the threat or failure path; a single risk domain routinely spans several different, non-interchangeable consequences (e.g. `security-privacy` covers `control-hijacking`, `targeted-action`, and `privacy-leakage` alike, which are different outcomes that `risks` alone cannot distinguish). `unsafe-success` and `policy-violation` both describe the agent's own behavior violating a safety or ethical norm regardless of whether an external attacker caused it, while `control-hijacking` specifically means an outside party gained influence; `ethical-societal` risk outcomes concentrate almost entirely in `policy-violation`, not in `control-hijacking` — exactly the kind of distinction `risks` alone cannot express.
 
 | Value | Concrete endpoint |
 |---|---|
-| **Task & Recovery Outcome** | |
 | `task-failure` | The assigned task or route is not completed. |
 | `recovery-failure` | Detection, mitigation, replanning, or recovery does not restore safe operation. |
-| **Physical Harm** | |
 | `collision` | The robot contacts an obstacle, person, or prohibited object. |
 | `unsafe-motion` | Unsafe force, speed, pose, trajectory, or control behavior occurs. |
 | `physical-damage` | A person, robot, object, or environment is harmed or damaged. |
-| **Control Hijack** | |
 | `targeted-action` | The system performs an attacker-selected action or action sequence. |
 | `action-freezing` | The policy stops or produces dangerous inaction. |
 | `control-hijacking` | An unauthorized source gains influence over robot behavior. |
-| **Safety/Policy Violation** | |
 | `unsafe-success` | The task succeeds while violating a safety property. |
 | `policy-violation` | The agent performs explicitly prohibited or harmful behavior. |
-| **System & Privacy** | |
 | `privacy-leakage` | Sensitive information is inferred, exposed, or transmitted. |
 | `availability-loss` | The system is frozen, stopped, delayed, or denied service. |
 
-The existing `risks` field remains separate. `risks` records empirically evaluated outcome families, while `consequence` records the specific endpoint represented by the threat path.
+The existing `risks` field remains separate and plays a different role: `risks` records the broad, empirically evaluated risk domain (Section 1), while `consequence` records the specific endpoint represented by the threat path. Neither can be reconstructed from the other.
 
 ### Concrete Study Example
 

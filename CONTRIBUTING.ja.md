@@ -36,7 +36,7 @@ python3 scripts/build_explorer.py
 - 公式リポジトリが不明な場合は`code_url`を`null`のままにしてください。
 - GitHub starバッジおよびその他のproject/codeリンクは、`code_url`から論文タイトルの横に自動生成されます。
 - リスクラベルは、論文が対応する実証的な指標を報告している場合にのみ追加してください。動機・考察・脅威の可能性・物理ロボットの使用のみからラベルを推測しないでください。対応するアウトカム指標がないsurvey論文や研究には空の`risks`リストを使用してください。
-- `threat_model`は、[taxonomy（日本語）](docs/reference/taxonomy.ja.md)で定義された統制語彙である`kind`・`lifecycle`・`mechanism`・`surface`・`target`・`consequence`、および割り当て根拠を記録する`curation_status`を用いて構造化してください。`mechanism`はTechnique-oriented（具体的な攻撃手法・失敗モード志向）です。論文のMethod/Experimentsに基づいてのみ付与し、タイトルだけから付与しないでください。具体的な手法が立証できない場合は、根拠のない推測ではなく空リストを使用してください。防御手法については、防御方法そのものではなく緩和対象の脅威を記述してください。
+- `threat_model`は、[taxonomy（日本語）](docs/reference/taxonomy.ja.md)で定義された統制語彙である`kind`・`lifecycle`・`mechanism`・`surface`・`target`・`consequence`、および割り当て根拠を記録する`curation_status`を用いて構造化してください。`mechanism`はTechnique-oriented（具体的な攻撃手法・失敗モード志向）です。論文のMethod/Experimentsに基づいてのみ付与し、タイトルだけから付与しないでください。具体的な手法が立証できない場合は、根拠のない推測ではなく空リストを使用してください。`target`はObjective-oriented（目的志向）です。論文が明示する攻撃・防御・評価の目的から割り当て、`surface`（配送チャネル）や`consequence`（結果）からは割り当てないでください — 例えば視覚的摂動で攻撃が届いたというだけでは、知覚精度そのものが攻撃・測定対象でない限り`perception-model`にはなりません。防御手法については、防御方法そのものではなく緩和対象の脅威を記述してください。
 - レコードが複数の独立した脅威にまたがり、単一の脅威経路を特定できない場合は、`survey`または`evaluation`のcoverageバリアントを使用してください。実験設定や副次的な記述子は`tags`に含めてください。`tags`は構造化メタデータのままであり、独立したテーブル列としてはレンダリングされません。
 - 論文1件につき1つのカタログレコードを追加し、1つの主たるセクションを割り当ててください。生成されたテーマ別テーブルは、同じレコードを追加のビューとして表示することがあります。
 - 主たるセクションに関係なく、すべての論文について副次的な防御貢献を監査してください。実質的な緩和策を提案または実験評価している場合は`defense`を追加し、該当しないことを確認した場合は省略します。考察だけの推奨、future work、surveyによる整理は対象外です。
