@@ -44,7 +44,7 @@ SECTIONS = {
 # subsection is a closed vocabulary scoped per section. Add a new value here
 # (and its translation in scripts/labels_ja.py's SUBSECTIONS_JA) only after
 # checking this list for an existing subsection that already fits — see
-# docs/daily-curation-workflow.md and docs/metadata-schema.md#subsection.
+# docs/agent/daily-curation-workflow.md and docs/metadata-schema.md#subsection.
 SUBSECTIONS = {
     "surveys": {
         "Embodied AI Safety and Security",

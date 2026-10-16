@@ -1,10 +1,12 @@
 # Biweekly Metadata Maintenance
 
+**Audience:** LLM agents and maintainers running periodic catalog maintenance.
+
 This workflow maintains already-cataloged papers. New-paper discovery and addition belong to the daily curation workflow.
 
 ## 1. Read and Inspect
 
-Read `AGENTS.md`, `docs/daily-curation-workflow.md`, `docs/metadata-schema.md`, and `data/papers.json`. Inspect the branch, remote, and working tree. Preserve unrelated changes.
+Read `AGENTS.md`, `docs/agent/daily-curation-workflow.md`, `docs/metadata-schema.md`, and `data/papers.json`. Inspect the branch, remote, and working tree. Preserve unrelated changes.
 
 ## 2. Select Content-Review Targets
 
@@ -62,7 +64,7 @@ Treat retrieval, parsing, identity, title, author, year, and verified submission
 
 ## 5. Validate and Publish Changes
 
-If records changed, follow the complete regeneration, validation, review, remote, visibility, commit, and push gates in `docs/daily-curation-workflow.md`. Verify changed records explicitly before publication.
+If records changed, follow the complete regeneration, validation, review, remote, visibility, commit, and push gates in `docs/agent/daily-curation-workflow.md`. Verify changed records explicitly before publication.
 
 If no metadata changed, do not regenerate derived files or create a commit. Still report the full-verification and defense-sanity results.
 

@@ -4,7 +4,7 @@
 
 Thank you for helping improve Awesome Physical AI Safety.
 
-For recurring literature maintenance, follow the [daily curation workflow](docs/daily-curation-workflow.md).
+For recurring LLM-assisted literature maintenance, follow the [daily curation workflow](docs/agent/daily-curation-workflow.md). The [documentation map](docs/README.md) distinguishes reader documentation, agent runbooks, source templates, and generated Pages output.
 
 ## Add or Update a Paper
 

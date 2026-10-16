@@ -10,6 +10,12 @@ For hoverable paper lists, open the [interactive explorer](index.html#heatmap). 
 
 Bubble area encodes the number of cataloged papers in each area-year cell.
 
+## Submission Growth
+
+![Cumulative papers by first submission date](visualizations/submission-growth.svg)
+
+The line uses verified initial submission dates, such as arXiv v1 dates. Unknown dates are excluded.
+
 ## Threat-Model Cross-Map
 
 ![Threat mechanism and surface heatmap](visualizations/threat-heatmap.svg)
@@ -22,7 +28,17 @@ The heatmap includes concrete threat models and excludes broad survey/evaluation
 
 Rows follow the same top threat-mechanism order as the Threat Cross-Map. Columns are the four evidence-coded `risks` outcomes; a paper contributes only when it reports a corresponding empirical metric.
 
-Defense, benchmark, and evaluation-extension cross-maps are not shown in the public Explorer while their catalog-derived classifications await paper-level verification.
+## Defense Mechanism × Defended Threat
+
+![Defense mechanism and defended threat heatmap](visualizations/defense-heatmap.svg)
+
+This view uses the optional `defense` extension across every primary section. It includes only substantive proposed or experimentally evaluated mitigations.
+
+## Affected Target × Consequence
+
+This interactive-only cross-map connects the affected component to the resulting failure or harm. Open the [Project Page](index.html#target) to inspect and filter its paper table.
+
+Static benchmark and evaluation-extension heatmaps are also generated for metadata review. They are not currently top-level Project Page navigation views.
 
 ## Regeneration
 

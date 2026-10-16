@@ -8,7 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data" / "papers.json"
-TEMPLATE_PATH = ROOT / "docs" / "explorer_template.html"
+TEMPLATE_PATH = ROOT / "templates" / "explorer.html"
 OUTPUT_PATH = ROOT / "docs" / "index.html"
 
 

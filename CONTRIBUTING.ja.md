@@ -4,7 +4,7 @@
 
 Awesome Physical AI Safetyの改善にご協力いただきありがとうございます。
 
-継続的な文献メンテナンスについては、[日次キュレーションワークフロー](docs/daily-curation-workflow.md)（英語）に従ってください。
+LLMを用いた継続的な文献メンテナンスについては、[日次キュレーションワークフロー](docs/agent/daily-curation-workflow.md)（英語）に従ってください。読者向け文書、agent runbook、source template、GitHub Pages生成物の区分は[documentation map](docs/README.md)（英語）を参照してください。
 
 ## 論文の追加・更新
 

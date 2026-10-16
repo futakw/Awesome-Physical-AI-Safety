@@ -1,6 +1,8 @@
 # Daily Curation Workflow
 
-This document is the operational source of truth for recurring literature curation in Awesome Physical AI Safety. Keep automation prompts short: they should provide local execution context and point here rather than duplicate these rules.
+**Audience:** LLM agents and maintainers running the daily curation automation.
+
+This document is the operational source of truth for recurring literature curation in Awesome Physical AI Safety. Keep automation prompts short: they should provide local execution context and point here rather than duplicate these rules. Human-facing scope and contribution explanations remain in `README.md` and `CONTRIBUTING.md`.
 
 ## 1. Read Before Working
 

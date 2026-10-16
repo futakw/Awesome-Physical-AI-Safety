@@ -40,7 +40,7 @@ BG, PANEL, TEXT, MUTED, GRID = "#FFFFFF", "#F7F9FC", "#202938", "#657287", "#DCE
 # it sits in the perceive -> reason -> act pipeline (where) — a deliberately
 # different, orthogonal axis. Both are the actual aggregation unit for the
 # cross-map charts below, not just a sort/divider hint. Mirrors
-# docs/taxonomy.md and docs/explorer_template.html's MECHANISM_GROUPS/SURFACE_GROUPS.
+# docs/taxonomy.md and templates/explorer.html's MECHANISM_GROUPS/SURFACE_GROUPS.
 MECHANISM_GROUPS = [
     {"name": "data-model-corruption", "label": "Data & Model Corruption", "values": ["data-poisoning", "backdoor", "malicious-adapter", "checkpoint-compromise", "reward-manipulation", "memory-poisoning", "retrieval-poisoning"]},
     {"name": "perturbation-spoofing", "label": "Perturbation & Spoofing", "values": ["digital-perturbation", "adversarial-patch", "adversarial-object", "typographic-injection", "sensor-spoofing", "feedback-spoofing", "environment-manipulation"]},
