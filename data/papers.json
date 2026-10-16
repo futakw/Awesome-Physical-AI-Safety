@@ -30,7 +30,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey-2608.16843",
@@ -114,7 +115,8 @@
       ],
       "consequence": [
         "targeted-action"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey-2608.16843"
@@ -162,9 +164,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "constraint-violation"
-      ],
+      "mechanism": [],
       "surface": [
         "task-planning",
         "execution-control"
@@ -175,7 +175,8 @@
       ],
       "consequence": [
         "policy-violation"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey-2608.16843",
@@ -211,9 +212,7 @@
         "task-planning",
         "execution-control"
       ],
-      "defends_against": [
-        "constraint-violation"
-      ],
+      "defends_against": [],
       "assumptions": [
         "runtime-monitor"
       ],
@@ -239,9 +238,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "planning-hijacking"
-      ],
+      "mechanism": [],
       "surface": [
         "task-planning"
       ],
@@ -250,7 +247,8 @@
       ],
       "consequence": [
         "policy-violation"
-      ]
+      ],
+      "curation_status": "paper-verified"
     },
     "tags": [
       "survey-2608.16843",
@@ -279,9 +277,7 @@
       "protected_surface": [
         "task-planning"
       ],
-      "defends_against": [
-        "planning-hijacking"
-      ],
+      "defends_against": [],
       "assumptions": [
         "runtime-monitor"
       ],
@@ -309,9 +305,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "constraint-violation"
-      ],
+      "mechanism": [],
       "surface": [
         "task-planning",
         "execution-control"
@@ -322,7 +316,8 @@
       ],
       "consequence": [
         "policy-violation"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey-2608.16843"
@@ -361,9 +356,7 @@
         "task-planning",
         "execution-control"
       ],
-      "defends_against": [
-        "constraint-violation"
-      ],
+      "defends_against": [],
       "assumptions": [
         "runtime-monitor",
         "safety-constraints"
@@ -392,9 +385,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "constraint-violation"
-      ],
+      "mechanism": [],
       "surface": [
         "task-planning",
         "execution-control"
@@ -405,7 +396,8 @@
       ],
       "consequence": [
         "policy-violation"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey-2608.16843",
@@ -445,9 +437,7 @@
         "task-planning",
         "execution-control"
       ],
-      "defends_against": [
-        "constraint-violation"
-      ],
+      "defends_against": [],
       "assumptions": [
         "runtime-monitor",
         "safety-constraints"
@@ -476,9 +466,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "constraint-violation"
-      ],
+      "mechanism": [],
       "surface": [
         "task-planning",
         "execution-control"
@@ -489,7 +477,8 @@
       ],
       "consequence": [
         "collision"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey-2608.16843",
@@ -530,9 +519,7 @@
         "task-planning",
         "execution-control"
       ],
-      "defends_against": [
-        "constraint-violation"
-      ],
+      "defends_against": [],
       "assumptions": [
         "runtime-monitor",
         "safety-constraints"
@@ -572,7 +559,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey-2608.16843",
@@ -644,7 +632,8 @@
       ],
       "consequence": [
         "targeted-action"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey-2608.16843",
@@ -713,7 +702,8 @@
       ],
       "consequence": [
         "targeted-action"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey-2608.16843",
@@ -759,7 +749,7 @@
         "inference"
       ],
       "mechanism": [
-        "planning-hijacking"
+        "jailbreak"
       ],
       "surface": [
         "task-planning"
@@ -769,7 +759,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "paper-verified"
     },
     "tags": [
       "survey-2608.16843",
@@ -819,7 +810,7 @@
         "inference"
       ],
       "mechanism": [
-        "planning-hijacking"
+        "digital-perturbation"
       ],
       "surface": [
         "user-instruction",
@@ -830,7 +821,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "paper-verified"
     },
     "tags": [
       "survey-2608.16843",
@@ -891,7 +883,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey-2608.16843",
@@ -975,7 +968,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey-2608.16843",
@@ -1061,7 +1055,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey-2608.16843",
@@ -1134,7 +1129,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey-2608.16843",
@@ -1201,7 +1197,8 @@
       ],
       "consequence": [
         "targeted-action"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey-2608.16843",
@@ -1256,9 +1253,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "constraint-violation"
-      ],
+      "mechanism": [],
       "surface": [
         "task-planning",
         "execution-control"
@@ -1269,7 +1264,8 @@
       ],
       "consequence": [
         "policy-violation"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey-2608.16843",
@@ -1304,9 +1300,7 @@
         "task-planning",
         "execution-control"
       ],
-      "defends_against": [
-        "constraint-violation"
-      ],
+      "defends_against": [],
       "assumptions": [
         "runtime-monitor"
       ],
@@ -1334,9 +1328,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "constraint-violation"
-      ],
+      "mechanism": [],
       "surface": [
         "task-planning",
         "execution-control"
@@ -1347,7 +1339,8 @@
       ],
       "consequence": [
         "policy-violation"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey-2608.16843"
@@ -1383,9 +1376,7 @@
         "task-planning",
         "execution-control"
       ],
-      "defends_against": [
-        "constraint-violation"
-      ],
+      "defends_against": [],
       "assumptions": [
         "runtime-monitor"
       ],
@@ -1426,7 +1417,8 @@
       ],
       "consequence": [
         "recovery-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey-2608.16843"
@@ -1512,7 +1504,8 @@
       ],
       "consequence": [
         "recovery-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey-2608.16843",
@@ -1596,7 +1589,8 @@
       ],
       "consequence": [
         "recovery-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey-2608.16843"
@@ -1683,7 +1677,8 @@
       ],
       "consequence": [
         "targeted-action"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey-2608.16843",
@@ -1767,7 +1762,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey-2608.16843",
@@ -1839,7 +1835,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey-2608.16843",
@@ -1919,7 +1916,8 @@
       ],
       "consequence": [
         "policy-violation"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey-2608.16843",
@@ -2006,7 +2004,8 @@
       ],
       "consequence": [
         "recovery-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey-2608.16843",
@@ -2084,7 +2083,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey-2608.16843",
@@ -2164,7 +2164,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey-2608.16843",
@@ -2238,7 +2239,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey-2608.16843",
@@ -2299,7 +2301,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey-2608.16843",
@@ -2372,8 +2375,7 @@
         "inference"
       ],
       "mechanism": [
-        "action-manipulation",
-        "planning-hijacking"
+        "digital-perturbation"
       ],
       "surface": [
         "task-planning",
@@ -2385,7 +2387,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "paper-verified"
     },
     "tags": [
       "black-box",
@@ -2447,7 +2450,8 @@
       "consequence": [
         "task-failure",
         "targeted-action"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "diffusion",
@@ -2502,8 +2506,7 @@
         "inference"
       ],
       "mechanism": [
-        "representation-hijacking",
-        "planning-hijacking"
+        "direct-prompt-injection"
       ],
       "surface": [
         "reasoning-representation",
@@ -2515,7 +2518,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "paper-verified"
     },
     "tags": [
       "chain-of-thought",
@@ -2578,7 +2582,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "adversarial-patch",
@@ -2646,7 +2651,8 @@
       "consequence": [
         "task-failure",
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "world-model",
@@ -2699,8 +2705,7 @@
         "inference"
       ],
       "mechanism": [
-        "adversarial-patch",
-        "representation-hijacking"
+        "adversarial-patch"
       ],
       "surface": [
         "visual-perception",
@@ -2713,7 +2718,8 @@
       "consequence": [
         "task-failure",
         "control-hijacking"
-      ]
+      ],
+      "curation_status": "paper-verified"
     },
     "tags": [
       "adversarial-patch",
@@ -2770,7 +2776,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "physical-attack",
@@ -2839,7 +2846,8 @@
       "consequence": [
         "targeted-action",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "backdoor",
@@ -2894,8 +2902,7 @@
         "inference"
       ],
       "mechanism": [
-        "jailbreak",
-        "planning-hijacking"
+        "jailbreak"
       ],
       "surface": [
         "user-instruction",
@@ -2908,7 +2915,8 @@
       "consequence": [
         "control-hijacking",
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "paper-verified"
     },
     "tags": [
       "jailbreak",
@@ -2976,7 +2984,8 @@
       "consequence": [
         "control-hijacking",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "prompt-injection",
@@ -3028,7 +3037,7 @@
         "inference"
       ],
       "mechanism": [
-        "memorized-data-retention"
+        "membership-inference"
       ],
       "surface": [
         "model-supply-chain"
@@ -3039,7 +3048,8 @@
       ],
       "consequence": [
         "privacy-leakage"
-      ]
+      ],
+      "curation_status": "paper-verified"
     },
     "tags": [
       "membership-inference",
@@ -3094,8 +3104,7 @@
         "inference"
       ],
       "mechanism": [
-        "indirect-prompt-injection",
-        "command-hijacking"
+        "indirect-prompt-injection"
       ],
       "surface": [
         "visual-perception",
@@ -3107,7 +3116,8 @@
       ],
       "consequence": [
         "control-hijacking"
-      ]
+      ],
+      "curation_status": "paper-verified"
     },
     "tags": [
       "prompt-injection",
@@ -3156,8 +3166,7 @@
         "middleware-network"
       ],
       "defends_against": [
-        "indirect-prompt-injection",
-        "command-hijacking"
+        "indirect-prompt-injection"
       ],
       "assumptions": [
         "known-attack"
@@ -3196,7 +3205,8 @@
         "consequences": [
           "privacy-leakage"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey",
@@ -3239,7 +3249,8 @@
           "privacy-leakage",
           "task-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey",
@@ -3282,7 +3293,8 @@
           "task-failure",
           "physical-damage"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey",
@@ -3323,7 +3335,8 @@
           "privacy-leakage",
           "task-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey",
@@ -3374,7 +3387,8 @@
           "world-state"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey",
@@ -3423,7 +3437,8 @@
           "world-state"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey",
@@ -3463,7 +3478,8 @@
           "user-instruction"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "perspective",
@@ -3504,7 +3520,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "representation-shift",
@@ -3565,7 +3582,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "action-neighborhood",
@@ -3620,7 +3638,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "benchmark",
@@ -3698,7 +3717,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "benchmark",
@@ -3784,7 +3804,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "object-geometry",
@@ -3863,7 +3884,8 @@
       "consequence": [
         "task-failure",
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "language-instruction",
@@ -3927,7 +3949,8 @@
       "consequence": [
         "task-failure",
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "open-world",
@@ -3992,7 +4015,8 @@
         "targeted-action",
         "control-hijacking",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "backdoor",
@@ -4057,7 +4081,8 @@
         "targeted-action",
         "control-hijacking",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "backdoor",
@@ -4126,7 +4151,8 @@
         "targeted-action",
         "control-hijacking",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "backdoor",
@@ -4191,7 +4217,8 @@
         "targeted-action",
         "control-hijacking",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "backdoor",
@@ -4251,7 +4278,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "adversarial-patch",
@@ -4317,7 +4345,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "digital-perturbation",
@@ -4380,7 +4409,8 @@
         "action-freezing",
         "availability-loss",
         "control-hijacking"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "action-freezing",
@@ -4445,7 +4475,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "sensor-attack",
@@ -4527,7 +4558,8 @@
         "policy-violation",
         "control-hijacking",
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "jailbreak",
@@ -4582,8 +4614,7 @@
         "inference"
       ],
       "mechanism": [
-        "jailbreak",
-        "command-hijacking"
+        "jailbreak"
       ],
       "surface": [
         "user-instruction"
@@ -4593,7 +4624,8 @@
       ],
       "consequence": [
         "targeted-action"
-      ]
+      ],
+      "curation_status": "paper-verified"
     },
     "tags": [
       "jailbreak",
@@ -4647,8 +4679,7 @@
       ],
       "mechanism": [
         "indirect-prompt-injection",
-        "typographic-injection",
-        "command-hijacking"
+        "typographic-injection"
       ],
       "surface": [
         "physical-semantic-environment"
@@ -4658,7 +4689,8 @@
       ],
       "consequence": [
         "control-hijacking"
-      ]
+      ],
+      "curation_status": "paper-verified"
     },
     "tags": [
       "command-hijacking",
@@ -4715,7 +4747,8 @@
       ],
       "consequence": [
         "targeted-action"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "fine-grained-attack",
@@ -4772,7 +4805,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "adversarial-patch",
@@ -4842,9 +4876,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "constraint-violation"
-      ],
+      "mechanism": [],
       "surface": [
         "user-instruction",
         "action-interface"
@@ -4856,11 +4888,17 @@
       "consequence": [
         "task-failure",
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "safety-alignment",
-      "constrained-learning"
+      "constrained-learning",
+      "corner-entrapment-hazard",
+      "blind-spot-collision-hazard",
+      "fragile-object-damage-hazard",
+      "critical-point-destabilization-hazard",
+      "dangerous-equipment-interaction-hazard"
     ],
     "evaluation": {
       "environments": [
@@ -4893,9 +4931,7 @@
         "user-instruction",
         "action-interface"
       ],
-      "defends_against": [
-        "constraint-violation"
-      ],
+      "defends_against": [],
       "assumptions": [
         "model-access"
       ],
@@ -4924,9 +4960,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "constraint-violation"
-      ],
+      "mechanism": [],
       "surface": [
         "user-instruction",
         "action-interface"
@@ -4938,7 +4972,8 @@
       "consequence": [
         "task-failure",
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "guardrail",
@@ -4973,9 +5008,7 @@
         "user-instruction",
         "action-interface"
       ],
-      "defends_against": [
-        "constraint-violation"
-      ],
+      "defends_against": [],
       "assumptions": [
         "runtime-monitor"
       ],
@@ -5020,7 +5053,8 @@
         "policy-violation",
         "task-failure",
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "guardrail",
@@ -5106,7 +5140,8 @@
       ],
       "consequence": [
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "formal-constraint",
@@ -5184,7 +5219,8 @@
       ],
       "consequence": [
         "recovery-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "failure-detection",
@@ -5255,8 +5291,7 @@
         ],
         "mechanisms": [
           "distribution-shift",
-          "execution-error",
-          "constraint-violation"
+          "execution-error"
         ],
         "surfaces": [
           "visual-perception",
@@ -5269,7 +5304,8 @@
           "task-failure",
           "physical-damage"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "benchmark",
@@ -5344,7 +5380,8 @@
           "task-failure",
           "privacy-leakage"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "benchmark",
@@ -5418,7 +5455,8 @@
       "consequence": [
         "policy-violation",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "hazardous-instruction",
@@ -5478,9 +5516,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "constraint-violation"
-      ],
+      "mechanism": [],
       "surface": [
         "user-instruction",
         "world-state",
@@ -5493,7 +5529,8 @@
       "consequence": [
         "task-failure",
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "interactive-safety",
@@ -5560,9 +5597,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "constraint-violation"
-      ],
+      "mechanism": [],
       "surface": [
         "visual-perception",
         "user-instruction",
@@ -5574,7 +5609,8 @@
       ],
       "consequence": [
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "physical-risk-awareness",
@@ -5624,9 +5660,7 @@
         "user-instruction",
         "world-state"
       ],
-      "defends_against": [
-        "constraint-violation"
-      ],
+      "defends_against": [],
       "assumptions": [
         "safety-constraints"
       ],
@@ -5665,7 +5699,8 @@
       ],
       "consequence": [
         "policy-violation"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "robot-constitution",
@@ -5732,7 +5767,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "simulation",
@@ -5806,7 +5842,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "benchmark",
@@ -5886,7 +5923,8 @@
       "consequence": [
         "policy-violation",
         "control-hijacking"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "cloud-api",
@@ -5948,7 +5986,8 @@
       "consequence": [
         "privacy-leakage",
         "control-hijacking"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "covert-channel",
@@ -6013,7 +6052,8 @@
           "visual-perception"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey",
@@ -6055,7 +6095,8 @@
           "task-planning"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey",
@@ -6087,7 +6128,6 @@
         ],
         "mechanisms": [
           "distribution-shift",
-          "constraint-violation",
           "execution-error"
         ],
         "surfaces": [
@@ -6099,7 +6139,8 @@
           "world-state"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey",
@@ -6141,7 +6182,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "open-world",
@@ -6201,7 +6243,8 @@
       "consequence": [
         "targeted-action",
         "control-hijacking"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "backdoor",
@@ -6287,7 +6330,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "adversarial-patch",
@@ -6350,7 +6394,8 @@
         "policy-violation",
         "control-hijacking",
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "jailbreak",
@@ -6434,7 +6479,8 @@
         "policy-violation",
         "control-hijacking",
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "jailbreak",
@@ -6499,7 +6545,8 @@
       ],
       "consequence": [
         "control-hijacking"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "transfer-attack",
@@ -6559,7 +6606,8 @@
       "consequence": [
         "policy-violation",
         "control-hijacking"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "jailbreak-defense",
@@ -6631,8 +6679,7 @@
         "inference"
       ],
       "mechanism": [
-        "memory-poisoning",
-        "multi-agent-propagation"
+        "memory-poisoning"
       ],
       "surface": [
         "context-memory-retrieval",
@@ -6643,7 +6690,8 @@
       ],
       "consequence": [
         "control-hijacking"
-      ]
+      ],
+      "curation_status": "paper-verified"
     },
     "tags": [
       "multi-agent",
@@ -6685,8 +6733,7 @@
         "multi-agent-communication"
       ],
       "defends_against": [
-        "memory-poisoning",
-        "multi-agent-propagation"
+        "memory-poisoning"
       ],
       "assumptions": [
         "runtime-monitor"
@@ -6727,7 +6774,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "adversarial-patch",
@@ -6810,7 +6858,8 @@
         "targeted-action",
         "control-hijacking",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "backdoor",
@@ -6872,7 +6921,8 @@
       "consequence": [
         "task-failure",
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "thermal-perception",
@@ -6938,9 +6988,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "unsafe-policy-behavior"
-      ],
+      "mechanism": [],
       "surface": [
         "action-interface"
       ],
@@ -6949,7 +6997,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "human-in-the-loop",
@@ -6981,9 +7030,7 @@
       "protected_surface": [
         "action-interface"
       ],
-      "defends_against": [
-        "unsafe-policy-behavior"
-      ],
+      "defends_against": [],
       "assumptions": [
         "model-access"
       ],
@@ -7023,7 +7070,8 @@
       ],
       "consequence": [
         "control-hijacking"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "visual-prompt-injection",
@@ -7089,9 +7137,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "constraint-violation"
-      ],
+      "mechanism": [],
       "surface": [
         "user-instruction",
         "world-state"
@@ -7103,7 +7149,8 @@
       "consequence": [
         "task-failure",
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "language-conditioned",
@@ -7140,9 +7187,7 @@
         "user-instruction",
         "world-state"
       ],
-      "defends_against": [
-        "constraint-violation"
-      ],
+      "defends_against": [],
       "assumptions": [
         "runtime-monitor"
       ],
@@ -7182,7 +7227,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "linguistic-grounding",
@@ -7265,7 +7311,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "visual-distractor",
@@ -7339,7 +7386,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "memory-trap",
@@ -7422,7 +7470,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "failure-recovery",
@@ -7508,7 +7557,8 @@
       ],
       "consequence": [
         "recovery-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "anomaly-detection",
@@ -7590,7 +7640,8 @@
         "policy-violation",
         "task-failure",
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "semantic-safety",
@@ -7662,7 +7713,8 @@
         "consequences": [
           "task-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "testing",
@@ -7722,9 +7774,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "unsafe-policy-behavior"
-      ],
+      "mechanism": [],
       "surface": [
         "action-interface",
         "execution-control"
@@ -7736,7 +7786,8 @@
       "consequence": [
         "task-failure",
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "temporal-verification",
@@ -7771,9 +7822,7 @@
         "action-interface",
         "execution-control"
       ],
-      "defends_against": [
-        "unsafe-policy-behavior"
-      ],
+      "defends_against": [],
       "assumptions": [
         "runtime-monitor",
         "safety-constraints"
@@ -7814,7 +7863,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "confidence-calibration",
@@ -7890,7 +7940,8 @@
       ],
       "consequence": [
         "policy-violation"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "hazardous-instruction",
@@ -7962,7 +8013,8 @@
       ],
       "consequence": [
         "policy-violation"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "safety-benchmark",
@@ -8044,9 +8096,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "unsafe-policy-behavior"
-      ],
+      "mechanism": [],
       "surface": [
         "task-planning",
         "action-interface"
@@ -8056,7 +8106,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "self-evolving-policy",
@@ -8092,9 +8143,7 @@
         "task-planning",
         "action-interface"
       ],
-      "defends_against": [
-        "unsafe-policy-behavior"
-      ],
+      "defends_against": [],
       "assumptions": [
         "model-access"
       ],
@@ -8135,7 +8184,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "autonomous-driving",
@@ -8180,9 +8230,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "constraint-violation"
-      ],
+      "mechanism": [],
       "surface": [
         "world-state",
         "action-interface",
@@ -8194,7 +8242,8 @@
       ],
       "consequence": [
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "safe-reinforcement-learning",
@@ -8235,9 +8284,7 @@
         "action-interface",
         "execution-control"
       ],
-      "defends_against": [
-        "constraint-violation"
-      ],
+      "defends_against": [],
       "assumptions": [
         "model-access"
       ],
@@ -8266,10 +8313,7 @@
         "training",
         "inference"
       ],
-      "mechanism": [
-        "memorized-data-retention",
-        "unsafe-policy-behavior"
-      ],
+      "mechanism": [],
       "surface": [
         "model-supply-chain"
       ],
@@ -8281,7 +8325,8 @@
         "privacy-leakage",
         "policy-violation",
         "task-failure"
-      ]
+      ],
+      "curation_status": "paper-verified"
     },
     "tags": [
       "machine-unlearning",
@@ -8316,10 +8361,7 @@
       "protected_surface": [
         "model-supply-chain"
       ],
-      "defends_against": [
-        "memorized-data-retention",
-        "unsafe-policy-behavior"
-      ],
+      "defends_against": [],
       "assumptions": [
         "model-access"
       ],
@@ -8347,9 +8389,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "unsafe-policy-behavior"
-      ],
+      "mechanism": [],
       "surface": [
         "action-interface"
       ],
@@ -8358,7 +8398,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "human-in-the-loop",
@@ -8391,9 +8432,7 @@
       "protected_surface": [
         "action-interface"
       ],
-      "defends_against": [
-        "unsafe-policy-behavior"
-      ],
+      "defends_against": [],
       "assumptions": [
         "model-access"
       ],
@@ -8422,9 +8461,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "constraint-violation"
-      ],
+      "mechanism": [],
       "surface": [
         "world-state",
         "action-interface",
@@ -8437,7 +8474,8 @@
       "consequence": [
         "collision",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "collision-avoidance",
@@ -8480,9 +8518,7 @@
         "action-interface",
         "execution-control"
       ],
-      "defends_against": [
-        "constraint-violation"
-      ],
+      "defends_against": [],
       "assumptions": [
         "safety-constraints"
       ],
@@ -8524,7 +8560,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "failure-explanation",
@@ -8605,7 +8642,8 @@
       "consequence": [
         "task-failure",
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "autonomous-driving",
@@ -8677,9 +8715,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "constraint-violation"
-      ],
+      "mechanism": [],
       "surface": [
         "action-interface",
         "execution-control"
@@ -8690,7 +8726,8 @@
       ],
       "consequence": [
         "collision"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "safety-layer",
@@ -8734,9 +8771,7 @@
         "action-interface",
         "execution-control"
       ],
-      "defends_against": [
-        "constraint-violation"
-      ],
+      "defends_against": [],
       "assumptions": [
         "safety-constraints"
       ],
@@ -8762,9 +8797,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "constraint-violation"
-      ],
+      "mechanism": [],
       "surface": [
         "visual-perception",
         "world-state",
@@ -8776,7 +8809,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "aerial-manipulation",
@@ -8811,9 +8845,7 @@
         "world-state",
         "execution-control"
       ],
-      "defends_against": [
-        "constraint-violation"
-      ],
+      "defends_against": [],
       "assumptions": [
         "clean-reference"
       ],
@@ -8842,9 +8874,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "constraint-violation"
-      ],
+      "mechanism": [],
       "surface": [
         "proprioception",
         "action-interface"
@@ -8856,7 +8886,8 @@
       "consequence": [
         "task-failure",
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "contact-rich-manipulation",
@@ -8897,9 +8928,7 @@
         "proprioception",
         "action-interface"
       ],
-      "defends_against": [
-        "constraint-violation"
-      ],
+      "defends_against": [],
       "assumptions": [
         "safety-constraints"
       ],
@@ -8933,7 +8962,8 @@
           "visual-perception"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "construction-safety",
@@ -9003,7 +9033,8 @@
       ],
       "consequence": [
         "recovery-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "uncertainty",
@@ -9072,7 +9103,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "sensor-attack",
@@ -9133,7 +9165,8 @@
         "consequences": [
           "task-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "benchmark",
@@ -9196,8 +9229,7 @@
           "inference"
         ],
         "mechanisms": [
-          "execution-error",
-          "constraint-violation"
+          "execution-error"
         ],
         "surfaces": [
           "world-state",
@@ -9208,7 +9240,8 @@
           "task-failure",
           "physical-damage"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "navigation",
@@ -9288,7 +9321,8 @@
       "consequence": [
         "policy-violation",
         "control-hijacking"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "indirect-jailbreak",
@@ -9350,7 +9384,8 @@
           "task-failure",
           "physical-damage"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "benchmark",
@@ -9433,7 +9468,8 @@
           "task-failure",
           "physical-damage"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "benchmark",
@@ -9508,7 +9544,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "benchmark",
@@ -9587,7 +9624,8 @@
           "task-failure",
           "privacy-leakage"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "benchmark",
@@ -9671,7 +9709,8 @@
       "consequence": [
         "control-hijacking",
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "physical-red-teaming",
@@ -9771,7 +9810,6 @@
           "inference"
         ],
         "mechanisms": [
-          "constraint-violation",
           "execution-error"
         ],
         "surfaces": [
@@ -9783,7 +9821,8 @@
           "task-failure",
           "physical-damage"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "benchmark",
@@ -9865,7 +9904,8 @@
         "targeted-action",
         "control-hijacking",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "backdoor-defense",
@@ -9951,7 +9991,8 @@
         "targeted-action",
         "control-hijacking",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "backdoor",
@@ -10015,7 +10056,8 @@
       "consequence": [
         "task-failure",
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "safe-rl",
@@ -10097,7 +10139,8 @@
           "task-failure",
           "physical-damage"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "benchmark",
@@ -10197,7 +10240,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "action-chunking",
@@ -10276,7 +10320,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "visual-representation",
@@ -10356,7 +10401,8 @@
           "task-failure",
           "privacy-leakage"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "benchmark",
@@ -10417,9 +10463,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "sensitive-data-exposure"
-      ],
+      "mechanism": [],
       "surface": [
         "visual-perception"
       ],
@@ -10429,7 +10473,8 @@
       "consequence": [
         "privacy-leakage",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "privacy",
@@ -10462,9 +10507,7 @@
       "protected_surface": [
         "visual-perception"
       ],
-      "defends_against": [
-        "sensitive-data-exposure"
-      ],
+      "defends_against": [],
       "assumptions": [
         "clean-reference"
       ],
@@ -10493,16 +10536,15 @@
         "lifecycles": [
           "inference"
         ],
-        "mechanisms": [
-          "sensitive-data-exposure"
-        ],
+        "mechanisms": [],
         "surfaces": [
           "visual-perception"
         ],
         "consequences": [
           "privacy-leakage"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "privacy",
@@ -10557,9 +10599,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "sensitive-data-exposure"
-      ],
+      "mechanism": [],
       "surface": [
         "visual-perception"
       ],
@@ -10569,7 +10609,8 @@
       "consequence": [
         "privacy-leakage",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "privacy",
@@ -10602,9 +10643,7 @@
       "protected_surface": [
         "visual-perception"
       ],
-      "defends_against": [
-        "sensitive-data-exposure"
-      ],
+      "defends_against": [],
       "assumptions": [
         "clean-reference"
       ],
@@ -10632,16 +10671,15 @@
           "inference",
           "system"
         ],
-        "mechanisms": [
-          "sensitive-data-exposure"
-        ],
+        "mechanisms": [],
         "surfaces": [
           "context-memory-retrieval",
           "multi-agent-communication",
           "visual-perception"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "position-paper",
@@ -10689,7 +10727,8 @@
         "collision",
         "policy-violation",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "semantic-safety",
@@ -10770,7 +10809,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "failure-detection",
@@ -10852,7 +10892,8 @@
         "policy-violation",
         "task-failure",
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "runtime-guardrail",
@@ -10945,7 +10986,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "failure-detection",
@@ -11027,7 +11069,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "uncertainty",
@@ -11108,7 +11151,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "replanning",
@@ -11189,7 +11233,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "instruction-ambiguity",
@@ -11263,7 +11308,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "false-premise",
@@ -11347,7 +11393,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "self-correction",
@@ -11429,7 +11476,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "self-reflection",
@@ -11511,7 +11559,8 @@
           "visual-perception"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey",
@@ -11549,7 +11598,8 @@
           "visual-perception"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey",
@@ -11585,7 +11635,8 @@
           "reasoning-representation"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey",
@@ -11621,7 +11672,8 @@
           "reasoning-representation"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey",
@@ -11659,7 +11711,8 @@
           "visual-perception"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey",
@@ -11697,7 +11750,8 @@
           "visual-perception"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey",
@@ -11736,7 +11790,8 @@
           "reasoning-representation"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey",
@@ -11779,7 +11834,8 @@
           "world-state"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey",
@@ -11825,7 +11881,8 @@
       "consequence": [
         "task-failure",
         "collision"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "vla",
@@ -11916,7 +11973,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "vla",
@@ -12004,7 +12062,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "robot-policy",
@@ -12084,7 +12143,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "benchmark",
@@ -12145,7 +12205,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "embodied-agent",
@@ -12223,7 +12284,8 @@
           "visual-perception"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "survey",
@@ -12265,7 +12327,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "modality-entanglement",
@@ -12336,9 +12399,7 @@
         "inference",
         "system"
       ],
-      "mechanism": [
-        "sensitive-data-exposure"
-      ],
+      "mechanism": [],
       "surface": [
         "world-state",
         "context-memory-retrieval"
@@ -12348,7 +12409,8 @@
       ],
       "consequence": [
         "privacy-leakage"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "privacy",
@@ -12386,9 +12448,7 @@
         "world-state",
         "context-memory-retrieval"
       ],
-      "defends_against": [
-        "sensitive-data-exposure"
-      ],
+      "defends_against": [],
       "assumptions": [
         "none"
       ],
@@ -12428,7 +12488,8 @@
           "task-failure",
           "recovery-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "failure-detection",
@@ -12486,7 +12547,8 @@
       ],
       "consequence": [
         "recovery-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "runtime-monitoring",
@@ -12569,7 +12631,8 @@
       ],
       "consequence": [
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "force-aware-control",
@@ -12648,7 +12711,8 @@
           "unsafe-motion",
           "recovery-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "world-models",
@@ -12701,7 +12765,8 @@
           "task-failure",
           "recovery-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "failure-recovery",
@@ -12761,7 +12826,8 @@
       ],
       "consequence": [
         "recovery-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "failure-detection",
@@ -12840,7 +12906,8 @@
       "consequence": [
         "unsafe-motion",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "tactile",
@@ -12918,7 +12985,8 @@
         "consequences": [
           "recovery-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "reward-model",
@@ -12978,7 +13046,8 @@
       "consequence": [
         "unsafe-success",
         "policy-violation"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "safe-task-planning",
@@ -13064,7 +13133,8 @@
       "consequence": [
         "targeted-action",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "command-preserving-attack",
@@ -13136,7 +13206,8 @@
       "consequence": [
         "collision",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "social-navigation",
@@ -13190,9 +13261,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "constraint-violation"
-      ],
+      "mechanism": [],
       "surface": [
         "action-interface",
         "execution-control"
@@ -13203,7 +13272,8 @@
       ],
       "consequence": [
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "flow-matching",
@@ -13246,9 +13316,7 @@
         "action-interface",
         "execution-control"
       ],
-      "defends_against": [
-        "constraint-violation"
-      ],
+      "defends_against": [],
       "assumptions": [
         "model-access",
         "safety-constraints"
@@ -13277,7 +13345,6 @@
           "inference"
         ],
         "mechanisms": [
-          "unsafe-policy-behavior",
           "distribution-shift"
         ],
         "surfaces": [
@@ -13289,7 +13356,8 @@
           "unsafe-motion",
           "physical-damage"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "reactive-safety",
@@ -13353,7 +13421,8 @@
       "consequence": [
         "collision",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "obstacle-aware",
@@ -13425,7 +13494,6 @@
         "inference"
       ],
       "mechanism": [
-        "constraint-violation",
         "distribution-shift"
       ],
       "surface": [
@@ -13438,7 +13506,8 @@
       "consequence": [
         "collision",
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "Dist-GPRL",
@@ -13483,7 +13552,6 @@
         "execution-control"
       ],
       "defends_against": [
-        "constraint-violation",
         "distribution-shift"
       ],
       "assumptions": [
@@ -13524,7 +13592,8 @@
       ],
       "consequence": [
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "formal-verification",
@@ -13588,7 +13657,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "embodied-runtime",
@@ -13676,7 +13746,8 @@
       "consequence": [
         "task-failure",
         "physical-damage"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "hazardous-exploration",
@@ -13750,8 +13821,7 @@
           "system"
         ],
         "mechanisms": [
-          "execution-error",
-          "constraint-violation"
+          "execution-error"
         ],
         "surfaces": [
           "task-planning",
@@ -13762,7 +13832,8 @@
           "recovery-failure",
           "availability-loss"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "self-improving-agents",
@@ -13808,8 +13879,7 @@
         "middleware-network"
       ],
       "defends_against": [
-        "execution-error",
-        "constraint-violation"
+        "execution-error"
       ],
       "assumptions": [
         "runtime-monitor",
@@ -13851,7 +13921,8 @@
           "task-failure",
           "recovery-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "benchmark-construction",
@@ -13926,7 +13997,8 @@
           "execution-control"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "position-paper",
@@ -13967,7 +14039,8 @@
           "middleware-network"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "governance",
@@ -13998,9 +14071,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "unsafe-policy-behavior"
-      ],
+      "mechanism": [],
       "surface": [
         "action-interface",
         "execution-control"
@@ -14010,7 +14081,8 @@
       ],
       "consequence": [
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "humanoid",
@@ -14051,9 +14123,7 @@
         "action-interface",
         "execution-control"
       ],
-      "defends_against": [
-        "unsafe-policy-behavior"
-      ],
+      "defends_against": [],
       "assumptions": [
         "safety-constraints"
       ],
@@ -14096,7 +14166,8 @@
       "consequence": [
         "unsafe-motion",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "collision-mesh-poisoning",
@@ -14178,7 +14249,8 @@
       ],
       "consequence": [
         "recovery-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "failure-detection",
@@ -14261,7 +14333,8 @@
       "consequence": [
         "collision",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "obstacle-avoidance",
@@ -14335,9 +14408,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "constraint-violation"
-      ],
+      "mechanism": [],
       "surface": [
         "execution-control"
       ],
@@ -14346,7 +14417,8 @@
       ],
       "consequence": [
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "QP-solver",
@@ -14384,9 +14456,7 @@
       "protected_surface": [
         "execution-control"
       ],
-      "defends_against": [
-        "constraint-violation"
-      ],
+      "defends_against": [],
       "assumptions": [
         "safety-constraints"
       ],
@@ -14417,7 +14487,6 @@
           "inference"
         ],
         "mechanisms": [
-          "constraint-violation",
           "execution-error"
         ],
         "surfaces": [
@@ -14430,7 +14499,8 @@
           "collision",
           "recovery-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "benchmark",
@@ -14517,7 +14587,8 @@
       "consequence": [
         "collision",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "coding-agent",
@@ -14591,9 +14662,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "constraint-violation"
-      ],
+      "mechanism": [],
       "surface": [
         "execution-control"
       ],
@@ -14603,7 +14672,8 @@
       "consequence": [
         "collision",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "control-barrier-function",
@@ -14646,9 +14716,7 @@
       "protected_surface": [
         "execution-control"
       ],
-      "defends_against": [
-        "constraint-violation"
-      ],
+      "defends_against": [],
       "assumptions": [
         "model-access",
         "safety-constraints"
@@ -14675,9 +14743,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "constraint-violation"
-      ],
+      "mechanism": [],
       "surface": [
         "execution-control"
       ],
@@ -14687,7 +14753,8 @@
       "consequence": [
         "collision",
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "control-barrier-function",
@@ -14728,9 +14795,7 @@
       "protected_surface": [
         "execution-control"
       ],
-      "defends_against": [
-        "constraint-violation"
-      ],
+      "defends_against": [],
       "assumptions": [
         "safety-constraints"
       ],
@@ -14767,7 +14832,8 @@
       ],
       "consequence": [
         "collision"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "uncertainty-calibration",
@@ -14820,7 +14886,6 @@
           "inference"
         ],
         "mechanisms": [
-          "constraint-violation",
           "execution-error"
         ],
         "surfaces": [
@@ -14833,7 +14898,8 @@
           "collision",
           "unsafe-motion"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "benchmark",
@@ -14922,7 +14988,8 @@
         "collision",
         "physical-damage",
         "recovery-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "risk-prediction",
@@ -15003,9 +15070,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "constraint-violation"
-      ],
+      "mechanism": [],
       "surface": [
         "visual-perception",
         "execution-control"
@@ -15017,7 +15082,8 @@
         "collision",
         "unsafe-motion",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "control-barrier-function",
@@ -15061,9 +15127,7 @@
         "visual-perception",
         "execution-control"
       ],
-      "defends_against": [
-        "constraint-violation"
-      ],
+      "defends_against": [],
       "assumptions": [
         "runtime-monitor",
         "safety-constraints"
@@ -15109,7 +15173,8 @@
       "consequence": [
         "targeted-action",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "physical-backdoor",
@@ -15194,7 +15259,8 @@
       "consequence": [
         "task-failure",
         "recovery-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "failure-diagnosis",
@@ -15281,7 +15347,8 @@
       "consequence": [
         "task-failure",
         "recovery-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "recovery",
@@ -15377,7 +15444,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "benchmark",
@@ -15463,7 +15531,8 @@
       "consequence": [
         "task-failure",
         "recovery-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "deployment-robustness",
@@ -15544,7 +15613,6 @@
         "system"
       ],
       "mechanism": [
-        "command-hijacking",
         "direct-prompt-injection"
       ],
       "surface": [
@@ -15560,7 +15628,8 @@
       "consequence": [
         "control-hijacking",
         "targeted-action"
-      ]
+      ],
+      "curation_status": "paper-verified"
     },
     "tags": [
       "mission-authorization",
@@ -15604,7 +15673,6 @@
         "action-interface"
       ],
       "defends_against": [
-        "command-hijacking",
         "direct-prompt-injection"
       ],
       "assumptions": [
@@ -15635,8 +15703,7 @@
         "inference"
       ],
       "mechanism": [
-        "execution-error",
-        "unsafe-policy-behavior"
+        "execution-error"
       ],
       "surface": [
         "world-state",
@@ -15650,7 +15717,8 @@
       "consequence": [
         "recovery-failure",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "recovery-data",
@@ -15731,7 +15799,8 @@
       ],
       "consequence": [
         "recovery-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "failure-detection",
@@ -15820,7 +15889,8 @@
       "consequence": [
         "action-freezing",
         "recovery-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "formal-methods",
@@ -15894,8 +15964,7 @@
         "inference"
       ],
       "mechanism": [
-        "uncertainty-miscalibration",
-        "unsafe-policy-behavior"
+        "uncertainty-miscalibration"
       ],
       "surface": [
         "reasoning-representation",
@@ -15908,7 +15977,8 @@
       ],
       "consequence": [
         "recovery-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "adaptive-monitoring",
@@ -15949,7 +16019,6 @@
         "action-interface"
       ],
       "defends_against": [
-        "unsafe-policy-behavior",
         "uncertainty-miscalibration"
       ],
       "assumptions": [
@@ -15993,7 +16062,8 @@
       "consequence": [
         "task-failure",
         "recovery-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "failure-aware-learning",
@@ -16082,7 +16152,8 @@
       "consequence": [
         "collision",
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "predictive-safety",
@@ -16171,7 +16242,8 @@
       "consequence": [
         "task-failure",
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "deployment-safety",
@@ -16240,7 +16312,8 @@
       "consequence": [
         "task-failure",
         "recovery-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "pre-failure-replanning",
@@ -16330,7 +16403,8 @@
       "consequence": [
         "task-failure",
         "policy-violation"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "semantic-grounding",
@@ -16403,8 +16477,7 @@
         "inference"
       ],
       "mechanism": [
-        "semantic-misalignment",
-        "constraint-violation"
+        "semantic-misalignment"
       ],
       "surface": [
         "physical-semantic-environment",
@@ -16419,7 +16492,8 @@
       "consequence": [
         "task-failure",
         "recovery-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "signal-temporal-logic",
@@ -16462,7 +16536,6 @@
         "execution-control"
       ],
       "defends_against": [
-        "constraint-violation",
         "semantic-misalignment"
       ],
       "assumptions": [
@@ -16496,8 +16569,7 @@
         ],
         "mechanisms": [
           "environment-manipulation",
-          "distribution-shift",
-          "constraint-violation"
+          "distribution-shift"
         ],
         "surfaces": [
           "physical-semantic-environment",
@@ -16510,7 +16582,8 @@
           "unsafe-motion",
           "task-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "counterfactual-benchmark",
@@ -16593,7 +16666,8 @@
       "consequence": [
         "targeted-action",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "configured-failure",
@@ -16649,9 +16723,7 @@
         "system"
       ],
       "mechanism": [
-        "constraint-violation",
-        "execution-error",
-        "unsafe-policy-behavior"
+        "execution-error"
       ],
       "surface": [
         "task-planning",
@@ -16667,7 +16739,8 @@
         "task-failure",
         "recovery-failure",
         "policy-violation"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "physical-execution-contract",
@@ -16712,9 +16785,7 @@
         "execution-control"
       ],
       "defends_against": [
-        "constraint-violation",
-        "execution-error",
-        "unsafe-policy-behavior"
+        "execution-error"
       ],
       "assumptions": [
         "runtime-monitor",
@@ -16757,7 +16828,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "universal-adversarial-object",
@@ -16816,7 +16888,6 @@
         "inference"
       ],
       "mechanism": [
-        "constraint-violation",
         "execution-error"
       ],
       "surface": [
@@ -16832,7 +16903,8 @@
         "collision",
         "unsafe-motion",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "moving-hazard",
@@ -16879,7 +16951,6 @@
         "execution-control"
       ],
       "defends_against": [
-        "constraint-violation",
         "execution-error"
       ],
       "assumptions": [
@@ -16912,7 +16983,6 @@
         "inference"
       ],
       "mechanism": [
-        "constraint-violation",
         "execution-error"
       ],
       "surface": [
@@ -16927,7 +16997,8 @@
         "collision",
         "unsafe-motion",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "whole-body-safety",
@@ -16971,7 +17042,6 @@
         "execution-control"
       ],
       "defends_against": [
-        "constraint-violation",
         "execution-error"
       ],
       "assumptions": [
@@ -17003,7 +17073,6 @@
         "inference"
       ],
       "mechanism": [
-        "unsafe-policy-behavior",
         "execution-error"
       ],
       "surface": [
@@ -17017,7 +17086,8 @@
       "consequence": [
         "task-failure",
         "recovery-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "feasibility-likelihood-gap",
@@ -17060,7 +17130,6 @@
         "action-interface"
       ],
       "defends_against": [
-        "unsafe-policy-behavior",
         "execution-error"
       ],
       "assumptions": [
@@ -17102,7 +17171,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "SALT",
@@ -17176,7 +17246,6 @@
         "inference"
       ],
       "mechanism": [
-        "unsafe-policy-behavior",
         "perception-error"
       ],
       "surface": [
@@ -17191,7 +17260,8 @@
       "consequence": [
         "task-failure",
         "recovery-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "SOUL",
@@ -17240,7 +17310,6 @@
         "action-interface"
       ],
       "defends_against": [
-        "unsafe-policy-behavior",
         "perception-error"
       ],
       "assumptions": [
@@ -17281,7 +17350,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "instruction-grounding",
@@ -17346,7 +17416,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "mechanistic-defense",
@@ -17421,8 +17492,7 @@
           "inference"
         ],
         "mechanisms": [
-          "jailbreak",
-          "unsafe-policy-behavior"
+          "jailbreak"
         ],
         "surfaces": [
           "user-instruction",
@@ -17434,7 +17504,8 @@
           "unsafe-motion",
           "task-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "jailbreak",
@@ -17501,8 +17572,7 @@
         "execution-control"
       ],
       "defends_against": [
-        "jailbreak",
-        "unsafe-policy-behavior"
+        "jailbreak"
       ],
       "assumptions": [
         "safety-constraints"
@@ -17530,8 +17600,7 @@
         "inference"
       ],
       "mechanism": [
-        "adversarial-patch",
-        "representation-hijacking"
+        "adversarial-patch"
       ],
       "surface": [
         "visual-perception",
@@ -17543,7 +17612,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "paper-verified"
     },
     "tags": [
       "black-box",
@@ -17597,10 +17667,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "constraint-violation",
-        "unsafe-policy-behavior"
-      ],
+      "mechanism": [],
       "surface": [
         "user-instruction",
         "world-state",
@@ -17614,7 +17681,8 @@
         "unsafe-motion",
         "collision",
         "policy-violation"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "contextual-safety-filtering",
@@ -17657,10 +17725,7 @@
         "world-state",
         "execution-control"
       ],
-      "defends_against": [
-        "constraint-violation",
-        "unsafe-policy-behavior"
-      ],
+      "defends_against": [],
       "assumptions": [
         "safety-constraints"
       ],
@@ -17687,8 +17752,7 @@
         "inference"
       ],
       "mechanism": [
-        "uncertainty-miscalibration",
-        "unsafe-policy-behavior"
+        "uncertainty-miscalibration"
       ],
       "surface": [
         "world-state",
@@ -17701,7 +17765,8 @@
       "consequence": [
         "unsafe-motion",
         "recovery-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "SCOPE",
@@ -17773,8 +17838,7 @@
         "system"
       ],
       "mechanism": [
-        "execution-error",
-        "state-manipulation"
+        "execution-error"
       ],
       "surface": [
         "visual-perception",
@@ -17788,7 +17852,8 @@
       "consequence": [
         "unsafe-success",
         "recovery-failure"
-      ]
+      ],
+      "curation_status": "paper-verified"
     },
     "tags": [
       "evidence-gate",
@@ -17837,10 +17902,7 @@
       "lifecycle": [
         "system"
       ],
-      "mechanism": [
-        "state-manipulation",
-        "middleware-compromise"
-      ],
+      "mechanism": [],
       "surface": [
         "world-state",
         "middleware-network"
@@ -17852,7 +17914,8 @@
       "consequence": [
         "control-hijacking",
         "recovery-failure"
-      ]
+      ],
+      "curation_status": "paper-verified"
     },
     "tags": [
       "world-state",
@@ -17906,10 +17969,7 @@
         "training",
         "inference"
       ],
-      "mechanism": [
-        "constraint-violation",
-        "unsafe-policy-behavior"
-      ],
+      "mechanism": [],
       "surface": [
         "action-interface",
         "execution-control"
@@ -17922,7 +17982,8 @@
         "unsafe-motion",
         "physical-damage",
         "recovery-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "feasibility-aware",
@@ -17969,10 +18030,7 @@
         "action-interface",
         "execution-control"
       ],
-      "defends_against": [
-        "constraint-violation",
-        "unsafe-policy-behavior"
-      ],
+      "defends_against": [],
       "assumptions": [
         "safety-constraints",
         "runtime-monitor"
@@ -18017,7 +18075,8 @@
       "consequence": [
         "task-failure",
         "recovery-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "persistent-adversarial-effect",
@@ -18087,7 +18146,8 @@
       "consequence": [
         "task-failure",
         "recovery-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "CARE",
@@ -18161,10 +18221,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "constraint-violation",
-        "unsafe-policy-behavior"
-      ],
+      "mechanism": [],
       "surface": [
         "world-state",
         "action-interface",
@@ -18179,7 +18236,8 @@
         "collision",
         "unsafe-motion",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "predictive-safety-guidance",
@@ -18220,10 +18278,7 @@
         "action-interface",
         "execution-control"
       ],
-      "defends_against": [
-        "constraint-violation",
-        "unsafe-policy-behavior"
-      ],
+      "defends_against": [],
       "assumptions": [
         "safety-constraints"
       ],
@@ -18265,7 +18320,8 @@
           "recovery-failure",
           "task-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "counterfactual-evaluation",
@@ -18352,7 +18408,8 @@
           "recovery-failure",
           "task-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "failure-detection",
@@ -18424,8 +18481,7 @@
         "system"
       ],
       "mechanism": [
-        "execution-error",
-        "constraint-violation"
+        "execution-error"
       ],
       "surface": [
         "task-planning",
@@ -18438,7 +18494,8 @@
       "consequence": [
         "task-failure",
         "recovery-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "behavior-tree",
@@ -18487,8 +18544,7 @@
         "execution-control"
       ],
       "defends_against": [
-        "execution-error",
-        "constraint-violation"
+        "execution-error"
       ],
       "assumptions": [
         "runtime-monitor",
@@ -18517,7 +18573,6 @@
           "system"
         ],
         "mechanisms": [
-          "constraint-violation",
           "planning-error"
         ],
         "surfaces": [
@@ -18529,7 +18584,8 @@
           "policy-violation",
           "unsafe-success"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "trace-refinement",
@@ -18577,7 +18633,6 @@
         "execution-control"
       ],
       "defends_against": [
-        "constraint-violation",
         "planning-error"
       ],
       "assumptions": [
@@ -18617,7 +18672,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "multi-view",
@@ -18699,7 +18755,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "representation-alignment",
@@ -18756,7 +18813,8 @@
           "execution-control"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "command-timing",
@@ -18799,7 +18857,8 @@
       ],
       "consequence": [
         "targeted-action"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -18858,7 +18917,8 @@
       ],
       "consequence": [
         "policy-violation"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -18927,7 +18987,8 @@
       "consequence": [
         "availability-loss",
         "action-freezing"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -18997,7 +19058,8 @@
       ],
       "consequence": [
         "policy-violation"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -19059,7 +19121,7 @@
           "backdoor",
           "data-poisoning",
           "planning-error",
-          "representation-hijacking"
+          "representation-manipulation"
         ],
         "surfaces": [
           "model-supply-chain",
@@ -19067,7 +19129,8 @@
           "task-planning"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -19108,7 +19171,8 @@
       "consequence": [
         "control-hijacking",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -19157,7 +19221,8 @@
           "task-planning"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -19185,9 +19250,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "constraint-violation"
-      ],
+      "mechanism": [],
       "surface": [
         "world-state",
         "action-interface"
@@ -19197,7 +19260,8 @@
       ],
       "consequence": [
         "policy-violation"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -19229,9 +19293,7 @@
         "world-state",
         "action-interface"
       ],
-      "defends_against": [
-        "constraint-violation"
-      ],
+      "defends_against": [],
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
@@ -19269,7 +19331,8 @@
       ],
       "consequence": [
         "policy-violation"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -19339,7 +19402,8 @@
           "task-failure",
           "policy-violation"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -19396,8 +19460,7 @@
         ],
         "mechanisms": [
           "hazardous-instruction",
-          "planning-error",
-          "constraint-violation"
+          "planning-error"
         ],
         "surfaces": [
           "user-instruction",
@@ -19407,7 +19470,8 @@
           "task-failure",
           "policy-violation"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -19463,10 +19527,7 @@
         "lifecycles": [
           "inference"
         ],
-        "mechanisms": [
-          "unsafe-policy-behavior",
-          "constraint-violation"
-        ],
+        "mechanisms": [],
         "surfaces": [
           "visual-perception",
           "action-interface"
@@ -19475,7 +19536,8 @@
           "unsafe-motion",
           "policy-violation"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -19537,7 +19599,8 @@
       ],
       "consequence": [
         "targeted-action"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -19586,7 +19649,8 @@
       ],
       "consequence": [
         "control-hijacking"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -19646,8 +19710,7 @@
         "inference"
       ],
       "mechanism": [
-        "digital-perturbation",
-        "representation-hijacking"
+        "digital-perturbation"
       ],
       "surface": [
         "visual-perception"
@@ -19658,7 +19721,8 @@
       ],
       "consequence": [
         "control-hijacking"
-      ]
+      ],
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -19708,7 +19772,8 @@
         "consequences": [
           "policy-violation"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -19794,7 +19859,8 @@
           "policy-violation",
           "task-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -19880,7 +19946,8 @@
       ],
       "consequence": [
         "control-hijacking"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -19951,7 +20018,8 @@
       ],
       "consequence": [
         "control-hijacking"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -20021,7 +20089,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -20075,7 +20144,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -20147,7 +20217,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -20209,7 +20280,8 @@
       "consequence": [
         "control-hijacking",
         "targeted-action"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -20286,7 +20358,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -20364,7 +20437,8 @@
         "consequences": [
           "task-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -20431,7 +20505,8 @@
       "consequence": [
         "unsafe-motion",
         "collision"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -20475,8 +20550,7 @@
           "inference"
         ],
         "mechanisms": [
-          "instruction-ambiguity",
-          "unsafe-policy-behavior"
+          "instruction-ambiguity"
         ],
         "surfaces": [
           "user-instruction",
@@ -20486,7 +20560,8 @@
           "task-failure",
           "unsafe-motion"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -20548,7 +20623,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -20608,7 +20684,8 @@
         "consequences": [
           "task-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -20662,8 +20739,7 @@
         "inference"
       ],
       "mechanism": [
-        "digital-perturbation",
-        "representation-hijacking"
+        "digital-perturbation"
       ],
       "surface": [
         "visual-perception",
@@ -20674,7 +20750,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -20727,7 +20804,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -20767,8 +20845,7 @@
         "inference"
       ],
       "mechanism": [
-        "direct-prompt-injection",
-        "representation-hijacking"
+        "digital-perturbation"
       ],
       "surface": [
         "user-instruction"
@@ -20779,7 +20856,8 @@
       "consequence": [
         "targeted-action",
         "task-failure"
-      ]
+      ],
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -20832,7 +20910,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -20897,10 +20976,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "constraint-violation",
-        "unsafe-policy-behavior"
-      ],
+      "mechanism": [],
       "surface": [
         "task-planning",
         "execution-control"
@@ -20910,7 +20986,8 @@
       ],
       "consequence": [
         "policy-violation"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -20940,10 +21017,7 @@
         "task-planning",
         "execution-control"
       ],
-      "defends_against": [
-        "constraint-violation",
-        "unsafe-policy-behavior"
-      ],
+      "defends_against": [],
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
@@ -20971,7 +21045,6 @@
           "inference"
         ],
         "mechanisms": [
-          "sensitive-data-exposure",
           "semantic-misalignment"
         ],
         "surfaces": [
@@ -20982,7 +21055,8 @@
           "privacy-leakage",
           "policy-violation"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -21037,9 +21111,7 @@
           "inference"
         ],
         "mechanisms": [
-          "constraint-violation",
-          "execution-error",
-          "multi-agent-propagation"
+          "execution-error"
         ],
         "surfaces": [
           "execution-control",
@@ -21050,7 +21122,8 @@
           "policy-violation",
           "recovery-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -21109,7 +21182,8 @@
         "consequences": [
           "task-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -21197,7 +21271,8 @@
         "consequences": [
           "task-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -21274,17 +21349,15 @@
           "inference",
           "system"
         ],
-        "mechanisms": [
-          "sensitive-data-exposure",
-          "memorized-data-retention"
-        ],
+        "mechanisms": [],
         "surfaces": [
           "visual-perception",
           "context-memory-retrieval",
           "execution-control"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -21322,7 +21395,8 @@
           "model-supply-chain"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -21360,7 +21434,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -21409,7 +21484,8 @@
           "execution-control"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -21447,7 +21523,8 @@
           "execution-control"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -21481,7 +21558,8 @@
           "execution-control"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -21511,10 +21589,7 @@
         "training",
         "inference"
       ],
-      "mechanism": [
-        "unsafe-policy-behavior",
-        "constraint-violation"
-      ],
+      "mechanism": [],
       "surface": [
         "action-interface"
       ],
@@ -21524,7 +21599,8 @@
       "consequence": [
         "unsafe-motion",
         "policy-violation"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -21558,10 +21634,7 @@
       "protected_surface": [
         "action-interface"
       ],
-      "defends_against": [
-        "unsafe-policy-behavior",
-        "constraint-violation"
-      ],
+      "defends_against": [],
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
@@ -21598,7 +21671,8 @@
       ],
       "consequence": [
         "policy-violation"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -21661,7 +21735,8 @@
           "visual-perception"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -21726,7 +21801,8 @@
       ],
       "consequence": [
         "recovery-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -21790,8 +21866,7 @@
           "inference"
         ],
         "mechanisms": [
-          "hazardous-instruction",
-          "constraint-violation"
+          "hazardous-instruction"
         ],
         "surfaces": [
           "user-instruction",
@@ -21801,7 +21876,8 @@
           "policy-violation",
           "unsafe-motion"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -21843,8 +21919,7 @@
         "physical-semantic-environment"
       ],
       "defends_against": [
-        "hazardous-instruction",
-        "constraint-violation"
+        "hazardous-instruction"
       ],
       "assumptions": [
         "model-access",
@@ -21879,7 +21954,8 @@
           "visual-perception"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -21937,7 +22013,8 @@
       ],
       "consequence": [
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -22007,7 +22084,8 @@
         "consequences": [
           "task-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -22097,7 +22175,8 @@
           "task-failure",
           "recovery-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -22148,9 +22227,7 @@
         "training",
         "inference"
       ],
-      "mechanism": [
-        "sensitive-data-exposure"
-      ],
+      "mechanism": [],
       "surface": [
         "model-supply-chain",
         "action-interface"
@@ -22160,7 +22237,8 @@
       ],
       "consequence": [
         "privacy-leakage"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -22187,9 +22265,7 @@
         "model-supply-chain",
         "action-interface"
       ],
-      "defends_against": [
-        "sensitive-data-exposure"
-      ],
+      "defends_against": [],
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
@@ -22225,7 +22301,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -22302,7 +22379,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -22368,7 +22446,8 @@
           "physical-semantic-environment"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -22435,7 +22514,8 @@
       "consequence": [
         "task-failure",
         "collision"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -22501,7 +22581,8 @@
           "visual-perception"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -22568,7 +22649,8 @@
           "task-failure",
           "recovery-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -22635,7 +22717,8 @@
       ],
       "consequence": [
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -22707,7 +22790,8 @@
       ],
       "consequence": [
         "recovery-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -22780,7 +22864,8 @@
         "consequences": [
           "policy-violation"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -22843,7 +22928,8 @@
       ],
       "consequence": [
         "policy-violation"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -22903,7 +22989,6 @@
           "inference"
         ],
         "mechanisms": [
-          "constraint-violation",
           "distribution-shift"
         ],
         "surfaces": [
@@ -22915,7 +23000,8 @@
           "policy-violation",
           "unsafe-motion"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -22981,7 +23067,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -23043,9 +23130,7 @@
       "lifecycle": [
         "training"
       ],
-      "mechanism": [
-        "sensitive-data-exposure"
-      ],
+      "mechanism": [],
       "surface": [
         "model-supply-chain"
       ],
@@ -23054,7 +23139,8 @@
       ],
       "consequence": [
         "privacy-leakage"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -23093,9 +23179,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "sensitive-data-exposure"
-      ],
+      "mechanism": [],
       "surface": [
         "visual-perception"
       ],
@@ -23104,7 +23188,8 @@
       ],
       "consequence": [
         "privacy-leakage"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -23133,9 +23218,7 @@
       "protected_surface": [
         "visual-perception"
       ],
-      "defends_against": [
-        "sensitive-data-exposure"
-      ],
+      "defends_against": [],
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
@@ -23164,8 +23247,7 @@
           "inference"
         ],
         "mechanisms": [
-          "planning-error",
-          "unsafe-policy-behavior"
+          "planning-error"
         ],
         "surfaces": [
           "task-planning",
@@ -23175,7 +23257,8 @@
           "task-failure",
           "policy-violation"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -23233,7 +23316,6 @@
         "inference"
       ],
       "mechanism": [
-        "constraint-violation",
         "execution-error"
       ],
       "surface": [
@@ -23246,7 +23328,8 @@
       "consequence": [
         "policy-violation",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -23280,7 +23363,6 @@
         "execution-control"
       ],
       "defends_against": [
-        "constraint-violation",
         "execution-error"
       ],
       "assumptions": [],
@@ -23319,7 +23401,8 @@
         "consequences": [
           "task-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -23401,7 +23484,8 @@
         "consequences": [
           "task-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -23467,7 +23551,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -23534,9 +23619,7 @@
         "training",
         "inference"
       ],
-      "mechanism": [
-        "constraint-violation"
-      ],
+      "mechanism": [],
       "surface": [
         "task-planning"
       ],
@@ -23545,7 +23628,8 @@
       ],
       "consequence": [
         "policy-violation"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -23576,9 +23660,7 @@
       "protected_surface": [
         "task-planning"
       ],
-      "defends_against": [
-        "constraint-violation"
-      ],
+      "defends_against": [],
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
@@ -23607,7 +23689,6 @@
           "inference"
         ],
         "mechanisms": [
-          "constraint-violation",
           "planning-error"
         ],
         "surfaces": [
@@ -23618,7 +23699,8 @@
           "task-failure",
           "policy-violation"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -23674,8 +23756,7 @@
         "inference"
       ],
       "mechanism": [
-        "planning-error",
-        "constraint-violation"
+        "planning-error"
       ],
       "surface": [
         "task-planning",
@@ -23686,7 +23767,8 @@
       ],
       "consequence": [
         "policy-violation"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -23720,8 +23802,7 @@
         "execution-control"
       ],
       "defends_against": [
-        "planning-error",
-        "constraint-violation"
+        "planning-error"
       ],
       "assumptions": [],
       "curation_status": "abstract-verified"
@@ -23749,8 +23830,7 @@
           "system"
         ],
         "mechanisms": [
-          "planning-error",
-          "unsafe-policy-behavior"
+          "planning-error"
         ],
         "surfaces": [
           "user-instruction",
@@ -23758,7 +23838,8 @@
           "execution-control"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -23786,9 +23867,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "constraint-violation"
-      ],
+      "mechanism": [],
       "surface": [
         "task-planning",
         "execution-control"
@@ -23798,7 +23877,8 @@
       ],
       "consequence": [
         "policy-violation"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -23830,9 +23910,7 @@
         "task-planning",
         "execution-control"
       ],
-      "defends_against": [
-        "constraint-violation"
-      ],
+      "defends_against": [],
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
@@ -23871,7 +23949,8 @@
           "policy-violation",
           "unsafe-motion"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -23936,7 +24015,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -23998,7 +24078,8 @@
           "user-instruction"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -24057,8 +24138,7 @@
         ],
         "mechanisms": [
           "hazardous-instruction",
-          "planning-error",
-          "constraint-violation"
+          "planning-error"
         ],
         "surfaces": [
           "user-instruction",
@@ -24067,7 +24147,8 @@
         "consequences": [
           "policy-violation"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -24125,7 +24206,8 @@
           "execution-control"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -24180,7 +24262,8 @@
           "execution-control"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -24230,7 +24313,6 @@
           "inference"
         ],
         "mechanisms": [
-          "sensitive-data-exposure",
           "semantic-misalignment"
         ],
         "surfaces": [
@@ -24238,7 +24320,8 @@
           "execution-control"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -24297,7 +24380,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -24352,9 +24436,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "unsafe-policy-behavior"
-      ],
+      "mechanism": [],
       "surface": [
         "action-interface",
         "execution-control"
@@ -24364,7 +24446,8 @@
       ],
       "consequence": [
         "collision"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -24395,9 +24478,7 @@
         "action-interface",
         "execution-control"
       ],
-      "defends_against": [
-        "unsafe-policy-behavior"
-      ],
+      "defends_against": [],
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
@@ -24436,7 +24517,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -24507,7 +24589,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -24568,8 +24651,7 @@
           "inference"
         ],
         "mechanisms": [
-          "hazardous-instruction",
-          "constraint-violation"
+          "hazardous-instruction"
         ],
         "surfaces": [
           "user-instruction",
@@ -24578,7 +24660,8 @@
         "consequences": [
           "policy-violation"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -24624,8 +24707,7 @@
         "execution-control"
       ],
       "defends_against": [
-        "hazardous-instruction",
-        "constraint-violation"
+        "hazardous-instruction"
       ],
       "assumptions": [
         "safety-constraints"
@@ -24652,9 +24734,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "unsafe-policy-behavior"
-      ],
+      "mechanism": [],
       "surface": [
         "visual-perception",
         "action-interface"
@@ -24664,7 +24744,8 @@
       ],
       "consequence": [
         "collision"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -24698,9 +24779,7 @@
         "visual-perception",
         "action-interface"
       ],
-      "defends_against": [
-        "unsafe-policy-behavior"
-      ],
+      "defends_against": [],
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
@@ -24735,7 +24814,8 @@
           "reasoning-representation"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -24764,7 +24844,6 @@
           "system"
         ],
         "mechanisms": [
-          "sensitive-data-exposure",
           "semantic-misalignment"
         ],
         "surfaces": [
@@ -24772,7 +24851,8 @@
           "execution-control"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -24806,7 +24886,8 @@
           "execution-control"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -24844,7 +24925,8 @@
           "execution-control"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -24872,15 +24954,14 @@
           "inference",
           "system"
         ],
-        "mechanisms": [
-          "sensitive-data-exposure"
-        ],
+        "mechanisms": [],
         "surfaces": [
           "visual-perception",
           "context-memory-retrieval"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -24911,8 +24992,7 @@
         ],
         "mechanisms": [
           "planning-error",
-          "execution-error",
-          "unsafe-policy-behavior"
+          "execution-error"
         ],
         "surfaces": [
           "task-planning",
@@ -24920,7 +25000,8 @@
           "execution-control"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -24957,7 +25038,8 @@
           "user-instruction"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -24991,7 +25073,8 @@
           "execution-control"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -25029,7 +25112,8 @@
           "execution-control"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -25066,7 +25150,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -25119,7 +25204,8 @@
         "consequences": [
           "policy-violation"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -25189,7 +25275,8 @@
       "consequence": [
         "unsafe-motion",
         "policy-violation"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -25251,9 +25338,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "unsafe-policy-behavior"
-      ],
+      "mechanism": [],
       "surface": [
         "proprioception",
         "execution-control"
@@ -25263,7 +25348,8 @@
       ],
       "consequence": [
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -25291,9 +25377,7 @@
         "proprioception",
         "execution-control"
       ],
-      "defends_against": [
-        "unsafe-policy-behavior"
-      ],
+      "defends_against": [],
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
@@ -25329,7 +25413,8 @@
         "consequences": [
           "task-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -25381,8 +25466,7 @@
           "inference"
         ],
         "mechanisms": [
-          "execution-error",
-          "unsafe-policy-behavior"
+          "execution-error"
         ],
         "surfaces": [
           "execution-control",
@@ -25392,7 +25476,8 @@
           "task-failure",
           "policy-violation"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -25449,8 +25534,7 @@
           "inference"
         ],
         "mechanisms": [
-          "planning-error",
-          "unsafe-policy-behavior"
+          "planning-error"
         ],
         "surfaces": [
           "task-planning",
@@ -25460,7 +25544,8 @@
           "collision",
           "recovery-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -25506,8 +25591,7 @@
         "execution-control"
       ],
       "defends_against": [
-        "planning-error",
-        "unsafe-policy-behavior"
+        "planning-error"
       ],
       "assumptions": [
         "model-access"
@@ -25539,7 +25623,8 @@
           "execution-control"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -25600,7 +25685,8 @@
         "consequences": [
           "collision"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -25669,7 +25755,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -25743,7 +25830,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -25808,9 +25896,7 @@
         "training",
         "inference"
       ],
-      "mechanism": [
-        "unsafe-policy-behavior"
-      ],
+      "mechanism": [],
       "surface": [
         "action-interface",
         "execution-control"
@@ -25820,7 +25906,8 @@
       ],
       "consequence": [
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -25855,9 +25942,7 @@
         "action-interface",
         "execution-control"
       ],
-      "defends_against": [
-        "unsafe-policy-behavior"
-      ],
+      "defends_against": [],
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
@@ -25884,9 +25969,7 @@
         "training",
         "inference"
       ],
-      "mechanism": [
-        "unsafe-policy-behavior"
-      ],
+      "mechanism": [],
       "surface": [
         "action-interface",
         "proprioception"
@@ -25896,7 +25979,8 @@
       ],
       "consequence": [
         "collision"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -25927,9 +26011,7 @@
         "action-interface",
         "proprioception"
       ],
-      "defends_against": [
-        "unsafe-policy-behavior"
-      ],
+      "defends_against": [],
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
@@ -25967,7 +26049,8 @@
         "consequences": [
           "task-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -26034,7 +26117,8 @@
       ],
       "consequence": [
         "policy-violation"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -26099,7 +26183,8 @@
           "world-state"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -26154,7 +26239,6 @@
         "inference"
       ],
       "mechanism": [
-        "unsafe-policy-behavior",
         "uncertainty-miscalibration"
       ],
       "surface": [
@@ -26166,7 +26250,8 @@
       ],
       "consequence": [
         "policy-violation"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -26203,7 +26288,6 @@
         "execution-control"
       ],
       "defends_against": [
-        "unsafe-policy-behavior",
         "uncertainty-miscalibration"
       ],
       "assumptions": [],
@@ -26242,7 +26326,8 @@
           "task-failure",
           "recovery-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -26311,7 +26396,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -26364,9 +26450,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "unsafe-policy-behavior"
-      ],
+      "mechanism": [],
       "surface": [
         "proprioception",
         "execution-control"
@@ -26376,7 +26460,8 @@
       ],
       "consequence": [
         "unsafe-motion"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -26409,9 +26494,7 @@
         "proprioception",
         "execution-control"
       ],
-      "defends_against": [
-        "unsafe-policy-behavior"
-      ],
+      "defends_against": [],
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
@@ -26449,7 +26532,8 @@
         "consequences": [
           "task-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -26504,9 +26588,7 @@
         "training",
         "inference"
       ],
-      "mechanism": [
-        "unsafe-policy-behavior"
-      ],
+      "mechanism": [],
       "surface": [
         "action-interface"
       ],
@@ -26516,7 +26598,8 @@
       "consequence": [
         "policy-violation",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -26550,9 +26633,7 @@
       "protected_surface": [
         "action-interface"
       ],
-      "defends_against": [
-        "unsafe-policy-behavior"
-      ],
+      "defends_against": [],
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
@@ -26588,7 +26669,8 @@
           "execution-control"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -26626,7 +26708,8 @@
           "execution-control"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -26655,9 +26738,7 @@
         "training",
         "inference"
       ],
-      "mechanism": [
-        "unsafe-policy-behavior"
-      ],
+      "mechanism": [],
       "surface": [
         "action-interface"
       ],
@@ -26666,7 +26747,8 @@
       ],
       "consequence": [
         "collision"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -26699,9 +26781,7 @@
       "protected_surface": [
         "action-interface"
       ],
-      "defends_against": [
-        "unsafe-policy-behavior"
-      ],
+      "defends_against": [],
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
@@ -26727,9 +26807,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "unsafe-policy-behavior"
-      ],
+      "mechanism": [],
       "surface": [
         "action-interface"
       ],
@@ -26738,7 +26816,8 @@
       ],
       "consequence": [
         "collision"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -26767,9 +26846,7 @@
       "protected_surface": [
         "action-interface"
       ],
-      "defends_against": [
-        "unsafe-policy-behavior"
-      ],
+      "defends_against": [],
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
@@ -26808,7 +26885,8 @@
         "consequences": [
           "task-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "full-text-reviewed"
@@ -26851,7 +26929,8 @@
       "consequence": [
         "collision",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "full-text-reviewed"
@@ -26914,7 +26993,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "full-text-reviewed"
@@ -26975,7 +27055,8 @@
       ],
       "consequence": [
         "collision"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "full-text-reviewed"
@@ -27025,16 +27106,15 @@
         "lifecycles": [
           "inference"
         ],
-        "mechanisms": [
-          "unsafe-policy-behavior"
-        ],
+        "mechanisms": [],
         "surfaces": [
           "execution-control"
         ],
         "consequences": [
           "collision"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "full-text-reviewed"
@@ -27063,9 +27143,7 @@
         "training",
         "inference"
       ],
-      "mechanism": [
-        "unsafe-policy-behavior"
-      ],
+      "mechanism": [],
       "surface": [
         "action-interface",
         "execution-control"
@@ -27076,7 +27154,8 @@
       "consequence": [
         "collision",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "full-text-reviewed"
@@ -27096,9 +27175,7 @@
         "action-interface",
         "execution-control"
       ],
-      "defends_against": [
-        "unsafe-policy-behavior"
-      ],
+      "defends_against": [],
       "assumptions": [
         "model-access",
         "safety-constraints"
@@ -27136,7 +27213,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "full-text-reviewed"
@@ -27175,7 +27253,8 @@
         "consequences": [
           "task-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "full-text-reviewed"
@@ -27206,7 +27285,8 @@
           "execution-control"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "study-protocol",
@@ -27244,7 +27324,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "full-text-reviewed"
@@ -27301,7 +27382,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "full-text-reviewed"
@@ -27360,7 +27442,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "full-text-reviewed"
@@ -27388,9 +27471,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "unsafe-policy-behavior"
-      ],
+      "mechanism": [],
       "surface": [
         "execution-control"
       ],
@@ -27400,7 +27481,8 @@
       "consequence": [
         "collision",
         "unsafe-success"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "full-text-reviewed"
@@ -27417,9 +27499,7 @@
       "protected_surface": [
         "execution-control"
       ],
-      "defends_against": [
-        "unsafe-policy-behavior"
-      ],
+      "defends_against": [],
       "assumptions": [
         "safety-constraints"
       ],
@@ -27454,7 +27534,8 @@
           "execution-control"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "full-text-reviewed"
@@ -27493,7 +27574,8 @@
         "consequences": [
           "task-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "full-text-reviewed"
@@ -27554,7 +27636,8 @@
       "consequence": [
         "task-failure",
         "collision"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "foundation-model-based",
@@ -27607,9 +27690,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "constraint-violation"
-      ],
+      "mechanism": [],
       "surface": [
         "user-instruction",
         "task-planning"
@@ -27620,7 +27701,8 @@
       "consequence": [
         "policy-violation",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "foundation-model-based",
@@ -27659,9 +27741,7 @@
         "user-instruction",
         "task-planning"
       ],
-      "defends_against": [
-        "constraint-violation"
-      ],
+      "defends_against": [],
       "assumptions": [
         "safety-constraints",
         "model-access"
@@ -27704,7 +27784,8 @@
       ],
       "consequence": [
         "targeted-action"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "foundation-model-based",
@@ -27760,7 +27841,8 @@
           "context-memory-retrieval"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "foundation-model-based",
@@ -27836,7 +27918,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "foundation-model-based",
@@ -27917,7 +28000,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "foundation-model-based",
@@ -27975,7 +28059,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "foundation-model-based",
@@ -28055,7 +28140,8 @@
           "task-failure",
           "collision"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "foundation-model-based",
@@ -28115,7 +28201,8 @@
           "task-planning"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "foundation-model-based",
@@ -28165,7 +28252,8 @@
           "visual-perception"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "foundation-model-based",
@@ -28218,7 +28306,8 @@
           "user-instruction"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "foundation-model-based",
@@ -28296,7 +28385,8 @@
       ],
       "consequence": [
         "policy-violation"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "foundation-model-based",
@@ -28376,7 +28466,8 @@
         "consequences": [
           "task-failure"
         ]
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "foundation-model-based",
@@ -28436,7 +28527,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "foundation-model-based",
@@ -28503,9 +28595,7 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [
-        "unsafe-policy-behavior"
-      ],
+      "mechanism": [],
       "surface": [
         "execution-control"
       ],
@@ -28515,7 +28605,8 @@
       "consequence": [
         "collision",
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "foundation-model-based",
@@ -28556,9 +28647,7 @@
       "protected_surface": [
         "execution-control"
       ],
-      "defends_against": [
-        "unsafe-policy-behavior"
-      ],
+      "defends_against": [],
       "assumptions": [
         "safety-constraints"
       ],
@@ -28595,7 +28684,8 @@
       ],
       "consequence": [
         "task-failure"
-      ]
+      ],
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "foundation-model-based",
@@ -28663,7 +28753,8 @@
           "reasoning-representation"
         ],
         "consequences": []
-      }
+      },
+      "curation_status": "catalog-derived"
     },
     "tags": [
       "foundation-model-based",

@@ -70,6 +70,8 @@ def badge(text: str, color: str) -> str:
 
 
 def primary_label(values: list[str]) -> str:
+    if not values:
+        return "Unestablished"
     label = display_label(values[0])
     return f"{label} +{len(values) - 1}" if len(values) > 1 else label
 
@@ -187,7 +189,7 @@ def render(papers: list[dict]) -> str:
         "  </a>",
         "</p>",
         "",
-        "The five-part threat taxonomy describes studied failure paths; **Evaluated Risk Outcomes** are classified separately using the metrics reported in each paper. See the [taxonomy and labeling criteria](docs/taxonomy.md) for details.",
+        "The five-part threat taxonomy describes studied failure paths; **Evaluated Risk Outcomes** are classified separately using the metrics reported in each paper. See the [taxonomy and labeling criteria](docs/reference/taxonomy.md) for details.",
         "",
         "### Scope",
         "",
@@ -199,7 +201,7 @@ def render(papers: list[dict]) -> str:
         "",
         "Each paper has one catalog record and one primary-contribution section. Cross-cutting tables are generated views of those same records, not separate entries.",
         "",
-        "The optional Defense, Evaluation, and Benchmark metadata extensions are documented in [docs/metadata-schema.md](docs/metadata-schema.md).",
+        "The optional Defense, Evaluation, and Benchmark metadata extensions are documented in [docs/reference/metadata-schema.md](docs/reference/metadata-schema.md).",
         "",
         "## 📚 Citing",
         "",
@@ -261,7 +263,7 @@ def render(papers: list[dict]) -> str:
         "",
         "A `+N` suffix indicates additional values stored in `data/papers.json`.",
         "",
-        "For detailed definitions and classification criteria, see the [full taxonomy](docs/taxonomy.md).",
+        "For detailed definitions and classification criteria, see the [full taxonomy](docs/reference/taxonomy.md).",
         "",
         "## 🧭 Contents",
         "",

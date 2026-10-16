@@ -48,6 +48,7 @@ The `threat_model` field should be a structured object rather than a compact fre
 | `target` | What is affected? | array of strings | Yes | Component, representation, or asset affected or evaluated | `vla-policy` |
 | `consequence` | What follows? | array of strings | Yes | Concrete endpoint of the threat or failure chain | `task-failure` |
 | `kind` | *(record type, not part of the five)* | string | Yes | Broad source of failure or scope of the record | `adversarial` |
+| `curation_status` | *(provenance, not part of the five)* | string | Yes | How thoroughly this assignment was checked against a primary source — see [Mechanism Curation Status](#mechanism-curation-status) | `paper-verified` |
 
 The repository uses descriptive semantic labels. Numbered surface codes defined by an individual paper or survey are not used as canonical metadata.
 
@@ -101,11 +102,20 @@ Values are grouped below by where they sit in the perceive → reason → act pi
 
 `surface` records only interfaces directly manipulated, shifted, corrupted, or evaluated by the study. It does not encode an inferred internal propagation path. Multiple values are allowed when distinct lifecycle stages use different interfaces. For example, a visually activated backdoor can use both `model-supply-chain` during training and `visual-perception` during inference.
 
-### How? — Mechanism Vocabulary
+### How? — Mechanism Vocabulary (technique-oriented)
 
-`mechanism` is grouped by the *nature of the technique* — what kind of corruption, spoofing, manipulation, or failure is involved — which is a deliberately different axis from `surface` (grouped by *where* it occurs in the perceive → reason → act pipeline). A mechanism family does not correspond to one surface family; e.g. `jailbreak` and `sensor-spoofing` can both touch perception-adjacent surfaces while belonging to different mechanism families, because they differ in technique, not location.
+`mechanism` classifies the concrete attack technique or failure mode a paper studies, **not** an inferred causal mechanism. It answers "how is the attack carried out, or what failure mode is investigated?" — not "what is the deepest root cause?" Concrete, recognizable research terminology (`adversarial-patch`, `typographic-injection`, `backdoor`, `membership-inference`, ...) is preserved even when it names a specific attack implementation rather than a fundamental primitive. Families group techniques by *kind of operation*, which is a deliberately different axis from `surface` (grouped by *where* it occurs in the perceive → reason → act pipeline); a family does not correspond to one surface family.
 
-| Value | How the failure or attack is produced |
+**Assignment rules:**
+
+1. Assign a label only when the paper's method or experiments establish it; do not assign from the title alone.
+2. Multiple labels are allowed when each is independently evidenced and conveys distinct information (e.g. an adversarial patch that also carries printed text qualifies for both `adversarial-patch` and `typographic-injection`).
+3. Do not add a second label merely because the first mechanism causes a downstream effect (e.g. a jailbreak that happens to change a robot's plan is `jailbreak` alone, not `jailbreak` plus a planning-specific label; the planning impact belongs in `target`/`consequence`).
+4. Do not infer an attack technique from a defense paper's motivating threat model alone; a defense evaluated only against hand-crafted or unmodeled "unsafe" examples has no demonstrated HOW and should omit the field or use a value the paper itself establishes.
+5. Prefer the most specific supported label; use an empty `mechanism` list when the paper's evidence does not establish a concrete technique or failure mode. This is different from not having reviewed the record yet — see `curation_status` below.
+6. A label naming direct manipulation of internal model state (e.g. `representation-manipulation`) requires the paper's optimized variable or attack target to be the internal representation itself. Using an internal-feature-based loss to optimize an input (a patch, a text prefix, a perturbation) does not qualify — that is still an input-level technique (`adversarial-patch`, `digital-perturbation`, ...), with the internal feature only serving as the loss's target.
+
+| Value | Attack technique or failure mode |
 |---|---|
 | **Data & Model Corruption** | |
 | `data-poisoning` | Training data is corrupted to induce a predetermined failure or behavior. |
@@ -115,48 +125,47 @@ Values are grouped below by where they sit in the perceive → reason → act pi
 | `reward-manipulation` | Training signals or reward functions are corrupted to shape unsafe behavior. |
 | `memory-poisoning` | Persistent memory or long-term context store is corrupted with malicious content. |
 | `retrieval-poisoning` | Documents or examples in a retrieval corpus are corrupted to bias retrieved content. |
+| `membership-inference` | An adversary infers whether specific data was part of training or memory, typically via model-internal features or confidence signals, without assuming prompt-level access alone. |
 | **Perturbation & Spoofing** | |
-| `digital-perturbation` | Imperceptible or constrained noise is added to digital input. |
+| `digital-perturbation` | Imperceptible or constrained noise is added to a digital input (image, text, audio, or another modality). |
 | `adversarial-patch` | A crafted visible patch or texture is placed to fool perception. |
 | `adversarial-object` | A physical object is engineered to trigger a targeted failure. |
-| `typographic-injection` | Text rendered in the scene manipulates a vision-language model's output. |
 | `sensor-spoofing` | A physical sensor (e.g. GPS, LiDAR, IMU) is fed falsified signals. |
 | `feedback-spoofing` | Internal or external feedback signals are falsified to mislead the system. |
 | `environment-manipulation` | Physical objects or scene layout are altered to induce a failure. |
 | **Instruction & Semantic Manipulation** | |
-| `jailbreak` | Prompting circumvents safety training to elicit restricted behavior. |
 | `direct-prompt-injection` | A malicious instruction is given directly as user input. |
 | `indirect-prompt-injection` | A malicious instruction is embedded in content the system later processes. |
-| `hazardous-instruction` | A benign-seeming instruction leads to a physically or socially harmful outcome. |
-| `command-hijacking` | An attacker substitutes or overrides a legitimate command or goal. |
-| **Hijacking & Redirection** | |
-| `representation-hijacking` | Internal hidden states or cross-modal representations are directly manipulated. |
-| `planning-hijacking` | The planning or task-decomposition process is redirected toward attacker goals. |
-| `action-manipulation` | Output action tokens or commands are altered before execution. |
-| `action-freezing` | The policy is forced into inaction or stalling. |
-| `trajectory-manipulation` | A generated motion trajectory is redirected from its intended path. |
-| `state-manipulation` | The system's internal belief or state representation is corrupted independent of sensing. |
-| **System & Infrastructure Attack** | |
+| `jailbreak` | Prompting or an optimized adversarial input circumvents safety training to elicit restricted or unintended behavior. |
+| `typographic-injection` | Text rendered in the scene is read and acted on, either as an instruction or by overriding visual/semantic judgment. |
+| `hazardous-instruction` | A benign-seeming instruction leads to a physically or socially harmful outcome; a recognized, commonly benchmarked class of instruction-following failure. |
+| **Runtime & System Manipulation** | |
 | `middleware-compromise` | Middleware, drivers, or transport layers are compromised. |
 | `network-attack` | Network communication is intercepted, altered, or disrupted. |
-| `multi-agent-propagation` | A compromise spreads from one agent to others via shared communication or state. |
-| `denial-of-service` | Availability is degraded or blocked through resource exhaustion or flooding. |
-| `sensitive-data-exposure` | Protected data is unintentionally exposed through a system weakness. |
-| `memorized-data-retention` | Training data is retained and later extractable from the model. |
+| `denial-of-service` | Availability is degraded or blocked through resource exhaustion, flooding, or exploiting safety mechanisms to halt execution. |
 | `covert-channel` | Hidden information is exfiltrated or communicated outside authorized channels. |
-| `multimodal-desynchronization` | Modalities fall out of time or semantic alignment, corrupting fused understanding. |
-| **Non-Adversarial Failure** | |
+| `state-manipulation` | The system's internal belief or state representation is directly tampered with at runtime, independent of sensing — requires demonstrated direct tampering, not an inferred cause of a downstream fault. |
+| `action-manipulation` | Output action tokens or commands are directly altered before execution. |
+| `trajectory-manipulation` | A generated motion trajectory is itself the object of the demonstrated technique, not merely a downstream effect of an already-assigned perturbation or injection label. |
+| `representation-manipulation` | Internal hidden states or cross-modal representations are the attacker's directly optimized or overwritten target — not an input optimized using an internal-feature loss (see assignment rule 6). |
+| **Distribution Shift & Uncertainty** | |
 | `distribution-shift` | Test-time conditions differ from the training distribution without an attacker. |
 | `instruction-ambiguity` | A natural, non-malicious instruction is underspecified or vague. |
+| `uncertainty-miscalibration` | The system's confidence does not match its actual reliability. |
+| **Reasoning, Planning & Execution Failure** | |
 | `perception-error` | Perception misidentifies or mislocalizes without adversarial cause. |
 | `semantic-misalignment` | Language and visual or action grounding diverge without adversarial cause. |
-| `uncertainty-miscalibration` | The system's confidence does not match its actual reliability. |
 | `planning-error` | The planner produces an infeasible, suboptimal, or unsafe plan without an attacker. |
 | `execution-error` | Low-level execution deviates from the intended action without an attacker. |
-| `constraint-violation` | A safety or task constraint is violated without an attacker. |
-| `unsafe-policy-behavior` | The learned policy exhibits unsafe behavior as an emergent property, not a discrete error. |
+| `multimodal-desynchronization` | Modalities fall out of time or semantic alignment, corrupting fused understanding. |
 
-`kind` correlates with mechanism family but is not a strict parent of it: `adversarial` records span all five attack-technique families above (not just one), `non-adversarial`/`system-failure` records concentrate in — but aren't perfectly confined to — Non-Adversarial Failure, and `survey`/`evaluation` records can cover mechanisms from several families at once via `coverage.mechanisms`. Treat `kind` as a separate axis (what *kind* of record this is), not as a level above `mechanism`.
+A handful of labels are defined but may have zero current users — a label stays in the controlled vocabulary when it names a clear, reusable technique even before a catalog paper demonstrates it (`representation-manipulation` is the current example), rather than being removed and re-added each time evidence appears.
+
+`kind` correlates loosely with mechanism family but is not a strict parent of it: `adversarial` records span most attack-technique families above (not just one), `non-adversarial`/`system-failure` records concentrate in — but aren't perfectly confined to — Distribution Shift & Uncertainty and Reasoning/Planning/Execution Failure, and `survey`/`evaluation` records can cover mechanisms from several families at once via `coverage.mechanisms`. Treat `kind` as a separate axis (what *kind* of record this is), not as a level above `mechanism`.
+
+### Mechanism Curation Status
+
+`threat_model.curation_status` records how thoroughly the current `mechanism` (and the rest of the structured threat model) assignment was checked against a primary source, using the same scale as the `defense`/`evaluation`/`benchmark` extensions: `paper-verified`, `abstract-verified`, `catalog-derived`, `reference-only`. This distinguishes a record that has not yet been re-checked under the current vocabulary (`catalog-derived`) from one that was reviewed and found to have no evidence-supported technique (`paper-verified` with an empty `mechanism` list) — both are valid states, but they mean different things for future curation.
 
 ### What Is Affected? — Target Vocabulary
 
@@ -212,7 +221,8 @@ The existing `risks` field remains separate. `risks` records empirically evaluat
   "mechanism": ["adversarial-patch"],
   "surface": ["visual-perception"],
   "target": ["vla-policy"],
-  "consequence": ["task-failure"]
+  "consequence": ["task-failure"],
+  "curation_status": "paper-verified"
 }
 ```
 
@@ -225,7 +235,8 @@ The existing `risks` field remains separate. `risks` records empirically evaluat
   "mechanism": ["backdoor"],
   "surface": ["model-supply-chain", "visual-perception"],
   "target": ["action-generation"],
-  "consequence": ["targeted-action", "task-failure"]
+  "consequence": ["targeted-action", "task-failure"],
+  "curation_status": "paper-verified"
 }
 ```
 
@@ -239,6 +250,7 @@ Surveys and broad benchmarks should not be assigned an invented single target or
   "coverage": {
     "lifecycles": ["training", "inference", "system"],
     "mechanisms": ["multiple"],
+    "curation_status": "abstract-verified",
     "surfaces": [
       "model-supply-chain",
       "user-instruction",

@@ -98,7 +98,7 @@ def threat_model_cell_ja(threat_model: dict) -> str:
     lifecycle = " → ".join(LIFECYCLE_JA.get(v, v) for v in threat_model["lifecycle"])
     surface = primary_label_ja(threat_model["surface"])
     mechanism_values = threat_model["mechanism"]
-    mechanism_label = MECHANISM_JA.get(mechanism_values[0], mechanism_values[0])
+    mechanism_label = MECHANISM_JA.get(mechanism_values[0], mechanism_values[0]) if mechanism_values else "未確立"
     mechanism = (
         f"{mechanism_label} +{len(mechanism_values) - 1}"
         if len(mechanism_values) > 1
@@ -173,7 +173,7 @@ def render_overview(paper_count: int) -> list[str]:
         "  </a>",
         "</p>",
         "",
-        "5軸の脅威・失敗taxonomyで研究が扱う失敗経路を記述し、**Evaluated Risk Outcomes** は論文が報告した評価指標に基づいて別途分類します。定義と付与基準は[Taxonomyの詳細](docs/taxonomy.ja.md)をご覧ください。",
+        "5軸の脅威・失敗taxonomyで研究が扱う失敗経路を記述し、**Evaluated Risk Outcomes** は論文が報告した評価指標に基づいて別途分類します。定義と付与基準は[Taxonomyの詳細](docs/reference/taxonomy.ja.md)をご覧ください。",
         "",
         "### スコープ",
         "",
@@ -185,7 +185,7 @@ def render_overview(paper_count: int) -> list[str]:
         "",
         "各論文は1つのカタログレコードと1つの主たる貢献セクションを持ちます。横断的なテーブルは同じレコードを別の切り口で表示した生成ビューであり、別エントリではありません。",
         "",
-        "Defense・Evaluation・Benchmarkの拡張メタデータについては[docs/metadata-schema.md](docs/metadata-schema.md)（英語）を参照してください。",
+        "Defense・Evaluation・Benchmarkの拡張メタデータについては[docs/reference/metadata-schema.md](docs/reference/metadata-schema.md)（英語）を参照してください。",
         "",
         "## 📚 引用",
         "",
@@ -245,7 +245,7 @@ def render_overview(paper_count: int) -> list[str]:
         "",
         "`+N` は、`data/papers.json` に保存された追加の値の数を示します。",
         "",
-        "詳細な定義と分類基準は、[taxonomyの詳細](docs/taxonomy.ja.md)を参照してください。",
+        "詳細な定義と分類基準は、[taxonomyの詳細](docs/reference/taxonomy.ja.md)を参照してください。",
         "",
         "## 🧭 目次",
         "",

@@ -43,8 +43,8 @@ JA_KEYWORDS = [
 PAGE_DEFS = [
     (ROOT / 'README.md', ROOT / 'docs' / 'readme.html', 'Awesome Physical AI Safety', EN_DESCRIPTION, f'{PAGES_URL}/readme.html', 'en', 'en_US', EN_KEYWORDS),
     (ROOT / 'README.ja.md', ROOT / 'docs' / 'readme.ja.html', 'Awesome Physical AI Safety (日本語)', JA_DESCRIPTION, f'{PAGES_URL}/readme.ja.html', 'ja', 'ja_JP', JA_KEYWORDS),
-    (ROOT / 'docs' / 'taxonomy.md', ROOT / 'docs' / 'taxonomy.html', 'Taxonomy — Awesome Physical AI Safety', 'The failure-source, threat-model, and evaluated-risk taxonomy used to classify every paper in the Awesome Physical AI Safety catalog.', f'{PAGES_URL}/taxonomy.html', 'en', 'en_US', EN_KEYWORDS),
-    (ROOT / 'docs' / 'taxonomy.ja.md', ROOT / 'docs' / 'taxonomy.ja.html', 'Taxonomy — Awesome Physical AI Safety (日本語)', 'Awesome Physical AI Safetyカタログで各論文を分類するための、失敗要因・脅威モデル・評価リスクの分類体系です。', f'{PAGES_URL}/taxonomy.ja.html', 'ja', 'ja_JP', JA_KEYWORDS),
+    (ROOT / 'docs' / 'reference' / 'taxonomy.md', ROOT / 'docs' / 'taxonomy.html', 'Taxonomy — Awesome Physical AI Safety', 'The failure-source, threat-model, and evaluated-risk taxonomy used to classify every paper in the Awesome Physical AI Safety catalog.', f'{PAGES_URL}/taxonomy.html', 'en', 'en_US', EN_KEYWORDS),
+    (ROOT / 'docs' / 'reference' / 'taxonomy.ja.md', ROOT / 'docs' / 'taxonomy.ja.html', 'Taxonomy — Awesome Physical AI Safety (日本語)', 'Awesome Physical AI Safetyカタログで各論文を分類するための、失敗要因・脅威モデル・評価リスクの分類体系です。', f'{PAGES_URL}/taxonomy.ja.html', 'ja', 'ja_JP', JA_KEYWORDS),
 ]
 
 PAGES_BY_SOURCE_NAME = {p[0].name: p for p in PAGE_DEFS}
@@ -74,6 +74,8 @@ def main() -> int:
             text = text.replace('="assets/visualizations/', '="visualizations/')
             for filename in ('LICENSE', 'LICENSES.md', 'CONTRIBUTING.md', 'CONTRIBUTING.ja.md', 'CITATION.cff'):
                 text = text.replace(f']({filename})', f'](../{filename})')
+        if source.parent == ROOT / 'docs' / 'reference':
+            text = text.replace('](metadata-schema.md', '](reference/metadata-schema.md')
         md_target, html_target = SWITCHER_TARGETS[source.name]
         text = text.replace(f']({md_target})', f']({html_target})')
         alt_source_name, _ = SWITCHER_TARGETS[source.name]

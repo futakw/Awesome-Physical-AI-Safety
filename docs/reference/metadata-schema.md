@@ -10,13 +10,15 @@ An absent extension means the extension was audited and does not apply to that p
 
 `defense` is independent of the primary section. Add it whenever a paper proposes or experimentally evaluates a substantive mitigation, including attack, benchmark, OOD, and system-security papers. Do not add it for discussion-only recommendations, future-work suggestions, or survey coverage. `threat_model` continues to describe the threat or failure being mitigated; `defense` describes the mitigation.
 
-Controlled values are maintained under [`data/taxonomy`](../data/taxonomy/). Type-specific extensions now cover every applicable catalog record, with provenance status retained for later paper-level verification.
+Controlled values are maintained under [`data/taxonomy`](../../data/taxonomy/). Type-specific extensions now cover every applicable catalog record, with provenance status retained for later paper-level verification.
 
 Within `evaluation`, `models` stores explicitly named evaluated target models or policies. `platforms` stores explicitly named benchmarks, simulators, datasets, or physical robot platforms used for evaluation. Generic descriptions such as “a robotic arm” are not treated as platform names. Names obtained from an abstract are marked `abstract-verified`; unmentioned models or platforms are not inferred.
 
 For `survey` and `evaluation` threat models, `coverage` contains `lifecycles`, `mechanisms`, `surfaces`, and `consequences`. This keeps benchmark threat/consequence aggregation aligned with concrete threat-model records.
 
-The optional extension contract is documented in [`paper-extensions.schema.json`](../data/schema/paper-extensions.schema.json), while `scripts/validate_catalog.py` enforces the controlled vocabularies.
+`threat_model` itself (not only the optional extensions above) carries `curation_status`, on the same `paper-verified`/`abstract-verified`/`catalog-derived`/`reference-only` scale, so a record not yet re-checked under the current `mechanism` vocabulary can be told apart from one reviewed and found to support no concrete technique (an empty `mechanism` list). See [Mechanism Curation Status](taxonomy.md#mechanism-curation-status).
+
+The optional extension contract is documented in [`paper-extensions.schema.json`](../../data/schema/paper-extensions.schema.json), while `scripts/validate_catalog.py` enforces the controlled vocabularies.
 
 `abstract-verified` is also supported for defense and benchmark extensions when the primary abstract establishes the method or evaluation scope but the full paper has not been audited. Unmentioned metrics, platforms, models, and artifact availability are left empty or null rather than inferred.
 

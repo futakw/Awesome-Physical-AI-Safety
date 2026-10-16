@@ -4,13 +4,13 @@
 
 Awesome Physical AI Safetyの改善にご協力いただきありがとうございます。
 
-LLMを用いた継続的な文献メンテナンスについては、[日次キュレーションワークフロー](docs/agent/daily-curation-workflow.md)（英語）に従ってください。読者向け文書、agent runbook、source template、GitHub Pages生成物の区分は[documentation map](docs/README.md)（英語）を参照してください。
+LLMを用いた継続的な文献メンテナンスについては、[日次キュレーションワークフロー](docs/agent/daily-curation-workflow.md)（英語）に従ってください。読者向け文書、agent runbook、source template、GitHub Pages生成物の区分は[documentation map](docs/reference/README.md)（英語）を参照してください。
 
 ## 論文の追加・更新
 
 1. `data/papers.json`を編集する。
 2. 安定した`id`、公式タイトル、第一著者の姓、venue、年、論文URL、（可能であれば）公式のプロジェクトまたはGitHub URLを持つ1件のレコードを追加する。
-3. 1つの主たる`section`を割り当て、そのsectionのクローズド語彙（`scripts/validate_catalog.py`の`SUBSECTIONS[section]`）から`subsection`を選ぶ。論文が既存の値に妥当に当てはまる場合はそれを再利用し、本当にどれにも当てはまらない場合のみ新しい値を追加する。追加する際は、同じコミットで`validate_catalog.py`と`scripts/labels_ja.py`の両方を更新すること（詳細は[メタデータスキーマ](docs/metadata-schema.md#subsection)を参照）。
+3. 1つの主たる`section`を割り当て、そのsectionのクローズド語彙（`scripts/validate_catalog.py`の`SUBSECTIONS[section]`）から`subsection`を選ぶ。論文が既存の値に妥当に当てはまる場合はそれを再利用し、本当にどれにも当てはまらない場合のみ新しい値を追加する。追加する際は、同じコミットで`validate_catalog.py`と`scripts/labels_ja.py`の両方を更新すること（詳細は[メタデータスキーマ](docs/reference/metadata-schema.md#subsection)を参照）。
 4. 実証的に評価されたリスクアウトカム（または空の`risks`リスト）、構造化された`threat_model`、焦点を絞ったmechanism・OODタグを追加する。
 5. 以下を実行する:
 
@@ -31,12 +31,12 @@ python3 scripts/build_explorer.py
 
 - 著者は`FirstAuthor et al.`の形式で表示されます。`first_author`には第一著者の姓を格納してください。
 - 公式の論文タイトルと確認済みのvenueを使用してください。生成されたテーブルはタイトルを`paper_url`に直接リンクします。採録venueが未確認の場合は`arXiv`を使用してください。
-- `year`には確認済みvenue自体の年（公式proceedings、DBLP、またはvenueのacceptanceページに基づくproceedings/program年）を設定してください。arXiv投稿年ではありません。同じ論文でもarXivプレプリントと実際の採録venueでは年が異なることがよくあります。レコードの`venue`を`arXiv`/`OpenReview`から正式なvenueに変更する際は、同時に`year`もそのvenueの年に更新してください。詳細は[メタデータスキーマ](docs/metadata-schema.md#venue-and-year)を参照してください。
+- `year`には確認済みvenue自体の年（公式proceedings、DBLP、またはvenueのacceptanceページに基づくproceedings/program年）を設定してください。arXiv投稿年ではありません。同じ論文でもarXivプレプリントと実際の採録venueでは年が異なることがよくあります。レコードの`venue`を`arXiv`/`OpenReview`から正式なvenueに変更する際は、同時に`year`もそのvenueの年に更新してください。詳細は[メタデータスキーマ](docs/reference/metadata-schema.md#venue-and-year)を参照してください。
 - `code_url`には公式または著者自身がメンテナンスする実装のみをリンクしてください。
 - 公式リポジトリが不明な場合は`code_url`を`null`のままにしてください。
 - GitHub starバッジおよびその他のproject/codeリンクは、`code_url`から論文タイトルの横に自動生成されます。
 - リスクラベルは、論文が対応する実証的な指標を報告している場合にのみ追加してください。動機・考察・脅威の可能性・物理ロボットの使用のみからラベルを推測しないでください。対応するアウトカム指標がないsurvey論文や研究には空の`risks`リストを使用してください。
-- `threat_model`は、[taxonomy（日本語）](docs/taxonomy.ja.md)で定義された統制語彙である`kind`・`lifecycle`・`mechanism`・`surface`・`target`・`consequence`を用いて構造化してください。防御手法については、防御方法そのものではなく緩和対象の脅威を記述してください。
+- `threat_model`は、[taxonomy（日本語）](docs/reference/taxonomy.ja.md)で定義された統制語彙である`kind`・`lifecycle`・`mechanism`・`surface`・`target`・`consequence`、および割り当て根拠を記録する`curation_status`を用いて構造化してください。`mechanism`はTechnique-oriented（具体的な攻撃手法・失敗モード志向）です。論文のMethod/Experimentsに基づいてのみ付与し、タイトルだけから付与しないでください。具体的な手法が立証できない場合は、根拠のない推測ではなく空リストを使用してください。防御手法については、防御方法そのものではなく緩和対象の脅威を記述してください。
 - レコードが複数の独立した脅威にまたがり、単一の脅威経路を特定できない場合は、`survey`または`evaluation`のcoverageバリアントを使用してください。実験設定や副次的な記述子は`tags`に含めてください。`tags`は構造化メタデータのままであり、独立したテーブル列としてはレンダリングされません。
 - 論文1件につき1つのカタログレコードを追加し、1つの主たるセクションを割り当ててください。生成されたテーマ別テーブルは、同じレコードを追加のビューとして表示することがあります。
 - 主たるセクションに関係なく、すべての論文について副次的な防御貢献を監査してください。実質的な緩和策を提案または実験評価している場合は`defense`を追加し、該当しないことを確認した場合は省略します。考察だけの推奨、future work、surveyによる整理は対象外です。

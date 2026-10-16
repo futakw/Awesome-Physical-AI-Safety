@@ -34,20 +34,20 @@ SECTION_COLORS = {
 
 BG, PANEL, TEXT, MUTED, GRID = "#FFFFFF", "#F7F9FC", "#202938", "#657287", "#DCE3EC"
 
-# Canonical family groupings from docs/taxonomy.md — chart axes are ordered
+# Canonical family groupings from docs/reference/taxonomy.md — chart axes are ordered
 # and grouped by these, not by raw frequency, so related values sit together.
-# mechanism is grouped by the nature of the technique (how), surface by where
-# it sits in the perceive -> reason -> act pipeline (where) — a deliberately
-# different, orthogonal axis. Both are the actual aggregation unit for the
-# cross-map charts below, not just a sort/divider hint. Mirrors
-# docs/taxonomy.md and templates/explorer.html's MECHANISM_GROUPS/SURFACE_GROUPS.
+# mechanism (HOW) is technique-oriented: it classifies the concrete attack
+# technique or failure mode a paper studies, grouped by kind of operation, not
+# by where it occurs (surface, a deliberately different axis) or an inferred
+# root cause. Mirrors docs/reference/taxonomy.md and templates/explorer.html's
+# MECHANISM_GROUPS/SURFACE_GROUPS.
 MECHANISM_GROUPS = [
-    {"name": "data-model-corruption", "label": "Data & Model Corruption", "values": ["data-poisoning", "backdoor", "malicious-adapter", "checkpoint-compromise", "reward-manipulation", "memory-poisoning", "retrieval-poisoning"]},
-    {"name": "perturbation-spoofing", "label": "Perturbation & Spoofing", "values": ["digital-perturbation", "adversarial-patch", "adversarial-object", "typographic-injection", "sensor-spoofing", "feedback-spoofing", "environment-manipulation"]},
-    {"name": "instruction-semantic-manipulation", "label": "Instruction & Semantic Manipulation", "values": ["jailbreak", "direct-prompt-injection", "indirect-prompt-injection", "hazardous-instruction", "command-hijacking"]},
-    {"name": "hijacking-redirection", "label": "Hijacking & Redirection", "values": ["representation-hijacking", "planning-hijacking", "action-manipulation", "action-freezing", "trajectory-manipulation", "state-manipulation"]},
-    {"name": "system-infrastructure-attack", "label": "System & Infrastructure Attack", "values": ["middleware-compromise", "network-attack", "multi-agent-propagation", "denial-of-service", "sensitive-data-exposure", "memorized-data-retention", "covert-channel", "multimodal-desynchronization"]},
-    {"name": "non-adversarial-failure", "label": "Non-Adversarial Failure", "values": ["distribution-shift", "instruction-ambiguity", "perception-error", "semantic-misalignment", "uncertainty-miscalibration", "planning-error", "execution-error", "constraint-violation", "unsafe-policy-behavior"]},
+    {"name": "data-model-corruption", "label": "Data & Model Corruption", "values": ["data-poisoning", "backdoor", "malicious-adapter", "checkpoint-compromise", "reward-manipulation", "memory-poisoning", "retrieval-poisoning", "membership-inference"]},
+    {"name": "perturbation-spoofing", "label": "Perturbation & Spoofing", "values": ["digital-perturbation", "adversarial-patch", "adversarial-object", "sensor-spoofing", "feedback-spoofing", "environment-manipulation"]},
+    {"name": "instruction-semantic-manipulation", "label": "Instruction & Semantic Manipulation", "values": ["direct-prompt-injection", "indirect-prompt-injection", "jailbreak", "typographic-injection", "hazardous-instruction"]},
+    {"name": "runtime-system-manipulation", "label": "Runtime & System Manipulation", "values": ["middleware-compromise", "network-attack", "denial-of-service", "covert-channel", "state-manipulation", "action-manipulation", "trajectory-manipulation", "representation-manipulation"]},
+    {"name": "distribution-shift-uncertainty", "label": "Distribution Shift & Uncertainty", "values": ["distribution-shift", "instruction-ambiguity", "uncertainty-miscalibration"]},
+    {"name": "reasoning-planning-execution-failure", "label": "Reasoning, Planning & Execution Failure", "values": ["perception-error", "semantic-misalignment", "planning-error", "execution-error", "multimodal-desynchronization"]},
 ]
 SURFACE_GROUPS = [
     {"name": "training-infrastructure", "label": "Training & Infrastructure", "values": ["model-supply-chain", "middleware-network"]},

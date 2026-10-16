@@ -50,6 +50,7 @@
 | `target` | 何に影響？（What is affected?） | 文字列の配列 | Yes | 影響を受ける、または評価されるコンポーネント・表現・資産 | `vla-policy` |
 | `consequence` | どんな帰結？（What follows?） | 文字列の配列 | Yes | 脅威・失敗連鎖の具体的な到達点 | `task-failure` |
 | `kind` | *（レコードの種類、5つの問いとは別）* | string | Yes | 失敗の大まかな発生源、またはレコードの範囲 | `adversarial` |
+| `curation_status` | *（来歴情報、5つの問いとは別）* | string | Yes | この割り当てが一次資料に対してどの程度確認されたか — [Mechanismの監査状況](#mechanismの監査状況)を参照 | `paper-verified` |
 
 このリポジトリは記述的な意味ラベルを使用します。個々の論文やサーベイが定義した番号付きサーフェスコードを正規のメタデータとしては使用しません。
 
@@ -103,11 +104,20 @@
 
 `surface`は研究が直接操作・シフト・破損・評価したインターフェースのみを記録します。推測される内部伝播経路はエンコードしません。異なるlifecycle段階で異なるインターフェースが使われる場合、複数の値が許容されます。例えば、視覚的に発動するバックドアは学習時に`model-supply-chain`、推論時に`visual-perception`の両方を使うことがあります。
 
-### どのように？（How?）— Mechanism語彙
+### どのように？（How?）— Mechanism語彙（Technique-oriented）
 
-`mechanism`は「手口の性質」（どのような汚染・なりすまし・操作・失敗か）で分類しています。これは`surface`（知覚→推論→行動のパイプライン上の「どこで」起きるか）とは意図的に別軸です。1つのmechanismファミリーが1つのsurfaceファミリーに対応するわけではありません。例えば`jailbreak`と`sensor-spoofing`はどちらも知覚に近いsurfaceに触れ得ますが、手口が異なるため別のmechanismファミリーに属します。
+`mechanism`は論文が実際に研究している**具体的な攻撃手法または失敗モード**を分類します。推論された因果メカニズムではありません。「攻撃はどう実行されたか／どんな失敗モードが研究されているか」に答えるもので、「根本原因は何か」には答えません。`adversarial-patch`・`typographic-injection`・`backdoor`・`membership-inference`のような、具体的な研究用語は、それが基礎的な原理ではなく個別の攻撃実装を指す場合でも維持します。ファミリーは「操作の種類」でグルーピングしており、これは`surface`（知覚→推論→行動のパイプライン上の「どこで」起きるか）とは意図的に別軸です。1つのmechanismファミリーが1つのsurfaceファミリーに対応するわけではありません。
 
-| 値 | 攻撃・失敗がどう生み出されるか |
+**付与ルール:**
+
+1. 論文のMethod/Experimentsで裏付けられる場合のみラベルを付与する。タイトルだけからは付与しない。
+2. 複数ラベルは、それぞれが独立して根拠を持ち別々の情報を伝える場合に許容する（例: テキストが印字された敵対的パッチは`adversarial-patch`と`typographic-injection`の両方を満たしうる）。
+3. 1つ目の機構が下流の効果を引き起こしたというだけの理由で2つ目のラベルを追加しない（例: jailbreakの結果としてロボットの計画が変化しただけなら、ラベルは`jailbreak`のみとし、計画への影響は`target`/`consequence`で表現する）。
+4. 防御論文が想定する脅威モデルだけから攻撃手法を推論しない。手作業で作成した・モデル化されていない「unsafe」な例に対してのみ評価している防御論文には、実証されたHOWは存在せず、フィールドを省略するか論文自身が実証した値のみを用いる。
+5. 最も具体的で裏付けのあるラベルを優先する。論文の根拠が具体的な手法を立証していない場合は`mechanism`を空リストにする。これは「まだレビューしていない」とは異なる状態であり、下記の`curation_status`で区別する。
+6. 内部モデル状態への直接操作を名指すラベル（例: `representation-manipulation`）は、論文の最適化変数または攻撃対象そのものが内部表現である場合にのみ使用する。内部特徴量ベースの損失を使って入力（パッチ・テキストプレフィックス・摂動）を最適化しているだけの場合は該当しない — それは入力レベルの手法（`adversarial-patch`、`digital-perturbation`等）であり、内部特徴量は損失の目標値として参照されているに過ぎない。
+
+| 値 | 攻撃手法・失敗モード |
 |---|---|
 | **データ・モデル汚染** | |
 | `data-poisoning` | 学習データを汚染し、あらかじめ定めた失敗や挙動を誘発する。 |
@@ -117,48 +127,47 @@
 | `reward-manipulation` | 学習信号や報酬関数を汚染し、安全でない挙動を形作る。 |
 | `memory-poisoning` | 永続メモリや長期コンテキストストアを悪意あるコンテンツで汚染する。 |
 | `retrieval-poisoning` | 検索コーパス内の文書や例を汚染し、取得される内容に偏りを生じさせる。 |
+| `membership-inference` | 特定のデータが学習・メモリに含まれていたかを、主にモデル内部の特徴量や確信度信号から推定する（プロンプトレベルのアクセスのみを想定しない）。 |
 | **摂動・なりすまし** | |
-| `digital-perturbation` | 知覚できない、または制約されたノイズをデジタル入力に加える。 |
+| `digital-perturbation` | 知覚できない、または制約されたノイズをデジタル入力（画像・テキスト・音声等）に加える。 |
 | `adversarial-patch` | 知覚を欺くために作り込まれた目に見えるパッチやテクスチャを配置する。 |
 | `adversarial-object` | 狙った失敗を引き起こすよう設計された物理的物体を用いる。 |
-| `typographic-injection` | シーン中に描画されたテキストでvision-languageモデルの出力を操作する。 |
 | `sensor-spoofing` | 物理センサー（GPS、LiDAR、IMU等）に偽の信号を与える。 |
 | `feedback-spoofing` | 内部・外部のフィードバック信号を偽装してシステムを欺く。 |
 | `environment-manipulation` | 物理的な物体やシーンの配置を変更し、失敗を誘発する。 |
 | **命令・意味操作** | |
-| `jailbreak` | プロンプトにより安全性学習を回避し、制限された挙動を引き出す。 |
 | `direct-prompt-injection` | 悪意ある指示をユーザー入力として直接与える。 |
 | `indirect-prompt-injection` | 悪意ある指示を、システムが後で処理するコンテンツに埋め込む。 |
-| `hazardous-instruction` | 一見無害な指示が、物理的・社会的に有害な結果につながる。 |
-| `command-hijacking` | 攻撃者が正規のコマンドや目標を差し替え・上書きする。 |
-| **ハイジャック・乗っ取り** | |
-| `representation-hijacking` | 内部の隠れ状態やクロスモーダル表現を直接操作する。 |
-| `planning-hijacking` | 計画・タスク分解プロセスを攻撃者の目標へ誘導する。 |
-| `action-manipulation` | 出力される行動トークンやコマンドを実行前に改変する。 |
-| `action-freezing` | ポリシーを無行動・停止状態に追い込む。 |
-| `trajectory-manipulation` | 生成された運動軌道を意図した経路から逸脱させる。 |
-| `state-manipulation` | センシングとは独立に、システムの内部の信念・状態表現を汚染する。 |
-| **システム・インフラ攻撃** | |
+| `jailbreak` | プロンプトまたは最適化された敵対的入力により安全性学習を回避し、制限された・意図しない挙動を引き出す。 |
+| `typographic-injection` | シーン中に描画されたテキストが読み取られ、指示として扱われるか、視覚・意味的判断を上書きする形で作用する。 |
+| `hazardous-instruction` | 一見無害な指示が、物理的・社会的に有害な結果につながる。指示追従失敗として広く研究・ベンチマーク化されている分類。 |
+| **ランタイム・システム操作** | |
 | `middleware-compromise` | ミドルウェア、ドライバ、通信層を侵害する。 |
 | `network-attack` | ネットワーク通信を傍受・改ざん・妨害する。 |
-| `multi-agent-propagation` | 共有通信や共有状態を通じて、侵害が1つのエージェントから他へ伝播する。 |
-| `denial-of-service` | リソース枯渇やフラッディングにより可用性を低下・遮断する。 |
-| `sensitive-data-exposure` | システムの脆弱性により保護されたデータが意図せず露出する。 |
-| `memorized-data-retention` | 学習データがモデルに保持され、後で抽出可能になる。 |
+| `denial-of-service` | リソース枯渇・フラッディング、または安全機構の悪用により可用性を低下・遮断する。 |
 | `covert-channel` | 認可されていない経路で情報を秘密裏に持ち出す、または通信する。 |
-| `multimodal-desynchronization` | モダリティ間の時間的・意味的整合が崩れ、統合理解が汚染される。 |
-| **非敵対的な失敗** | |
+| `state-manipulation` | センシングとは独立に、システムの内部の信念・状態表現をランタイムで直接改ざんする — 直接的な改ざんが実証されている場合のみ使用し、下流の不具合から推論しない。 |
+| `action-manipulation` | 出力される行動トークンやコマンドを実行前に直接改変する。 |
+| `trajectory-manipulation` | 生成された運動軌道そのものが実証された手法の対象である場合に使用し、既に付与された摂動・注入ラベルの単なる下流効果には使わない。 |
+| `representation-manipulation` | 内部の隠れ状態やクロスモーダル表現が、攻撃者によって直接最適化・上書きされる対象である場合に使用する — 内部特徴量ベースの損失で入力を最適化しているだけの場合は該当しない（付与ルール6を参照）。 |
+| **分布シフト・不確実性** | |
 | `distribution-shift` | 攻撃者を想定せず、テスト時の条件が学習時の分布と異なる。 |
 | `instruction-ambiguity` | 悪意のない自然な指示が、記述不足または曖昧である。 |
+| `uncertainty-miscalibration` | システムの確信度が実際の信頼性と一致しない。 |
+| **推論・計画・実行の失敗** | |
 | `perception-error` | 敵対的な原因なしに、知覚が誤認識・誤定位する。 |
 | `semantic-misalignment` | 敵対的な原因なしに、言語と視覚・行動のグラウンディングが乖離する。 |
-| `uncertainty-miscalibration` | システムの確信度が実際の信頼性と一致しない。 |
 | `planning-error` | 攻撃者なしに、プランナーが実行不可能・非最適・安全でない計画を生成する。 |
 | `execution-error` | 攻撃者なしに、低レベルの実行が意図した行動から逸脱する。 |
-| `constraint-violation` | 攻撃者なしに、安全制約やタスク制約に違反する。 |
-| `unsafe-policy-behavior` | 学習されたポリシーが、個別のエラーとしてではなく創発的な性質として安全でない挙動を示す。 |
+| `multimodal-desynchronization` | モダリティ間の時間的・意味的整合が崩れ、統合理解が汚染される。 |
 
-`kind`はmechanismファミリーと相関はしますが、厳密な上位階層ではありません。`adversarial`は上記5つの攻撃系ファミリーすべてにまたがり（1つに限定されない）、`non-adversarial`/`system-failure`はほぼ「非敵対的な失敗」ファミリーに集中しますが完全ではなく、`survey`/`evaluation`は`coverage.mechanisms`を通じて複数ファミリーを同時にカバーすることがあります。`kind`は`mechanism`の上位階層ではなく、別の軸（レコードの種類）として扱ってください。
+一部のラベルは、現時点で採用論文がゼロであっても統制語彙として定義を維持することがあります。明確で再利用可能な技術を指す場合（現時点では`representation-manipulation`が該当）、根拠論文が見つかるたびに追加・削除するのではなく、定義を維持しておきます。
+
+`kind`はmechanismファミリーと緩く相関しますが、厳密な上位階層ではありません。`adversarial`は上記の攻撃系ファミリーのほとんどにまたがり（1つに限定されない）、`non-adversarial`/`system-failure`は「分布シフト・不確実性」「推論・計画・実行の失敗」に集中する傾向がありますが完全ではなく、`survey`/`evaluation`は`coverage.mechanisms`を通じて複数ファミリーを同時にカバーすることがあります。`kind`は`mechanism`の上位階層ではなく、別の軸（レコードの種類）として扱ってください。
+
+### Mechanismの監査状況
+
+`threat_model.curation_status`は、現在の`mechanism`（および構造化threat_modelの他フィールド）の割り当てが一次資料に対してどの程度確認されたかを記録します。`defense`/`evaluation`/`benchmark`拡張と同じ尺度（`paper-verified`、`abstract-verified`、`catalog-derived`、`reference-only`）を使用します。これにより、「現行語彙でまだ再確認していないレコード」（`catalog-derived`）と「レビュー済みだが具体的な手法の根拠が見つからなかったレコード」（`mechanism`が空リストの`paper-verified`）を区別できます。どちらも有効な状態ですが、今後のキュレーションにとって意味が異なります。
 
 ### 何に影響？（What is affected?）— Target語彙
 
@@ -214,7 +223,8 @@
   "mechanism": ["adversarial-patch"],
   "surface": ["visual-perception"],
   "target": ["vla-policy"],
-  "consequence": ["task-failure"]
+  "consequence": ["task-failure"],
+  "curation_status": "paper-verified"
 }
 ```
 
@@ -227,7 +237,8 @@
   "mechanism": ["backdoor"],
   "surface": ["model-supply-chain", "visual-perception"],
   "target": ["action-generation"],
-  "consequence": ["targeted-action", "task-failure"]
+  "consequence": ["targeted-action", "task-failure"],
+  "curation_status": "paper-verified"
 }
 ```
 
@@ -241,6 +252,7 @@
   "coverage": {
     "lifecycles": ["training", "inference", "system"],
     "mechanisms": ["multiple"],
+    "curation_status": "abstract-verified",
     "surfaces": [
       "model-supply-chain",
       "user-instruction",

@@ -6,7 +6,7 @@ This workflow maintains already-cataloged papers. New-paper discovery and additi
 
 ## 1. Read and Inspect
 
-Read `AGENTS.md`, `docs/agent/daily-curation-workflow.md`, `docs/metadata-schema.md`, and `data/papers.json`. Inspect the branch, remote, and working tree. Preserve unrelated changes.
+Read `AGENTS.md`, `docs/agent/daily-curation-workflow.md`, `docs/reference/metadata-schema.md`, and `data/papers.json`. Inspect the branch, remote, and working tree. Preserve unrelated changes.
 
 ## 2. Select Content-Review Targets
 
@@ -19,6 +19,10 @@ Review only records matching at least one condition:
 5. `section` is `defenses` but the `defense` extension is absent
 
 Do not perform broad new-paper searches. Use existing paper IDs and URLs to reach primary sources directly.
+
+### Mechanism Vocabulary Stability
+
+Do not run a recurring full-catalog `mechanism` reclassification. Recheck a record's `mechanism` only when: the record is already under review for another reason above and new primary-source evidence changes the picture; an ambiguity is resolved by newly available information; validation reports an invalid or deprecated value; or a formal taxonomy migration has been explicitly approved. When a `mechanism` assignment is corrected, update `threat_model.curation_status` to reflect the evidence actually checked.
 
 ## 3. Check Updates
 

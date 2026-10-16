@@ -44,7 +44,7 @@ SECTIONS = {
 # subsection is a closed vocabulary scoped per section. Add a new value here
 # (and its translation in scripts/labels_ja.py's SUBSECTIONS_JA) only after
 # checking this list for an existing subsection that already fits — see
-# docs/agent/daily-curation-workflow.md and docs/metadata-schema.md#subsection.
+# docs/agent/daily-curation-workflow.md and docs/reference/metadata-schema.md#subsection.
 SUBSECTIONS = {
     "surveys": {
         "Embodied AI Safety and Security",
@@ -109,21 +109,26 @@ SUBSECTIONS = {
 RISKS = {"task-reliability", "physical-safety", "ethical-societal", "security-privacy"}
 THREAT_KINDS = {"adversarial", "non-adversarial", "system-failure", "evaluation", "survey"}
 LIFECYCLES = {"training", "inference", "system"}
+# Technique-oriented vocabulary (see docs/reference/taxonomy.md "How? — Mechanism
+# Vocabulary"). HOW classifies the concrete attack technique or failure mode a
+# paper studies; it does not require establishing an underlying causal
+# mechanism, and a label may remain defined here with zero current users when
+# no catalog paper yet demonstrates it (e.g. representation-manipulation).
 MECHANISMS = {
-    "action-freezing", "action-manipulation", "adversarial-object", "adversarial-patch",
-    "backdoor", "checkpoint-compromise", "command-hijacking", "constraint-violation",
+    "action-manipulation", "adversarial-object", "adversarial-patch",
+    "backdoor", "checkpoint-compromise",
     "covert-channel", "data-poisoning", "denial-of-service", "digital-perturbation",
     "direct-prompt-injection", "distribution-shift", "environment-manipulation",
     "execution-error", "feedback-spoofing", "hazardous-instruction",
     "indirect-prompt-injection", "instruction-ambiguity", "jailbreak", "malicious-adapter",
-    "memorized-data-retention", "memory-poisoning", "middleware-compromise", "multi-agent-propagation",
+    "membership-inference", "memory-poisoning", "middleware-compromise",
     "multimodal-desynchronization", "network-attack", "perception-error", "planning-error",
-    "planning-hijacking", "representation-hijacking",
+    "representation-manipulation",
     "retrieval-poisoning", "reward-manipulation", "semantic-misalignment", "sensor-spoofing",
-    "sensitive-data-exposure", "state-manipulation", "trajectory-manipulation", "typographic-injection",
-    "uncertainty-miscalibration", "unsafe-policy-behavior",
+    "state-manipulation", "trajectory-manipulation", "typographic-injection",
+    "uncertainty-miscalibration",
 }
-# Ordered to match the perceive -> reason -> act grouping in docs/taxonomy.md
+# Ordered to match the perceive -> reason -> act grouping in docs/reference/taxonomy.md
 # (training & infrastructure -> perception -> language -> proprioception ->
 # planning & state -> reasoning -> action & control). A set, so this order
 # has no runtime effect; it's kept for readability/consistency with the docs.
@@ -156,7 +161,7 @@ PRIVATE_MARKERS = {
     "responsible-vla-wiki",
 }
 CJK = re.compile(r"[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff]")
-JAPANESE_FILES = {"README.ja.md", "CONTRIBUTING.ja.md", "docs/taxonomy.ja.md"}
+JAPANESE_FILES = {"README.ja.md", "CONTRIBUTING.ja.md", "docs/reference/taxonomy.ja.md"}
 
 
 def valid_url(value: str | None) -> bool:
@@ -198,7 +203,7 @@ def validate_string_list(
         errors.append(f"{label}: invalid threat_model.{field} {sorted(invalid)}")
 
 
-def validate_threat_model(errors: list[str], label: str, threat_model: object) -> None:
+def validate_threat_model(errors: list[str], label: str, threat_model: object, taxonomies: dict) -> None:
     if not isinstance(threat_model, dict):
         errors.append(f"{label}: threat_model must be an object")
         return
@@ -206,9 +211,11 @@ def validate_threat_model(errors: list[str], label: str, threat_model: object) -
     if kind not in THREAT_KINDS:
         errors.append(f"{label}: invalid threat_model.kind {kind!r}")
         return
+    if threat_model.get("curation_status") not in taxonomies["threat_model"]["curation_statuses"]:
+        errors.append(f"{label}: invalid threat_model.curation_status {threat_model.get('curation_status')!r}")
     if kind in {"survey", "evaluation"}:
-        if set(threat_model) != {"kind", "coverage"}:
-            errors.append(f"{label}: {kind} threat_model must contain only kind and coverage")
+        if set(threat_model) != {"kind", "coverage", "curation_status"}:
+            errors.append(f"{label}: {kind} threat_model must contain only kind, coverage, and curation_status")
         coverage = threat_model.get("coverage")
         if not isinstance(coverage, dict):
             errors.append(f"{label}: threat_model.coverage must be an object")
@@ -224,11 +231,13 @@ def validate_threat_model(errors: list[str], label: str, threat_model: object) -
         validate_string_list(errors, label, "coverage.surfaces", coverage.get("surfaces"), SURFACES)
         validate_string_list(errors, label, "coverage.consequences", coverage.get("consequences"), CONSEQUENCES, empty_ok=True)
         return
-    expected = {"kind", "lifecycle", "mechanism", "surface", "target", "consequence"}
+    expected = {"kind", "lifecycle", "mechanism", "surface", "target", "consequence", "curation_status"}
     if set(threat_model) != expected:
         errors.append(f"{label}: concrete threat_model fields must be {sorted(expected)}")
     validate_string_list(errors, label, "lifecycle", threat_model.get("lifecycle"), LIFECYCLES)
-    validate_string_list(errors, label, "mechanism", threat_model.get("mechanism"), MECHANISMS)
+    # empty_ok: a reviewed record may have no leaf that fits without inferring an
+    # unsupported technique (see docs/reference/taxonomy.md, HOW assignment rules).
+    validate_string_list(errors, label, "mechanism", threat_model.get("mechanism"), MECHANISMS, empty_ok=True)
     validate_string_list(errors, label, "surface", threat_model.get("surface"), SURFACES)
     validate_string_list(errors, label, "target", threat_model.get("target"), TARGETS)
     validate_string_list(errors, label, "consequence", threat_model.get("consequence"), CONSEQUENCES)
@@ -286,7 +295,7 @@ def validate_extensions(errors: list[str], label: str, paper: dict, taxonomies: 
 def main() -> int:
     errors: list[str] = []
     papers = json.loads(DATA_PATH.read_text(encoding="utf-8"))
-    taxonomies = {name: json.loads((TAXONOMY_DIR / f"{name}.json").read_text(encoding="utf-8")) for name in ("defense", "evaluation", "benchmark")}
+    taxonomies = {name: json.loads((TAXONOMY_DIR / f"{name}.json").read_text(encoding="utf-8")) for name in ("defense", "evaluation", "benchmark", "threat_model")}
     if not isinstance(papers, list) or not papers:
         errors.append("data/papers.json must be a non-empty array")
         papers = []
@@ -327,7 +336,7 @@ def main() -> int:
                 errors.append(f"{label}: invalid risks {sorted(invalid_risks)}")
         if not paper.get("tags"):
             errors.append(f"{label}: tags must not be empty")
-        validate_threat_model(errors, label, paper.get("threat_model"))
+        validate_threat_model(errors, label, paper.get("threat_model"), taxonomies)
         validate_extensions(errors, label, paper, taxonomies)
         validate_submission(errors, label, paper)
         if not isinstance(paper.get("year"), int) or not 2000 <= paper.get("year", 0) <= 2100:

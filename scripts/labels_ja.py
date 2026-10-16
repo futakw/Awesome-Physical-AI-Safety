@@ -75,7 +75,7 @@ LIFECYCLE_JA = {
     "system": "システム",
 }
 
-# Ordered to match the perceive -> reason -> act grouping in docs/taxonomy.md
+# Ordered to match the perceive -> reason -> act grouping in docs/reference/taxonomy.md
 # (training & infrastructure -> perception -> language -> proprioception ->
 # planning & state -> reasoning -> action & control).
 SURFACE_JA = {
@@ -101,8 +101,6 @@ MECHANISM_JA = {
     "adversarial-patch": "敵対的パッチ",
     "backdoor": "バックドア",
     "checkpoint-compromise": "チェックポイント侵害",
-    "command-hijacking": "コマンド乗っ取り",
-    "constraint-violation": "制約違反",
     "covert-channel": "秘密通信路",
     "data-poisoning": "データ汚染",
     "digital-perturbation": "デジタル摂動",
@@ -114,25 +112,21 @@ MECHANISM_JA = {
     "indirect-prompt-injection": "間接プロンプトインジェクション",
     "instruction-ambiguity": "指示の曖昧性",
     "jailbreak": "ジェイルブレイク",
-    "memorized-data-retention": "記憶データの保持",
+    "membership-inference": "メンバーシップ推定攻撃",
     "memory-poisoning": "メモリ汚染",
     "middleware-compromise": "ミドルウェア侵害",
-    "multi-agent-propagation": "マルチエージェント伝播",
     "multimodal-desynchronization": "マルチモーダル非同期",
     "multiple": "複数",
     "network-attack": "ネットワーク攻撃",
     "perception-error": "知覚エラー",
     "planning-error": "計画エラー",
-    "planning-hijacking": "計画乗っ取り",
-    "representation-hijacking": "表現乗っ取り",
+    "representation-manipulation": "内部表現操作",
     "semantic-misalignment": "意味的不整合",
-    "sensitive-data-exposure": "機微データ露出",
     "sensor-spoofing": "センサースプーフィング",
     "state-manipulation": "状態操作",
     "trajectory-manipulation": "軌道操作",
     "typographic-injection": "文字列インジェクション",
     "uncertainty-miscalibration": "不確実性のキャリブレーション誤り",
-    "unsafe-policy-behavior": "安全でないポリシー挙動",
 }
 
 TARGET_JA = {

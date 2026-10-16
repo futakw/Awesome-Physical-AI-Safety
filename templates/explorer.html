@@ -52,6 +52,9 @@
     .author { margin:0 0 0 auto; color:var(--muted); font-size:12px; white-space:nowrap; }
     .author a { color:var(--ink); text-underline-offset:3px; }
     .author a:hover { color:#365f99; }
+    .contact-link { display:inline-flex; align-items:center; vertical-align:-3px; margin-left:6px; color:var(--muted); }
+    .contact-link:hover { color:#365f99; }
+    .contact-link svg { width:14px; height:14px; }
     .doc-link { border:1px solid var(--line); background:var(--panel); color:var(--ink); border-radius:7px; padding:9px 14px; text-decoration:none; }
     button { border:1px solid var(--line); background:#fff; color:var(--ink); border-radius:7px; padding:6px 12px; cursor:pointer; font:inherit; font-size:13px; }
     button[aria-pressed="true"] { background:#eef3fa; border-color:#aebed6; font-weight:600; }
@@ -101,6 +104,15 @@
     .doc-frame { width:100%; min-height:900px; border:1px solid var(--line); border-radius:10px; background:#fff; }
     .gh-link { display:inline-flex; align-items:center; gap:5px; padding:5px 10px; border:1px solid var(--line); border-radius:7px; background:var(--panel); color:var(--ink); text-decoration:none; font-size:12px; white-space:nowrap; }
     .gh-link:hover { background:#eef3fa; }
+    .gh-link.citation-btn { appearance:none; -webkit-appearance:none; box-sizing:border-box; margin:0; cursor:pointer; font-family:inherit; font-size:12px; line-height:normal; }
+    .citation-wrap { position:relative; display:inline-flex; }
+    .citation-popover { position:absolute; z-index:20; top:calc(100% + 7px); left:0; width:340px; max-width:80vw; padding:12px 13px; border:1px solid var(--line); border-radius:9px; background:#fff; box-shadow:0 8px 24px #2029381f; }
+    .citation-popover[hidden] { display:none; }
+    .citation-popover-head { display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:8px; }
+    .citation-popover-head span { font-size:12px; font-weight:700; color:var(--ink); }
+    .citation-copy { border:1px solid var(--line); border-radius:6px; padding:3px 8px; font-size:11px; background:var(--panel); color:var(--ink); cursor:pointer; white-space:nowrap; }
+    .citation-copy:hover { background:#eef3fa; }
+    .citation-bibtex { margin:0; padding:9px; border-radius:7px; background:#f4f6fa; color:#36445a; font-size:11px; line-height:1.5; white-space:pre-wrap; word-break:break-word; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
     .lang-toggle { display:inline-flex; border:1px solid var(--line); border-radius:7px; overflow:hidden; flex:none; }
     .lang-toggle button { border:none; border-radius:0; padding:5px 11px; font-size:12px; background:#fff; }
     .lang-toggle button + button { border-left:1px solid var(--line); }
@@ -115,6 +127,16 @@
       <div class="topbar-left">
         <h1 data-i18n="title">Awesome Physical AI Safety</h1>
         <a class="gh-link" id="gh-link" href="https://github.com/futakw/Awesome-Physical-AI-Safety" target="_blank" rel="noopener noreferrer" data-i18n="ghlink">⭐ Star on GitHub</a>
+        <div class="citation-wrap">
+          <button type="button" class="gh-link citation-btn" id="citation-link" aria-haspopup="true" aria-expanded="false" data-i18n="citeLink">📑 Cite</button>
+          <div class="citation-popover" id="citation-popover" role="dialog" aria-label="Citation" hidden>
+            <div class="citation-popover-head">
+              <span data-i18n="citeTitle">Cite this catalog</span>
+              <button type="button" class="citation-copy" id="citation-copy" data-i18n="citeCopy">Copy BibTeX</button>
+            </div>
+            <pre class="citation-bibtex" id="citation-bibtex"></pre>
+          </div>
+        </div>
       </div>
       <div class="topbar-right">
         <div class="meta-badges" aria-label="Catalog metadata">
@@ -136,7 +158,7 @@
       <button type="button" data-view="defense" aria-pressed="false" data-i18n="navDefense">Defense × Threat</button>
       <button type="button" data-view="target" aria-pressed="false" data-i18n="navTarget">Target × Result</button>
     </nav>
-    <p class="author">Author: <a href="https://futa-waseda.netlify.app/" target="_blank" rel="noopener noreferrer">Futa Waseda</a></p>
+    <p class="author">Author: <a href="https://futa-waseda.netlify.app/" target="_blank" rel="noopener noreferrer">Futa Waseda</a><a class="contact-link" id="contact-link" href="https://futa-waseda.netlify.app/contact/" target="_blank" rel="noopener noreferrer" aria-label="Contact" title="Contact"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="15" height="11" rx="1.8"/><path d="M3 5.5 10 11 17 5.5"/></svg></a></p>
     </div>
   </div>
 </header>
@@ -163,18 +185,22 @@ const RISK_TAG_COLORS = {'task-reliability':{bg:'#eaf1fd',fg:'#2f5fa8'},'physica
 const DEFENSE_MECHANISMS = ['adversarial-training','robust-finetuning','input-filtering','representation-steering','runtime-monitoring','uncertainty-gating','action-shielding','formal-verification','failure-recovery','model-merging'];
 const TARGETS = ['perception-model','world-state','reasoning-process','task-planner','vla-policy','action-generation','runtime-monitor','robot-executor','shared-system-state','private-data'];
 const CONSEQUENCES = ['task-failure','targeted-action','action-freezing','unsafe-success','collision','unsafe-motion','physical-damage','control-hijacking','policy-violation','privacy-leakage','availability-loss','recovery-failure'];
-// Canonical family groupings from docs/taxonomy.md. `mechanism` is grouped by
+// Canonical family groupings from docs/reference/taxonomy.md. `mechanism` is grouped by
 // the nature of the technique (how), `surface` by where it sits in the
 // perceive -> reason -> act pipeline (where) — a deliberately different,
 // orthogonal axis. Both are used as the actual aggregation unit for the
 // cross-map charts, not just a sort/divider hint.
+// Technique-oriented families (see docs/reference/taxonomy.md). HOW classifies
+// the concrete attack technique or failure mode a paper studies; family
+// membership groups techniques by kind of operation, not by where they occur
+// (that's `surface`, below) or by inferred root cause.
 const MECHANISM_GROUPS = [
-  {name:'data-model-corruption',label:'Data & Model Corruption',short:'Data/Model',labelJa:'データ・モデル汚染',values:['data-poisoning','backdoor','malicious-adapter','checkpoint-compromise','reward-manipulation','memory-poisoning','retrieval-poisoning']},
-  {name:'perturbation-spoofing',label:'Perturbation & Spoofing',short:'Perturb/Spoof',labelJa:'摂動・なりすまし',values:['digital-perturbation','adversarial-patch','adversarial-object','typographic-injection','sensor-spoofing','feedback-spoofing','environment-manipulation']},
-  {name:'instruction-semantic-manipulation',label:'Instruction & Semantic Manipulation',short:'Instruction',labelJa:'命令・意味操作',values:['jailbreak','direct-prompt-injection','indirect-prompt-injection','hazardous-instruction','command-hijacking']},
-  {name:'hijacking-redirection',label:'Hijacking & Redirection',short:'Hijack/Redirect',labelJa:'ハイジャック・乗っ取り',values:['representation-hijacking','planning-hijacking','action-manipulation','action-freezing','trajectory-manipulation','state-manipulation']},
-  {name:'system-infrastructure-attack',label:'System & Infrastructure Attack',short:'System/Infra',labelJa:'システム・インフラ攻撃',values:['middleware-compromise','network-attack','multi-agent-propagation','denial-of-service','sensitive-data-exposure','memorized-data-retention','covert-channel','multimodal-desynchronization']},
-  {name:'non-adversarial-failure',label:'Non-Adversarial Failure',short:'Non-Adv.',labelJa:'非敵対的な失敗',values:['distribution-shift','instruction-ambiguity','perception-error','semantic-misalignment','uncertainty-miscalibration','planning-error','execution-error','constraint-violation','unsafe-policy-behavior']},
+  {name:'data-model-corruption',label:'Data & Model Corruption',short:'Data/Model',labelJa:'データ・モデル汚染',values:['data-poisoning','backdoor','malicious-adapter','checkpoint-compromise','reward-manipulation','memory-poisoning','retrieval-poisoning','membership-inference']},
+  {name:'perturbation-spoofing',label:'Perturbation & Spoofing',short:'Perturb/Spoof',labelJa:'摂動・なりすまし',values:['digital-perturbation','adversarial-patch','adversarial-object','sensor-spoofing','feedback-spoofing','environment-manipulation']},
+  {name:'instruction-semantic-manipulation',label:'Instruction & Semantic Manipulation',short:'Instruction',labelJa:'命令・意味操作',values:['direct-prompt-injection','indirect-prompt-injection','jailbreak','typographic-injection','hazardous-instruction']},
+  {name:'runtime-system-manipulation',label:'Runtime & System Manipulation',short:'Runtime/System',labelJa:'ランタイム・システム操作',values:['middleware-compromise','network-attack','denial-of-service','covert-channel','state-manipulation','action-manipulation','trajectory-manipulation','representation-manipulation']},
+  {name:'distribution-shift-uncertainty',label:'Distribution Shift & Uncertainty',short:'Dist. Shift',labelJa:'分布シフト・不確実性',values:['distribution-shift','instruction-ambiguity','uncertainty-miscalibration']},
+  {name:'reasoning-planning-execution-failure',label:'Reasoning, Planning & Execution Failure',short:'Reasoning/Planning',labelJa:'推論・計画・実行の失敗',values:['perception-error','semantic-misalignment','planning-error','execution-error','multimodal-desynchronization']},
 ];
 const SURFACE_GROUPS = [
   {name:'training-infrastructure',label:'Training & Infrastructure',short:'Training/Infra',labelJa:'訓練・インフラ',values:['model-supply-chain','middleware-network']},
@@ -238,7 +264,7 @@ const I18N = {
   en: {
     title: 'Awesome Physical AI Safety',
     ghlink: '⭐ Star on GitHub',
-    navReadme: 'README', navTaxonomy: 'Taxonomy', navTimeline: 'Field timeline', navHeatmap: 'How × Where', navRisk: 'How × Measured Risk', navDefense: 'Defense × Threat', navTarget: 'Target × Result',
+    navReadme: 'Overview', navTaxonomy: 'Taxonomy', navTimeline: 'Timeline', navHeatmap: 'Mechanism × Surface', navRisk: 'Mechanism × Risk', navDefense: 'Defense × Threat', navTarget: 'Target × Outcome',
     badgeLicenses: 'Licenses', badgePapers: 'Papers', badgeUpdate: 'Update', badgeCuration: 'Curation', badgeDaily: 'Daily', badgeLlm: 'LLM-assisted',
     timelineNote: 'Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to filter the table.',
     heatmapNote: 'Cells show mechanism-surface co-occurrence for concrete threat models. Hover for a preview; click a cell to filter the table.',
@@ -251,11 +277,12 @@ const I18N = {
     chartRiskTitle: 'Threat Mechanism Family × Empirically Evaluated Risk Outcome', chartDefenseTitle: 'Defense Mechanism × Defended Threat Mechanism Family', chartTargetTitle: 'Affected Target × Consequence',
     enrichedSuffix: ' enriched papers; hover or click a cell for the paper list.',
     papersWord: ' papers', tablePaper: 'Paper', tableVenue: 'Venue', tableRisk: 'Evaluated Risk', tableThreat: 'Threat Model', tableAll: 'All papers in this view', tableShowing: 'Showing', tableReset: 'Reset filter', tableCode: 'Project / Code', tableNone: 'None reported', storyWhen: 'When', storyWhere: 'Where', storyHow: 'How', storyTarget: 'Target', storyResult: 'Result',
+    citeLink: '📑 Cite', citeTitle: 'Cite this catalog', citeCopy: 'Copy BibTeX', citeCopied: 'Copied!', contactLabel: 'Contact',
   },
   ja: {
     title: 'Awesome Physical AI Safety',
     ghlink: '⭐ GitHubでStar',
-    navReadme: 'README', navTaxonomy: 'Taxonomy', navTimeline: 'タイムライン', navHeatmap: 'How × Where', navRisk: 'How × Measured Risk', navDefense: 'Defense × Threat', navTarget: 'Target × Result',
+    navReadme: 'Overview', navTaxonomy: 'Taxonomy', navTimeline: 'タイムライン', navHeatmap: 'Mechanism × Surface', navRisk: 'Mechanism × Risk', navDefense: 'Defense × Threat', navTarget: 'Target × Outcome',
     badgeLicenses: 'ライセンス', badgePapers: '論文数', badgeUpdate: '更新頻度', badgeCuration: 'キュレーション', badgeDaily: '毎日', badgeLlm: 'LLM支援',
     timelineNote: 'バブルの大きさは、分野×年のセルに含まれる論文数を表します。ホバーでプレビュー、クリックで下の表を絞り込みます。',
     heatmapNote: 'セルは具体的なthreat modelにおけるmechanismとsurfaceの共起を示します。ホバーでプレビュー、クリックで下の表を絞り込みます。',
@@ -268,6 +295,7 @@ const I18N = {
     chartRiskTitle: '脅威メカニズム群 × 実証的に評価されたリスクアウトカム', chartDefenseTitle: '防御メカニズム × 対象脅威メカニズム群', chartTargetTitle: '影響対象 × 帰結',
     enrichedSuffix: '件の拡張済み論文。ホバーまたはクリックで論文一覧を表示します。',
     papersWord: '件', tablePaper: '論文', tableVenue: 'Venue', tableRisk: '評価リスク', tableThreat: '脅威モデル', tableAll: 'このビューの全論文', tableShowing: '表示中', tableReset: '絞り込み解除', tableCode: 'Project / Code', tableNone: '報告なし', storyWhen: 'いつ', storyWhere: 'どこ', storyHow: '方法', storyTarget: '対象', storyResult: '結果',
+    citeLink: '📑 引用', citeTitle: '引用方法', citeCopy: 'BibTeXをコピー', citeCopied: 'コピーしました', contactLabel: 'お問い合わせ',
   },
 };
 d3.select('#paper-count-badge').text(papers.length);
@@ -351,13 +379,13 @@ const pinTooltip = (event, html) => { pinned = true; placeTooltip(event, html); 
 const hideTooltip = () => { if (!pinned) tooltip.style('opacity',0); };
 document.addEventListener('pointerdown', event => { if (!event.target.closest('.tooltip') && !event.target.closest('.cell')) { pinned = false; tooltip.style('opacity',0); } });
 function renderTimeline(){
-  const width=1160,height=440, margin={top:70,right:35,bottom:34,left: currentLang === 'ja' ? 235 : 205};
+  const width=1160,height=440, margin={top:82,right:35,bottom:34,left: currentLang === 'ja' ? 235 : 205};
   const svg=d3.select('#timeline-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Interactive field timeline');
   const years=[...new Set(papers.map(p=>p.year))].sort(), grouped=d3.rollup(papers,v=>v,p=>p.section,p=>p.year);
   const x=d3.scalePoint().domain(years).range([margin.left,width-margin.right]); const y=d3.scalePoint().domain(sections).range([margin.top,height-margin.bottom]).padding(.5);
   const max=d3.max([...grouped.values()].flatMap(v=>[...v.values()].map(a=>a.length)))||1;
   svg.append('text').attr('x',margin.left).attr('y',24).attr('font-size',19).attr('font-weight',650).attr('fill','#202938').text(I18N[currentLang].chartTimelineTitle);
-  years.forEach(year=>{svg.append('line').attr('x1',x(year)).attr('x2',x(year)).attr('y1',margin.top-16).attr('y2',height-margin.bottom+10).attr('stroke','#dce3ec');svg.append('text').attr('class','axis').attr('x',x(year)).attr('y',margin.top-26).attr('text-anchor','middle').text(year);});
+  years.forEach(year=>{svg.append('line').attr('x1',x(year)).attr('x2',x(year)).attr('y1',margin.top-16).attr('y2',height-margin.bottom+10).attr('stroke','#dce3ec');svg.append('text').attr('class','axis').attr('x',x(year)).attr('y',margin.top-30).attr('text-anchor','middle').text(year);});
   sections.forEach(s=>{svg.append('line').attr('x1',margin.left).attr('x2',width-margin.right).attr('y1',y(s)).attr('y2',y(s)).attr('stroke','#dce3ec');svg.append('text').attr('class','axis').attr('x',margin.left-20).attr('y',y(s)+4).attr('text-anchor','end').text(sectionLabel(s));});
   const cells=[]; for(const s of sections) for(const year of years){const list=(grouped.get(s)?.get(year))||[]; if(list.length) cells.push({s,year,list});}
   svg.selectAll('circle.cell').data(cells).join('circle').attr('class','cell').attr('cx',d=>x(d.year)).attr('cy',d=>y(d.s)).attr('r',d=>7+18*Math.sqrt(d.list.length/max)).attr('fill',d=>colors[d.s]).attr('fill-opacity',.88).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${sectionLabel(d.s)} · ${d.year} · ${countLabel(d.list.length)}</strong>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();filterPaperTable('timeline',d.list,`${sectionLabel(d.s)} · ${d.year}`);});
@@ -375,7 +403,7 @@ function wrapEndAnchored(selection, getText, maxLen=24){
   });
 }
 function renderHeatmap(){
-  const width=1160,height=(currentLang==='ja' ? 480 : 460),margin={top: currentLang === 'ja' ? 170 : 150,right:30,bottom:20,left: currentLang==='ja' ? 220 : 300};
+  const width=1160,height=(currentLang==='ja' ? 460 : 460),margin={top: currentLang === 'ja' ? 152 : 150,right:30,bottom:20,left: currentLang==='ja' ? 220 : 300};
   const svg=d3.select('#heatmap-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Interactive threat model heatmap');
   const concrete=papers.filter(p=>!['survey','evaluation'].includes(p.threat_model.kind));
   const mechanisms=MECHANISM_GROUPS, surfaces=SURFACE_GROUPS;
@@ -457,7 +485,7 @@ function renderExtensionMap(container,title,items,rows,cols,rowValues,colValues,
 function renderDefenseThreat(){
   const items=papers.filter(p=>p.defense), rows=DEFENSE_MECHANISMS, cols=MECHANISM_GROUPS;
   const isJa=currentLang==='ja';
-  const margin={top:isJa?154:122,right:45,bottom:20,left:isJa?230:250}, width=1180, height=margin.top+rows.length*38+margin.bottom;
+  const margin={top:isJa?152:106,right:45,bottom:20,left:isJa?230:250}, width=1180, height=margin.top+rows.length*38+margin.bottom;
   const svg=d3.select('#defense-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Defense mechanism and defended threat family cross-map');
   const x=d3.scaleBand().domain(cols.map(g=>g.name)).range([margin.left,width-margin.right]).padding(.06), y=d3.scaleBand().domain(rows).range([margin.top,height-margin.bottom]).padding(.07);
   const cells=[];
@@ -470,9 +498,9 @@ function renderDefenseThreat(){
   svg.append('text').attr('x',margin.left).attr('y',48).attr('font-size',12).attr('fill','#657287').text(`${items.length}${I18N[currentLang].enrichedSuffix}`);
   const columnLabels=svg.selectAll('text.col').data(cols).join('text').attr('class','axis');
   if(isJa){
-    columnLabels.attr('text-anchor','start').attr('transform',g=>`translate(${x(g.name)+x.bandwidth()/2},${margin.top-22}) rotate(-34)`).call(rotatedAxisLabel,g=>familyLabel(g));
+    columnLabels.attr('text-anchor','start').attr('transform',g=>`translate(${x(g.name)+x.bandwidth()/2},${margin.top-8}) rotate(-16)`).call(rotatedAxisLabel,g=>familyLabel(g));
   }else{
-    columnLabels.attr('text-anchor','middle').attr('x',g=>x(g.name)+x.bandwidth()/2).attr('y',72).call(rotatedAxisLabel,g=>familyLabel(g));
+    columnLabels.attr('text-anchor','middle').attr('x',g=>x(g.name)+x.bandwidth()/2).attr('y',86).call(rotatedAxisLabel,g=>familyLabel(g));
   }
   svg.selectAll('text.row').data(rows).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',row=>y(row)+y.bandwidth()/2+4).call(wrapEndAnchored,row=>dlabel(row));
   svg.selectAll('rect.cell').data(cells).join('rect').attr('class','cell').attr('x',d=>x(d.family.name)).attr('y',d=>y(d.row)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(dlabel(d.row))} × ${escapeHtml(familyLabel(d.family))}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();filterPaperTable('defense',d.list,`${dlabel(d.row)} × ${familyLabel(d.family)}`);});
@@ -481,7 +509,7 @@ function renderDefenseThreat(){
 
 function renderTargetResult(){
   const items=papers.filter(p=>!['survey','evaluation'].includes(p.threat_model.kind)), rows=TARGETS, cols=CONSEQUENCES;
-  const margin={top:170,right:25,bottom:20,left:currentLang==='ja'?185:205}, width=1180, height=margin.top+rows.length*38+margin.bottom;
+  const margin={top:170,right:90,bottom:20,left:currentLang==='ja'?185:205}, width=1180, height=margin.top+rows.length*38+margin.bottom;
   const svg=d3.select('#target-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Affected target and consequence cross-map');
   const x=d3.scaleBand().domain(cols).range([margin.left,width-margin.right]).padding(.06), y=d3.scaleBand().domain(rows).range([margin.top,height-margin.bottom]).padding(.07);
   const cells=[];
@@ -492,7 +520,7 @@ function renderTargetResult(){
   const max=d3.max(cells,d=>d.n)||1, fill=d3.scaleSequential().domain([0,max]).interpolator(d3.interpolate('#eef3f8','#6f9fef'));
   svg.append('text').attr('x',margin.left).attr('y',28).attr('font-size',19).attr('font-weight',650).attr('fill','#202938').text(I18N[currentLang].chartTargetTitle);
   svg.append('text').attr('x',margin.left).attr('y',48).attr('font-size',12).attr('fill','#657287').text(`${items.length}${I18N[currentLang].enrichedSuffix}`);
-  svg.selectAll('text.col').data(cols).join('text').attr('class','axis').attr('text-anchor','start').attr('transform',col=>`translate(${x(col)+x.bandwidth()/2},${margin.top-22}) rotate(-38)`).call(rotatedAxisLabel,col=>dlabel(col));
+  svg.selectAll('text.col').data(cols).join('text').attr('class','axis').attr('text-anchor','start').attr('transform',col=>`translate(${x(col)+x.bandwidth()/2},${margin.top-16}) rotate(-38)`).call(rotatedAxisLabel,col=>dlabel(col));
   svg.selectAll('text.row').data(rows).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',row=>y(row)+y.bandwidth()/2+4).call(wrapEndAnchored,row=>dlabel(row));
   svg.selectAll('rect.cell').data(cells).join('rect').attr('class','cell').attr('x',d=>x(d.col)).attr('y',d=>y(d.row)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(dlabel(d.row))} × ${escapeHtml(dlabel(d.col))}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();filterPaperTable('target',d.list,`${dlabel(d.row)} × ${dlabel(d.col)}`);});
   svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.col)+x.bandwidth()/2).attr('y',d=>y(d.row)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',11).attr('font-weight',650).attr('fill',d=>d.n/max>.48?'#fff':'#202938').style('pointer-events','none').text(d=>d.n);
@@ -500,14 +528,14 @@ function renderTargetResult(){
 function renderThreatRisk(){
   const items=papers.filter(p=>p.threat_model.kind!=='survey');
   const rows=MECHANISM_GROUPS, cols=['task-reliability','physical-safety','ethical-societal','security-privacy'];
-  const margin={top:108,right:55,bottom:20,left: currentLang==='ja' ? 210 : 290}, width=1180, height=Math.max(300,margin.top+rows.length*42+margin.bottom);
+  const margin={top:100,right:55,bottom:20,left: currentLang==='ja' ? 210 : 290}, width=1180, height=Math.max(300,margin.top+rows.length*42+margin.bottom);
   const svg=d3.select('#risk-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Threat mechanism family and evaluated risk cross-map');
   const x=d3.scaleBand().domain(cols).range([margin.left,width-margin.right]).padding(.06), y=d3.scaleBand().domain(rows.map(g=>g.name)).range([margin.top,height-margin.bottom]).padding(.08);
   const cells=[]; for(const mg of rows) for(const col of cols){const list=items.filter(p=>threatValues(p,'mechanism').some(m=>mg.values.includes(m))&&(p.risks||[]).includes(col));cells.push({mg,col,list,n:list.length});}
   const max=d3.max(cells,d=>d.n)||1, fill=d3.scaleSequential().domain([0,max]).interpolator(d3.interpolate('#eef3f8','#6f9fef'));
   svg.append('text').attr('x',margin.left).attr('y',28).attr('font-size',19).attr('font-weight',650).attr('fill','#202938').text(I18N[currentLang].chartRiskTitle);
   svg.append('text').attr('x',margin.left).attr('y',48).attr('font-size',12).attr('fill','#657287').text(`${items.length}${I18N[currentLang].enrichedSuffix}`);
-  svg.selectAll('text.col').data(cols).join('text').attr('class','axis').attr('text-anchor','middle').attr('x',d=>x(d)+x.bandwidth()/2).attr('y',72).text(d=>dlabel(d));
+  svg.selectAll('text.col').data(cols).join('text').attr('class','axis').attr('text-anchor','middle').attr('x',d=>x(d)+x.bandwidth()/2).attr('y',86).text(d=>dlabel(d));
   svg.selectAll('text.row').data(rows).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',mg=>y(mg.name)+y.bandwidth()/2+4).call(wrapEndAnchored, mg=>familyLabel(mg));
   svg.selectAll('rect.cell').data(cells).join('rect').attr('class','cell').attr('x',d=>x(d.col)).attr('y',d=>y(d.mg.name)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(familyLabel(d.mg))} × ${escapeHtml(dlabel(d.col))}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();filterPaperTable('risk',d.list,`${familyLabel(d.mg)} × ${dlabel(d.col)}`);});
   svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.col)+x.bandwidth()/2).attr('y',d=>y(d.mg.name)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',11).attr('font-weight',650).attr('fill',d=>d.n/max>.48?'#fff':'#202938').style('pointer-events','none').text(d=>d.n);
@@ -572,6 +600,9 @@ function setLanguage(lang){
   document.getElementById('lang-en').setAttribute('aria-pressed', String(lang === 'en'));
   document.getElementById('lang-ja').setAttribute('aria-pressed', String(lang === 'ja'));
   applyStaticI18n(lang);
+  const contactLink = document.getElementById('contact-link');
+  contactLink.setAttribute('aria-label', I18N[lang].contactLabel);
+  contactLink.setAttribute('title', I18N[lang].contactLabel);
   document.getElementById('readme-frame').src = lang === 'ja' ? 'readme.ja.html' : 'readme.html';
   document.getElementById('taxonomy-frame').src = lang === 'ja' ? 'taxonomy.ja.html' : 'taxonomy.html';
   localStorage.setItem('lang', lang);
@@ -579,6 +610,48 @@ function setLanguage(lang){
 }
 document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
 document.getElementById('lang-ja').addEventListener('click', () => setLanguage('ja'));
+
+const BIBTEX = `@software{waseda_awesome_physical_ai_safety,
+  author  = {Waseda, Futa},
+  title   = {Awesome Physical AI Safety},
+  year    = {2026},
+  doi     = {10.5281/zenodo.23348593},
+  url     = {https://github.com/futakw/Awesome-Physical-AI-Safety}
+}`;
+document.getElementById('citation-bibtex').textContent = BIBTEX;
+const citationLink = document.getElementById('citation-link'), citationPopover = document.getElementById('citation-popover'), citationCopy = document.getElementById('citation-copy');
+function closeCitationPopover(){ citationPopover.hidden = true; citationLink.setAttribute('aria-expanded', 'false'); }
+citationLink.addEventListener('click', event => {
+  event.stopPropagation();
+  const open = citationPopover.hidden;
+  citationPopover.hidden = !open;
+  citationLink.setAttribute('aria-expanded', String(open));
+});
+function flashCopied(){
+  citationCopy.textContent = I18N[currentLang].citeCopied;
+  setTimeout(() => { citationCopy.textContent = I18N[currentLang].citeCopy; }, 1500);
+}
+citationCopy.addEventListener('click', () => {
+  const bibtexEl = document.getElementById('citation-bibtex');
+  const selectFallback = () => {
+    const range = document.createRange();
+    range.selectNodeContents(bibtexEl);
+    const selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+    try { document.execCommand('copy'); flashCopied(); } catch { /* user can copy the selection manually */ }
+  };
+  if (navigator.clipboard?.writeText) {
+    navigator.clipboard.writeText(BIBTEX).then(flashCopied, selectFallback);
+  } else {
+    selectFallback();
+  }
+});
+document.addEventListener('click', event => { if (!citationPopover.hidden && !citationPopover.contains(event.target) && event.target !== citationLink) closeCitationPopover(); });
+document.addEventListener('keydown', event => { if (event.key === 'Escape') closeCitationPopover(); });
+// Clicks inside the README/Taxonomy iframes never bubble to this document,
+// so fall back to closing on window blur (focus moving into the iframe).
+window.addEventListener('blur', () => { if (!citationPopover.hidden) closeCitationPopover(); });
 
 const savedLang = localStorage.getItem('lang');
 const browserJapanese = [navigator.language, ...(navigator.languages || [])].some(l => (l || '').toLowerCase().startsWith('ja'));

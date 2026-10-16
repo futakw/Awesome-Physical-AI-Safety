@@ -7,7 +7,7 @@ too, except when `paper_url` is an arXiv/OpenReview preprint and `venue`
 already names a different, confirmed venue — that preprint's own year can
 legitimately differ from its eventual venue year, so `year` stays
 curator-verified against the venue's own listing instead (see
-docs/metadata-schema.md#venue-and-year). When the source itself is the venue
+docs/reference/metadata-schema.md#venue-and-year). When the source itself is the venue
 record (DOI/Crossref, ACL Anthology, CVF proceedings, etc.), `year` is always
 checked against it. Network failures are fatal: an unavailable source is not
 evidence that metadata is correct.
@@ -209,7 +209,7 @@ def verify_record(record: dict[str, Any]) -> list[str]:
         errors.append(f"{label}: first_author mismatch\n  catalog: {record['first_author']}\n  source:  {source.first_author}\n  source_url: {source.source_url}")
     # A preprint host's own posted year can legitimately differ from a later
     # conference/journal acceptance year (see
-    # docs/metadata-schema.md#venue-and-year). Skip the automated year check
+    # docs/reference/metadata-schema.md#venue-and-year). Skip the automated year check
     # only when `paper_url` points at that preprint AND the catalog already
     # names a different, confirmed venue — the venue's own proceedings year
     # is curator-verified instead, not machine-checked against the preprint.

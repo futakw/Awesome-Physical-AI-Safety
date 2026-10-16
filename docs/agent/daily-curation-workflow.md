@@ -11,8 +11,8 @@ From the repository root, read:
 - `AGENTS.md`
 - the Scope and Curation Policy in `README.md`
 - `CONTRIBUTING.md`
-- `docs/taxonomy.md`
-- `docs/metadata-schema.md`
+- `docs/reference/taxonomy.md`
+- `docs/reference/metadata-schema.md`
 - `data/papers.json`
 
 Inspect the current branch, remote, and working tree before editing. Preserve unrelated changes; do not reset or overwrite them.
@@ -41,12 +41,12 @@ For every new or updated record:
 
 - use a stable, unique `id`
 - store the official title and first-author surname
-- collect `first_submission_date` and `first_submission_source` as defined in `docs/metadata-schema.md`; use the arXiv v1 UTC date, never the revision, publication, or catalog-addition date
+- collect `first_submission_date` and `first_submission_source` as defined in `docs/reference/metadata-schema.md`; use the arXiv v1 UTC date, never the revision, publication, or catalog-addition date
 - use the confirmed venue and venue year; use `arXiv` when acceptance is unverified
 - use a primary `paper_url` and only an official or author-maintained `code_url`
 - assign one primary `section` and one valid `subsection`
 - assign `risks` only for empirically evaluated outcomes
-- use the controlled structured `threat_model` from `docs/taxonomy.md`
+- use the controlled structured `threat_model` from `docs/reference/taxonomy.md`; `mechanism` is technique-oriented — assign the attack technique or failure mode the paper's method or experiments actually establish, never from the title alone, allow multiple labels only when each is independently evidenced, and use an empty `mechanism` list (not an unsupported guess) when no concrete technique is established. Set `threat_model.curation_status` to the actual evidence depth, same scale as the extensions below.
 - audit secondary defense contributions regardless of primary section; add `defense` when the paper proposes or experimentally evaluates a substantive mitigation, and omit it after review when no such contribution exists
 - exclude discussion-only recommendations, future-work suggestions, and survey coverage from `defense`
 - keep experimental settings and secondary descriptors in `tags`
