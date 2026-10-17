@@ -15,9 +15,21 @@ This taxonomy was independently defined and refined by Futa Waseda.
 | **CONSEQUENCE** | What happens as a result? |
 | **MEASURED RISK** | What risk is empirically evaluated? |
 
+<p align="center">
+  <a href="../visualizations/0_Taxonomy_Overview.png">
+    <img src="../visualizations/0_Taxonomy_Overview.png" alt="Overview of the six-axis Physical AI Safety taxonomy" width="100%">
+  </a>
+</p>
+
 ## WHEN
 
 WHEN identifies the stage at which a threat is introduced or activated, or a failure is evaluated. A study can span more than one stage—for example, a backdoor may be implanted during training and activated at inference time.
+
+<p align="center">
+  <a href="../visualizations/1_Taxonomy_When.png">
+    <img src="../visualizations/1_Taxonomy_When.png" alt="WHEN axis: lifecycle stages where a threat or failure occurs" width="100%">
+  </a>
+</p>
 
 <!-- taxonomy-sync:start lifecycle -->
 | Label | Meaning |
@@ -30,6 +42,12 @@ WHEN identifies the stage at which a threat is introduced or activated, or a fai
 ## WHERE
 
 WHERE describes the surface that is directly manipulated, shifted, corrupted, or evaluated—not every internal component that might be affected later.
+
+<p align="center">
+  <a href="../visualizations/2_Taxonomy_Where.png">
+    <img src="../visualizations/2_Taxonomy_Where.png" alt="WHERE axis: surface families across the perceive-reason-act pipeline" width="100%">
+  </a>
+</p>
 
 <!-- taxonomy-sync:start surface -->
 | Family | Labels |
@@ -49,6 +67,12 @@ For example, a printed instruction in a camera view may use the `physical-semant
 
 HOW names the concrete attack technique or failure mode studied by the paper. It is technique-oriented: it describes what the study does or evaluates without claiming that the label is the deepest internal cause.
 
+<p align="center">
+  <a href="../visualizations/3_Taxonomy_How.png">
+    <img src="../visualizations/3_Taxonomy_How.png" alt="HOW axis: technique-oriented mechanism families" width="100%">
+  </a>
+</p>
+
 <!-- taxonomy-sync:start mechanism -->
 | Family | Labels |
 |---|---|
@@ -63,6 +87,12 @@ HOW names the concrete attack technique or failure mode studied by the paper. It
 ## TARGET
 
 TARGET identifies the component, capability, or asset that the study explicitly attacks, protects, or evaluates. It does not assert knowledge of the system's hidden causal pathway.
+
+<p align="center">
+  <a href="../visualizations/4_Taxonomy_Target.png">
+    <img src="../visualizations/4_Taxonomy_Target.png" alt="TARGET axis: the component, capability, or asset explicitly attacked or evaluated" width="100%">
+  </a>
+</p>
 
 <!-- taxonomy-sync:start target -->
 | Family | Labels |
@@ -99,6 +129,12 @@ CONSEQUENCE records the specific outcome reached by the threat or failure path. 
 ## MEASURED RISK
 
 MEASURED RISK captures the broad risk domain that a paper evaluates empirically. A label is used only when experiments report a corresponding metric—not merely because the paper discusses a possible risk.
+
+<p align="center">
+  <a href="../visualizations/6_Taxonomy_MeasuredRisk.png">
+    <img src="../visualizations/6_Taxonomy_MeasuredRisk.png" alt="MEASURED RISK axis: the four broad, empirically evaluated risk domains" width="100%">
+  </a>
+</p>
 
 <!-- taxonomy-sync:start risks -->
 | Category | Typical evidence |

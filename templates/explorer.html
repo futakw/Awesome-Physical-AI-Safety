@@ -157,6 +157,7 @@
       <button type="button" data-view="risk" aria-pressed="false" data-i18n="navRisk">How × Measured Risk</button>
       <button type="button" data-view="defense" aria-pressed="false" data-i18n="navDefense">Defense × Threat</button>
       <button type="button" data-view="target" aria-pressed="false" data-i18n="navTarget">Target × Result</button>
+      <button type="button" data-view="outcome-risk" aria-pressed="false" data-i18n="navOutcomeRisk">Outcome × Measured Risk</button>
     </nav>
     <p class="author">Author: <a href="https://futa-waseda.netlify.app/" target="_blank" rel="noopener noreferrer">Futa Waseda</a><a class="contact-link" id="contact-link" href="https://futa-waseda.netlify.app/contact/" target="_blank" rel="noopener noreferrer" aria-label="Contact" title="Contact"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="15" height="11" rx="1.8"/><path d="M3 5.5 10 11 17 5.5"/></svg></a></p>
     </div>
@@ -169,6 +170,7 @@
   <section id="risk"><p class="note" data-i18n="riskNote">Rows are threat mechanisms and columns are empirically evaluated risk outcomes. Click a cell to filter the table.</p><div id="risk-chart"></div><div id="risk-table"></div></section>
   <section id="defense"><p class="note" data-i18n="defenseNote">Rows are defense mechanisms and columns are the threat families they address. Empty cells expose catalog coverage gaps.</p><div id="defense-chart"></div><div id="defense-table"></div></section>
   <section id="target"><p class="note" data-i18n="targetNote">Rows are affected targets and columns are resulting consequences. Click a cell to filter the table.</p><div id="target-chart"></div><div id="target-table"></div></section>
+  <section id="outcome-risk"><p class="note" data-i18n="outcomeRiskNote">Rows are resulting consequences and columns are empirically evaluated risk outcomes. Click a cell to filter the table.</p><div id="outcome-risk-chart"></div><div id="outcome-risk-table"></div></section>
   <section id="readme" class="active"><iframe class="doc-frame" id="readme-frame" src="readme.html" title="Rendered README"></iframe></section>
   <section id="taxonomy"><iframe class="doc-frame" id="taxonomy-frame" src="taxonomy.html" title="Rendered taxonomy"></iframe></section>
   </div>
@@ -183,7 +185,10 @@ const KIND_TAG_COLORS = {adversarial:{bg:'#fde8e8',fg:'#a23232'},'non-adversaria
 const KIND_LABELS_EN = {adversarial:'Adversarial','non-adversarial':'Non Adversarial','system-failure':'System Failure',survey:'Survey',evaluation:'Evaluation'};
 const RISK_TAG_COLORS = {'task-reliability':{bg:'#eaf1fd',fg:'#2f5fa8'},'physical-safety':{bg:'#faf1df',fg:'#8a6512'},'ethical-societal':{bg:'#f1eafb',fg:'#6b3fb3'},'security-privacy':{bg:'#fbe8ed',fg:'#a23f5c'}};
 const DEFENSE_MECHANISMS = ['adversarial-training','robust-finetuning','input-filtering','representation-steering','runtime-monitoring','uncertainty-gating','action-shielding','formal-verification','failure-recovery','model-merging'];
-const TARGETS = ['perception-model','world-state','reasoning-process','task-planner','vla-policy','action-generation','runtime-monitor','robot-executor','shared-system-state','private-data'];
+// Canonical order from docs/reference/taxonomy.md's Target Vocabulary table
+// (Perception & Understanding -> Reasoning, Planning & Policy -> Action &
+// System Operation -> Data & Privacy Assets).
+const TARGETS = ['perception-model','task-planner','reasoning-process','world-state','vla-policy','action-generation','robot-executor','runtime-monitor','shared-system-state','private-data'];
 const CONSEQUENCES = ['task-failure','targeted-action','action-freezing','unsafe-success','collision','unsafe-motion','physical-damage','control-hijacking','policy-violation','privacy-leakage','availability-loss','recovery-failure'];
 // Canonical family groupings from docs/reference/taxonomy.md. `mechanism` is grouped by
 // the nature of the technique (how), `surface` by where it sits in the
@@ -264,17 +269,18 @@ const I18N = {
   en: {
     title: 'Awesome Physical AI Safety',
     ghlink: '⭐ Star on GitHub',
-    navReadme: 'Overview', navTaxonomy: 'Taxonomy', navTimeline: 'Timeline', navHeatmap: 'Mechanism × Surface', navRisk: 'Mechanism × Risk', navDefense: 'Defense × Threat', navTarget: 'Target × Outcome',
+    navReadme: 'Overview', navTaxonomy: 'Taxonomy', navTimeline: 'Timeline', navHeatmap: 'Mechanism × Surface', navRisk: 'Mechanism × Risk', navDefense: 'Defense × Threat', navTarget: 'Target × Outcome', navOutcomeRisk: 'Outcome × Risk',
     badgeLicenses: 'Licenses', badgePapers: 'Papers', badgeUpdate: 'Update', badgeCuration: 'Curation', badgeDaily: 'Daily', badgeLlm: 'LLM-assisted',
     timelineNote: 'Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to filter the table.',
     heatmapNote: 'Cells show mechanism-surface co-occurrence for concrete threat models. Hover for a preview; click a cell to filter the table.',
     riskNote: 'Rows are threat mechanisms and columns are empirically evaluated risk outcomes. Click a cell to filter the table.',
     defenseNote: 'Rows are defense mechanisms and columns are the threat families they address. Empty cells expose catalog coverage gaps.',
     targetNote: 'Rows are affected targets and columns are resulting consequences. Click a cell to filter the table.',
+    outcomeRiskNote: 'Rows are resulting consequences and columns are empirically evaluated risk outcomes. Click a cell to filter the table.',
     chartTimelineTitle: 'Field timeline',
     chartHeatmapTitle: 'Threat Mechanism Family × Surface Family',
     chartHeatmapHint: 'Hover a cell to inspect contributing papers.',
-    chartRiskTitle: 'Threat Mechanism Family × Empirically Evaluated Risk Outcome', chartDefenseTitle: 'Defense Mechanism × Defended Threat Mechanism Family', chartTargetTitle: 'Affected Target × Consequence',
+    chartRiskTitle: 'Threat Mechanism Family × Empirically Evaluated Risk Outcome', chartDefenseTitle: 'Defense Mechanism × Defended Threat Mechanism Family', chartTargetTitle: 'Affected Target × Consequence', chartOutcomeRiskTitle: 'Consequence × Empirically Evaluated Risk Outcome',
     enrichedSuffix: ' enriched papers; hover or click a cell for the paper list.',
     papersWord: ' papers', tablePaper: 'Paper', tableVenue: 'Venue', tableRisk: 'Evaluated Risk', tableThreat: 'Threat Model', tableAll: 'All papers in this view', tableShowing: 'Showing', tableReset: 'Reset filter', tableCode: 'Project / Code', tableNone: 'None reported', storyWhen: 'When', storyWhere: 'Where', storyHow: 'How', storyTarget: 'Target', storyResult: 'Result',
     citeLink: '📑 Cite', citeTitle: 'Cite this catalog', citeCopy: 'Copy BibTeX', citeCopied: 'Copied!', contactLabel: 'Contact',
@@ -282,17 +288,18 @@ const I18N = {
   ja: {
     title: 'Awesome Physical AI Safety',
     ghlink: '⭐ GitHubでStar',
-    navReadme: 'Overview', navTaxonomy: 'Taxonomy', navTimeline: 'タイムライン', navHeatmap: 'Mechanism × Surface', navRisk: 'Mechanism × Risk', navDefense: 'Defense × Threat', navTarget: 'Target × Outcome',
+    navReadme: 'Overview', navTaxonomy: 'Taxonomy', navTimeline: 'タイムライン', navHeatmap: 'Mechanism × Surface', navRisk: 'Mechanism × Risk', navDefense: 'Defense × Threat', navTarget: 'Target × Outcome', navOutcomeRisk: 'Outcome × Risk',
     badgeLicenses: 'ライセンス', badgePapers: '論文数', badgeUpdate: '更新頻度', badgeCuration: 'キュレーション', badgeDaily: '毎日', badgeLlm: 'LLM支援',
     timelineNote: 'バブルの大きさは、分野×年のセルに含まれる論文数を表します。ホバーでプレビュー、クリックで下の表を絞り込みます。',
     heatmapNote: 'セルは具体的なthreat modelにおけるmechanismとsurfaceの共起を示します。ホバーでプレビュー、クリックで下の表を絞り込みます。',
-    riskNote: '行はthreatメカニズム、列は実証的に評価されたリスクアウトカムです。クリックで下の表を絞り込みます。',
+    riskNote: '行はthreatメカニズム、列は実証的に評価されたリスクです。クリックで下の表を絞り込みます。',
     defenseNote: '行は防御メカニズム、列は対応する脅威familyです。空のセルはcatalog上のcoverage gapを示します。',
     targetNote: '行は影響を受ける対象、列は結果です。セルをクリックすると下の表を絞り込みます。',
+    outcomeRiskNote: '行は結果（consequence）、列は実証的に評価されたリスクです。セルをクリックすると下の表を絞り込みます。',
     chartTimelineTitle: 'フィールドタイムライン',
     chartHeatmapTitle: '脅威メカニズム群 × サーフェス群',
     chartHeatmapHint: 'セルにホバーすると該当論文を確認できます。',
-    chartRiskTitle: '脅威メカニズム群 × 実証的に評価されたリスクアウトカム', chartDefenseTitle: '防御メカニズム × 対象脅威メカニズム群', chartTargetTitle: '影響対象 × 帰結',
+    chartRiskTitle: '脅威メカニズム群 × 実証的に評価されたリスク', chartDefenseTitle: '防御メカニズム × 対象脅威メカニズム群', chartTargetTitle: '影響対象 × 帰結', chartOutcomeRiskTitle: '帰結（Consequence） × 実証的に評価されたリスク',
     enrichedSuffix: '件の拡張済み論文。ホバーまたはクリックで論文一覧を表示します。',
     papersWord: '件', tablePaper: '論文', tableVenue: 'Venue', tableRisk: '評価リスク', tableThreat: '脅威モデル', tableAll: 'このビューの全論文', tableShowing: '表示中', tableReset: '絞り込み解除', tableCode: 'Project / Code', tableNone: '報告なし', storyWhen: 'いつ', storyWhere: 'どこ', storyHow: '方法', storyTarget: '対象', storyResult: '結果',
     citeLink: '📑 引用', citeTitle: '引用方法', citeCopy: 'BibTeXをコピー', citeCopied: 'コピーしました', contactLabel: 'お問い合わせ',
@@ -308,6 +315,7 @@ const tableDefaults = {
   risk: papers.filter(p=>p.threat_model.kind!=='survey'),
   defense: papers.filter(p=>p.defense),
   target: papers.filter(p=>!['survey','evaluation'].includes(p.threat_model.kind)),
+  'outcome-risk': papers.filter(p=>p.threat_model.kind!=='survey'),
 };
 function tagsHtml(items) { return items.length ? items.map(({value,bg,fg,label})=>`<span class="tag" style="background:${bg};color:${fg}">${escapeHtml(label ?? dlabel(value))}</span>`).join('') : `<span class="empty">${I18N[currentLang].tableNone}</span>`; }
 function riskTagItems(p) { return (p.risks||[]).map(value=>({value,...(RISK_TAG_COLORS[value]||{bg:'#eef3fa',fg:'#36506f'})})); }
@@ -525,6 +533,24 @@ function renderTargetResult(){
   svg.selectAll('rect.cell').data(cells).join('rect').attr('class','cell').attr('x',d=>x(d.col)).attr('y',d=>y(d.row)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(dlabel(d.row))} × ${escapeHtml(dlabel(d.col))}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();filterPaperTable('target',d.list,`${dlabel(d.row)} × ${dlabel(d.col)}`);});
   svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.col)+x.bandwidth()/2).attr('y',d=>y(d.row)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',11).attr('font-weight',650).attr('fill',d=>d.n/max>.48?'#fff':'#202938').style('pointer-events','none').text(d=>d.n);
 }
+function renderOutcomeRisk(){
+  const items=papers.filter(p=>p.threat_model.kind!=='survey'), rows=CONSEQUENCES, cols=['task-reliability','physical-safety','ethical-societal','security-privacy'];
+  const margin={top:100,right:90,bottom:20,left:currentLang==='ja'?185:205}, width=1180, height=margin.top+rows.length*38+margin.bottom;
+  const svg=d3.select('#outcome-risk-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Consequence and evaluated risk cross-map');
+  const x=d3.scaleBand().domain(cols).range([margin.left,width-margin.right]).padding(.06), y=d3.scaleBand().domain(rows).range([margin.top,height-margin.bottom]).padding(.07);
+  const cells=[];
+  for(const row of rows) for(const col of cols){
+    const list=items.filter(p=>threatValues(p,'consequence').includes(row)&&(p.risks||[]).includes(col));
+    cells.push({row,col,list,n:list.length});
+  }
+  const max=d3.max(cells,d=>d.n)||1, fill=d3.scaleSequential().domain([0,max]).interpolator(d3.interpolate('#eef3f8','#6f9fef'));
+  svg.append('text').attr('x',margin.left).attr('y',28).attr('font-size',19).attr('font-weight',650).attr('fill','#202938').text(I18N[currentLang].chartOutcomeRiskTitle);
+  svg.append('text').attr('x',margin.left).attr('y',48).attr('font-size',12).attr('fill','#657287').text(`${items.length}${I18N[currentLang].enrichedSuffix}`);
+  svg.selectAll('text.col').data(cols).join('text').attr('class','axis').attr('text-anchor','middle').attr('x',d=>x(d)+x.bandwidth()/2).attr('y',86).text(d=>dlabel(d));
+  svg.selectAll('text.row').data(rows).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',row=>y(row)+y.bandwidth()/2+4).call(wrapEndAnchored,row=>dlabel(row));
+  svg.selectAll('rect.cell').data(cells).join('rect').attr('class','cell').attr('x',d=>x(d.col)).attr('y',d=>y(d.row)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(dlabel(d.row))} × ${escapeHtml(dlabel(d.col))}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();filterPaperTable('outcome-risk',d.list,`${dlabel(d.row)} × ${dlabel(d.col)}`);});
+  svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.col)+x.bandwidth()/2).attr('y',d=>y(d.row)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',11).attr('font-weight',650).attr('fill',d=>d.n/max>.48?'#fff':'#202938').style('pointer-events','none').text(d=>d.n);
+}
 function renderThreatRisk(){
   const items=papers.filter(p=>p.threat_model.kind!=='survey');
   const rows=MECHANISM_GROUPS, cols=['task-reliability','physical-safety','ethical-societal','security-privacy'];
@@ -578,13 +604,13 @@ window.addEventListener('hashchange', activateViewFromHash);
 activateViewFromHash();
 
 function renderAll(){
-  for (const id of ['timeline-chart','heatmap-chart','risk-chart','defense-chart','target-chart']) {
+  for (const id of ['timeline-chart','heatmap-chart','risk-chart','defense-chart','target-chart','outcome-risk-chart']) {
     document.getElementById(id).innerHTML = '';
   }
-  for (const render of [renderTimeline, renderHeatmap, renderThreatRisk, renderDefenseThreat, renderTargetResult]) {
+  for (const render of [renderTimeline, renderHeatmap, renderThreatRisk, renderDefenseThreat, renderTargetResult, renderOutcomeRisk]) {
     try { render(); } catch (error) { console.error('Visualization failed to render:', error); }
   }
-  for (const view of ['timeline','heatmap','risk','defense','target']) renderPaperTable(view);
+  for (const view of ['timeline','heatmap','risk','defense','target','outcome-risk']) renderPaperTable(view);
 }
 
 function applyStaticI18n(lang){

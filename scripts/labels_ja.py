@@ -137,14 +137,14 @@ TARGET_JA = {
     "robot-executor": "ロボット実行系",
     "runtime-monitor": "ランタイムモニター",
     "shared-system-state": "共有システム状態",
-    "task-planner": "タスクプランナー",
+    "task-planner": "タスク計画",
     "vla-policy": "VLAポリシー",
     "world-state": "世界状態",
 }
 
 CONSEQUENCE_JA = {
     "action-freezing": "行動フリーズ",
-    "availability-loss": "可用性喪失",
+    "availability-loss": "利用不能",
     "collision": "衝突",
     "control-hijacking": "制御乗っ取り",
     "physical-damage": "物理的損害",

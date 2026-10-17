@@ -15,9 +15,21 @@
 | **CONSEQUENCE** | 結果として何が起こるか？ |
 | **MEASURED RISK** | どのリスクを実証的に評価したか？ |
 
+<p align="center">
+  <a href="../visualizations/0_Taxonomy_Overview.png">
+    <img src="../visualizations/0_Taxonomy_Overview.png" alt="Physical AI Safety taxonomyの6軸の概要" width="100%">
+  </a>
+</p>
+
 ## WHEN
 
 WHENは、脅威が導入・発動される段階、または失敗が評価される段階を示します。複数の段階にまたがる場合もあり、例えばバックドアは学習時に埋め込まれ、推論時に発動します。
+
+<p align="center">
+  <a href="../visualizations/1_Taxonomy_When.png">
+    <img src="../visualizations/1_Taxonomy_When.png" alt="WHEN軸：脅威・失敗が生じるlifecycleの段階" width="100%">
+  </a>
+</p>
 
 <!-- taxonomy-sync:start lifecycle -->
 | ラベル | 意味 |
@@ -30,6 +42,12 @@ WHENは、脅威が導入・発動される段階、または失敗が評価さ�
 ## WHERE
 
 WHEREは、直接操作・変化・破損・評価されるsurfaceを表します。その後に影響を受けうる全ての内部componentを列挙する軸ではありません。
+
+<p align="center">
+  <a href="../visualizations/2_Taxonomy_Where.png">
+    <img src="../visualizations/2_Taxonomy_Where.png" alt="WHERE軸：perceive-reason-actパイプライン上のsurface family" width="100%">
+  </a>
+</p>
 
 <!-- taxonomy-sync:start surface -->
 | Family | ラベル |
@@ -49,6 +67,12 @@ WHEREは、直接操作・変化・破損・評価されるsurfaceを表しま�
 
 HOWは、論文が扱う具体的な攻撃手法または失敗モードを表します。これはtechnique-orientedな軸であり、そのラベルが最深部の内部原因であると主張するものではありません。
 
+<p align="center">
+  <a href="../visualizations/3_Taxonomy_How.png">
+    <img src="../visualizations/3_Taxonomy_How.png" alt="HOW軸：technique-orientedなmechanism family" width="100%">
+  </a>
+</p>
+
 <!-- taxonomy-sync:start mechanism -->
 | Family | ラベル |
 |---|---|
@@ -63,6 +87,12 @@ HOWは、論文が扱う具体的な攻撃手法または失敗モードを表�
 ## TARGET
 
 TARGETは、研究が明示的に攻撃・保護・評価するcomponent、能力、資産を表します。system内部の因果経路を推定する軸ではありません。
+
+<p align="center">
+  <a href="../visualizations/4_Taxonomy_Target.png">
+    <img src="../visualizations/4_Taxonomy_Target.png" alt="TARGET軸：明示的に攻撃・評価されるcomponent、能力、資産" width="100%">
+  </a>
+</p>
 
 <!-- taxonomy-sync:start target -->
 | Family | ラベル |
@@ -99,6 +129,12 @@ CONSEQUENCEは、脅威・失敗経路が到達した具体的な結果を表し
 ## MEASURED RISK
 
 MEASURED RISKは、論文が実験で測定した広いrisk domainを表します。起こりうるリスクとして議論しただけでは付与せず、対応する評価指標が報告された場合に使います。
+
+<p align="center">
+  <a href="../visualizations/6_Taxonomy_MeasuredRisk.png">
+    <img src="../visualizations/6_Taxonomy_MeasuredRisk.png" alt="MEASURED RISK軸：実証的に評価される4つの広いrisk domain" width="100%">
+  </a>
+</p>
 
 <!-- taxonomy-sync:start risks -->
 | Category | 代表的な根拠 |

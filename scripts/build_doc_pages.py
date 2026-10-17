@@ -77,6 +77,12 @@ def main() -> int:
         if source.parent == ROOT / 'docs' / 'reference':
             text = text.replace('](metadata-schema.md', '](reference/metadata-schema.md')
         if source.parent == ROOT / 'docs' / 'public':
+            # Slide images live in docs/visualizations/; the source Markdown
+            # links up from docs/public/ with ../visualizations/ (correct for
+            # viewing the .md file directly on GitHub), rewritten here to
+            # visualizations/ since the rendered page lives in docs/ itself.
+            text = text.replace('](../visualizations/', '](visualizations/')
+            text = text.replace('="../visualizations/', '="visualizations/')
             # Public Markdown links to its sibling reference directory, while
             # generated pages live one directory higher in docs/.
             text = text.replace('](../reference/', '](reference/')
