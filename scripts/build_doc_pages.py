@@ -3,6 +3,8 @@
 import argparse
 import html
 import json
+import re
+from urllib.parse import urlsplit
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -61,6 +63,34 @@ SWITCHER_TARGETS = {
     'taxonomy.ja.md': ('taxonomy.md', 'taxonomy.html'),
 }
 
+def rewrite_links(text: str, source: Path) -> str:
+    """Resolve repository links from the source location, not the Pages root."""
+    md_target, html_target = SWITCHER_TARGETS[source.name]
+    text = text.replace(f']({md_target})', f']({html_target})')
+
+    def destination(url: str) -> str:
+        parts = urlsplit(url)
+        if parts.scheme or parts.netloc or not parts.path or parts.path.startswith('/'):
+            return url
+        if parts.path in {html_target, 'readme.html', 'readme.ja.html', 'taxonomy.html', 'taxonomy.ja.html'}:
+            return url
+        target = (source.parent / parts.path).resolve()
+        try:
+            relative = target.relative_to(ROOT).as_posix()
+        except ValueError:
+            return url
+        suffix = ('?' + parts.query if parts.query else '') + ('#' + parts.fragment if parts.fragment else '')
+        # Images and charts are mirrored in the Pages publication directory.
+        for prefix in ('assets/visualizations/', 'docs/visualizations/'):
+            if relative.startswith(prefix):
+                return 'visualizations/' + relative[len(prefix):] + suffix
+        # Contributor Markdown and repository-level files are read on GitHub.
+        return 'https://github.com/futakw/Awesome-Physical-AI-Safety/blob/main/' + relative + suffix
+
+    text = re.sub(r'(\]\()([^\s)]+)(\))', lambda m: m[1] + destination(m[2]) + m[3], text)
+    return re.sub(r'((?:href|src)=")([^"]+)(")', lambda m: m[1] + destination(m[2]) + m[3], text)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument('--check', action='store_true', help='Fail if rendered documentation is stale')
@@ -68,26 +98,7 @@ def main() -> int:
     stale = []
     for source, output, title, description, url, lang, og_locale, keywords in PAGE_DEFS:
         text = source.read_text(encoding='utf-8')
-        if source.parent == ROOT:
-            # GitHub Pages publishes docs/ only; use the mirrored SVGs there.
-            text = text.replace('](assets/visualizations/', '](visualizations/').replace('](docs/', '](../docs/')
-            text = text.replace('="assets/visualizations/', '="visualizations/')
-            for filename in ('LICENSE', 'LICENSES.md', 'CONTRIBUTING.md', 'CONTRIBUTING.ja.md', 'CITATION.cff'):
-                text = text.replace(f']({filename})', f'](../{filename})')
-        if source.parent == ROOT / 'docs' / 'reference':
-            text = text.replace('](metadata-schema.md', '](reference/metadata-schema.md')
-        if source.parent == ROOT / 'docs' / 'public':
-            # Slide images live in docs/visualizations/; the source Markdown
-            # links up from docs/public/ with ../visualizations/ (correct for
-            # viewing the .md file directly on GitHub), rewritten here to
-            # visualizations/ since the rendered page lives in docs/ itself.
-            text = text.replace('](../visualizations/', '](visualizations/')
-            text = text.replace('="../visualizations/', '="visualizations/')
-            # Public Markdown links to its sibling reference directory, while
-            # generated pages live one directory higher in docs/.
-            text = text.replace('](../reference/', '](reference/')
-        md_target, html_target = SWITCHER_TARGETS[source.name]
-        text = text.replace(f']({md_target})', f']({html_target})')
+        text = rewrite_links(text, source)
         alt_source_name, _ = SWITCHER_TARGETS[source.name]
         alt_page = PAGES_BY_SOURCE_NAME[alt_source_name]
         alt_url, alt_lang = alt_page[4], alt_page[5]

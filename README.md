@@ -29,7 +29,7 @@ This LLM-assisted catalog helps researchers explore **how physical AI systems fa
   </a>
 </p>
 
-The five-part threat taxonomy describes studied failure paths; **Evaluated Risk Outcomes** are classified separately using the metrics reported in each paper. See the [taxonomy and labeling criteria](docs/reference/taxonomy.md) for details.
+The five-part threat taxonomy describes studied failure paths; **Measured Risk** labels are classified separately using the metrics reported in each paper. See the [taxonomy and labeling criteria](docs/reference/taxonomy.md) for details.
 
 ### Scope
 
@@ -82,7 +82,7 @@ Which measured outcomes are reported for each mechanism? [Inspect the underlying
 
 Each paper is organized by its primary contribution, with two complementary metadata columns:
 
-### Evaluated Risk
+### Measured Risk
 
 Risk labels summarize the outcomes evaluated in each paper:
 
@@ -182,7 +182,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Embodied AI Safety and Security
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[From bits to atoms: A survey of cross-layer safety in Embodied AI](https://arxiv.org/abs/2610.14038)**<br><sub>Feng et al.</sub> | AI Plus 2026 | — | ![Cross-lifecycle](https://img.shields.io/badge/-Cross--lifecycle-6F9FEF?style=flat) ![Multiple surfaces](https://img.shields.io/badge/-Multiple_surfaces-D47A5D?style=flat) <br> ![Survey coverage](https://img.shields.io/badge/-Survey_coverage-657A8C?style=flat) |
 | **[Navigating Embodied Intelligence: Enabling Technologies, Security and Privacy, and Emerging Trends](https://doi.org/10.1109/JIOT.2025.3649049)**<br><sub>Wang et al.</sub> | IEEE IoT Journal 2026 | — | ![Cross-lifecycle](https://img.shields.io/badge/-Cross--lifecycle-6F9FEF?style=flat) ![Multiple surfaces](https://img.shields.io/badge/-Multiple_surfaces-D47A5D?style=flat) <br> ![Survey coverage](https://img.shields.io/badge/-Survey_coverage-657A8C?style=flat) |
@@ -206,7 +206,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Domain-Specific Surveys
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[A Survey on Vision-Language-Action Models for Autonomous Driving](https://arxiv.org/abs/2506.24044)** [![GitHub stars](https://img.shields.io/github/stars/JohnsonJiang1996/Awesome-VLA4AD?style=social)](https://github.com/JohnsonJiang1996/Awesome-VLA4AD)<br><sub>Jiang et al.</sub> | arXiv 2025 | — | ![Cross-lifecycle](https://img.shields.io/badge/-Cross--lifecycle-6F9FEF?style=flat) ![Multiple surfaces](https://img.shields.io/badge/-Multiple_surfaces-D47A5D?style=flat) <br> ![Survey coverage](https://img.shields.io/badge/-Survey_coverage-657A8C?style=flat) |
 | **[From screens to scenes: A survey of embodied AI in healthcare](https://doi.org/10.1016/j.inffus.2025.103033)**<br><sub>Liu et al.</sub> | Information Fusion 2025 | — | ![Cross-lifecycle](https://img.shields.io/badge/-Cross--lifecycle-6F9FEF?style=flat) ![Multiple surfaces](https://img.shields.io/badge/-Multiple_surfaces-D47A5D?style=flat) <br> ![Survey coverage](https://img.shields.io/badge/-Survey_coverage-657A8C?style=flat) |
@@ -216,7 +216,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Position Papers and Research Agendas
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[ARC: Autonomous Robotics Compliance A Three-Layer Governance Architecture for Deployed Autonomous Systems](https://arxiv.org/abs/2609.12932)**<br><sub>Eide et al.</sub> | arXiv 2026 | — | ![Inference → System](https://img.shields.io/badge/-Inference_%E2%86%92_System-6F9FEF?style=flat) ![Multiple surfaces](https://img.shields.io/badge/-Multiple_surfaces-D47A5D?style=flat) <br> ![Survey coverage](https://img.shields.io/badge/-Survey_coverage-657A8C?style=flat) |
 | **[Building Trustworthy Household Robots through Open-World Safety](https://arxiv.org/abs/2610.14034)**<br><sub>Tsai et al.</sub> | arXiv 2026 | — | ![Inference → System](https://img.shields.io/badge/-Inference_%E2%86%92_System-6F9FEF?style=flat) ![Multiple surfaces](https://img.shields.io/badge/-Multiple_surfaces-D47A5D?style=flat) <br> ![Survey coverage](https://img.shields.io/badge/-Survey_coverage-657A8C?style=flat) |
@@ -230,7 +230,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### General VLA Surveys
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[Large VLM-based Vision-Language-Action Models for Robotic Manipulation: A Survey](https://arxiv.org/abs/2508.13073)** [![GitHub stars](https://img.shields.io/github/stars/JiuTian-VL/Large-VLM-based-VLA-for-Robotic-Manipulation?style=social)](https://github.com/JiuTian-VL/Large-VLM-based-VLA-for-Robotic-Manipulation)<br><sub>Shao et al.</sub> | arXiv 2025 | — | ![Training → Inference](https://img.shields.io/badge/-Training_%E2%86%92_Inference-6F9FEF?style=flat) ![Multiple surfaces](https://img.shields.io/badge/-Multiple_surfaces-D47A5D?style=flat) <br> ![Survey coverage](https://img.shields.io/badge/-Survey_coverage-657A8C?style=flat) |
 | **[Pure Vision Language Action (VLA) Models: A Comprehensive Survey](https://arxiv.org/abs/2509.19012)**<br><sub>Zhang et al.</sub> | arXiv 2025 | — | ![Training → Inference](https://img.shields.io/badge/-Training_%E2%86%92_Inference-6F9FEF?style=flat) ![Multiple surfaces](https://img.shields.io/badge/-Multiple_surfaces-D47A5D?style=flat) <br> ![Survey coverage](https://img.shields.io/badge/-Survey_coverage-657A8C?style=flat) |
@@ -242,7 +242,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Training and Adaptation Surveys
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[A Survey on Efficient Vision-Language-Action Models](https://arxiv.org/abs/2510.24795)** [Project / Code](https://evla-survey.github.io/)<br><sub>Yu et al.</sub> | arXiv 2025 | — | ![Cross-lifecycle](https://img.shields.io/badge/-Cross--lifecycle-6F9FEF?style=flat) ![Multiple surfaces](https://img.shields.io/badge/-Multiple_surfaces-D47A5D?style=flat) <br> ![Survey coverage](https://img.shields.io/badge/-Survey_coverage-657A8C?style=flat) |
 | **[A Survey on Vision-Language-Action Models: An Action Tokenization Perspective](https://arxiv.org/abs/2507.01925)**<br><sub>Zhong et al.</sub> | arXiv 2025 | — | ![Training → Inference](https://img.shields.io/badge/-Training_%E2%86%92_Inference-6F9FEF?style=flat) ![Action Interface + Reasoning Representation](https://img.shields.io/badge/-Action_Interface_%2B_Reasoning_Representation-D47A5D?style=flat) <br> ![Survey coverage](https://img.shields.io/badge/-Survey_coverage-657A8C?style=flat) |
@@ -252,7 +252,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### World Model Safety and Security
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[Safety, Security, and Cognitive Risks in World Models](https://arxiv.org/abs/2604.01346)**<br><sub>Parmar et al.</sub> | arXiv 2026 | — | ![Cross-lifecycle](https://img.shields.io/badge/-Cross--lifecycle-6F9FEF?style=flat) ![Multiple surfaces](https://img.shields.io/badge/-Multiple_surfaces-D47A5D?style=flat) <br> ![Survey coverage](https://img.shields.io/badge/-Survey_coverage-657A8C?style=flat) |
 | **[The Safety Challenge of World Models for Embodied AI Agents: A Review](https://arxiv.org/abs/2510.05865)**<br><sub>Baraldi et al.</sub> | arXiv 2025 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Cross-lifecycle](https://img.shields.io/badge/-Cross--lifecycle-6F9FEF?style=flat) ![World State + Task Planning](https://img.shields.io/badge/-World_State_%2B_Task_Planning-D47A5D?style=flat) <br> ![Survey coverage](https://img.shields.io/badge/-Survey_coverage-657A8C?style=flat) |
@@ -261,7 +261,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Privacy, Fairness, and Human-Robot Trust
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[Designing Social Robots with Ethical, User-Adaptive Explainability in the Era of Foundation Models](https://doi.org/10.1145/3776734.3794453)**<br><sub>Doğan et al.</sub> | HRI Companion 2026 | — | ![Inference → System](https://img.shields.io/badge/-Inference_%E2%86%92_System-6F9FEF?style=flat) ![Multiple surfaces](https://img.shields.io/badge/-Multiple_surfaces-D47A5D?style=flat) <br> ![Survey coverage](https://img.shields.io/badge/-Survey_coverage-657A8C?style=flat) |
 | **[Position: Embodied AI Requires a Privacy-Utility Trade-off](https://arxiv.org/abs/2605.05017)** [![GitHub stars](https://img.shields.io/github/stars/rminshen03/EAI_Privacy_Position?style=social)](https://github.com/rminshen03/EAI_Privacy_Position)<br><sub>Fan et al.</sub> | arXiv 2026 | — | ![Inference → System](https://img.shields.io/badge/-Inference_%E2%86%92_System-6F9FEF?style=flat) ![Multiple surfaces](https://img.shields.io/badge/-Multiple_surfaces-D47A5D?style=flat) <br> ![Survey coverage](https://img.shields.io/badge/-Survey_coverage-657A8C?style=flat) |
@@ -274,7 +274,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Governance and Deployment Assurance
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[Safety Case Patterns for VLA-based driving systems: Insights from SimLingo](https://arxiv.org/abs/2603.16013)**<br><sub>Yu et al.</sub> | arXiv 2026 | — | ![Inference → System](https://img.shields.io/badge/-Inference_%E2%86%92_System-6F9FEF?style=flat) ![Multiple surfaces](https://img.shields.io/badge/-Multiple_surfaces-D47A5D?style=flat) <br> ![Survey coverage](https://img.shields.io/badge/-Survey_coverage-657A8C?style=flat) |
 | **[EHAZOP: A Proof of Concept Ethical Hazard Analysis of an Assistive Robot](https://arxiv.org/abs/2406.09239)**<br><sub>Menon et al.</sub> | arXiv 2024 | — | ![Inference → System](https://img.shields.io/badge/-Inference_%E2%86%92_System-6F9FEF?style=flat) ![Physical Semantic Environment + Execution Control](https://img.shields.io/badge/-Physical_Semantic_Environment_%2B_Execution_Control-D47A5D?style=flat) <br> ![Survey coverage](https://img.shields.io/badge/-Survey_coverage-657A8C?style=flat) |
@@ -287,7 +287,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Representation and Language-Action Generalization
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[Generalizable VLA Finetuning via Representation Anchoring and Language-Action Alignment](https://arxiv.org/abs/2607.13429)** [![GitHub stars](https://img.shields.io/github/stars/dwipddalal/Anchor-Align?style=social)](https://github.com/dwipddalal/Anchor-Align)<br><sub>Dalal et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Visual Perception +2](https://img.shields.io/badge/-Visual_Perception_%2B2-D47A5D?style=flat) <br> ![Distribution Shift](https://img.shields.io/badge/-Distribution_Shift-3FA89B?style=flat) &nbsp;→&nbsp; ![VLA policy](https://img.shields.io/badge/-VLA_policy-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
 | **[RARA: Robust Policy Fine-Tuning through Retrieval-Anchored Representation Alignment for Robotic Manipulation](https://arxiv.org/abs/2610.13578)** [Project / Code](https://shua-kang.github.io/RARA_robot/)<br><sub>Kang et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Visual Perception](https://img.shields.io/badge/-Visual_Perception-D47A5D?style=flat) <br> ![Distribution Shift](https://img.shields.io/badge/-Distribution_Shift-3FA89B?style=flat) &nbsp;→&nbsp; ![VLA policy](https://img.shields.io/badge/-VLA_policy-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
@@ -297,7 +297,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Action and Spatial Generalization
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[Boosting Vision-Language-Action Finetuning with Feasible Action Neighborhood Prior](https://arxiv.org/abs/2604.01570)** [![GitHub stars](https://img.shields.io/github/stars/Haochen-Niu/FAN-VLA?style=social)](https://github.com/Haochen-Niu/FAN-VLA)<br><sub>Niu et al.</sub> | CVPR 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![World State +1](https://img.shields.io/badge/-World_State_%2B1-D47A5D?style=flat) <br> ![Distribution Shift](https://img.shields.io/badge/-Distribution_Shift-3FA89B?style=flat) &nbsp;→&nbsp; ![Action Generation](https://img.shields.io/badge/-Action_Generation-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
 | **[From Fixed to Free Cameras: Calibration-Free View-Robust Vision-Language-Action Model](https://arxiv.org/abs/2607.05396)** [Project / Code](https://alibaba-damo-academy.github.io/CamVLA/)<br><sub>Li et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Visual Perception](https://img.shields.io/badge/-Visual_Perception-D47A5D?style=flat) <br> ![Distribution Shift](https://img.shields.io/badge/-Distribution_Shift-3FA89B?style=flat) &nbsp;→&nbsp; ![VLA policy](https://img.shields.io/badge/-VLA_policy-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
@@ -306,7 +306,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### OOD and Generalization
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[Are Vision-Language-Action Models Robust to One-Step Observation Perturbations?](https://arxiv.org/abs/2609.32550)**<br><sub>Yamabe et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Visual Perception +1](https://img.shields.io/badge/-Visual_Perception_%2B1-D47A5D?style=flat) <br> ![Digital Perturbation](https://img.shields.io/badge/-Digital_Perturbation-3FA89B?style=flat) &nbsp;→&nbsp; ![VLA policy](https://img.shields.io/badge/-VLA_policy-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
 | **[Does Adversarial Training Improve Generalization in Multi-View VLAs? Revealing and Mitigating View Collapse](https://arxiv.org/abs/2609.33707)**<br><sub>Waseda et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Visual Perception](https://img.shields.io/badge/-Visual_Perception-D47A5D?style=flat) <br> ![Distribution Shift](https://img.shields.io/badge/-Distribution_Shift-3FA89B?style=flat) &nbsp;→&nbsp; ![VLA policy](https://img.shields.io/badge/-VLA_policy-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
@@ -317,7 +317,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Language and Instruction Generalization
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[Do Vision-Language-Action Models Understand Instructions? A Mechanistic Interpretability Study on Language Grounding](https://arxiv.org/abs/2610.10178)**<br><sub>Wulff et al.</sub> | arXiv 2026 | — | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![User Instruction +1](https://img.shields.io/badge/-User_Instruction_%2B1-D47A5D?style=flat) <br> ![Instruction Ambiguity](https://img.shields.io/badge/-Instruction_Ambiguity-3FA89B?style=flat) &nbsp;→&nbsp; ![Reasoning Process](https://img.shields.io/badge/-Reasoning_Process-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
 | **[ICR-Drive: Instruction Counterfactual Robustness for End-to-End Language-Driven Autonomous Driving](https://arxiv.org/abs/2604.05378)** [![GitHub stars](https://img.shields.io/github/stars/icrdrive/icrdrive?style=social)](https://github.com/icrdrive/icrdrive)<br><sub>Hamid et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![User Instruction +1](https://img.shields.io/badge/-User_Instruction_%2B1-D47A5D?style=flat) <br> ![Distribution Shift](https://img.shields.io/badge/-Distribution_Shift-3FA89B?style=flat) &nbsp;→&nbsp; ![Task Planner](https://img.shields.io/badge/-Task_Planner-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
@@ -326,7 +326,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Open-World Evaluation
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[How VLAs (Really) Work in Open-World Environments](https://arxiv.org/abs/2604.21192)**<br><sub>Rasouli et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) ![Physical](https://img.shields.io/badge/-Physical-B88A24?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Visual Perception +1](https://img.shields.io/badge/-Visual_Perception_%2B1-D47A5D?style=flat) <br> ![Distribution Shift +2](https://img.shields.io/badge/-Distribution_Shift_%2B2-3FA89B?style=flat) &nbsp;→&nbsp; ![VLA policy](https://img.shields.io/badge/-VLA_policy-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
 | **[π0.5: a Vision-Language-Action Model with Open-World Generalization](https://arxiv.org/abs/2504.16054)** [![GitHub stars](https://img.shields.io/github/stars/Physical-Intelligence/openpi?style=social)](https://github.com/Physical-Intelligence/openpi)<br><sub>Physical Intelligence et al.</sub> | arXiv 2025 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Visual Perception +2](https://img.shields.io/badge/-Visual_Perception_%2B2-D47A5D?style=flat) <br> ![Distribution Shift](https://img.shields.io/badge/-Distribution_Shift-3FA89B?style=flat) &nbsp;→&nbsp; ![VLA policy](https://img.shields.io/badge/-VLA_policy-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
@@ -335,7 +335,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Driving Robustness and Generalization
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[Generative Scenario Rollouts for End-to-End Autonomous Driving](https://arxiv.org/abs/2601.11475)**<br><sub>Yasarla et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) ![Physical](https://img.shields.io/badge/-Physical-B88A24?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![World State +1](https://img.shields.io/badge/-World_State_%2B1-D47A5D?style=flat) <br> ![Distribution Shift](https://img.shields.io/badge/-Distribution_Shift-3FA89B?style=flat) &nbsp;→&nbsp; ![Task Planner](https://img.shields.io/badge/-Task_Planner-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
 | **[Shift & Drift: A Zero-Shot Benchmark for Generalizable and Robust Autonomous Driving Motion Planning](https://arxiv.org/abs/2607.07844)**<br><sub>Canevaro et al.</sub> | IROS 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![World State +1](https://img.shields.io/badge/-World_State_%2B1-D47A5D?style=flat) <br> ![Distribution Shift](https://img.shields.io/badge/-Distribution_Shift-3FA89B?style=flat) &nbsp;→&nbsp; ![Task Planner](https://img.shields.io/badge/-Task_Planner-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
@@ -344,7 +344,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Reliability-Oriented Policy Refinement
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[Recovering Low-Bit Failures in Vision-Language-Action Policies via Quantization-Conditioned Reinforcement Learning](https://arxiv.org/abs/2610.15675)**<br><sub>Park et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Model Supply Chain +1](https://img.shields.io/badge/-Model_Supply_Chain_%2B1-D47A5D?style=flat) <br> ![Execution Error +1](https://img.shields.io/badge/-Execution_Error_%2B1-3FA89B?style=flat) &nbsp;→&nbsp; ![VLA policy](https://img.shields.io/badge/-VLA_policy-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
 
@@ -356,7 +356,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Backdoors and Data Poisoning
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **["Your Robot Was Trained on a Lie": Collision Mesh Poisoning Attacks on Robotic Manipulation](https://arxiv.org/abs/2609.18122)**<br><sub>Xu et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) ![Physical](https://img.shields.io/badge/-Physical-B88A24?style=flat) ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-D96F8A?style=flat) | ![Training → Inference](https://img.shields.io/badge/-Training_%E2%86%92_Inference-6F9FEF?style=flat) ![Model Supply Chain](https://img.shields.io/badge/-Model_Supply_Chain-D47A5D?style=flat) <br> ![Data Poisoning](https://img.shields.io/badge/-Data_Poisoning-3FA89B?style=flat) &nbsp;→&nbsp; ![Robot Executor](https://img.shields.io/badge/-Robot_Executor-9873D4?style=flat) &nbsp;→&nbsp; ![Unsafe Motion](https://img.shields.io/badge/-Unsafe_Motion-D96F8A?style=flat) |
 | **[Backdoors in Learning-Based Industrial Robotic Arm Manipulation: An Empirical Security Study](https://arxiv.org/abs/2609.26868)**<br><sub>Zhang et al.</sub> | IROS 2026 Workshop 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-D96F8A?style=flat) | ![Training → Inference](https://img.shields.io/badge/-Training_%E2%86%92_Inference-6F9FEF?style=flat) ![Model Supply Chain +1](https://img.shields.io/badge/-Model_Supply_Chain_%2B1-D47A5D?style=flat) <br> ![Data Poisoning +1](https://img.shields.io/badge/-Data_Poisoning_%2B1-3FA89B?style=flat) &nbsp;→&nbsp; ![VLA policy](https://img.shields.io/badge/-VLA_policy-9873D4?style=flat) &nbsp;→&nbsp; ![Targeted Action](https://img.shields.io/badge/-Targeted_Action-D96F8A?style=flat) |
@@ -381,7 +381,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Privacy and Data Leakage
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[Privacy Risks in Reinforcement Learning for Household Robots](https://doi.org/10.1109/icra57147.2024.10610832)**<br><sub>Li et al.</sub> | ICRA 2024 | ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-D96F8A?style=flat) | ![Training](https://img.shields.io/badge/-Training-6F9FEF?style=flat) ![Model Supply Chain](https://img.shields.io/badge/-Model_Supply_Chain-D47A5D?style=flat) <br> ![Unestablished](https://img.shields.io/badge/-Unestablished-3FA89B?style=flat) &nbsp;→&nbsp; ![Private Data](https://img.shields.io/badge/-Private_Data-9873D4?style=flat) &nbsp;→&nbsp; ![Privacy Leakage](https://img.shields.io/badge/-Privacy_Leakage-D96F8A?style=flat) |
 
@@ -393,7 +393,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Planning, Action, and Trajectory Manipulation
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[SABER: A Stealthy Agentic Black-Box Attack Framework for Vision-Language-Action Models](https://arxiv.org/abs/2603.24935)**<br><sub>Wu et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) ![Physical](https://img.shields.io/badge/-Physical-B88A24?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Task Planning +1](https://img.shields.io/badge/-Task_Planning_%2B1-D47A5D?style=flat) <br> ![Digital Perturbation](https://img.shields.io/badge/-Digital_Perturbation-3FA89B?style=flat) &nbsp;→&nbsp; ![Task Planner](https://img.shields.io/badge/-Task_Planner-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
 | **[Trajectory-Level Redirection Attacks on Vision-Language-Action Models](https://arxiv.org/abs/2606.12978)** [![GitHub stars](https://img.shields.io/github/stars/vla-redirection-attack/vla-trajectory-redirection?style=social)](https://github.com/vla-redirection-attack/vla-trajectory-redirection)<br><sub>Puthumanaillam et al.</sub> | CoRL 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-D96F8A?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![User Instruction](https://img.shields.io/badge/-User_Instruction-D47A5D?style=flat) <br> ![Digital Perturbation](https://img.shields.io/badge/-Digital_Perturbation-3FA89B?style=flat) &nbsp;→&nbsp; ![VLA policy](https://img.shields.io/badge/-VLA_policy-9873D4?style=flat) &nbsp;→&nbsp; ![Targeted Action](https://img.shields.io/badge/-Targeted_Action-D96F8A?style=flat) |
@@ -405,7 +405,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Jailbreaks and Prompt Injection
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[Altered Thoughts, Altered Actions: Reasoning Chain as Control Surface for a Vision-Language-Action Policy](https://arxiv.org/abs/2603.12717)**<br><sub>Trinh et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-D96F8A?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Reasoning Representation +1](https://img.shields.io/badge/-Reasoning_Representation_%2B1-D47A5D?style=flat) <br> ![Direct Prompt Injection](https://img.shields.io/badge/-Direct_Prompt_Injection-3FA89B?style=flat) &nbsp;→&nbsp; ![Reasoning Process](https://img.shields.io/badge/-Reasoning_Process-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
 | **[CHAI: Command Hijacking Against Embodied AI](https://arxiv.org/abs/2510.00181)** [![GitHub stars](https://img.shields.io/github/stars/Cyphysecurity/chai?style=social)](https://github.com/Cyphysecurity/chai)<br><sub>Burbano et al.</sub> | SaTML 2026 | ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-D96F8A?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Physical Semantic Environment](https://img.shields.io/badge/-Physical_Semantic_Environment-D47A5D?style=flat) <br> ![Indirect Prompt Injection +1](https://img.shields.io/badge/-Indirect_Prompt_Injection_%2B1-3FA89B?style=flat) &nbsp;→&nbsp; ![Task Planner](https://img.shields.io/badge/-Task_Planner-9873D4?style=flat) &nbsp;→&nbsp; ![Control Hijacking](https://img.shields.io/badge/-Control_Hijacking-D96F8A?style=flat) |
@@ -433,7 +433,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Visual Perturbations and Patches
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[Beyond Patch Removal: Persistent Adversarial Effects in Vision-Language-Action Policies](https://arxiv.org/abs/2609.19669)**<br><sub>Wu et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Visual Perception +1](https://img.shields.io/badge/-Visual_Perception_%2B1-D47A5D?style=flat) <br> ![Adversarial Patch +1](https://img.shields.io/badge/-Adversarial_Patch_%2B1-3FA89B?style=flat) &nbsp;→&nbsp; ![VLA policy](https://img.shields.io/badge/-VLA_policy-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
 | **[DRIFT: Derailing Denoising Trajectories of Flow-Matching VLAs with Adversarial Patch Attack](https://arxiv.org/abs/2608.03207)**<br><sub>Tae et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Visual Perception](https://img.shields.io/badge/-Visual_Perception-D47A5D?style=flat) <br> ![Adversarial Patch](https://img.shields.io/badge/-Adversarial_Patch-3FA89B?style=flat) &nbsp;→&nbsp; ![VLA policy](https://img.shields.io/badge/-VLA_policy-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
@@ -460,7 +460,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Privacy and Data Leakage
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[VLALeaks: Membership Inference Attacks against Vision-Language-Action Models](https://arxiv.org/abs/2606.15165)**<br><sub>Luan et al.</sub> | arXiv 2026 | ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-D96F8A?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Model Supply Chain](https://img.shields.io/badge/-Model_Supply_Chain-D47A5D?style=flat) <br> ![Membership Inference](https://img.shields.io/badge/-Membership_Inference-3FA89B?style=flat) &nbsp;→&nbsp; ![Private Data](https://img.shields.io/badge/-Private_Data-9873D4?style=flat) &nbsp;→&nbsp; ![Privacy Leakage](https://img.shields.io/badge/-Privacy_Leakage-D96F8A?style=flat) |
 
@@ -468,7 +468,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Sensor, State, and Physical Interventions
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[Phantom Menace: Exploring and Enhancing the Robustness of VLA Models Against Physical Sensor Attacks](https://arxiv.org/abs/2511.10008)**<br><sub>Lu et al.</sub> | AAAI 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Visual Perception +1](https://img.shields.io/badge/-Visual_Perception_%2B1-D47A5D?style=flat) <br> ![Sensor Spoofing](https://img.shields.io/badge/-Sensor_Spoofing-3FA89B?style=flat) &nbsp;→&nbsp; ![VLA policy](https://img.shields.io/badge/-VLA_policy-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
 | **[AdvGrasp: Adversarial Attacks on Robotic Grasping from a Physical Perspective](https://arxiv.org/abs/2507.09857)**<br><sub>Wang et al.</sub> | arXiv 2025 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Physical Semantic Environment](https://img.shields.io/badge/-Physical_Semantic_Environment-D47A5D?style=flat) <br> ![Adversarial Object +1](https://img.shields.io/badge/-Adversarial_Object_%2B1-3FA89B?style=flat) &nbsp;→&nbsp; ![Robot Executor](https://img.shields.io/badge/-Robot_Executor-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
@@ -479,7 +479,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Upstream VLM Attacks
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[Black-Box Adversarial Patch Attacks on VLAs via Ancestor VLM Exploitation](https://arxiv.org/abs/2610.09708)**<br><sub>Pang et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Visual Perception +1](https://img.shields.io/badge/-Visual_Perception_%2B1-D47A5D?style=flat) <br> ![Adversarial Patch](https://img.shields.io/badge/-Adversarial_Patch-3FA89B?style=flat) &nbsp;→&nbsp; ![Perception Model](https://img.shields.io/badge/-Perception_Model-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
 | **[Chain of Attack: On the Robustness of Vision-Language Models Against Transfer-Based Adversarial Attacks](https://arxiv.org/abs/2411.15720)** [![GitHub stars](https://img.shields.io/github/stars/Shelton1013/Chain_of_Attack?style=social)](https://github.com/Shelton1013/Chain_of_Attack)<br><sub>Xie et al.</sub> | CVPR 2025 | ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-D96F8A?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Visual Perception](https://img.shields.io/badge/-Visual_Perception-D47A5D?style=flat) <br> ![Digital Perturbation](https://img.shields.io/badge/-Digital_Perturbation-3FA89B?style=flat) &nbsp;→&nbsp; ![Perception Model](https://img.shields.io/badge/-Perception_Model-9873D4?style=flat) &nbsp;→&nbsp; ![Targeted Action](https://img.shields.io/badge/-Targeted_Action-D96F8A?style=flat) |
@@ -492,7 +492,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Safety-Aligned and Robust Policy Training
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[ActSafeGuard: Differentiable and Training-Aligned Constraint Enforcement for Flow-Matching Policies](https://arxiv.org/abs/2609.11697)**<br><sub>Ma et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) ![Physical](https://img.shields.io/badge/-Physical-B88A24?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Action Interface +1](https://img.shields.io/badge/-Action_Interface_%2B1-D47A5D?style=flat) <br> ![Unestablished](https://img.shields.io/badge/-Unestablished-3FA89B?style=flat) &nbsp;→&nbsp; ![VLA policy](https://img.shields.io/badge/-VLA_policy-9873D4?style=flat) &nbsp;→&nbsp; ![Unsafe Motion](https://img.shields.io/badge/-Unsafe_Motion-D96F8A?style=flat) |
 | **[Beyond Safe Execution: Safe Online Reinforcement Learning for Autonomous Driving with Value Calibration and Adaptive Guidance](https://arxiv.org/abs/2610.17799)** [Project / Code](https://lzqw.github.io/SOAR-Flow/)<br><sub>Li et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) ![Physical](https://img.shields.io/badge/-Physical-B88A24?style=flat) | ![Training → Inference](https://img.shields.io/badge/-Training_%E2%86%92_Inference-6F9FEF?style=flat) ![Action Interface +1](https://img.shields.io/badge/-Action_Interface_%2B1-D47A5D?style=flat) <br> ![Unestablished](https://img.shields.io/badge/-Unestablished-3FA89B?style=flat) &nbsp;→&nbsp; ![Robot Executor](https://img.shields.io/badge/-Robot_Executor-9873D4?style=flat) &nbsp;→&nbsp; ![Collision](https://img.shields.io/badge/-Collision-D96F8A?style=flat) |
@@ -530,7 +530,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Runtime Monitoring and Guardrails
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[Adaptive Safety Probing for Resource-Efficient Vision-Language-Action Models](https://openreview.net/pdf?id=LPomBkh92H)**<br><sub>Park et al.</sub> | AdaptFM@ICML 2026 | — | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Reasoning Representation +2](https://img.shields.io/badge/-Reasoning_Representation_%2B2-D47A5D?style=flat) <br> ![Uncertainty Miscalibration](https://img.shields.io/badge/-Uncertainty_Miscalibration-3FA89B?style=flat) &nbsp;→&nbsp; ![Runtime Monitor](https://img.shields.io/badge/-Runtime_Monitor-9873D4?style=flat) &nbsp;→&nbsp; ![Recovery Failure](https://img.shields.io/badge/-Recovery_Failure-D96F8A?style=flat) |
 | **[AutoAgent0: An Agentic Runtime for Safe Closed-Loop Driving](https://arxiv.org/abs/2610.18866)** [Project / Code](https://jiagengliu02.github.io/AutoAgent0/)<br><sub>Liu et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) ![Physical](https://img.shields.io/badge/-Physical-B88A24?style=flat) | ![Inference → System](https://img.shields.io/badge/-Inference_%E2%86%92_System-6F9FEF?style=flat) ![World State +1](https://img.shields.io/badge/-World_State_%2B1-D47A5D?style=flat) <br> ![Perception Error +1](https://img.shields.io/badge/-Perception_Error_%2B1-3FA89B?style=flat) &nbsp;→&nbsp; ![Robot Executor](https://img.shields.io/badge/-Robot_Executor-9873D4?style=flat) &nbsp;→&nbsp; ![Collision](https://img.shields.io/badge/-Collision-D96F8A?style=flat) |
@@ -578,7 +578,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Failure Detection, Shielding, and Recovery
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[A Safe Action Is Not Enough: Feasible-Future Decoding for Vision-Language-Action Policies](https://arxiv.org/abs/2610.05166)**<br><sub>Nguyen et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) ![Physical](https://img.shields.io/badge/-Physical-B88A24?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Task Planning +1](https://img.shields.io/badge/-Task_Planning_%2B1-D47A5D?style=flat) <br> ![Execution Error](https://img.shields.io/badge/-Execution_Error-3FA89B?style=flat) &nbsp;→&nbsp; ![VLA policy](https://img.shields.io/badge/-VLA_policy-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
 | **[ActProbe: Action-Space Probe for Early Failure Detection of Generative Robot Policies](https://arxiv.org/abs/2606.08508)**<br><sub>Huang et al.</sub> | arXiv 2026 | — | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Action Interface](https://img.shields.io/badge/-Action_Interface-D47A5D?style=flat) <br> ![Execution Error](https://img.shields.io/badge/-Execution_Error-3FA89B?style=flat) &nbsp;→&nbsp; ![Runtime Monitor](https://img.shields.io/badge/-Runtime_Monitor-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
@@ -653,7 +653,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Representation Steering and Inference-Time Defense
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[Concept-Based Dictionary Learning for Inference-Time Safety in Vision Language Action Models](https://arxiv.org/abs/2602.01834)**<br><sub>Wen et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-D96F8A?style=flat) ![Physical](https://img.shields.io/badge/-Physical-B88A24?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![User Instruction](https://img.shields.io/badge/-User_Instruction-D47A5D?style=flat) <br> ![Jailbreak](https://img.shields.io/badge/-Jailbreak-3FA89B?style=flat) &nbsp;→&nbsp; ![VLA policy](https://img.shields.io/badge/-VLA_policy-9873D4?style=flat) &nbsp;→&nbsp; ![Policy Violation](https://img.shields.io/badge/-Policy_Violation-D96F8A?style=flat) |
 | **[Detect and Suppress: A Mechanistic Defense against Adversarial Patches in VLA Models](https://arxiv.org/abs/2610.03498)**<br><sub>Horiba et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Visual Perception](https://img.shields.io/badge/-Visual_Perception-D47A5D?style=flat) <br> ![Adversarial Patch](https://img.shields.io/badge/-Adversarial_Patch-3FA89B?style=flat) &nbsp;→&nbsp; ![VLA policy](https://img.shields.io/badge/-VLA_policy-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
@@ -666,7 +666,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### System and Communication Defenses
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[AuthGuard-R: Safety-Compliant Mission Hijacking and Dual-Gate Defense for LLM-Controlled Robots](https://arxiv.org/abs/2609.31110)**<br><sub>Chepuri et al.</sub> | arXiv 2026 | ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-D96F8A?style=flat) | ![Inference → System](https://img.shields.io/badge/-Inference_%E2%86%92_System-6F9FEF?style=flat) ![User Instruction +2](https://img.shields.io/badge/-User_Instruction_%2B2-D47A5D?style=flat) <br> ![Direct Prompt Injection](https://img.shields.io/badge/-Direct_Prompt_Injection-3FA89B?style=flat) &nbsp;→&nbsp; ![Task Planner](https://img.shields.io/badge/-Task_Planner-9873D4?style=flat) &nbsp;→&nbsp; ![Control Hijacking](https://img.shields.io/badge/-Control_Hijacking-D96F8A?style=flat) |
 | **[Guardrailed Meta-Agent Loops: Stress-Testing Policy Pinning, Budget Bounds, and Crash Recovery](https://arxiv.org/abs/2609.12216)**<br><sub>Ma et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference → System](https://img.shields.io/badge/-Inference_%E2%86%92_System-6F9FEF?style=flat) ![Multiple surfaces](https://img.shields.io/badge/-Multiple_surfaces-D47A5D?style=flat) <br> ![Evaluation coverage](https://img.shields.io/badge/-Evaluation_coverage-2F7F9B?style=flat) |
@@ -677,7 +677,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Multimodal Perception and Physical Safeguards
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[DroneVLA: VLA based Aerial Manipulation](https://arxiv.org/abs/2601.13809)**<br><sub>Mehboob et al.</sub> | arXiv 2026 | ![Physical](https://img.shields.io/badge/-Physical-B88A24?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Visual Perception +2](https://img.shields.io/badge/-Visual_Perception_%2B2-D47A5D?style=flat) <br> ![Unestablished](https://img.shields.io/badge/-Unestablished-3FA89B?style=flat) &nbsp;→&nbsp; ![Action Generation](https://img.shields.io/badge/-Action_Generation-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
 | **[FWBC-VLA: Force-Aware Whole-Body Compensation for Contact-Rich Loco-Manipulation](https://arxiv.org/abs/2609.03889)**<br><sub>Zhang et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Proprioception +2](https://img.shields.io/badge/-Proprioception_%2B2-D47A5D?style=flat) <br> ![Execution Error](https://img.shields.io/badge/-Execution_Error-3FA89B?style=flat) &nbsp;→&nbsp; ![VLA policy](https://img.shields.io/badge/-VLA_policy-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
@@ -691,7 +691,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Uncertainty, Abstention, and Human Oversight
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[Ask-to-Clarify: Resolving Instruction Ambiguity through Multi-turn Dialogue](https://arxiv.org/abs/2509.15061)**<br><sub>Lin et al.</sub> | IROS 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![User Instruction](https://img.shields.io/badge/-User_Instruction-D47A5D?style=flat) <br> ![Instruction Ambiguity](https://img.shields.io/badge/-Instruction_Ambiguity-3FA89B?style=flat) &nbsp;→&nbsp; ![Reasoning Process](https://img.shields.io/badge/-Reasoning_Process-9873D4?style=flat) &nbsp;→&nbsp; ![Task Failure](https://img.shields.io/badge/-Task_Failure-D96F8A?style=flat) |
 | **[Control-Ready Uncertainty for Trajectory Diffusion](https://arxiv.org/abs/2610.12431)** [Project / Code](https://zackaxue.github.io/)<br><sub>Xue et al.</sub> | CoRL 2026 | — | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![World State +1](https://img.shields.io/badge/-World_State_%2B1-D47A5D?style=flat) <br> ![Uncertainty Miscalibration](https://img.shields.io/badge/-Uncertainty_Miscalibration-3FA89B?style=flat) &nbsp;→&nbsp; ![Runtime Monitor](https://img.shields.io/badge/-Runtime_Monitor-9873D4?style=flat) &nbsp;→&nbsp; ![Unsafe Motion](https://img.shields.io/badge/-Unsafe_Motion-D96F8A?style=flat) |
@@ -713,7 +713,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Model Unlearning and Data Governance
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[VLA-Forget: Vision-Language-Action Unlearning for Embodied Foundation Models](https://arxiv.org/abs/2604.03956)**<br><sub>Ranjan et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-D96F8A?style=flat) | ![Training → Inference](https://img.shields.io/badge/-Training_%E2%86%92_Inference-6F9FEF?style=flat) ![Model Supply Chain](https://img.shields.io/badge/-Model_Supply_Chain-D47A5D?style=flat) <br> ![Unestablished](https://img.shields.io/badge/-Unestablished-3FA89B?style=flat) &nbsp;→&nbsp; ![VLA policy](https://img.shields.io/badge/-VLA_policy-9873D4?style=flat) &nbsp;→&nbsp; ![Privacy Leakage](https://img.shields.io/badge/-Privacy_Leakage-D96F8A?style=flat) |
 | **[Fine-Tuning Robot Policies While Maintaining User Privacy](https://arxiv.org/abs/2509.18311)**<br><sub>Christie et al.</sub> | arXiv 2025 | ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-D96F8A?style=flat) | ![Training → Inference](https://img.shields.io/badge/-Training_%E2%86%92_Inference-6F9FEF?style=flat) ![Model Supply Chain +1](https://img.shields.io/badge/-Model_Supply_Chain_%2B1-D47A5D?style=flat) <br> ![Unestablished](https://img.shields.io/badge/-Unestablished-3FA89B?style=flat) &nbsp;→&nbsp; ![Private Data](https://img.shields.io/badge/-Private_Data-9873D4?style=flat) &nbsp;→&nbsp; ![Privacy Leakage](https://img.shields.io/badge/-Privacy_Leakage-D96F8A?style=flat) |
@@ -722,7 +722,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Privacy-Preserving Perception
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[Seeing Less Is Not Seeing Safely: Privacy Leakage from Task-Scoped Robot Perception Exports](https://arxiv.org/abs/2609.03055)**<br><sub>Xu et al.</sub> | arXiv 2026 | ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-D96F8A?style=flat) ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference → System](https://img.shields.io/badge/-Inference_%E2%86%92_System-6F9FEF?style=flat) ![World State +1](https://img.shields.io/badge/-World_State_%2B1-D47A5D?style=flat) <br> ![Unestablished](https://img.shields.io/badge/-Unestablished-3FA89B?style=flat) &nbsp;→&nbsp; ![Private Data](https://img.shields.io/badge/-Private_Data-9873D4?style=flat) &nbsp;→&nbsp; ![Privacy Leakage](https://img.shields.io/badge/-Privacy_Leakage-D96F8A?style=flat) |
 | **[Privacy-Preserving Semantic Segmentation from Ultra-Low-Resolution RGB Inputs](https://arxiv.org/abs/2507.16034)** [![GitHub stars](https://img.shields.io/github/stars/hxy-0818/ULR2SS?style=social)](https://github.com/hxy-0818/ULR2SS)<br><sub>Huang et al.</sub> | arXiv 2025 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-D96F8A?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Visual Perception](https://img.shields.io/badge/-Visual_Perception-D47A5D?style=flat) <br> ![Unestablished](https://img.shields.io/badge/-Unestablished-3FA89B?style=flat) &nbsp;→&nbsp; ![Private Data](https://img.shields.io/badge/-Private_Data-9873D4?style=flat) &nbsp;→&nbsp; ![Privacy Leakage](https://img.shields.io/badge/-Privacy_Leakage-D96F8A?style=flat) |
@@ -733,7 +733,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Safety Requirements and Assurance
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[ARGOS: Automated Functional Safety Requirement Synthesis for Embodied AI via Attribute-Guided Combinatorial Reasoning](https://arxiv.org/abs/2602.07007)**<br><sub>Chen et al.</sub> | arXiv 2026 | — | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![User Instruction + Physical Semantic Environment](https://img.shields.io/badge/-User_Instruction_%2B_Physical_Semantic_Environment-D47A5D?style=flat) <br> ![Evaluation coverage](https://img.shields.io/badge/-Evaluation_coverage-2F7F9B?style=flat) |
 | **[AutoRT: Embodied Foundation Models for Large Scale Orchestration of Robotic Agents](https://arxiv.org/abs/2401.12963)**<br><sub>Ahn et al.</sub> | arXiv 2024 | ![Ethics](https://img.shields.io/badge/-Ethics-9873D4?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![User Instruction +1](https://img.shields.io/badge/-User_Instruction_%2B1-D47A5D?style=flat) <br> ![Hazardous Instruction](https://img.shields.io/badge/-Hazardous_Instruction-3FA89B?style=flat) &nbsp;→&nbsp; ![Task Planner](https://img.shields.io/badge/-Task_Planner-9873D4?style=flat) &nbsp;→&nbsp; ![Policy Violation](https://img.shields.io/badge/-Policy_Violation-D96F8A?style=flat) |
@@ -746,7 +746,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Robustness, Uncertainty, and OOD Generalization
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[Do Better Imagined Rollouts Mean Better Robot Control? A Controlled Study of World-Model Evaluation Under Feedback](https://arxiv.org/abs/2609.02811)** [![GitHub stars](https://img.shields.io/github/stars/rdharini2001/Robot_World_Model?style=social)](https://github.com/rdharini2001/Robot_World_Model)<br><sub>Raghavan et al.</sub> | arXiv 2026 | — | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![World State + Proprioception](https://img.shields.io/badge/-World_State_%2B_Proprioception-D47A5D?style=flat) <br> ![Evaluation coverage](https://img.shields.io/badge/-Evaluation_coverage-2F7F9B?style=flat) |
 | **[Do VLAs Really Follow Instructions? Diagnosing How-Level Instruction Following in Vision-Language-Action Models](https://arxiv.org/abs/2610.21251)**<br><sub>Park et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Training → Inference](https://img.shields.io/badge/-Training_%E2%86%92_Inference-6F9FEF?style=flat) ![Multiple surfaces](https://img.shields.io/badge/-Multiple_surfaces-D47A5D?style=flat) <br> ![Evaluation coverage](https://img.shields.io/badge/-Evaluation_coverage-2F7F9B?style=flat) |
@@ -778,7 +778,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Evaluation Infrastructure
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[Embodied-BenchForge: A Closed-Loop Agentic Workflow for Embodied Benchmark Construction](https://arxiv.org/abs/2609.13082)**<br><sub>Jiang et al.</sub> | arXiv 2026 | — | ![Inference → System](https://img.shields.io/badge/-Inference_%E2%86%92_System-6F9FEF?style=flat) ![Multiple surfaces](https://img.shields.io/badge/-Multiple_surfaces-D47A5D?style=flat) <br> ![Evaluation coverage](https://img.shields.io/badge/-Evaluation_coverage-2F7F9B?style=flat) |
 | **[FailBench: How Reliable are VLMs at Judging Robot Task Success?](https://arxiv.org/abs/2609.03611)**<br><sub>Navasardyan et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Visual Perception + World State](https://img.shields.io/badge/-Visual_Perception_%2B_World_State-D47A5D?style=flat) <br> ![Evaluation coverage](https://img.shields.io/badge/-Evaluation_coverage-2F7F9B?style=flat) |
@@ -796,7 +796,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Adversarial and Physical Robustness
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[Red-Teaming Vision-Language-Action Models via Quality Diversity Prompt Generation for Robust Robot Policies](https://arxiv.org/abs/2603.12510)**<br><sub>Srikanth et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![User Instruction](https://img.shields.io/badge/-User_Instruction-D47A5D?style=flat) <br> ![Evaluation coverage](https://img.shields.io/badge/-Evaluation_coverage-2F7F9B?style=flat) |
 | **[RedVLA: Physical Red Teaming for Vision-Language-Action Models](https://arxiv.org/abs/2604.22591)** [Project / Code](https://redvla.github.io/)<br><sub>Zhang et al.</sub> | arXiv 2026 | ![Physical](https://img.shields.io/badge/-Physical-B88A24?style=flat) ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-D96F8A?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Physical Semantic Environment +1](https://img.shields.io/badge/-Physical_Semantic_Environment_%2B1-D47A5D?style=flat) <br> ![Adversarial Object +1](https://img.shields.io/badge/-Adversarial_Object_%2B1-3FA89B?style=flat) &nbsp;→&nbsp; ![VLA policy](https://img.shields.io/badge/-VLA_policy-9873D4?style=flat) &nbsp;→&nbsp; ![Control Hijacking](https://img.shields.io/badge/-Control_Hijacking-D96F8A?style=flat) |
@@ -810,7 +810,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Task and Physical Safety
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[ExceptionDrive: A Planning-Oriented Counterfactual Corner-Case Benchmark for Autonomous Driving](https://arxiv.org/abs/2609.37871)**<br><sub>Luo et al.</sub> | arXiv 2026 | ![Physical](https://img.shields.io/badge/-Physical-B88A24?style=flat) ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Multiple surfaces](https://img.shields.io/badge/-Multiple_surfaces-D47A5D?style=flat) <br> ![Evaluation coverage](https://img.shields.io/badge/-Evaluation_coverage-2F7F9B?style=flat) |
 | **[ForesightSafety-VLA: A Unified Diagnostic Safety Benchmark for Vision-Language-Action Models](https://arxiv.org/abs/2606.27079)**<br><sub>Lyu et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) ![Physical](https://img.shields.io/badge/-Physical-B88A24?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Multiple surfaces](https://img.shields.io/badge/-Multiple_surfaces-D47A5D?style=flat) <br> ![Evaluation coverage](https://img.shields.io/badge/-Evaluation_coverage-2F7F9B?style=flat) |
@@ -840,7 +840,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Semantic and Ethical Safety
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[Benchmarking Jailbreak Guardrails for Embodied Agents](https://arxiv.org/abs/2610.06122)**<br><sub>Wang et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) ![Physical](https://img.shields.io/badge/-Physical-B88A24?style=flat) ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-D96F8A?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Multiple surfaces](https://img.shields.io/badge/-Multiple_surfaces-D47A5D?style=flat) <br> ![Evaluation coverage](https://img.shields.io/badge/-Evaluation_coverage-2F7F9B?style=flat) |
 | **[Benchmarking the Safety of Large Language Models for Robotic Health Attendant Control](https://arxiv.org/abs/2604.26577)**<br><sub>Nakao et al.</sub> | Royal Society Open Science 2026 | ![Ethics](https://img.shields.io/badge/-Ethics-9873D4?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![User Instruction + Task Planning](https://img.shields.io/badge/-User_Instruction_%2B_Task_Planning-D47A5D?style=flat) <br> ![Evaluation coverage](https://img.shields.io/badge/-Evaluation_coverage-2F7F9B?style=flat) |
@@ -860,7 +860,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Safety-Critical Perception Evaluation
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[Can Vision-Language Models Understand Construction Workers? An Exploratory Study](https://arxiv.org/abs/2601.10835)**<br><sub>Bui et al.</sub> | arXiv 2026 | — | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Visual Perception](https://img.shields.io/badge/-Visual_Perception-D47A5D?style=flat) <br> ![Evaluation coverage](https://img.shields.io/badge/-Evaluation_coverage-2F7F9B?style=flat) |
 | **[EgoSafetyBench: A Diagnostic Egocentric Video Benchmark for Evaluating Embodied VLMs as Runtime Safety Guards](https://arxiv.org/abs/2607.00218)**<br><sub>Panpatil et al.</sub> | arXiv 2026 | — | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Visual Perception](https://img.shields.io/badge/-Visual_Perception-D47A5D?style=flat) <br> ![Evaluation coverage](https://img.shields.io/badge/-Evaluation_coverage-2F7F9B?style=flat) |
@@ -871,7 +871,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Privacy and Data Leakage
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[How Far Are VLMs from Privacy Awareness in the Physical World? An Empirical Study](https://arxiv.org/abs/2605.05340)** [![GitHub stars](https://img.shields.io/github/stars/immersed-privacy/immersed-privacy?style=social)](https://github.com/immersed-privacy/immersed-privacy)<br><sub>Wang et al.</sub> | arXiv 2026 | ![Ethics](https://img.shields.io/badge/-Ethics-9873D4?style=flat) ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-D96F8A?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Visual Perception + User Instruction](https://img.shields.io/badge/-Visual_Perception_%2B_User_Instruction-D47A5D?style=flat) <br> ![Evaluation coverage](https://img.shields.io/badge/-Evaluation_coverage-2F7F9B?style=flat) |
 
@@ -879,7 +879,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Governance and Deployment Assurance
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[Benchmarking Robots for Everyday Environments: From Lab Experiments to Real-World Operations](https://arxiv.org/abs/2609.26490)**<br><sub>Memmesheimer et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Execution Control + Physical Semantic Environment](https://img.shields.io/badge/-Execution_Control_%2B_Physical_Semantic_Environment-D47A5D?style=flat) <br> ![Evaluation coverage](https://img.shields.io/badge/-Evaluation_coverage-2F7F9B?style=flat) |
 | **[EmbodiedGovBench: A Benchmark for Governance, Recovery, and Upgrade Safety in Embodied Agent Systems](https://arxiv.org/abs/2604.11174)**<br><sub>Qin et al.</sub> | arXiv 2026 | — | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Multiple surfaces](https://img.shields.io/badge/-Multiple_surfaces-D47A5D?style=flat) <br> ![Evaluation coverage](https://img.shields.io/badge/-Evaluation_coverage-2F7F9B?style=flat) |
@@ -888,7 +888,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Human-Robot Trust and Fairness
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[Auditing Demographic Bias in Facial Landmark Detection for Fair Human-Robot Interaction](https://arxiv.org/abs/2604.06961)**<br><sub>Parte et al.</sub> | arXiv 2026 | ![Ethics](https://img.shields.io/badge/-Ethics-9873D4?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Visual Perception](https://img.shields.io/badge/-Visual_Perception-D47A5D?style=flat) <br> ![Evaluation coverage](https://img.shields.io/badge/-Evaluation_coverage-2F7F9B?style=flat) |
 | **[CALM: Configuration-Aware Human Intervention Boundaries During Robot Approach](https://arxiv.org/abs/2609.07430)**<br><sub>Gao et al.</sub> | arXiv 2026 | — | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Physical Semantic Environment + Execution Control](https://img.shields.io/badge/-Physical_Semantic_Environment_%2B_Execution_Control-D47A5D?style=flat) <br> ![Evaluation coverage](https://img.shields.io/badge/-Evaluation_coverage-2F7F9B?style=flat) |
@@ -904,7 +904,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Failure Detection and Recovery
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[Benchmarking Vision-Language-Action Models on SO-101: Failure and Recovery Analysis](https://arxiv.org/abs/2606.08881)**<br><sub>Yu et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Execution Control](https://img.shields.io/badge/-Execution_Control-D47A5D?style=flat) <br> ![Evaluation coverage](https://img.shields.io/badge/-Evaluation_coverage-2F7F9B?style=flat) |
 | **[FAER: Benchmarking VLMs for Failure-Aware Embodied Reasoning](https://doi.org/10.18653/v1/2026.findings-acl.948)**<br><sub>Song et al.</sub> | Findings of ACL 2026 | — | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Execution Control](https://img.shields.io/badge/-Execution_Control-D47A5D?style=flat) <br> ![Evaluation coverage](https://img.shields.io/badge/-Evaluation_coverage-2F7F9B?style=flat) |
@@ -918,7 +918,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Cross-Layer System Security
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[Improving accountability and explainability in robots through encryption, large language models, and visual language models](https://doi.org/10.1093/jigpal/jzaf016)**<br><sub>Fernández-Becerra et al.</sub> | Logic Journal of the IGPL 2026 | — | ![System](https://img.shields.io/badge/-System-6F9FEF?style=flat) ![Middleware Network + Reasoning Representation](https://img.shields.io/badge/-Middleware_Network_%2B_Reasoning_Representation-D47A5D?style=flat) <br> ![Evaluation coverage](https://img.shields.io/badge/-Evaluation_coverage-2F7F9B?style=flat) |
 | **[PIER: An Evidence-Gated Execution Interface for Robotic Manipulation](https://arxiv.org/abs/2610.12123)**<br><sub>Li et al.</sub> | arXiv 2026 | — | ![Inference → System](https://img.shields.io/badge/-Inference_%E2%86%92_System-6F9FEF?style=flat) ![Visual Perception +2](https://img.shields.io/badge/-Visual_Perception_%2B2-D47A5D?style=flat) <br> ![Uncertainty Miscalibration](https://img.shields.io/badge/-Uncertainty_Miscalibration-3FA89B?style=flat) &nbsp;→&nbsp; ![Runtime Monitor](https://img.shields.io/badge/-Runtime_Monitor-9873D4?style=flat) &nbsp;→&nbsp; ![Unsafe Success](https://img.shields.io/badge/-Unsafe_Success-D96F8A?style=flat) |
@@ -931,7 +931,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 ### Privacy, Misuse, and Covert Channels
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[Cyber-Physical Steganography in Robotic Motion Control](https://arxiv.org/abs/2501.04541)**<br><sub>Chang et al.</sub> | IEICE Transactions 2026 | ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-D96F8A?style=flat) | ![System → Inference](https://img.shields.io/badge/-System_%E2%86%92_Inference-6F9FEF?style=flat) ![Action Interface +1](https://img.shields.io/badge/-Action_Interface_%2B1-D47A5D?style=flat) <br> ![Covert Channel +1](https://img.shields.io/badge/-Covert_Channel_%2B1-3FA89B?style=flat) &nbsp;→&nbsp; ![Robot Executor](https://img.shields.io/badge/-Robot_Executor-9873D4?style=flat) &nbsp;→&nbsp; ![Control Hijacking](https://img.shields.io/badge/-Control_Hijacking-D96F8A?style=flat) |
 
@@ -941,7 +941,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 This thematic view reuses 25 catalog records labeled `ethical-societal`. It does not add separate paper records or independently verify their outcome labels.
 
-| Paper | Venue | Evaluated Risk | Threat Model |
+| Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
 | **[BadRobot: Jailbreaking Embodied LLM Agents in the Physical World](https://arxiv.org/abs/2407.20242)** [![GitHub stars](https://img.shields.io/github/stars/Rookie143/BadRobot?style=social)](https://github.com/Rookie143/BadRobot)<br><sub>Zhang et al.</sub><br><sub>Primary: <a href="#inference-attacks-jailbreaks-and-prompt-injection">Inference-Time Attacks / Jailbreaks and Prompt Injection</a></sub> | ICLR 2025 | ![Physical](https://img.shields.io/badge/-Physical-B88A24?style=flat) ![Ethics](https://img.shields.io/badge/-Ethics-9873D4?style=flat) ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-D96F8A?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Audio Perception +1](https://img.shields.io/badge/-Audio_Perception_%2B1-D47A5D?style=flat) <br> ![Jailbreak](https://img.shields.io/badge/-Jailbreak-3FA89B?style=flat) &nbsp;→&nbsp; ![Task Planner](https://img.shields.io/badge/-Task_Planner-9873D4?style=flat) &nbsp;→&nbsp; ![Policy Violation](https://img.shields.io/badge/-Policy_Violation-D96F8A?style=flat) |
 | **[Jailbreaking LLM-Controlled Robots](https://arxiv.org/abs/2410.13691)** [![GitHub stars](https://img.shields.io/github/stars/arobey1/robopair?style=social)](https://github.com/arobey1/robopair)<br><sub>Robey et al.</sub><br><sub>Primary: <a href="#inference-attacks-jailbreaks-and-prompt-injection">Inference-Time Attacks / Jailbreaks and Prompt Injection</a></sub> | ICRA 2025 | ![Physical](https://img.shields.io/badge/-Physical-B88A24?style=flat) ![Ethics](https://img.shields.io/badge/-Ethics-9873D4?style=flat) ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-D96F8A?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![User Instruction](https://img.shields.io/badge/-User_Instruction-D47A5D?style=flat) <br> ![Jailbreak](https://img.shields.io/badge/-Jailbreak-3FA89B?style=flat) &nbsp;→&nbsp; ![Task Planner](https://img.shields.io/badge/-Task_Planner-9873D4?style=flat) &nbsp;→&nbsp; ![Policy Violation](https://img.shields.io/badge/-Policy_Violation-D96F8A?style=flat) |

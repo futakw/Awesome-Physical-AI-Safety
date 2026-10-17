@@ -189,7 +189,7 @@ def render(papers: list[dict]) -> str:
         "  </a>",
         "</p>",
         "",
-        "The five-part threat taxonomy describes studied failure paths; **Evaluated Risk Outcomes** are classified separately using the metrics reported in each paper. See the [taxonomy and labeling criteria](docs/reference/taxonomy.md) for details.",
+        "The five-part threat taxonomy describes studied failure paths; **Measured Risk** labels are classified separately using the metrics reported in each paper. See the [taxonomy and labeling criteria](docs/reference/taxonomy.md) for details.",
         "",
         "### Scope",
         "",
@@ -244,7 +244,7 @@ def render(papers: list[dict]) -> str:
         "",
         "Each paper is organized by its primary contribution, with two complementary metadata columns:",
         "",
-        "### Evaluated Risk",
+        "### Measured Risk",
         "",
         "Risk labels summarize the outcomes evaluated in each paper:",
         "",
@@ -319,7 +319,7 @@ def render(papers: list[dict]) -> str:
                     "",
                     f"### {subsection}",
                     "",
-                    "| Paper | Venue | Evaluated Risk | Threat Model |",
+                    "| Paper | Venue | Measured Risk | Threat Model |",
                     "|---|---:|---|---|",
                 ]
             )
@@ -341,7 +341,7 @@ def render(papers: list[dict]) -> str:
             "",
             f"This thematic view reuses {len(ethics_papers)} catalog records labeled `ethical-societal`. It does not add separate paper records or independently verify their outcome labels.",
             "",
-            "| Paper | Venue | Evaluated Risk | Threat Model |",
+            "| Paper | Venue | Measured Risk | Threat Model |",
             "|---|---:|---|---|",
         ])
         for paper in ethics_papers:

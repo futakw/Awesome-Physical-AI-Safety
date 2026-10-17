@@ -156,8 +156,8 @@
       <button type="button" data-view="heatmap" aria-pressed="false" data-i18n="navHeatmap">How × Where</button>
       <button type="button" data-view="risk" aria-pressed="false" data-i18n="navRisk">How × Measured Risk</button>
       <button type="button" data-view="defense" aria-pressed="false" data-i18n="navDefense">Defense × Threat</button>
-      <button type="button" data-view="target" aria-pressed="false" data-i18n="navTarget">Target × Result</button>
-      <button type="button" data-view="outcome-risk" aria-pressed="false" data-i18n="navOutcomeRisk">Outcome × Measured Risk</button>
+      <button type="button" data-view="target" aria-pressed="false" data-i18n="navTarget">Target × Consequence</button>
+      <button type="button" data-view="outcome-risk" aria-pressed="false" data-i18n="navOutcomeRisk">Consequence × Measured Risk</button>
     </nav>
     <p class="author">Author: <a href="https://futa-waseda.netlify.app/" target="_blank" rel="noopener noreferrer">Futa Waseda</a><a class="contact-link" id="contact-link" href="https://futa-waseda.netlify.app/contact/" target="_blank" rel="noopener noreferrer" aria-label="Contact" title="Contact"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="15" height="11" rx="1.8"/><path d="M3 5.5 10 11 17 5.5"/></svg></a></p>
     </div>
@@ -166,11 +166,11 @@
 <main>
   <div class="view-container">
   <section id="timeline"><p class="note" data-i18n="timelineNote">Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to filter the table.</p><div id="timeline-chart"></div><div id="timeline-table"></div></section>
-  <section id="heatmap"><p class="note" data-i18n="heatmapNote">Cells show mechanism-surface co-occurrence for concrete threat models. Hover for a preview; click a cell to filter the table.</p><div id="heatmap-chart"></div><div id="heatmap-table"></div></section>
-  <section id="risk"><p class="note" data-i18n="riskNote">Rows are threat mechanisms and columns are empirically evaluated risk outcomes. Click a cell to filter the table.</p><div id="risk-chart"></div><div id="risk-table"></div></section>
-  <section id="defense"><p class="note" data-i18n="defenseNote">Rows are defense mechanisms and columns are the threat families they address. Empty cells expose catalog coverage gaps.</p><div id="defense-chart"></div><div id="defense-table"></div></section>
-  <section id="target"><p class="note" data-i18n="targetNote">Rows are affected targets and columns are resulting consequences. Click a cell to filter the table.</p><div id="target-chart"></div><div id="target-table"></div></section>
-  <section id="outcome-risk"><p class="note" data-i18n="outcomeRiskNote">Rows are resulting consequences and columns are empirically evaluated risk outcomes. Click a cell to filter the table.</p><div id="outcome-risk-chart"></div><div id="outcome-risk-table"></div></section>
+  <section id="heatmap"><p class="note" data-i18n="heatmapNote">Cells show mechanism-surface co-occurrence for concrete threat models. Hover for a preview; click a cell to filter the table.</p><p class="note" id="heatmap-population"></p><details class="note"><summary data-i18n="countingTitle">Counting &amp; coverage</summary><p data-i18n="countingNote"></p></details><div id="heatmap-chart"></div><div id="heatmap-table"></div></section>
+  <section id="risk"><p class="note" data-i18n="riskNote">Rows are threat mechanisms and columns are empirically measured risk domains. Click a cell to filter the table.</p><p class="note" id="risk-population"></p><details class="note"><summary data-i18n="countingTitle">Counting &amp; coverage</summary><p data-i18n="countingNote"></p></details><div id="risk-chart"></div><div id="risk-table"></div></section>
+  <section id="defense"><p class="note" data-i18n="defenseNote">Rows are defense mechanisms and columns are the threat families they address. Empty cells indicate no matching catalog records, not proven research gaps.</p><p class="note" id="defense-population"></p><details class="note"><summary data-i18n="countingTitle">Counting &amp; coverage</summary><p data-i18n="countingNote"></p></details><div id="defense-chart"></div><div id="defense-table"></div></section>
+  <section id="target"><p class="note" data-i18n="targetNote">Rows are explicitly attacked, protected, or evaluated targets (TARGET); columns are concrete outcomes (CONSEQUENCE). Targets are not inferred downstream effects. Click a cell to filter the table.</p><p class="note" id="target-population"></p><details class="note"><summary data-i18n="countingTitle">Counting &amp; coverage</summary><p data-i18n="countingNote"></p></details><div id="target-chart"></div><div id="target-table"></div></section>
+  <section id="outcome-risk"><p class="note" data-i18n="outcomeRiskNote">Rows are resulting consequences and columns are empirically measured risk domains. Click a cell to filter the table.</p><p class="note" id="outcome-risk-population"></p><details class="note"><summary data-i18n="countingTitle">Counting &amp; coverage</summary><p data-i18n="countingNote"></p></details><div id="outcome-risk-chart"></div><div id="outcome-risk-table"></div></section>
   <section id="readme" class="active"><iframe class="doc-frame" id="readme-frame" src="readme.html" title="Rendered README"></iframe></section>
   <section id="taxonomy"><iframe class="doc-frame" id="taxonomy-frame" src="taxonomy.html" title="Rendered taxonomy"></iframe></section>
   </div>
@@ -241,7 +241,7 @@ const CAP_OVERRIDES = {vla:'VLA', ood:'OOD', llm:'LLM', vlm:'VLM'};
 function capitalizeLabel(raw){ return raw.split('-').map(part => CAP_OVERRIDES[part] || (part.charAt(0).toUpperCase()+part.slice(1))).join(' '); }
 function dlabel(raw){
   if (currentLang === 'ja') return dlabelFlat[raw] || (labelsJa.risks && labelsJa.risks[raw]) || (labelsJa.kind && labelsJa.kind[raw]) || raw.replaceAll('-',' ');
-  return capitalizeLabel(raw);
+  return ({'task-reliability':'Task & Reliability','physical-safety':'Physical Safety','ethical-societal':'Ethical & Societal','security-privacy':'Security & Privacy'})[raw] || capitalizeLabel(raw);
 }
 function kindLabel(kind){ return currentLang === 'ja' ? ((labelsJa.kind && labelsJa.kind[kind]) || kind) : (KIND_LABELS_EN[kind] || capitalizeLabel(kind)); }
 function splitLabel(text, maxLen=14){
@@ -269,39 +269,51 @@ const I18N = {
   en: {
     title: 'Awesome Physical AI Safety',
     ghlink: '⭐ Star on GitHub',
-    navReadme: 'Overview', navTaxonomy: 'Taxonomy', navTimeline: 'Timeline', navHeatmap: 'Mechanism × Surface', navRisk: 'Mechanism × Risk', navDefense: 'Defense × Threat', navTarget: 'Target × Outcome', navOutcomeRisk: 'Outcome × Risk',
+    navReadme: 'Overview', navTaxonomy: 'Taxonomy', navTimeline: 'Timeline', navHeatmap: 'Mechanism × Surface', navRisk: 'Mechanism × Measured Risk', navDefense: 'Defense × Threat', navTarget: 'Target × Consequence', navOutcomeRisk: 'Consequence × Measured Risk',
     badgeLicenses: 'Licenses', badgePapers: 'Papers', badgeUpdate: 'Update', badgeCuration: 'Curation', badgeDaily: 'Daily', badgeLlm: 'LLM-assisted',
     timelineNote: 'Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to filter the table.',
     heatmapNote: 'Cells show mechanism-surface co-occurrence for concrete threat models. Hover for a preview; click a cell to filter the table.',
-    riskNote: 'Rows are threat mechanisms and columns are empirically evaluated risk outcomes. Click a cell to filter the table.',
-    defenseNote: 'Rows are defense mechanisms and columns are the threat families they address. Empty cells expose catalog coverage gaps.',
-    targetNote: 'Rows are affected targets and columns are resulting consequences. Click a cell to filter the table.',
-    outcomeRiskNote: 'Rows are resulting consequences and columns are empirically evaluated risk outcomes. Click a cell to filter the table.',
+    riskNote: 'Rows are threat mechanisms and columns are empirically measured risk domains. Click a cell to filter the table.',
+    defenseNote: 'Rows are defense mechanisms and columns are the threat families they address. Empty cells indicate no matching catalog records, not proven research gaps.',
+    targetNote: 'Rows are explicitly attacked, protected, or evaluated targets (TARGET); columns are concrete outcomes (CONSEQUENCE). Targets are not inferred downstream effects. Click a cell to filter the table.',
+    outcomeRiskNote: 'Rows are resulting consequences and columns are empirically measured risk domains. Click a cell to filter the table.',
     chartTimelineTitle: 'Field timeline',
     chartHeatmapTitle: 'Threat Mechanism Family × Surface Family',
     chartHeatmapHint: 'Hover a cell to inspect contributing papers.',
-    chartRiskTitle: 'Threat Mechanism Family × Empirically Evaluated Risk Outcome', chartDefenseTitle: 'Defense Mechanism × Defended Threat Mechanism Family', chartTargetTitle: 'Affected Target × Consequence', chartOutcomeRiskTitle: 'Consequence × Empirically Evaluated Risk Outcome',
-    enrichedSuffix: ' enriched papers; hover or click a cell for the paper list.',
-    papersWord: ' papers', tablePaper: 'Paper', tableVenue: 'Venue', tableRisk: 'Evaluated Risk', tableThreat: 'Threat Model', tableAll: 'All papers in this view', tableShowing: 'Showing', tableReset: 'Reset filter', tableCode: 'Project / Code', tableNone: 'None reported', storyWhen: 'When', storyWhere: 'Where', storyHow: 'How', storyTarget: 'Target', storyResult: 'Result',
+    chartRiskTitle: 'Threat Mechanism Family × Measured Risk', chartDefenseTitle: 'Defense Mechanism × Defended Threat Mechanism Family', chartTargetTitle: 'Target × Consequence', chartOutcomeRiskTitle: 'Consequence × Measured Risk',
+    enrichedSuffix: ' eligible papers; hover or click a cell for the paper list.',
+    papersWord: ' papers', tablePaper: 'Paper', tableVenue: 'Venue', tableRisk: 'Measured Risk', tableThreat: 'Threat Model', tableAll: 'All papers in this view', tableShowing: 'Showing', tableReset: 'Reset filter', tableCode: 'Project / Code', tableNone: 'None reported', storyWhen: 'When', storyWhere: 'Where', storyHow: 'How', storyTarget: 'Target', storyResult: 'Consequence',
+    countingTitle: "Counting & coverage",
+    countingNote: "Each cell counts distinct papers: a paper is counted once per cell, even if several leaf labels match one family. Multi-label papers can appear in multiple cells, so cell, row, and column sums are not unique-paper totals or percentages. Counts show paper-level co-occurrence, not causality or a pairing verified in the same experiment. Eligible papers without both axis annotations contribute to no cell; empty annotations do not establish absence of a risk. Empty cells mean zero matching catalog records, not proof that a topic is unstudied. Counts reflect catalog selection and annotation, not field-wide prevalence or defense effectiveness.",
+    populationConcrete: "Eligible: concrete threat-model records; survey and broad evaluation coverage records are excluded.",
+    populationRisk: "Eligible: all non-survey records, including broad evaluation coverage. Coverage labels are included for evaluation records; risk labels require reported empirical metrics.",
+    populationDefense: "Eligible: records with defense metadata, across all primary sections. Cells use defense.mechanism and defense.defends_against.",
+    populationCount: "{eligible} of {total} catalog papers eligible; {excluded} excluded. This is the eligible pool, not the sum of cells.",
     citeLink: '📑 Cite', citeTitle: 'Cite this catalog', citeCopy: 'Copy BibTeX', citeCopied: 'Copied!', contactLabel: 'Contact',
   },
   ja: {
     title: 'Awesome Physical AI Safety',
     ghlink: '⭐ GitHubでStar',
-    navReadme: 'Overview', navTaxonomy: 'Taxonomy', navTimeline: 'タイムライン', navHeatmap: 'Mechanism × Surface', navRisk: 'Mechanism × Risk', navDefense: 'Defense × Threat', navTarget: 'Target × Outcome', navOutcomeRisk: 'Outcome × Risk',
+    navReadme: 'Overview', navTaxonomy: 'Taxonomy', navTimeline: 'タイムライン', navHeatmap: 'Mechanism × Surface', navRisk: 'Mechanism × Measured Risk', navDefense: 'Defense × Threat', navTarget: 'Target × Consequence', navOutcomeRisk: 'Consequence × Measured Risk',
     badgeLicenses: 'ライセンス', badgePapers: '論文数', badgeUpdate: '更新頻度', badgeCuration: 'キュレーション', badgeDaily: '毎日', badgeLlm: 'LLM支援',
     timelineNote: 'バブルの大きさは、分野×年のセルに含まれる論文数を表します。ホバーでプレビュー、クリックで下の表を絞り込みます。',
     heatmapNote: 'セルは具体的なthreat modelにおけるmechanismとsurfaceの共起を示します。ホバーでプレビュー、クリックで下の表を絞り込みます。',
     riskNote: '行はthreatメカニズム、列は実証的に評価されたリスクです。クリックで下の表を絞り込みます。',
-    defenseNote: '行は防御メカニズム、列は対応する脅威familyです。空のセルはcatalog上のcoverage gapを示します。',
-    targetNote: '行は影響を受ける対象、列は結果です。セルをクリックすると下の表を絞り込みます。',
-    outcomeRiskNote: '行は結果（consequence）、列は実証的に評価されたリスクです。セルをクリックすると下の表を絞り込みます。',
+    defenseNote: '行は防御メカニズム、列は対応する脅威familyです。空のセルは該当する採録レコードがないことを示し、未研究の証明ではありません。',
+    targetNote: '行は明示的な攻撃・保護・評価対象（TARGET）、列は具体的な帰結（CONSEQUENCE）です。対象は下流への影響から推測しません。セルをクリックすると下の表を絞り込みます。',
+    outcomeRiskNote: '行は帰結（CONSEQUENCE）、列は実証的に評価されたリスク（MEASURED RISK）です。セルをクリックすると下の表を絞り込みます。',
     chartTimelineTitle: 'フィールドタイムライン',
     chartHeatmapTitle: '脅威メカニズム群 × サーフェス群',
     chartHeatmapHint: 'セルにホバーすると該当論文を確認できます。',
-    chartRiskTitle: '脅威メカニズム群 × 実証的に評価されたリスク', chartDefenseTitle: '防御メカニズム × 対象脅威メカニズム群', chartTargetTitle: '影響対象 × 帰結', chartOutcomeRiskTitle: '帰結（Consequence） × 実証的に評価されたリスク',
-    enrichedSuffix: '件の拡張済み論文。ホバーまたはクリックで論文一覧を表示します。',
-    papersWord: '件', tablePaper: '論文', tableVenue: 'Venue', tableRisk: '評価リスク', tableThreat: '脅威モデル', tableAll: 'このビューの全論文', tableShowing: '表示中', tableReset: '絞り込み解除', tableCode: 'Project / Code', tableNone: '報告なし', storyWhen: 'いつ', storyWhere: 'どこ', storyHow: '方法', storyTarget: '対象', storyResult: '結果',
+    chartRiskTitle: '脅威メカニズム群 × 実証的に評価されたリスク', chartDefenseTitle: '防御メカニズム × 対象脅威メカニズム群', chartTargetTitle: '対象（TARGET） × 帰結（CONSEQUENCE）', chartOutcomeRiskTitle: '帰結（Consequence） × 実証的に評価されたリスク',
+    enrichedSuffix: '件の集計対象論文。ホバーまたはクリックで論文一覧を表示します。',
+    papersWord: '件', tablePaper: '論文', tableVenue: 'Venue', tableRisk: '評価リスク', tableThreat: '脅威モデル', tableAll: 'このビューの全論文', tableShowing: '表示中', tableReset: '絞り込み解除', tableCode: 'Project / Code', tableNone: '報告なし', storyWhen: 'いつ', storyWhere: 'どこ', storyHow: '方法', storyTarget: '対象', storyResult: '帰結',
+    countingTitle: "集計単位・複数ラベル・解釈上の注意",
+    countingNote: "各セルは異なる論文の件数です。同じfamilyに複数のleafラベルが一致しても、1セル内では1論文を1回だけ数えます。複数ラベルの論文は複数セルに現れるため、セル・行・列の合計はユニークな論文総数や割合ではありません。論文単位の共起であり、因果関係や同一実験内で確認された組合せを意味しません。両軸のラベルが揃わない対象論文はどのセルにも寄与しません。空のannotationはリスクの不存在を示しません。空セルは該当する採録レコードが0件という意味で、未研究の証明ではありません。件数は採録範囲・分類状況に依存し、分野全体の頻度や防御の有効性を示しません。",
+    populationConcrete: "対象：具体的な脅威モデルを持つレコード。surveyと広範なevaluationのcoverageレコードを除外します。",
+    populationRisk: "対象：survey以外のレコード（広範なevaluationのcoverageを含む）。evaluationではcoverageラベルを使い、リスクラベルは報告された実験指標を要件とします。",
+    populationDefense: "対象：主sectionを問わずdefense metadataを持つレコード。セルはdefense.mechanismとdefense.defends_againstを使います。",
+    populationCount: "全{total}件中、集計対象{eligible}件・除外{excluded}件。対象件数はセル件数の合計ではありません。",
     citeLink: '📑 引用', citeTitle: '引用方法', citeCopy: 'BibTeXをコピー', citeCopied: 'コピーしました', contactLabel: 'お問い合わせ',
   },
 };
@@ -518,7 +530,7 @@ function renderDefenseThreat(){
 function renderTargetResult(){
   const items=papers.filter(p=>!['survey','evaluation'].includes(p.threat_model.kind)), rows=TARGETS, cols=CONSEQUENCES;
   const margin={top:170,right:90,bottom:20,left:currentLang==='ja'?185:205}, width=1180, height=margin.top+rows.length*38+margin.bottom;
-  const svg=d3.select('#target-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Affected target and consequence cross-map');
+  const svg=d3.select('#target-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Target and consequence cross-map');
   const x=d3.scaleBand().domain(cols).range([margin.left,width-margin.right]).padding(.06), y=d3.scaleBand().domain(rows).range([margin.top,height-margin.bottom]).padding(.07);
   const cells=[];
   for(const row of rows) for(const col of cols){
@@ -604,6 +616,13 @@ window.addEventListener('hashchange', activateViewFromHash);
 activateViewFromHash();
 
 function renderAll(){
+  const t = I18N[currentLang];
+  for (const view of ['heatmap','risk','defense','target','outcome-risk']) {
+    const key = view === 'defense' ? 'populationDefense' : ['risk','outcome-risk'].includes(view) ? 'populationRisk' : 'populationConcrete';
+    const eligible = tableDefaults[view].length;
+    const counts = t.populationCount.replace('{eligible}', eligible).replace('{total}', papers.length).replace('{excluded}', papers.length - eligible);
+    document.getElementById(`${view}-population`).textContent = `${t[key]} ${counts}`;
+  }
   for (const id of ['timeline-chart','heatmap-chart','risk-chart','defense-chart','target-chart','outcome-risk-chart']) {
     document.getElementById(id).innerHTML = '';
   }

@@ -31,7 +31,7 @@ VLA・ロボット・自動運転・身体性AIエージェントを対象に、
   </a>
 </p>
 
-5軸の脅威・失敗taxonomyで研究が扱う失敗経路を記述し、**Evaluated Risk Outcomes** は論文が報告した評価指標に基づいて別途分類します。定義と付与基準は[Taxonomyの詳細](docs/reference/taxonomy.ja.md)をご覧ください。
+5軸の脅威・失敗taxonomyで研究が扱う失敗経路を記述し、**Measured Risk** は論文が報告した評価指標に基づいて別途分類します。定義と付与基準は[Taxonomyの詳細](docs/reference/taxonomy.ja.md)をご覧ください。
 
 ### スコープ
 
@@ -84,7 +84,7 @@ Defense・Evaluation・Benchmarkの拡張メタデータについては[docs/ref
 
 各論文は主な貢献に基づいて分類され、相補的な2つのメタデータ列で整理されています。
 
-### Evaluated Risk（評価されたリスク）
+### Measured Risk（評価されたリスク）
 
 リスクラベルは、各論文で評価されたアウトカムを要約します。
 

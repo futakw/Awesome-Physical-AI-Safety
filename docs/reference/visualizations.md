@@ -4,6 +4,16 @@ These views are generated from the structured metadata in [`data/papers.json`](.
 
 For hoverable paper lists, open the [interactive explorer](../index.html#heatmap). Each README preview links directly to its corresponding view.
 
+## Counting and Coverage in the Interactive Views
+
+Each cell counts distinct papers once, even when multiple leaf labels match the same family. Multi-label papers may contribute to multiple cells, so cell, row, and column sums are not unique-paper totals or percentages. These are paper-level co-occurrences, not causal relationships or necessarily pairs established in the same experiment.
+
+- **Mechanism × Surface / Target × Consequence:** concrete threat-model records only; exclude `survey` and `evaluation` coverage records.
+- **Mechanism × Measured Risk / Consequence × Measured Risk:** exclude `survey`, include `evaluation` coverage via `coverage.mechanisms` / `coverage.consequences`. Risk labels still require reported empirical metrics.
+- **Defense × Threat:** all records with `defense` metadata, regardless of primary section; use `defense.mechanism` and `defense.defends_against`.
+
+The displayed eligible count includes records with empty axis annotations; these records contribute to no cell unless both axis conditions match. An empty annotation does not establish absence of a risk. Empty cells mean zero matching catalog records, not proof of an unstudied topic. Catalog selection and annotation affect counts; counts do not measure field-wide prevalence or defense effectiveness. Each interactive view displays its current eligible and excluded counts.
+
 ## Field Timeline
 
 ![Timeline of research areas](../visualizations/field-timeline.svg)
@@ -22,7 +32,7 @@ The line uses verified initial submission dates, such as arXiv v1 dates. Unknown
 
 The heatmap includes concrete threat models and excludes broad survey/evaluation coverage. Multi-label papers contribute to every applicable mechanism-surface pair.
 
-## Threat Mechanism × Evaluated Risk
+## Threat Mechanism × Measured Risk
 
 ![Threat mechanism and evaluated risk heatmap](../visualizations/threat-risk-heatmap.svg)
 
@@ -34,9 +44,9 @@ Rows follow the same top threat-mechanism order as the Threat Cross-Map. Columns
 
 This view uses the optional `defense` extension across every primary section. It includes only substantive proposed or experimentally evaluated mitigations.
 
-## Affected Target × Consequence
+## Target × Consequence
 
-This interactive-only cross-map connects the affected component to the resulting failure or harm. Open the [Project Page](../index.html#target) to inspect and filter its paper table.
+This interactive-only cross-map connects the explicitly attacked, protected, or evaluated component, capability, or asset (TARGET) to a concrete outcome (CONSEQUENCE), without inferring downstream affected components. Open the [Project Page](../index.html#target) to inspect and filter its paper table.
 
 Static benchmark and evaluation-extension heatmaps are also generated for metadata review. They are not currently top-level Project Page navigation views.
 
