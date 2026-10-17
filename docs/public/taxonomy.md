@@ -2,7 +2,7 @@
 
 **English (this page)** | [Japanese](taxonomy.ja.md)
 
-This taxonomy organizes Physical AI Safety research by asking six questions: when a threat or failure appears, where it enters or is evaluated, how it is produced, what it targets, what happens, and which broad risk is actually measured.
+Each paper in this catalog is described using six complementary taxonomy axes. The example below shows how a single paper can be mapped across all six views.
 
 This taxonomy was independently defined and refined by Futa Waseda.
 
@@ -14,6 +14,16 @@ This taxonomy was independently defined and refined by Futa Waseda.
 | **TARGET** | What is the target of attack or evaluation? |
 | **CONSEQUENCE** | What happens as a result? |
 | **MEASURED RISK** | What risk is empirically evaluated? |
+
+## How to Read the Taxonomy
+
+<p align="center">
+  <a href="../visualizations/00_Taxonomy_example.png">
+    <img src="../visualizations/00_Taxonomy_example.png" alt="Worked example: a visual adversarial patch attack mapped across all six taxonomy axes" width="100%">
+  </a>
+</p>
+
+## Overview
 
 <p align="center">
   <a href="../visualizations/0_Taxonomy_Overview.png">

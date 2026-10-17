@@ -88,6 +88,11 @@
     .leaf-option input { margin:3px 0 0; flex:none; }
     .leaf-option span { min-width:0; overflow-wrap:anywhere; }
     .leaf-option small { color:var(--muted); }
+    .leaf-family-group { margin:2px 0 7px; }
+    .leaf-family-group:not(:first-child) { padding-top:6px; border-top:1px solid var(--line); }
+    .leaf-family { display:flex; align-items:flex-start; gap:7px; padding:4px 2px; font-size:12px; font-weight:700; color:#3c4a5d; cursor:pointer; }
+    .leaf-family input { margin:3px 0 0; flex:none; }
+    .leaf-family-group .leaf-option { padding-left:20px; }
     .filter-clear { min-height:38px; }
     .filter-clear:disabled { opacity:.48; cursor:default; }
     .filter-meta { display:flex; align-items:baseline; gap:8px 14px; flex-wrap:wrap; margin-top:8px; }
@@ -102,6 +107,7 @@
     .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
     svg { width:100%; height:auto; display:block; border:1px solid var(--line); border-radius:10px; background:var(--panel); }
     .axis text,.legend text { fill:var(--muted); font-size:11px; }
+    .cell-active { stroke:#202938; stroke-width:2.5px; }
     .axis path,.axis line { stroke:var(--line); }
     .tooltip { position:fixed; pointer-events:none; max-width:380px; background:#202938; color:#fff; border-radius:8px; padding:11px 13px; box-shadow:0 8px 25px #20293833; font-size:13px; z-index:9; opacity:0; }
     .tooltip strong { display:block; font-size:14px; line-height:1.35; margin-bottom:4px; }
@@ -270,11 +276,20 @@ const SURFACE_GROUPS = [
   {name:'reasoning',label:'Reasoning',short:'Reasoning',labelJa:'推論',values:['reasoning-representation']},
   {name:'action-control',label:'Action & Control',short:'Action/Control',labelJa:'行動・制御',values:['action-interface','execution-control']},
 ];
+// Canonical TARGET families from docs/reference/taxonomy.md's Target
+// Vocabulary table (Perception & Understanding -> Reasoning, Planning &
+// Policy -> Action & System Operation -> Data & Privacy Assets).
+const TARGET_GROUPS = [
+  {name:'perception-understanding',label:'Perception & Understanding',short:'Perception',labelJa:'知覚・理解',values:['perception-model']},
+  {name:'reasoning-planning-policy',label:'Reasoning, Planning & Policy',short:'Reasoning/Policy',labelJa:'推論・計画・ポリシー',values:['task-planner','reasoning-process','world-state','vla-policy']},
+  {name:'action-system-operation',label:'Action & System Operation',short:'Action/System',labelJa:'行動・システム運用',values:['action-generation','robot-executor','runtime-monitor','shared-system-state']},
+  {name:'data-privacy-assets',label:'Data & Privacy Assets',short:'Data/Privacy',labelJa:'データ・プライバシー資産',values:['private-data']},
+];
 const FILTER_AXES = [
   {key:'lifecycle',label:'WHEN',labelJa:'WHEN（時点）',values:['training','inference','system']},
-  {key:'surface',label:'WHERE',labelJa:'WHERE（入口・評価面）',values:SURFACE_GROUPS.flatMap(group=>group.values)},
-  {key:'mechanism',label:'HOW',labelJa:'HOW（手法・失敗モード）',values:MECHANISM_GROUPS.flatMap(group=>group.values)},
-  {key:'target',label:'TARGET',labelJa:'TARGET（対象）',values:TARGETS},
+  {key:'surface',label:'WHERE',labelJa:'WHERE（入口・評価面）',values:SURFACE_GROUPS.flatMap(group=>group.values),groups:SURFACE_GROUPS},
+  {key:'mechanism',label:'HOW',labelJa:'HOW（手法・失敗モード）',values:MECHANISM_GROUPS.flatMap(group=>group.values),groups:MECHANISM_GROUPS},
+  {key:'target',label:'TARGET',labelJa:'TARGET（対象）',values:TARGETS,groups:TARGET_GROUPS},
   {key:'consequence',label:'CONSEQUENCE',labelJa:'CONSEQUENCE（帰結）',values:CONSEQUENCES},
   {key:'risks',label:'MEASURED RISK',labelJa:'MEASURED RISK（評価リスク）',values:['task-reliability','physical-safety','ethical-societal','security-privacy']},
 ];
@@ -473,6 +488,20 @@ const threatValues = (p,field) => {
   return coverageField ? (p.threat_model.coverage?.[coverageField]||[]) : [];
 };
 const filterSelection = Object.fromEntries(FILTER_AXES.map(axis=>[axis.key,new Set()]));
+// Clicking a cross-map cell re-expresses that row/column intersection as
+// real Taxonomy leaf filters (replacing whatever was selected on those two
+// axes), so the result is re-searchable with the same leaf panel used
+// everywhere else — not a one-off local filter. Clicking the same cell
+// again clears just those two axes. A cell's own highlight is derived
+// straight from filterSelection (no separate "active cell" state to drift
+// out of sync).
+function axisFilterMatches(axisKey,values){ const selected=filterSelection[axisKey]; return selected.size===values.length&&values.every(v=>selected.has(v)); }
+function toggleCellFilter(axis1,values1,axis2,values2){
+  const activating=!(axisFilterMatches(axis1,values1)&&axisFilterMatches(axis2,values2));
+  filterSelection[axis1]=new Set(activating?values1:[]);
+  filterSelection[axis2]=new Set(activating?values2:[]);
+  return activating;
+}
 let keywordQuery = '';
 let searchTimer = null;
 const normalizeSearch = value => String(value??'').normalize('NFKC').toLocaleLowerCase().replace(/[-_]+/g,' ').replace(/\s+/g,' ').trim();
@@ -511,13 +540,19 @@ function renderFilterControls(){
   countBadge.title=t.filterSelected.replace('{count}',selectedCount);
   document.getElementById('filter-clear').disabled=!filtersActive();
   const options=document.getElementById('leaf-options');
+  const leafRow=(axis,value)=>{
+    const count=papers.filter(p=>paperAxisValues(p,axis.key).includes(value)).length;
+    const id=`leaf-${axis.key}-${value}`;
+    return `<label class="leaf-option" for="${id}"><input type="checkbox" id="${id}" data-filter-axis="${axis.key}" value="${value}" ${filterSelection[axis.key].has(value)?'checked':''}><span>${escapeHtml(dlabel(value))} <small>(${count})</small></span></label>`;
+  };
   options.innerHTML=`<div class="leaf-options-head"><span>${escapeHtml(t.leafFilter)}</span><button type="button" class="leaf-options-close">${escapeHtml(t.filterDone)}</button></div>`+FILTER_AXES.map(axis=>{
     const legend=currentLang==='ja'?axis.labelJa:axis.label;
-    const rows=axis.values.map(value=>{
-      const count=papers.filter(p=>paperAxisValues(p,axis.key).includes(value)).length;
-      const id=`leaf-${axis.key}-${value}`;
-      return `<label class="leaf-option" for="${id}"><input type="checkbox" id="${id}" data-filter-axis="${axis.key}" value="${value}" ${filterSelection[axis.key].has(value)?'checked':''}><span>${escapeHtml(dlabel(value))} <small>(${count})</small></span></label>`;
-    }).join('');
+    const rows=axis.groups
+      ? axis.groups.map(group=>{
+          const famId=`leaf-family-${axis.key}-${group.name}`;
+          return `<div class="leaf-family-group"><label class="leaf-family" for="${famId}"><input type="checkbox" id="${famId}" data-filter-family-axis="${axis.key}" data-filter-family-values="${group.values.join(',')}"><span>${escapeHtml(familyLabel(group))}</span></label>${group.values.map(value=>leafRow(axis,value)).join('')}</div>`;
+        }).join('')
+      : axis.values.map(value=>leafRow(axis,value)).join('');
     return `<fieldset><legend>${escapeHtml(legend)}</legend>${rows}</fieldset>`;
   }).join('');
   options.querySelector('.leaf-options-close').addEventListener('click',()=>{ document.getElementById('leaf-filter').open=false; });
@@ -526,6 +561,21 @@ function renderFilterControls(){
     input.checked?selected.add(input.value):selected.delete(input.value);
     renderAll();
   }));
+  // Family checkbox is a bulk shortcut over the same per-leaf Set used by
+  // individual leaf checkboxes — selecting it adds/removes every leaf in
+  // the family at once; it carries no separate selection state of its own.
+  options.querySelectorAll('input[data-filter-family-axis]').forEach(input=>{
+    const selected=filterSelection[input.dataset.filterFamilyAxis];
+    const values=input.dataset.filterFamilyValues.split(',');
+    const selectedN=values.filter(v=>selected.has(v)).length;
+    input.checked=selectedN===values.length;
+    input.indeterminate=selectedN>0&&selectedN<values.length;
+    input.addEventListener('change',()=>{
+      if(input.checked) values.forEach(v=>selected.add(v));
+      else values.forEach(v=>selected.delete(v));
+      renderAll();
+    });
+  });
   const chips=document.getElementById('filter-chips');
   chips.innerHTML=FILTER_AXES.flatMap(axis=>[...filterSelection[axis.key]].map(value=>{
     const axisLabel=currentLang==='ja'?axis.labelJa:axis.label;
@@ -631,7 +681,7 @@ function wrapEndAnchored(selection, getText, maxLen=24){
 }
 function renderHeatmap(){
   const width=1160,margin={right:30,bottom:20,left: currentLang==='ja' ? 220 : 300};
-  const concrete=viewPapers('heatmap');
+  const concrete=viewBasePapers('heatmap');
   const mechanisms=MECHANISM_GROUPS, surfaces=SURFACE_GROUPS;
   const x=d3.scaleBand().domain(surfaces.map(g=>g.name)).range([margin.left,width-margin.right]).padding(.08);
   margin.top=crossMapMarginTop(surfaces,familyLabel,x.bandwidth());
@@ -648,7 +698,7 @@ function renderHeatmap(){
   svg.append('text').attr('x',margin.left).attr('y',40).attr('font-size',12).attr('fill','#657287').text(rowsColsPrefix(I18N[currentLang].axisMechanism,I18N[currentLang].axisSurface)+I18N[currentLang].chartHeatmapHint);
   svg.selectAll('text.surface').data(surfaces).join('text').attr('class','axis').call(layoutCrossMapColumns,sg=>x(sg.name)+x.bandwidth()/2,margin.top,x.bandwidth(),sg=>familyLabel(sg));
   svg.selectAll('text.mechanism').data(mechanisms).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',mg=>y(mg.name)+y.bandwidth()/2+4).call(wrapEndAnchored, mg=>familyLabel(mg));
-  svg.selectAll('rect.cell').data(cellData).join('rect').attr('class','cell').attr('x',d=>x(d.sg.name)).attr('y',d=>y(d.mg.name)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${familyLabel(d.mg)} × ${familyLabel(d.sg)}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();filterPaperTable('heatmap',d.list,`${familyLabel(d.mg)} × ${familyLabel(d.sg)}`);});
+  svg.selectAll('rect.cell').data(cellData).join('rect').attr('class','cell').classed('cell-active',d=>axisFilterMatches('mechanism',d.mg.values)&&axisFilterMatches('surface',d.sg.values)).attr('x',d=>x(d.sg.name)).attr('y',d=>y(d.mg.name)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${familyLabel(d.mg)} × ${familyLabel(d.sg)}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();const activating=toggleCellFilter('mechanism',d.mg.values,'surface',d.sg.values);renderAll();if(activating)filterPaperTable('heatmap',d.list,`${familyLabel(d.mg)} × ${familyLabel(d.sg)}`);});
   svg.selectAll('text.value').data(cellData.filter(d=>d.n)).join('text').attr('class','value').attr('x',d=>x(d.sg.name)+x.bandwidth()/2).attr('y',d=>y(d.mg.name)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',650).attr('fill',d=>heatmapTextColor(fill(d.n))).style('pointer-events','none').text(d=>d.n);
 }
 
@@ -722,7 +772,7 @@ function renderExtensionMap(container,title,items,rows,cols,rowValues,colValues,
 }
 
 function renderDefenseThreat(){
-  const items=viewPapers('defense'), rows=DEFENSE_MECHANISMS, cols=MECHANISM_GROUPS;
+  const items=viewBasePapers('defense'), rows=DEFENSE_MECHANISMS, cols=MECHANISM_GROUPS;
   const isJa=currentLang==='ja';
   const margin={right:45,bottom:20,left:isJa?230:250}, width=1180;
   const x=d3.scaleBand().domain(cols.map(g=>g.name)).range([margin.left,width-margin.right]).padding(.06);
@@ -745,7 +795,7 @@ function renderDefenseThreat(){
 }
 
 function renderTargetResult(){
-  const items=viewPapers('target'), rows=TARGETS, cols=CONSEQUENCES;
+  const items=viewBasePapers('target'), rows=TARGETS, cols=CONSEQUENCES;
   const margin={right:90,bottom:20,left:currentLang==='ja'?185:205}, width=1180;
   const x=d3.scaleBand().domain(cols).range([margin.left,width-margin.right]).padding(.06);
   margin.top=crossMapMarginTop(cols,dlabel,x.bandwidth());
@@ -762,11 +812,11 @@ function renderTargetResult(){
   svg.append('text').attr('x',margin.left).attr('y',40).attr('font-size',12).attr('fill','#657287').text(rowsColsPrefix(I18N[currentLang].axisTarget,I18N[currentLang].axisConsequence)+`${items.length}${I18N[currentLang].enrichedSuffix}`);
   svg.selectAll('text.col').data(cols).join('text').attr('class','axis').call(layoutCrossMapColumns,col=>x(col)+x.bandwidth()/2,margin.top,x.bandwidth(),col=>dlabel(col));
   svg.selectAll('text.row').data(rows).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',row=>y(row)+y.bandwidth()/2+4).call(wrapEndAnchored,row=>dlabel(row));
-  svg.selectAll('rect.cell').data(cells).join('rect').attr('class','cell').attr('x',d=>x(d.col)).attr('y',d=>y(d.row)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(dlabel(d.row))} × ${escapeHtml(dlabel(d.col))}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();filterPaperTable('target',d.list,`${dlabel(d.row)} × ${dlabel(d.col)}`);});
+  svg.selectAll('rect.cell').data(cells).join('rect').attr('class','cell').classed('cell-active',d=>axisFilterMatches('target',[d.row])&&axisFilterMatches('consequence',[d.col])).attr('x',d=>x(d.col)).attr('y',d=>y(d.row)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(dlabel(d.row))} × ${escapeHtml(dlabel(d.col))}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();const activating=toggleCellFilter('target',[d.row],'consequence',[d.col]);renderAll();if(activating)filterPaperTable('target',d.list,`${dlabel(d.row)} × ${dlabel(d.col)}`);});
   svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.col)+x.bandwidth()/2).attr('y',d=>y(d.row)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',11).attr('font-weight',650).attr('fill',d=>heatmapTextColor(fill(d.n))).style('pointer-events','none').text(d=>d.n);
 }
 function renderOutcomeRisk(){
-  const items=viewPapers('outcome-risk'), rows=CONSEQUENCES, cols=['task-reliability','physical-safety','ethical-societal','security-privacy'];
+  const items=viewBasePapers('outcome-risk'), rows=CONSEQUENCES, cols=['task-reliability','physical-safety','ethical-societal','security-privacy'];
   const margin={right:90,bottom:20,left:currentLang==='ja'?185:205}, width=1180;
   const x=d3.scaleBand().domain(cols).range([margin.left,width-margin.right]).padding(.06);
   margin.top=crossMapMarginTop(cols,dlabel,x.bandwidth());
@@ -783,11 +833,11 @@ function renderOutcomeRisk(){
   svg.append('text').attr('x',margin.left).attr('y',40).attr('font-size',12).attr('fill','#657287').text(rowsColsPrefix(I18N[currentLang].axisConsequence,I18N[currentLang].axisRisk)+`${items.length}${I18N[currentLang].enrichedSuffix}`);
   svg.selectAll('text.col').data(cols).join('text').attr('class','axis').call(layoutCrossMapColumns,d=>x(d)+x.bandwidth()/2,margin.top,x.bandwidth(),d=>dlabel(d));
   svg.selectAll('text.row').data(rows).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',row=>y(row)+y.bandwidth()/2+4).call(wrapEndAnchored,row=>dlabel(row));
-  svg.selectAll('rect.cell').data(cells).join('rect').attr('class','cell').attr('x',d=>x(d.col)).attr('y',d=>y(d.row)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(dlabel(d.row))} × ${escapeHtml(dlabel(d.col))}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();filterPaperTable('outcome-risk',d.list,`${dlabel(d.row)} × ${dlabel(d.col)}`);});
+  svg.selectAll('rect.cell').data(cells).join('rect').attr('class','cell').classed('cell-active',d=>axisFilterMatches('consequence',[d.row])&&axisFilterMatches('risks',[d.col])).attr('x',d=>x(d.col)).attr('y',d=>y(d.row)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(dlabel(d.row))} × ${escapeHtml(dlabel(d.col))}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();const activating=toggleCellFilter('consequence',[d.row],'risks',[d.col]);renderAll();if(activating)filterPaperTable('outcome-risk',d.list,`${dlabel(d.row)} × ${dlabel(d.col)}`);});
   svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.col)+x.bandwidth()/2).attr('y',d=>y(d.row)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',11).attr('font-weight',650).attr('fill',d=>heatmapTextColor(fill(d.n))).style('pointer-events','none').text(d=>d.n);
 }
 function renderThreatRisk(){
-  const items=viewPapers('risk');
+  const items=viewBasePapers('risk');
   const rows=MECHANISM_GROUPS, cols=['task-reliability','physical-safety','ethical-societal','security-privacy'];
   const margin={right:55,bottom:20,left: currentLang==='ja' ? 210 : 290}, width=1180;
   const x=d3.scaleBand().domain(cols).range([margin.left,width-margin.right]).padding(.06);
@@ -801,7 +851,7 @@ function renderThreatRisk(){
   svg.append('text').attr('x',margin.left).attr('y',40).attr('font-size',12).attr('fill','#657287').text(rowsColsPrefix(I18N[currentLang].axisMechanism,I18N[currentLang].axisRisk)+`${items.length}${I18N[currentLang].enrichedSuffix}`);
   svg.selectAll('text.col').data(cols).join('text').attr('class','axis').call(layoutCrossMapColumns,d=>x(d)+x.bandwidth()/2,margin.top,x.bandwidth(),d=>dlabel(d));
   svg.selectAll('text.row').data(rows).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',mg=>y(mg.name)+y.bandwidth()/2+4).call(wrapEndAnchored, mg=>familyLabel(mg));
-  svg.selectAll('rect.cell').data(cells).join('rect').attr('class','cell').attr('x',d=>x(d.col)).attr('y',d=>y(d.mg.name)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(familyLabel(d.mg))} × ${escapeHtml(dlabel(d.col))}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();filterPaperTable('risk',d.list,`${familyLabel(d.mg)} × ${dlabel(d.col)}`);});
+  svg.selectAll('rect.cell').data(cells).join('rect').attr('class','cell').classed('cell-active',d=>axisFilterMatches('mechanism',d.mg.values)&&axisFilterMatches('risks',[d.col])).attr('x',d=>x(d.col)).attr('y',d=>y(d.mg.name)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(familyLabel(d.mg))} × ${escapeHtml(dlabel(d.col))}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();const activating=toggleCellFilter('mechanism',d.mg.values,'risks',[d.col]);renderAll();if(activating)filterPaperTable('risk',d.list,`${familyLabel(d.mg)} × ${dlabel(d.col)}`);});
   svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.col)+x.bandwidth()/2).attr('y',d=>y(d.mg.name)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',11).attr('font-weight',650).attr('fill',d=>heatmapTextColor(fill(d.n))).style('pointer-events','none').text(d=>d.n);
 }
 function renderBenchmarkV2(){

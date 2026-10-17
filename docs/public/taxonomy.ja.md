@@ -2,7 +2,7 @@
 
 [English](taxonomy.md) | **日本語（このページ）**
 
-このtaxonomyは、Physical AI Safety研究を6つの問いで整理します。脅威や失敗がいつ現れ、どこから導入・評価され、どのように生じ、何を対象とし、何が起こり、どの広いリスクが実証的に測られたかを表します。
+本カタログの各論文は、6つの相補的なtaxonomy軸で記述されます。以下の例は、1本の論文を6つの軸すべてにマッピングする方法を示します。
 
 本taxonomyは、Futa Wasedaが独自に定義・洗練したものです。
 
@@ -14,6 +14,16 @@
 | **TARGET** | 攻撃・評価の対象は何か？ |
 | **CONSEQUENCE** | 結果として何が起こるか？ |
 | **MEASURED RISK** | どのリスクを実証的に評価したか？ |
+
+## Taxonomyの読み方
+
+<p align="center">
+  <a href="../visualizations/00_Taxonomy_example.png">
+    <img src="../visualizations/00_Taxonomy_example.png" alt="具体例：視覚的adversarial patch攻撃を6つのtaxonomy軸すべてにマッピング" width="100%">
+  </a>
+</p>
+
+## 概要
 
 <p align="center">
   <a href="../visualizations/0_Taxonomy_Overview.png">
