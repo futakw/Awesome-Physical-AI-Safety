@@ -62,6 +62,13 @@
     section { display:none; }
     section.active { display:block; }
     .note { color:var(--muted); font-size:13px; margin:0 0 12px; }
+    .coverage-note { margin:0 0 12px; color:var(--muted); font-size:12px; }
+    .coverage-note > summary { display:list-item; width:fit-content; max-width:100%; padding:4px 9px; border:1px solid var(--line); border-radius:7px; background:var(--panel); color:#4f5f73; cursor:pointer; }
+    .coverage-note > summary:hover { background:#eef3fa; }
+    .coverage-note[open] > summary { margin-bottom:8px; border-color:#aebed6; background:#eef3fa; }
+    .coverage-detail { padding:9px 11px; border-left:3px solid #b9c8dc; background:#f8fafc; }
+    .coverage-detail p { margin:0; }
+    .coverage-detail p + p { margin-top:7px; }
     .catalog-filters { margin:0 0 18px; padding:13px 14px; border:1px solid var(--line); border-radius:10px; background:#fff; box-shadow:0 2px 8px #2029380a; }
     .catalog-filters[hidden] { display:none; }
     .filter-main { display:flex; align-items:flex-start; gap:9px; flex-wrap:wrap; }
@@ -212,11 +219,11 @@
   </aside>
   <div class="view-container">
   <section id="timeline"><p class="note" data-i18n="timelineNote">Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to filter the table.</p><div id="timeline-chart"></div><div id="timeline-table"></div></section>
-  <section id="heatmap"><p class="note" data-i18n="heatmapNote">Cells show mechanism-surface co-occurrence for concrete threat models. Hover for a preview; click a cell to filter the table.</p><p class="note" id="heatmap-population"></p><details class="note"><summary data-i18n="countingTitle">Counting &amp; coverage</summary><p data-i18n="countingNote"></p></details><div id="heatmap-chart"></div><div id="heatmap-table"></div></section>
-  <section id="risk"><p class="note" data-i18n="riskNote">Rows are threat mechanisms and columns are empirically measured risk domains. Click a cell to filter the table.</p><p class="note" id="risk-population"></p><details class="note"><summary data-i18n="countingTitle">Counting &amp; coverage</summary><p data-i18n="countingNote"></p></details><div id="risk-chart"></div><div id="risk-table"></div></section>
-  <section id="defense"><p class="note" data-i18n="defenseNote">Rows are defense mechanisms and columns are the threat families they address. Empty cells indicate no matching catalog records, not proven research gaps.</p><p class="note" id="defense-population"></p><details class="note"><summary data-i18n="countingTitle">Counting &amp; coverage</summary><p data-i18n="countingNote"></p></details><div id="defense-chart"></div><div id="defense-table"></div></section>
-  <section id="target"><p class="note" data-i18n="targetNote">Rows are explicitly attacked, protected, or evaluated targets (TARGET); columns are concrete outcomes (CONSEQUENCE). Targets are not inferred downstream effects. Click a cell to filter the table.</p><p class="note" id="target-population"></p><details class="note"><summary data-i18n="countingTitle">Counting &amp; coverage</summary><p data-i18n="countingNote"></p></details><div id="target-chart"></div><div id="target-table"></div></section>
-  <section id="outcome-risk"><p class="note" data-i18n="outcomeRiskNote">Rows are resulting consequences and columns are empirically measured risk domains. Click a cell to filter the table.</p><p class="note" id="outcome-risk-population"></p><details class="note"><summary data-i18n="countingTitle">Counting &amp; coverage</summary><p data-i18n="countingNote"></p></details><div id="outcome-risk-chart"></div><div id="outcome-risk-table"></div></section>
+  <section id="heatmap"><p class="note" data-i18n="heatmapNote">Cells show mechanism-surface co-occurrence for concrete threat models. Hover for a preview; click a cell to filter the table.</p><details class="coverage-note"><summary id="heatmap-population"></summary><div class="coverage-detail"><p id="heatmap-population-detail"></p><p data-i18n="countingNote"></p></div></details><div id="heatmap-chart"></div><div id="heatmap-table"></div></section>
+  <section id="risk"><p class="note" data-i18n="riskNote">Rows are threat mechanisms and columns are empirically measured risk domains. Click a cell to filter the table.</p><details class="coverage-note"><summary id="risk-population"></summary><div class="coverage-detail"><p id="risk-population-detail"></p><p data-i18n="countingNote"></p></div></details><div id="risk-chart"></div><div id="risk-table"></div></section>
+  <section id="defense"><p class="note" data-i18n="defenseNote">Rows are defense mechanisms and columns are the threat families they address. Empty cells indicate no matching catalog records, not proven research gaps.</p><details class="coverage-note"><summary id="defense-population"></summary><div class="coverage-detail"><p id="defense-population-detail"></p><p data-i18n="countingNote"></p></div></details><div id="defense-chart"></div><div id="defense-table"></div></section>
+  <section id="target"><p class="note" data-i18n="targetNote">Rows are explicitly attacked, protected, or evaluated targets (TARGET); columns are concrete outcomes (CONSEQUENCE). Targets are not inferred downstream effects. Click a cell to filter the table.</p><details class="coverage-note"><summary id="target-population"></summary><div class="coverage-detail"><p id="target-population-detail"></p><p data-i18n="countingNote"></p></div></details><div id="target-chart"></div><div id="target-table"></div></section>
+  <section id="outcome-risk"><p class="note" data-i18n="outcomeRiskNote">Rows are resulting consequences and columns are empirically measured risk domains. Click a cell to filter the table.</p><details class="coverage-note"><summary id="outcome-risk-population"></summary><div class="coverage-detail"><p id="outcome-risk-population-detail"></p><p data-i18n="countingNote"></p></div></details><div id="outcome-risk-chart"></div><div id="outcome-risk-table"></div></section>
   <section id="readme" class="active"><iframe class="doc-frame" id="readme-frame" src="readme.html" title="Rendered README"></iframe></section>
   <section id="taxonomy"><iframe class="doc-frame" id="taxonomy-frame" src="taxonomy.html" title="Rendered taxonomy"></iframe></section>
   </div>
@@ -337,13 +344,14 @@ const I18N = {
     chartRiskTitle: 'Threat Mechanism Family × Measured Risk', chartDefenseTitle: 'Defense Mechanism × Defended Threat Mechanism Family', chartTargetTitle: 'Target × Consequence', chartOutcomeRiskTitle: 'Consequence × Measured Risk',
     enrichedSuffix: ' eligible papers; hover or click a cell for the paper list.',
     papersWord: ' papers', tablePaper: 'Paper', tableVenue: 'Venue', tableRisk: 'Measured Risk', tableThreat: 'Threat Model', tableAll: 'All papers in this view', tableShowing: 'Showing', tableReset: 'Reset filter', tableCode: 'Project / Code', tableNone: 'None reported', storyWhen: 'When', storyWhere: 'Where', storyHow: 'How', storyTarget: 'Target', storyResult: 'Consequence',
-    countingTitle: "Counting & coverage",
     countingNote: "Each cell counts distinct papers: a paper is counted once per cell, even if several leaf labels match one family. Multi-label papers can appear in multiple cells, so cell, row, and column sums are not unique-paper totals or percentages. Counts show paper-level co-occurrence, not causality or a pairing verified in the same experiment. Eligible papers without both axis annotations contribute to no cell; empty annotations do not establish absence of a risk. Empty cells mean zero matching catalog records, not proof that a topic is unstudied. Counts reflect catalog selection and annotation, not field-wide prevalence or defense effectiveness.",
     populationConcrete: "Eligible: concrete threat-model records; survey and broad evaluation coverage records are excluded.",
     populationRisk: "Eligible: all non-survey records, including broad evaluation coverage. Coverage labels are included for evaluation records; risk labels require reported empirical metrics.",
     populationDefense: "Eligible: records with defense metadata, across all primary sections. Cells use defense.mechanism and defense.defends_against.",
     populationCount: "{eligible} of {total} catalog papers eligible; {excluded} excluded. This is the eligible pool, not the sum of cells.",
     populationFiltered: "{matched} match the active filters among {eligible} eligible papers; {excluded} excluded by this view's population rule.",
+    populationCompact: "Coverage {eligible}/{total} · distinct papers per cell · multi-label papers may count in multiple cells",
+    populationCompactFiltered: "Filters {matched}/{eligible} eligible · distinct papers per cell · multi-label papers may count in multiple cells",
     searchLabel: 'Search papers', searchPlaceholder: 'Search title, author, venue, tags, or taxonomy labels', leafFilter: 'Taxonomy leaf filters', filterClear: 'Clear filters', filterDone: 'Done',
     filterHelp: 'Leaf labels use OR within one axis and AND across axes. Keyword search is also combined with AND.',
     filterStatus: '{matched} of {total} catalog papers match', filterSelected: '{count} leaf filters selected', filterRemove: 'Remove filter',
@@ -366,13 +374,14 @@ const I18N = {
     chartRiskTitle: '脅威メカニズム群 × 実証的に評価されたリスク', chartDefenseTitle: '防御メカニズム × 対象脅威メカニズム群', chartTargetTitle: '対象（TARGET） × 帰結（CONSEQUENCE）', chartOutcomeRiskTitle: '帰結（Consequence） × 実証的に評価されたリスク',
     enrichedSuffix: '件の集計対象論文。ホバーまたはクリックで論文一覧を表示します。',
     papersWord: '件', tablePaper: '論文', tableVenue: 'Venue', tableRisk: '評価リスク', tableThreat: '脅威モデル', tableAll: 'このビューの全論文', tableShowing: '表示中', tableReset: '絞り込み解除', tableCode: 'Project / Code', tableNone: '報告なし', storyWhen: 'いつ', storyWhere: 'どこ', storyHow: '方法', storyTarget: '対象', storyResult: '帰結',
-    countingTitle: "集計単位・複数ラベル・解釈上の注意",
     countingNote: "各セルは異なる論文の件数です。同じfamilyに複数のleafラベルが一致しても、1セル内では1論文を1回だけ数えます。複数ラベルの論文は複数セルに現れるため、セル・行・列の合計はユニークな論文総数や割合ではありません。論文単位の共起であり、因果関係や同一実験内で確認された組合せを意味しません。両軸のラベルが揃わない対象論文はどのセルにも寄与しません。空のannotationはリスクの不存在を示しません。空セルは該当する採録レコードが0件という意味で、未研究の証明ではありません。件数は採録範囲・分類状況に依存し、分野全体の頻度や防御の有効性を示しません。",
     populationConcrete: "対象：具体的な脅威モデルを持つレコード。surveyと広範なevaluationのcoverageレコードを除外します。",
     populationRisk: "対象：survey以外のレコード（広範なevaluationのcoverageを含む）。evaluationではcoverageラベルを使い、リスクラベルは報告された実験指標を要件とします。",
     populationDefense: "対象：主sectionを問わずdefense metadataを持つレコード。セルはdefense.mechanismとdefense.defends_againstを使います。",
     populationCount: "全{total}件中、集計対象{eligible}件・除外{excluded}件。対象件数はセル件数の合計ではありません。",
     populationFiltered: "このビューの集計対象{eligible}件中、フィルタ一致{matched}件・母集団ルールによる除外{excluded}件。",
+    populationCompact: "集計対象 {eligible}/{total}件 · 1セルはユニーク論文数 · 複数ラベルは複数セルに計上",
+    populationCompactFiltered: "フィルタ一致 {matched}/{eligible}件 · 1セルはユニーク論文数 · 複数ラベルは複数セルに計上",
     searchLabel: '論文を検索', searchPlaceholder: 'タイトル・著者・Venue・タグ・Taxonomyラベルを検索', leafFilter: 'Taxonomy Leafで絞り込み', filterClear: 'すべて解除', filterDone: '閉じる',
     filterHelp: '同じ軸のLeafはOR、異なる軸はANDで結合します。キーワード検索ともANDで結合します。',
     filterStatus: '全{total}件中{matched}件が一致', filterSelected: 'Leafフィルタ{count}件を選択中', filterRemove: 'フィルタを解除',
@@ -746,7 +755,9 @@ function renderAll(){
     const key = view === 'defense' ? 'populationDefense' : ['risk','outcome-risk'].includes(view) ? 'populationRisk' : 'populationConcrete';
     const eligible = viewBasePapers(view).length, matched=viewPapers(view).length, excluded=papers.length-eligible;
     const counts = (filtersActive()?t.populationFiltered:t.populationCount).replace('{matched}',matched).replace('{eligible}', eligible).replace('{total}', papers.length).replace('{excluded}', excluded);
-    document.getElementById(`${view}-population`).textContent = `${t[key]} ${counts}`;
+    const compact = (filtersActive()?t.populationCompactFiltered:t.populationCompact).replace('{matched}',matched).replace('{eligible}',eligible).replace('{total}',papers.length);
+    document.getElementById(`${view}-population`).textContent = compact;
+    document.getElementById(`${view}-population-detail`).textContent = `${t[key]} ${counts}`;
   }
   for (const id of ['timeline-chart','heatmap-chart','risk-chart','defense-chart','target-chart','outcome-risk-chart']) {
     document.getElementById(id).innerHTML = '';
