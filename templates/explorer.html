@@ -48,7 +48,8 @@
     .meta-badge:hover strong { background:#dfeafb; }
     .meta-badge.papers strong { background:#3fa89b; color:#fff; }
     .topbar-bottom { display:flex; align-items:flex-end; justify-content:space-between; gap:8px 16px; flex-wrap:wrap; padding-bottom:9px; }
-    nav { display:flex; gap:6px; flex-wrap:wrap; }
+    nav { display:flex; gap:5px; flex-wrap:wrap; }
+    nav button { padding:6px 9px; font-size:12.5px; }
     .author { margin:0 0 0 auto; color:var(--muted); font-size:12px; white-space:nowrap; }
     .author a { color:var(--ink); text-underline-offset:3px; }
     .author a:hover { color:#365f99; }
@@ -219,11 +220,11 @@
   </aside>
   <div class="view-container">
   <section id="timeline"><p class="note" data-i18n="timelineNote">Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to filter the table.</p><div id="timeline-chart"></div><div id="timeline-table"></div></section>
-  <section id="heatmap"><p class="note" data-i18n="heatmapNote">Cells show mechanism-surface co-occurrence for concrete threat models. Hover for a preview; click a cell to filter the table.</p><details class="coverage-note"><summary id="heatmap-population"></summary><div class="coverage-detail"><p id="heatmap-population-detail"></p><p data-i18n="countingNote"></p></div></details><div id="heatmap-chart"></div><div id="heatmap-table"></div></section>
-  <section id="risk"><p class="note" data-i18n="riskNote">Rows are threat mechanisms and columns are empirically measured risk domains. Click a cell to filter the table.</p><details class="coverage-note"><summary id="risk-population"></summary><div class="coverage-detail"><p id="risk-population-detail"></p><p data-i18n="countingNote"></p></div></details><div id="risk-chart"></div><div id="risk-table"></div></section>
-  <section id="defense"><p class="note" data-i18n="defenseNote">Rows are defense mechanisms and columns are the threat families they address. Empty cells indicate no matching catalog records, not proven research gaps.</p><details class="coverage-note"><summary id="defense-population"></summary><div class="coverage-detail"><p id="defense-population-detail"></p><p data-i18n="countingNote"></p></div></details><div id="defense-chart"></div><div id="defense-table"></div></section>
-  <section id="target"><p class="note" data-i18n="targetNote">Rows are explicitly attacked, protected, or evaluated targets (TARGET); columns are concrete outcomes (CONSEQUENCE). Targets are not inferred downstream effects. Click a cell to filter the table.</p><details class="coverage-note"><summary id="target-population"></summary><div class="coverage-detail"><p id="target-population-detail"></p><p data-i18n="countingNote"></p></div></details><div id="target-chart"></div><div id="target-table"></div></section>
-  <section id="outcome-risk"><p class="note" data-i18n="outcomeRiskNote">Rows are resulting consequences and columns are empirically measured risk domains. Click a cell to filter the table.</p><details class="coverage-note"><summary id="outcome-risk-population"></summary><div class="coverage-detail"><p id="outcome-risk-population-detail"></p><p data-i18n="countingNote"></p></div></details><div id="outcome-risk-chart"></div><div id="outcome-risk-table"></div></section>
+  <section id="heatmap"><details class="coverage-note"><summary id="heatmap-population"></summary><div class="coverage-detail"><p id="heatmap-population-detail"></p><p data-i18n="countingNote"></p></div></details><div id="heatmap-chart"></div><div id="heatmap-table"></div></section>
+  <section id="risk"><details class="coverage-note"><summary id="risk-population"></summary><div class="coverage-detail"><p id="risk-population-detail"></p><p data-i18n="countingNote"></p></div></details><div id="risk-chart"></div><div id="risk-table"></div></section>
+  <section id="defense"><details class="coverage-note"><summary id="defense-population"></summary><div class="coverage-detail"><p id="defense-population-detail"></p><p data-i18n="countingNote"></p></div></details><div id="defense-chart"></div><div id="defense-table"></div></section>
+  <section id="target"><details class="coverage-note"><summary id="target-population"></summary><div class="coverage-detail"><p id="target-population-detail"></p><p data-i18n="countingNote"></p></div></details><div id="target-chart"></div><div id="target-table"></div></section>
+  <section id="outcome-risk"><details class="coverage-note"><summary id="outcome-risk-population"></summary><div class="coverage-detail"><p id="outcome-risk-population-detail"></p><p data-i18n="countingNote"></p></div></details><div id="outcome-risk-chart"></div><div id="outcome-risk-table"></div></section>
   <section id="readme" class="active"><iframe class="doc-frame" id="readme-frame" src="readme.html" title="Rendered README"></iframe></section>
   <section id="taxonomy"><iframe class="doc-frame" id="taxonomy-frame" src="taxonomy.html" title="Rendered taxonomy"></iframe></section>
   </div>
@@ -321,6 +322,68 @@ function rotatedAxisLabel(selection, getText){
     lines.forEach((line,i)=>node.append('tspan').attr('x',x).attr('dy',i===0?'0em':'1.05em').text(line));
   });
 }
+const axisMeasureContext = document.createElement('canvas').getContext('2d');
+axisMeasureContext.font = '12px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+const measureAxisLabel = text => axisMeasureContext.measureText(text).width;
+// Generic character-by-character wrapping can split a Japanese label mid-word
+// (e.g. タスク失 / 敗). These labels wrap at their natural word boundary
+// instead whenever they need more than one line.
+const JA_WRAP_HINTS = {
+  'タスク失敗': ['タスク','失敗'],
+  '行動フリーズ': ['行動','フリーズ'],
+  '安全性を損なう成功': ['安全性を','損なう','成功'],
+  '物理的損害': ['物理的','損害'],
+  '制御乗っ取り': ['制御','乗っ取り'],
+  'ランタイム・システム操作': ['ランタイム','システム操作'],
+  '分布シフト・不確実性': ['分布シフト','不確実性'],
+};
+function wrapColumnLabel(text,maxWidth){
+  if(measureAxisLabel(text)<=maxWidth) return [text];
+  if(JA_WRAP_HINTS[text]) return JA_WRAP_HINTS[text];
+  const useWords=/\s/.test(text), units=useWords?text.split(/\s+/):Array.from(text), separator=useWords?' ':'';
+  const lines=[];
+  let current='';
+  for(const unit of units){
+    const candidate=current ? `${current}${separator}${unit}` : unit;
+    if(current&&measureAxisLabel(candidate)>maxWidth){ lines.push(current); current=unit; }
+    else current=candidate;
+  }
+  if(current) lines.push(current);
+  return lines;
+}
+function layoutCrossMapColumns(selection,xPosition,gridTop,bandwidth,getText,maxLines=3){
+  const maxWidth=Math.max(24,bandwidth*.78), availableHeight=Math.max(20,gridTop-48), lineHeight=13;
+  selection.each(function(d){
+    const text=getText(d), lines=wrapColumnLabel(text,maxWidth), center=xPosition(d);
+    const lineLimit=/\s/.test(text)?bandwidth-8:maxWidth;
+    const fits=lines.length<=maxLines&&lines.length*lineHeight<=availableHeight&&lines.every(line=>measureAxisLabel(line)<=lineLimit);
+    const node=d3.select(this).text(null);
+    if(fits){
+      const firstY=gridTop-12-(lines.length-1)*lineHeight;
+      node.attr('text-anchor','middle').attr('transform',null).attr('x',center).attr('y',firstY);
+      lines.forEach((line,index)=>node.append('tspan').attr('x',center).attr('dy',index===0?'0em':'1.05em').text(line));
+      return;
+    }
+    node.attr('text-anchor','start').attr('x',null).attr('y',null).attr('transform',`translate(${center},${gridTop-12}) rotate(-30)`);
+    splitLabel(text).forEach((line,index)=>node.append('tspan').attr('x',0).attr('dy',index===0?'0em':'1.05em').text(line));
+  });
+}
+// Shared top-margin sizing for every cross-map chart with column headers
+// laid out via layoutCrossMapColumns. Rather than one fixed margin for every
+// chart regardless of how much text its column headers actually need, this
+// measures the real wrap depth (1/2/3 lines, language-dependent) and maps it
+// to a matching margin — so a chart whose headers all fit on one line isn't
+// padded as if it needed three.
+function crossMapMarginTop(cols,getText,bandwidth,maxLines=3){
+  const maxWidth=Math.max(24,bandwidth*.78);
+  const needed=cols.reduce((max,c)=>Math.max(max,wrapColumnLabel(getText(c),maxWidth).length),1);
+  const lines=Math.min(needed,maxLines);
+  return lines<=1?90:lines===2?100:120;
+}
+// Folds what used to be a separate "rows are X, columns are Y" note
+// paragraph into the chart's own subtitle line, since it's otherwise
+// redundant with the axis labels already visible on the chart.
+function rowsColsPrefix(rowLabel,colLabel){ return `${I18N[currentLang].rowsLabel}: ${rowLabel} · ${I18N[currentLang].colsLabel}: ${colLabel} · `; }
 const sectionsShortJa = {surveys:'サーベイ','ood-generalization':'OOD汎化','training-attacks':'学習時攻撃','inference-attacks':'推論時攻撃',defenses:'防御・安全機構',benchmarks:'ベンチマーク','system-security':'システムセキュリティ'};
 function sectionLabel(key){ return currentLang === 'ja' ? (sectionsShortJa[key] || labels[key]) : labels[key]; }
 function subsectionLabel(key){ return currentLang === 'ja' ? ((labelsJa.subsections && labelsJa.subsections[key]) || key) : key; }
@@ -330,14 +393,11 @@ const I18N = {
   en: {
     title: 'Awesome Physical AI Safety',
     ghlink: '⭐ Star on GitHub',
-    navReadme: 'Overview', navTaxonomy: 'Taxonomy', navTimeline: 'Timeline', navHeatmap: 'Mechanism × Surface', navRisk: 'Mechanism × Measured Risk', navDefense: 'Defense × Threat', navTarget: 'Target × Consequence', navOutcomeRisk: 'Consequence × Measured Risk',
+    navReadme: 'Overview', navTaxonomy: 'Taxonomy', navTimeline: 'Timeline', navHeatmap: 'Mechanism × Surface', navRisk: 'Mechanism × Risk', navDefense: 'Defense × Threat', navTarget: 'Target × Consequence', navOutcomeRisk: 'Consequence × Risk',
     badgeLicenses: 'Licenses', badgePapers: 'Papers', badgeUpdate: 'Update', badgeCuration: 'Curation', badgeDaily: 'Daily', badgeLlm: 'LLM-assisted',
     timelineNote: 'Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to filter the table.',
-    heatmapNote: 'Cells show mechanism-surface co-occurrence for concrete threat models. Hover for a preview; click a cell to filter the table.',
-    riskNote: 'Rows are threat mechanisms and columns are empirically measured risk domains. Click a cell to filter the table.',
-    defenseNote: 'Rows are defense mechanisms and columns are the threat families they address. Empty cells indicate no matching catalog records, not proven research gaps.',
-    targetNote: 'Rows are explicitly attacked, protected, or evaluated targets (TARGET); columns are concrete outcomes (CONSEQUENCE). Targets are not inferred downstream effects. Click a cell to filter the table.',
-    outcomeRiskNote: 'Rows are resulting consequences and columns are empirically measured risk domains. Click a cell to filter the table.',
+    rowsLabel: 'Rows', colsLabel: 'Columns',
+    axisMechanism: 'Mechanism', axisSurface: 'Surface', axisRisk: 'Measured risk', axisDefenseMechanism: 'Defense mechanism', axisThreatFamily: 'Threat family', axisTarget: 'Target', axisConsequence: 'Consequence',
     chartTimelineTitle: 'Field timeline',
     chartHeatmapTitle: 'Threat Mechanism Family × Surface Family',
     chartHeatmapHint: 'Hover a cell to inspect contributing papers.',
@@ -360,14 +420,11 @@ const I18N = {
   ja: {
     title: 'Awesome Physical AI Safety',
     ghlink: '⭐ GitHubでStar',
-    navReadme: 'Overview', navTaxonomy: 'Taxonomy', navTimeline: 'タイムライン', navHeatmap: 'Mechanism × Surface', navRisk: 'Mechanism × Measured Risk', navDefense: 'Defense × Threat', navTarget: 'Target × Consequence', navOutcomeRisk: 'Consequence × Measured Risk',
+    navReadme: 'Overview', navTaxonomy: 'Taxonomy', navTimeline: 'タイムライン', navHeatmap: 'Mechanism × Surface', navRisk: 'Mechanism × Risk', navDefense: 'Defense × Threat', navTarget: 'Target × Consequence', navOutcomeRisk: 'Consequence × Risk',
     badgeLicenses: 'ライセンス', badgePapers: '論文数', badgeUpdate: '更新頻度', badgeCuration: 'キュレーション', badgeDaily: '毎日', badgeLlm: 'LLM支援',
     timelineNote: 'バブルの大きさは、分野×年のセルに含まれる論文数を表します。ホバーでプレビュー、クリックで下の表を絞り込みます。',
-    heatmapNote: 'セルは具体的なthreat modelにおけるmechanismとsurfaceの共起を示します。ホバーでプレビュー、クリックで下の表を絞り込みます。',
-    riskNote: '行はthreatメカニズム、列は実証的に評価されたリスクです。クリックで下の表を絞り込みます。',
-    defenseNote: '行は防御メカニズム、列は対応する脅威familyです。空のセルは該当する採録レコードがないことを示し、未研究の証明ではありません。',
-    targetNote: '行は明示的な攻撃・保護・評価対象（TARGET）、列は具体的な帰結（CONSEQUENCE）です。対象は下流への影響から推測しません。セルをクリックすると下の表を絞り込みます。',
-    outcomeRiskNote: '行は帰結（CONSEQUENCE）、列は実証的に評価されたリスク（MEASURED RISK）です。セルをクリックすると下の表を絞り込みます。',
+    rowsLabel: '行', colsLabel: '列',
+    axisMechanism: 'メカニズム', axisSurface: 'サーフェス', axisRisk: '測定リスク', axisDefenseMechanism: '防御メカニズム', axisThreatFamily: '脅威群', axisTarget: '対象（TARGET）', axisConsequence: '帰結（CONSEQUENCE）',
     chartTimelineTitle: 'フィールドタイムライン',
     chartHeatmapTitle: '脅威メカニズム群 × サーフェス群',
     chartHeatmapHint: 'セルにホバーすると該当論文を確認できます。',
@@ -573,20 +630,23 @@ function wrapEndAnchored(selection, getText, maxLen=24){
   });
 }
 function renderHeatmap(){
-  const width=1160,height=(currentLang==='ja' ? 460 : 460),margin={top: currentLang === 'ja' ? 152 : 150,right:30,bottom:20,left: currentLang==='ja' ? 220 : 300};
-  const svg=d3.select('#heatmap-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Interactive threat model heatmap');
+  const width=1160,margin={right:30,bottom:20,left: currentLang==='ja' ? 220 : 300};
   const concrete=viewPapers('heatmap');
   const mechanisms=MECHANISM_GROUPS, surfaces=SURFACE_GROUPS;
-  const x=d3.scaleBand().domain(surfaces.map(g=>g.name)).range([margin.left,width-margin.right]).padding(.08), y=d3.scaleBand().domain(mechanisms.map(g=>g.name)).range([margin.top,height-margin.bottom]).padding(.08);
+  const x=d3.scaleBand().domain(surfaces.map(g=>g.name)).range([margin.left,width-margin.right]).padding(.08);
+  margin.top=crossMapMarginTop(surfaces,familyLabel,x.bandwidth());
+  const height=margin.top+mechanisms.length*48+margin.bottom;
+  const svg=d3.select('#heatmap-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Interactive threat model heatmap');
+  const y=d3.scaleBand().domain(mechanisms.map(g=>g.name)).range([margin.top,height-margin.bottom]).padding(.08);
   const cellData=[];
   for(const mg of mechanisms) for(const sg of surfaces){
     const list=concrete.filter(p=>p.threat_model.mechanism.some(m=>mg.values.includes(m))&&p.threat_model.surface.some(s=>sg.values.includes(s)));
     cellData.push({mg,sg,list,n:list.length});
   }
   const max=d3.max(cellData,d=>d.n)||1, fill=d3.scaleSequential().domain([0,max]).interpolator(d3.interpolate('#eef3f8','#6f9fef'));
-  svg.append('text').attr('x',margin.left).attr('y',28).attr('font-size',19).attr('font-weight',650).attr('fill','#202938').text(I18N[currentLang].chartHeatmapTitle);
-  svg.append('text').attr('x',margin.left).attr('y',48).attr('font-size',12).attr('fill','#657287').text(I18N[currentLang].chartHeatmapHint);
-  svg.selectAll('text.surface').data(surfaces).join('text').attr('class','axis').attr('text-anchor','start').attr('transform',sg=>`translate(${x(sg.name)+8},${margin.top-16}) rotate(-30)`).call(rotatedAxisLabel, sg=>familyLabel(sg));
+  svg.append('text').attr('x',margin.left).attr('y',24).attr('font-size',19).attr('font-weight',650).attr('fill','#202938').text(I18N[currentLang].chartHeatmapTitle);
+  svg.append('text').attr('x',margin.left).attr('y',40).attr('font-size',12).attr('fill','#657287').text(rowsColsPrefix(I18N[currentLang].axisMechanism,I18N[currentLang].axisSurface)+I18N[currentLang].chartHeatmapHint);
+  svg.selectAll('text.surface').data(surfaces).join('text').attr('class','axis').call(layoutCrossMapColumns,sg=>x(sg.name)+x.bandwidth()/2,margin.top,x.bandwidth(),sg=>familyLabel(sg));
   svg.selectAll('text.mechanism').data(mechanisms).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',mg=>y(mg.name)+y.bandwidth()/2+4).call(wrapEndAnchored, mg=>familyLabel(mg));
   svg.selectAll('rect.cell').data(cellData).join('rect').attr('class','cell').attr('x',d=>x(d.sg.name)).attr('y',d=>y(d.mg.name)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${familyLabel(d.mg)} × ${familyLabel(d.sg)}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();filterPaperTable('heatmap',d.list,`${familyLabel(d.mg)} × ${familyLabel(d.sg)}`);});
   svg.selectAll('text.value').data(cellData.filter(d=>d.n)).join('text').attr('class','value').attr('x',d=>x(d.sg.name)+x.bandwidth()/2).attr('y',d=>y(d.mg.name)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',650).attr('fill',d=>heatmapTextColor(fill(d.n))).style('pointer-events','none').text(d=>d.n);
@@ -600,14 +660,17 @@ function renderDefense(){
   const explodedMechanisms=concrete.flatMap(p=>p.threat_model.mechanism.map(m=>({p,m})));
   const mechanismCounts=d3.rollup(explodedMechanisms,v=>new Set(v.map(d=>d.p.id)).size,d=>d.m);
   const mechanisms=[...mechanismCounts].sort((a,b)=>d3.descending(a[1],b[1])).slice(0,10).map(d=>d[0]);
-  const margin={top:190,right:35,bottom:70,left:390}, width=1180, height=Math.max(760,margin.top+subsections.length*44+margin.bottom);
+  const margin={right:35,bottom:70,left:390}, width=1180;
+  const x=d3.scaleBand().domain(mechanisms).range([margin.left,width-margin.right]).padding(.06);
+  margin.top=crossMapMarginTop(mechanisms,m=>m.replaceAll('-',' '),x.bandwidth());
+  const height=Math.max(760,margin.top+subsections.length*44+margin.bottom);
   const svg=d3.select('#defense-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Interactive defense coverage heatmap');
-  const x=d3.scaleBand().domain(mechanisms).range([margin.left,width-margin.right]).padding(.06), y=d3.scaleBand().domain(subsections).range([margin.top,height-margin.bottom]).padding(.06);
+  const y=d3.scaleBand().domain(subsections).range([margin.top,height-margin.bottom]).padding(.06);
   const cellData=[]; for(const sub of subsections) for(const mechanism of mechanisms){const list=defenses.filter(p=>p.subsection===sub&&p.threat_model.mechanism.includes(mechanism));cellData.push({sub,mechanism,list,n:list.length});}
   const max=d3.max(cellData,d=>d.n)||1, fill=d3.scaleSequential().domain([0,max]).interpolator(d3.interpolate('#eef3f8','#6f9fef'));
   svg.append('text').attr('x',margin.left).attr('y',35).attr('font-size',24).attr('font-weight',650).attr('fill','#202938').text('Defense subsection × addressed threat');
   svg.append('text').attr('x',margin.left).attr('y',57).attr('font-size',13).attr('fill','#657287').text('Hover a cell to inspect contributing papers.');
-  svg.selectAll('text.mechanism').data(mechanisms).join('text').attr('class','axis').attr('text-anchor','start').attr('transform',m=>`translate(${x(m)+8},${margin.top-18}) rotate(-38)`).text(m=>m.replaceAll('-',' '));
+  svg.selectAll('text.mechanism').data(mechanisms).join('text').attr('class','axis').call(layoutCrossMapColumns,m=>x(m)+x.bandwidth()/2,margin.top,x.bandwidth(),m=>m.replaceAll('-',' '));
   svg.selectAll('text.subsection').data(subsections).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',s=>y(s)+y.bandwidth()/2+4).text(s=>s);
   svg.selectAll('rect.cell').data(cellData).join('rect').attr('class','cell').attr('x',d=>x(d.mechanism)).attr('y',d=>y(d.sub)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(d.sub)} × ${escapeHtml(d.mechanism.replaceAll('-',' '))}</strong><div>${d.n} papers</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();pinTooltip(event,`<strong>${escapeHtml(d.sub)} × ${escapeHtml(d.mechanism.replaceAll('-',' '))}</strong><div>${d.n} papers</div>${paperListHtml(d.list)}`);});
   svg.selectAll('text.value').data(cellData.filter(d=>d.n)).join('text').attr('class','value').attr('x',d=>x(d.mechanism)+x.bandwidth()/2).attr('y',d=>y(d.sub)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',650).attr('fill',d=>heatmapTextColor(fill(d.n))).style('pointer-events','none').text(d=>d.n);
@@ -621,28 +684,34 @@ function renderBenchmark(){
   const explodedMechanisms=concrete.flatMap(p=>p.threat_model.mechanism.map(m=>({p,m})));
   const mechanismCounts=d3.rollup(explodedMechanisms,v=>new Set(v.map(d=>d.p.id)).size,d=>d.m);
   const mechanisms=[...mechanismCounts].sort((a,b)=>d3.descending(a[1],b[1])).slice(0,10).map(d=>d[0]);
-  const margin={top:190,right:35,bottom:70,left:390}, width=1180, height=Math.max(760,margin.top+subsections.length*44+margin.bottom);
+  const margin={right:35,bottom:70,left:390}, width=1180;
+  const x=d3.scaleBand().domain(mechanisms).range([margin.left,width-margin.right]).padding(.06);
+  margin.top=crossMapMarginTop(mechanisms,m=>m.replaceAll('-',' '),x.bandwidth());
+  const height=Math.max(760,margin.top+subsections.length*44+margin.bottom);
   const svg=d3.select('#benchmark-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Interactive benchmark threat heatmap');
-  const x=d3.scaleBand().domain(mechanisms).range([margin.left,width-margin.right]).padding(.06), y=d3.scaleBand().domain(subsections).range([margin.top,height-margin.bottom]).padding(.06);
+  const y=d3.scaleBand().domain(subsections).range([margin.top,height-margin.bottom]).padding(.06);
   const cellData=[]; for(const sub of subsections) for(const mechanism of mechanisms){const list=benchmarks.filter(p=>p.subsection===sub&&p.threat_model.mechanism?.includes(mechanism));cellData.push({sub,mechanism,list,n:list.length});}
   const max=d3.max(cellData,d=>d.n)||1, fill=d3.scaleSequential().domain([0,max]).interpolator(d3.interpolate('#eef3f8','#6f9fef'));
   svg.append('text').attr('x',margin.left).attr('y',35).attr('font-size',24).attr('font-weight',650).attr('fill','#202938').text('Benchmark subsection × threat');
   svg.append('text').attr('x',margin.left).attr('y',57).attr('font-size',13).attr('fill','#657287').text('Hover a cell to inspect contributing papers.');
-  svg.selectAll('text.mechanism').data(mechanisms).join('text').attr('class','axis').attr('text-anchor','start').attr('transform',m=>`translate(${x(m)+8},${margin.top-18}) rotate(-38)`).text(m=>m.replaceAll('-',' '));
+  svg.selectAll('text.mechanism').data(mechanisms).join('text').attr('class','axis').call(layoutCrossMapColumns,m=>x(m)+x.bandwidth()/2,margin.top,x.bandwidth(),m=>m.replaceAll('-',' '));
   svg.selectAll('text.subsection').data(subsections).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',s=>y(s)+y.bandwidth()/2+4).text(s=>s);
   svg.selectAll('rect.cell').data(cellData).join('rect').attr('class','cell').attr('x',d=>x(d.mechanism)).attr('y',d=>y(d.sub)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(d.sub)} × ${escapeHtml(d.mechanism.replaceAll('-',' '))}</strong><div>${d.n} papers</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();pinTooltip(event,`<strong>${escapeHtml(d.sub)} × ${escapeHtml(d.mechanism.replaceAll('-',' '))}</strong><div>${d.n} papers</div>${paperListHtml(d.list)}`);});
   svg.selectAll('text.value').data(cellData.filter(d=>d.n)).join('text').attr('class','value').attr('x',d=>x(d.mechanism)+x.bandwidth()/2).attr('y',d=>y(d.sub)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',650).attr('fill',d=>heatmapTextColor(fill(d.n))).style('pointer-events','none').text(d=>d.n);
 }
 
 function renderExtensionMap(container,title,items,rows,cols,rowValues,colValues,aria,tableView='',rowGroups=null){
-  const margin={top:82,right:55,bottom:20,left:245}, width=1180, height=Math.max(320,margin.top+rows.length*36+margin.bottom);
+  const margin={right:55,bottom:20,left:245}, width=1180;
+  const x=d3.scaleBand().domain(cols).range([margin.left,width-margin.right]).padding(.06);
+  margin.top=crossMapMarginTop(cols,dlabel,x.bandwidth(),2);
+  const height=Math.max(320,margin.top+rows.length*36+margin.bottom);
   const svg=d3.select(container).append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label',aria);
-  const x=d3.scaleBand().domain(cols).range([margin.left,width-margin.right]).padding(.06), y=d3.scaleBand().domain(rows).range([margin.top,height-margin.bottom]).padding(.06);
+  const y=d3.scaleBand().domain(rows).range([margin.top,height-margin.bottom]).padding(.06);
   const cells=[]; for(const row of rows) for(const col of cols){const list=items.filter(p=>rowValues(p).includes(row)&&colValues(p).includes(col));cells.push({row,col,list,n:list.length});}
   const max=d3.max(cells,d=>d.n)||1, fill=d3.scaleSequential().domain([0,max]).interpolator(d3.interpolate('#eef3f8','#6f9fef'));
-  svg.append('text').attr('x',margin.left).attr('y',28).attr('font-size',19).attr('font-weight',650).attr('fill','#202938').text(title);
-  svg.append('text').attr('x',margin.left).attr('y',48).attr('font-size',12).attr('fill','#657287').text(`${items.length}${I18N[currentLang].enrichedSuffix}`);
-  svg.selectAll('text.col').data(cols).join('text').attr('class','axis').attr('text-anchor','middle').attr('x',d=>x(d)+x.bandwidth()/2).attr('y',72).text(d=>dlabel(d));
+  svg.append('text').attr('x',margin.left).attr('y',24).attr('font-size',19).attr('font-weight',650).attr('fill','#202938').text(title);
+  svg.append('text').attr('x',margin.left).attr('y',40).attr('font-size',12).attr('fill','#657287').text(`${items.length}${I18N[currentLang].enrichedSuffix}`);
+  svg.selectAll('text.col').data(cols).join('text').attr('class','axis').call(layoutCrossMapColumns,d=>x(d)+x.bandwidth()/2,margin.top,x.bandwidth(),d=>dlabel(d),2);
   svg.selectAll('text.row').data(rows).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',d=>y(d)+y.bandwidth()/2+4).text(d=>dlabel(d));
   svg.selectAll('rect.cell').data(cells).join('rect').attr('class','cell').attr('x',d=>x(d.col)).attr('y',d=>y(d.row)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(dlabel(d.row))} × ${escapeHtml(dlabel(d.col))}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();if(tableView)filterPaperTable(tableView,d.list,`${dlabel(d.row)} × ${dlabel(d.col)}`);else pinTooltip(event,`<strong>${escapeHtml(dlabel(d.row))} × ${escapeHtml(dlabel(d.col))}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`);});
   svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.col)+x.bandwidth()/2).attr('y',d=>y(d.row)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',11).attr('font-weight',650).attr('fill',d=>heatmapTextColor(fill(d.n))).style('pointer-events','none').text(d=>d.n);
@@ -655,23 +724,21 @@ function renderExtensionMap(container,title,items,rows,cols,rowValues,colValues,
 function renderDefenseThreat(){
   const items=viewPapers('defense'), rows=DEFENSE_MECHANISMS, cols=MECHANISM_GROUPS;
   const isJa=currentLang==='ja';
-  const margin={top:isJa?152:106,right:45,bottom:20,left:isJa?230:250}, width=1180, height=margin.top+rows.length*38+margin.bottom;
+  const margin={right:45,bottom:20,left:isJa?230:250}, width=1180;
+  const x=d3.scaleBand().domain(cols.map(g=>g.name)).range([margin.left,width-margin.right]).padding(.06);
+  margin.top=crossMapMarginTop(cols,familyLabel,x.bandwidth());
+  const height=margin.top+rows.length*38+margin.bottom;
   const svg=d3.select('#defense-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Defense mechanism and defended threat family cross-map');
-  const x=d3.scaleBand().domain(cols.map(g=>g.name)).range([margin.left,width-margin.right]).padding(.06), y=d3.scaleBand().domain(rows).range([margin.top,height-margin.bottom]).padding(.07);
+  const y=d3.scaleBand().domain(rows).range([margin.top,height-margin.bottom]).padding(.07);
   const cells=[];
   for(const row of rows) for(const family of cols){
     const list=items.filter(p=>(p.defense.mechanism||[]).includes(row)&&(p.defense.defends_against||[]).some(value=>family.values.includes(value)));
     cells.push({row,family,list,n:list.length});
   }
   const max=d3.max(cells,d=>d.n)||1, fill=d3.scaleSequential().domain([0,max]).interpolator(d3.interpolate('#eef3f8','#6f9fef'));
-  svg.append('text').attr('x',margin.left).attr('y',28).attr('font-size',19).attr('font-weight',650).attr('fill','#202938').text(I18N[currentLang].chartDefenseTitle);
-  svg.append('text').attr('x',margin.left).attr('y',48).attr('font-size',12).attr('fill','#657287').text(`${items.length}${I18N[currentLang].enrichedSuffix}`);
-  const columnLabels=svg.selectAll('text.col').data(cols).join('text').attr('class','axis');
-  if(isJa){
-    columnLabels.attr('text-anchor','start').attr('transform',g=>`translate(${x(g.name)+x.bandwidth()/2},${margin.top-8}) rotate(-16)`).call(rotatedAxisLabel,g=>familyLabel(g));
-  }else{
-    columnLabels.attr('text-anchor','middle').attr('x',g=>x(g.name)+x.bandwidth()/2).attr('y',86).call(rotatedAxisLabel,g=>familyLabel(g));
-  }
+  svg.append('text').attr('x',margin.left).attr('y',24).attr('font-size',19).attr('font-weight',650).attr('fill','#202938').text(I18N[currentLang].chartDefenseTitle);
+  svg.append('text').attr('x',margin.left).attr('y',40).attr('font-size',12).attr('fill','#657287').text(rowsColsPrefix(I18N[currentLang].axisDefenseMechanism,I18N[currentLang].axisThreatFamily)+`${items.length}${I18N[currentLang].enrichedSuffix}`);
+  svg.selectAll('text.col').data(cols).join('text').attr('class','axis').call(layoutCrossMapColumns,g=>x(g.name)+x.bandwidth()/2,margin.top,x.bandwidth(),g=>familyLabel(g));
   svg.selectAll('text.row').data(rows).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',row=>y(row)+y.bandwidth()/2+4).call(wrapEndAnchored,row=>dlabel(row));
   svg.selectAll('rect.cell').data(cells).join('rect').attr('class','cell').attr('x',d=>x(d.family.name)).attr('y',d=>y(d.row)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(dlabel(d.row))} × ${escapeHtml(familyLabel(d.family))}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();filterPaperTable('defense',d.list,`${dlabel(d.row)} × ${familyLabel(d.family)}`);});
   svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.family.name)+x.bandwidth()/2).attr('y',d=>y(d.row)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',11).attr('font-weight',650).attr('fill',d=>heatmapTextColor(fill(d.n))).style('pointer-events','none').text(d=>d.n);
@@ -679,36 +746,42 @@ function renderDefenseThreat(){
 
 function renderTargetResult(){
   const items=viewPapers('target'), rows=TARGETS, cols=CONSEQUENCES;
-  const margin={top:170,right:90,bottom:20,left:currentLang==='ja'?185:205}, width=1180, height=margin.top+rows.length*38+margin.bottom;
+  const margin={right:90,bottom:20,left:currentLang==='ja'?185:205}, width=1180;
+  const x=d3.scaleBand().domain(cols).range([margin.left,width-margin.right]).padding(.06);
+  margin.top=crossMapMarginTop(cols,dlabel,x.bandwidth());
+  const height=margin.top+rows.length*38+margin.bottom;
   const svg=d3.select('#target-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Target and consequence cross-map');
-  const x=d3.scaleBand().domain(cols).range([margin.left,width-margin.right]).padding(.06), y=d3.scaleBand().domain(rows).range([margin.top,height-margin.bottom]).padding(.07);
+  const y=d3.scaleBand().domain(rows).range([margin.top,height-margin.bottom]).padding(.07);
   const cells=[];
   for(const row of rows) for(const col of cols){
     const list=items.filter(p=>(p.threat_model.target||[]).includes(row)&&(p.threat_model.consequence||[]).includes(col));
     cells.push({row,col,list,n:list.length});
   }
   const max=d3.max(cells,d=>d.n)||1, fill=d3.scaleSequential().domain([0,max]).interpolator(d3.interpolate('#eef3f8','#6f9fef'));
-  svg.append('text').attr('x',margin.left).attr('y',28).attr('font-size',19).attr('font-weight',650).attr('fill','#202938').text(I18N[currentLang].chartTargetTitle);
-  svg.append('text').attr('x',margin.left).attr('y',48).attr('font-size',12).attr('fill','#657287').text(`${items.length}${I18N[currentLang].enrichedSuffix}`);
-  svg.selectAll('text.col').data(cols).join('text').attr('class','axis').attr('text-anchor','start').attr('transform',col=>`translate(${x(col)+x.bandwidth()/2},${margin.top-16}) rotate(-38)`).call(rotatedAxisLabel,col=>dlabel(col));
+  svg.append('text').attr('x',margin.left).attr('y',24).attr('font-size',19).attr('font-weight',650).attr('fill','#202938').text(I18N[currentLang].chartTargetTitle);
+  svg.append('text').attr('x',margin.left).attr('y',40).attr('font-size',12).attr('fill','#657287').text(rowsColsPrefix(I18N[currentLang].axisTarget,I18N[currentLang].axisConsequence)+`${items.length}${I18N[currentLang].enrichedSuffix}`);
+  svg.selectAll('text.col').data(cols).join('text').attr('class','axis').call(layoutCrossMapColumns,col=>x(col)+x.bandwidth()/2,margin.top,x.bandwidth(),col=>dlabel(col));
   svg.selectAll('text.row').data(rows).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',row=>y(row)+y.bandwidth()/2+4).call(wrapEndAnchored,row=>dlabel(row));
   svg.selectAll('rect.cell').data(cells).join('rect').attr('class','cell').attr('x',d=>x(d.col)).attr('y',d=>y(d.row)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(dlabel(d.row))} × ${escapeHtml(dlabel(d.col))}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();filterPaperTable('target',d.list,`${dlabel(d.row)} × ${dlabel(d.col)}`);});
   svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.col)+x.bandwidth()/2).attr('y',d=>y(d.row)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',11).attr('font-weight',650).attr('fill',d=>heatmapTextColor(fill(d.n))).style('pointer-events','none').text(d=>d.n);
 }
 function renderOutcomeRisk(){
   const items=viewPapers('outcome-risk'), rows=CONSEQUENCES, cols=['task-reliability','physical-safety','ethical-societal','security-privacy'];
-  const margin={top:100,right:90,bottom:20,left:currentLang==='ja'?185:205}, width=1180, height=margin.top+rows.length*38+margin.bottom;
+  const margin={right:90,bottom:20,left:currentLang==='ja'?185:205}, width=1180;
+  const x=d3.scaleBand().domain(cols).range([margin.left,width-margin.right]).padding(.06);
+  margin.top=crossMapMarginTop(cols,dlabel,x.bandwidth());
+  const height=margin.top+rows.length*38+margin.bottom;
   const svg=d3.select('#outcome-risk-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Consequence and evaluated risk cross-map');
-  const x=d3.scaleBand().domain(cols).range([margin.left,width-margin.right]).padding(.06), y=d3.scaleBand().domain(rows).range([margin.top,height-margin.bottom]).padding(.07);
+  const y=d3.scaleBand().domain(rows).range([margin.top,height-margin.bottom]).padding(.07);
   const cells=[];
   for(const row of rows) for(const col of cols){
     const list=items.filter(p=>threatValues(p,'consequence').includes(row)&&(p.risks||[]).includes(col));
     cells.push({row,col,list,n:list.length});
   }
   const max=d3.max(cells,d=>d.n)||1, fill=d3.scaleSequential().domain([0,max]).interpolator(d3.interpolate('#eef3f8','#6f9fef'));
-  svg.append('text').attr('x',margin.left).attr('y',28).attr('font-size',19).attr('font-weight',650).attr('fill','#202938').text(I18N[currentLang].chartOutcomeRiskTitle);
-  svg.append('text').attr('x',margin.left).attr('y',48).attr('font-size',12).attr('fill','#657287').text(`${items.length}${I18N[currentLang].enrichedSuffix}`);
-  svg.selectAll('text.col').data(cols).join('text').attr('class','axis').attr('text-anchor','middle').attr('x',d=>x(d)+x.bandwidth()/2).attr('y',86).text(d=>dlabel(d));
+  svg.append('text').attr('x',margin.left).attr('y',24).attr('font-size',19).attr('font-weight',650).attr('fill','#202938').text(I18N[currentLang].chartOutcomeRiskTitle);
+  svg.append('text').attr('x',margin.left).attr('y',40).attr('font-size',12).attr('fill','#657287').text(rowsColsPrefix(I18N[currentLang].axisConsequence,I18N[currentLang].axisRisk)+`${items.length}${I18N[currentLang].enrichedSuffix}`);
+  svg.selectAll('text.col').data(cols).join('text').attr('class','axis').call(layoutCrossMapColumns,d=>x(d)+x.bandwidth()/2,margin.top,x.bandwidth(),d=>dlabel(d));
   svg.selectAll('text.row').data(rows).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',row=>y(row)+y.bandwidth()/2+4).call(wrapEndAnchored,row=>dlabel(row));
   svg.selectAll('rect.cell').data(cells).join('rect').attr('class','cell').attr('x',d=>x(d.col)).attr('y',d=>y(d.row)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(dlabel(d.row))} × ${escapeHtml(dlabel(d.col))}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();filterPaperTable('outcome-risk',d.list,`${dlabel(d.row)} × ${dlabel(d.col)}`);});
   svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.col)+x.bandwidth()/2).attr('y',d=>y(d.row)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',11).attr('font-weight',650).attr('fill',d=>heatmapTextColor(fill(d.n))).style('pointer-events','none').text(d=>d.n);
@@ -716,14 +789,17 @@ function renderOutcomeRisk(){
 function renderThreatRisk(){
   const items=viewPapers('risk');
   const rows=MECHANISM_GROUPS, cols=['task-reliability','physical-safety','ethical-societal','security-privacy'];
-  const margin={top:100,right:55,bottom:20,left: currentLang==='ja' ? 210 : 290}, width=1180, height=Math.max(300,margin.top+rows.length*42+margin.bottom);
+  const margin={right:55,bottom:20,left: currentLang==='ja' ? 210 : 290}, width=1180;
+  const x=d3.scaleBand().domain(cols).range([margin.left,width-margin.right]).padding(.06);
+  margin.top=crossMapMarginTop(cols,dlabel,x.bandwidth());
+  const height=Math.max(300,margin.top+rows.length*42+margin.bottom);
   const svg=d3.select('#risk-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Threat mechanism family and evaluated risk cross-map');
-  const x=d3.scaleBand().domain(cols).range([margin.left,width-margin.right]).padding(.06), y=d3.scaleBand().domain(rows.map(g=>g.name)).range([margin.top,height-margin.bottom]).padding(.08);
+  const y=d3.scaleBand().domain(rows.map(g=>g.name)).range([margin.top,height-margin.bottom]).padding(.08);
   const cells=[]; for(const mg of rows) for(const col of cols){const list=items.filter(p=>threatValues(p,'mechanism').some(m=>mg.values.includes(m))&&(p.risks||[]).includes(col));cells.push({mg,col,list,n:list.length});}
   const max=d3.max(cells,d=>d.n)||1, fill=d3.scaleSequential().domain([0,max]).interpolator(d3.interpolate('#eef3f8','#6f9fef'));
-  svg.append('text').attr('x',margin.left).attr('y',28).attr('font-size',19).attr('font-weight',650).attr('fill','#202938').text(I18N[currentLang].chartRiskTitle);
-  svg.append('text').attr('x',margin.left).attr('y',48).attr('font-size',12).attr('fill','#657287').text(`${items.length}${I18N[currentLang].enrichedSuffix}`);
-  svg.selectAll('text.col').data(cols).join('text').attr('class','axis').attr('text-anchor','middle').attr('x',d=>x(d)+x.bandwidth()/2).attr('y',86).text(d=>dlabel(d));
+  svg.append('text').attr('x',margin.left).attr('y',24).attr('font-size',19).attr('font-weight',650).attr('fill','#202938').text(I18N[currentLang].chartRiskTitle);
+  svg.append('text').attr('x',margin.left).attr('y',40).attr('font-size',12).attr('fill','#657287').text(rowsColsPrefix(I18N[currentLang].axisMechanism,I18N[currentLang].axisRisk)+`${items.length}${I18N[currentLang].enrichedSuffix}`);
+  svg.selectAll('text.col').data(cols).join('text').attr('class','axis').call(layoutCrossMapColumns,d=>x(d)+x.bandwidth()/2,margin.top,x.bandwidth(),d=>dlabel(d));
   svg.selectAll('text.row').data(rows).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',mg=>y(mg.name)+y.bandwidth()/2+4).call(wrapEndAnchored, mg=>familyLabel(mg));
   svg.selectAll('rect.cell').data(cells).join('rect').attr('class','cell').attr('x',d=>x(d.col)).attr('y',d=>y(d.mg.name)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(familyLabel(d.mg))} × ${escapeHtml(dlabel(d.col))}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();filterPaperTable('risk',d.list,`${familyLabel(d.mg)} × ${dlabel(d.col)}`);});
   svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.col)+x.bandwidth()/2).attr('y',d=>y(d.mg.name)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',11).attr('font-weight',650).attr('fill',d=>heatmapTextColor(fill(d.n))).style('pointer-events','none').text(d=>d.n);

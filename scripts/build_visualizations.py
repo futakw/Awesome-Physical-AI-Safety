@@ -92,6 +92,19 @@ def rotated_axis_label(x: float, y: float, angle: float, text: str) -> str:
     return f'<text class="axis" text-anchor="start" transform="translate({x:.1f} {y:.1f}) rotate({angle})">{tspans}</text>'
 
 
+def cross_map_column_label(x: float, grid_top: float, cell_width: float, text: str, max_lines: int = 3) -> str:
+    max_len = max(4, int((cell_width - 10) / 6.5))
+    lines = split_label(text, max_len)
+    fits = len(lines) <= max_lines and all(len(line) <= max_len for line in lines)
+    if not fits:
+        return rotated_axis_label(x, grid_top - 12, -30, text)
+    first_y = grid_top - 12 - (len(lines) - 1) * 13
+    tspans = "".join(
+        f'<tspan x="{x:.1f}" dy="{"0" if i == 0 else "1.05"}em">{esc(line)}</tspan>' for i, line in enumerate(lines)
+    )
+    return f'<text class="axis" text-anchor="middle" x="{x:.1f}" y="{first_y:.1f}">{tspans}</text>'
+
+
 def family_label(group: dict) -> str:
     return group["label"]
 
@@ -225,7 +238,7 @@ def render_heatmap(papers: list[dict]) -> str:
     max_value = max((len(matching) for _, _, matching in cell_data), default=1) or 1
     for col, surf_group in enumerate(surfaces):
         x = left + col * cell_w + cell_w / 2
-        body.append(rotated_axis_label(x - 8, top - 16, -30, family_label(surf_group)))
+        body.append(cross_map_column_label(x, top, cell_w, family_label(surf_group)))
     for row, mech_group in enumerate(mechanisms):
         y = top + row * cell_h
         body.append(wrapped_end_label(left - 18, y + cell_h / 2 + 5, family_label(mech_group)))
@@ -261,7 +274,7 @@ def render_defense_heatmap(papers: list[dict]) -> str:
     max_value = max((sum(1 for paper in defenses if paper["subsection"] == subsection and mechanism in threat_values(paper, "mechanism")) for subsection in subsections for mechanism in mechanisms), default=1)
     for col, mechanism in enumerate(mechanisms):
         x = left + col * cell_w + cell_w / 2
-        body.append(f'<text class="axis" text-anchor="start" transform="translate({x - 8:.1f} {top - 18}) rotate(-52)">{esc(label(mechanism))}</text>')
+        body.append(cross_map_column_label(x, top, cell_w, label(mechanism)))
     for row, subsection in enumerate(subsections):
         y = top + row * cell_h
         body.append(f'<text class="label" x="{left - 18}" y="{y + cell_h / 2 + 4:.1f}" text-anchor="end">{esc(subsection)}</text>')
@@ -295,7 +308,7 @@ def render_benchmark_heatmap(papers: list[dict]) -> str:
     max_value = max((sum(1 for paper in benchmarks if paper["subsection"] == subsection and mechanism in threat_values(paper, "mechanism")) for subsection in subsections for mechanism in mechanisms), default=1)
     for col, mechanism in enumerate(mechanisms):
         x = left + col * cell_w + cell_w / 2
-        body.append(f'<text class="axis" text-anchor="start" transform="translate({x - 8:.1f} {top - 18}) rotate(-52)">{esc(label(mechanism))}</text>')
+        body.append(cross_map_column_label(x, top, cell_w, label(mechanism)))
     for row, subsection in enumerate(subsections):
         y = top + row * cell_h
         body.append(f'<text class="label" x="{left - 18}" y="{y + cell_h / 2 + 4:.1f}" text-anchor="end">{esc(subsection)}</text>')
@@ -320,7 +333,7 @@ def render_extension_heatmap(papers, extension, title, subtitle, row_field, col_
     max_value = max((len(value) for value in cells.values()), default=1)
     for index, col in enumerate(cols):
         x = left + index * cell_w + cell_w / 2
-        body.append(f'<text class="axis" text-anchor="start" transform="translate({x - 8:.1f} {top - 18}) rotate(-52)">{esc(label(col))}</text>')
+        body.append(cross_map_column_label(x, top, cell_w, label(col)))
     for rindex, row in enumerate(rows):
         y = top + rindex * cell_h
         body.append(f'<text class="label" x="{left - 18}" y="{y + cell_h / 2 + 4:.1f}" text-anchor="end">{esc(label(row))}</text>')
@@ -399,7 +412,7 @@ def render_benchmark_threat_consequence(papers: list[dict]) -> str:
     cells = {(row, col): [paper for paper in items if row in threat_values(paper, "mechanism") and col in threat_values(paper, "consequence")] for row in rows for col in cols}
     max_value = max((len(value) for value in cells.values()), default=1)
     for index, col in enumerate(cols):
-        x = left + index * cell_w + cell_w / 2; body.append(f'<text class="axis" text-anchor="start" transform="translate({x - 8:.1f} {top - 18}) rotate(-52)">{esc(label(col))}</text>')
+        x = left + index * cell_w + cell_w / 2; body.append(cross_map_column_label(x, top, cell_w, label(col)))
     for rindex, row in enumerate(rows):
         y = top + rindex * cell_h; body.append(f'<text class="label" x="{left - 18}" y="{y + cell_h / 2 + 4:.1f}" text-anchor="end">{esc(label(row))}</text>')
         for cindex, col in enumerate(cols):

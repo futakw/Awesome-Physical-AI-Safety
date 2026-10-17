@@ -12,13 +12,13 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <rect width="1200" height="610" fill="#FFFFFF"/>
 <text class="title" x="48" y="48">Where threats enter and how they act</text>
 <text class="subtitle" x="48" y="74">Mechanism family × surface family co-occurrence for concrete threat models; survey coverage is excluded.</text>
-<text class="axis" text-anchor="start" transform="translate(377.0 179.0) rotate(-30)"><tspan x="0" dy="0em">Training &amp;</tspan><tspan x="0" dy="1.05em">Infrastructure</tspan></text>
-<text class="axis" text-anchor="start" transform="translate(487.0 179.0) rotate(-30)"><tspan x="0" dy="0em">Perception</tspan></text>
-<text class="axis" text-anchor="start" transform="translate(597.0 179.0) rotate(-30)"><tspan x="0" dy="0em">Language</tspan></text>
-<text class="axis" text-anchor="start" transform="translate(707.0 179.0) rotate(-30)"><tspan x="0" dy="0em">Proprioception</tspan></text>
-<text class="axis" text-anchor="start" transform="translate(817.0 179.0) rotate(-30)"><tspan x="0" dy="0em">Planning</tspan><tspan x="0" dy="1.05em">&amp; State</tspan></text>
-<text class="axis" text-anchor="start" transform="translate(927.0 179.0) rotate(-30)"><tspan x="0" dy="0em">Reasoning</tspan></text>
-<text class="axis" text-anchor="start" transform="translate(1037.0 179.0) rotate(-30)"><tspan x="0" dy="0em">Action</tspan><tspan x="0" dy="1.05em">&amp; Control</tspan></text>
+<text class="axis" text-anchor="middle" x="385.0" y="170.0"><tspan x="385.0" dy="0em">Training &amp;</tspan><tspan x="385.0" dy="1.05em">Infrastructure</tspan></text>
+<text class="axis" text-anchor="middle" x="495.0" y="183.0"><tspan x="495.0" dy="0em">Perception</tspan></text>
+<text class="axis" text-anchor="middle" x="605.0" y="183.0"><tspan x="605.0" dy="0em">Language</tspan></text>
+<text class="axis" text-anchor="middle" x="715.0" y="183.0"><tspan x="715.0" dy="0em">Proprioception</tspan></text>
+<text class="axis" text-anchor="middle" x="825.0" y="170.0"><tspan x="825.0" dy="0em">Planning</tspan><tspan x="825.0" dy="1.05em">&amp; State</tspan></text>
+<text class="axis" text-anchor="middle" x="935.0" y="183.0"><tspan x="935.0" dy="0em">Reasoning</tspan></text>
+<text class="axis" text-anchor="middle" x="1045.0" y="170.0"><tspan x="1045.0" dy="0em">Action</tspan><tspan x="1045.0" dy="1.05em">&amp; Control</tspan></text>
 <text class="axis" text-anchor="end" x="312.0" y="225.0">Data &amp; Model Corruption</text>
 <text class="axis" text-anchor="end" x="312.0" y="275.0">Perturbation &amp; Spoofing</text>
 <text class="axis" text-anchor="end" x="312.0" y="325.0"><tspan x="312.0" dy="-0.35em">Instruction &amp;</tspan><tspan x="312.0" dy="1.1em">Semantic Manipulation</tspan></text>

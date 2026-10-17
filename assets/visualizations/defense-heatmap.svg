@@ -12,16 +12,16 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <rect width="1200" height="815" fill="#FFFFFF"/>
 <text class="title" x="48" y="48">Defense mechanism × defended threat</text>
 <text class="subtitle" x="48" y="74">Columns follow the Threat Cross-Map order, including empty cells (219 enriched papers).</text>
-<text class="axis" text-anchor="start" transform="translate(335.2 167) rotate(-52)">Backdoor</text>
-<text class="axis" text-anchor="start" transform="translate(421.8 167) rotate(-52)">Digital Perturbation</text>
-<text class="axis" text-anchor="start" transform="translate(508.2 167) rotate(-52)">Adversarial Patch</text>
-<text class="axis" text-anchor="start" transform="translate(594.8 167) rotate(-52)">Jailbreak</text>
-<text class="axis" text-anchor="start" transform="translate(681.2 167) rotate(-52)">Distribution Shift</text>
-<text class="axis" text-anchor="start" transform="translate(767.8 167) rotate(-52)">Instruction Ambiguity</text>
-<text class="axis" text-anchor="start" transform="translate(854.2 167) rotate(-52)">Uncertainty Miscalibration</text>
-<text class="axis" text-anchor="start" transform="translate(940.8 167) rotate(-52)">Semantic Misalignment</text>
-<text class="axis" text-anchor="start" transform="translate(1027.2 167) rotate(-52)">Planning Error</text>
-<text class="axis" text-anchor="start" transform="translate(1113.8 167) rotate(-52)">Execution Error</text>
+<text class="axis" text-anchor="middle" x="343.2" y="173.0"><tspan x="343.2" dy="0em">Backdoor</tspan></text>
+<text class="axis" text-anchor="start" transform="translate(429.8 173.0) rotate(-30)"><tspan x="0" dy="0em">Digital</tspan><tspan x="0" dy="1.05em">Perturbation</tspan></text>
+<text class="axis" text-anchor="middle" x="516.2" y="160.0"><tspan x="516.2" dy="0em">Adversarial</tspan><tspan x="516.2" dy="1.05em">Patch</tspan></text>
+<text class="axis" text-anchor="middle" x="602.8" y="173.0"><tspan x="602.8" dy="0em">Jailbreak</tspan></text>
+<text class="axis" text-anchor="start" transform="translate(689.2 173.0) rotate(-30)"><tspan x="0" dy="0em">Distribution</tspan><tspan x="0" dy="1.05em">Shift</tspan></text>
+<text class="axis" text-anchor="middle" x="775.8" y="160.0"><tspan x="775.8" dy="0em">Instruction</tspan><tspan x="775.8" dy="1.05em">Ambiguity</tspan></text>
+<text class="axis" text-anchor="start" transform="translate(862.2 173.0) rotate(-30)"><tspan x="0" dy="0em">Uncertainty</tspan><tspan x="0" dy="1.05em">Miscalibration</tspan></text>
+<text class="axis" text-anchor="start" transform="translate(948.8 173.0) rotate(-30)"><tspan x="0" dy="0em">Semantic</tspan><tspan x="0" dy="1.05em">Misalignment</tspan></text>
+<text class="axis" text-anchor="middle" x="1035.2" y="160.0"><tspan x="1035.2" dy="0em">Planning</tspan><tspan x="1035.2" dy="1.05em">Error</tspan></text>
+<text class="axis" text-anchor="middle" x="1121.8" y="160.0"><tspan x="1121.8" dy="0em">Execution</tspan><tspan x="1121.8" dy="1.05em">Error</tspan></text>
 <text class="label" x="282" y="216.0" text-anchor="end">Robust Finetuning</text>
 <rect x="302.0" y="187" width="82.5" height="50" rx="6" fill="#E5EDF7"><title>[ICLR 2025] Can We Trust Embodied Agents? Exploring Backdoor Attacks Against Embodied LLM-Based Decision-Making Systems</title></rect>
 <text x="343.2" y="216.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">1</text>

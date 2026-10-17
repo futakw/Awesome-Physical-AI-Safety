@@ -12,16 +12,16 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <rect width="1200" height="1139" fill="#FFFFFF"/>
 <text class="title" x="48" y="48">Threat mechanism × consequence</text>
 <text class="subtitle" x="48" y="74">Benchmark papers only (98 papers).</text>
-<text class="axis" text-anchor="start" transform="translate(335.2 167) rotate(-52)">Task Failure</text>
-<text class="axis" text-anchor="start" transform="translate(421.8 167) rotate(-52)">Physical Damage</text>
-<text class="axis" text-anchor="start" transform="translate(508.2 167) rotate(-52)">Privacy Leakage</text>
-<text class="axis" text-anchor="start" transform="translate(594.8 167) rotate(-52)">Policy Violation</text>
-<text class="axis" text-anchor="start" transform="translate(681.2 167) rotate(-52)">Unsafe Motion</text>
-<text class="axis" text-anchor="start" transform="translate(767.8 167) rotate(-52)">Recovery Failure</text>
-<text class="axis" text-anchor="start" transform="translate(854.2 167) rotate(-52)">Collision</text>
-<text class="axis" text-anchor="start" transform="translate(940.8 167) rotate(-52)">Targeted Action</text>
-<text class="axis" text-anchor="start" transform="translate(1027.2 167) rotate(-52)">Control Hijacking</text>
-<text class="axis" text-anchor="start" transform="translate(1113.8 167) rotate(-52)">Unsafe Success</text>
+<text class="axis" text-anchor="middle" x="343.2" y="160.0"><tspan x="343.2" dy="0em">Task</tspan><tspan x="343.2" dy="1.05em">Failure</tspan></text>
+<text class="axis" text-anchor="middle" x="429.8" y="160.0"><tspan x="429.8" dy="0em">Physical</tspan><tspan x="429.8" dy="1.05em">Damage</tspan></text>
+<text class="axis" text-anchor="middle" x="516.2" y="160.0"><tspan x="516.2" dy="0em">Privacy</tspan><tspan x="516.2" dy="1.05em">Leakage</tspan></text>
+<text class="axis" text-anchor="middle" x="602.8" y="160.0"><tspan x="602.8" dy="0em">Policy</tspan><tspan x="602.8" dy="1.05em">Violation</tspan></text>
+<text class="axis" text-anchor="middle" x="689.2" y="160.0"><tspan x="689.2" dy="0em">Unsafe</tspan><tspan x="689.2" dy="1.05em">Motion</tspan></text>
+<text class="axis" text-anchor="middle" x="775.8" y="160.0"><tspan x="775.8" dy="0em">Recovery</tspan><tspan x="775.8" dy="1.05em">Failure</tspan></text>
+<text class="axis" text-anchor="middle" x="862.2" y="173.0"><tspan x="862.2" dy="0em">Collision</tspan></text>
+<text class="axis" text-anchor="middle" x="948.8" y="160.0"><tspan x="948.8" dy="0em">Targeted</tspan><tspan x="948.8" dy="1.05em">Action</tspan></text>
+<text class="axis" text-anchor="middle" x="1035.2" y="160.0"><tspan x="1035.2" dy="0em">Control</tspan><tspan x="1035.2" dy="1.05em">Hijacking</tspan></text>
+<text class="axis" text-anchor="middle" x="1121.8" y="160.0"><tspan x="1121.8" dy="0em">Unsafe</tspan><tspan x="1121.8" dy="1.05em">Success</tspan></text>
 <text class="label" x="282" y="216.0" text-anchor="end">Distribution Shift</text>
 <rect x="302.0" y="187" width="82.5" height="50" rx="6" fill="#6F9FEF"><title>[arXiv 2025] LIBERO-PRO: Towards Robust and Fair Evaluation of Vision-Language-Action Models Beyond Memorization
 [CVPR 2026] LIBERO-Plus: A Progressive Robustness Benchmark for Visual-Language-Action Models
