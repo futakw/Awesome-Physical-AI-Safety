@@ -38,7 +38,7 @@
 
 > **ステータス: 採用済み。** 全てのカタログレコードとREADME生成器はこのスキーマを使用します。
 
-`threat_model`フィールドはコンパクトな自由記述文字列ではなく、構造化されたオブジェクトです。5つのフィールドが脅威・失敗経路に関する5つの問いに答えます——**いつ**発生するか（When）、**どこから**侵入するか（Where）、**どのように**作用するか（How）、**何に**影響するか（What is affected）、**どんな帰結**を生むか（What follows）。加えて`kind`は、このレコードがどの種類に属するかを表す別フィールドです。
+`threat_model`フィールドはコンパクトな自由記述文字列ではなく、構造化されたオブジェクトです。5つのフィールドが脅威・失敗経路に関する5つの問いに答えます——**いつ**発生するか（When）、**どこから**侵入するか（Where）、**どのように**作用するか（How）、**何を**標的とするか（What is the target）、**どんな帰結**を生むか（What follows）。加えて`kind`は、このレコードがどの種類に属するかを表す別フィールドです。
 
 ### 役割分担
 
@@ -59,7 +59,7 @@
 | `lifecycle` | いつ？（When?） | 文字列の配列 | Yes | 脅威が導入・発動される段階、または失敗が評価される段階 | `training`, `inference` |
 | `surface` | どこから？（Where?） | 文字列の配列 | Yes | 脅威・シフト・失敗が導入または観測される直接のシステム境界 | `visual-perception` |
 | `mechanism` | どのように？（How?） | 文字列の配列 | Yes | 攻撃・シフト・失敗がどのように生じるか | `adversarial-patch` |
-| `target` | 何に影響？（What is affected?） | 文字列の配列 | Yes | 影響を受ける、または評価されるコンポーネント・表現・資産 | `vla-policy` |
+| `target` | 攻撃・評価の対象は何か？（What is the target of attack or evaluation?） | 文字列の配列 | Yes | 明示的に攻撃・評価の対象とされたコンポーネント・機能・資産 — 経路上で影響を受けうる全てではない | `vla-policy` |
 | `consequence` | どんな帰結？（What follows?） | 文字列の配列 | Yes | 脅威・失敗連鎖の具体的な到達点 | `task-failure` |
 | `kind` | *（レコードの種類、5つの問いとは別）* | string | Yes | 失敗の大まかな発生源、またはレコードの範囲 | `adversarial` |
 | `curation_status` | *（来歴情報、5つの問いとは別）* | string | Yes | この割り当てが一次資料に対してどの程度確認されたか — [Mechanismの監査状況](#mechanismの監査状況)を参照 | `paper-verified` |
@@ -181,7 +181,7 @@
 
 `threat_model.curation_status`は、現在の`mechanism`（および構造化threat_modelの他フィールド）の割り当てが一次資料に対してどの程度確認されたかを記録します。`defense`/`evaluation`/`benchmark`拡張と同じ尺度（`paper-verified`、`abstract-verified`、`catalog-derived`、`reference-only`）を使用します。これにより、「現行語彙でまだ再確認していないレコード」（`catalog-derived`）と「レビュー済みだが具体的な手法の根拠が見つからなかったレコード」（`mechanism`が空リストの`paper-verified`）を区別できます。どちらも有効な状態ですが、今後のキュレーションにとって意味が異なります。
 
-### 何に影響？（What is affected?）— Target語彙（目的志向）
+### 攻撃・評価の対象は何か？（What is the target of attack or evaluation?）— Target語彙（目的志向）
 
 `target`は、論文が明示的に述べる攻撃目的・防御目標・評価設計によって**明示的に狙われた**機能・コンポーネント・資産です。因果連鎖上で影響を受けうる全てのコンポーネントではなく、また内部モデル挙動についての推測的な主張でもありません。
 

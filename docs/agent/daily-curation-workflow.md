@@ -20,7 +20,7 @@ Inspect the current branch, remote, and working tree before editing. Preserve un
 ## 2. Search and Verify
 
 1. Search primary sources for new papers and material revisions since the previous run.
-2. Prefer arXiv, OpenReview, official proceedings, publisher pages, author project pages, and official or author-maintained repositories.
+2. Prefer arXiv, OpenReview, official proceedings, publisher pages, author project pages, and official or author-maintained repositories. For a record already in the catalog, check `scripts/paper_cache.py get <id>` first (cache-first, no network access) before re-downloading its primary source; only call `fetch`/`check-update` when evidence is actually missing or a revision needs checking. Do not add a recurring full-cache refresh.
 3. Read the abstract and inspect the method, experiments, and limitations when needed for scope or metadata decisions. Do not report abstract review as full-paper review.
 4. Confirm the official title, first-author surname, paper identity, publication state, paper URL, and any official project or code URL.
 5. Check normalized title, paper URL, arXiv ID, DOI, OpenReview ID, and title history before adding a record. Update renamed or materially revised work in place.

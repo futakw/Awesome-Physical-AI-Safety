@@ -6,7 +6,7 @@ This workflow maintains already-cataloged papers. New-paper discovery and additi
 
 ## 1. Read and Inspect
 
-Read `AGENTS.md`, `docs/agent/daily-curation-workflow.md`, `docs/reference/metadata-schema.md`, and `data/papers.json`. Inspect the branch, remote, and working tree. Preserve unrelated changes.
+Read `AGENTS.md`, `docs/agent/daily-curation-workflow.md`, `docs/reference/metadata-schema.md`, and `data/papers.json`. Inspect the branch, remote, and working tree. Preserve unrelated changes. Use `scripts/paper_cache.py get <id>` (cache-first, no network access) before re-downloading a record's primary source; do not schedule a recurring full-cache refresh.
 
 ## 2. Select Content-Review Targets
 

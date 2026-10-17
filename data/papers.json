@@ -157,7 +157,8 @@
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "embodied-agent",
     "risks": [
-      "task-reliability"
+      "task-reliability",
+      "physical-safety"
     ],
     "threat_model": {
       "kind": "system-failure",
@@ -166,17 +167,18 @@
       ],
       "mechanism": [],
       "surface": [
-        "task-planning",
+        "user-instruction",
         "execution-control"
       ],
       "target": [
-        "runtime-monitor",
-        "vla-policy"
+        "task-planner",
+        "runtime-monitor"
       ],
       "consequence": [
-        "policy-violation"
+        "policy-violation",
+        "collision"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "survey-2608.16843",
@@ -232,13 +234,17 @@
     "section": "defenses",
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "embodied-agent",
-    "risks": [],
+    "risks": [
+      "security-privacy"
+    ],
     "threat_model": {
       "kind": "adversarial",
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [],
+      "mechanism": [
+        "action-manipulation"
+      ],
       "surface": [
         "task-planning"
       ],
@@ -246,7 +252,8 @@
         "task-planner"
       ],
       "consequence": [
-        "policy-violation"
+        "policy-violation",
+        "targeted-action"
       ],
       "curation_status": "paper-verified"
     },
@@ -305,7 +312,9 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [],
+      "mechanism": [
+        "planning-error"
+      ],
       "surface": [
         "task-planning",
         "execution-control"
@@ -315,9 +324,9 @@
         "vla-policy"
       ],
       "consequence": [
-        "policy-violation"
+        "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "survey-2608.16843"
@@ -378,7 +387,9 @@
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "embodied-agent",
     "risks": [
-      "task-reliability"
+      "task-reliability",
+      "physical-safety",
+      "ethical-societal"
     ],
     "threat_model": {
       "kind": "system-failure",
@@ -388,6 +399,7 @@
       "mechanism": [],
       "surface": [
         "task-planning",
+        "user-instruction",
         "execution-control"
       ],
       "target": [
@@ -395,9 +407,10 @@
         "vla-policy"
       ],
       "consequence": [
-        "policy-violation"
+        "policy-violation",
+        "collision"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "survey-2608.16843",
@@ -541,7 +554,8 @@
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "embodied-agent",
     "risks": [
-      "task-reliability"
+      "task-reliability",
+      "security-privacy"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -549,18 +563,21 @@
         "inference"
       ],
       "mechanism": [
-        "direct-prompt-injection"
+        "direct-prompt-injection",
+        "indirect-prompt-injection"
       ],
       "surface": [
-        "user-instruction"
+        "user-instruction",
+        "visual-perception"
       ],
       "target": [
         "task-planner"
       ],
       "consequence": [
-        "task-failure"
+        "task-failure",
+        "control-hijacking"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "survey-2608.16843",
@@ -612,7 +629,7 @@
     "subsection": "Backdoors and Data Poisoning",
     "scope": "embodied-agent",
     "risks": [
-      "task-reliability"
+      "security-privacy"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -625,15 +642,17 @@
         "data-poisoning"
       ],
       "surface": [
-        "model-supply-chain"
+        "model-supply-chain",
+        "visual-perception"
       ],
       "target": [
-        "vla-policy"
+        "perception-model"
       ],
       "consequence": [
-        "targeted-action"
+        "targeted-action",
+        "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "survey-2608.16843",
@@ -682,7 +701,8 @@
     "subsection": "Backdoors and Data Poisoning",
     "scope": "embodied-agent",
     "risks": [
-      "task-reliability"
+      "task-reliability",
+      "security-privacy"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -695,7 +715,9 @@
         "data-poisoning"
       ],
       "surface": [
-        "model-supply-chain"
+        "model-supply-chain",
+        "user-instruction",
+        "visual-perception"
       ],
       "target": [
         "vla-policy"
@@ -703,7 +725,7 @@
       "consequence": [
         "targeted-action"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "survey-2608.16843",
@@ -741,7 +763,8 @@
     "subsection": "Planning, Action, and Trajectory Manipulation",
     "scope": "embodied-agent",
     "risks": [
-      "task-reliability"
+      "task-reliability",
+      "security-privacy"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -758,7 +781,8 @@
         "vla-policy"
       ],
       "consequence": [
-        "task-failure"
+        "task-failure",
+        "targeted-action"
       ],
       "curation_status": "paper-verified"
     },
@@ -814,7 +838,7 @@
       ],
       "surface": [
         "user-instruction",
-        "task-planning"
+        "visual-perception"
       ],
       "target": [
         "task-planner"
@@ -865,7 +889,8 @@
     "subsection": "Jailbreaks and Prompt Injection",
     "scope": "embodied-agent",
     "risks": [
-      "task-reliability"
+      "task-reliability",
+      "security-privacy"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -882,9 +907,10 @@
         "task-planner"
       ],
       "consequence": [
-        "task-failure"
+        "task-failure",
+        "targeted-action"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "survey-2608.16843",
@@ -950,7 +976,9 @@
     "subsection": "Jailbreaks and Prompt Injection",
     "scope": "embodied-agent",
     "risks": [
-      "task-reliability"
+      "task-reliability",
+      "security-privacy",
+      "physical-safety"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -967,9 +995,10 @@
         "task-planner"
       ],
       "consequence": [
-        "task-failure"
+        "task-failure",
+        "control-hijacking"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "survey-2608.16843",
@@ -1035,7 +1064,9 @@
     "subsection": "Jailbreaks and Prompt Injection",
     "scope": "embodied-agent",
     "risks": [
-      "task-reliability"
+      "task-reliability",
+      "security-privacy",
+      "physical-safety"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -1054,9 +1085,10 @@
         "vla-policy"
       ],
       "consequence": [
-        "task-failure"
+        "task-failure",
+        "targeted-action"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "survey-2608.16843",
@@ -1109,7 +1141,9 @@
     "subsection": "Jailbreaks and Prompt Injection",
     "scope": "embodied-agent",
     "risks": [
-      "task-reliability"
+      "task-reliability",
+      "security-privacy",
+      "physical-safety"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -1128,9 +1162,10 @@
         "vla-policy"
       ],
       "consequence": [
-        "task-failure"
+        "task-failure",
+        "targeted-action"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "survey-2608.16843",
@@ -1177,7 +1212,8 @@
     "subsection": "Backdoors and Data Poisoning",
     "scope": "embodied-agent",
     "risks": [
-      "task-reliability"
+      "task-reliability",
+      "security-privacy"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -1198,7 +1234,7 @@
       "consequence": [
         "targeted-action"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "survey-2608.16843",
@@ -1246,7 +1282,8 @@
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "embodied-agent",
     "risks": [
-      "task-reliability"
+      "task-reliability",
+      "physical-safety"
     ],
     "threat_model": {
       "kind": "system-failure",
@@ -1255,17 +1292,17 @@
       ],
       "mechanism": [],
       "surface": [
-        "task-planning",
+        "action-interface",
         "execution-control"
       ],
       "target": [
-        "runtime-monitor",
-        "vla-policy"
+        "action-generation",
+        "runtime-monitor"
       ],
       "consequence": [
-        "policy-violation"
+        "collision"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "survey-2608.16843",
@@ -1657,7 +1694,8 @@
     "subsection": "Representation Steering and Inference-Time Defense",
     "scope": "embodied-agent",
     "risks": [
-      "task-reliability"
+      "task-reliability",
+      "security-privacy"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -1678,7 +1716,7 @@
       "consequence": [
         "targeted-action"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "survey-2608.16843",
@@ -1898,7 +1936,9 @@
     "subsection": "Representation Steering and Inference-Time Defense",
     "scope": "embodied-agent",
     "risks": [
-      "task-reliability"
+      "task-reliability",
+      "security-privacy",
+      "physical-safety"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -1915,9 +1955,10 @@
         "vla-policy"
       ],
       "consequence": [
-        "policy-violation"
+        "policy-violation",
+        "targeted-action"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "survey-2608.16843",
@@ -2159,13 +2200,12 @@
         "visual-perception"
       ],
       "target": [
-        "runtime-monitor",
         "vla-policy"
       ],
       "consequence": [
         "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "survey-2608.16843",
@@ -2283,7 +2323,8 @@
     "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "vla",
     "risks": [
-      "task-reliability"
+      "task-reliability",
+      "security-privacy"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -2300,9 +2341,10 @@
         "vla-policy"
       ],
       "consequence": [
-        "task-failure"
+        "task-failure",
+        "targeted-action"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "survey-2608.16843",
@@ -2367,7 +2409,8 @@
     "subsection": "Planning, Action, and Trajectory Manipulation",
     "scope": "vla",
     "risks": [
-      "task-reliability"
+      "task-reliability",
+      "physical-safety"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -2386,7 +2429,8 @@
         "action-generation"
       ],
       "consequence": [
-        "task-failure"
+        "task-failure",
+        "policy-violation"
       ],
       "curation_status": "paper-verified"
     },
@@ -2444,14 +2488,13 @@
         "visual-perception"
       ],
       "target": [
-        "perception-model",
         "vla-policy"
       ],
       "consequence": [
         "task-failure",
         "targeted-action"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "diffusion",
@@ -2498,7 +2541,8 @@
     "subsection": "Jailbreaks and Prompt Injection",
     "scope": "vla",
     "risks": [
-      "task-reliability"
+      "task-reliability",
+      "security-privacy"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -2517,7 +2561,8 @@
         "vla-policy"
       ],
       "consequence": [
-        "task-failure"
+        "task-failure",
+        "targeted-action"
       ],
       "curation_status": "paper-verified"
     },
@@ -2578,12 +2623,14 @@
         "visual-perception"
       ],
       "target": [
-        "vla-policy"
+        "perception-model",
+        "action-generation"
       ],
       "consequence": [
-        "task-failure"
+        "task-failure",
+        "recovery-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "adversarial-patch",
@@ -2637,8 +2684,7 @@
         "inference"
       ],
       "mechanism": [
-        "environment-manipulation",
-        "perception-error"
+        "digital-perturbation"
       ],
       "surface": [
         "world-state",
@@ -2652,7 +2698,7 @@
         "task-failure",
         "unsafe-motion"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "world-model",
@@ -2697,7 +2743,8 @@
     "subsection": "Visual Perturbations and Patches",
     "scope": "vla",
     "risks": [
-      "task-reliability"
+      "task-reliability",
+      "security-privacy"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -2757,7 +2804,8 @@
     "subsection": "Visual Perturbations and Patches",
     "scope": "vla",
     "risks": [
-      "task-reliability"
+      "task-reliability",
+      "security-privacy"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -2775,9 +2823,10 @@
         "vla-policy"
       ],
       "consequence": [
-        "task-failure"
+        "task-failure",
+        "targeted-action"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "physical-attack",
@@ -2825,7 +2874,8 @@
     "subsection": "Backdoors and Data Poisoning",
     "scope": "vla",
     "risks": [
-      "task-reliability"
+      "task-reliability",
+      "security-privacy"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -2847,7 +2897,7 @@
         "targeted-action",
         "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "backdoor",
@@ -2894,7 +2944,8 @@
     "scope": "vla",
     "risks": [
       "task-reliability",
-      "physical-safety"
+      "physical-safety",
+      "security-privacy"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -2982,10 +3033,9 @@
         "robot-executor"
       ],
       "consequence": [
-        "control-hijacking",
         "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "prompt-injection",
@@ -3195,18 +3245,28 @@
           "training",
           "inference"
         ],
-        "mechanisms": [],
+        "mechanisms": [
+          "multiple"
+        ],
         "surfaces": [
           "visual-perception",
           "user-instruction",
           "action-interface",
-          "multi-agent-communication"
+          "multi-agent-communication",
+          "model-supply-chain",
+          "middleware-network",
+          "task-planning",
+          "execution-control",
+          "context-memory-retrieval"
         ],
         "consequences": [
-          "privacy-leakage"
+          "privacy-leakage",
+          "targeted-action",
+          "policy-violation",
+          "control-hijacking"
         ]
       },
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "survey",
@@ -3228,10 +3288,7 @@
     "section": "surveys",
     "subsection": "Embodied AI Safety and Security",
     "scope": "embodied-agent",
-    "risks": [
-      "security-privacy",
-      "task-reliability"
-    ],
+    "risks": [],
     "threat_model": {
       "kind": "survey",
       "coverage": {
@@ -3250,7 +3307,7 @@
           "task-failure"
         ]
       },
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "survey",
@@ -3272,10 +3329,7 @@
     "section": "surveys",
     "subsection": "Embodied AI Safety and Security",
     "scope": "embodied-agent",
-    "risks": [
-      "task-reliability",
-      "physical-safety"
-    ],
+    "risks": [],
     "threat_model": {
       "kind": "survey",
       "coverage": {
@@ -3294,7 +3348,7 @@
           "physical-damage"
         ]
       },
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "survey",
@@ -3316,10 +3370,7 @@
     "section": "surveys",
     "subsection": "Embodied AI Safety and Security",
     "scope": "llm-robot",
-    "risks": [
-      "security-privacy",
-      "task-reliability"
-    ],
+    "risks": [],
     "threat_model": {
       "kind": "survey",
       "coverage": {
@@ -3336,7 +3387,7 @@
           "task-failure"
         ]
       },
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "survey",
@@ -3862,8 +3913,7 @@
     "subsection": "Language and Instruction Generalization",
     "scope": "autonomous-driving",
     "risks": [
-      "task-reliability",
-      "physical-safety"
+      "task-reliability"
     ],
     "threat_model": {
       "kind": "non-adversarial",
@@ -3882,10 +3932,9 @@
         "action-generation"
       ],
       "consequence": [
-        "task-failure",
-        "unsafe-motion"
+        "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "language-instruction",
@@ -3937,7 +3986,9 @@
         "inference"
       ],
       "mechanism": [
-        "distribution-shift"
+        "distribution-shift",
+        "planning-error",
+        "execution-error"
       ],
       "surface": [
         "visual-perception",
@@ -3948,9 +3999,11 @@
       ],
       "consequence": [
         "task-failure",
-        "unsafe-motion"
+        "unsafe-motion",
+        "collision",
+        "physical-damage"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "open-world",
@@ -4072,7 +4125,7 @@
       "surface": [
         "model-supply-chain",
         "visual-perception",
-        "action-interface"
+        "user-instruction"
       ],
       "target": [
         "action-generation"
@@ -4082,7 +4135,7 @@
         "control-hijacking",
         "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "backdoor",
@@ -4259,8 +4312,7 @@
     "subsection": "Visual Perturbations and Patches",
     "scope": "vla",
     "risks": [
-      "task-reliability",
-      "security-privacy"
+      "task-reliability"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -4279,7 +4331,7 @@
       "consequence": [
         "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "adversarial-patch",
@@ -4325,8 +4377,7 @@
     "subsection": "Visual Perturbations and Patches",
     "scope": "vla",
     "risks": [
-      "task-reliability",
-      "security-privacy"
+      "task-reliability"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -4346,7 +4397,7 @@
       "consequence": [
         "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "digital-perturbation",
@@ -4454,8 +4505,7 @@
     "subsection": "Sensor, State, and Physical Interventions",
     "scope": "vla",
     "risks": [
-      "task-reliability",
-      "security-privacy"
+      "task-reliability"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -4467,8 +4517,7 @@
       ],
       "surface": [
         "visual-perception",
-        "audio-perception",
-        "proprioception"
+        "audio-perception"
       ],
       "target": [
         "vla-policy"
@@ -4476,7 +4525,7 @@
       "consequence": [
         "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "sensor-attack",
@@ -4785,8 +4834,7 @@
     "subsection": "Visual Perturbations and Patches",
     "scope": "vla",
     "risks": [
-      "task-reliability",
-      "security-privacy"
+      "task-reliability"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -4805,7 +4853,7 @@
       "consequence": [
         "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "adversarial-patch",
@@ -4970,9 +5018,10 @@
       ],
       "consequence": [
         "task-failure",
-        "unsafe-motion"
+        "unsafe-motion",
+        "collision"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "guardrail",
@@ -5435,7 +5484,8 @@
     "scope": "embodied-agent",
     "risks": [
       "task-reliability",
-      "ethical-societal"
+      "ethical-societal",
+      "physical-safety"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -5455,7 +5505,7 @@
         "policy-violation",
         "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "hazardous-instruction",
@@ -5515,7 +5565,10 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [],
+      "mechanism": [
+        "perception-error",
+        "planning-error"
+      ],
       "surface": [
         "user-instruction",
         "world-state",
@@ -5529,7 +5582,7 @@
         "task-failure",
         "unsafe-motion"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "interactive-safety",
@@ -5596,20 +5649,21 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [],
+      "mechanism": [
+        "planning-error"
+      ],
       "surface": [
         "visual-perception",
         "user-instruction",
         "world-state"
       ],
       "target": [
-        "action-generation",
-        "robot-executor"
+        "task-planner"
       ],
       "consequence": [
         "unsafe-motion"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "physical-risk-awareness",
@@ -5979,14 +6033,12 @@
         "execution-control"
       ],
       "target": [
-        "robot-executor",
-        "private-data"
+        "robot-executor"
       ],
       "consequence": [
-        "privacy-leakage",
         "control-hijacking"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "covert-channel",
@@ -6234,16 +6286,20 @@
       ],
       "surface": [
         "model-supply-chain",
-        "user-instruction"
+        "user-instruction",
+        "physical-semantic-environment",
+        "context-memory-retrieval"
       ],
       "target": [
         "task-planner"
       ],
       "consequence": [
         "targeted-action",
-        "control-hijacking"
+        "control-hijacking",
+        "collision",
+        "policy-violation"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "backdoor",
@@ -6542,9 +6598,9 @@
         "perception-model"
       ],
       "consequence": [
-        "control-hijacking"
+        "targeted-action"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "transfer-attack",
@@ -6768,12 +6824,13 @@
         "visual-perception"
       ],
       "target": [
-        "vla-policy"
+        "perception-model"
       ],
       "consequence": [
-        "task-failure"
+        "task-failure",
+        "targeted-action"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "adversarial-patch",
@@ -7543,7 +7600,8 @@
         "inference"
       ],
       "mechanism": [
-        "execution-error"
+        "execution-error",
+        "distribution-shift"
       ],
       "surface": [
         "proprioception",
@@ -7556,7 +7614,7 @@
       "consequence": [
         "recovery-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "anomaly-detection",
@@ -7701,8 +7759,7 @@
           "inference"
         ],
         "mechanisms": [
-          "distribution-shift",
-          "digital-perturbation"
+          "distribution-shift"
         ],
         "surfaces": [
           "visual-perception",
@@ -7712,7 +7769,7 @@
           "task-failure"
         ]
       },
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "testing",
@@ -7920,7 +7977,8 @@
     "subsection": "Semantic and Ethical Safety",
     "scope": "embodied-agent",
     "risks": [
-      "ethical-societal"
+      "ethical-societal",
+      "physical-safety"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -7939,7 +7997,7 @@
       "consequence": [
         "policy-violation"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "hazardous-instruction",
@@ -7993,7 +8051,8 @@
     "scope": "llm-robot",
     "risks": [
       "ethical-societal",
-      "security-privacy"
+      "security-privacy",
+      "physical-safety"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -8012,7 +8071,7 @@
       "consequence": [
         "policy-violation"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "safety-benchmark",
@@ -8094,7 +8153,9 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [],
+      "mechanism": [
+        "semantic-misalignment"
+      ],
       "surface": [
         "task-planning",
         "action-interface"
@@ -8105,7 +8166,7 @@
       "consequence": [
         "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "self-evolving-policy",
@@ -8162,7 +8223,8 @@
     "subsection": "Driving Robustness and Generalization",
     "scope": "autonomous-driving",
     "risks": [
-      "task-reliability"
+      "task-reliability",
+      "physical-safety"
     ],
     "threat_model": {
       "kind": "non-adversarial",
@@ -8183,7 +8245,7 @@
       "consequence": [
         "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "autonomous-driving",
@@ -8303,7 +8365,8 @@
     "subsection": "Model Unlearning and Data Governance",
     "scope": "vla",
     "risks": [
-      "task-reliability"
+      "task-reliability",
+      "security-privacy"
     ],
     "threat_model": {
       "kind": "system-failure",
@@ -8632,7 +8695,8 @@
       "surface": [
         "visual-perception",
         "world-state",
-        "task-planning"
+        "task-planning",
+        "user-instruction"
       ],
       "target": [
         "task-planner"
@@ -8641,7 +8705,7 @@
         "task-failure",
         "unsafe-motion"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "autonomous-driving",
@@ -8789,7 +8853,9 @@
     "section": "defenses",
     "subsection": "Multimodal Perception and Physical Safeguards",
     "scope": "vla",
-    "risks": [],
+    "risks": [
+      "physical-safety"
+    ],
     "threat_model": {
       "kind": "system-failure",
       "lifecycle": [
@@ -8808,7 +8874,7 @@
       "consequence": [
         "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "aerial-manipulation",
@@ -9012,7 +9078,9 @@
     "section": "benchmarks",
     "subsection": "Robustness, Uncertainty, and OOD Generalization",
     "scope": "vla",
-    "risks": [],
+    "risks": [
+      "task-reliability"
+    ],
     "threat_model": {
       "kind": "system-failure",
       "lifecycle": [
@@ -9032,7 +9100,7 @@
       "consequence": [
         "recovery-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "uncertainty",
@@ -9236,10 +9304,11 @@
         ],
         "consequences": [
           "task-failure",
-          "physical-damage"
+          "physical-damage",
+          "collision"
         ]
       },
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "navigation",
@@ -9380,10 +9449,11 @@
         ],
         "consequences": [
           "task-failure",
-          "physical-damage"
+          "physical-damage",
+          "collision"
         ]
       },
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "benchmark",
@@ -9532,10 +9602,10 @@
         "inference"
       ],
       "mechanism": [
-        "distribution-shift"
+        "instruction-ambiguity"
       ],
       "surface": [
-        "visual-perception"
+        "user-instruction"
       ],
       "target": [
         "vla-policy"
@@ -9543,7 +9613,7 @@
       "consequence": [
         "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "benchmark",
@@ -9616,14 +9686,15 @@
         "surfaces": [
           "model-supply-chain",
           "visual-perception",
-          "action-interface"
+          "action-interface",
+          "user-instruction"
         ],
         "consequences": [
           "task-failure",
-          "privacy-leakage"
+          "targeted-action"
         ]
       },
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "benchmark",
@@ -10377,8 +10448,7 @@
     "subsection": "Adversarial and Physical Robustness",
     "scope": "vla",
     "risks": [
-      "task-reliability",
-      "security-privacy"
+      "task-reliability"
     ],
     "threat_model": {
       "kind": "evaluation",
@@ -10396,11 +10466,10 @@
           "physical-semantic-environment"
         ],
         "consequences": [
-          "task-failure",
-          "privacy-leakage"
+          "task-failure"
         ]
       },
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "benchmark",
@@ -10795,7 +10864,7 @@
         "inference"
       ],
       "mechanism": [
-        "execution-error"
+        "semantic-misalignment"
       ],
       "surface": [
         "visual-perception",
@@ -10808,7 +10877,7 @@
       "consequence": [
         "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "failure-detection",
@@ -10868,7 +10937,8 @@
     "scope": "embodied-agent",
     "risks": [
       "task-reliability",
-      "physical-safety"
+      "physical-safety",
+      "ethical-societal"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -10891,7 +10961,7 @@
         "task-failure",
         "unsafe-motion"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "runtime-guardrail",
@@ -11127,7 +11197,8 @@
     "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "llm-robot",
     "risks": [
-      "task-reliability"
+      "task-reliability",
+      "physical-safety"
     ],
     "threat_model": {
       "kind": "system-failure",
@@ -11150,7 +11221,7 @@
       "consequence": [
         "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "replanning",
@@ -11877,10 +11948,9 @@
         "robot-executor"
       ],
       "consequence": [
-        "task-failure",
-        "collision"
+        "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "vla",
@@ -12525,9 +12595,7 @@
     "section": "defenses",
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "robot-policy",
-    "risks": [
-      "task-reliability"
-    ],
+    "risks": [],
     "threat_model": {
       "kind": "system-failure",
       "lifecycle": [
@@ -12546,7 +12614,7 @@
       "consequence": [
         "recovery-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "runtime-monitoring",
@@ -12628,9 +12696,9 @@
         "robot-executor"
       ],
       "consequence": [
-        "unsafe-motion"
+        "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "force-aware-control",
@@ -12761,10 +12829,11 @@
         ],
         "consequences": [
           "task-failure",
-          "recovery-failure"
+          "recovery-failure",
+          "collision"
         ]
       },
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "failure-recovery",
@@ -12902,10 +12971,10 @@
         "robot-executor"
       ],
       "consequence": [
-        "unsafe-motion",
-        "task-failure"
+        "task-failure",
+        "physical-damage"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "tactile",
@@ -12966,7 +13035,9 @@
     "section": "benchmarks",
     "subsection": "Evaluation Infrastructure",
     "scope": "robot-manipulation",
-    "risks": [],
+    "risks": [
+      "task-reliability"
+    ],
     "threat_model": {
       "kind": "evaluation",
       "coverage": {
@@ -12981,10 +13052,10 @@
           "reasoning-representation"
         ],
         "consequences": [
-          "recovery-failure"
+          "task-failure"
         ]
       },
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "reward-model",
@@ -13120,7 +13191,7 @@
         "inference"
       ],
       "mechanism": [
-        "typographic-injection"
+        "digital-perturbation"
       ],
       "surface": [
         "user-instruction"
@@ -13132,7 +13203,7 @@
         "targeted-action",
         "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "command-preserving-attack",
@@ -13634,7 +13705,8 @@
     "subsection": "System and Communication Defenses",
     "scope": "embodied-agent",
     "risks": [
-      "task-reliability"
+      "task-reliability",
+      "physical-safety"
     ],
     "threat_model": {
       "kind": "system-failure",
@@ -13656,7 +13728,7 @@
       "consequence": [
         "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "embodied-runtime",
@@ -14062,7 +14134,8 @@
     "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "embodied-agent",
     "risks": [
-      "physical-safety"
+      "physical-safety",
+      "task-reliability"
     ],
     "threat_model": {
       "kind": "system-failure",
@@ -14080,7 +14153,7 @@
       "consequence": [
         "unsafe-motion"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "humanoid",
@@ -14142,6 +14215,7 @@
     "subsection": "Backdoors and Data Poisoning",
     "scope": "robot-policy",
     "risks": [
+      "task-reliability",
       "physical-safety",
       "security-privacy"
     ],
@@ -14165,7 +14239,7 @@
         "unsafe-motion",
         "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "collision-mesh-poisoning",
@@ -14398,9 +14472,7 @@
     "section": "defenses",
     "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "robot-policy",
-    "risks": [
-      "physical-safety"
-    ],
+    "risks": [],
     "threat_model": {
       "kind": "system-failure",
       "lifecycle": [
@@ -14414,9 +14486,9 @@
         "robot-executor"
       ],
       "consequence": [
-        "unsafe-motion"
+        "availability-loss"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "QP-solver",
@@ -15236,9 +15308,7 @@
     "section": "defenses",
     "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "robot-policy",
-    "risks": [
-      "task-reliability"
-    ],
+    "risks": [],
     "threat_model": {
       "kind": "system-failure",
       "lifecycle": [
@@ -15258,7 +15328,7 @@
         "task-failure",
         "recovery-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "failure-diagnosis",
@@ -16225,7 +16295,6 @@
         "inference"
       ],
       "mechanism": [
-        "multimodal-desynchronization",
         "execution-error"
       ],
       "surface": [
@@ -16241,7 +16310,7 @@
         "task-failure",
         "unsafe-motion"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "deployment-safety",
@@ -16399,10 +16468,9 @@
         "runtime-monitor"
       ],
       "consequence": [
-        "task-failure",
-        "policy-violation"
+        "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "semantic-grounding",
@@ -16425,8 +16493,7 @@
         "not-applicable"
       ],
       "metrics": [
-        "task-success-rate",
-        "false-positive-rate"
+        "task-success-rate"
       ],
       "physical_validation": false,
       "curation_status": "paper-verified"
@@ -16643,7 +16710,8 @@
     "subsection": "Backdoors and Data Poisoning",
     "scope": "vla",
     "risks": [
-      "task-reliability"
+      "task-reliability",
+      "security-privacy"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -16659,13 +16727,14 @@
         "user-instruction"
       ],
       "target": [
-        "vla-policy"
+        "action-generation"
       ],
       "consequence": [
         "targeted-action",
+        "control-hijacking",
         "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "configured-failure",
@@ -16735,10 +16804,9 @@
       ],
       "consequence": [
         "task-failure",
-        "recovery-failure",
-        "policy-violation"
+        "recovery-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "physical-execution-contract",
@@ -16806,8 +16874,7 @@
     "subsection": "Visual Perturbations and Patches",
     "scope": "vla",
     "risks": [
-      "task-reliability",
-      "security-privacy"
+      "task-reliability"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -16815,7 +16882,8 @@
         "inference"
       ],
       "mechanism": [
-        "adversarial-object"
+        "adversarial-object",
+        "adversarial-patch"
       ],
       "surface": [
         "visual-perception",
@@ -16827,7 +16895,7 @@
       "consequence": [
         "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "universal-adversarial-object",
@@ -17063,7 +17131,8 @@
     "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "vla",
     "risks": [
-      "task-reliability"
+      "task-reliability",
+      "physical-safety"
     ],
     "threat_model": {
       "kind": "system-failure",
@@ -17085,7 +17154,7 @@
         "task-failure",
         "recovery-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "feasibility-likelihood-gap",
@@ -17256,10 +17325,9 @@
         "reasoning-process"
       ],
       "consequence": [
-        "task-failure",
-        "recovery-failure"
+        "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "SOUL",
@@ -17665,7 +17733,9 @@
       "lifecycle": [
         "inference"
       ],
-      "mechanism": [],
+      "mechanism": [
+        "semantic-misalignment"
+      ],
       "surface": [
         "user-instruction",
         "world-state",
@@ -17680,7 +17750,7 @@
         "collision",
         "policy-violation"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "contextual-safety-filtering",
@@ -17836,7 +17906,7 @@
         "system"
       ],
       "mechanism": [
-        "execution-error"
+        "uncertainty-miscalibration"
       ],
       "surface": [
         "visual-perception",
@@ -17910,7 +17980,6 @@
         "runtime-monitor"
       ],
       "consequence": [
-        "control-hijacking",
         "recovery-failure"
       ],
       "curation_status": "paper-verified"
@@ -17978,10 +18047,9 @@
       ],
       "consequence": [
         "unsafe-motion",
-        "physical-damage",
-        "recovery-failure"
+        "physical-damage"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "feasibility-aware",
@@ -18050,8 +18118,7 @@
     "subsection": "Visual Perturbations and Patches",
     "scope": "vla",
     "risks": [
-      "task-reliability",
-      "security-privacy"
+      "task-reliability"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -18074,7 +18141,7 @@
         "task-failure",
         "recovery-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "persistent-adversarial-effect",
@@ -18130,12 +18197,11 @@
         "inference"
       ],
       "mechanism": [
-        "digital-perturbation",
-        "multimodal-desynchronization"
+        "digital-perturbation"
       ],
       "surface": [
         "visual-perception",
-        "action-interface"
+        "proprioception"
       ],
       "target": [
         "vla-policy",
@@ -18145,7 +18211,7 @@
         "task-failure",
         "recovery-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "CARE",
@@ -18387,7 +18453,9 @@
     "section": "defenses",
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "robot-policy",
-    "risks": [],
+    "risks": [
+      "task-reliability"
+    ],
     "threat_model": {
       "kind": "evaluation",
       "coverage": {
@@ -18407,7 +18475,7 @@
           "task-failure"
         ]
       },
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "failure-detection",
@@ -18562,7 +18630,9 @@
     "section": "defenses",
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "embodied-agent",
-    "risks": [],
+    "risks": [
+      "task-reliability"
+    ],
     "threat_model": {
       "kind": "evaluation",
       "coverage": {
@@ -18583,7 +18653,7 @@
           "unsafe-success"
         ]
       },
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "trace-refinement",
@@ -18836,6 +18906,7 @@
     "subsection": "Visual Perturbations and Patches",
     "scope": "embodied-agent",
     "risks": [
+      "task-reliability",
       "security-privacy"
     ],
     "threat_model": {
@@ -18844,8 +18915,7 @@
         "inference"
       ],
       "mechanism": [
-        "typographic-injection",
-        "indirect-prompt-injection"
+        "typographic-injection"
       ],
       "surface": [
         "physical-semantic-environment"
@@ -18854,9 +18924,10 @@
         "perception-model"
       ],
       "consequence": [
-        "targeted-action"
+        "targeted-action",
+        "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -18897,7 +18968,11 @@
     "section": "defenses",
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "embodied-agent",
-    "risks": [],
+    "risks": [
+      "physical-safety",
+      "security-privacy",
+      "task-reliability"
+    ],
     "threat_model": {
       "kind": "adversarial",
       "lifecycle": [
@@ -18916,7 +18991,7 @@
       "consequence": [
         "policy-violation"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -19038,7 +19113,9 @@
     "section": "defenses",
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "embodied-agent",
-    "risks": [],
+    "risks": [
+      "security-privacy"
+    ],
     "threat_model": {
       "kind": "adversarial",
       "lifecycle": [
@@ -19057,7 +19134,7 @@
       "consequence": [
         "policy-violation"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -19148,7 +19225,9 @@
     "section": "training-attacks",
     "subsection": "Backdoors and Data Poisoning",
     "scope": "world-model",
-    "risks": [],
+    "risks": [
+      "security-privacy"
+    ],
     "threat_model": {
       "kind": "adversarial",
       "lifecycle": [
@@ -19170,7 +19249,7 @@
         "control-hijacking",
         "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -19201,7 +19280,9 @@
     "section": "surveys",
     "subsection": "World Model Safety and Security",
     "scope": "world-model",
-    "risks": [],
+    "risks": [
+      "task-reliability"
+    ],
     "threat_model": {
       "kind": "survey",
       "coverage": {
@@ -19220,7 +19301,7 @@
         ],
         "consequences": []
       },
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -19257,9 +19338,9 @@
         "action-generation"
       ],
       "consequence": [
-        "policy-violation"
+        "collision"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -19466,10 +19547,11 @@
         ],
         "consequences": [
           "task-failure",
+          "unsafe-success",
           "policy-violation"
         ]
       },
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -19577,7 +19659,10 @@
     "section": "training-attacks",
     "subsection": "Backdoors and Data Poisoning",
     "scope": "embodied-agent",
-    "risks": [],
+    "risks": [
+      "security-privacy",
+      "physical-safety"
+    ],
     "threat_model": {
       "kind": "adversarial",
       "lifecycle": [
@@ -19598,7 +19683,7 @@
       "consequence": [
         "targeted-action"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -19629,7 +19714,10 @@
     "section": "defenses",
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "embodied-agent",
-    "risks": [],
+    "risks": [
+      "task-reliability",
+      "security-privacy"
+    ],
     "threat_model": {
       "kind": "adversarial",
       "lifecycle": [
@@ -19648,7 +19736,7 @@
       "consequence": [
         "control-hijacking"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -19836,7 +19924,8 @@
     "subsection": "Adversarial and Physical Robustness",
     "scope": "embodied-agent",
     "risks": [
-      "security-privacy"
+      "security-privacy",
+      "task-reliability"
     ],
     "threat_model": {
       "kind": "evaluation",
@@ -19857,7 +19946,7 @@
           "task-failure"
         ]
       },
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -19925,7 +20014,8 @@
     "subsection": "Jailbreaks and Prompt Injection",
     "scope": "embodied-agent",
     "risks": [
-      "security-privacy"
+      "task-reliability",
+      "physical-safety"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -19942,9 +20032,10 @@
         "task-planner"
       ],
       "consequence": [
-        "control-hijacking"
+        "task-failure",
+        "unsafe-motion"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -19998,7 +20089,10 @@
     "section": "inference-attacks",
     "subsection": "Jailbreaks and Prompt Injection",
     "scope": "embodied-agent",
-    "risks": [],
+    "risks": [
+      "task-reliability",
+      "security-privacy"
+    ],
     "threat_model": {
       "kind": "adversarial",
       "lifecycle": [
@@ -20016,7 +20110,7 @@
       "consequence": [
         "control-hijacking"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -20194,8 +20288,7 @@
     "subsection": "Jailbreaks and Prompt Injection",
     "scope": "vla",
     "risks": [
-      "task-reliability",
-      "security-privacy"
+      "task-reliability"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -20215,7 +20308,7 @@
       "consequence": [
         "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -20416,7 +20509,9 @@
     "section": "benchmarks",
     "subsection": "Robustness, Uncertainty, and OOD Generalization",
     "scope": "vla",
-    "risks": [],
+    "risks": [
+      "task-reliability"
+    ],
     "threat_model": {
       "kind": "evaluation",
       "coverage": {
@@ -20435,7 +20530,7 @@
           "task-failure"
         ]
       },
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -20539,7 +20634,10 @@
     "section": "benchmarks",
     "subsection": "Adversarial and Physical Robustness",
     "scope": "embodied-agent",
-    "risks": [],
+    "risks": [
+      "physical-safety",
+      "task-reliability"
+    ],
     "threat_model": {
       "kind": "evaluation",
       "coverage": {
@@ -20558,7 +20656,7 @@
           "unsafe-motion"
         ]
       },
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -20601,8 +20699,7 @@
     "subsection": "Visual Perturbations and Patches",
     "scope": "robot-policy",
     "risks": [
-      "task-reliability",
-      "security-privacy"
+      "task-reliability"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -20621,7 +20718,7 @@
       "consequence": [
         "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -20728,7 +20825,7 @@
     "subsection": "Visual Perturbations and Patches",
     "scope": "vla",
     "risks": [
-      "security-privacy"
+      "task-reliability"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -20782,7 +20879,8 @@
     "subsection": "Visual Perturbations and Patches",
     "scope": "robot-policy",
     "risks": [
-      "task-reliability"
+      "task-reliability",
+      "security-privacy"
     ],
     "threat_model": {
       "kind": "adversarial",
@@ -20800,9 +20898,10 @@
         "action-generation"
       ],
       "consequence": [
-        "task-failure"
+        "task-failure",
+        "targeted-action"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -20835,7 +20934,9 @@
     "section": "inference-attacks",
     "subsection": "Jailbreaks and Prompt Injection",
     "scope": "embodied-agent",
-    "risks": [],
+    "risks": [
+      "task-reliability"
+    ],
     "threat_model": {
       "kind": "adversarial",
       "lifecycle": [
@@ -20851,7 +20952,6 @@
         "action-generation"
       ],
       "consequence": [
-        "targeted-action",
         "task-failure"
       ],
       "curation_status": "paper-verified"
@@ -21033,7 +21133,8 @@
     "subsection": "Privacy and Data Leakage",
     "scope": "embodied-agent",
     "risks": [
-      "ethical-societal"
+      "ethical-societal",
+      "security-privacy"
     ],
     "threat_model": {
       "kind": "evaluation",
@@ -21053,7 +21154,7 @@
           "policy-violation"
         ]
       },
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -21248,7 +21349,9 @@
     "section": "benchmarks",
     "subsection": "Robustness, Uncertainty, and OOD Generalization",
     "scope": "embodied-agent",
-    "risks": [],
+    "risks": [
+      "task-reliability"
+    ],
     "threat_model": {
       "kind": "evaluation",
       "coverage": {
@@ -21269,7 +21372,7 @@
           "task-failure"
         ]
       },
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -21374,7 +21477,9 @@
     "section": "surveys",
     "subsection": "Embodied AI Safety and Security",
     "scope": "embodied-agent",
-    "risks": [],
+    "risks": [
+      "security-privacy"
+    ],
     "threat_model": {
       "kind": "survey",
       "coverage": {
@@ -21393,7 +21498,7 @@
         ],
         "consequences": []
       },
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -21413,7 +21518,9 @@
     "section": "inference-attacks",
     "subsection": "Visual Perturbations and Patches",
     "scope": "embodied-agent",
-    "risks": [],
+    "risks": [
+      "task-reliability"
+    ],
     "threat_model": {
       "kind": "adversarial",
       "lifecycle": [
@@ -21432,7 +21539,7 @@
       "consequence": [
         "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -21595,9 +21702,9 @@
       ],
       "consequence": [
         "unsafe-motion",
-        "policy-violation"
+        "collision"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -21651,25 +21758,19 @@
     "scope": "embodied-agent",
     "risks": [],
     "threat_model": {
-      "kind": "system-failure",
-      "lifecycle": [
-        "inference"
-      ],
-      "mechanism": [
-        "planning-error"
-      ],
-      "surface": [
-        "user-instruction",
-        "physical-semantic-environment",
-        "task-planning"
-      ],
-      "target": [
-        "task-planner"
-      ],
-      "consequence": [
-        "policy-violation"
-      ],
-      "curation_status": "catalog-derived"
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "user-instruction",
+          "physical-semantic-environment"
+        ],
+        "consequences": []
+      },
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -22217,7 +22318,9 @@
     "section": "defenses",
     "subsection": "Model Unlearning and Data Governance",
     "scope": "robot-policy",
-    "risks": [],
+    "risks": [
+      "security-privacy"
+    ],
     "threat_model": {
       "kind": "system-failure",
       "lifecycle": [
@@ -22235,7 +22338,7 @@
       "consequence": [
         "privacy-leakage"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -22628,7 +22731,8 @@
     "subsection": "Failure Detection and Recovery",
     "scope": "embodied-agent",
     "risks": [
-      "task-reliability"
+      "task-reliability",
+      "physical-safety"
     ],
     "threat_model": {
       "kind": "evaluation",
@@ -22644,10 +22748,11 @@
         ],
         "consequences": [
           "task-failure",
-          "recovery-failure"
+          "recovery-failure",
+          "policy-violation"
         ]
       },
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -22769,7 +22874,9 @@
     "section": "defenses",
     "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "embodied-agent",
-    "risks": [],
+    "risks": [
+      "task-reliability"
+    ],
     "threat_model": {
       "kind": "system-failure",
       "lifecycle": [
@@ -22788,7 +22895,7 @@
       "consequence": [
         "recovery-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -22905,7 +23012,8 @@
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "embodied-agent",
     "risks": [
-      "ethical-societal"
+      "ethical-societal",
+      "physical-safety"
     ],
     "threat_model": {
       "kind": "system-failure",
@@ -22926,7 +23034,7 @@
       "consequence": [
         "policy-violation"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -22977,7 +23085,8 @@
     "scope": "embodied-agent",
     "risks": [
       "physical-safety",
-      "ethical-societal"
+      "ethical-societal",
+      "security-privacy"
     ],
     "threat_model": {
       "kind": "evaluation",
@@ -22998,7 +23107,7 @@
           "unsafe-motion"
         ]
       },
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -23235,7 +23344,8 @@
     "scope": "embodied-agent",
     "risks": [
       "task-reliability",
-      "physical-safety"
+      "physical-safety",
+      "ethical-societal"
     ],
     "threat_model": {
       "kind": "evaluation",
@@ -23244,7 +23354,8 @@
           "inference"
         ],
         "mechanisms": [
-          "planning-error"
+          "planning-error",
+          "hazardous-instruction"
         ],
         "surfaces": [
           "task-planning",
@@ -23255,7 +23366,7 @@
           "policy-violation"
         ]
       },
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -23541,7 +23652,9 @@
       ],
       "surface": [
         "visual-perception",
-        "user-instruction"
+        "user-instruction",
+        "action-interface",
+        "physical-semantic-environment"
       ],
       "target": [
         "vla-policy"
@@ -23549,7 +23662,7 @@
       "consequence": [
         "task-failure"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -23694,10 +23807,10 @@
         ],
         "consequences": [
           "task-failure",
-          "policy-violation"
+          "unsafe-success"
         ]
       },
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -24427,7 +24540,10 @@
     "section": "defenses",
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "embodied-agent",
-    "risks": [],
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
     "threat_model": {
       "kind": "system-failure",
       "lifecycle": [
@@ -24444,7 +24560,7 @@
       "consequence": [
         "collision"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -24840,16 +24956,14 @@
           "inference",
           "system"
         ],
-        "mechanisms": [
-          "semantic-misalignment"
-        ],
+        "mechanisms": [],
         "surfaces": [
           "physical-semantic-environment",
           "execution-control"
         ],
         "consequences": []
       },
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -25130,7 +25244,10 @@
     "section": "inference-attacks",
     "subsection": "Sensor, State, and Physical Interventions",
     "scope": "robot-policy",
-    "risks": [],
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
     "threat_model": {
       "kind": "adversarial",
       "lifecycle": [
@@ -25146,9 +25263,10 @@
         "robot-executor"
       ],
       "consequence": [
-        "task-failure"
+        "task-failure",
+        "unsafe-motion"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -25329,7 +25447,9 @@
     "section": "defenses",
     "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "robot-policy",
-    "risks": [],
+    "risks": [
+      "physical-safety"
+    ],
     "threat_model": {
       "kind": "system-failure",
       "lifecycle": [
@@ -25346,7 +25466,7 @@
       "consequence": [
         "unsafe-motion"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -25539,10 +25659,11 @@
         ],
         "consequences": [
           "collision",
-          "recovery-failure"
+          "recovery-failure",
+          "policy-violation"
         ]
       },
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -25885,7 +26006,8 @@
     "subsection": "Safety-Aligned and Robust Policy Training",
     "scope": "robot-policy",
     "risks": [
-      "task-reliability"
+      "task-reliability",
+      "physical-safety"
     ],
     "threat_model": {
       "kind": "system-failure",
@@ -25904,7 +26026,7 @@
       "consequence": [
         "unsafe-motion"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -26096,7 +26218,9 @@
     "section": "defenses",
     "subsection": "Runtime Monitoring and Guardrails",
     "scope": "embodied-agent",
-    "risks": [],
+    "risks": [
+      "physical-safety"
+    ],
     "threat_model": {
       "kind": "system-failure",
       "lifecycle": [
@@ -26113,9 +26237,9 @@
         "runtime-monitor"
       ],
       "consequence": [
-        "policy-violation"
+        "physical-damage"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -26243,12 +26367,13 @@
         "execution-control"
       ],
       "target": [
+        "runtime-monitor",
         "robot-executor"
       ],
       "consequence": [
-        "policy-violation"
+        "unsafe-motion"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -26441,7 +26566,9 @@
     "section": "defenses",
     "subsection": "Failure Detection, Shielding, and Recovery",
     "scope": "robot-policy",
-    "risks": [],
+    "risks": [
+      "physical-safety"
+    ],
     "threat_model": {
       "kind": "system-failure",
       "lifecycle": [
@@ -26458,7 +26585,7 @@
       "consequence": [
         "unsafe-motion"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "priority-literature-review-2026-10",
@@ -27048,12 +27175,12 @@
         "world-state"
       ],
       "target": [
-        "robot-executor"
+        "world-state"
       ],
       "consequence": [
         "collision"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "full-text-reviewed"
@@ -27631,9 +27758,10 @@
       ],
       "consequence": [
         "task-failure",
-        "collision"
+        "collision",
+        "unsafe-motion"
       ],
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "foundation-model-based",
@@ -28182,7 +28310,9 @@
     "section": "benchmarks",
     "subsection": "Task and Physical Safety",
     "scope": "embodied-agent",
-    "risks": [],
+    "risks": [
+      "physical-safety"
+    ],
     "threat_model": {
       "kind": "evaluation",
       "coverage": {
@@ -28196,9 +28326,11 @@
           "visual-perception",
           "task-planning"
         ],
-        "consequences": []
+        "consequences": [
+          "task-failure"
+        ]
       },
-      "curation_status": "catalog-derived"
+      "curation_status": "paper-verified"
     },
     "tags": [
       "foundation-model-based",
@@ -28776,5 +28908,755 @@
     },
     "first_submission_date": null,
     "first_submission_source": null
+  },
+  {
+    "id": "arxiv-2610-14038",
+    "title": "From bits to atoms: A survey of cross-layer safety in Embodied AI",
+    "first_author": "Feng",
+    "venue": "AI Plus",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.14038",
+    "code_url": null,
+    "section": "surveys",
+    "subsection": "Embodied AI Safety and Security",
+    "scope": "embodied-agent",
+    "risks": [],
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": [
+          "training",
+          "inference",
+          "system"
+        ],
+        "mechanisms": [
+          "multiple"
+        ],
+        "surfaces": [
+          "model-supply-chain",
+          "middleware-network",
+          "physical-semantic-environment",
+          "visual-perception",
+          "user-instruction",
+          "context-memory-retrieval",
+          "world-state",
+          "reasoning-representation",
+          "task-planning",
+          "action-interface",
+          "execution-control"
+        ],
+        "consequences": [
+          "task-failure",
+          "collision",
+          "unsafe-motion",
+          "physical-damage",
+          "control-hijacking",
+          "policy-violation",
+          "availability-loss"
+        ]
+      },
+      "curation_status": "abstract-verified"
+    },
+    "tags": [
+      "cross-layer-safety",
+      "cyber-physical-risk",
+      "attack-chains",
+      "hardware-software-codesign"
+    ],
+    "first_submission_date": "2026-10-02",
+    "first_submission_source": "https://arxiv.org/abs/2610.14038"
+  },
+  {
+    "id": "arxiv-2610-21160",
+    "title": "When to Ask for Help: A Decision-Theoretic Account and Measurement Standard for Slow-Module Scheduling in Dual-System Vision-Language-Action Models",
+    "first_author": "Zhang",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.21160",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Evaluation Infrastructure",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "execution-error",
+          "uncertainty-miscalibration"
+        ],
+        "surfaces": [
+          "reasoning-representation",
+          "action-interface",
+          "execution-control"
+        ],
+        "consequences": [
+          "task-failure",
+          "recovery-failure"
+        ]
+      },
+      "curation_status": "paper-verified"
+    },
+    "tags": [
+      "value-of-intervention",
+      "slow-module-scheduling",
+      "query-budget",
+      "leak-free-evaluation",
+      "LIBERO"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "LIBERO-Spatial",
+        "LIBERO-Goal"
+      ],
+      "models": [
+        "FiS-VLA",
+        "RoboICL"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "task-reliability"
+      ],
+      "shift_types": [
+        "none"
+      ],
+      "environment": "simulation",
+      "base_platforms": [
+        "LIBERO-Spatial",
+        "LIBERO-Goal"
+      ],
+      "public_data": null,
+      "leaderboard": false,
+      "curation_status": "paper-verified"
+    },
+    "first_submission_date": "2026-10-15",
+    "first_submission_source": "https://arxiv.org/abs/2610.21160",
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "uncertainty-gating"
+      ],
+      "protected_surface": [
+        "reasoning-representation",
+        "action-interface"
+      ],
+      "defends_against": [
+        "execution-error",
+        "uncertainty-miscalibration"
+      ],
+      "assumptions": [
+        "runtime-monitor"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2610-21251",
+    "title": "Do VLAs Really Follow Instructions? Diagnosing How-Level Instruction Following in Vision-Language-Action Models",
+    "first_author": "Park",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.21251",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "training",
+          "inference"
+        ],
+        "mechanisms": [
+          "distribution-shift",
+          "semantic-misalignment"
+        ],
+        "surfaces": [
+          "user-instruction",
+          "reasoning-representation",
+          "action-interface"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      },
+      "curation_status": "paper-verified"
+    },
+    "tags": [
+      "how-level-instructions",
+      "instruction-following",
+      "SIMPLER-IN",
+      "segment-level-instructions",
+      "full-text-reviewed"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "SIMPLER",
+        "SIMPLER-IN"
+      ],
+      "models": [
+        "pi0",
+        "InternVLA-M1",
+        "QwenGR00T",
+        "InstructVLA",
+        "LangForce"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "robust-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "ood",
+        "task-reliability"
+      ],
+      "shift_types": [
+        "instruction"
+      ],
+      "environment": "simulation",
+      "base_platforms": [
+        "SIMPLER",
+        "SIMPLER-IN"
+      ],
+      "public_data": null,
+      "leaderboard": false,
+      "curation_status": "paper-verified"
+    },
+    "first_submission_date": "2026-10-15",
+    "first_submission_source": "https://arxiv.org/abs/2610.21251",
+    "defense": {
+      "position": [
+        "training-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "user-instruction",
+        "reasoning-representation"
+      ],
+      "defends_against": [
+        "distribution-shift",
+        "semantic-misalignment"
+      ],
+      "assumptions": [
+        "model-access"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2610-21434",
+    "title": "Policy-Aligned Predictive Verification for Adaptive VLA Action-Chunk Execution",
+    "first_author": "Kim",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.21434",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [
+      "action-chunking",
+      "predictive-verification",
+      "adaptive-execution-horizon",
+      "LIBERO",
+      "RoboTwin-2.0",
+      "real-robot"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "LIBERO",
+        "RoboTwin 2.0",
+        "Franka Panda"
+      ],
+      "models": [
+        "pi0",
+        "pi0.5"
+      ],
+      "access": [
+        "gray-box"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    },
+    "first_submission_date": "2026-10-15",
+    "first_submission_source": "https://arxiv.org/abs/2610.21434",
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "protected_surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "model-access",
+        "runtime-monitor"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2610-21453",
+    "title": "CarryOn: A Dual-Loop Harness for Personalized and Reliable Robot Assistance",
+    "first_author": "Wang",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.21453",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "vla",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference",
+        "system"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "context-memory-retrieval",
+        "action-interface",
+        "execution-control"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure",
+        "collision",
+        "recovery-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [
+      "dual-loop-harness",
+      "personalization",
+      "geometric-shield",
+      "failure-recovery",
+      "LIBERO-Safety",
+      "LIBERO-Recovery",
+      "real-robot"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "LIBERO-Safety",
+        "LIBERO-Recovery",
+        "Franka Research 3"
+      ],
+      "models": [
+        "StarVLA",
+        "pi0.5",
+        "OpenVLA-OFT",
+        "VLAct"
+      ],
+      "access": [
+        "gray-box"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "constraint-violation-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    },
+    "first_submission_date": "2026-10-15",
+    "first_submission_source": "https://arxiv.org/abs/2610.21453",
+    "defense": {
+      "position": [
+        "runtime",
+        "system-level"
+      ],
+      "mechanism": [
+        "action-shielding",
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "context-memory-retrieval",
+        "action-interface",
+        "execution-control"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "safety-constraints",
+        "runtime-monitor"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2610-21686",
+    "title": "MAIA: Anticipating Interaction Anomalies in Contact-Rich Manipulation via Multimodal World Models",
+    "first_author": "Qiao",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.21686",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "visual-perception",
+        "proprioception",
+        "action-interface"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [
+      "contact-rich-manipulation",
+      "vision-action-force-world-model",
+      "anomaly-anticipation",
+      "CRIA",
+      "pi0.5",
+      "real-robot"
+    ],
+    "evaluation": {
+      "environments": [
+        "offline-dataset",
+        "real-robot"
+      ],
+      "platforms": [
+        "CRIA",
+        "Franka Research 3"
+      ],
+      "models": [
+        "pi0.5"
+      ],
+      "access": [
+        "gray-box"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "false-positive-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "task-reliability"
+      ],
+      "shift_types": [
+        "action",
+        "dynamics"
+      ],
+      "environment": "real-robot",
+      "base_platforms": [
+        "CRIA",
+        "Franka Research 3"
+      ],
+      "public_data": null,
+      "leaderboard": false,
+      "curation_status": "paper-verified"
+    },
+    "first_submission_date": "2026-10-15",
+    "first_submission_source": "https://arxiv.org/abs/2610.21686",
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "proprioception",
+        "action-interface"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "runtime-monitor",
+        "model-access"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2610-21985",
+    "title": "VeriVLA: Adaptive Test-Time Verification for Flow-Based VLAs with Latent World Models",
+    "first_author": "Sun",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.21985",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error",
+        "uncertainty-miscalibration"
+      ],
+      "surface": [
+        "reasoning-representation",
+        "action-interface"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [
+      "flow-based-vla",
+      "test-time-verification",
+      "latent-world-model",
+      "adaptive-compute",
+      "RoboTwin-2.0",
+      "LIBERO",
+      "real-robot"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "RoboTwin 2.0",
+        "LIBERO"
+      ],
+      "models": [],
+      "access": [
+        "gray-box"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "robust-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    },
+    "first_submission_date": "2026-10-15",
+    "first_submission_source": "https://arxiv.org/abs/2610.21985",
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "uncertainty-gating"
+      ],
+      "protected_surface": [
+        "reasoning-representation",
+        "action-interface"
+      ],
+      "defends_against": [
+        "execution-error",
+        "uncertainty-miscalibration"
+      ],
+      "assumptions": [
+        "model-access",
+        "runtime-monitor"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2610-22092",
+    "title": "Onboard Lightweight LLM Reasoning for Human-Aware Safe UAV Navigation",
+    "first_author": "Cai",
+    "venue": "HEAI at IROS",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.22092",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Multimodal Perception and Physical Safeguards",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference",
+        "system"
+      ],
+      "mechanism": [
+        "perception-error",
+        "semantic-misalignment"
+      ],
+      "surface": [
+        "visual-perception",
+        "world-state",
+        "task-planning"
+      ],
+      "target": [
+        "task-planner",
+        "robot-executor"
+      ],
+      "consequence": [
+        "collision",
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [
+      "human-aware-navigation",
+      "lightweight-llm",
+      "retrieval-augmented-generation",
+      "grammar-constrained-decoding",
+      "occlusion-persistence",
+      "Gazebo",
+      "UAV"
+    ],
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "Gazebo",
+        "Jetson Orin NX"
+      ],
+      "models": [
+        "Qwen2.5-0.5B",
+        "BLIP ViT-B/16"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "collision-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "first_submission_date": "2026-10-15",
+    "first_submission_source": "https://arxiv.org/abs/2610.22092",
+    "defense": {
+      "position": [
+        "runtime",
+        "system-level"
+      ],
+      "mechanism": [
+        "action-shielding"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "world-state",
+        "task-planning"
+      ],
+      "defends_against": [
+        "perception-error",
+        "semantic-misalignment"
+      ],
+      "assumptions": [
+        "safety-constraints"
+      ],
+      "curation_status": "paper-verified"
+    }
   }
 ]

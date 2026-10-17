@@ -36,7 +36,7 @@ A paper's `threat_model.kind` is one of three failure sources (plus `survey`/`ev
 
 > **Status: Adopted.** All catalog records and the README generator use this schema.
 
-The `threat_model` field should be a structured object rather than a compact free-text string. Five fields answer five questions about the threat or failure path — **when** it occurs, **where** it enters, **how** it operates, **what** it affects, and **what follows** — plus `kind`, a separate field for what broad category of record this is.
+The `threat_model` field should be a structured object rather than a compact free-text string. Five fields answer five questions about the threat or failure path — **when** it occurs, **where** it enters, **how** it operates, **what** it targets, and **what follows** — plus `kind`, a separate field for what broad category of record this is.
 
 ### Role Separation
 
@@ -57,7 +57,7 @@ A perceptual delivery channel (`surface`) does not make perception the `target`;
 | `lifecycle` | When? | array of strings | Yes | Stages in which a threat is introduced or activated, or a failure is evaluated | `training`, `inference` |
 | `surface` | Where? | array of strings | Yes | Direct system boundary or boundaries through which the threat, shift, or failure is introduced or observed | `visual-perception` |
 | `mechanism` | How? | array of strings | Yes | How the attack, shift, or failure is produced | `adversarial-patch` |
-| `target` | What is affected? | array of strings | Yes | Component, representation, or asset affected or evaluated | `vla-policy` |
+| `target` | What is the target of attack or evaluation? | array of strings | Yes | Component, capability, or asset explicitly targeted or evaluated — not everything plausibly affected along the way | `vla-policy` |
 | `consequence` | What follows? | array of strings | Yes | Concrete endpoint of the threat or failure chain | `task-failure` |
 | `kind` | *(record type, not part of the five)* | string | Yes | Broad source of failure or scope of the record | `adversarial` |
 | `curation_status` | *(provenance, not part of the five)* | string | Yes | How thoroughly this assignment was checked against a primary source — see [Mechanism Curation Status](#mechanism-curation-status) | `paper-verified` |
@@ -179,7 +179,7 @@ A handful of labels are defined but may have zero current users — a label stay
 
 `threat_model.curation_status` records how thoroughly the current `mechanism` (and the rest of the structured threat model) assignment was checked against a primary source, using the same scale as the `defense`/`evaluation`/`benchmark` extensions: `paper-verified`, `abstract-verified`, `catalog-derived`, `reference-only`. This distinguishes a record that has not yet been re-checked under the current vocabulary (`catalog-derived`) from one that was reviewed and found to have no evidence-supported technique (`paper-verified` with an empty `mechanism` list) — both are valid states, but they mean different things for future curation.
 
-### What Is Affected? — Target Vocabulary (objective-oriented)
+### What Is the Target of Attack or Evaluation? — Target Vocabulary (objective-oriented)
 
 `target` is the component, capability, or asset **explicitly targeted or evaluated** by the paper's stated attack objective, defense goal, or evaluation design — not every component a causal chain might plausibly pass through, and not a mechanistic claim about internal model behavior.
 

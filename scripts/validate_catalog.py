@@ -161,7 +161,12 @@ PRIVATE_MARKERS = {
     "responsible-vla-wiki",
 }
 CJK = re.compile(r"[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff]")
-JAPANESE_FILES = {"README.ja.md", "CONTRIBUTING.ja.md", "docs/reference/taxonomy.ja.md"}
+JAPANESE_FILES = {
+    "README.ja.md",
+    "CONTRIBUTING.ja.md",
+    "docs/reference/taxonomy.ja.md",
+    "docs/public/taxonomy.ja.md",
+}
 
 
 def valid_url(value: str | None) -> bool:
