@@ -162,7 +162,7 @@ def render(papers: list[dict]) -> str:
         "",
         "**English (this page)** | [Japanese](README.ja.md)",
         "",
-        "**🤖 An LLM-assisted bibliography of safety, security, robustness, ethical and societal risks, and trustworthy deployment across VLA, robots, autonomous systems, and embodied agents.**",
+        "**🤖 An LLM-assisted bibliography of physical AI and embodied AI safety, spanning security, robustness, ethical and societal risks, and trustworthy deployment for VLA models, robots, and autonomous systems.**",
         "",
         "[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)",
         "[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)",

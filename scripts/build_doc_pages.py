@@ -52,9 +52,9 @@ DOC_STYLE = '''
 TEMPLATE = '''<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title}</title><meta name="description" content="{description}"><meta name="robots" content="index, follow"><link rel="canonical" href="{url}"><link rel="alternate" hreflang="{hreflang}" href="{url}"><link rel="alternate" hreflang="{alt_hreflang}" href="{alt_url}"><link rel="alternate" hreflang="x-default" href="{default_url}"><meta property="og:type" content="website"><meta property="og:site_name" content="Awesome Physical AI Safety"><meta property="og:locale" content="{og_locale}"><meta property="og:url" content="{url}"><meta property="og:title" content="{title}"><meta property="og:description" content="{description}"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="{title}"><meta name="twitter:description" content="{description}"><script type="application/ld+json">{jsonld}</script><style>''' + DOC_STYLE.replace('{', '{{').replace('}', '}}') + '''</style></head><body><article id="content" class="markdown-body"></article><script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script><script src="https://cdn.jsdelivr.net/npm/marked-gfm-heading-id@3.2.0/lib/index.umd.min.js"></script><script>marked.use(markedGfmHeadingId.gfmHeadingId());const source={source};document.getElementById('content').innerHTML=marked.parse(source);document.querySelectorAll('a').forEach(a=>{{a.target='_blank';a.rel='noopener noreferrer'}});if(location.hash){{requestAnimationFrame(()=>document.getElementById(decodeURIComponent(location.hash.slice(1)))?.scrollIntoView());}}</script></body></html>'''
 
 EN_DESCRIPTION = (
-    "A daily-updated, LLM-assisted bibliography of physical AI safety research: safety, "
-    "security, robustness, and trustworthy deployment for vision-language-action (VLA) "
-    "models, robots, autonomous systems, and embodied agents."
+    "A daily-updated, LLM-assisted catalog of physical AI and embodied AI safety research "
+    "on VLA models, robots, and autonomous systems, covering security, robustness, and "
+    "trustworthy deployment."
 )
 JA_DESCRIPTION = (
     "フィジカルAI（physical AI）の安全性に関する論文カタログ。VLA（Vision-Language-Action）・"
