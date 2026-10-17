@@ -10,7 +10,46 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PAGES_URL = "https://futakw.github.io/Awesome-Physical-AI-Safety"
 
-TEMPLATE = '''<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title}</title><meta name="description" content="{description}"><meta name="robots" content="index, follow"><link rel="canonical" href="{url}"><link rel="alternate" hreflang="{hreflang}" href="{url}"><link rel="alternate" hreflang="{alt_hreflang}" href="{alt_url}"><link rel="alternate" hreflang="x-default" href="{default_url}"><meta property="og:type" content="website"><meta property="og:site_name" content="Awesome Physical AI Safety"><meta property="og:locale" content="{og_locale}"><meta property="og:url" content="{url}"><meta property="og:title" content="{title}"><meta property="og:description" content="{description}"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="{title}"><meta name="twitter:description" content="{description}"><script type="application/ld+json">{jsonld}</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5.8.1/github-markdown.min.css"><style>body{{max-width:1100px;margin:32px auto;padding:0 22px;background:#fff}}.markdown-body{{font-size:15px}}</style></head><body><article id="content" class="markdown-body"></article><script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script><script src="https://cdn.jsdelivr.net/npm/marked-gfm-heading-id@3.2.0/lib/index.umd.min.js"></script><script>marked.use(markedGfmHeadingId.gfmHeadingId());const source={source};document.getElementById('content').innerHTML=marked.parse(source);document.querySelectorAll('a').forEach(a=>{{a.target='_blank';a.rel='noopener noreferrer'}});if(location.hash){{requestAnimationFrame(()=>document.getElementById(decodeURIComponent(location.hash.slice(1)))?.scrollIntoView());}}</script></body></html>'''
+DOC_STYLE = '''
+  :root {
+    color-scheme: light; --bg:#EEF1F3; --surface:#FFFFFF; --surface-2:#F4F6F8;
+    --ink:#14171C; --muted:#5B6672; --ink-faint:#8A93A0; --line:#D8DEE3; --line-strong:#C2C9D1;
+    --accent:#CC5200; --accent-ink:#FFFFFF; --signal:#0E7490; --signal-soft:#D7EEF2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark; --bg:#0B0D10; --surface:#14171C; --surface-2:#1B1F26;
+      --ink:#ECEFF2; --muted:#9AA7B4; --ink-faint:#6B7682; --line:#262B33; --line-strong:#333A44;
+      --accent:#FF7A33; --accent-ink:#1B0D03; --signal:#4FD6E8; --signal-soft:#122C31;
+    }
+  }
+  * { box-sizing:border-box; }
+  body { max-width:900px; margin:0 auto; padding:40px 24px 72px; background:var(--bg); color:var(--ink); font:15px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+  .markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4 { font-weight:800; letter-spacing:-.015em; line-height:1.25; margin:1.6em 0 .6em; }
+  .markdown-body h1 { font-size:28px; padding-bottom:.4em; border-bottom:1px solid var(--line); }
+  .markdown-body h2 { font-size:21px; padding-bottom:.35em; border-bottom:1px solid var(--line); }
+  .markdown-body h3 { font-size:16.5px; }
+  .markdown-body h1:first-child { margin-top:0; }
+  .markdown-body p,.markdown-body li { font-size:15px; }
+  .markdown-body p { margin:.8em 0; }
+  .markdown-body a { color:var(--signal); text-decoration:none; }
+  .markdown-body a:hover { text-decoration:underline; }
+  .markdown-body strong { font-weight:700; }
+  .markdown-body ul,.markdown-body ol { padding-left:1.4em; }
+  .markdown-body li + li { margin-top:.25em; }
+  .markdown-body code { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.9em; background:var(--surface-2); border:1px solid var(--line); border-radius:4px; padding:.12em .4em; }
+  .markdown-body pre { background:var(--surface-2); border:1px solid var(--line); border-radius:8px; padding:14px 16px; overflow:auto; }
+  .markdown-body pre code { background:none; border:none; padding:0; }
+  .markdown-body blockquote { margin:1em 0; padding:.2em 1em; border-left:3px solid var(--line-strong); color:var(--muted); }
+  .markdown-body hr { border:none; border-top:1px solid var(--line); margin:2em 0; }
+  .markdown-body img { max-width:100%; border-radius:8px; }
+  .markdown-body table { width:100%; border-collapse:collapse; margin:1em 0; font-size:13.5px; display:block; overflow:auto; }
+  .markdown-body th,.markdown-body td { padding:8px 12px; border:1px solid var(--line); text-align:left; vertical-align:top; }
+  .markdown-body th { background:var(--surface-2); color:var(--muted); font-size:11.5px; text-transform:uppercase; letter-spacing:.02em; }
+  .markdown-body tr:nth-child(even) td { background:var(--surface-2); }
+'''
+
+TEMPLATE = '''<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title}</title><meta name="description" content="{description}"><meta name="robots" content="index, follow"><link rel="canonical" href="{url}"><link rel="alternate" hreflang="{hreflang}" href="{url}"><link rel="alternate" hreflang="{alt_hreflang}" href="{alt_url}"><link rel="alternate" hreflang="x-default" href="{default_url}"><meta property="og:type" content="website"><meta property="og:site_name" content="Awesome Physical AI Safety"><meta property="og:locale" content="{og_locale}"><meta property="og:url" content="{url}"><meta property="og:title" content="{title}"><meta property="og:description" content="{description}"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="{title}"><meta name="twitter:description" content="{description}"><script type="application/ld+json">{jsonld}</script><style>''' + DOC_STYLE.replace('{', '{{').replace('}', '}}') + '''</style></head><body><article id="content" class="markdown-body"></article><script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script><script src="https://cdn.jsdelivr.net/npm/marked-gfm-heading-id@3.2.0/lib/index.umd.min.js"></script><script>marked.use(markedGfmHeadingId.gfmHeadingId());const source={source};document.getElementById('content').innerHTML=marked.parse(source);document.querySelectorAll('a').forEach(a=>{{a.target='_blank';a.rel='noopener noreferrer'}});if(location.hash){{requestAnimationFrame(()=>document.getElementById(decodeURIComponent(location.hash.slice(1)))?.scrollIntoView());}}</script></body></html>'''
 
 EN_DESCRIPTION = (
     "A daily-updated, LLM-assisted bibliography of physical AI safety research: safety, "

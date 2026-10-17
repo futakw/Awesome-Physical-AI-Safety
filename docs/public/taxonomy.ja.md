@@ -1,10 +1,16 @@
 # Physical AI Safety Taxonomy
 
-[English](taxonomy.md) | **日本語（このページ）**
+本カタログ独自の6軸taxonomyは、[Futa Waseda](https://futa-waseda.netlify.app/)が設計し、関連研究を踏まえて継続的に洗練しています。
 
-本カタログの各論文は、6つの相補的なtaxonomy軸で記述されます。以下の例は、1本の論文を6つの軸すべてにマッピングする方法を示します。
+## Taxonomyの読み方
 
-本taxonomyは、Futa Wasedaが独自に定義・洗練したものです。
+<p align="center">
+  <a href="../visualizations/00_Taxonomy_example.png">
+    <img src="../visualizations/00_Taxonomy_example.png" alt="具体例：視覚的adversarial patch攻撃を6つのtaxonomy軸すべてにマッピング" width="100%">
+  </a>
+</p>
+
+本カタログの各論文は、6つの相補的なtaxonomy軸で記述されます。上の例は、1本の論文を6つの軸すべてにマッピングする方法を示します。
 
 | 軸 | 主な問い |
 |---|---|
@@ -14,14 +20,6 @@
 | **TARGET** | 攻撃・評価の対象は何か？ |
 | **CONSEQUENCE** | 結果として何が起こるか？ |
 | **MEASURED RISK** | どのリスクを実証的に評価したか？ |
-
-## Taxonomyの読み方
-
-<p align="center">
-  <a href="../visualizations/00_Taxonomy_example.png">
-    <img src="../visualizations/00_Taxonomy_example.png" alt="具体例：視覚的adversarial patch攻撃を6つのtaxonomy軸すべてにマッピング" width="100%">
-  </a>
-</p>
 
 ## 概要
 

@@ -174,7 +174,7 @@
     .story-label { color:var(--muted); font-size:10px; font-weight:750; line-height:22px; text-transform:uppercase; }
     .tag-group { display:inline-flex; flex-wrap:wrap; }
     .story-step .tag { margin-bottom:0; }
-    .doc-frame { width:100%; min-height:900px; border:1px solid var(--line); border-radius:10px; background:var(--surface); }
+    .doc-frame { display:block; width:100%; height:900px; border:0; background:transparent; }
     .gh-link { display:inline-flex; align-items:center; gap:6px; padding:6px 11px; border:1px solid var(--line-strong); border-radius:4px; background:transparent; color:var(--ink); text-decoration:none; font-size:12px; font-weight:600; white-space:nowrap; line-height:1.2; }
     .gh-link svg { width:14px; height:14px; flex:none; border:0; border-radius:0; background:transparent; }
     .gh-link:hover { background:var(--signal-soft); }
@@ -1177,12 +1177,46 @@ function renderModelEnvironment(){
   renderExtensionMap('#environment-chart','Environment × evaluated risk',items,envs,cols,p=>p.evaluation.environments||[],p=>p.risks,'Environment and evaluated risk cross-map');
 }
 
+const taxonomyFrame = document.getElementById('taxonomy-frame');
+let taxonomyBodyObserver;
+function syncTaxonomyTheme() {
+  const root = taxonomyFrame.contentDocument?.documentElement;
+  if (!root) return;
+  const parentStyle = getComputedStyle(document.documentElement);
+  for (const name of ['--bg','--surface','--surface-2','--ink','--muted','--line','--line-strong','--signal']) {
+    root.style.setProperty(name, parentStyle.getPropertyValue(name));
+  }
+  root.style.colorScheme = parentStyle.colorScheme;
+}
+function resizeTaxonomyFrame() {
+  if (!taxonomyFrame.getBoundingClientRect().width) return;
+  const body = taxonomyFrame.contentDocument?.body;
+  if (body) taxonomyFrame.style.height = `${Math.ceil(body.scrollHeight)}px`;
+}
+function watchTaxonomyFrame() {
+  taxonomyBodyObserver?.disconnect();
+  const doc = taxonomyFrame.contentDocument;
+  if (!doc?.body) return;
+  doc.documentElement.style.overflow = 'hidden';
+  doc.body.style.maxWidth = 'none';
+  doc.body.style.padding = '0';
+  doc.body.style.background = 'transparent';
+  syncTaxonomyTheme();
+  taxonomyBodyObserver = new ResizeObserver(resizeTaxonomyFrame);
+  taxonomyBodyObserver.observe(doc.body);
+  resizeTaxonomyFrame();
+}
+taxonomyFrame.addEventListener('load', watchTaxonomyFrame);
+if (taxonomyFrame.contentDocument?.readyState === 'complete') watchTaxonomyFrame();
+window.addEventListener('resize', resizeTaxonomyFrame);
+
 const availableViews = new Set([...document.querySelectorAll('button[data-view]')].map(button => button.dataset.view));
 function activateView(view) {
   if (!availableViews.has(view)) return;
   d3.selectAll('button[data-view]').attr('aria-pressed', function(){ return String(this.dataset.view === view); });
   d3.selectAll('section').classed('active', function(){ return this.id === view; });
   document.getElementById('catalog-filters').hidden=['readme','taxonomy'].includes(view);
+  if (view === 'taxonomy') requestAnimationFrame(resizeTaxonomyFrame);
 }
 d3.selectAll('button[data-view]').on('click', function(){
   const view = this.dataset.view;
@@ -1254,6 +1288,7 @@ function setTheme(theme){
   else { document.documentElement.setAttribute('data-theme', theme); }
   document.getElementById('theme-light').setAttribute('aria-pressed', String(theme === 'light'));
   document.getElementById('theme-dark').setAttribute('aria-pressed', String(theme === 'dark'));
+  syncTaxonomyTheme();
   localStorage.setItem('theme', theme);
   renderAll();
 }
