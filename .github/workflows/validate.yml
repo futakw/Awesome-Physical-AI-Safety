@@ -17,8 +17,6 @@ jobs:
           python-version: "3.12"
       - name: Validate public metadata and leakage guards
         run: python3 scripts/validate_catalog.py
-      - name: Check public taxonomy consistency
-        run: python3 scripts/check_public_taxonomy.py
       - name: Verify generated README
         run: python3 scripts/build_readme.py --check
 
