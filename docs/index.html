@@ -202,7 +202,7 @@
     :root[data-theme="dark"] { --grid-0:#1B1F26; --grid-1:#3A2A1C; --grid-2:#6B4522; --grid-3:#B2601F; --grid-4:var(--accent); }
     .lp-eyebrow { display:inline-flex; align-items:center; gap:8px; font:700 11.5px/1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; letter-spacing:.12em; color:var(--signal); text-transform:uppercase; margin-bottom:18px; }
     .lp-eyebrow::before { content:''; width:7px; height:7px; background:var(--signal); border-radius:1px; box-shadow:0 0 0 3px var(--signal-soft); }
-    .lp-hero { position:relative; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:56px; align-items:start; padding:30px 0 44px; border-bottom:1px solid var(--line); margin-bottom:44px; }
+    .lp-hero { position:relative; display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start; padding:30px 0 44px; border-bottom:1px solid var(--line); margin-bottom:44px; }
     .lp-hero::before {
       content:''; position:absolute; top:0; bottom:0; left:calc(50% - 50vw); width:100vw; pointer-events:none; opacity:.5; z-index:0;
       background-image:
@@ -212,7 +212,7 @@
       -webkit-mask-image:radial-gradient(ellipse 70% 60% at 18% 20%, black, transparent 72%);
       mask-image:radial-gradient(ellipse 70% 60% at 18% 20%, black, transparent 72%);
     }
-    .lp-hero > * { position:relative; z-index:1; min-width:0; }
+    .lp-hero > * { position:relative; z-index:1; }
     .lp-tick { position:absolute; z-index:1; width:14px; height:14px; opacity:.55; }
     .lp-tick::before,.lp-tick::after { content:''; position:absolute; background:var(--ink-faint); }
     .lp-tick::before { top:50%; left:0; right:0; height:1px; transform:translateY(-.5px); }
@@ -234,11 +234,10 @@
     .lp-panel { background:var(--surface); border:1px solid var(--line); border-radius:6px; box-shadow:var(--shadow-md); }
     .lp-panel-tabs { padding:0 16px; border-bottom:1px solid var(--line); }
     .lp-panel-tabs span.lp-active { display:inline-block; padding:14px 4px 11px; font-size:13px; font-weight:700; color:var(--ink); border-bottom:2px solid var(--accent); }
-    .lp-panel-body { padding:20px 20px 22px; min-width:0; }
+    .lp-panel-body { padding:20px 20px 22px; }
     .lp-panel-head h3 { margin:0; font-size:14.5px; font-weight:700; letter-spacing:-.01em; }
     .lp-panel-sub { font-size:12px; color:var(--ink-faint); margin:0 0 14px; }
-    .lp-heat { display:grid; gap:3px; margin-bottom:4px; min-width:0; }
-    .lp-colhead,.lp-rowhead { min-width:0; overflow-wrap:anywhere; }
+    .lp-heat { display:grid; gap:3px; margin-bottom:4px; }
     .lp-colhead { font:600 9.5px/1.2 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; color:var(--ink-faint); text-align:center; align-self:end; padding-bottom:5px; letter-spacing:.01em; }
     .lp-rowhead { font:600 9.5px/1.2 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; color:var(--ink-faint); letter-spacing:.01em; display:flex; align-items:center; padding-right:8px; justify-content:flex-end; text-align:right; }
     .lp-cell { aspect-ratio:1/.72; border-radius:2px; display:flex; align-items:center; justify-content:center; font:700 10.5px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; color:var(--ink); cursor:pointer; }
@@ -514,6 +513,7 @@ const labels = {surveys:'Surveys','ood-generalization':'OOD Generalization','tra
 const sections = Object.keys(labels), tooltip = d3.select('#tooltip');
 
 let currentLang = 'en';
+let lpEnglishPanelWidth = null;
 const dlabelFlat = Object.assign({}, labelsJa.surface, labelsJa.mechanism, labelsJa.target, labelsJa.consequence, labelsJa.defense_mechanism, labelsJa.lifecycle);
 const CAP_OVERRIDES = {vla:'VLA', ood:'OOD', llm:'LLM', vlm:'VLM'};
 function capitalizeLabel(raw){ return raw.split('-').map(part => CAP_OVERRIDES[part] || (part.charAt(0).toUpperCase()+part.slice(1))).join(' '); }
@@ -957,6 +957,15 @@ function recentPapers(n=3){
 function renderLpOverview(){
   const mechanisms=MECHANISM_GROUPS, surfaces=SURFACE_GROUPS;
   const concrete=viewBasePapers('heatmap');
+  const lpPanel=document.querySelector('.lp-panel');
+  if(lpPanel){
+    if(currentLang==='en'){
+      lpPanel.style.width='';
+      lpEnglishPanelWidth=lpPanel.getBoundingClientRect().width;
+    }else if(lpEnglishPanelWidth){
+      lpPanel.style.width=`${lpEnglishPanelWidth}px`;
+    }
+  }
   document.getElementById('lp-stat-papers').textContent=papers.length;
   document.getElementById('lp-panel-sub').textContent=I18N[currentLang].lpPanelSub.replace('{n}',concrete.length);
   const t=I18N[currentLang];
