@@ -390,6 +390,24 @@ const I18N = {
 };
 d3.select('#paper-count-badge').text(papers.length);
 const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+const HEATMAP_TEXT_DARK = '#000000';
+const HEATMAP_TEXT_LIGHT = '#ffffff';
+function relativeLuminance(color) {
+  const rgb = d3.color(color).rgb();
+  const channels = [rgb.r,rgb.g,rgb.b].map(value=>{
+    const channel=value/255;
+    return channel<=.04045 ? channel/12.92 : Math.pow((channel+.055)/1.055,2.4);
+  });
+  return .2126*channels[0]+.7152*channels[1]+.0722*channels[2];
+}
+function contrastRatio(foreground,background) {
+  const foregroundLuminance=relativeLuminance(foreground);
+  const backgroundLuminance=relativeLuminance(background);
+  return (Math.max(foregroundLuminance,backgroundLuminance)+.05)/(Math.min(foregroundLuminance,backgroundLuminance)+.05);
+}
+function heatmapTextColor(background) {
+  return contrastRatio(HEATMAP_TEXT_LIGHT,background)>=contrastRatio(HEATMAP_TEXT_DARK,background) ? HEATMAP_TEXT_LIGHT : HEATMAP_TEXT_DARK;
+}
 const paperListHtml = list => `<ul class="paper-list">${list.map(p=>`<li>${p.paper_url?`<a href="${escapeHtml(p.paper_url)}" target="_blank" rel="noopener noreferrer">[${escapeHtml(p.venue)} ${p.year}] ${escapeHtml(p.title)}</a>`:`[${escapeHtml(p.venue)} ${p.year}] ${escapeHtml(p.title)}`}</li>`).join('')}</ul>`;
 const COVERAGE_FIELDS = {lifecycle:'lifecycles',mechanism:'mechanisms',surface:'surfaces',consequence:'consequences'};
 const threatValues = (p,field) => {
@@ -571,7 +589,7 @@ function renderHeatmap(){
   svg.selectAll('text.surface').data(surfaces).join('text').attr('class','axis').attr('text-anchor','start').attr('transform',sg=>`translate(${x(sg.name)+8},${margin.top-16}) rotate(-30)`).call(rotatedAxisLabel, sg=>familyLabel(sg));
   svg.selectAll('text.mechanism').data(mechanisms).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',mg=>y(mg.name)+y.bandwidth()/2+4).call(wrapEndAnchored, mg=>familyLabel(mg));
   svg.selectAll('rect.cell').data(cellData).join('rect').attr('class','cell').attr('x',d=>x(d.sg.name)).attr('y',d=>y(d.mg.name)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${familyLabel(d.mg)} × ${familyLabel(d.sg)}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();filterPaperTable('heatmap',d.list,`${familyLabel(d.mg)} × ${familyLabel(d.sg)}`);});
-  svg.selectAll('text.value').data(cellData.filter(d=>d.n)).join('text').attr('class','value').attr('x',d=>x(d.sg.name)+x.bandwidth()/2).attr('y',d=>y(d.mg.name)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',650).attr('fill',d=>d.n/max>.48?'#fff':'#202938').style('pointer-events','none').text(d=>d.n);
+  svg.selectAll('text.value').data(cellData.filter(d=>d.n)).join('text').attr('class','value').attr('x',d=>x(d.sg.name)+x.bandwidth()/2).attr('y',d=>y(d.mg.name)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',650).attr('fill',d=>heatmapTextColor(fill(d.n))).style('pointer-events','none').text(d=>d.n);
 }
 
 function renderDefense(){
@@ -592,7 +610,7 @@ function renderDefense(){
   svg.selectAll('text.mechanism').data(mechanisms).join('text').attr('class','axis').attr('text-anchor','start').attr('transform',m=>`translate(${x(m)+8},${margin.top-18}) rotate(-38)`).text(m=>m.replaceAll('-',' '));
   svg.selectAll('text.subsection').data(subsections).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',s=>y(s)+y.bandwidth()/2+4).text(s=>s);
   svg.selectAll('rect.cell').data(cellData).join('rect').attr('class','cell').attr('x',d=>x(d.mechanism)).attr('y',d=>y(d.sub)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(d.sub)} × ${escapeHtml(d.mechanism.replaceAll('-',' '))}</strong><div>${d.n} papers</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();pinTooltip(event,`<strong>${escapeHtml(d.sub)} × ${escapeHtml(d.mechanism.replaceAll('-',' '))}</strong><div>${d.n} papers</div>${paperListHtml(d.list)}`);});
-  svg.selectAll('text.value').data(cellData.filter(d=>d.n)).join('text').attr('class','value').attr('x',d=>x(d.mechanism)+x.bandwidth()/2).attr('y',d=>y(d.sub)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',650).attr('fill',d=>d.n/max>.48?'#fff':'#202938').style('pointer-events','none').text(d=>d.n);
+  svg.selectAll('text.value').data(cellData.filter(d=>d.n)).join('text').attr('class','value').attr('x',d=>x(d.mechanism)+x.bandwidth()/2).attr('y',d=>y(d.sub)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',650).attr('fill',d=>heatmapTextColor(fill(d.n))).style('pointer-events','none').text(d=>d.n);
 }
 
 function renderBenchmark(){
@@ -613,7 +631,7 @@ function renderBenchmark(){
   svg.selectAll('text.mechanism').data(mechanisms).join('text').attr('class','axis').attr('text-anchor','start').attr('transform',m=>`translate(${x(m)+8},${margin.top-18}) rotate(-38)`).text(m=>m.replaceAll('-',' '));
   svg.selectAll('text.subsection').data(subsections).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',s=>y(s)+y.bandwidth()/2+4).text(s=>s);
   svg.selectAll('rect.cell').data(cellData).join('rect').attr('class','cell').attr('x',d=>x(d.mechanism)).attr('y',d=>y(d.sub)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(d.sub)} × ${escapeHtml(d.mechanism.replaceAll('-',' '))}</strong><div>${d.n} papers</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();pinTooltip(event,`<strong>${escapeHtml(d.sub)} × ${escapeHtml(d.mechanism.replaceAll('-',' '))}</strong><div>${d.n} papers</div>${paperListHtml(d.list)}`);});
-  svg.selectAll('text.value').data(cellData.filter(d=>d.n)).join('text').attr('class','value').attr('x',d=>x(d.mechanism)+x.bandwidth()/2).attr('y',d=>y(d.sub)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',650).attr('fill',d=>d.n/max>.48?'#fff':'#202938').style('pointer-events','none').text(d=>d.n);
+  svg.selectAll('text.value').data(cellData.filter(d=>d.n)).join('text').attr('class','value').attr('x',d=>x(d.mechanism)+x.bandwidth()/2).attr('y',d=>y(d.sub)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',650).attr('fill',d=>heatmapTextColor(fill(d.n))).style('pointer-events','none').text(d=>d.n);
 }
 
 function renderExtensionMap(container,title,items,rows,cols,rowValues,colValues,aria,tableView='',rowGroups=null){
@@ -627,7 +645,7 @@ function renderExtensionMap(container,title,items,rows,cols,rowValues,colValues,
   svg.selectAll('text.col').data(cols).join('text').attr('class','axis').attr('text-anchor','middle').attr('x',d=>x(d)+x.bandwidth()/2).attr('y',72).text(d=>dlabel(d));
   svg.selectAll('text.row').data(rows).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',d=>y(d)+y.bandwidth()/2+4).text(d=>dlabel(d));
   svg.selectAll('rect.cell').data(cells).join('rect').attr('class','cell').attr('x',d=>x(d.col)).attr('y',d=>y(d.row)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(dlabel(d.row))} × ${escapeHtml(dlabel(d.col))}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();if(tableView)filterPaperTable(tableView,d.list,`${dlabel(d.row)} × ${dlabel(d.col)}`);else pinTooltip(event,`<strong>${escapeHtml(dlabel(d.row))} × ${escapeHtml(dlabel(d.col))}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`);});
-  svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.col)+x.bandwidth()/2).attr('y',d=>y(d.row)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',11).attr('font-weight',650).attr('fill',d=>d.n/max>.48?'#fff':'#202938').style('pointer-events','none').text(d=>d.n);
+  svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.col)+x.bandwidth()/2).attr('y',d=>y(d.row)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',11).attr('font-weight',650).attr('fill',d=>heatmapTextColor(fill(d.n))).style('pointer-events','none').text(d=>d.n);
   if(rowGroups){
     const rowStep=y.step();
     svg.selectAll('line.row-divider').data(groupBoundaries(rows,rowGroups)).join('line').attr('class','group-divider').attr('y1',i=>margin.top+i*rowStep-rowStep*.03).attr('y2',i=>margin.top+i*rowStep-rowStep*.03).attr('x1',margin.left).attr('x2',width-margin.right+6).attr('stroke','#c7d2e0').attr('stroke-width',1.5).attr('stroke-dasharray','3,3');
@@ -656,7 +674,7 @@ function renderDefenseThreat(){
   }
   svg.selectAll('text.row').data(rows).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',row=>y(row)+y.bandwidth()/2+4).call(wrapEndAnchored,row=>dlabel(row));
   svg.selectAll('rect.cell').data(cells).join('rect').attr('class','cell').attr('x',d=>x(d.family.name)).attr('y',d=>y(d.row)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(dlabel(d.row))} × ${escapeHtml(familyLabel(d.family))}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();filterPaperTable('defense',d.list,`${dlabel(d.row)} × ${familyLabel(d.family)}`);});
-  svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.family.name)+x.bandwidth()/2).attr('y',d=>y(d.row)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',11).attr('font-weight',650).attr('fill',d=>d.n/max>.48?'#fff':'#202938').style('pointer-events','none').text(d=>d.n);
+  svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.family.name)+x.bandwidth()/2).attr('y',d=>y(d.row)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',11).attr('font-weight',650).attr('fill',d=>heatmapTextColor(fill(d.n))).style('pointer-events','none').text(d=>d.n);
 }
 
 function renderTargetResult(){
@@ -675,7 +693,7 @@ function renderTargetResult(){
   svg.selectAll('text.col').data(cols).join('text').attr('class','axis').attr('text-anchor','start').attr('transform',col=>`translate(${x(col)+x.bandwidth()/2},${margin.top-16}) rotate(-38)`).call(rotatedAxisLabel,col=>dlabel(col));
   svg.selectAll('text.row').data(rows).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',row=>y(row)+y.bandwidth()/2+4).call(wrapEndAnchored,row=>dlabel(row));
   svg.selectAll('rect.cell').data(cells).join('rect').attr('class','cell').attr('x',d=>x(d.col)).attr('y',d=>y(d.row)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(dlabel(d.row))} × ${escapeHtml(dlabel(d.col))}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();filterPaperTable('target',d.list,`${dlabel(d.row)} × ${dlabel(d.col)}`);});
-  svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.col)+x.bandwidth()/2).attr('y',d=>y(d.row)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',11).attr('font-weight',650).attr('fill',d=>d.n/max>.48?'#fff':'#202938').style('pointer-events','none').text(d=>d.n);
+  svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.col)+x.bandwidth()/2).attr('y',d=>y(d.row)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',11).attr('font-weight',650).attr('fill',d=>heatmapTextColor(fill(d.n))).style('pointer-events','none').text(d=>d.n);
 }
 function renderOutcomeRisk(){
   const items=viewPapers('outcome-risk'), rows=CONSEQUENCES, cols=['task-reliability','physical-safety','ethical-societal','security-privacy'];
@@ -693,7 +711,7 @@ function renderOutcomeRisk(){
   svg.selectAll('text.col').data(cols).join('text').attr('class','axis').attr('text-anchor','middle').attr('x',d=>x(d)+x.bandwidth()/2).attr('y',86).text(d=>dlabel(d));
   svg.selectAll('text.row').data(rows).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',row=>y(row)+y.bandwidth()/2+4).call(wrapEndAnchored,row=>dlabel(row));
   svg.selectAll('rect.cell').data(cells).join('rect').attr('class','cell').attr('x',d=>x(d.col)).attr('y',d=>y(d.row)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(dlabel(d.row))} × ${escapeHtml(dlabel(d.col))}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();filterPaperTable('outcome-risk',d.list,`${dlabel(d.row)} × ${dlabel(d.col)}`);});
-  svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.col)+x.bandwidth()/2).attr('y',d=>y(d.row)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',11).attr('font-weight',650).attr('fill',d=>d.n/max>.48?'#fff':'#202938').style('pointer-events','none').text(d=>d.n);
+  svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.col)+x.bandwidth()/2).attr('y',d=>y(d.row)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',11).attr('font-weight',650).attr('fill',d=>heatmapTextColor(fill(d.n))).style('pointer-events','none').text(d=>d.n);
 }
 function renderThreatRisk(){
   const items=viewPapers('risk');
@@ -708,7 +726,7 @@ function renderThreatRisk(){
   svg.selectAll('text.col').data(cols).join('text').attr('class','axis').attr('text-anchor','middle').attr('x',d=>x(d)+x.bandwidth()/2).attr('y',86).text(d=>dlabel(d));
   svg.selectAll('text.row').data(rows).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',mg=>y(mg.name)+y.bandwidth()/2+4).call(wrapEndAnchored, mg=>familyLabel(mg));
   svg.selectAll('rect.cell').data(cells).join('rect').attr('class','cell').attr('x',d=>x(d.col)).attr('y',d=>y(d.mg.name)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(familyLabel(d.mg))} × ${escapeHtml(dlabel(d.col))}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();filterPaperTable('risk',d.list,`${familyLabel(d.mg)} × ${dlabel(d.col)}`);});
-  svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.col)+x.bandwidth()/2).attr('y',d=>y(d.mg.name)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',11).attr('font-weight',650).attr('fill',d=>d.n/max>.48?'#fff':'#202938').style('pointer-events','none').text(d=>d.n);
+  svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.col)+x.bandwidth()/2).attr('y',d=>y(d.mg.name)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',11).attr('font-weight',650).attr('fill',d=>heatmapTextColor(fill(d.n))).style('pointer-events','none').text(d=>d.n);
 }
 function renderBenchmarkV2(){
   const items=filteredPapers().filter(p=>p.section==='benchmarks');

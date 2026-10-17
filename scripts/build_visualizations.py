@@ -185,6 +185,28 @@ def blend(low: str, high: str, fraction: float) -> str:
     return "#" + "".join(f"{round(a + (b - a) * fraction):02X}" for a, b in zip(lo, hi))
 
 
+HEATMAP_TEXT_DARK = "#000000"
+HEATMAP_TEXT_LIGHT = "#FFFFFF"
+
+
+def relative_luminance(color: str) -> float:
+    channels = [int(color[index:index + 2], 16) / 255 for index in (1, 3, 5)]
+    linear = [channel / 12.92 if channel <= 0.04045 else ((channel + 0.055) / 1.055) ** 2.4 for channel in channels]
+    return 0.2126 * linear[0] + 0.7152 * linear[1] + 0.0722 * linear[2]
+
+
+def contrast_ratio(foreground: str, background: str) -> float:
+    foreground_luminance = relative_luminance(foreground)
+    background_luminance = relative_luminance(background)
+    return (max(foreground_luminance, background_luminance) + 0.05) / (min(foreground_luminance, background_luminance) + 0.05)
+
+
+def heatmap_text_color(background: str) -> str:
+    light_contrast = contrast_ratio(HEATMAP_TEXT_LIGHT, background)
+    dark_contrast = contrast_ratio(HEATMAP_TEXT_DARK, background)
+    return HEATMAP_TEXT_LIGHT if light_contrast >= dark_contrast else HEATMAP_TEXT_DARK
+
+
 def render_heatmap(papers: list[dict]) -> str:
     width, height = 1200, 610
     body = header("Where threats enter and how they act", "Mechanism family × surface family co-occurrence for concrete threat models; survey coverage is excluded.")
@@ -214,7 +236,7 @@ def render_heatmap(papers: list[dict]) -> str:
         value = len(matching)
         fraction = value / max_value if max_value else 0
         color = blend("#EEF3F8", "#4F67A5", fraction ** 0.72)
-        text_color = "#FFFFFF" if fraction > 0.48 else TEXT
+        text_color = heatmap_text_color(color)
         papers_title = "\n".join(f"[{paper['venue']} {paper['year']}] {paper['title']}" for paper in matching)
         body += [
             f'<rect x="{x + 2}" y="{y + 2}" width="{cell_w - 4}" height="{cell_h - 4}" rx="6" fill="{color}"><title>{esc(papers_title)}</title></rect>',
@@ -249,7 +271,7 @@ def render_defense_heatmap(papers: list[dict]) -> str:
             fraction = value / max_value if max_value else 0
             color = blend("#EEF3F8", "#6F9FEF", fraction ** 0.72)
             x = left + col * cell_w
-            text_color = "#FFFFFF" if fraction > 0.48 else TEXT
+            text_color = heatmap_text_color(color)
             papers_title = "\n".join(f"[{paper['venue']} {paper['year']}] {paper['title']}" for paper in matching)
             body += [
                 f'<rect x="{x + 2}" y="{y + 2}" width="{cell_w - 4}" height="{cell_h - 4}" rx="6" fill="{color}"><title>{esc(papers_title)}</title></rect>',
@@ -279,7 +301,7 @@ def render_benchmark_heatmap(papers: list[dict]) -> str:
         body.append(f'<text class="label" x="{left - 18}" y="{y + cell_h / 2 + 4:.1f}" text-anchor="end">{esc(subsection)}</text>')
         for col, mechanism in enumerate(mechanisms):
             matching = [paper for paper in benchmarks if paper["subsection"] == subsection and mechanism in threat_values(paper, "mechanism")]
-            value = len(matching); fraction = value / max_value if max_value else 0; color = blend("#EEF3F8", "#6F9FEF", fraction ** 0.72); x = left + col * cell_w; text_color = "#FFFFFF" if fraction > 0.48 else TEXT
+            value = len(matching); fraction = value / max_value if max_value else 0; color = blend("#EEF3F8", "#6F9FEF", fraction ** 0.72); x = left + col * cell_w; text_color = heatmap_text_color(color)
             papers_title = "\n".join(f"[{paper['venue']} {paper['year']}] {paper['title']}" for paper in matching)
             body += [f'<rect x="{x + 2}" y="{y + 2}" width="{cell_w - 4}" height="{cell_h - 4}" rx="6" fill="{color}"><title>{esc(papers_title)}</title></rect>', f'<text x="{x + cell_w / 2:.1f}" y="{y + cell_h / 2 + 4:.1f}" text-anchor="middle" font-size="12" font-weight="600" fill="{text_color}">{value if value else ""}</text>']
     body += [f'<text class="axis" x="{left + 5 * cell_w}" y="{top + len(subsections) * cell_h + 36}" text-anchor="middle">threat_model.mechanism</text>', f'<text class="axis" transform="translate(45 {top + len(subsections) * cell_h / 2}) rotate(-90)" text-anchor="middle">Benchmark subsection</text>']
@@ -304,7 +326,7 @@ def render_extension_heatmap(papers, extension, title, subtitle, row_field, col_
         body.append(f'<text class="label" x="{left - 18}" y="{y + cell_h / 2 + 4:.1f}" text-anchor="end">{esc(label(row))}</text>')
         for cindex, col in enumerate(cols):
             matching = cells[(row, col)]; value = len(matching); fraction = value / max_value if max_value else 0
-            x = left + cindex * cell_w; color = blend("#EEF3F8", "#6F9FEF", fraction ** 0.72); text_color = "#FFFFFF" if fraction > 0.48 else TEXT
+            x = left + cindex * cell_w; color = blend("#EEF3F8", "#6F9FEF", fraction ** 0.72); text_color = heatmap_text_color(color)
             papers_title = "\n".join(f"[{paper['venue']} {paper['year']}] {paper['title']}" for paper in matching)
             body += [f'<rect x="{x + 2}" y="{y + 2}" width="{cell_w - 4}" height="{cell_h - 4}" rx="6" fill="{color}"><title>{esc(papers_title)}</title></rect>', f'<text x="{x + cell_w / 2:.1f}" y="{y + cell_h / 2 + 4:.1f}" text-anchor="middle" font-size="12" font-weight="600" fill="{text_color}">{value if value else ""}</text>']
     body += [f'<text class="axis" x="{left + len(cols) * cell_w / 2}" y="{top + len(rows) * cell_h + 40}" text-anchor="middle">{esc(col_label)}</text>', f'<text class="axis" transform="translate(45 {top + len(rows) * cell_h / 2}) rotate(-90)" text-anchor="middle">{esc(row_label)}</text>']
@@ -353,7 +375,7 @@ def render_threat_risk_heatmap(papers: list[dict]) -> str:
             fraction = value / max_value if max_value else 0
             x = left + cindex * cell_w
             color = blend("#EEF3F8", "#9873D4", fraction ** 0.72)
-            text_color = "#FFFFFF" if fraction > 0.48 else TEXT
+            text_color = heatmap_text_color(color)
             papers_title = "\n".join(f"[{paper['venue']} {paper['year']}] {paper['title']}" for paper in matching)
             body += [
                 f'<rect x="{x + 2}" y="{y + 2}" width="{cell_w - 4}" height="{cell_h - 4}" rx="6" fill="{color}"><title>{esc(papers_title)}</title></rect>',
@@ -381,7 +403,7 @@ def render_benchmark_threat_consequence(papers: list[dict]) -> str:
     for rindex, row in enumerate(rows):
         y = top + rindex * cell_h; body.append(f'<text class="label" x="{left - 18}" y="{y + cell_h / 2 + 4:.1f}" text-anchor="end">{esc(label(row))}</text>')
         for cindex, col in enumerate(cols):
-            matching = cells[(row, col)]; value = len(matching); fraction = value / max_value if max_value else 0; x = left + cindex * cell_w; color = blend("#EEF3F8", "#6F9FEF", fraction ** 0.72); text_color = "#FFFFFF" if fraction > 0.48 else TEXT
+            matching = cells[(row, col)]; value = len(matching); fraction = value / max_value if max_value else 0; x = left + cindex * cell_w; color = blend("#EEF3F8", "#6F9FEF", fraction ** 0.72); text_color = heatmap_text_color(color)
             papers_title = "\n".join(f"[{paper['venue']} {paper['year']}] {paper['title']}" for paper in matching)
             body += [f'<rect x="{x + 2}" y="{y + 2}" width="{cell_w - 4}" height="{cell_h - 4}" rx="6" fill="{color}"><title>{esc(papers_title)}</title></rect>', f'<text x="{x + cell_w / 2:.1f}" y="{y + cell_h / 2 + 4:.1f}" text-anchor="middle" font-size="12" font-weight="600" fill="{text_color}">{value if value else ""}</text>']
     return svg_document("Threat mechanism × consequence", "Benchmark threat and consequence cross-map.", width, height, body)
