@@ -4,6 +4,14 @@ These views are generated from the structured metadata in [`data/papers.json`](.
 
 For hoverable paper lists, open the [interactive explorer](../index.html#heatmap). Each README preview links directly to its corresponding view.
 
+## Search and Leaf Filters
+
+The interactive data views share one filter state. Keyword search covers paper titles, first-author display names, venues, years, sections, subsections, scopes, tags, and the English, Japanese, and canonical forms of taxonomy leaf labels. Search terms separated by spaces are combined with AND.
+
+Leaf filters cover all six taxonomy axes: WHEN (`lifecycle`), WHERE (`surface`), HOW (`mechanism`), TARGET (`target`), CONSEQUENCE (`consequence`), and MEASURED RISK (`risks`). Multiple selected leaves within one axis use OR; selections across different axes use AND. Keyword and leaf conditions are also combined with AND. For `survey` and `evaluation` records, supported coverage fields participate in filtering; unsupported axes, such as TARGET coverage, remain empty rather than being inferred.
+
+Filters update both chart counts and the paper table. Clicking a chart cell applies an additional temporary table-only selection; resetting that selection returns to the globally filtered view.
+
 ## Counting and Coverage in the Interactive Views
 
 Each cell counts distinct papers once, even when multiple leaf labels match the same family. Multi-label papers may contribute to multiple cells, so cell, row, and column sums are not unique-paper totals or percentages. These are paper-level co-occurrences, not causal relationships or necessarily pairs established in the same experiment.

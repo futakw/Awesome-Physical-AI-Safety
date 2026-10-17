@@ -62,6 +62,36 @@
     section { display:none; }
     section.active { display:block; }
     .note { color:var(--muted); font-size:13px; margin:0 0 12px; }
+    .catalog-filters { margin:0 0 18px; padding:13px 14px; border:1px solid var(--line); border-radius:10px; background:#fff; box-shadow:0 2px 8px #2029380a; }
+    .catalog-filters[hidden] { display:none; }
+    .filter-main { display:flex; align-items:flex-start; gap:9px; flex-wrap:wrap; }
+    .search-wrap { flex:1 1 320px; }
+    .search-wrap input { width:100%; min-height:38px; border:1px solid var(--line); border-radius:7px; padding:7px 11px; color:var(--ink); background:#fff; font:inherit; }
+    .search-wrap input:focus,.leaf-filter summary:focus-visible,.filter-chip:focus-visible { outline:2px solid #6f9fef; outline-offset:2px; }
+    .leaf-filter { position:relative; flex:0 1 auto; }
+    .leaf-filter > summary { min-height:38px; padding:7px 11px; border:1px solid var(--line); border-radius:7px; background:var(--panel); cursor:pointer; list-style-position:inside; font-size:13px; white-space:nowrap; }
+    .leaf-filter[open] > summary { background:#eef3fa; border-color:#aebed6; }
+    .leaf-options { position:absolute; z-index:7; top:calc(100% + 6px); right:0; width:min(900px,calc(100vw - 48px)); max-height:62vh; overflow:auto; display:grid; grid-template-columns:repeat(3,minmax(210px,1fr)); gap:12px; padding:14px; border:1px solid var(--line); border-radius:9px; background:#fff; box-shadow:0 12px 30px #20293826; }
+    .leaf-options-head { grid-column:1/-1; display:flex; align-items:center; justify-content:space-between; gap:12px; color:var(--ink); font-size:13px; font-weight:700; }
+    .leaf-options-close { padding:4px 9px; background:var(--panel); font-size:12px; }
+    .leaf-options fieldset { min-width:0; margin:0; padding:9px 10px 7px; border:1px solid var(--line); border-radius:8px; }
+    .leaf-options legend { padding:0 5px; color:#3c4a5d; font-size:11px; font-weight:750; letter-spacing:.03em; }
+    .leaf-option { display:flex; align-items:flex-start; gap:7px; padding:4px 2px; font-size:12px; cursor:pointer; }
+    .leaf-option input { margin:3px 0 0; flex:none; }
+    .leaf-option span { min-width:0; overflow-wrap:anywhere; }
+    .leaf-option small { color:var(--muted); }
+    .filter-clear { min-height:38px; }
+    .filter-clear:disabled { opacity:.48; cursor:default; }
+    .filter-meta { display:flex; align-items:baseline; gap:8px 14px; flex-wrap:wrap; margin-top:8px; }
+    .filter-status { margin:0; color:var(--ink); font-size:13px; font-weight:650; }
+    .filter-help { margin:0; color:var(--muted); font-size:12px; }
+    .filter-chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
+    .filter-chips:empty { display:none; }
+    .filter-chip { border:1px solid #b9c8dc; border-radius:999px; padding:3px 8px; background:#eef3fa; color:#36506f; font-size:11px; }
+    .filter-chip:hover { background:#dfeafb; }
+    .filter-count { display:inline-block; min-width:18px; margin-left:4px; border-radius:999px; padding:0 5px; background:#365f99; color:#fff; text-align:center; font-size:10px; }
+    .filter-count[hidden] { display:none; }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
     svg { width:100%; height:auto; display:block; border:1px solid var(--line); border-radius:10px; background:var(--panel); }
     .axis text,.legend text { fill:var(--muted); font-size:11px; }
     .axis path,.axis line { stroke:var(--line); }
@@ -117,7 +147,8 @@
     .lang-toggle button { border:none; border-radius:0; padding:5px 11px; font-size:12px; background:#fff; }
     .lang-toggle button + button { border-left:1px solid var(--line); }
     .lang-toggle button[aria-pressed="true"] { background:var(--ink); color:#fff; font-weight:650; }
-    @media (max-width:620px) { main { padding:14px 12px 40px; } .topbar-inner { padding:8px 12px 0; } .meta-badges { margin-left:0; } .tooltip { max-width:280px; } }
+    @media (max-width:760px) { .leaf-filter { flex:1 1 210px; } .leaf-filter > summary { text-align:center; } .leaf-options { position:fixed; top:12px; right:12px; left:12px; width:auto; max-height:calc(100vh - 24px); grid-template-columns:1fr; } }
+    @media (max-width:620px) { main { padding:14px 12px 40px; } .topbar-inner { padding:8px 12px 0; } .meta-badges { margin-left:0; } .tooltip { max-width:280px; } .catalog-filters { padding:11px; } }
   </style>
 </head>
 <body>
@@ -164,6 +195,21 @@
   </div>
 </header>
 <main>
+  <aside id="catalog-filters" class="catalog-filters" aria-label="Catalog filters" hidden>
+    <div class="filter-main">
+      <label class="search-wrap" for="catalog-search"><span class="sr-only" data-i18n="searchLabel">Search papers</span><input type="search" id="catalog-search" autocomplete="off" data-i18n-placeholder="searchPlaceholder" placeholder="Search title, author, venue, tags, or taxonomy labels"></label>
+      <details class="leaf-filter" id="leaf-filter">
+        <summary><span data-i18n="leafFilter">Taxonomy leaf filters</span><span id="leaf-filter-count" class="filter-count" hidden>0</span></summary>
+        <div id="leaf-options" class="leaf-options"></div>
+      </details>
+      <button type="button" id="filter-clear" class="filter-clear" data-i18n="filterClear" disabled>Clear filters</button>
+    </div>
+    <div class="filter-meta">
+      <p id="filter-status" class="filter-status" aria-live="polite"></p>
+      <p class="filter-help" data-i18n="filterHelp">Leaf labels use OR within one axis and AND across axes. Keyword search is also combined with AND.</p>
+    </div>
+    <div id="filter-chips" class="filter-chips" aria-label="Selected taxonomy leaf filters"></div>
+  </aside>
   <div class="view-container">
   <section id="timeline"><p class="note" data-i18n="timelineNote">Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to filter the table.</p><div id="timeline-chart"></div><div id="timeline-table"></div></section>
   <section id="heatmap"><p class="note" data-i18n="heatmapNote">Cells show mechanism-surface co-occurrence for concrete threat models. Hover for a preview; click a cell to filter the table.</p><p class="note" id="heatmap-population"></p><details class="note"><summary data-i18n="countingTitle">Counting &amp; coverage</summary><p data-i18n="countingNote"></p></details><div id="heatmap-chart"></div><div id="heatmap-table"></div></section>
@@ -215,6 +261,14 @@ const SURFACE_GROUPS = [
   {name:'planning-state',label:'Planning & State',short:'Planning/State',labelJa:'計画・状態',values:['world-state','task-planning']},
   {name:'reasoning',label:'Reasoning',short:'Reasoning',labelJa:'推論',values:['reasoning-representation']},
   {name:'action-control',label:'Action & Control',short:'Action/Control',labelJa:'行動・制御',values:['action-interface','execution-control']},
+];
+const FILTER_AXES = [
+  {key:'lifecycle',label:'WHEN',labelJa:'WHEN（時点）',values:['training','inference','system']},
+  {key:'surface',label:'WHERE',labelJa:'WHERE（入口・評価面）',values:SURFACE_GROUPS.flatMap(group=>group.values)},
+  {key:'mechanism',label:'HOW',labelJa:'HOW（手法・失敗モード）',values:MECHANISM_GROUPS.flatMap(group=>group.values)},
+  {key:'target',label:'TARGET',labelJa:'TARGET（対象）',values:TARGETS},
+  {key:'consequence',label:'CONSEQUENCE',labelJa:'CONSEQUENCE（帰結）',values:CONSEQUENCES},
+  {key:'risks',label:'MEASURED RISK',labelJa:'MEASURED RISK（評価リスク）',values:['task-reliability','physical-safety','ethical-societal','security-privacy']},
 ];
 const groupOrder = groups => groups.flatMap(g=>g.values);
 function orderByGroups(values, groups){ const order=groupOrder(groups); const set=new Set(values); return order.filter(v=>set.has(v)); }
@@ -289,6 +343,10 @@ const I18N = {
     populationRisk: "Eligible: all non-survey records, including broad evaluation coverage. Coverage labels are included for evaluation records; risk labels require reported empirical metrics.",
     populationDefense: "Eligible: records with defense metadata, across all primary sections. Cells use defense.mechanism and defense.defends_against.",
     populationCount: "{eligible} of {total} catalog papers eligible; {excluded} excluded. This is the eligible pool, not the sum of cells.",
+    populationFiltered: "{matched} match the active filters among {eligible} eligible papers; {excluded} excluded by this view's population rule.",
+    searchLabel: 'Search papers', searchPlaceholder: 'Search title, author, venue, tags, or taxonomy labels', leafFilter: 'Taxonomy leaf filters', filterClear: 'Clear filters', filterDone: 'Done',
+    filterHelp: 'Leaf labels use OR within one axis and AND across axes. Keyword search is also combined with AND.',
+    filterStatus: '{matched} of {total} catalog papers match', filterSelected: '{count} leaf filters selected', filterRemove: 'Remove filter',
     citeLink: '📑 Cite', citeTitle: 'Cite this catalog', citeCopy: 'Copy BibTeX', citeCopied: 'Copied!', contactLabel: 'Contact',
   },
   ja: {
@@ -314,21 +372,86 @@ const I18N = {
     populationRisk: "対象：survey以外のレコード（広範なevaluationのcoverageを含む）。evaluationではcoverageラベルを使い、リスクラベルは報告された実験指標を要件とします。",
     populationDefense: "対象：主sectionを問わずdefense metadataを持つレコード。セルはdefense.mechanismとdefense.defends_againstを使います。",
     populationCount: "全{total}件中、集計対象{eligible}件・除外{excluded}件。対象件数はセル件数の合計ではありません。",
+    populationFiltered: "このビューの集計対象{eligible}件中、フィルタ一致{matched}件・母集団ルールによる除外{excluded}件。",
+    searchLabel: '論文を検索', searchPlaceholder: 'タイトル・著者・Venue・タグ・Taxonomyラベルを検索', leafFilter: 'Taxonomy Leafで絞り込み', filterClear: 'すべて解除', filterDone: '閉じる',
+    filterHelp: '同じ軸のLeafはOR、異なる軸はANDで結合します。キーワード検索ともANDで結合します。',
+    filterStatus: '全{total}件中{matched}件が一致', filterSelected: 'Leafフィルタ{count}件を選択中', filterRemove: 'フィルタを解除',
     citeLink: '📑 引用', citeTitle: '引用方法', citeCopy: 'BibTeXをコピー', citeCopied: 'コピーしました', contactLabel: 'お問い合わせ',
   },
 };
 d3.select('#paper-count-badge').text(papers.length);
 const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const paperListHtml = list => `<ul class="paper-list">${list.map(p=>`<li>${p.paper_url?`<a href="${escapeHtml(p.paper_url)}" target="_blank" rel="noopener noreferrer">[${escapeHtml(p.venue)} ${p.year}] ${escapeHtml(p.title)}</a>`:`[${escapeHtml(p.venue)} ${p.year}] ${escapeHtml(p.title)}`}</li>`).join('')}</ul>`;
-const threatValues = (p,field) => ['survey','evaluation'].includes(p.threat_model.kind) ? (p.threat_model.coverage[{lifecycle:'lifecycles',mechanism:'mechanisms',surface:'surfaces',consequence:'consequences'}[field]]||[]) : (p.threat_model[field]||[]);
-const tableDefaults = {
-  timeline: papers,
-  heatmap: papers.filter(p=>!['survey','evaluation'].includes(p.threat_model.kind)),
-  risk: papers.filter(p=>p.threat_model.kind!=='survey'),
-  defense: papers.filter(p=>p.defense),
-  target: papers.filter(p=>!['survey','evaluation'].includes(p.threat_model.kind)),
-  'outcome-risk': papers.filter(p=>p.threat_model.kind!=='survey'),
+const COVERAGE_FIELDS = {lifecycle:'lifecycles',mechanism:'mechanisms',surface:'surfaces',consequence:'consequences'};
+const threatValues = (p,field) => {
+  if (!['survey','evaluation'].includes(p.threat_model.kind)) return p.threat_model[field]||[];
+  const coverageField=COVERAGE_FIELDS[field];
+  return coverageField ? (p.threat_model.coverage?.[coverageField]||[]) : [];
 };
+const filterSelection = Object.fromEntries(FILTER_AXES.map(axis=>[axis.key,new Set()]));
+let keywordQuery = '';
+let searchTimer = null;
+const normalizeSearch = value => String(value??'').normalize('NFKC').toLocaleLowerCase().replace(/[-_]+/g,' ').replace(/\s+/g,' ').trim();
+function paperAxisValues(p,axis){ return axis==='risks' ? (p.risks||[]) : threatValues(p,axis); }
+const searchIndex = new Map(papers.map(p=>{
+  const taxonomyValues=FILTER_AXES.flatMap(axis=>paperAxisValues(p,axis.key));
+  const englishLabels=taxonomyValues.map(value=>dlabel(value));
+  const japaneseLabels=taxonomyValues.map(value=>dlabelFlat[value]||(labelsJa.risks&&labelsJa.risks[value])||'');
+  const fields=[p.title,p.first_author,p.venue,p.year,p.section,p.subsection,p.scope,...(p.tags||[]),...taxonomyValues,...englishLabels,...japaneseLabels];
+  return [p.id,normalizeSearch(fields.join(' '))];
+}));
+function matchesCatalogFilters(p){
+  const terms=normalizeSearch(keywordQuery).split(' ').filter(Boolean);
+  if(terms.length&&!terms.every(term=>searchIndex.get(p.id).includes(term))) return false;
+  return FILTER_AXES.every(axis=>{
+    const selected=filterSelection[axis.key];
+    return !selected.size||paperAxisValues(p,axis.key).some(value=>selected.has(value));
+  });
+}
+function filteredPapers(){ return papers.filter(matchesCatalogFilters); }
+function viewBasePapers(view,source=papers){
+  if(view==='heatmap'||view==='target') return source.filter(p=>!['survey','evaluation'].includes(p.threat_model.kind));
+  if(view==='risk'||view==='outcome-risk') return source.filter(p=>p.threat_model.kind!=='survey');
+  if(view==='defense') return source.filter(p=>p.defense);
+  return source;
+}
+function viewPapers(view){ return viewBasePapers(view,filteredPapers()); }
+function selectedLeafCount(){ return FILTER_AXES.reduce((sum,axis)=>sum+filterSelection[axis.key].size,0); }
+function filtersActive(){ return Boolean(normalizeSearch(keywordQuery)||selectedLeafCount()); }
+function renderFilterControls(){
+  const t=I18N[currentLang], matched=filteredPapers().length, selectedCount=selectedLeafCount();
+  document.getElementById('filter-status').textContent=t.filterStatus.replace('{matched}',matched).replace('{total}',papers.length);
+  const countBadge=document.getElementById('leaf-filter-count');
+  countBadge.textContent=selectedCount;
+  countBadge.hidden=!selectedCount;
+  countBadge.title=t.filterSelected.replace('{count}',selectedCount);
+  document.getElementById('filter-clear').disabled=!filtersActive();
+  const options=document.getElementById('leaf-options');
+  options.innerHTML=`<div class="leaf-options-head"><span>${escapeHtml(t.leafFilter)}</span><button type="button" class="leaf-options-close">${escapeHtml(t.filterDone)}</button></div>`+FILTER_AXES.map(axis=>{
+    const legend=currentLang==='ja'?axis.labelJa:axis.label;
+    const rows=axis.values.map(value=>{
+      const count=papers.filter(p=>paperAxisValues(p,axis.key).includes(value)).length;
+      const id=`leaf-${axis.key}-${value}`;
+      return `<label class="leaf-option" for="${id}"><input type="checkbox" id="${id}" data-filter-axis="${axis.key}" value="${value}" ${filterSelection[axis.key].has(value)?'checked':''}><span>${escapeHtml(dlabel(value))} <small>(${count})</small></span></label>`;
+    }).join('');
+    return `<fieldset><legend>${escapeHtml(legend)}</legend>${rows}</fieldset>`;
+  }).join('');
+  options.querySelector('.leaf-options-close').addEventListener('click',()=>{ document.getElementById('leaf-filter').open=false; });
+  options.querySelectorAll('input[data-filter-axis]').forEach(input=>input.addEventListener('change',()=>{
+    const selected=filterSelection[input.dataset.filterAxis];
+    input.checked?selected.add(input.value):selected.delete(input.value);
+    renderAll();
+  }));
+  const chips=document.getElementById('filter-chips');
+  chips.innerHTML=FILTER_AXES.flatMap(axis=>[...filterSelection[axis.key]].map(value=>{
+    const axisLabel=currentLang==='ja'?axis.labelJa:axis.label;
+    return `<button type="button" class="filter-chip" data-chip-axis="${axis.key}" data-chip-value="${value}" aria-label="${escapeHtml(`${t.filterRemove}: ${axisLabel} ${dlabel(value)}`)}">${escapeHtml(axisLabel)}: ${escapeHtml(dlabel(value))} ×</button>`;
+  })).join('');
+  chips.querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>{
+    filterSelection[button.dataset.chipAxis].delete(button.dataset.chipValue);
+    renderAll();
+  }));
+}
 function tagsHtml(items) { return items.length ? items.map(({value,bg,fg,label})=>`<span class="tag" style="background:${bg};color:${fg}">${escapeHtml(label ?? dlabel(value))}</span>`).join('') : `<span class="empty">${I18N[currentLang].tableNone}</span>`; }
 function riskTagItems(p) { return (p.risks||[]).map(value=>({value,...(RISK_TAG_COLORS[value]||{bg:'#eef3fa',fg:'#36506f'})})); }
 // Threat Model cell: kind on its own line, then the five taxonomy axes
@@ -353,7 +476,7 @@ function threatModelHtml(p) {
   const chain = steps.filter(step=>step.items.length).map((step,index)=>`<div class="story-step"><span class="story-arrow">${index?'↓':''}</span><span class="story-label">${escapeHtml(step.label)}:</span><span class="tag-group">${tagsHtml(step.items)}</span></div>`).join('');
   return `<div class="threat-kind-row">${kindTag}</div><div class="threat-chain-row">${chain || `<span class="empty">${I18N[currentLang].tableNone}</span>`}</div>`;
 }
-function renderPaperTable(view, list=tableDefaults[view], filterLabel='') {
+function renderPaperTable(view, list=viewPapers(view), filterLabel='') {
   const paperRows=papersInGroup=>papersInGroup.map(p=>{
     const code=p.code_url?`<a class="code-link" href="${escapeHtml(p.code_url)}" target="_blank" rel="noopener noreferrer">${I18N[currentLang].tableCode}</a>`:'';
     return `<tr><td><a class="paper-title" href="${escapeHtml(p.paper_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.title)}</a>${code}<span class="paper-author">${escapeHtml(p.first_author)}</span></td><td>${escapeHtml(p.venue)} ${p.year}</td><td>${tagsHtml(riskTagItems(p))}</td><td>${threatModelHtml(p)}</td></tr>`;
@@ -391,7 +514,7 @@ function applyStickyOffsets(view){
   });
 }
 function filterPaperTable(view,list,label){ renderPaperTable(view,list,label); document.getElementById(`${view}-table`).scrollIntoView({behavior:'smooth',block:'start'}); pinned=false; tooltip.style('opacity',0); }
-const orderedThreatMechanisms = () => { const concrete=papers.filter(p=>p.threat_model.kind!=='survey'); const exploded=concrete.flatMap(p=>threatValues(p,'mechanism').map(m=>({p,m}))); const counts=d3.rollup(exploded,v=>new Set(v.map(d=>d.p.id)).size,d=>d.m); const top=[...counts].sort((a,b)=>d3.descending(a[1],b[1])).slice(0,10).map(d=>d[0]); return orderByGroups(top,MECHANISM_GROUPS); };
+const orderedThreatMechanisms = () => { const concrete=filteredPapers().filter(p=>p.threat_model.kind!=='survey'); const exploded=concrete.flatMap(p=>threatValues(p,'mechanism').map(m=>({p,m}))); const counts=d3.rollup(exploded,v=>new Set(v.map(d=>d.p.id)).size,d=>d.m); const top=[...counts].sort((a,b)=>d3.descending(a[1],b[1])).slice(0,10).map(d=>d[0]); return orderByGroups(top,MECHANISM_GROUPS); };
 let pinned = false;
 const placeTooltip = (event, html) => tooltip.html(html).style('opacity',1).style('left',`${Math.max(8,Math.min(event.clientX+14,window.innerWidth-400))}px`).style('top',`${Math.max(8,Math.min(event.clientY+14,window.innerHeight-220))}px`);
 const showTooltip = (event, html) => { if (!pinned) placeTooltip(event, html); };
@@ -401,7 +524,7 @@ document.addEventListener('pointerdown', event => { if (!event.target.closest('.
 function renderTimeline(){
   const width=1160,height=440, margin={top:82,right:35,bottom:34,left: currentLang === 'ja' ? 235 : 205};
   const svg=d3.select('#timeline-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Interactive field timeline');
-  const years=[...new Set(papers.map(p=>p.year))].sort(), grouped=d3.rollup(papers,v=>v,p=>p.section,p=>p.year);
+  const items=filteredPapers(), years=[...new Set(papers.map(p=>p.year))].sort(), grouped=d3.rollup(items,v=>v,p=>p.section,p=>p.year);
   const x=d3.scalePoint().domain(years).range([margin.left,width-margin.right]); const y=d3.scalePoint().domain(sections).range([margin.top,height-margin.bottom]).padding(.5);
   const max=d3.max([...grouped.values()].flatMap(v=>[...v.values()].map(a=>a.length)))||1;
   svg.append('text').attr('x',margin.left).attr('y',24).attr('font-size',19).attr('font-weight',650).attr('fill','#202938').text(I18N[currentLang].chartTimelineTitle);
@@ -425,7 +548,7 @@ function wrapEndAnchored(selection, getText, maxLen=24){
 function renderHeatmap(){
   const width=1160,height=(currentLang==='ja' ? 460 : 460),margin={top: currentLang === 'ja' ? 152 : 150,right:30,bottom:20,left: currentLang==='ja' ? 220 : 300};
   const svg=d3.select('#heatmap-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Interactive threat model heatmap');
-  const concrete=papers.filter(p=>!['survey','evaluation'].includes(p.threat_model.kind));
+  const concrete=viewPapers('heatmap');
   const mechanisms=MECHANISM_GROUPS, surfaces=SURFACE_GROUPS;
   const x=d3.scaleBand().domain(surfaces.map(g=>g.name)).range([margin.left,width-margin.right]).padding(.08), y=d3.scaleBand().domain(mechanisms.map(g=>g.name)).range([margin.top,height-margin.bottom]).padding(.08);
   const cellData=[];
@@ -443,10 +566,10 @@ function renderHeatmap(){
 }
 
 function renderDefense(){
-  const defenses=papers.filter(p=>p.section==='defenses');
+  const defenses=filteredPapers().filter(p=>p.section==='defenses');
   const subsectionCounts=d3.rollup(defenses,v=>v.length,p=>p.subsection);
   const subsections=[...subsectionCounts].sort((a,b)=>d3.descending(a[1],b[1])).map(d=>d[0]);
-  const concrete=papers.filter(p=>!['survey','evaluation'].includes(p.threat_model.kind));
+  const concrete=filteredPapers().filter(p=>!['survey','evaluation'].includes(p.threat_model.kind));
   const explodedMechanisms=concrete.flatMap(p=>p.threat_model.mechanism.map(m=>({p,m})));
   const mechanismCounts=d3.rollup(explodedMechanisms,v=>new Set(v.map(d=>d.p.id)).size,d=>d.m);
   const mechanisms=[...mechanismCounts].sort((a,b)=>d3.descending(a[1],b[1])).slice(0,10).map(d=>d[0]);
@@ -464,10 +587,10 @@ function renderDefense(){
 }
 
 function renderBenchmark(){
-  const benchmarks=papers.filter(p=>p.section==='benchmarks');
+  const benchmarks=filteredPapers().filter(p=>p.section==='benchmarks');
   const subsectionCounts=d3.rollup(benchmarks,v=>v.length,p=>p.subsection);
   const subsections=[...subsectionCounts].sort((a,b)=>d3.descending(a[1],b[1])).map(d=>d[0]);
-  const concrete=papers.filter(p=>!['survey','evaluation'].includes(p.threat_model.kind));
+  const concrete=filteredPapers().filter(p=>!['survey','evaluation'].includes(p.threat_model.kind));
   const explodedMechanisms=concrete.flatMap(p=>p.threat_model.mechanism.map(m=>({p,m})));
   const mechanismCounts=d3.rollup(explodedMechanisms,v=>new Set(v.map(d=>d.p.id)).size,d=>d.m);
   const mechanisms=[...mechanismCounts].sort((a,b)=>d3.descending(a[1],b[1])).slice(0,10).map(d=>d[0]);
@@ -503,7 +626,7 @@ function renderExtensionMap(container,title,items,rows,cols,rowValues,colValues,
 }
 
 function renderDefenseThreat(){
-  const items=papers.filter(p=>p.defense), rows=DEFENSE_MECHANISMS, cols=MECHANISM_GROUPS;
+  const items=viewPapers('defense'), rows=DEFENSE_MECHANISMS, cols=MECHANISM_GROUPS;
   const isJa=currentLang==='ja';
   const margin={top:isJa?152:106,right:45,bottom:20,left:isJa?230:250}, width=1180, height=margin.top+rows.length*38+margin.bottom;
   const svg=d3.select('#defense-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Defense mechanism and defended threat family cross-map');
@@ -528,7 +651,7 @@ function renderDefenseThreat(){
 }
 
 function renderTargetResult(){
-  const items=papers.filter(p=>!['survey','evaluation'].includes(p.threat_model.kind)), rows=TARGETS, cols=CONSEQUENCES;
+  const items=viewPapers('target'), rows=TARGETS, cols=CONSEQUENCES;
   const margin={top:170,right:90,bottom:20,left:currentLang==='ja'?185:205}, width=1180, height=margin.top+rows.length*38+margin.bottom;
   const svg=d3.select('#target-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Target and consequence cross-map');
   const x=d3.scaleBand().domain(cols).range([margin.left,width-margin.right]).padding(.06), y=d3.scaleBand().domain(rows).range([margin.top,height-margin.bottom]).padding(.07);
@@ -546,7 +669,7 @@ function renderTargetResult(){
   svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.col)+x.bandwidth()/2).attr('y',d=>y(d.row)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',11).attr('font-weight',650).attr('fill',d=>d.n/max>.48?'#fff':'#202938').style('pointer-events','none').text(d=>d.n);
 }
 function renderOutcomeRisk(){
-  const items=papers.filter(p=>p.threat_model.kind!=='survey'), rows=CONSEQUENCES, cols=['task-reliability','physical-safety','ethical-societal','security-privacy'];
+  const items=viewPapers('outcome-risk'), rows=CONSEQUENCES, cols=['task-reliability','physical-safety','ethical-societal','security-privacy'];
   const margin={top:100,right:90,bottom:20,left:currentLang==='ja'?185:205}, width=1180, height=margin.top+rows.length*38+margin.bottom;
   const svg=d3.select('#outcome-risk-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Consequence and evaluated risk cross-map');
   const x=d3.scaleBand().domain(cols).range([margin.left,width-margin.right]).padding(.06), y=d3.scaleBand().domain(rows).range([margin.top,height-margin.bottom]).padding(.07);
@@ -564,7 +687,7 @@ function renderOutcomeRisk(){
   svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.col)+x.bandwidth()/2).attr('y',d=>y(d.row)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',11).attr('font-weight',650).attr('fill',d=>d.n/max>.48?'#fff':'#202938').style('pointer-events','none').text(d=>d.n);
 }
 function renderThreatRisk(){
-  const items=papers.filter(p=>p.threat_model.kind!=='survey');
+  const items=viewPapers('risk');
   const rows=MECHANISM_GROUPS, cols=['task-reliability','physical-safety','ethical-societal','security-privacy'];
   const margin={top:100,right:55,bottom:20,left: currentLang==='ja' ? 210 : 290}, width=1180, height=Math.max(300,margin.top+rows.length*42+margin.bottom);
   const svg=d3.select('#risk-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Threat mechanism family and evaluated risk cross-map');
@@ -579,17 +702,17 @@ function renderThreatRisk(){
   svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.col)+x.bandwidth()/2).attr('y',d=>y(d.mg.name)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',11).attr('font-weight',650).attr('fill',d=>d.n/max>.48?'#fff':'#202938').style('pointer-events','none').text(d=>d.n);
 }
 function renderBenchmarkV2(){
-  const items=papers.filter(p=>p.section==='benchmarks');
+  const items=filteredPapers().filter(p=>p.section==='benchmarks');
   const rows=[...new Set(items.flatMap(p=>threatValues(p,'mechanism')))].sort((a,b)=>d3.descending(items.filter(p=>threatValues(p,'mechanism').includes(a)).length,items.filter(p=>threatValues(p,'mechanism').includes(b)).length));
   const cols=[...new Set(items.flatMap(p=>threatValues(p,'consequence')))];
   renderExtensionMap('#benchmark-chart','Threat mechanism × consequence',items,rows,cols,p=>threatValues(p,'mechanism'),p=>threatValues(p,'consequence'),'Benchmark threat mechanism and consequence cross-map');
 }
 function renderEvaluation(){
-  const items=papers.filter(p=>p.evaluation), rows=[...new Set(items.flatMap(p=>p.evaluation.environments))], cols=[...new Set(items.flatMap(p=>p.evaluation.metrics))];
+  const items=filteredPapers().filter(p=>p.evaluation), rows=[...new Set(items.flatMap(p=>p.evaluation.environments))], cols=[...new Set(items.flatMap(p=>p.evaluation.metrics))];
   renderExtensionMap('#evaluation-chart','Evaluation environment × metric',items,rows,cols,p=>p.evaluation.environments,p=>p.evaluation.metrics,'Evaluation environment and metric cross-map');
 }
 function renderModelEnvironment(){
-  const items=papers.filter(p=>p.evaluation), cols=['task-reliability','physical-safety','ethical-societal','security-privacy'];
+  const items=filteredPapers().filter(p=>p.evaluation), cols=['task-reliability','physical-safety','ethical-societal','security-privacy'];
   const models=[...new Set(items.flatMap(p=>p.evaluation.models||[]))].filter(x=>x!=='unspecified').sort();
   const envs=[...new Set(items.flatMap(p=>p.evaluation.environments||[]))].filter(x=>x!=='unspecified').sort();
   renderExtensionMap('#model-chart','Model × evaluated risk',items,models,cols,p=>p.evaluation.models||[],p=>p.risks,'Model and evaluated risk cross-map');
@@ -601,6 +724,7 @@ function activateView(view) {
   if (!availableViews.has(view)) return;
   d3.selectAll('button[data-view]').attr('aria-pressed', function(){ return String(this.dataset.view === view); });
   d3.selectAll('section').classed('active', function(){ return this.id === view; });
+  document.getElementById('catalog-filters').hidden=['readme','taxonomy'].includes(view);
 }
 d3.selectAll('button[data-view]').on('click', function(){
   const view = this.dataset.view;
@@ -617,10 +741,11 @@ activateViewFromHash();
 
 function renderAll(){
   const t = I18N[currentLang];
+  renderFilterControls();
   for (const view of ['heatmap','risk','defense','target','outcome-risk']) {
     const key = view === 'defense' ? 'populationDefense' : ['risk','outcome-risk'].includes(view) ? 'populationRisk' : 'populationConcrete';
-    const eligible = tableDefaults[view].length;
-    const counts = t.populationCount.replace('{eligible}', eligible).replace('{total}', papers.length).replace('{excluded}', papers.length - eligible);
+    const eligible = viewBasePapers(view).length, matched=viewPapers(view).length, excluded=papers.length-eligible;
+    const counts = (filtersActive()?t.populationFiltered:t.populationCount).replace('{matched}',matched).replace('{eligible}', eligible).replace('{total}', papers.length).replace('{excluded}', excluded);
     document.getElementById(`${view}-population`).textContent = `${t[key]} ${counts}`;
   }
   for (const id of ['timeline-chart','heatmap-chart','risk-chart','defense-chart','target-chart','outcome-risk-chart']) {
@@ -636,6 +761,10 @@ function applyStaticI18n(lang){
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.dataset.i18n;
     if (I18N[lang][key] !== undefined) el.textContent = I18N[lang][key];
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.dataset.i18nPlaceholder;
+    if (I18N[lang][key] !== undefined) el.setAttribute('placeholder',I18N[lang][key]);
   });
 }
 
@@ -655,6 +784,19 @@ function setLanguage(lang){
 }
 document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
 document.getElementById('lang-ja').addEventListener('click', () => setLanguage('ja'));
+const searchInput=document.getElementById('catalog-search');
+searchInput.addEventListener('input',()=>{
+  keywordQuery=searchInput.value;
+  clearTimeout(searchTimer);
+  searchTimer=setTimeout(renderAll,140);
+});
+document.getElementById('filter-clear').addEventListener('click',()=>{
+  keywordQuery='';
+  searchInput.value='';
+  FILTER_AXES.forEach(axis=>filterSelection[axis.key].clear());
+  document.getElementById('leaf-filter').open=false;
+  renderAll();
+});
 
 const BIBTEX = `@software{waseda_awesome_physical_ai_safety,
   author  = {Waseda, Futa},
@@ -692,8 +834,17 @@ citationCopy.addEventListener('click', () => {
     selectFallback();
   }
 });
-document.addEventListener('click', event => { if (!citationPopover.hidden && !citationPopover.contains(event.target) && event.target !== citationLink) closeCitationPopover(); });
-document.addEventListener('keydown', event => { if (event.key === 'Escape') closeCitationPopover(); });
+document.addEventListener('click', event => {
+  if (!citationPopover.hidden && !citationPopover.contains(event.target) && event.target !== citationLink) closeCitationPopover();
+  const leafFilter=document.getElementById('leaf-filter');
+  if(leafFilter.open&&!leafFilter.contains(event.target)) leafFilter.open=false;
+});
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') {
+    closeCitationPopover();
+    document.getElementById('leaf-filter').open=false;
+  }
+});
 // Clicks inside the README/Taxonomy iframes never bubble to this document,
 // so fall back to closing on window blur (focus moving into the iframe).
 window.addEventListener('blur', () => { if (!citationPopover.hidden) closeCitationPopover(); });
