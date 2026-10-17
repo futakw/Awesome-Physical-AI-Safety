@@ -267,10 +267,10 @@
     .lp-axis p { font-size:13px; color:var(--muted); line-height:1.55; margin:0; }
     .lp-features { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:6px; overflow:hidden; margin-bottom:24px; }
     .lp-feature { background:var(--surface-2); padding:26px 24px 28px; }
-    .lp-fi { width:28px; height:28px; display:flex; align-items:center; justify-content:center; margin-bottom:16px; flex:none; }
+    .lp-fi { width:68px; height:68px; display:flex; align-items:center; justify-content:center; margin-bottom:16px; flex:none; border:2px solid var(--line-strong); border-radius:8px; background:var(--surface); }
     .lp-axis-code { display:flex; align-items:baseline; justify-content:space-between; gap:10px; margin-bottom:12px; }
     .lp-axis-n { font:600 11px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; color:var(--ink-faint); font-variant-numeric:tabular-nums; }
-    .lp-fi svg { width:17px; height:17px; stroke:var(--accent); fill:none; stroke-width:1.6; border:0; border-radius:0; background:transparent; }
+    .lp-fi svg { width:24px; height:24px; stroke:var(--accent); fill:none; stroke-width:1.6; border:0; border-radius:0; background:transparent; }
     .lp-feature h3 { font-size:16px; font-weight:800; letter-spacing:-.01em; margin:0 0 8px; }
     .lp-feature p { font-size:13.5px; color:var(--muted); line-height:1.6; margin:0; }
     .lp-footer { padding:36px 0 44px; border-bottom:1px solid var(--line); margin-bottom:24px; }
@@ -398,7 +398,7 @@
         <p data-i18n="lpAxesLede">Instead of free-text tags, each record is annotated against six complementary questions — so you can cross-reference technique against outcome, or surface against measured risk, across the whole catalog.</p>
       </div>
       <div class="lp-axis-grid">
-        <div class="lp-axis"><div class="lp-fi"><svg viewBox="0 0 24 24"><rect x="3" y="10.5" width="18" height="3" rx="1.5"/><path d="M9 10v3M15 10v3"/></svg></div><div class="lp-axis-code"><span data-i18n="lpAxis1Code">01 · WHEN</span><span class="lp-axis-n" id="lp-axis-n-1"></span></div><h4 data-i18n="lpAxis1Name">Lifecycle</h4><p data-i18n="lpAxis1Desc">Training, inference, or system — the stage at which a threat is introduced or a failure is evaluated.</p></div>
+        <div class="lp-axis"><div class="lp-fi"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v5l3.5 2"/></svg></div><div class="lp-axis-code"><span data-i18n="lpAxis1Code">01 · WHEN</span><span class="lp-axis-n" id="lp-axis-n-1"></span></div><h4 data-i18n="lpAxis1Name">Lifecycle</h4><p data-i18n="lpAxis1Desc">Training, inference, or system — the stage at which a threat is introduced or a failure is evaluated.</p></div>
         <div class="lp-axis"><div class="lp-fi"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="4.5" rx="1"/><rect x="3" y="10" width="18" height="4.5" rx="1"/><rect x="3" y="16" width="18" height="4.5" rx="1"/></svg></div><div class="lp-axis-code"><span data-i18n="lpAxis2Code">02 · WHERE</span><span class="lp-axis-n" id="lp-axis-n-2"></span></div><h4 data-i18n="lpAxis2Name">Surface</h4><p data-i18n="lpAxis2Desc">The interface directly manipulated or evaluated — perception, language, proprioception, planning, or control.</p></div>
         <div class="lp-axis"><div class="lp-fi"><svg viewBox="0 0 24 24"><path d="M14.8 3.3a4.6 4.6 0 0 0-5.9 5.9L3 15.1l3 3 5.9-5.9a4.6 4.6 0 0 0 5.9-5.9l-2.9 2.9-2-2Z"/></svg></div><div class="lp-axis-code"><span data-i18n="lpAxis3Code">03 · HOW</span><span class="lp-axis-n" id="lp-axis-n-3"></span></div><h4 data-i18n="lpAxis3Name">Mechanism</h4><p data-i18n="lpAxis3Desc">The concrete attack technique or failure mode studied — not a guess at the deepest internal cause.</p></div>
         <div class="lp-axis"><div class="lp-fi"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".6" fill="var(--accent)" stroke="none"/></svg></div><div class="lp-axis-code"><span data-i18n="lpAxis4Code">04 · TARGET</span><span class="lp-axis-n" id="lp-axis-n-4"></span></div><h4 data-i18n="lpAxis4Name">Target</h4><p data-i18n="lpAxis4Desc">What the study explicitly attacks, protects, or evaluates — perception model, policy, planner, or private data.</p></div>
