@@ -9,7 +9,7 @@ LLMを用いた継続的な文献メンテナンスについては、[日次キ�
 ## 論文の追加・更新
 
 1. `data/papers.json`を編集する。
-2. 安定した`id`、公式タイトル、第一著者の姓、venue、年、論文URL、（可能であれば）公式のプロジェクトまたはGitHub URLを持つ1件のレコードを追加する。
+2. 安定した`id`、`catalogued_date`（現在のUTC日付）、公式タイトル、第一著者の姓、venue、年、論文URL、（可能であれば）公式のプロジェクトまたはGitHub URLを持つ1件のレコードを追加する。
 3. 1つの主たる`section`を割り当て、そのsectionのクローズド語彙（`scripts/validate_catalog.py`の`SUBSECTIONS[section]`）から`subsection`を選ぶ。論文が既存の値に妥当に当てはまる場合はそれを再利用し、本当にどれにも当てはまらない場合のみ新しい値を追加する。追加する際は、同じコミットで`validate_catalog.py`と`scripts/labels_ja.py`の両方を更新すること（詳細は[メタデータスキーマ](docs/reference/metadata-schema.md#subsection)を参照）。
 4. 実証的に評価されたリスクアウトカム（または空の`risks`リスト）、構造化された`threat_model`、焦点を絞ったmechanism・OODタグを追加する。
 5. 以下を実行する:
@@ -31,6 +31,7 @@ python3 scripts/build_explorer.py
 
 - 著者は`FirstAuthor et al.`の形式で表示されます。`first_author`には第一著者の姓を格納してください。
 - 公式の論文タイトルと確認済みのvenueを使用してください。生成されたテーブルはタイトルを`paper_url`に直接リンクします。採録venueが未確認の場合は`arXiv`を使用してください。
+- `catalogued_date`には、そのrecordがversion管理されたcatalogへ初めて入るUTC日付を設定し、その後のmetadata・URL・title・venue更新では変更しないでください。論文自体の初回投稿日を表す`first_submission_date`とは別の値です。
 - `year`には確認済みvenue自体の年（公式proceedings、DBLP、またはvenueのacceptanceページに基づくproceedings/program年）を設定してください。arXiv投稿年ではありません。同じ論文でもarXivプレプリントと実際の採録venueでは年が異なることがよくあります。レコードの`venue`を`arXiv`/`OpenReview`から正式なvenueに変更する際は、同時に`year`もそのvenueの年に更新してください。詳細は[メタデータスキーマ](docs/reference/metadata-schema.md#venue-and-year)を参照してください。
 - `code_url`には公式または著者自身がメンテナンスする実装のみをリンクしてください。
 - 公式リポジトリが不明な場合は`code_url`を`null`のままにしてください。

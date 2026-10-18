@@ -9,7 +9,7 @@ For recurring LLM-assisted literature maintenance, follow the [daily curation wo
 ## Add or Update a Paper
 
 1. Edit `data/papers.json`.
-2. Add one record with a stable ID, official title, first-author surname, venue, year, paper URL, and—when available—the official project or GitHub URL.
+2. Add one record with a stable ID, `catalogued_date` (the current UTC date), official title, first-author surname, venue, year, paper URL, and—when available—the official project or GitHub URL.
 3. Assign one primary `section`, then a `subsection` chosen from that section's closed vocabulary (`SUBSECTIONS[section]` in `scripts/validate_catalog.py`) — reuse an existing value when the paper reasonably fits one; only add a new value when it genuinely doesn't, and add it to both `validate_catalog.py` and `scripts/labels_ja.py` in the same commit (see [the metadata schema](docs/reference/metadata-schema.md#subsection)).
 4. Add empirically evaluated risk outcomes (or an empty `risks` list), a structured `threat_model`, and focused mechanism or OOD tags.
 5. Run:
@@ -31,6 +31,7 @@ python3 scripts/build_explorer.py
 
 - Authors are displayed as `FirstAuthor et al.`; store the first author's surname in `first_author`.
 - Use the official paper title and confirmed venue. The generated table links the title directly to `paper_url`; use `arXiv` when no accepted venue is confirmed.
+- Set `catalogued_date` once, to the UTC date the record first enters the versioned catalog. Do not change it during later metadata, URL, title, or venue updates. This is distinct from `first_submission_date`; see [the metadata schema](docs/reference/metadata-schema.md#cataloguing-date).
 - Set `year` to the confirmed venue's own proceedings/program year (from the official proceedings, DBLP, or the venue's acceptance page) — not the arXiv posting year. An arXiv preprint and its eventual conference appearance can fall in different calendar years; when a record's `venue` moves from `arXiv`/`OpenReview` to a named venue, update `year` to match at the same time. See [the metadata schema](docs/reference/metadata-schema.md#venue-and-year).
 - Link only an official or author-maintained implementation as `code_url`.
 - Leave `code_url` as `null` when no official repository is known.

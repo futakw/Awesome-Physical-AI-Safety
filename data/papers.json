@@ -80,6 +80,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2025-11-03",
     "first_submission_source": "https://arxiv.org/abs/2511.01331"
   },
@@ -142,6 +143,7 @@
       "physical_validation": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -220,6 +222,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-04-07",
     "first_submission_source": "https://arxiv.org/abs/2604.05427"
   },
@@ -290,6 +293,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-01-12",
     "first_submission_source": "https://arxiv.org/abs/2601.07186"
   },
@@ -372,6 +376,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2025-07-04",
     "first_submission_source": "https://arxiv.org/abs/2507.03293"
   },
@@ -457,6 +462,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2025-03-10",
     "first_submission_source": "https://arxiv.org/abs/2503.06892"
   },
@@ -539,6 +545,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2025-03-05",
     "first_submission_source": "https://arxiv.org/abs/2503.03911"
   },
@@ -614,6 +621,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2024-09-03",
     "first_submission_source": "https://arxiv.org/abs/2409.01630"
   },
@@ -686,6 +694,7 @@
       "physical_validation": true,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2024-11-18",
     "first_submission_source": "https://arxiv.org/abs/2411.11683"
   },
@@ -748,6 +757,7 @@
       "physical_validation": true,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2024-08-06",
     "first_submission_source": "https://arxiv.org/abs/2408.02882"
   },
@@ -811,6 +821,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2024-05-30",
     "first_submission_source": "https://arxiv.org/abs/2405.19802"
   },
@@ -874,6 +885,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2024-02-15",
     "first_submission_source": "https://arxiv.org/abs/2402.10340"
   },
@@ -941,6 +953,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-02-06",
     "first_submission_source": "https://arxiv.org/abs/2602.07104",
     "defense": {
@@ -1028,6 +1041,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-08-06",
     "first_submission_source": "https://arxiv.org/abs/2608.05715",
     "defense": {
@@ -1126,6 +1140,7 @@
       "physical_validation": true,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-03-02",
     "first_submission_source": "https://arxiv.org/abs/2603.01414"
   },
@@ -1197,6 +1212,7 @@
       "physical_validation": true,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2025-05-18",
     "first_submission_source": "https://arxiv.org/abs/2505.12443"
   },
@@ -1267,6 +1283,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2025-10-31",
     "first_submission_source": "https://arxiv.org/abs/2510.27623"
   },
@@ -1343,6 +1360,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2025-09-01",
     "first_submission_source": "https://arxiv.org/abs/2509.01728"
   },
@@ -1419,6 +1437,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -1506,6 +1525,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2025-09-04",
     "first_submission_source": "https://arxiv.org/abs/2509.04018"
   },
@@ -1591,6 +1611,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2025-12-01",
     "first_submission_source": "https://arxiv.org/abs/2512.01946"
   },
@@ -1679,6 +1700,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2024-10-01",
     "first_submission_source": "https://arxiv.org/abs/2410.00371"
   },
@@ -1767,6 +1789,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-02-03",
     "first_submission_source": "https://arxiv.org/abs/2602.03153"
   },
@@ -1840,6 +1863,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-07-16",
     "first_submission_source": "https://arxiv.org/abs/2607.14698"
   },
@@ -1921,6 +1945,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-08-04",
     "first_submission_source": "https://arxiv.org/abs/2608.03231"
   },
@@ -2010,6 +2035,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-02-02",
     "first_submission_source": "https://arxiv.org/abs/2602.01834"
   },
@@ -2090,6 +2116,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2025-11-22",
     "first_submission_source": "https://arxiv.org/abs/2511.17869"
   },
@@ -2171,6 +2198,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2025-11-24",
     "first_submission_source": "https://arxiv.org/abs/2511.18810"
   },
@@ -2246,6 +2274,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2025-12-09",
     "first_submission_source": "https://arxiv.org/abs/2512.08333"
   },
@@ -2308,6 +2337,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-08-04",
     "first_submission_source": "https://arxiv.org/abs/2608.03207"
   },
@@ -2394,6 +2424,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-08-02",
     "first_submission_source": "https://arxiv.org/abs/2608.01028"
   },
@@ -2458,6 +2489,7 @@
       "physical_validation": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-03-26",
     "first_submission_source": "https://arxiv.org/abs/2603.24935"
   },
@@ -2526,6 +2558,7 @@
       "physical_validation": true,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-08-11",
     "first_submission_source": "https://arxiv.org/abs/2608.10393"
   },
@@ -2594,6 +2627,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-03-13",
     "first_submission_source": "https://arxiv.org/abs/2603.12717"
   },
@@ -2660,6 +2694,7 @@
       "physical_validation": true,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-06-02",
     "first_submission_source": "https://arxiv.org/abs/2606.03556"
   },
@@ -2728,6 +2763,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-02-21",
     "first_submission_source": "https://arxiv.org/abs/2602.18739"
   },
@@ -2789,6 +2825,7 @@
       "physical_validation": true,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-03-24",
     "first_submission_source": "https://arxiv.org/abs/2603.23117"
   },
@@ -2859,6 +2896,7 @@
       "physical_validation": true,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-04-02",
     "first_submission_source": "https://arxiv.org/abs/2604.01618"
   },
@@ -2928,6 +2966,7 @@
       "physical_validation": true,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-03-30",
     "first_submission_source": "https://arxiv.org/abs/2604.09651"
   },
@@ -2999,6 +3038,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-04-07",
     "first_submission_source": "https://arxiv.org/abs/2604.05498"
   },
@@ -3064,6 +3104,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-01-20",
     "first_submission_source": "https://arxiv.org/abs/2601.13612"
   },
@@ -3131,6 +3172,7 @@
       "physical_validation": true,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-06-13",
     "first_submission_source": "https://arxiv.org/abs/2606.15165"
   },
@@ -3200,6 +3242,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-06-26",
     "first_submission_source": "https://arxiv.org/abs/2606.28649",
     "defense": {
@@ -3274,6 +3317,7 @@
       "privacy",
       "foundation-model-robotics"
     ],
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-06-15",
     "first_submission_source": "https://arxiv.org/abs/2606.16788"
   },
@@ -3315,6 +3359,7 @@
       "threat-model",
       "defense"
     ],
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-06-09",
     "first_submission_source": "https://arxiv.org/abs/2606.10749"
   },
@@ -3356,6 +3401,7 @@
       "lifecycle",
       "security"
     ],
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-07-30",
     "first_submission_source": "https://arxiv.org/abs/2607.28226"
   },
@@ -3395,6 +3441,7 @@
       "llm-robotics",
       "mitigation"
     ],
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2025-12-17",
     "first_submission_source": "https://arxiv.org/abs/2601.02377"
   },
@@ -3445,6 +3492,7 @@
       "survey",
       "taxonomy"
     ],
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2026-04-26",
     "first_submission_source": "https://arxiv.org/abs/2604.23775"
   },
@@ -3495,6 +3543,7 @@
       "survey",
       "vulnerability-taxonomy"
     ],
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-02-18",
     "first_submission_source": "https://arxiv.org/abs/2502.13175"
   },
@@ -3536,6 +3585,7 @@
       "perspective",
       "closed-loop-safety"
     ],
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2026-02-19",
     "first_submission_source": "https://arxiv.org/abs/2602.17345"
   },
@@ -3599,6 +3649,7 @@
       "physical_validation": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2026-07-15",
     "first_submission_source": "https://arxiv.org/abs/2607.13429"
   },
@@ -3655,6 +3706,7 @@
       "physical_validation": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2026-04-02",
     "first_submission_source": "https://arxiv.org/abs/2604.01570"
   },
@@ -3732,6 +3784,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-10-04",
     "first_submission_source": "https://arxiv.org/abs/2510.03827"
   },
@@ -3821,6 +3874,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -3878,6 +3932,7 @@
       "physical_validation": true,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-09-15",
     "first_submission_source": "https://arxiv.org/abs/2509.12379",
     "defense": {
@@ -3962,6 +4017,7 @@
       "physical_validation": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2026-04-07",
     "first_submission_source": "https://arxiv.org/abs/2604.05378"
   },
@@ -4030,6 +4086,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2026-04-23",
     "first_submission_source": "https://arxiv.org/abs/2604.21192"
   },
@@ -4095,6 +4152,7 @@
       "physical_validation": false,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-05-22",
     "first_submission_source": "https://arxiv.org/abs/2505.16640"
   },
@@ -4164,6 +4222,7 @@
       "physical_validation": true,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-10-13",
     "first_submission_source": "https://arxiv.org/abs/2510.10932"
   },
@@ -4231,6 +4290,7 @@
       "physical_validation": true,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2026-01-07",
     "first_submission_source": "https://arxiv.org/abs/2601.04266"
   },
@@ -4297,6 +4357,7 @@
       "physical_validation": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2026-01-20",
     "first_submission_source": "https://arxiv.org/abs/2601.14323"
   },
@@ -4362,6 +4423,7 @@
       "physical_validation": true,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2024-11-18",
     "first_submission_source": "https://arxiv.org/abs/2411.13587"
   },
@@ -4425,6 +4487,7 @@
       "physical_validation": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-11-20",
     "first_submission_source": "https://arxiv.org/abs/2511.16203"
   },
@@ -4490,6 +4553,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-09-24",
     "first_submission_source": "https://arxiv.org/abs/2509.19870"
   },
@@ -4570,6 +4634,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-11-13",
     "first_submission_source": "https://arxiv.org/abs/2511.10008"
   },
@@ -4640,6 +4705,7 @@
       "physical_validation": true,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2024-10-17",
     "first_submission_source": "https://arxiv.org/abs/2410.13691"
   },
@@ -4704,6 +4770,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-06-03",
     "first_submission_source": "https://arxiv.org/abs/2506.03350"
   },
@@ -4762,6 +4829,7 @@
       "physical_validation": true,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-09-30",
     "first_submission_source": "https://arxiv.org/abs/2510.00181"
   },
@@ -4819,6 +4887,7 @@
       "physical_validation": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-09-20",
     "first_submission_source": "https://arxiv.org/abs/2509.16645"
   },
@@ -4900,6 +4969,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-10-15",
     "first_submission_source": "https://arxiv.org/abs/2510.13237"
   },
@@ -4984,6 +5054,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-03-05",
     "first_submission_source": "https://arxiv.org/abs/2503.03480"
   },
@@ -5062,6 +5133,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-12-09",
     "first_submission_source": "https://arxiv.org/abs/2512.11891"
   },
@@ -5154,6 +5226,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-03-10",
     "first_submission_source": "https://arxiv.org/abs/2503.07885"
   },
@@ -5234,6 +5307,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2023-09-18",
     "first_submission_source": "https://arxiv.org/abs/2309.09919"
   },
@@ -5313,6 +5387,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-06-11",
     "first_submission_source": "https://arxiv.org/abs/2506.09937"
   },
@@ -5390,6 +5465,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-12-27",
     "first_submission_source": "https://arxiv.org/abs/2512.22539"
   },
@@ -5468,6 +5544,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -5542,6 +5619,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2024-12-17",
     "first_submission_source": "https://arxiv.org/abs/2412.13178"
   },
@@ -5627,6 +5705,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-06-19",
     "first_submission_source": "https://arxiv.org/abs/2506.16402"
   },
@@ -5699,6 +5778,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2024-08-08",
     "first_submission_source": "https://arxiv.org/abs/2408.04449",
     "defense": {
@@ -5785,6 +5865,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-03-11",
     "first_submission_source": "https://arxiv.org/abs/2503.08663"
   },
@@ -5860,6 +5941,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2024-05-09",
     "first_submission_source": "https://arxiv.org/abs/2405.05941"
   },
@@ -5936,6 +6018,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2023-06-05",
     "first_submission_source": "https://arxiv.org/abs/2306.03310"
   },
@@ -6001,6 +6084,7 @@
       "physical_validation": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-12-06",
     "first_submission_source": "https://arxiv.org/abs/2512.06387"
   },
@@ -6068,6 +6152,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-01-08",
     "first_submission_source": "https://arxiv.org/abs/2501.04541"
   },
@@ -6111,6 +6196,7 @@
       "security",
       "privacy"
     ],
+    "catalogued_date": "2026-09-02",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -6154,6 +6240,7 @@
       "trustworthiness",
       "maturity-model"
     ],
+    "catalogued_date": "2026-09-02",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -6198,6 +6285,7 @@
       "autonomous-driving",
       "closed-loop-control"
     ],
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-06-30",
     "first_submission_source": "https://arxiv.org/abs/2506.24044"
   },
@@ -6258,6 +6346,7 @@
       "physical_validation": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-04-22",
     "first_submission_source": "https://arxiv.org/abs/2504.16054"
   },
@@ -6326,6 +6415,7 @@
       "physical_validation": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2024-05-27",
     "first_submission_source": "https://arxiv.org/abs/2405.20774",
     "defense": {
@@ -6412,6 +6502,7 @@
       "physical_validation": true,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-11-26",
     "first_submission_source": "https://arxiv.org/abs/2511.21192"
   },
@@ -6475,6 +6566,7 @@
       "physical_validation": true,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2024-12-21",
     "first_submission_source": "https://arxiv.org/abs/2412.16633",
     "defense": {
@@ -6566,6 +6658,7 @@
       "physical_validation": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2024-07-16",
     "first_submission_source": "https://arxiv.org/abs/2407.20242"
   },
@@ -6624,6 +6717,7 @@
       "physical_validation": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2024-11-24",
     "first_submission_source": "https://arxiv.org/abs/2411.15720"
   },
@@ -6709,6 +6803,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-04-15",
     "first_submission_source": "https://arxiv.org/abs/2504.13201"
   },
@@ -6794,6 +6889,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-03-06",
     "first_submission_source": "https://arxiv.org/abs/2503.04392"
   },
@@ -6873,6 +6969,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2024-03-31",
     "first_submission_source": "https://arxiv.org/abs/2404.00540"
   },
@@ -6941,6 +7038,7 @@
       "physical_validation": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-10-10",
     "first_submission_source": "https://arxiv.org/abs/2510.09269"
   },
@@ -7021,6 +7119,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2026-03-05",
     "first_submission_source": "https://arxiv.org/abs/2603.05754"
   },
@@ -7091,6 +7190,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-10-30",
     "first_submission_source": "https://arxiv.org/abs/2510.26406"
   },
@@ -7149,6 +7249,7 @@
       "physical_validation": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2026-04-21",
     "first_submission_source": "https://arxiv.org/abs/2604.19844",
     "defense": {
@@ -7248,6 +7349,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-11-08",
     "first_submission_source": "https://arxiv.org/abs/2511.05889"
   },
@@ -7333,6 +7435,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2026-03-06",
     "first_submission_source": "https://arxiv.org/abs/2603.06001"
   },
@@ -7407,6 +7510,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2024-10-02",
     "first_submission_source": "https://arxiv.org/abs/2410.01971"
   },
@@ -7489,6 +7593,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-12-08",
     "first_submission_source": "https://arxiv.org/abs/2512.07472"
   },
@@ -7579,6 +7684,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-10-02",
     "first_submission_source": "https://arxiv.org/abs/2510.01642"
   },
@@ -7658,6 +7764,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2026-03-11",
     "first_submission_source": "https://arxiv.org/abs/2603.11106"
   },
@@ -7735,6 +7842,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2026-04-14",
     "first_submission_source": "https://arxiv.org/abs/2604.12447"
   },
@@ -7806,6 +7914,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2024-09-19",
     "first_submission_source": "https://arxiv.org/abs/2409.12894"
   },
@@ -7884,6 +7993,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-11-21",
     "first_submission_source": "https://arxiv.org/abs/2511.17781"
   },
@@ -7962,6 +8072,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-07-23",
     "first_submission_source": "https://arxiv.org/abs/2507.17383"
   },
@@ -8035,6 +8146,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-06-17",
     "first_submission_source": "https://arxiv.org/abs/2506.14697"
   },
@@ -8111,6 +8223,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-09-30",
     "first_submission_source": "https://arxiv.org/abs/2509.25885",
     "defense": {
@@ -8208,6 +8321,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-11-20",
     "first_submission_source": "https://arxiv.org/abs/2511.16166"
   },
@@ -8268,6 +8382,7 @@
       "physical_validation": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2026-01-16",
     "first_submission_source": "https://arxiv.org/abs/2601.11475"
   },
@@ -8350,6 +8465,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2024-02-23",
     "first_submission_source": "https://arxiv.org/abs/2402.15197"
   },
@@ -8428,6 +8544,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2026-04-05",
     "first_submission_source": "https://arxiv.org/abs/2604.03956"
   },
@@ -8499,6 +8616,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -8585,6 +8703,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2023-11-06",
     "first_submission_source": "https://arxiv.org/abs/2311.02817"
   },
@@ -8666,6 +8785,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -8755,6 +8875,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2026-04-02",
     "first_submission_source": "https://arxiv.org/abs/2604.01723"
   },
@@ -8839,6 +8960,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-05-15",
     "first_submission_source": "https://arxiv.org/abs/2505.10219"
   },
@@ -8915,6 +9037,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2026-01-20",
     "first_submission_source": "https://arxiv.org/abs/2601.13809"
   },
@@ -8998,6 +9121,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2026-01-21",
     "first_submission_source": "https://arxiv.org/abs/2601.15541"
   },
@@ -9064,6 +9188,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2026-01-15",
     "first_submission_source": "https://arxiv.org/abs/2601.10835"
   },
@@ -9134,6 +9259,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-07-22",
     "first_submission_source": "https://arxiv.org/abs/2507.17049"
   },
@@ -9195,6 +9321,7 @@
       "physical_validation": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -9270,6 +9397,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2024-12-24",
     "first_submission_source": "https://arxiv.org/abs/2412.18194"
   },
@@ -9352,6 +9480,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-11-25",
     "first_submission_source": "https://arxiv.org/abs/2511.20216"
   },
@@ -9413,6 +9542,7 @@
       "physical_validation": false,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-11-20",
     "first_submission_source": "https://arxiv.org/abs/2511.16347"
   },
@@ -9497,6 +9627,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2026-06-22",
     "first_submission_source": "https://arxiv.org/abs/2606.23686"
   },
@@ -9579,6 +9710,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2026-06-25",
     "first_submission_source": "https://arxiv.org/abs/2606.27079"
   },
@@ -9654,6 +9786,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2026-03-30",
     "first_submission_source": "https://arxiv.org/abs/2603.28301"
   },
@@ -9740,6 +9873,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-11-15",
     "first_submission_source": "https://arxiv.org/abs/2511.12149"
   },
@@ -9832,6 +9966,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2026-04-24",
     "first_submission_source": "https://arxiv.org/abs/2604.22591",
     "defense": {
@@ -9935,6 +10070,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2026-05-30",
     "first_submission_source": "https://arxiv.org/abs/2606.00773"
   },
@@ -10022,6 +10158,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2026-07-14",
     "first_submission_source": "https://arxiv.org/abs/2607.12571"
   },
@@ -10086,6 +10223,7 @@
       "physical_validation": true,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2026-01-31",
     "first_submission_source": "https://arxiv.org/abs/2602.00500"
   },
@@ -10172,6 +10310,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-05-22",
     "first_submission_source": "https://arxiv.org/abs/2505.16377"
   },
@@ -10252,6 +10391,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-04-20",
     "first_submission_source": "https://arxiv.org/abs/2504.14650",
     "defense": {
@@ -10355,6 +10495,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2026-02-24",
     "first_submission_source": "https://arxiv.org/abs/2602.21445"
   },
@@ -10413,6 +10554,7 @@
       "physical_validation": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-10-29",
     "first_submission_source": "https://arxiv.org/abs/2510.25616",
     "defense": {
@@ -10507,6 +10649,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2024-09-20",
     "first_submission_source": "https://arxiv.org/abs/2409.13174"
   },
@@ -10580,6 +10723,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-07-21",
     "first_submission_source": "https://arxiv.org/abs/2507.16034"
   },
@@ -10643,6 +10787,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-05-12",
     "first_submission_source": "https://arxiv.org/abs/2505.07766"
   },
@@ -10716,6 +10861,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-05-08",
     "first_submission_source": "https://arxiv.org/abs/2505.05519"
   },
@@ -10754,6 +10900,7 @@
       "human-robot-interaction",
       "dynamic-learning"
     ],
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-09-23",
     "first_submission_source": "https://arxiv.org/abs/2509.19041"
   },
@@ -10841,6 +10988,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2024-10-19",
     "first_submission_source": "https://arxiv.org/abs/2410.15185"
   },
@@ -10921,6 +11069,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-09-19",
     "first_submission_source": "https://arxiv.org/abs/2509.16072"
   },
@@ -11017,6 +11166,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-12-24",
     "first_submission_source": "https://arxiv.org/abs/2512.21220"
   },
@@ -11101,6 +11251,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2023-07-01",
     "first_submission_source": "https://arxiv.org/abs/2307.00329"
   },
@@ -11182,6 +11333,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2023-07-04",
     "first_submission_source": "https://arxiv.org/abs/2307.01928"
   },
@@ -11268,6 +11420,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2026-02-16",
     "first_submission_source": "https://arxiv.org/abs/2602.14551"
   },
@@ -11344,6 +11497,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-09-18",
     "first_submission_source": "https://arxiv.org/abs/2509.15061"
   },
@@ -11426,6 +11580,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-08-22",
     "first_submission_source": "https://arxiv.org/abs/2508.16292"
   },
@@ -11509,6 +11664,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2024-05-27",
     "first_submission_source": "https://arxiv.org/abs/2405.17418"
   },
@@ -11596,6 +11752,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-04-20",
     "first_submission_source": "https://arxiv.org/abs/2504.14588"
   },
@@ -11637,6 +11794,7 @@
       "applications",
       "challenges"
     ],
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-05-07",
     "first_submission_source": "https://arxiv.org/abs/2505.04769"
   },
@@ -11676,6 +11834,7 @@
       "robotic-manipulation",
       "architecture"
     ],
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-08-18",
     "first_submission_source": "https://arxiv.org/abs/2508.13073"
   },
@@ -11713,6 +11872,7 @@
       "adaptation",
       "motor-learning"
     ],
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-06-26",
     "first_submission_source": "https://arxiv.org/abs/2506.20966"
   },
@@ -11750,6 +11910,7 @@
       "policy-representation",
       "vla"
     ],
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-07-02",
     "first_submission_source": "https://arxiv.org/abs/2507.01925"
   },
@@ -11789,6 +11950,7 @@
       "robotic-manipulation",
       "vla"
     ],
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-07-14",
     "first_submission_source": "https://arxiv.org/abs/2507.10672"
   },
@@ -11828,6 +11990,7 @@
       "taxonomy",
       "vla"
     ],
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-09-23",
     "first_submission_source": "https://arxiv.org/abs/2509.19012"
   },
@@ -11868,6 +12031,7 @@
       "inference",
       "deployment"
     ],
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-10-27",
     "first_submission_source": "https://arxiv.org/abs/2510.24795"
   },
@@ -11912,6 +12076,7 @@
       "robotics",
       "deployment"
     ],
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-10-08",
     "first_submission_source": "https://arxiv.org/abs/2510.07077"
   },
@@ -12004,6 +12169,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-08-27",
     "first_submission_source": "https://arxiv.org/abs/2608.26645"
   },
@@ -12095,6 +12261,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-07-09",
     "first_submission_source": "https://arxiv.org/abs/2607.08448"
   },
@@ -12176,6 +12343,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-07-01",
     "first_submission_source": "https://arxiv.org/abs/2607.01111"
   },
@@ -12237,6 +12405,7 @@
       "physical_validation": false,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-07-08",
     "first_submission_source": "https://arxiv.org/abs/2607.07844"
   },
@@ -12322,6 +12491,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-06-30",
     "first_submission_source": "https://arxiv.org/abs/2607.00272"
   },
@@ -12361,6 +12531,7 @@
       "benchmark",
       "vla"
     ],
+    "catalogued_date": "2026-09-02",
     "first_submission_date": "2024-05-23",
     "first_submission_source": "https://arxiv.org/abs/2405.14093"
   },
@@ -12443,6 +12614,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-07",
     "first_submission_date": "2026-09-02",
     "first_submission_source": "https://arxiv.org/abs/2609.03142"
   },
@@ -12522,6 +12694,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-07",
     "first_submission_date": "2026-09-02",
     "first_submission_source": "https://arxiv.org/abs/2609.03055"
   },
@@ -12581,6 +12754,7 @@
       "physical_validation": true,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-09-07",
     "first_submission_date": "2026-09-03",
     "first_submission_source": "https://arxiv.org/abs/2609.03611"
   },
@@ -12661,6 +12835,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-07",
     "first_submission_date": "2026-09-03",
     "first_submission_source": "https://arxiv.org/abs/2609.03699"
   },
@@ -12743,6 +12918,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-07",
     "first_submission_date": "2026-09-03",
     "first_submission_source": "https://arxiv.org/abs/2609.03889"
   },
@@ -12797,6 +12973,7 @@
       "physical_validation": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-09-07",
     "first_submission_date": "2026-09-03",
     "first_submission_source": "https://arxiv.org/abs/2609.03774"
   },
@@ -12861,6 +13038,7 @@
       "physical_validation": true,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-09-08",
     "first_submission_date": "2026-09-04",
     "first_submission_source": "https://arxiv.org/abs/2609.05178"
   },
@@ -12936,6 +13114,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-08",
     "first_submission_date": "2026-09-03",
     "first_submission_source": "https://arxiv.org/abs/2609.04277"
   },
@@ -13021,6 +13200,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-08",
     "first_submission_date": "2026-09-04",
     "first_submission_source": "https://arxiv.org/abs/2609.05266"
   },
@@ -13079,6 +13259,7 @@
       "physical_validation": true,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-09-08",
     "first_submission_date": "2026-09-04",
     "first_submission_source": "https://arxiv.org/abs/2609.05401"
   },
@@ -13167,6 +13348,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-14",
     "first_submission_date": "2026-09-08",
     "first_submission_source": "https://arxiv.org/abs/2609.08444"
   },
@@ -13240,6 +13422,7 @@
       "physical_validation": true,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-14",
     "first_submission_date": "2026-06-11",
     "first_submission_source": "https://arxiv.org/abs/2606.12978"
   },
@@ -13307,6 +13490,7 @@
       "physical_validation": true,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-14",
     "first_submission_date": "2026-09-04",
     "first_submission_source": "https://arxiv.org/abs/2609.05300"
   },
@@ -13370,6 +13554,7 @@
       "physical_validation": false,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-09-14",
     "first_submission_date": "2026-09-10",
     "first_submission_source": "https://arxiv.org/abs/2609.11697",
     "defense": {
@@ -13454,6 +13639,7 @@
       "physical_validation": false,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-09-14",
     "first_submission_date": "2026-09-09",
     "first_submission_source": "https://arxiv.org/abs/2609.10895"
   },
@@ -13520,6 +13706,7 @@
       "physical_validation": true,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-09-14",
     "first_submission_date": "2026-09-10",
     "first_submission_source": "https://arxiv.org/abs/2609.10918",
     "defense": {
@@ -13606,6 +13793,7 @@
       "physical_validation": true,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-09-14",
     "first_submission_date": "2026-09-10",
     "first_submission_source": "https://arxiv.org/abs/2609.11433",
     "defense": {
@@ -13690,6 +13878,7 @@
       "physical_validation": false,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-09-14",
     "first_submission_date": "2026-09-10",
     "first_submission_source": "https://arxiv.org/abs/2609.10951"
   },
@@ -13756,6 +13945,7 @@
       "physical_validation": true,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-09-14",
     "first_submission_date": "2026-09-10",
     "first_submission_source": "https://arxiv.org/abs/2609.11225",
     "defense": {
@@ -13846,6 +14036,7 @@
       "physical_validation": false,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-09-14",
     "first_submission_date": "2026-09-09",
     "first_submission_source": "https://arxiv.org/abs/2609.10726",
     "defense": {
@@ -13932,6 +14123,7 @@
       "physical_validation": false,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-09-14",
     "first_submission_date": "2026-09-10",
     "first_submission_source": "https://arxiv.org/abs/2609.12216",
     "defense": {
@@ -14033,6 +14225,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-14",
     "first_submission_date": "2026-09-11",
     "first_submission_source": "https://arxiv.org/abs/2609.13082"
   },
@@ -14077,6 +14270,7 @@
       "contextual-safety",
       "lifecycle"
     ],
+    "catalogued_date": "2026-09-16",
     "first_submission_date": "2026-09-06",
     "first_submission_source": "https://arxiv.org/abs/2609.06326"
   },
@@ -14119,6 +14313,7 @@
       "certification",
       "operational-authorization"
     ],
+    "catalogued_date": "2026-09-16",
     "first_submission_date": "2026-09-11",
     "first_submission_source": "https://arxiv.org/abs/2609.12932"
   },
@@ -14200,6 +14395,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-16",
     "first_submission_date": "2026-09-14",
     "first_submission_source": "https://arxiv.org/abs/2609.15988"
   },
@@ -14268,6 +14464,7 @@
       "physical_validation": true,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-09-17",
     "first_submission_date": "2026-09-16",
     "first_submission_source": "https://arxiv.org/abs/2609.18122",
     "defense": {
@@ -14349,6 +14546,7 @@
       "physical_validation": true,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-17",
     "first_submission_date": "2026-09-16",
     "first_submission_source": "https://arxiv.org/abs/2609.18324",
     "defense": {
@@ -14436,6 +14634,7 @@
       "physical_validation": true,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-09-17",
     "first_submission_date": "2026-09-16",
     "first_submission_source": "https://arxiv.org/abs/2609.18395",
     "defense": {
@@ -14532,6 +14731,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-17",
     "first_submission_date": "2026-09-16",
     "first_submission_source": "https://arxiv.org/abs/2609.19080"
   },
@@ -14619,6 +14819,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-18",
     "first_submission_date": "2026-05-12",
     "first_submission_source": "https://arxiv.org/abs/2605.12386"
   },
@@ -14688,6 +14889,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-24",
     "first_submission_date": "2026-09-17",
     "first_submission_source": "https://arxiv.org/abs/2609.20822",
     "defense": {
@@ -14772,6 +14974,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-24",
     "first_submission_date": "2026-09-20",
     "first_submission_source": "https://arxiv.org/abs/2609.23896",
     "defense": {
@@ -14853,6 +15056,7 @@
       "physical_validation": true,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-24",
     "first_submission_date": "2026-09-21",
     "first_submission_source": "https://arxiv.org/abs/2609.24062",
     "defense": {
@@ -14931,6 +15135,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-24",
     "first_submission_date": "2026-09-20",
     "first_submission_source": "https://arxiv.org/abs/2609.23731"
   },
@@ -15018,6 +15223,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-24",
     "first_submission_date": "2026-09-18",
     "first_submission_source": "https://arxiv.org/abs/2609.21223"
   },
@@ -15117,6 +15323,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-24",
     "first_submission_date": "2026-09-22",
     "first_submission_source": "https://arxiv.org/abs/2609.26313"
   },
@@ -15204,6 +15411,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-24",
     "first_submission_date": "2026-09-18",
     "first_submission_source": "https://arxiv.org/abs/2609.22462"
   },
@@ -15294,6 +15502,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-24",
     "first_submission_date": "2026-09-22",
     "first_submission_source": "https://arxiv.org/abs/2609.26868"
   },
@@ -15358,6 +15567,7 @@
       "physical_validation": true,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-24",
     "first_submission_date": "2026-09-18",
     "first_submission_source": "https://arxiv.org/abs/2609.21369",
     "defense": {
@@ -15475,6 +15685,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-24",
     "first_submission_date": "2026-09-21",
     "first_submission_source": "https://arxiv.org/abs/2609.24118"
   },
@@ -15562,6 +15773,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-24",
     "first_submission_date": "2026-09-22",
     "first_submission_source": "https://arxiv.org/abs/2609.26292"
   },
@@ -15634,6 +15846,7 @@
       "physical_validation": true,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-27",
     "first_submission_date": "2026-09-24",
     "first_submission_source": "https://arxiv.org/abs/2609.30092",
     "defense": {
@@ -15748,6 +15961,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-28",
     "first_submission_date": "2026-09-25",
     "first_submission_source": "https://arxiv.org/abs/2609.31110"
   },
@@ -15835,6 +16049,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-28",
     "first_submission_date": "2026-09-25",
     "first_submission_source": "https://arxiv.org/abs/2609.31048"
   },
@@ -15921,6 +16136,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-28",
     "first_submission_date": "2026-05-29",
     "first_submission_source": "https://arxiv.org/abs/2605.30834"
   },
@@ -16011,6 +16227,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-28",
     "first_submission_date": "2026-09-24",
     "first_submission_source": "https://arxiv.org/abs/2609.30460"
   },
@@ -16094,6 +16311,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-28",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -16182,6 +16400,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-30",
     "first_submission_date": "2026-09-28",
     "first_submission_source": "https://arxiv.org/abs/2609.34175"
   },
@@ -16271,6 +16490,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-30",
     "first_submission_date": "2026-09-28",
     "first_submission_source": "https://arxiv.org/abs/2609.34356"
   },
@@ -16342,6 +16562,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-09-30",
     "first_submission_date": "2026-06-02",
     "first_submission_source": "https://arxiv.org/abs/2606.03724"
   },
@@ -16432,6 +16653,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-30",
     "first_submission_date": "2026-09-29",
     "first_submission_source": "https://arxiv.org/abs/2609.37681"
   },
@@ -16518,6 +16740,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-30",
     "first_submission_date": "2026-09-29",
     "first_submission_source": "https://arxiv.org/abs/2609.37554"
   },
@@ -16608,6 +16831,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-30",
     "first_submission_date": "2026-09-29",
     "first_submission_source": "https://arxiv.org/abs/2609.37519"
   },
@@ -16695,6 +16919,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-09-30",
     "first_submission_date": "2026-09-29",
     "first_submission_source": "https://arxiv.org/abs/2609.37871"
   },
@@ -16766,6 +16991,7 @@
       "physical_validation": true,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-01",
     "first_submission_date": "2026-08-27",
     "first_submission_source": "https://arxiv.org/abs/2608.26578"
   },
@@ -16859,6 +17085,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-10-01",
     "first_submission_date": "2026-09-30",
     "first_submission_source": "https://arxiv.org/abs/2609.40306"
   },
@@ -16930,6 +17157,7 @@
       "physical_validation": true,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-04",
     "first_submission_date": "2026-09-30",
     "first_submission_source": "https://arxiv.org/abs/2609.39178"
   },
@@ -17025,6 +17253,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-10-05",
     "first_submission_date": "2026-09-30",
     "first_submission_source": "https://arxiv.org/abs/2609.40007"
   },
@@ -17116,6 +17345,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-10-05",
     "first_submission_date": "2026-10-01",
     "first_submission_source": "https://arxiv.org/abs/2610.01083"
   },
@@ -17205,6 +17435,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-10-06",
     "first_submission_date": "2026-10-04",
     "first_submission_source": "https://arxiv.org/abs/2610.05166"
   },
@@ -17289,6 +17520,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-10-07",
     "first_submission_date": "2026-10-06",
     "first_submission_source": "https://arxiv.org/abs/2610.07946"
   },
@@ -17383,6 +17615,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-10-08",
     "first_submission_date": "2026-10-07",
     "first_submission_source": "https://arxiv.org/abs/2610.09496"
   },
@@ -17448,6 +17681,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-08",
     "first_submission_date": "2026-10-07",
     "first_submission_source": "https://arxiv.org/abs/2610.10178"
   },
@@ -17532,6 +17766,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-10-10",
     "first_submission_date": "2026-10-02",
     "first_submission_source": "https://arxiv.org/abs/2610.03498"
   },
@@ -17620,6 +17855,7 @@
       "leaderboard": null,
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-10-10",
     "first_submission_date": "2026-10-05",
     "first_submission_source": "https://arxiv.org/abs/2610.06122",
     "defense": {
@@ -17711,6 +17947,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-10",
     "first_submission_date": "2026-10-07",
     "first_submission_source": "https://arxiv.org/abs/2610.09708"
   },
@@ -17799,6 +18036,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-10-12",
     "first_submission_date": "2026-10-08",
     "first_submission_source": "https://arxiv.org/abs/2610.12467"
   },
@@ -17884,6 +18122,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-10-12",
     "first_submission_date": "2026-10-08",
     "first_submission_source": "https://arxiv.org/abs/2610.12431"
   },
@@ -17950,6 +18189,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-12",
     "first_submission_date": "2026-10-08",
     "first_submission_source": "https://arxiv.org/abs/2610.12123"
   },
@@ -18012,6 +18252,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-12",
     "first_submission_date": "2026-10-08",
     "first_submission_source": "https://arxiv.org/abs/2610.12033"
   },
@@ -18103,6 +18344,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-10-12",
     "first_submission_date": "2026-10-08",
     "first_submission_source": "https://arxiv.org/abs/2610.12432"
   },
@@ -18174,6 +18416,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-12",
     "first_submission_date": "2026-09-17",
     "first_submission_source": "https://arxiv.org/abs/2609.19669"
   },
@@ -18262,6 +18505,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-10-12",
     "first_submission_date": "2026-09-26",
     "first_submission_source": "https://arxiv.org/abs/2609.32550"
   },
@@ -18348,6 +18592,7 @@
       ],
       "curation_status": "catalog-derived"
     },
+    "catalogued_date": "2026-10-13",
     "first_submission_date": "2026-07-01",
     "first_submission_source": "https://arxiv.org/abs/2607.01378"
   },
@@ -18418,6 +18663,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-13",
     "first_submission_date": "2026-10-09",
     "first_submission_source": "https://arxiv.org/abs/2610.13516",
     "defense": {
@@ -18503,6 +18749,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-13",
     "first_submission_date": "2026-10-09",
     "first_submission_source": "https://arxiv.org/abs/2610.13403",
     "defense": {
@@ -18593,6 +18840,7 @@
       "physical_validation": true,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-13",
     "first_submission_date": "2026-10-09",
     "first_submission_source": "https://arxiv.org/abs/2610.13862",
     "defense": {
@@ -18685,6 +18933,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-13",
     "first_submission_date": "2026-10-02",
     "first_submission_source": "https://arxiv.org/abs/2610.02662",
     "defense": {
@@ -18771,6 +19020,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-13",
     "first_submission_date": "2026-09-27",
     "first_submission_source": "https://arxiv.org/abs/2609.33707",
     "defense": {
@@ -18832,6 +19082,7 @@
       "retrieval",
       "fine-tuning"
     ],
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-10-09",
     "first_submission_source": "https://arxiv.org/abs/2610.13578",
     "defense": {
@@ -18891,6 +19142,7 @@
       "motion-quality",
       "latency"
     ],
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-10-09",
     "first_submission_source": "https://arxiv.org/abs/2610.13628"
   },
@@ -18954,6 +19206,7 @@
       "physical_validation": false,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-05-18",
     "first_submission_source": "https://arxiv.org/abs/2605.18593"
   },
@@ -19025,6 +19278,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-04-22",
     "first_submission_source": "https://arxiv.org/abs/2504.15699"
   },
@@ -19080,6 +19334,7 @@
       "physical_validation": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-04-25",
     "first_submission_source": "https://arxiv.org/abs/2604.24790",
     "defense": {
@@ -19169,6 +19424,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-09-27",
     "first_submission_source": "https://arxiv.org/abs/2509.23281"
   },
@@ -19211,6 +19467,7 @@
       "priority-literature-review-2026-10",
       "abstract-verified"
     ],
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-04-01",
     "first_submission_source": "https://arxiv.org/abs/2604.01346"
   },
@@ -19266,6 +19523,7 @@
       "physical_validation": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-05-03",
     "first_submission_source": "https://arxiv.org/abs/2605.01950"
   },
@@ -19307,6 +19565,7 @@
       "priority-literature-review-2026-10",
       "abstract-verified"
     ],
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-10-07",
     "first_submission_source": "https://arxiv.org/abs/2510.05865"
   },
@@ -19376,6 +19635,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2023-07-14",
     "first_submission_source": "https://arxiv.org/abs/2307.07176"
   },
@@ -19447,6 +19707,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-03-15",
     "first_submission_source": "https://arxiv.org/abs/2603.14367"
   },
@@ -19512,6 +19773,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-06-18",
     "first_submission_source": "https://arxiv.org/abs/2506.15065"
   },
@@ -19584,6 +19846,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-04-20",
     "first_submission_source": "https://arxiv.org/abs/2604.18463"
   },
@@ -19645,6 +19908,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-03-11",
     "first_submission_source": "https://arxiv.org/abs/2503.08241"
   },
@@ -19700,6 +19964,7 @@
       "physical_validation": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-04-23",
     "first_submission_source": "https://arxiv.org/abs/2504.17070"
   },
@@ -19773,6 +20038,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-09-02",
     "first_submission_source": "https://arxiv.org/abs/2509.02163"
   },
@@ -19824,6 +20090,7 @@
       "physical_validation": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2024-07-10",
     "first_submission_source": "https://arxiv.org/abs/2407.07392"
   },
@@ -19890,6 +20157,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-04-29",
     "first_submission_source": "https://arxiv.org/abs/2604.26577",
     "defense": {
@@ -19976,6 +20244,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-05-19",
     "first_submission_source": "https://arxiv.org/abs/2605.19328",
     "defense": {
@@ -20057,6 +20326,7 @@
       "physical_validation": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2024-02-14",
     "first_submission_source": "https://arxiv.org/abs/2402.09546",
     "defense": {
@@ -20127,6 +20397,7 @@
       "physical_validation": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2024-08-07",
     "first_submission_source": "https://arxiv.org/abs/2408.03515",
     "defense": {
@@ -20202,6 +20473,7 @@
       "physical_validation": true,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-07-14",
     "first_submission_source": "https://arxiv.org/abs/2507.09857"
   },
@@ -20273,6 +20545,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-05-21",
     "first_submission_source": "https://arxiv.org/abs/2605.22446"
   },
@@ -20333,6 +20606,7 @@
       "physical_validation": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-04-07",
     "first_submission_source": "https://arxiv.org/abs/2604.05595"
   },
@@ -20393,6 +20667,7 @@
       "physical_validation": true,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-04-04",
     "first_submission_source": "https://arxiv.org/abs/2604.03890",
     "defense": {
@@ -20495,6 +20770,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-04-11",
     "first_submission_source": "https://arxiv.org/abs/2604.10055"
   },
@@ -20562,6 +20838,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-02-06",
     "first_submission_source": "https://arxiv.org/abs/2602.06556"
   },
@@ -20620,6 +20897,7 @@
       "physical_validation": true,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-09-03",
     "first_submission_source": "https://arxiv.org/abs/2509.03383"
   },
@@ -20684,6 +20962,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2024-11-27",
     "first_submission_source": "https://arxiv.org/abs/2411.18676"
   },
@@ -20744,6 +21023,7 @@
       "physical_validation": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-02-06",
     "first_submission_source": "https://arxiv.org/abs/2502.03698"
   },
@@ -20810,6 +21090,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-10-15",
     "first_submission_source": "https://arxiv.org/abs/2510.13626"
   },
@@ -20864,6 +21145,7 @@
       "physical_validation": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-11-26",
     "first_submission_source": "https://arxiv.org/abs/2511.21663"
   },
@@ -20920,6 +21202,7 @@
       "physical_validation": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2024-05-29",
     "first_submission_source": "https://arxiv.org/abs/2405.19424"
   },
@@ -20973,6 +21256,7 @@
       "physical_validation": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2024-11-21",
     "first_submission_source": "https://arxiv.org/abs/2411.15222"
   },
@@ -21050,6 +21334,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-03-22",
     "first_submission_source": "https://arxiv.org/abs/2603.21017"
   },
@@ -21118,6 +21403,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-03-24",
     "first_submission_source": "https://arxiv.org/abs/2503.18666"
   },
@@ -21187,6 +21473,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-05-06",
     "first_submission_source": "https://arxiv.org/abs/2605.05340"
   },
@@ -21247,6 +21534,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-04-13",
     "first_submission_source": "https://arxiv.org/abs/2604.11174"
   },
@@ -21315,6 +21603,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-03-12",
     "first_submission_source": "https://arxiv.org/abs/2603.12510",
     "defense": {
@@ -21404,6 +21693,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-05-19",
     "first_submission_source": "https://arxiv.org/abs/2605.20544",
     "defense": {
@@ -21463,6 +21753,7 @@
       "priority-literature-review-2026-10",
       "abstract-verified"
     ],
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-05-06",
     "first_submission_source": "https://arxiv.org/abs/2605.05017"
   },
@@ -21504,6 +21795,7 @@
       "priority-literature-review-2026-10",
       "abstract-verified"
     ],
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-08-24",
     "first_submission_source": "https://arxiv.org/abs/2508.17481"
   },
@@ -21556,6 +21848,7 @@
       "physical_validation": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2024-09-16",
     "first_submission_source": "https://arxiv.org/abs/2409.10071"
   },
@@ -21595,6 +21888,7 @@
       "priority-literature-review-2026-10",
       "abstract-verified"
     ],
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2023-10-12",
     "first_submission_source": "https://arxiv.org/abs/2310.08565"
   },
@@ -21634,6 +21928,7 @@
       "priority-literature-review-2026-10",
       "abstract-verified"
     ],
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-08-07",
     "first_submission_source": "https://arxiv.org/abs/2508.05855"
   },
@@ -21669,6 +21964,7 @@
       "priority-literature-review-2026-10",
       "abstract-verified"
     ],
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-08-28",
     "first_submission_source": "https://arxiv.org/abs/2509.00117"
   },
@@ -21742,6 +22038,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-06-15",
     "first_submission_source": "https://arxiv.org/abs/2606.20698"
   },
@@ -21803,6 +22100,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-01-30",
     "first_submission_source": "https://arxiv.org/abs/2602.07007"
   },
@@ -21864,6 +22162,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-04-08",
     "first_submission_source": "https://arxiv.org/abs/2604.06961"
   },
@@ -21940,6 +22239,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-06-08",
     "first_submission_source": "https://arxiv.org/abs/2606.09258"
   },
@@ -22003,6 +22303,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-09-25",
     "first_submission_source": "https://arxiv.org/abs/2509.21651",
     "defense": {
@@ -22079,6 +22380,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-06-30",
     "first_submission_source": "https://arxiv.org/abs/2607.00218"
   },
@@ -22148,6 +22450,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-09-08",
     "first_submission_source": "https://arxiv.org/abs/2509.06768"
   },
@@ -22221,6 +22524,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-09-23",
     "first_submission_source": "https://arxiv.org/abs/2509.18953",
     "defense": {
@@ -22304,6 +22608,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -22369,6 +22674,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-09-22",
     "first_submission_source": "https://arxiv.org/abs/2509.18311"
   },
@@ -22446,6 +22752,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-06-22",
     "first_submission_source": "https://arxiv.org/abs/2606.23085"
   },
@@ -22517,6 +22824,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-04-01",
     "first_submission_source": "https://arxiv.org/abs/2504.00907"
   },
@@ -22579,6 +22887,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-09-28",
     "first_submission_source": "https://arxiv.org/abs/2509.23690"
   },
@@ -22655,6 +22964,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-11-27",
     "first_submission_source": "https://arxiv.org/abs/2511.22777"
   },
@@ -22716,6 +23026,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -22782,6 +23093,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-07-26",
     "first_submission_source": "https://arxiv.org/abs/2607.23704"
   },
@@ -22860,6 +23172,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -22935,6 +23248,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-03-13",
     "first_submission_source": "https://arxiv.org/abs/2603.13528"
   },
@@ -22997,6 +23311,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -23069,6 +23384,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -23140,6 +23456,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-07-26",
     "first_submission_source": "https://arxiv.org/abs/2607.23870"
   },
@@ -23214,6 +23531,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-06-18",
     "first_submission_source": "https://arxiv.org/abs/2606.20754"
   },
@@ -23265,6 +23583,7 @@
       "physical_validation": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -23328,6 +23647,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -23400,6 +23720,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-12-03",
     "first_submission_source": "https://arxiv.org/abs/2512.04308"
   },
@@ -23476,6 +23797,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-09-10",
     "first_submission_source": "https://arxiv.org/abs/2509.08820"
   },
@@ -23541,6 +23863,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": null,
     "first_submission_source": null,
     "defense": {
@@ -23625,6 +23948,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -23706,6 +24030,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-09-26",
     "first_submission_source": "https://arxiv.org/abs/2510.00037"
   },
@@ -23774,6 +24099,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-02-27",
     "first_submission_source": "https://arxiv.org/abs/2602.24235"
   },
@@ -23843,6 +24169,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-07-16",
     "first_submission_source": "https://arxiv.org/abs/2607.14543"
   },
@@ -23917,6 +24244,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -23955,6 +24283,7 @@
       "priority-literature-review-2026-10",
       "abstract-verified"
     ],
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-03-16",
     "first_submission_source": "https://arxiv.org/abs/2603.16013"
   },
@@ -24024,6 +24353,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2024-05-28",
     "first_submission_source": "https://arxiv.org/abs/2405.17846"
   },
@@ -24094,6 +24424,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -24161,6 +24492,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-03-18",
     "first_submission_source": "https://arxiv.org/abs/2603.18342"
   },
@@ -24222,6 +24554,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -24289,6 +24622,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -24345,6 +24679,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -24401,6 +24736,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -24459,6 +24795,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -24526,6 +24863,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-03-13",
     "first_submission_source": "https://arxiv.org/abs/2503.10628"
   },
@@ -24595,6 +24933,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-06-22",
     "first_submission_source": "https://arxiv.org/abs/2606.23754"
   },
@@ -24670,6 +25009,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -24740,6 +25080,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-06-19",
     "first_submission_source": "https://arxiv.org/abs/2606.21386"
   },
@@ -24804,6 +25145,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": null,
     "first_submission_source": null,
     "defense": {
@@ -24896,6 +25238,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-06-08",
     "first_submission_source": "https://arxiv.org/abs/2606.09749"
   },
@@ -24934,6 +25277,7 @@
       "priority-literature-review-2026-10",
       "abstract-verified"
     ],
+    "catalogued_date": "2026-10-14",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -24969,6 +25313,7 @@
       "priority-literature-review-2026-10",
       "abstract-verified"
     ],
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2024-06-13",
     "first_submission_source": "https://arxiv.org/abs/2406.09239"
   },
@@ -25004,6 +25349,7 @@
       "priority-literature-review-2026-10",
       "abstract-verified"
     ],
+    "catalogued_date": "2026-10-14",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -25043,6 +25389,7 @@
       "priority-literature-review-2026-10",
       "abstract-verified"
     ],
+    "catalogued_date": "2026-10-14",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -25078,6 +25425,7 @@
       "priority-literature-review-2026-10",
       "abstract-verified"
     ],
+    "catalogued_date": "2026-10-14",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -25118,6 +25466,7 @@
       "priority-literature-review-2026-10",
       "abstract-verified"
     ],
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-06-04",
     "first_submission_source": "https://arxiv.org/abs/2606.05660"
   },
@@ -25156,6 +25505,7 @@
       "priority-literature-review-2026-10",
       "abstract-verified"
     ],
+    "catalogued_date": "2026-10-14",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -25191,6 +25541,7 @@
       "priority-literature-review-2026-10",
       "abstract-verified"
     ],
+    "catalogued_date": "2026-10-14",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -25230,6 +25581,7 @@
       "priority-literature-review-2026-10",
       "abstract-verified"
     ],
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-03-28",
     "first_submission_source": "https://arxiv.org/abs/2605.02900"
   },
@@ -25286,6 +25638,7 @@
       "physical_validation": true,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2024-05-21",
     "first_submission_source": "https://arxiv.org/abs/2405.12424"
   },
@@ -25352,6 +25705,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -25433,6 +25787,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2024-11-27",
     "first_submission_source": "https://arxiv.org/abs/2411.18289"
   },
@@ -25498,6 +25853,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-09-02",
     "first_submission_source": "https://arxiv.org/abs/2609.02358"
   },
@@ -25559,6 +25915,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-09-02",
     "first_submission_source": "https://arxiv.org/abs/2609.02811"
   },
@@ -25626,6 +25983,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-09-22",
     "first_submission_source": "https://arxiv.org/abs/2609.26490"
   },
@@ -25695,6 +26053,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-09-22",
     "first_submission_source": "https://arxiv.org/abs/2609.26618",
     "defense": {
@@ -25770,6 +26129,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-09-07",
     "first_submission_source": "https://arxiv.org/abs/2609.07430"
   },
@@ -25841,6 +26201,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-09-17",
     "first_submission_source": "https://arxiv.org/abs/2609.20103"
   },
@@ -25913,6 +26274,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-09-18",
     "first_submission_source": "https://arxiv.org/abs/2609.21246"
   },
@@ -25991,6 +26353,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-09-18",
     "first_submission_source": "https://arxiv.org/abs/2609.21908"
   },
@@ -26065,6 +26428,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-09-23",
     "first_submission_source": "https://arxiv.org/abs/2609.27312"
   },
@@ -26134,6 +26498,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-09-24",
     "first_submission_source": "https://arxiv.org/abs/2609.28984"
   },
@@ -26204,6 +26569,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-09-25",
     "first_submission_source": "https://arxiv.org/abs/2609.31792"
   },
@@ -26273,6 +26639,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-09-26",
     "first_submission_source": "https://arxiv.org/abs/2609.32801"
   },
@@ -26336,6 +26703,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-09-18",
     "first_submission_source": "https://arxiv.org/abs/2609.21838"
   },
@@ -26415,6 +26783,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-08-10",
     "first_submission_source": "https://arxiv.org/abs/2608.09303"
   },
@@ -26487,6 +26856,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-06-07",
     "first_submission_source": "https://arxiv.org/abs/2606.08881"
   },
@@ -26552,6 +26922,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-06-07",
     "first_submission_source": "https://arxiv.org/abs/2606.08508"
   },
@@ -26622,6 +26993,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-06-11",
     "first_submission_source": "https://arxiv.org/abs/2606.13203"
   },
@@ -26688,6 +27060,7 @@
       "leaderboard": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-06-01",
     "first_submission_source": "https://arxiv.org/abs/2606.02277"
   },
@@ -26761,6 +27134,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-06-07",
     "first_submission_source": "https://arxiv.org/abs/2606.08414"
   },
@@ -26800,6 +27174,7 @@
       "priority-literature-review-2026-10",
       "abstract-verified"
     ],
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-12-10",
     "first_submission_source": "https://arxiv.org/abs/2512.11908"
   },
@@ -26839,6 +27214,7 @@
       "priority-literature-review-2026-10",
       "abstract-verified"
     ],
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-05-19",
     "first_submission_source": "https://arxiv.org/abs/2505.12583"
   },
@@ -26909,6 +27285,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-05-24",
     "first_submission_source": "https://arxiv.org/abs/2505.18858"
   },
@@ -26974,6 +27351,7 @@
       "assumptions": [],
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-03-10",
     "first_submission_source": "https://arxiv.org/abs/2503.07404"
   },
@@ -27015,6 +27393,7 @@
     "tags": [
       "full-text-reviewed"
     ],
+    "catalogued_date": "2026-10-15",
     "first_submission_date": "2026-10-13",
     "first_submission_source": "https://arxiv.org/abs/2610.18843"
   },
@@ -27059,6 +27438,7 @@
     "tags": [
       "full-text-reviewed"
     ],
+    "catalogued_date": "2026-10-15",
     "first_submission_date": "2026-10-13",
     "first_submission_source": "https://arxiv.org/abs/2610.18866",
     "defense": {
@@ -27123,6 +27503,7 @@
     "tags": [
       "full-text-reviewed"
     ],
+    "catalogued_date": "2026-10-15",
     "first_submission_date": "2026-10-13",
     "first_submission_source": "https://arxiv.org/abs/2610.18650",
     "defense": {
@@ -27185,6 +27566,7 @@
     "tags": [
       "full-text-reviewed"
     ],
+    "catalogued_date": "2026-10-15",
     "first_submission_date": "2026-10-13",
     "first_submission_source": "https://arxiv.org/abs/2610.18321",
     "defense": {
@@ -27243,6 +27625,7 @@
     "tags": [
       "full-text-reviewed"
     ],
+    "catalogued_date": "2026-10-15",
     "first_submission_date": "2026-10-13",
     "first_submission_source": "https://arxiv.org/abs/2610.17806"
   },
@@ -27284,6 +27667,7 @@
     "tags": [
       "full-text-reviewed"
     ],
+    "catalogued_date": "2026-10-15",
     "first_submission_date": "2026-10-13",
     "first_submission_source": "https://arxiv.org/abs/2610.17799",
     "defense": {
@@ -27343,6 +27727,7 @@
     "tags": [
       "full-text-reviewed"
     ],
+    "catalogued_date": "2026-10-15",
     "first_submission_date": "2026-10-13",
     "first_submission_source": "https://arxiv.org/abs/2610.17746"
   },
@@ -27383,6 +27768,7 @@
     "tags": [
       "full-text-reviewed"
     ],
+    "catalogued_date": "2026-10-15",
     "first_submission_date": "2026-10-12",
     "first_submission_source": "https://arxiv.org/abs/2610.17326"
   },
@@ -27416,6 +27802,7 @@
       "study-protocol",
       "no-empirical-results"
     ],
+    "catalogued_date": "2026-10-15",
     "first_submission_date": "2026-10-12",
     "first_submission_source": "https://arxiv.org/abs/2610.16334"
   },
@@ -27454,6 +27841,7 @@
     "tags": [
       "full-text-reviewed"
     ],
+    "catalogued_date": "2026-10-15",
     "first_submission_date": "2026-10-12",
     "first_submission_source": "https://arxiv.org/abs/2610.16309",
     "defense": {
@@ -27512,6 +27900,7 @@
     "tags": [
       "full-text-reviewed"
     ],
+    "catalogued_date": "2026-10-15",
     "first_submission_date": "2026-10-11",
     "first_submission_source": "https://arxiv.org/abs/2610.15814",
     "defense": {
@@ -27572,6 +27961,7 @@
     "tags": [
       "full-text-reviewed"
     ],
+    "catalogued_date": "2026-10-15",
     "first_submission_date": "2026-10-11",
     "first_submission_source": "https://arxiv.org/abs/2610.15675"
   },
@@ -27611,6 +28001,7 @@
     "tags": [
       "full-text-reviewed"
     ],
+    "catalogued_date": "2026-10-15",
     "first_submission_date": "2026-10-10",
     "first_submission_source": "https://arxiv.org/abs/2610.14682",
     "defense": {
@@ -27664,6 +28055,7 @@
     "tags": [
       "full-text-reviewed"
     ],
+    "catalogued_date": "2026-10-15",
     "first_submission_date": "2026-10-01",
     "first_submission_source": "https://arxiv.org/abs/2610.14034"
   },
@@ -27704,6 +28096,7 @@
     "tags": [
       "full-text-reviewed"
     ],
+    "catalogued_date": "2026-10-15",
     "first_submission_date": "2026-10-12",
     "first_submission_source": "https://arxiv.org/abs/2610.16567",
     "defense": {
@@ -27792,6 +28185,7 @@
       "physical_validation": true,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-15",
     "first_submission_date": "2024-11-27",
     "first_submission_source": "https://arxiv.org/abs/2411.18275"
   },
@@ -27872,6 +28266,7 @@
       ],
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-15",
     "first_submission_date": "2024-09-28",
     "first_submission_source": "https://arxiv.org/abs/2409.19471"
   },
@@ -27936,6 +28331,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-15",
     "first_submission_date": "2024-07-17",
     "first_submission_source": "https://arxiv.org/abs/2407.12784"
   },
@@ -27989,6 +28385,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-15",
     "first_submission_date": "2024-04-22",
     "first_submission_source": "https://arxiv.org/abs/2404.14547",
     "defense": {
@@ -28071,6 +28468,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-15",
     "first_submission_date": "2025-05-28",
     "first_submission_source": "https://arxiv.org/abs/2505.22503",
     "defense": {
@@ -28152,6 +28550,7 @@
       "physical_validation": true,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-15",
     "first_submission_date": "2026-07-06",
     "first_submission_source": "https://arxiv.org/abs/2607.05396"
   },
@@ -28230,6 +28629,7 @@
       ],
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-15",
     "first_submission_date": "2025-11-30",
     "first_submission_source": "https://arxiv.org/abs/2512.01119"
   },
@@ -28296,6 +28696,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-15",
     "first_submission_date": "2025-01-15",
     "first_submission_source": "https://arxiv.org/abs/2501.09167"
   },
@@ -28353,6 +28754,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-15",
     "first_submission_date": "2024-06-28",
     "first_submission_source": "https://arxiv.org/abs/2406.19693"
   },
@@ -28405,6 +28807,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-15",
     "first_submission_date": "2025-11-14",
     "first_submission_source": "https://arxiv.org/abs/2511.11520"
   },
@@ -28460,6 +28863,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-15",
     "first_submission_date": "2024-12-14",
     "first_submission_source": "https://arxiv.org/abs/2412.10726",
     "defense": {
@@ -28561,6 +28965,7 @@
       ],
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-15",
     "first_submission_date": "2024-01-23",
     "first_submission_source": "https://arxiv.org/abs/2401.12963"
   },
@@ -28621,6 +29026,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-15",
     "first_submission_date": "2026-07-22",
     "first_submission_source": "https://arxiv.org/abs/2607.19876"
   },
@@ -28680,6 +29086,7 @@
       "physical_validation": true,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-15",
     "first_submission_date": "2026-09-29",
     "first_submission_source": "https://arxiv.org/abs/2609.37433",
     "defense": {
@@ -28763,6 +29170,7 @@
       "physical_validation": true,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-15",
     "first_submission_date": "2024-03-30",
     "first_submission_source": "https://arxiv.org/abs/2404.00210",
     "defense": {
@@ -28836,6 +29244,7 @@
       "physical_validation": null,
       "curation_status": "abstract-verified"
     },
+    "catalogued_date": "2026-10-15",
     "first_submission_date": "2024-09-25",
     "first_submission_source": "https://arxiv.org/abs/2409.17004",
     "defense": {
@@ -28906,6 +29315,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-15",
     "first_submission_date": null,
     "first_submission_source": null
   },
@@ -28963,6 +29373,7 @@
       "attack-chains",
       "hardware-software-codesign"
     ],
+    "catalogued_date": "2026-10-17",
     "first_submission_date": "2026-10-02",
     "first_submission_source": "https://arxiv.org/abs/2610.14038"
   },
@@ -29046,6 +29457,7 @@
       "leaderboard": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-17",
     "first_submission_date": "2026-10-15",
     "first_submission_source": "https://arxiv.org/abs/2610.21160",
     "defense": {
@@ -29155,6 +29567,7 @@
       "leaderboard": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-17",
     "first_submission_date": "2026-10-15",
     "first_submission_source": "https://arxiv.org/abs/2610.21251",
     "defense": {
@@ -29243,6 +29656,7 @@
       "physical_validation": true,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-17",
     "first_submission_date": "2026-10-15",
     "first_submission_source": "https://arxiv.org/abs/2610.21434",
     "defense": {
@@ -29341,6 +29755,7 @@
       "physical_validation": true,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-17",
     "first_submission_date": "2026-10-15",
     "first_submission_source": "https://arxiv.org/abs/2610.21453",
     "defense": {
@@ -29449,6 +29864,7 @@
       "leaderboard": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-17",
     "first_submission_date": "2026-10-15",
     "first_submission_source": "https://arxiv.org/abs/2610.21686",
     "defense": {
@@ -29538,6 +29954,7 @@
       "physical_validation": true,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-17",
     "first_submission_date": "2026-10-15",
     "first_submission_source": "https://arxiv.org/abs/2610.21985",
     "defense": {
@@ -29634,6 +30051,7 @@
       "physical_validation": false,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-17",
     "first_submission_date": "2026-10-15",
     "first_submission_source": "https://arxiv.org/abs/2610.22092",
     "defense": {
@@ -29736,6 +30154,7 @@
       "leaderboard": null,
       "curation_status": "paper-verified"
     },
+    "catalogued_date": "2026-10-18",
     "first_submission_date": "2026-09-28",
     "first_submission_source": "https://arxiv.org/abs/2610.20627"
   }

@@ -16,6 +16,7 @@ DATA_PATH = ROOT / "data" / "papers.json"
 TAXONOMY_DIR = ROOT / "data" / "taxonomy"
 
 REQUIRED = {
+    "catalogued_date",
     "first_submission_date",
     "first_submission_source",
     "id",
@@ -193,6 +194,18 @@ def validate_submission(errors: list[str], label: str, paper: dict) -> None:
         errors.append(f"{label}: verified submission date requires HTTPS source")
 
 
+def validate_catalogued_date(errors: list[str], label: str, paper: dict) -> None:
+    value = paper.get("catalogued_date")
+    try:
+        if not isinstance(value, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", value):
+            raise ValueError
+        parsed = date.fromisoformat(value)
+        if parsed > date.today():
+            errors.append(f"{label}: catalogued_date must not be in the future")
+    except ValueError:
+        errors.append(f"{label}: invalid catalogued_date")
+
+
 def validate_string_list(
     errors: list[str], label: str, field: str, value: object, allowed: set[str], *, empty_ok: bool = False
 ) -> None:
@@ -343,6 +356,7 @@ def main() -> int:
             errors.append(f"{label}: tags must not be empty")
         validate_threat_model(errors, label, paper.get("threat_model"), taxonomies)
         validate_extensions(errors, label, paper, taxonomies)
+        validate_catalogued_date(errors, label, paper)
         validate_submission(errors, label, paper)
         if not isinstance(paper.get("year"), int) or not 2000 <= paper.get("year", 0) <= 2100:
             errors.append(f"{label}: invalid year")

@@ -90,3 +90,18 @@ Missing dates are excluded from submission-date charts and counted explicitly.
 a missing or mismatched source date fails verification. The focused command
 `python3 scripts/verify_submission_dates.py` checks all populated dates without
 claiming that other bibliographic fields passed.
+
+## Cataloguing date
+
+Every record contains `catalogued_date` as a non-null ISO `YYYY-MM-DD` string.
+It records the UTC date on which that record first entered the versioned catalog,
+not the paper's submission, revision, acceptance, or publication date. Set it
+when adding a record and never change it when updating metadata, replacing a
+URL, recording a venue, or retitling the same work in place.
+
+The landing page's **Recently catalogued** list sorts by this field. Records
+sharing a date use their catalog order as the tie-breaker, with later records
+shown first. The initial migration derives historical values from the UTC date
+of the first Git commit whose `data/papers.json` contains each stable record ID.
+`first_submission_date` remains separate and continues to drive the submission
+timeline.

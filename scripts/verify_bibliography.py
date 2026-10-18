@@ -197,6 +197,16 @@ def source_metadata(url: str) -> SourceMetadata:
     return parse_html_source(url)
 
 
+def bibliography_fingerprint(record: dict[str, Any]) -> dict[str, Any]:
+    """Return fields whose changes can affect primary-source bibliography checks.
+
+    `catalogued_date` tracks catalog history, not paper identity or publication
+    metadata, so a catalog-wide backfill must not force every paper through the
+    network bibliography verifier again.
+    """
+    return {key: value for key, value in record.items() if key != "catalogued_date"}
+
+
 def verify_record(record: dict[str, Any]) -> list[str]:
     label = record.get("id", "record")
     source = source_metadata(record["paper_url"])
@@ -257,7 +267,8 @@ def main() -> int:
         changed_ids = {
             record.get("id")
             for record in records
-            if record.get("id") not in previous_by_id or record != previous_by_id[record.get("id")]
+            if record.get("id") not in previous_by_id
+            or bibliography_fingerprint(record) != bibliography_fingerprint(previous_by_id[record.get("id")])
         }
         selected = [record for record in records if record.get("id") in changed_ids]
         if not selected:

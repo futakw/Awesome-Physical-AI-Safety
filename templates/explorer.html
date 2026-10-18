@@ -178,7 +178,7 @@
     .gh-link { display:inline-flex; align-items:center; gap:6px; padding:6px 11px; border:1px solid var(--line-strong); border-radius:4px; background:transparent; color:var(--ink); text-decoration:none; font-size:12px; font-weight:600; white-space:nowrap; line-height:1.2; }
     .gh-link svg { width:14px; height:14px; flex:none; border:0; border-radius:0; background:transparent; }
     .gh-link:hover { background:var(--signal-soft); }
-    .gh-link.citation-btn { appearance:none; -webkit-appearance:none; box-sizing:border-box; margin:0; cursor:pointer; font-family:inherit; font-size:12px; line-height:normal; }
+    .gh-link.citation-btn { appearance:none; -webkit-appearance:none; box-sizing:border-box; margin:0; cursor:pointer; font-family:inherit; font-size:12px; line-height:1.2; }
     .citation-wrap { position:relative; display:inline-flex; }
     .citation-popover { position:absolute; z-index:20; top:calc(100% + 7px); left:0; width:340px; max-width:80vw; padding:12px 13px; border:1px solid var(--line); border-radius:9px; background:var(--surface); box-shadow:var(--shadow-md); }
     .citation-popover[hidden] { display:none; }
@@ -952,7 +952,11 @@ function renderHeatmap(){
 }
 
 function recentPapers(n=3){
-  return [...papers].sort((a,b)=>(b.first_submission_date||'').localeCompare(a.first_submission_date||'')).slice(0,n);
+  return papers
+    .map((paper,index)=>({paper,index}))
+    .sort((a,b)=>b.paper.catalogued_date.localeCompare(a.paper.catalogued_date)||b.index-a.index)
+    .slice(0,n)
+    .map(({paper})=>paper);
 }
 function renderLpOverview(){
   const mechanisms=MECHANISM_GROUPS, surfaces=SURFACE_GROUPS;
@@ -1001,7 +1005,7 @@ function renderLpOverview(){
     });
   });
   const list=document.getElementById('lp-recent-list');
-  list.innerHTML=recentPapers(3).map((p,i)=>`<li><span class="lp-idx">${String(i+1).padStart(2,'0')}</span><div><div class="lp-t"><a href="${escapeHtml(p.paper_url||'#')}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.title)}</a></div><div class="lp-m">${escapeHtml(p.first_author||'')} · ${escapeHtml(p.venue||'')} ${p.year||''}</div></div></li>`).join('');
+  list.innerHTML=recentPapers(3).map((p,i)=>`<li><span class="lp-idx">${String(i+1).padStart(2,'0')}</span><div><div class="lp-t"><a href="${escapeHtml(p.paper_url||'#')}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.title)}</a></div><div class="lp-m">${escapeHtml(p.first_author||'')} · ${escapeHtml(p.venue||'')} ${p.year||''} · ${escapeHtml(p.catalogued_date)}</div></div></li>`).join('');
 }
 document.getElementById('lp-cta-explore').addEventListener('click',()=>activateView('heatmap'));
 document.getElementById('lp-cta-taxonomy').addEventListener('click',()=>activateView('taxonomy'));
