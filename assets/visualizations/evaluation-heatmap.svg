@@ -11,7 +11,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 </style>
 <rect width="1200" height="620" fill="#FFFFFF"/>
 <text class="title" x="48" y="48">Evaluation environment × metric</text>
-<text class="subtitle" x="48" y="74">Catalog-wide metadata; unspecified marks records awaiting paper-level verification (359 enriched papers).</text>
+<text class="subtitle" x="48" y="74">Catalog-wide metadata; unspecified marks records awaiting paper-level verification (360 enriched papers).</text>
 <text class="axis" text-anchor="middle" x="348.1" y="160.0"><tspan x="348.1" dy="0em">Task</tspan><tspan x="348.1" dy="1.05em">Success Rate</tspan></text>
 <text class="axis" text-anchor="middle" x="444.2" y="160.0"><tspan x="444.2" dy="0em">Robust</tspan><tspan x="444.2" dy="1.05em">Success Rate</tspan></text>
 <text class="axis" text-anchor="middle" x="540.3" y="160.0"><tspan x="540.3" dy="0em">Attack</tspan><tspan x="540.3" dy="1.05em">Success Rate</tspan></text>

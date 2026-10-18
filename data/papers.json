@@ -29658,5 +29658,85 @@
       ],
       "curation_status": "paper-verified"
     }
+  },
+  {
+    "id": "arxiv-2610-20627",
+    "title": "BD-HazardVLM: Probing Vision-Language Models for Latent Defensive-Driving Hazards in Bangladesh Road Scenes",
+    "first_author": "Maruf",
+    "venue": "ECCV 2026 Workshop",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.20627",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Semantic and Ethical Safety",
+    "scope": "autonomous-driving",
+    "risks": [],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "distribution-shift",
+          "perception-error",
+          "planning-error"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "physical-semantic-environment",
+          "task-planning"
+        ],
+        "consequences": []
+      },
+      "curation_status": "paper-verified"
+    },
+    "tags": [
+      "benchmark",
+      "autonomous-driving",
+      "defensive-driving",
+      "geographic-robustness",
+      "latent-hazard",
+      "vision-language-model"
+    ],
+    "evaluation": {
+      "environments": [
+        "offline-dataset"
+      ],
+      "platforms": [
+        "RSUD20K",
+        "TFP-BD"
+      ],
+      "models": [
+        "Qwen2.5-VL-7B",
+        "InternVL3-8B",
+        "MiniCPM-V-4.6"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "ood",
+        "semantic-safety"
+      ],
+      "shift_types": [
+        "background"
+      ],
+      "environment": "unspecified",
+      "base_platforms": [
+        "RSUD20K",
+        "TFP-BD"
+      ],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "paper-verified"
+    },
+    "first_submission_date": "2026-09-28",
+    "first_submission_source": "https://arxiv.org/abs/2610.20627"
   }
 ]

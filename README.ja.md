@@ -9,7 +9,7 @@
 [![Cite this repository](https://img.shields.io/badge/Cite-CITATION.cff-blue.svg)](CITATION.cff)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23348593.svg)](https://doi.org/10.5281/zenodo.23348593)
 [![LLM-assisted](https://img.shields.io/badge/curation-%F0%9F%A4%96%20LLM--assisted-critical.svg)](docs/agent/daily-curation-workflow.md)
-[![Licenses: MIT + CC BY 4.0](https://img.shields.io/badge/Licenses-MIT%20%2B%20CC%20BY%204.0-3FA89B?style=flat)](LICENSES.md) [![Papers](https://img.shields.io/badge/Papers-418-6F9FEF?style=flat)](https://futakw.github.io/Awesome-Physical-AI-Safety/) [![Update](https://img.shields.io/badge/Update-Daily-D47A5D?style=flat)](docs/agent/daily-curation-workflow.md)
+[![Licenses: MIT + CC BY 4.0](https://img.shields.io/badge/Licenses-MIT%20%2B%20CC%20BY%204.0-3FA89B?style=flat)](LICENSES.md) [![Papers](https://img.shields.io/badge/Papers-419-6F9FEF?style=flat)](https://futakw.github.io/Awesome-Physical-AI-Safety/) [![Update](https://img.shields.io/badge/Update-Daily-D47A5D?style=flat)](docs/agent/daily-curation-workflow.md)
 
 **[🔎 インタラクティブな研究ランドスケープを見る →](https://futakw.github.io/Awesome-Physical-AI-Safety/#heatmap)** — チャートのセルをクリックすると、該当する論文の一覧が開きます。
 
@@ -174,7 +174,7 @@ Defense・Evaluation・Benchmarkの拡張メタデータについては[docs/ref
 
 </details>
 
-**現在のカタログには418件の論文があります。**
+**現在のカタログには419件の論文があります。**
 
 <a id="surveys"></a>
 
@@ -844,6 +844,7 @@ Defense・Evaluation・Benchmarkの拡張メタデータについては[docs/ref
 
 | 論文 | 発表先 | 評価されたリスク | Threat Model |
 |---|---:|---|---|
+| **[BD-HazardVLM: Probing Vision-Language Models for Latent Defensive-Driving Hazards in Bangladesh Road Scenes](https://arxiv.org/abs/2610.20627)**<br><sub>Maruf et al.</sub> | ECCV 2026 Workshop 2026 | — | ![推論](https://img.shields.io/badge/-%E6%8E%A8%E8%AB%96-6F9FEF?style=flat) ![複数サーフェス](https://img.shields.io/badge/-%E8%A4%87%E6%95%B0%E3%82%B5%E3%83%BC%E3%83%95%E3%82%A7%E3%82%B9-D47A5D?style=flat) <br> ![評価カバレッジ](https://img.shields.io/badge/-%E8%A9%95%E4%BE%A1%E3%82%AB%E3%83%90%E3%83%AC%E3%83%83%E3%82%B8-2F7F9B?style=flat) |
 | **[Benchmarking Jailbreak Guardrails for Embodied Agents](https://arxiv.org/abs/2610.06122)**<br><sub>Wang et al.</sub> | arXiv 2026 | ![タスク](https://img.shields.io/badge/-%E3%82%BF%E3%82%B9%E3%82%AF-6F9FEF?style=flat) ![物理的安全性](https://img.shields.io/badge/-%E7%89%A9%E7%90%86%E7%9A%84%E5%AE%89%E5%85%A8%E6%80%A7-B88A24?style=flat) ![セキュリティ/プライバシー](https://img.shields.io/badge/-%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%2F%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC-D96F8A?style=flat) | ![推論](https://img.shields.io/badge/-%E6%8E%A8%E8%AB%96-6F9FEF?style=flat) ![複数サーフェス](https://img.shields.io/badge/-%E8%A4%87%E6%95%B0%E3%82%B5%E3%83%BC%E3%83%95%E3%82%A7%E3%82%B9-D47A5D?style=flat) <br> ![評価カバレッジ](https://img.shields.io/badge/-%E8%A9%95%E4%BE%A1%E3%82%AB%E3%83%90%E3%83%AC%E3%83%83%E3%82%B8-2F7F9B?style=flat) |
 | **[Benchmarking the Safety of Large Language Models for Robotic Health Attendant Control](https://arxiv.org/abs/2604.26577)**<br><sub>Nakao et al.</sub> | Royal Society Open Science 2026 | ![倫理・社会](https://img.shields.io/badge/-%E5%80%AB%E7%90%86%E3%83%BB%E7%A4%BE%E4%BC%9A-9873D4?style=flat) | ![推論](https://img.shields.io/badge/-%E6%8E%A8%E8%AB%96-6F9FEF?style=flat) ![ユーザー指示 + タスク計画](https://img.shields.io/badge/-%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E6%8C%87%E7%A4%BA_%2B_%E3%82%BF%E3%82%B9%E3%82%AF%E8%A8%88%E7%94%BB-D47A5D?style=flat) <br> ![評価カバレッジ](https://img.shields.io/badge/-%E8%A9%95%E4%BE%A1%E3%82%AB%E3%83%90%E3%83%AC%E3%83%83%E3%82%B8-2F7F9B?style=flat) |
 | **[ConflictVLA-Bench: Benchmarking Behavioral Responses of Vision-Language-Action Models to Premise Conflicts](https://arxiv.org/abs/2609.31792)** [![GitHub stars](https://img.shields.io/github/stars/EmbodiedAISurvey/ConflictVLA-Bench?style=social)](https://github.com/EmbodiedAISurvey/ConflictVLA-Bench)<br><sub>Hou et al.</sub> | arXiv 2026 | ![タスク](https://img.shields.io/badge/-%E3%82%BF%E3%82%B9%E3%82%AF-6F9FEF?style=flat) | ![推論](https://img.shields.io/badge/-%E6%8E%A8%E8%AB%96-6F9FEF?style=flat) ![ユーザー指示 + 環境中の意味的コンテンツ](https://img.shields.io/badge/-%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E6%8C%87%E7%A4%BA_%2B_%E7%92%B0%E5%A2%83%E4%B8%AD%E3%81%AE%E6%84%8F%E5%91%B3%E7%9A%84%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84-D47A5D?style=flat) <br> ![評価カバレッジ](https://img.shields.io/badge/-%E8%A9%95%E4%BE%A1%E3%82%AB%E3%83%90%E3%83%AC%E3%83%83%E3%82%B8-2F7F9B?style=flat) |

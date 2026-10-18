@@ -9,7 +9,7 @@
 [![Cite this repository](https://img.shields.io/badge/Cite-CITATION.cff-blue.svg)](CITATION.cff)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23348593.svg)](https://doi.org/10.5281/zenodo.23348593)
 [![LLM-assisted](https://img.shields.io/badge/curation-%F0%9F%A4%96%20LLM--assisted-critical.svg)](docs/agent/daily-curation-workflow.md)
-[![Licenses: MIT + CC BY 4.0](https://img.shields.io/badge/Licenses-MIT%20%2B%20CC%20BY%204.0-3FA89B?style=flat)](LICENSES.md) [![Papers](https://img.shields.io/badge/Papers-418-6F9FEF?style=flat)](https://futakw.github.io/Awesome-Physical-AI-Safety/) [![Update](https://img.shields.io/badge/Update-Daily-D47A5D?style=flat)](docs/agent/daily-curation-workflow.md)
+[![Licenses: MIT + CC BY 4.0](https://img.shields.io/badge/Licenses-MIT%20%2B%20CC%20BY%204.0-3FA89B?style=flat)](LICENSES.md) [![Papers](https://img.shields.io/badge/Papers-419-6F9FEF?style=flat)](https://futakw.github.io/Awesome-Physical-AI-Safety/) [![Update](https://img.shields.io/badge/Update-Daily-D47A5D?style=flat)](docs/agent/daily-curation-workflow.md)
 
 **[🔎 Explore the interactive research landscape →](https://futakw.github.io/Awesome-Physical-AI-Safety/#heatmap)** — open any chart cell to inspect its contributing papers.
 
@@ -172,7 +172,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 </details>
 
-**418 papers in the current catalog.**
+**419 papers in the current catalog.**
 
 <a id="surveys"></a>
 
@@ -842,6 +842,7 @@ For detailed definitions and classification criteria, see the [full taxonomy](do
 
 | Paper | Venue | Measured Risk | Threat Model |
 |---|---:|---|---|
+| **[BD-HazardVLM: Probing Vision-Language Models for Latent Defensive-Driving Hazards in Bangladesh Road Scenes](https://arxiv.org/abs/2610.20627)**<br><sub>Maruf et al.</sub> | ECCV 2026 Workshop 2026 | — | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Multiple surfaces](https://img.shields.io/badge/-Multiple_surfaces-D47A5D?style=flat) <br> ![Evaluation coverage](https://img.shields.io/badge/-Evaluation_coverage-2F7F9B?style=flat) |
 | **[Benchmarking Jailbreak Guardrails for Embodied Agents](https://arxiv.org/abs/2610.06122)**<br><sub>Wang et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) ![Physical](https://img.shields.io/badge/-Physical-B88A24?style=flat) ![Security/Privacy](https://img.shields.io/badge/-Security%2FPrivacy-D96F8A?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![Multiple surfaces](https://img.shields.io/badge/-Multiple_surfaces-D47A5D?style=flat) <br> ![Evaluation coverage](https://img.shields.io/badge/-Evaluation_coverage-2F7F9B?style=flat) |
 | **[Benchmarking the Safety of Large Language Models for Robotic Health Attendant Control](https://arxiv.org/abs/2604.26577)**<br><sub>Nakao et al.</sub> | Royal Society Open Science 2026 | ![Ethics](https://img.shields.io/badge/-Ethics-9873D4?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![User Instruction + Task Planning](https://img.shields.io/badge/-User_Instruction_%2B_Task_Planning-D47A5D?style=flat) <br> ![Evaluation coverage](https://img.shields.io/badge/-Evaluation_coverage-2F7F9B?style=flat) |
 | **[ConflictVLA-Bench: Benchmarking Behavioral Responses of Vision-Language-Action Models to Premise Conflicts](https://arxiv.org/abs/2609.31792)** [![GitHub stars](https://img.shields.io/github/stars/EmbodiedAISurvey/ConflictVLA-Bench?style=social)](https://github.com/EmbodiedAISurvey/ConflictVLA-Bench)<br><sub>Hou et al.</sub> | arXiv 2026 | ![Task](https://img.shields.io/badge/-Task-6F9FEF?style=flat) | ![Inference](https://img.shields.io/badge/-Inference-6F9FEF?style=flat) ![User Instruction + Physical Semantic Environment](https://img.shields.io/badge/-User_Instruction_%2B_Physical_Semantic_Environment-D47A5D?style=flat) <br> ![Evaluation coverage](https://img.shields.io/badge/-Evaluation_coverage-2F7F9B?style=flat) |
