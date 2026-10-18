@@ -833,14 +833,14 @@
     "year": 2024,
     "paper_url": "https://arxiv.org/abs/2402.10340",
     "code_url": null,
-    "section": "system-security",
-    "subsection": "Cross-Layer System Security",
+    "section": "ood-generalization",
+    "subsection": "OOD and Generalization",
     "scope": "embodied-agent",
     "risks": [
       "task-reliability"
     ],
     "threat_model": {
-      "kind": "adversarial",
+      "kind": "non-adversarial",
       "lifecycle": [
         "inference"
       ],

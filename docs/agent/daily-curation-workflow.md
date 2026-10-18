@@ -17,6 +17,8 @@ From the repository root, read:
 
 Inspect the current branch, remote, and working tree before editing. Preserve unrelated changes; do not reset or overwrite them.
 
+Do not load the full research-hub `PAPERS.md` or all recent archive prose for every run. Use the compact automation memory plus a heading/ID/date scan of `PAPERS.md` to identify existing work, and read only the latest survey or the specific archive blocks needed to establish the coverage boundary. Historical summaries remain the source of truth, but they are not a required full-context input.
+
 ## 2. Search and Verify
 
 1. Search primary sources for new papers and material revisions since the previous run.
@@ -26,6 +28,10 @@ Inspect the current branch, remote, and working tree before editing. Preserve un
 5. Check normalized title, paper URL, arXiv ID, DOI, OpenReview ID, and title history before adding a record. Update renamed or materially revised work in place.
 
 Crossref, search results, and other reading lists are discovery aids, not substitutes for a primary source.
+
+### Cost-aware screening
+
+Use a two-stage screen for daily runs. First compare the title, abstract or summary, date, identifier, and catalog ID/title index. Reject duplicates, out-of-scope papers, and papers without an explicit physical-AI safety or trustworthy-deployment connection without opening the full paper. Read the full primary source only for shortlisted candidates, materially revised records, or ambiguous scope/metadata cases.
 
 ## 3. Decide Scope
 
