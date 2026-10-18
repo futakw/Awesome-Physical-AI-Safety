@@ -154,7 +154,8 @@
     .section-group > summary:hover { background:var(--signal-soft); }
     .section-group > summary span { margin-left:6px; color:var(--muted); font-size:12px; font-weight:500; }
     .subsection-group { padding:0 12px 14px; }
-    .subsection-title { position:sticky; z-index:3; display:flex; align-items:center; gap:7px; min-height:40px; margin:0; padding:10px 2px 7px; border-bottom:1px solid var(--line); background:var(--surface); box-shadow:var(--shadow-sm); color:var(--muted); font-size:12px; font-weight:700; }
+    .subsection-title { position:sticky; z-index:3; display:flex; align-items:center; gap:7px; min-height:40px; margin:0; padding:10px 2px 7px; border-bottom:1px solid var(--line); background:var(--surface); box-shadow:var(--shadow-sm); color:var(--muted); font-size:12px; font-weight:700; cursor:pointer; list-style-position:inside; }
+    .subsection-title:hover { color:var(--ink); background:var(--surface-2); }
     .subsection-title span { color:var(--muted); font-weight:500; }
     .catalog-table { width:100%; border-collapse:collapse; font-size:13px; }
     .catalog-table th { position:sticky; z-index:2; background:var(--surface-2); color:var(--muted); text-align:left; font-size:11px; letter-spacing:.02em; text-transform:uppercase; }
@@ -875,7 +876,7 @@ function renderPaperTable(view, list=viewPapers(view), filterLabel='') {
     const subsections=[...bySubsection].sort((a,b)=>d3.descending(a[1].length,b[1].length)||d3.ascending(a[0],b[0]));
     const contents=subsections.map(([subsection,subsectionPapers])=>{
       const sorted=[...subsectionPapers].sort((a,b)=>d3.descending(a.year,b.year)||d3.ascending(a.title,b.title));
-      return `<div class="subsection-group"><div class="subsection-title">${escapeHtml(subsectionLabel(subsection))} <span>· ${countLabel(sorted.length)}</span></div><table class="catalog-table"><thead><tr><th>${I18N[currentLang].tablePaper}</th><th>${I18N[currentLang].tableVenue}</th><th>${I18N[currentLang].tableRisk}</th><th>${I18N[currentLang].tableThreat}</th></tr></thead><tbody>${paperRows(sorted)}</tbody></table></div>`;
+      return `<details class="subsection-group" open><summary class="subsection-title">${escapeHtml(subsectionLabel(subsection))} <span>· ${countLabel(sorted.length)}</span></summary><table class="catalog-table"><thead><tr><th>${I18N[currentLang].tablePaper}</th><th>${I18N[currentLang].tableVenue}</th><th>${I18N[currentLang].tableRisk}</th><th>${I18N[currentLang].tableThreat}</th></tr></thead><tbody>${paperRows(sorted)}</tbody></table></details>`;
     }).join('');
     return `<details class="section-group" open><summary>${escapeHtml(sectionLabel(section))}<span>${countLabel(sectionPapers.length)}</span></summary>${contents}</details>`;
   }).join('');
