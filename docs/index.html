@@ -883,21 +883,27 @@ function renderPaperTable(view, list=viewPapers(view), filterLabel='') {
   applyStickyOffsets(view);
 }
 function applyStickyOffsets(view){
+  const topbar=document.querySelector('.topbar');
+  const topbarH=topbar?topbar.offsetHeight:0;
   const tableHead=document.querySelector(`#${view}-table .catalog-table-head`);
   const tableHeadH=tableHead?tableHead.offsetHeight:0;
+  if(tableHead) tableHead.style.top=`${topbarH}px`;
   document.querySelectorAll(`#${view}-table .section-group`).forEach(group=>{
     const summary=group.querySelector(':scope > summary');
     const summaryH=summary?summary.offsetHeight:0;
-    if(summary) summary.style.top=`${tableHeadH}px`;
+    if(summary) summary.style.top=`${topbarH+tableHeadH}px`;
     group.querySelectorAll(':scope > .subsection-group').forEach(subgroup=>{
       const title=subgroup.querySelector('.subsection-title');
       if(!title) return;
-      title.style.top=`${tableHeadH+summaryH}px`;
+      title.style.top=`${topbarH+tableHeadH+summaryH}px`;
       const titleH=title.offsetHeight;
-      subgroup.querySelectorAll('.catalog-table th').forEach(th=>{ th.style.top=`${tableHeadH+summaryH+titleH}px`; });
+      subgroup.querySelectorAll('.catalog-table th').forEach(th=>{ th.style.top=`${topbarH+tableHeadH+summaryH+titleH}px`; });
     });
   });
 }
+window.addEventListener('resize',()=>{
+  ['timeline','heatmap','risk','defense','target','outcome-risk'].forEach(applyStickyOffsets);
+});
 function filterPaperTable(view,list,label){ renderPaperTable(view,list,label); document.getElementById(`${view}-table`).scrollIntoView({behavior:'smooth',block:'start'}); pinned=false; tooltip.style('opacity',0); }
 const orderedThreatMechanisms = () => { const concrete=filteredPapers().filter(p=>p.threat_model.kind!=='survey'); const exploded=concrete.flatMap(p=>threatValues(p,'mechanism').map(m=>({p,m}))); const counts=d3.rollup(exploded,v=>new Set(v.map(d=>d.p.id)).size,d=>d.m); const top=[...counts].sort((a,b)=>d3.descending(a[1],b[1])).slice(0,10).map(d=>d[0]); return orderByGroups(top,MECHANISM_GROUPS); };
 let pinned = false;
