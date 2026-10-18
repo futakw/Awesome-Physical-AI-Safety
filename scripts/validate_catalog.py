@@ -226,7 +226,7 @@ def validate_venue_ranks(errors: list[str], papers: list[dict]) -> None:
         return
     paper_venues = {paper.get("venue") for paper in papers}
     missing = sorted(paper_venues - set(venues))
-    extra = sorted(set(venues) - paper_venues)
+    extra = sorted(venue for venue in set(venues) - paper_venues if not venues[venue].get("parent_only"))
     if missing:
         errors.append(f"data/venue_ranks.json: missing catalog venues {missing}")
     if extra:
@@ -250,6 +250,8 @@ def validate_venue_ranks(errors: list[str], papers: list[dict]) -> None:
             errors.append(f"{label}: checked_date must be YYYY-MM-DD")
         if not valid_url(record.get("source_url")):
             errors.append(f"{label}: source_url must be an HTTPS URL")
+        if "parent_only" in record and not isinstance(record["parent_only"], bool):
+            errors.append(f"{label}: parent_only must be boolean")
 
 
 def validate_string_list(

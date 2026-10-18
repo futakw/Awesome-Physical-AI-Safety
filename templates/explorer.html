@@ -78,7 +78,7 @@
     nav { display:flex; gap:2px; flex-wrap:wrap; }
     nav button { border:none; background:transparent; border-radius:3px; padding:7px 10px; font-size:12.5px; font-weight:600; color:var(--muted); transition:color .15s ease, background .15s ease; }
     nav button:hover { color:var(--ink); background:var(--surface-2); }
-    nav button[aria-pressed="true"] { color:var(--ink); background:var(--surface-2); font-weight:700; }
+    nav button[aria-pressed="true"] { color:var(--ink); background:var(--surface-2); }
     .author { margin:0 0 0 auto; color:var(--muted); font-size:12px; white-space:nowrap; }
     .author a { color:var(--ink); text-underline-offset:3px; }
     .author a:hover { color:var(--signal); }
@@ -121,7 +121,11 @@
     .leaf-family-group:not(:first-child) { padding-top:6px; border-top:1px solid var(--line); }
     .leaf-family { display:flex; align-items:flex-start; gap:7px; padding:4px 2px; font-size:12px; font-weight:700; color:var(--muted); cursor:pointer; }
     .leaf-family input { margin:3px 0 0; flex:none; }
+    .leaf-family small { font-size:11px; font-weight:500; color:var(--muted); }
     .leaf-family-group .leaf-option { padding-left:20px; }
+    /* Parent variants are collapsed into the same visible venue leaf level. */
+    .venue-parent-leaf { margin-left:0; }
+    .venue-parent-leaf .leaf-option { padding-left:20px; font-weight:400; }
     .filter-clear { min-height:38px; }
     .filter-clear:disabled { opacity:.48; cursor:default; }
     .filter-meta { display:flex; align-items:baseline; gap:8px 14px; flex-wrap:wrap; margin-top:8px; }
@@ -205,7 +209,7 @@
     :root[data-theme="dark"] { --grid-0:#1B1F26; --grid-1:#3A2A1C; --grid-2:#6B4522; --grid-3:#B2601F; --grid-4:var(--accent); }
     .lp-eyebrow { display:inline-flex; align-items:center; gap:8px; font:700 11.5px/1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; letter-spacing:.12em; color:var(--signal); text-transform:uppercase; margin-bottom:18px; }
     .lp-eyebrow::before { content:''; width:7px; height:7px; background:var(--signal); border-radius:1px; box-shadow:0 0 0 3px var(--signal-soft); }
-    .lp-hero { position:relative; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:56px; align-items:start; padding:30px 0 44px; border-bottom:1px solid var(--line); margin-bottom:44px; }
+    .lp-hero { position:relative; display:grid; grid-template-columns:minmax(0,1fr) min(760px, 62vw); gap:24px; align-items:start; padding:30px 0 44px; border-bottom:1px solid var(--line); margin-bottom:44px; }
     .lp-hero::before {
       content:''; position:absolute; top:0; bottom:0; left:calc(50% - 50vw); width:100vw; pointer-events:none; opacity:.5; z-index:0;
       background-image:
@@ -215,7 +219,7 @@
       -webkit-mask-image:radial-gradient(ellipse 70% 60% at 18% 20%, black, transparent 72%);
       mask-image:radial-gradient(ellipse 70% 60% at 18% 20%, black, transparent 72%);
     }
-    .lp-hero > * { position:relative; z-index:1; }
+    .lp-hero > * { position:relative; z-index:1; min-width:0; }
     .lp-tick { position:absolute; z-index:1; width:14px; height:14px; opacity:.55; }
     .lp-tick::before,.lp-tick::after { content:''; position:absolute; background:var(--ink-faint); }
     .lp-tick::before { top:50%; left:0; right:0; height:1px; transform:translateY(-.5px); }
@@ -234,13 +238,14 @@
     .lp-btn-solid:hover { filter:brightness(1.07); }
     .lp-btn-line { background:transparent; border:1px solid var(--line-strong); color:var(--ink); }
     .lp-btn-line:hover { background:var(--surface-2); }
-    .lp-panel { background:var(--surface); border:1px solid var(--line); border-radius:6px; box-shadow:var(--shadow-md); }
+    .lp-panel { width:100%; min-width:0; background:var(--surface); border:1px solid var(--line); border-radius:6px; box-shadow:var(--shadow-md); }
     .lp-panel-tabs { padding:0 16px; border-bottom:1px solid var(--line); }
     .lp-panel-tabs span.lp-active { display:inline-block; padding:14px 4px 11px; font-size:13px; font-weight:700; color:var(--ink); border-bottom:2px solid var(--accent); }
-    .lp-panel-body { padding:20px 20px 22px; }
+    .lp-panel-body { padding:20px 18px 22px; }
     .lp-panel-head h3 { margin:0; font-size:14.5px; font-weight:700; letter-spacing:-.01em; }
     .lp-panel-sub { font-size:12px; color:var(--ink-faint); margin:0 0 14px; }
-    .lp-heat { display:grid; gap:3px; margin-bottom:4px; }
+    .lp-heat { display:grid; min-width:0; gap:2px; margin-bottom:4px; }
+    .lp-colhead,.lp-rowhead { min-width:0; overflow-wrap:anywhere; }
     .lp-colhead { font:600 9.5px/1.2 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; color:var(--ink-faint); text-align:center; align-self:end; padding-bottom:5px; letter-spacing:.01em; }
     .lp-rowhead { font:600 9.5px/1.2 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; color:var(--ink-faint); letter-spacing:.01em; display:flex; align-items:center; padding-right:8px; justify-content:flex-end; text-align:right; }
     .lp-cell { aspect-ratio:1/.72; border-radius:2px; display:flex; align-items:center; justify-content:center; font:700 10.5px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; color:var(--ink); cursor:pointer; }
@@ -288,7 +293,7 @@
     .lp-readme-link { margin:0 0 20px; }
     .lp-readme-link a { color:var(--signal); font-size:13px; font-weight:600; text-decoration:none; }
     .lp-readme-link a:hover { text-decoration:underline; }
-    @media (max-width:860px) { .lp-hero { grid-template-columns:1fr; } .lp-axis-grid,.lp-features { grid-template-columns:repeat(2,1fr); } .lp-axis:nth-child(3n) { border-right:1px solid var(--line); } .lp-axis:nth-child(2n) { border-right:none; } }
+    @media (max-width:860px) { .lp-hero { grid-template-columns:1fr; } .lp-panel { width:100%; } .lp-axis-grid,.lp-features { grid-template-columns:repeat(2,1fr); } .lp-axis:nth-child(3n) { border-right:1px solid var(--line); } .lp-axis:nth-child(2n) { border-right:none; } }
     @media (max-width:560px) { .lp-axis-grid,.lp-features { grid-template-columns:1fr; } .lp-axis { border-right:none !important; } }
   </style>
 </head>
@@ -490,15 +495,78 @@ const TARGET_GROUPS = [
   {name:'action-system-operation',label:'Action & System Operation',short:'Action/System',labelJa:'行動・システム運用',values:['action-generation','robot-executor','runtime-monitor','shared-system-state']},
   {name:'data-privacy-assets',label:'Data & Privacy Assets',short:'Data/Privacy',labelJa:'データ・プライバシー資産',values:['private-data']},
 ];
-const VENUE_RANK_GROUPS = [
-  {name:'a-star',label:'A*',labelJa:'A*',values:['A*']},
-  {name:'a',label:'A',labelJa:'A',values:['A']},
-  {name:'b',label:'B',labelJa:'B',values:['B']},
-  {name:'c',label:'C',labelJa:'C',values:['C']},
-  {name:'regional',label:'Regional / National',labelJa:'Regional / National',values:['regional']},
-  {name:'other',label:'Other',labelJa:'Other',values:['other']},
-  {name:'unranked',label:'Unranked / not covered',labelJa:'未ランク・対象外',values:['unranked']},
+const VENUE_RANK_ORDER = ['A*','A','B','C','regional','other','unranked'];
+const normalizeVenueLabel = venue => {
+  const raw=String(venue);
+  if(raw==='NeurIPS Datasets and Benchmarks') return 'NeurIPS';
+  return raw.replace(/\b(?:19|20)\d{2}\b/g,'').replace(/\s{2,}/g,' ').trim();
+};
+const venueFilterValue = venue => `venue:${normalizeVenueLabel(venue)}`;
+const VENUE_PARENT_ALIASES = {
+  'NeurIPS Datasets and Benchmarks':'NeurIPS',
+  'NeurIPS Workshop':'NeurIPS',
+  'Findings of ACL':'ACL',
+  'ACL':'ACL',
+  'ECCV 2026 Workshop':'ECCV',
+  'HRI Companion':'HRI',
+  'IROS 2026':'IROS',
+  'IROS 2026 Workshop':'IROS',
+  'HEAI at IROS':'IROS',
+  'RSS Workshop':'RSS',
+  'RSS':'RSS',
+  'AdaptFM@ICML':'ICML',
+  'LAMPS@CCS':'CCS',
+  'CCS':'CCS',
+};
+const VENUE_PARENT_NAMES = new Set(['NeurIPS','ECCV','HRI','IROS','ACL','ICML','RSS','CCS']);
+const VENUE_CATALOG_NAMES = new Set(papers.map(p=>p.venue));
+const venueParentName = venue => VENUE_PARENT_ALIASES[venue] || (VENUE_PARENT_NAMES.has(venue) ? venue : null);
+const venueParentValue = parent => `parent:${normalizeVenueLabel(parent)}`;
+const venueClassValue = venue => {
+  const record = venueRanks.venues?.[venue];
+  if (venue==='arXiv') return 'class:arxiv';
+  if (venue==='OpenReview') return 'class:openreview';
+  if (record?.venue_type==='journal') return 'class:journal';
+  return null;
+};
+const VENUE_RANK_LABELS = {'A*':'A*','A':'A','B':'B','C':'C','regional':'Regional / National','other':'Other','unranked':'Unranked / not covered'};
+const venueRankForName = venue => {
+  const parent = venueParentName(venue);
+  return (parent && venueRanks.venues?.[parent]?.core_rank_band) || venueRanks.venues?.[venue]?.core_rank_band || 'unranked';
+};
+const makeVenueHierarchy = (rank, venues) => {
+  const directValues=[];
+  const parentBuckets=new Map();
+  venues.forEach(venue=>{
+    const parent=venueParentName(venue);
+    if(parent){
+      if(!parentBuckets.has(parent)) parentBuckets.set(parent,[]);
+      parentBuckets.get(parent).push(venueFilterValue(venue));
+    } else directValues.push(venueFilterValue(venue));
+  });
+  const parents=[...parentBuckets.entries()].map(([parent,values])=>({
+    name:`parent-${normalizeVenueLabel(parent).replace(/[^a-z0-9]+/gi,'-').toLowerCase()}`,
+    label:normalizeVenueLabel(parent),
+    labelJa:normalizeVenueLabel(parent),
+    values:[...new Set(values)],
+    filterValues:[venueParentValue(parent)],
+  }));
+  return {name:`rank-${rank.replace(/[^a-z0-9]+/gi,'-').toLowerCase()}`,label:VENUE_RANK_LABELS[rank],labelJa:rank==='unranked'?'未ランク・対象外':VENUE_RANK_LABELS[rank],values:[...directValues,...parents.flatMap(parent=>parent.values)],directValues,parents,filterValues:[rank]};
+};
+const VENUE_RANK_GROUPS = VENUE_RANK_ORDER.map(rank=>makeVenueHierarchy(rank,Object.keys(venueRanks.venues||{}).filter(venue=>VENUE_CATALOG_NAMES.has(venue) && venueRankForName(venue)===rank))).filter(group=>group.values.length);
+const VENUE_SPECIAL_GROUPS = [
+  {name:'journals',label:'Journal',labelJa:'Journal',values:Object.keys(venueRanks.venues||{}).filter(venue=>VENUE_CATALOG_NAMES.has(venue) && venueRanks.venues[venue]?.venue_type==='journal').map(venueFilterValue),filterValues:['class:journal']},
+  {name:'arxiv',label:'arXiv',labelJa:'arXiv',values:[],filterValues:['class:arxiv']},
+  {name:'openreview',label:'OpenReview',labelJa:'OpenReview',values:[],filterValues:['class:openreview']},
 ];
+const venueSpecialClasses = new Set(['class:journal','class:arxiv','class:openreview']);
+const venueOtherNames = Object.keys(venueRanks.venues||{}).filter(venue=>VENUE_CATALOG_NAMES.has(venue) && !venueSpecialClasses.has(venueClassValue(venue)) && venueRankForName(venue)==='unranked');
+if (venueOtherNames.length) {
+  const other=makeVenueHierarchy('unranked',venueOtherNames);
+  other.name='others'; other.label='Others'; other.labelJa='その他'; other.filterValues=['class:other-unranked'];
+  VENUE_SPECIAL_GROUPS.push(other);
+}
+const VENUE_FILTER_GROUPS = [...VENUE_RANK_GROUPS.filter(group=>group.name!=='rank-unranked'),...VENUE_SPECIAL_GROUPS];
 const FILTER_AXES = [
   {key:'lifecycle',label:'WHEN',labelJa:'WHEN（時点）',values:['training','inference','system']},
   {key:'surface',label:'WHERE',labelJa:'WHERE（入口・評価面）',values:SURFACE_GROUPS.flatMap(group=>group.values),groups:SURFACE_GROUPS},
@@ -506,7 +574,7 @@ const FILTER_AXES = [
   {key:'target',label:'TARGET',labelJa:'TARGET（対象）',values:TARGETS,groups:TARGET_GROUPS},
   {key:'consequence',label:'CONSEQUENCE',labelJa:'CONSEQUENCE（帰結）',values:CONSEQUENCES},
   {key:'risks',label:'MEASURED RISK',labelJa:'MEASURED RISK（評価リスク）',values:['task-reliability','physical-safety','ethical-societal','security-privacy']},
-  {key:'venue_rank',label:'VENUE RANK',labelJa:'VENUE RANK（ICORE）',values:VENUE_RANK_GROUPS.flatMap(group=>group.values),groups:VENUE_RANK_GROUPS},
+  {key:'venue_rank',label:'VENUE RANK (ICORE)',labelJa:'VENUE RANK（ICORE）',values:VENUE_FILTER_GROUPS.flatMap(group=>group.values),groups:VENUE_FILTER_GROUPS},
 ];
 const groupOrder = groups => groups.flatMap(g=>g.values);
 function orderByGroups(values, groups){ const order=groupOrder(groups); const set=new Set(values); return order.filter(v=>set.has(v)); }
@@ -528,11 +596,20 @@ const labels = {surveys:'Surveys','ood-generalization':'OOD Generalization','tra
 const sections = Object.keys(labels), tooltip = d3.select('#tooltip');
 
 let currentLang = 'en';
-let lpEnglishPanelWidth = null;
 const dlabelFlat = Object.assign({}, labelsJa.surface, labelsJa.mechanism, labelsJa.target, labelsJa.consequence, labelsJa.defense_mechanism, labelsJa.lifecycle, labelsJa.venue_rank);
 const CAP_OVERRIDES = {vla:'VLA', ood:'OOD', llm:'LLM', vlm:'VLM'};
 function capitalizeLabel(raw){ return raw.split('-').map(part => CAP_OVERRIDES[part] || (part.charAt(0).toUpperCase()+part.slice(1))).join(' '); }
 function dlabel(raw){
+  if (String(raw).startsWith('venue:')) {
+    return String(raw).slice('venue:'.length);
+  }
+  if (String(raw).startsWith('parent:')) {
+    return String(raw).slice('parent:'.length);
+  }
+  if (raw==='class:journal') return currentLang==='ja'?'Journal':'Journals';
+  if (raw==='class:arxiv') return 'arXiv';
+  if (raw==='class:openreview') return 'OpenReview';
+  if (raw==='class:other-unranked') return currentLang==='ja'?'その他':'Others';
   if (currentLang === 'ja') return dlabelFlat[raw] || (labelsJa.risks && labelsJa.risks[raw]) || (labelsJa.kind && labelsJa.kind[raw]) || raw.replaceAll('-',' ');
   return ({'task-reliability':'Task & Reliability','physical-safety':'Physical Safety','ethical-societal':'Ethical & Societal','security-privacy':'Security & Privacy','unranked':'Unranked / not covered','regional':'Regional / National'})[raw] || capitalizeLabel(raw);
 }
@@ -636,16 +713,16 @@ const I18N = {
     enrichedSuffix: ' eligible papers; hover or click a cell for the paper list.',
     papersWord: ' papers', tablePaper: 'Paper', tableVenue: 'Venue', tableRisk: 'Measured Risk', tableThreat: 'Threat Model', tableAll: 'All papers in this view', tableShowing: 'Showing', tableReset: 'Reset filter', tableCode: 'Project / Code', tableNone: 'None reported', storyWhen: 'When', storyWhere: 'Where', storyHow: 'How', storyTarget: 'Target', storyResult: 'Consequence',
     countingNote: "Each cell counts distinct papers: a paper is counted once per cell, even if several leaf labels match one family. Multi-label papers can appear in multiple cells, so cell, row, and column sums are not unique-paper totals or percentages. Counts show paper-level co-occurrence, not causality or a pairing verified in the same experiment. Eligible papers without both axis annotations contribute to no cell; empty annotations do not establish absence of a risk. Empty cells mean zero matching catalog records, not proof that a topic is unstudied. Counts reflect catalog selection and annotation, not field-wide prevalence or defense effectiveness.",
-    populationConcrete: "Eligible: concrete threat-model records; survey and broad evaluation coverage records are excluded.",
+    populationConcrete: "Eligible: non-survey records; evaluation coverage is included using its reported threat mechanisms and surfaces.",
     populationRisk: "Eligible: all non-survey records, including broad evaluation coverage. Coverage labels are included for evaluation records; risk labels require reported empirical metrics.",
     populationDefense: "Eligible: records with defense metadata, across all primary sections. Cells use defense.mechanism and defense.defends_against.",
     populationCount: "{eligible} of {total} catalog papers eligible; {excluded} excluded. This is the eligible pool, not the sum of cells.",
     populationFiltered: "{matched} match the active filters among {eligible} eligible papers; {excluded} excluded by this view's population rule.",
     populationCompact: "Coverage {eligible}/{total} · distinct papers per cell · multi-label papers may count in multiple cells",
     populationCompactFiltered: "Filters {matched}/{eligible} eligible · distinct papers per cell · multi-label papers may count in multiple cells",
-    searchLabel: 'Search papers', searchPlaceholder: 'Search title, author, venue, tags, or taxonomy labels', leafFilter: 'Taxonomy leaf filters', filterClear: 'Clear filters', filterDone: 'Done',
-    filterHelp: 'Leaf labels use OR within one axis and AND across axes. Keyword search is also combined with AND.',
-    filterStatus: '{matched} of {total} catalog papers match', filterSelected: '{count} leaf filters selected', filterRemove: 'Remove filter',
+    searchLabel: 'Search papers', searchPlaceholder: 'Search title, author, venue, tags, or taxonomy labels', leafFilter: 'Taxonomy & venue filters', filterClear: 'Clear filters', filterDone: 'Done',
+    filterHelp: 'Taxonomy and venue labels use OR within one axis and AND across axes. Keyword search is also combined with AND.',
+    filterStatus: '{matched} of {total} catalog papers match globally', filterSelected: '{count} leaf filters selected', filterRemove: 'Remove filter',
     citeLink: 'Cite', citeTitle: 'Cite this catalog', citeCopy: 'Copy BibTeX', citeCopied: 'Copied!', contactLabel: 'Contact', backToTop: '↑ Back to top',
     lpEyebrow: 'Open Research Catalog',
     lpTitle: 'Mapping how <em>physical&nbsp;AI</em> fails,<br>and what breaks it.',
@@ -687,16 +764,16 @@ const I18N = {
     enrichedSuffix: '件の集計対象論文。ホバーまたはクリックで論文一覧を表示します。',
     papersWord: '件', tablePaper: '論文', tableVenue: 'Venue', tableRisk: '評価リスク', tableThreat: '脅威モデル', tableAll: 'このビューの全論文', tableShowing: '表示中', tableReset: '絞り込み解除', tableCode: 'Project / Code', tableNone: '報告なし', storyWhen: 'いつ', storyWhere: 'どこ', storyHow: '方法', storyTarget: '対象', storyResult: '帰結',
     countingNote: "各セルは異なる論文の件数です。同じfamilyに複数のleafラベルが一致しても、1セル内では1論文を1回だけ数えます。複数ラベルの論文は複数セルに現れるため、セル・行・列の合計はユニークな論文総数や割合ではありません。論文単位の共起であり、因果関係や同一実験内で確認された組合せを意味しません。両軸のラベルが揃わない対象論文はどのセルにも寄与しません。空のannotationはリスクの不存在を示しません。空セルは該当する採録レコードが0件という意味で、未研究の証明ではありません。件数は採録範囲・分類状況に依存し、分野全体の頻度や防御の有効性を示しません。",
-    populationConcrete: "対象：具体的な脅威モデルを持つレコード。surveyと広範なevaluationのcoverageレコードを除外します。",
+    populationConcrete: "対象：survey以外のレコード。evaluationは報告された脅威mechanismとsurfaceのcoverageを含みます。",
     populationRisk: "対象：survey以外のレコード（広範なevaluationのcoverageを含む）。evaluationではcoverageラベルを使い、リスクラベルは報告された実験指標を要件とします。",
     populationDefense: "対象：主sectionを問わずdefense metadataを持つレコード。セルはdefense.mechanismとdefense.defends_againstを使います。",
     populationCount: "全{total}件中、集計対象{eligible}件・除外{excluded}件。対象件数はセル件数の合計ではありません。",
     populationFiltered: "このビューの集計対象{eligible}件中、フィルタ一致{matched}件・母集団ルールによる除外{excluded}件。",
     populationCompact: "集計対象 {eligible}/{total}件 · 1セルはユニーク論文数 · 複数ラベルは複数セルに計上",
     populationCompactFiltered: "フィルタ一致 {matched}/{eligible}件 · 1セルはユニーク論文数 · 複数ラベルは複数セルに計上",
-    searchLabel: '論文を検索', searchPlaceholder: 'タイトル・著者・Venue・タグ・Taxonomyラベルを検索', leafFilter: 'Taxonomy Leafで絞り込み', filterClear: 'すべて解除', filterDone: '閉じる',
-    filterHelp: '同じ軸のLeafはOR、異なる軸はANDで結合します。キーワード検索ともANDで結合します。',
-    filterStatus: '全{total}件中{matched}件が一致', filterSelected: 'Leafフィルタ{count}件を選択中', filterRemove: 'フィルタを解除',
+    searchLabel: '論文を検索', searchPlaceholder: 'タイトル・著者・Venue・タグ・Taxonomyラベルを検索', leafFilter: 'Taxonomy・Venueフィルタ', filterClear: 'すべて解除', filterDone: '閉じる',
+    filterHelp: 'TaxonomyとVenueの同じ軸のラベルはOR、異なる軸はANDで結合します。キーワード検索ともANDで結合します。',
+    filterStatus: '全{total}件中{matched}件が一致（全体）', filterSelected: 'Leafフィルタ{count}件を選択中', filterRemove: 'フィルタを解除',
     citeLink: '引用', citeTitle: '引用方法', citeCopy: 'BibTeXをコピー', citeCopied: 'コピーしました', contactLabel: 'お問い合わせ', backToTop: '↑ ページ上部へ',
     lpEyebrow: 'Open Research Catalog',
     lpTitle: 'Mapping how <em>physical&nbsp;AI</em> fails,<br>and what breaks it.',
@@ -773,7 +850,17 @@ const normalizeSearch = value => String(value??'').normalize('NFKC').toLocaleLow
 function venueRankFor(p){ return (venueRanks.venues && venueRanks.venues[p.venue]) || {core_rank_band:'unranked',ranking_status:'unranked'}; }
 function paperAxisValues(p,axis){
   if(axis==='risks') return p.risks||[];
-  if(axis==='venue_rank') return [venueRankFor(p).core_rank_band||'unranked'];
+  if(axis==='venue_rank') {
+    const rawRank=venueRankFor(p).core_rank_band||'unranked';
+    const parent=venueParentName(p.venue);
+    const parentRank=parent && venueRanks.venues?.[parent]?.core_rank_band;
+    const values=[rawRank,venueFilterValue(p.venue)];
+    if(parent){ values.push(venueParentValue(parent)); if(parentRank && parentRank!==rawRank) values.push(parentRank); }
+    const classValue=venueClassValue(p.venue);
+    if(classValue) values.push(classValue);
+    else if(venueRankForName(p.venue)==='unranked') values.push('class:other-unranked');
+    return values;
+  }
   return threatValues(p,axis);
 }
 const searchIndex = new Map(papers.map(p=>{
@@ -793,7 +880,8 @@ function matchesCatalogFilters(p){
 }
 function filteredPapers(){ return papers.filter(matchesCatalogFilters); }
 function viewBasePapers(view,source=papers){
-  if(view==='heatmap'||view==='target') return source.filter(p=>!['survey','evaluation'].includes(p.threat_model.kind));
+  if(view==='heatmap') return source.filter(p=>p.threat_model.kind!=='survey');
+  if(view==='target') return source.filter(p=>!['survey','evaluation'].includes(p.threat_model.kind));
   if(view==='risk'||view==='outcome-risk') return source.filter(p=>p.threat_model.kind!=='survey');
   if(view==='defense') return source.filter(p=>p.defense);
   return source;
@@ -810,6 +898,7 @@ function renderFilterControls(){
   countBadge.title=t.filterSelected.replace('{count}',selectedCount);
   document.getElementById('filter-clear').disabled=!filtersActive();
   const options=document.getElementById('leaf-options');
+  const filterCount=(axis,values)=>papers.filter(p=>paperAxisValues(p,axis.key).some(value=>values.includes(value))).length;
   const leafRow=(axis,value)=>{
     const count=papers.filter(p=>paperAxisValues(p,axis.key).includes(value)).length;
     const id=`leaf-${axis.key}-${value}`;
@@ -820,7 +909,13 @@ function renderFilterControls(){
     const rows=axis.groups
       ? axis.groups.map(group=>{
           const famId=`leaf-family-${axis.key}-${group.name}`;
-          return `<div class="leaf-family-group"><label class="leaf-family" for="${famId}"><input type="checkbox" id="${famId}" data-filter-family-axis="${axis.key}" data-filter-family-values="${group.values.join(',')}"><span>${escapeHtml(familyLabel(group))}</span></label>${group.values.map(value=>leafRow(axis,value)).join('')}</div>`;
+          const familyValues=group.filterValues||group.values;
+          const directRows=(group.directValues||(!group.parents?group.values:[])).map(value=>leafRow(axis,value)).join('');
+          const parentRows=(group.parents||[]).map(parent=>{
+            const parentValue=(parent.filterValues||parent.values)[0];
+            return `<div class="venue-parent-leaf">${leafRow(axis,parentValue)}</div>`;
+          }).join('');
+          return `<div class="leaf-family-group"><label class="leaf-family" for="${famId}"><input type="checkbox" id="${famId}" data-filter-family-axis="${axis.key}" data-filter-family-values="${familyValues.join(',')}"><span>${escapeHtml(familyLabel(group))} <small>(${filterCount(axis,familyValues)})</small></span></label>${directRows}${parentRows}</div>`;
         }).join('')
       : axis.values.map(value=>leafRow(axis,value)).join('');
     return `<fieldset><legend>${escapeHtml(legend)}</legend>${rows}</fieldset>`;
@@ -960,7 +1055,7 @@ function wrapEndAnchored(selection, getText, maxLen=24){
 }
 function renderHeatmap(){
   const width=1160,margin={right:30,bottom:20,left: currentLang==='ja' ? 220 : 300};
-  const concrete=viewBasePapers('heatmap');
+  const concrete=viewPapers('heatmap');
   const mechanisms=MECHANISM_GROUPS, surfaces=SURFACE_GROUPS;
   const x=d3.scaleBand().domain(surfaces.map(g=>g.name)).range([margin.left,width-margin.right]).padding(.08);
   margin.top=crossMapMarginTop(surfaces,familyLabel,x.bandwidth());
@@ -969,7 +1064,7 @@ function renderHeatmap(){
   const y=d3.scaleBand().domain(mechanisms.map(g=>g.name)).range([margin.top,height-margin.bottom]).padding(.08);
   const cellData=[];
   for(const mg of mechanisms) for(const sg of surfaces){
-    const list=concrete.filter(p=>p.threat_model.mechanism.some(m=>mg.values.includes(m))&&p.threat_model.surface.some(s=>sg.values.includes(s)));
+    const list=concrete.filter(p=>threatValues(p,'mechanism').some(m=>mg.values.includes(m))&&threatValues(p,'surface').some(s=>sg.values.includes(s)));
     cellData.push({mg,sg,list,n:list.length});
   }
   const max=d3.max(cellData,d=>d.n)||1, fill=d3.scaleSequential().domain([0,max]).interpolator(d3.interpolate(...seqRampColors()));
@@ -990,9 +1085,9 @@ function recentPapers(n=3){
 }
 function renderLpOverview(){
   const mechanisms=MECHANISM_GROUPS, surfaces=SURFACE_GROUPS;
+  // Keep the landing-page showcase stable while using the same population
+  // definition as the detailed mechanism-by-surface view.
   const concrete=viewBasePapers('heatmap');
-  const lpPanel=document.querySelector('.lp-panel');
-  if(currentLang==='en') lpPanel.style.width='';
   document.getElementById('lp-stat-papers').textContent=papers.length;
   document.getElementById('lp-panel-sub').textContent=I18N[currentLang].lpPanelSub.replace('{n}',concrete.length);
   const t=I18N[currentLang];
@@ -1004,13 +1099,13 @@ function renderLpOverview(){
   document.getElementById('lp-axis-n-6').textContent='4'+t.lpUnitDomains;
   const cellData=[];
   for(const mg of mechanisms) for(const sg of surfaces){
-    const list=concrete.filter(p=>p.threat_model.mechanism.some(m=>mg.values.includes(m))&&p.threat_model.surface.some(s=>sg.values.includes(s)));
+    const list=concrete.filter(p=>threatValues(p,'mechanism').some(m=>mg.values.includes(m))&&threatValues(p,'surface').some(s=>sg.values.includes(s)));
     cellData.push({mg,sg,list,n:list.length});
   }
   const max=d3.max(cellData,d=>d.n)||1;
   const level=n=>n===0?0:Math.min(4,Math.max(1,Math.ceil((n/max)*4)));
   const heat=document.getElementById('lp-heat');
-  heat.style.gridTemplateColumns=`118px repeat(${surfaces.length},1fr)`;
+  heat.style.gridTemplateColumns=`minmax(100px,26%) repeat(${surfaces.length},minmax(0,1fr))`;
   let html='<div></div>';
   surfaces.forEach(sg=>{ html+=`<div class="lp-colhead">${escapeHtml(familyLabel(sg))}</div>`; });
   mechanisms.forEach(mg=>{
@@ -1021,11 +1116,6 @@ function renderLpOverview(){
     });
   });
   heat.innerHTML=html;
-  if(currentLang==='en'){
-    lpEnglishPanelWidth=lpPanel.getBoundingClientRect().width;
-  }else if(lpEnglishPanelWidth){
-    lpPanel.style.width=`${lpEnglishPanelWidth}px`;
-  }
   heat.querySelectorAll('.lp-cell').forEach(cell=>{
     cell.addEventListener('click',()=>{
       const mg=mechanisms[+cell.dataset.mg], sg=surfaces[+cell.dataset.sg];
@@ -1111,7 +1201,7 @@ function renderExtensionMap(container,title,items,rows,cols,rowValues,colValues,
 }
 
 function renderDefenseThreat(){
-  const items=viewBasePapers('defense'), rows=DEFENSE_MECHANISMS, cols=MECHANISM_GROUPS;
+  const items=viewPapers('defense'), rows=DEFENSE_MECHANISMS, cols=MECHANISM_GROUPS;
   const isJa=currentLang==='ja';
   const margin={right:45,bottom:20,left:isJa?230:250}, width=1180;
   const x=d3.scaleBand().domain(cols.map(g=>g.name)).range([margin.left,width-margin.right]).padding(.06);
@@ -1134,7 +1224,7 @@ function renderDefenseThreat(){
 }
 
 function renderTargetResult(){
-  const items=viewBasePapers('target'), rows=TARGETS, cols=CONSEQUENCES;
+  const items=viewPapers('target'), rows=TARGETS, cols=CONSEQUENCES;
   const margin={right:90,bottom:20,left:currentLang==='ja'?185:205}, width=1180;
   const x=d3.scaleBand().domain(cols).range([margin.left,width-margin.right]).padding(.06);
   margin.top=crossMapMarginTop(cols,dlabel,x.bandwidth());
@@ -1155,7 +1245,7 @@ function renderTargetResult(){
   svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.col)+x.bandwidth()/2).attr('y',d=>y(d.row)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',11).attr('font-weight',650).attr('fill',d=>heatmapTextColor(fill(d.n))).style('pointer-events','none').text(d=>d.n);
 }
 function renderOutcomeRisk(){
-  const items=viewBasePapers('outcome-risk'), rows=CONSEQUENCES, cols=['task-reliability','physical-safety','ethical-societal','security-privacy'];
+  const items=viewPapers('outcome-risk'), rows=CONSEQUENCES, cols=['task-reliability','physical-safety','ethical-societal','security-privacy'];
   const margin={right:90,bottom:20,left:currentLang==='ja'?185:205}, width=1180;
   const x=d3.scaleBand().domain(cols).range([margin.left,width-margin.right]).padding(.06);
   margin.top=crossMapMarginTop(cols,dlabel,x.bandwidth());
@@ -1176,7 +1266,7 @@ function renderOutcomeRisk(){
   svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.col)+x.bandwidth()/2).attr('y',d=>y(d.row)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',11).attr('font-weight',650).attr('fill',d=>heatmapTextColor(fill(d.n))).style('pointer-events','none').text(d=>d.n);
 }
 function renderThreatRisk(){
-  const items=viewBasePapers('risk');
+  const items=viewPapers('risk');
   const rows=MECHANISM_GROUPS, cols=['task-reliability','physical-safety','ethical-societal','security-privacy'];
   const margin={right:55,bottom:20,left: currentLang==='ja' ? 210 : 290}, width=1180;
   const x=d3.scaleBand().domain(cols).range([margin.left,width-margin.right]).padding(.06);
@@ -1326,16 +1416,18 @@ document.getElementById('lang-en').addEventListener('click', () => setLanguage('
 document.getElementById('lang-ja').addEventListener('click', () => setLanguage('ja'));
 
 function setTheme(theme){
-  if (theme === 'system') { document.documentElement.removeAttribute('data-theme'); }
-  else { document.documentElement.setAttribute('data-theme', theme); }
-  document.getElementById('theme-light').setAttribute('aria-pressed', String(theme === 'light'));
-  document.getElementById('theme-dark').setAttribute('aria-pressed', String(theme === 'dark'));
+  const selectedTheme = theme === 'light' || theme === 'dark'
+    ? theme
+    : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', selectedTheme);
+  document.getElementById('theme-light').setAttribute('aria-pressed', String(selectedTheme === 'light'));
+  document.getElementById('theme-dark').setAttribute('aria-pressed', String(selectedTheme === 'dark'));
   syncTaxonomyTheme();
-  localStorage.setItem('theme', theme);
+  localStorage.setItem('theme', selectedTheme);
   renderAll();
 }
-document.getElementById('theme-light').addEventListener('click', () => setTheme(document.documentElement.getAttribute('data-theme') === 'light' ? 'system' : 'light'));
-document.getElementById('theme-dark').addEventListener('click', () => setTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'system' : 'dark'));
+document.getElementById('theme-light').addEventListener('click', () => setTheme('light'));
+document.getElementById('theme-dark').addEventListener('click', () => setTheme('dark'));
 setTheme(localStorage.getItem('theme') || 'system');
 const searchInput=document.getElementById('catalog-search');
 searchInput.addEventListener('input',()=>{
