@@ -27,6 +27,8 @@ Do not load the full research-hub `PAPERS.md` or all recent archive prose for ev
 4. Confirm the official title, first-author surname, paper identity, publication state, paper URL, and any official project or code URL.
 5. Check normalized title, paper URL, arXiv ID, DOI, OpenReview ID, and title history before adding a record. Update renamed or materially revised work in place.
 
+After fetching a document into the cache, read its title and identifier and compare them with the catalog record before recording the result with `python3 scripts/paper_cache.py verify <id> --match true --observed-title "<title read from the document>"`. Record a mismatch with `--match false` and resolve it before using the document as evidence. Fetching alone does not verify identity; use the verified `get` result for curation. `--allow-unverified` is for diagnostics only and must never be used for audit evidence.
+
 Crossref, search results, and other reading lists are discovery aids, not substitutes for a primary source.
 
 ### Cost-aware screening
@@ -60,7 +62,7 @@ For every new or updated record:
 
 Never publish personal research questions, unpublished interpretations, private notes, local paths, or content from private research folders.
 
-If a new section, subsection, or controlled value is genuinely required, update its validator and Japanese label in the same change. Do not leave translation warnings unresolved.
+If a new section, subsection, or controlled value is genuinely required, update its validator and Japanese label in the same change. Do not leave translation warnings unresolved. When canonical taxonomy vocabulary changes, also align `docs/public/taxonomy.md` and `docs/public/taxonomy.ja.md`, following `docs/reference/README.md`. Edit those reader-oriented Markdown sources directly and regenerate their HTML with the documentation generator.
 
 ## 5. Regenerate and Validate
 
@@ -74,6 +76,7 @@ Then run:
 
 ```bash
 python3 scripts/validate_catalog.py
+python3 scripts/check_public_taxonomy.py
 python3 scripts/build_readme.py
 python3 scripts/build_readme.py --check
 python3 scripts/build_readme_ja.py

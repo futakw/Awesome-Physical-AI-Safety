@@ -6,7 +6,9 @@ This workflow maintains already-cataloged papers. New-paper discovery and additi
 
 ## 1. Read and Inspect
 
-Read `AGENTS.md`, `docs/agent/daily-curation-workflow.md`, `docs/reference/metadata-schema.md`, and `data/papers.json`. Inspect the branch, remote, and working tree. Preserve unrelated changes. Use `scripts/paper_cache.py get <id>` (cache-first, no network access) before re-downloading a record's primary source; do not schedule a recurring full-cache refresh.
+Read `AGENTS.md`, `docs/agent/daily-curation-workflow.md`, `docs/reference/taxonomy.md`, `docs/reference/metadata-schema.md`, and `data/papers.json`. Inspect the branch, remote, and working tree. Preserve unrelated changes. Use `scripts/paper_cache.py get <id>` (cache-first, no network access) before re-downloading a record's primary source; do not schedule a recurring full-cache refresh.
+
+For newly fetched cache entries, follow the daily workflow's document title/identifier comparison and `paper_cache.py verify` procedure before using a verified `get` result as evidence. Fetching alone is not verification; `--allow-unverified` is for diagnostics only.
 
 ## 2. Select Content-Review Targets
 
@@ -19,6 +21,8 @@ Review only records matching at least one condition:
 5. `section` is `defenses` but the `defense` extension is absent
 
 Do not perform broad new-paper searches. Use existing paper IDs and URLs to reach primary sources directly.
+
+Use `audit/taxonomy_requalification_2026-10.jsonl` as a reference for the completed one-time audit and unresolved evidence gaps. Revisit an insufficient-evidence record when it is already selected for review under the conditions above and primary evidence becomes available; do not repeat the full audit each run. In that log, `out-of-scope` means outside the one-time audit population, not excluded from the catalog.
 
 ### Mechanism and Target Vocabulary Stability
 
