@@ -163,8 +163,8 @@
     .catalog-table tr:last-child td { border-bottom:0; }
     .catalog-table .paper-title { color:var(--ink); font-weight:650; text-decoration:none; }
     .catalog-table .paper-title:hover { color:var(--signal); text-decoration:underline; }
-    .catalog-table .paper-author,.catalog-table .code-link { display:block; margin-top:3px; color:var(--muted); font-size:11px; }
-    .catalog-table .code-link { display:inline-block; color:var(--signal); }
+    .catalog-table .paper-author { display:block; margin-top:3px; color:var(--muted); font-size:11px; }
+    .catalog-table .code-link { display:inline-block; margin-left:6px; color:var(--signal); font-size:11px; }
     .back-to-top { position:fixed; right:24px; bottom:20px; z-index:9; border:1px solid var(--line-strong); border-radius:999px; padding:8px 12px; background:var(--surface); color:var(--ink); box-shadow:var(--shadow-md); font-size:12px; font-weight:700; }
     .back-to-top:hover { background:var(--signal-soft); border-color:var(--signal); }
     .back-to-top[hidden] { display:none; }
@@ -205,7 +205,7 @@
     :root[data-theme="dark"] { --grid-0:#1B1F26; --grid-1:#3A2A1C; --grid-2:#6B4522; --grid-3:#B2601F; --grid-4:var(--accent); }
     .lp-eyebrow { display:inline-flex; align-items:center; gap:8px; font:700 11.5px/1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; letter-spacing:.12em; color:var(--signal); text-transform:uppercase; margin-bottom:18px; }
     .lp-eyebrow::before { content:''; width:7px; height:7px; background:var(--signal); border-radius:1px; box-shadow:0 0 0 3px var(--signal-soft); }
-    .lp-hero { position:relative; display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start; padding:30px 0 44px; border-bottom:1px solid var(--line); margin-bottom:44px; }
+    .lp-hero { position:relative; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:56px; align-items:start; padding:30px 0 44px; border-bottom:1px solid var(--line); margin-bottom:44px; }
     .lp-hero::before {
       content:''; position:absolute; top:0; bottom:0; left:calc(50% - 50vw); width:100vw; pointer-events:none; opacity:.5; z-index:0;
       background-image:
@@ -440,6 +440,7 @@
 <div id="tooltip" class="tooltip" role="tooltip"></div>
 <script>
 const papers = __PAPERS_JSON__;
+const venueRanks = __VENUE_RANKS_JSON__;
 const labelsJa = __LABELS_JA_JSON__;
 const colors = {surveys:'#3A5FA0', 'ood-generalization':'#2FA893', 'training-attacks':'#8E6FD9', 'inference-attacks':'#D1495B', defenses:'#5B8DEF', benchmarks:'#B8841F', 'system-security':'#C96FA8'};
 function isDarkTheme(){ const t=document.documentElement.getAttribute('data-theme'); return t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches); }
@@ -489,6 +490,15 @@ const TARGET_GROUPS = [
   {name:'action-system-operation',label:'Action & System Operation',short:'Action/System',labelJa:'行動・システム運用',values:['action-generation','robot-executor','runtime-monitor','shared-system-state']},
   {name:'data-privacy-assets',label:'Data & Privacy Assets',short:'Data/Privacy',labelJa:'データ・プライバシー資産',values:['private-data']},
 ];
+const VENUE_RANK_GROUPS = [
+  {name:'a-star',label:'A*',labelJa:'A*',values:['A*']},
+  {name:'a',label:'A',labelJa:'A',values:['A']},
+  {name:'b',label:'B',labelJa:'B',values:['B']},
+  {name:'c',label:'C',labelJa:'C',values:['C']},
+  {name:'regional',label:'Regional / National',labelJa:'Regional / National',values:['regional']},
+  {name:'other',label:'Other',labelJa:'Other',values:['other']},
+  {name:'unranked',label:'Unranked / not covered',labelJa:'未ランク・対象外',values:['unranked']},
+];
 const FILTER_AXES = [
   {key:'lifecycle',label:'WHEN',labelJa:'WHEN（時点）',values:['training','inference','system']},
   {key:'surface',label:'WHERE',labelJa:'WHERE（入口・評価面）',values:SURFACE_GROUPS.flatMap(group=>group.values),groups:SURFACE_GROUPS},
@@ -496,6 +506,7 @@ const FILTER_AXES = [
   {key:'target',label:'TARGET',labelJa:'TARGET（対象）',values:TARGETS,groups:TARGET_GROUPS},
   {key:'consequence',label:'CONSEQUENCE',labelJa:'CONSEQUENCE（帰結）',values:CONSEQUENCES},
   {key:'risks',label:'MEASURED RISK',labelJa:'MEASURED RISK（評価リスク）',values:['task-reliability','physical-safety','ethical-societal','security-privacy']},
+  {key:'venue_rank',label:'VENUE RANK',labelJa:'VENUE RANK（ICORE）',values:VENUE_RANK_GROUPS.flatMap(group=>group.values),groups:VENUE_RANK_GROUPS},
 ];
 const groupOrder = groups => groups.flatMap(g=>g.values);
 function orderByGroups(values, groups){ const order=groupOrder(groups); const set=new Set(values); return order.filter(v=>set.has(v)); }
@@ -518,12 +529,12 @@ const sections = Object.keys(labels), tooltip = d3.select('#tooltip');
 
 let currentLang = 'en';
 let lpEnglishPanelWidth = null;
-const dlabelFlat = Object.assign({}, labelsJa.surface, labelsJa.mechanism, labelsJa.target, labelsJa.consequence, labelsJa.defense_mechanism, labelsJa.lifecycle);
+const dlabelFlat = Object.assign({}, labelsJa.surface, labelsJa.mechanism, labelsJa.target, labelsJa.consequence, labelsJa.defense_mechanism, labelsJa.lifecycle, labelsJa.venue_rank);
 const CAP_OVERRIDES = {vla:'VLA', ood:'OOD', llm:'LLM', vlm:'VLM'};
 function capitalizeLabel(raw){ return raw.split('-').map(part => CAP_OVERRIDES[part] || (part.charAt(0).toUpperCase()+part.slice(1))).join(' '); }
 function dlabel(raw){
   if (currentLang === 'ja') return dlabelFlat[raw] || (labelsJa.risks && labelsJa.risks[raw]) || (labelsJa.kind && labelsJa.kind[raw]) || raw.replaceAll('-',' ');
-  return ({'task-reliability':'Task & Reliability','physical-safety':'Physical Safety','ethical-societal':'Ethical & Societal','security-privacy':'Security & Privacy'})[raw] || capitalizeLabel(raw);
+  return ({'task-reliability':'Task & Reliability','physical-safety':'Physical Safety','ethical-societal':'Ethical & Societal','security-privacy':'Security & Privacy','unranked':'Unranked / not covered','regional':'Regional / National'})[raw] || capitalizeLabel(raw);
 }
 function kindLabel(kind){ return currentLang === 'ja' ? ((labelsJa.kind && labelsJa.kind[kind]) || kind) : (KIND_LABELS_EN[kind] || capitalizeLabel(kind)); }
 function splitLabel(text, maxLen=14){
@@ -715,6 +726,7 @@ const I18N = {
 };
 d3.select('#paper-count-badge').text(papers.length);
 const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+const authorLabel = p => { const a=p.first_author||''; return (!a||a==='Anonymous'||/et al\.?$/i.test(a)) ? a : `${a} et al.`; };
 const HEATMAP_TEXT_DARK = '#000000';
 const HEATMAP_TEXT_LIGHT = '#ffffff';
 function relativeLuminance(color) {
@@ -758,7 +770,12 @@ function toggleCellFilter(axis1,values1,axis2,values2){
 let keywordQuery = '';
 let searchTimer = null;
 const normalizeSearch = value => String(value??'').normalize('NFKC').toLocaleLowerCase().replace(/[-_]+/g,' ').replace(/\s+/g,' ').trim();
-function paperAxisValues(p,axis){ return axis==='risks' ? (p.risks||[]) : threatValues(p,axis); }
+function venueRankFor(p){ return (venueRanks.venues && venueRanks.venues[p.venue]) || {core_rank_band:'unranked',ranking_status:'unranked'}; }
+function paperAxisValues(p,axis){
+  if(axis==='risks') return p.risks||[];
+  if(axis==='venue_rank') return [venueRankFor(p).core_rank_band||'unranked'];
+  return threatValues(p,axis);
+}
 const searchIndex = new Map(papers.map(p=>{
   const taxonomyValues=FILTER_AXES.flatMap(axis=>paperAxisValues(p,axis.key));
   const englishLabels=taxonomyValues.map(value=>dlabel(value));
@@ -866,7 +883,7 @@ function threatModelHtml(p) {
 function renderPaperTable(view, list=viewPapers(view), filterLabel='') {
   const paperRows=papersInGroup=>papersInGroup.map(p=>{
     const code=p.code_url?`<a class="code-link" href="${escapeHtml(p.code_url)}" target="_blank" rel="noopener noreferrer">${I18N[currentLang].tableCode}</a>`:'';
-    return `<tr><td><a class="paper-title" href="${escapeHtml(p.paper_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.title)}</a>${code}<span class="paper-author">${escapeHtml(p.first_author)}</span></td><td>${escapeHtml(p.venue)} ${p.year}</td><td>${tagsHtml(riskTagItems(p))}</td><td>${threatModelHtml(p)}</td></tr>`;
+    return `<tr><td><a class="paper-title" href="${escapeHtml(p.paper_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.title)}</a>${code}<span class="paper-author">${escapeHtml(authorLabel(p))}</span></td><td>${escapeHtml(p.venue)} ${p.year}</td><td>${tagsHtml(riskTagItems(p))}</td><td>${threatModelHtml(p)}</td></tr>`;
   }).join('');
   const bySection=d3.group(list,p=>p.section);
   const sectionSummary=sections.filter(section=>bySection.has(section)).map(section=>`${sectionLabel(section)} ${bySection.get(section).length}`).join(' · ');
@@ -1018,7 +1035,7 @@ function renderLpOverview(){
     });
   });
   const list=document.getElementById('lp-recent-list');
-  list.innerHTML=recentPapers(3).map((p,i)=>`<li><span class="lp-idx">${String(i+1).padStart(2,'0')}</span><div><div class="lp-t"><a href="${escapeHtml(p.paper_url||'#')}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.title)}</a></div><div class="lp-m">${escapeHtml(p.first_author||'')} · ${escapeHtml(p.venue||'')} ${p.year||''} · ${escapeHtml(p.catalogued_date)}</div></div></li>`).join('');
+  list.innerHTML=recentPapers(3).map((p,i)=>`<li><span class="lp-idx">${String(i+1).padStart(2,'0')}</span><div><div class="lp-t"><a href="${escapeHtml(p.paper_url||'#')}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.title)}</a></div><div class="lp-m">${escapeHtml(authorLabel(p))} · ${escapeHtml(p.venue||'')} ${p.year||''} · ${escapeHtml(p.catalogued_date)}</div></div></li>`).join('');
 }
 document.getElementById('lp-cta-explore').addEventListener('click',()=>activateView('heatmap'));
 document.getElementById('lp-cta-taxonomy').addEventListener('click',()=>activateView('taxonomy'));

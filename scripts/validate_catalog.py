@@ -13,6 +13,7 @@ from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data" / "papers.json"
+VENUE_RANKS_PATH = ROOT / "data" / "venue_ranks.json"
 TAXONOMY_DIR = ROOT / "data" / "taxonomy"
 
 REQUIRED = {
@@ -168,6 +169,8 @@ JAPANESE_FILES = {
     "docs/reference/taxonomy.ja.md",
     "docs/public/taxonomy.ja.md",
 }
+VENUE_RANK_BANDS = {"A*", "A", "B", "C", "regional", "other", "unranked"}
+VENUE_RANK_STATUSES = {"ranked", "unranked", "not-covered"}
 
 
 def valid_url(value: str | None) -> bool:
@@ -204,6 +207,49 @@ def validate_catalogued_date(errors: list[str], label: str, paper: dict) -> None
             errors.append(f"{label}: catalogued_date must not be in the future")
     except ValueError:
         errors.append(f"{label}: invalid catalogued_date")
+
+
+def validate_venue_ranks(errors: list[str], papers: list[dict]) -> None:
+    if not VENUE_RANKS_PATH.exists():
+        errors.append("data/venue_ranks.json is missing")
+        return
+    try:
+        payload = json.loads(VENUE_RANKS_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        errors.append(f"data/venue_ranks.json is invalid JSON: {exc}")
+        return
+    if payload.get("schema_version") != 1:
+        errors.append("data/venue_ranks.json: schema_version must be 1")
+    venues = payload.get("venues")
+    if not isinstance(venues, dict):
+        errors.append("data/venue_ranks.json: venues must be an object")
+        return
+    paper_venues = {paper.get("venue") for paper in papers}
+    missing = sorted(paper_venues - set(venues))
+    extra = sorted(set(venues) - paper_venues)
+    if missing:
+        errors.append(f"data/venue_ranks.json: missing catalog venues {missing}")
+    if extra:
+        errors.append(f"data/venue_ranks.json: entries not used by catalog {extra}")
+    for venue, record in venues.items():
+        label = f"venue rank {venue}"
+        if not isinstance(record, dict):
+            errors.append(f"{label}: record must be an object")
+            continue
+        if not isinstance(record.get("canonical_name"), str) or not record["canonical_name"].strip():
+            errors.append(f"{label}: canonical_name must be a non-empty string")
+        if not isinstance(record.get("aliases"), list) or any(not isinstance(item, str) for item in record["aliases"]):
+            errors.append(f"{label}: aliases must be a list of strings")
+        if record.get("core_rank_band") not in VENUE_RANK_BANDS:
+            errors.append(f"{label}: invalid core_rank_band {record.get('core_rank_band')!r}")
+        if record.get("ranking_status") not in VENUE_RANK_STATUSES:
+            errors.append(f"{label}: invalid ranking_status {record.get('ranking_status')!r}")
+        if not isinstance(record.get("ranking_edition"), str) or not record["ranking_edition"]:
+            errors.append(f"{label}: ranking_edition must be a non-empty string")
+        if not isinstance(record.get("checked_date"), str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", record["checked_date"]):
+            errors.append(f"{label}: checked_date must be YYYY-MM-DD")
+        if not valid_url(record.get("source_url")):
+            errors.append(f"{label}: source_url must be an HTTPS URL")
 
 
 def validate_string_list(
@@ -317,6 +363,7 @@ def main() -> int:
     if not isinstance(papers, list) or not papers:
         errors.append("data/papers.json must be a non-empty array")
         papers = []
+    validate_venue_ranks(errors, papers)
 
     seen_ids: set[str] = set()
     seen_titles: set[str] = set()

@@ -8,6 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data" / "papers.json"
+VENUE_RANKS_PATH = ROOT / "data" / "venue_ranks.json"
 TEMPLATE_PATH = ROOT / "templates" / "explorer.html"
 OUTPUT_PATH = ROOT / "docs" / "index.html"
 
@@ -19,6 +20,7 @@ def main() -> int:
     import labels_ja as L
 
     papers = json.loads(DATA_PATH.read_text(encoding="utf-8"))
+    venue_ranks = json.loads(VENUE_RANKS_PATH.read_text(encoding="utf-8"))
     template = TEMPLATE_PATH.read_text(encoding="utf-8")
 
     labels_payload = {
@@ -32,10 +34,20 @@ def main() -> int:
         "consequence": L.CONSEQUENCE_JA,
         "defense_mechanism": L.DEFENSE_MECHANISM_JA,
         "kind": L.KIND_JA,
+        "venue_rank": {
+            "A*": "A*",
+            "A": "A",
+            "B": "B",
+            "C": "C",
+            "regional": "Regional / National",
+            "other": "Other",
+            "unranked": "Unranked / not covered",
+        },
     }
 
     for placeholder, payload in (
         ("__PAPERS_JSON__", papers),
+        ("__VENUE_RANKS_JSON__", venue_ranks),
         ("__LABELS_JA_JSON__", labels_payload),
     ):
         if placeholder not in template:

@@ -42,6 +42,10 @@ venue — including updating an existing record once a preprint is accepted —
 re-derive `year` from that venue's own listing; do not carry over the old
 arXiv-based year.
 
+## Venue ranking
+
+Venue-ranking metadata is maintained separately in [`data/venue_ranks.json`](../../data/venue_ranks.json), rather than duplicated in each paper record. The table follows the official ICORE/CORE conference taxonomy and is used by the Explorer's venue-rank filter. See [`venue-rankings.md`](venue-rankings.md) for the scope, normalization, and non-inheritance rules.
+
 ## Subsection
 
 `subsection` is a closed vocabulary scoped per `section`, enforced by
