@@ -164,6 +164,9 @@
     .catalog-table .paper-title:hover { color:var(--signal); text-decoration:underline; }
     .catalog-table .paper-author,.catalog-table .code-link { display:block; margin-top:3px; color:var(--muted); font-size:11px; }
     .catalog-table .code-link { display:inline-block; color:var(--signal); }
+    .back-to-chart { position:fixed; right:24px; bottom:20px; z-index:9; border:1px solid var(--line-strong); border-radius:999px; padding:8px 12px; background:var(--surface); color:var(--ink); box-shadow:var(--shadow-md); font-size:12px; font-weight:700; }
+    .back-to-chart:hover { background:var(--signal-soft); border-color:var(--signal); }
+    .back-to-chart[hidden] { display:none; }
     .tag { display:inline-block; margin:0 4px 4px 0; padding:2px 7px; border-radius:999px; background:var(--signal-soft); color:var(--signal); font-size:11px; white-space:nowrap; }
     .empty { color:var(--muted); }
     .threat-kind-row { margin-bottom:4px; }
@@ -432,6 +435,7 @@
   <section id="taxonomy"><iframe class="doc-frame" id="taxonomy-frame" src="taxonomy.html" title="Rendered taxonomy"></iframe></section>
   </div>
 </main>
+<button type="button" class="back-to-chart" id="back-to-chart" data-i18n="backToChart" hidden>↑ Cross map</button>
 <div id="tooltip" class="tooltip" role="tooltip"></div>
 <script>
 const papers = __PAPERS_JSON__;
@@ -630,7 +634,7 @@ const I18N = {
     searchLabel: 'Search papers', searchPlaceholder: 'Search title, author, venue, tags, or taxonomy labels', leafFilter: 'Taxonomy leaf filters', filterClear: 'Clear filters', filterDone: 'Done',
     filterHelp: 'Leaf labels use OR within one axis and AND across axes. Keyword search is also combined with AND.',
     filterStatus: '{matched} of {total} catalog papers match', filterSelected: '{count} leaf filters selected', filterRemove: 'Remove filter',
-    citeLink: 'Cite', citeTitle: 'Cite this catalog', citeCopy: 'Copy BibTeX', citeCopied: 'Copied!', contactLabel: 'Contact',
+    citeLink: 'Cite', citeTitle: 'Cite this catalog', citeCopy: 'Copy BibTeX', citeCopied: 'Copied!', contactLabel: 'Contact', backToChart: '↑ Cross map',
     lpEyebrow: 'Open Research Catalog',
     lpTitle: 'Mapping how <em>physical&nbsp;AI</em> fails,<br>and what breaks it.',
     lpLede: 'A structured, continuously updated bibliography of safety, security, and robustness research for VLA models, robots, and embodied agents — annotated across six taxonomy axes, not just tagged by topic.',
@@ -681,7 +685,7 @@ const I18N = {
     searchLabel: '論文を検索', searchPlaceholder: 'タイトル・著者・Venue・タグ・Taxonomyラベルを検索', leafFilter: 'Taxonomy Leafで絞り込み', filterClear: 'すべて解除', filterDone: '閉じる',
     filterHelp: '同じ軸のLeafはOR、異なる軸はANDで結合します。キーワード検索ともANDで結合します。',
     filterStatus: '全{total}件中{matched}件が一致', filterSelected: 'Leafフィルタ{count}件を選択中', filterRemove: 'フィルタを解除',
-    citeLink: '引用', citeTitle: '引用方法', citeCopy: 'BibTeXをコピー', citeCopied: 'コピーしました', contactLabel: 'お問い合わせ',
+    citeLink: '引用', citeTitle: '引用方法', citeCopy: 'BibTeXをコピー', citeCopied: 'コピーしました', contactLabel: 'お問い合わせ', backToChart: '↑ Cross mapへ戻る',
     lpEyebrow: 'Open Research Catalog',
     lpTitle: 'Mapping how <em>physical&nbsp;AI</em> fails,<br>and what breaks it.',
     lpLede: 'VLAモデル・ロボット・身体性AIエージェントの安全性・セキュリティ・堅牢性研究を体系的に収集し、継続的に更新するbibliographyです。単なるトピックタグではなく、6つのtaxonomy軸で注釈づけされています。',
@@ -1242,6 +1246,20 @@ function activateViewFromHash() {
 }
 window.addEventListener('hashchange', activateViewFromHash);
 activateViewFromHash();
+
+const backToChart = document.getElementById('back-to-chart');
+function updateBackToChart(){ backToChart.hidden = window.scrollY < 520; }
+function scrollToActiveChart(){
+  const active = document.querySelector('section.active');
+  const target = active?.querySelector('[id$="-chart"]') || active;
+  if (!target) return;
+  const topbarH = document.querySelector('.topbar')?.offsetHeight || 0;
+  const top = Math.max(0, target.getBoundingClientRect().top + window.scrollY - topbarH - 12);
+  window.scrollTo({top, behavior:'smooth'});
+}
+backToChart.addEventListener('click', scrollToActiveChart);
+window.addEventListener('scroll', updateBackToChart, {passive:true});
+updateBackToChart();
 
 function renderAll(){
   const t = I18N[currentLang];
