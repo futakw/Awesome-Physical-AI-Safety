@@ -144,7 +144,7 @@
     .paper-list { max-height:190px; overflow:auto; margin:6px 0 0; padding-left:18px; }
     .paper-list li { margin:2px 0; }
     .catalog-table-wrap { margin-top:18px; border:1px solid var(--line); border-radius:10px; background:var(--surface); overflow:visible; }
-    .catalog-table-head { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 14px; border-bottom:1px solid var(--line); background:var(--surface-2); }
+    .catalog-table-head { position:sticky; top:0; z-index:6; display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 14px; border-bottom:1px solid var(--line); background:var(--surface-2); }
     .catalog-table-head strong { font-size:14px; }
     .catalog-table-head span { color:var(--muted); font-size:12px; }
     .section-groups { overflow:visible; }
@@ -883,15 +883,18 @@ function renderPaperTable(view, list=viewPapers(view), filterLabel='') {
   applyStickyOffsets(view);
 }
 function applyStickyOffsets(view){
+  const tableHead=document.querySelector(`#${view}-table .catalog-table-head`);
+  const tableHeadH=tableHead?tableHead.offsetHeight:0;
   document.querySelectorAll(`#${view}-table .section-group`).forEach(group=>{
     const summary=group.querySelector(':scope > summary');
     const summaryH=summary?summary.offsetHeight:0;
+    if(summary) summary.style.top=`${tableHeadH}px`;
     group.querySelectorAll(':scope > .subsection-group').forEach(subgroup=>{
       const title=subgroup.querySelector('.subsection-title');
       if(!title) return;
-      title.style.top=`${summaryH}px`;
+      title.style.top=`${tableHeadH+summaryH}px`;
       const titleH=title.offsetHeight;
-      subgroup.querySelectorAll('.catalog-table th').forEach(th=>{ th.style.top=`${summaryH+titleH}px`; });
+      subgroup.querySelectorAll('.catalog-table th').forEach(th=>{ th.style.top=`${tableHeadH+summaryH+titleH}px`; });
     });
   });
 }
