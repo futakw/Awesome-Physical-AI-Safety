@@ -1233,6 +1233,7 @@ function activateView(view) {
   d3.selectAll('section').classed('active', function(){ return this.id === view; });
   document.getElementById('catalog-filters').hidden=['readme','taxonomy'].includes(view);
   if (view === 'taxonomy') requestAnimationFrame(resizeTaxonomyFrame);
+  else if (view !== 'readme') requestAnimationFrame(() => applyStickyOffsets(view));
 }
 d3.selectAll('button[data-view]').on('click', function(){
   const view = this.dataset.view;
