@@ -116,7 +116,7 @@ Values are grouped below by where they sit in the perceive → reason → act pi
 
 ### How? — Mechanism Vocabulary (technique-oriented)
 
-`mechanism` classifies the concrete attack technique or failure mode a paper studies, **not** an inferred causal mechanism. It answers "how is the attack carried out, or what failure mode is investigated?" — not "what is the deepest root cause?" Concrete, recognizable research terminology (`adversarial-patch`, `typographic-injection`, `backdoor`, `membership-inference`, ...) is preserved even when it names a specific attack implementation rather than a fundamental primitive. Families group techniques by *kind of operation*, which is a deliberately different axis from `surface` (grouped by *where* it occurs in the perceive → reason → act pipeline); a family does not correspond to one surface family.
+`mechanism` classifies the concrete attack technique or failure mode a paper studies, **not** an inferred causal mechanism. It answers "how is the attack carried out, or what failure mode is investigated?" — not "what is the deepest root cause?" Concrete, recognizable research terminology (`adversarial-patch`, `typographic-injection`, `backdoor`, `membership-inference`, ...) is preserved even when it names a specific attack implementation rather than a fundamental primitive. Families group related attack techniques and failure modes, which is a deliberately different axis from `surface` (grouped by *where* it occurs in the perceive → reason → act pipeline); a family does not correspond to one surface family. **Data & Model Attacks** is an umbrella for poisoning or compromising data, models, memory, or retrieval stores, as well as inferring sensitive information from them. It does not require data or model modification; `membership-inference` remains in this family.
 
 **Assignment rules:**
 
@@ -129,7 +129,7 @@ Values are grouped below by where they sit in the perceive → reason → act pi
 
 | Value | Attack technique or failure mode |
 |---|---|
-| **Data & Model Corruption** | |
+| **Data & Model Attacks** | |
 | `data-poisoning` | Training data is corrupted to induce a predetermined failure or behavior. |
 | `backdoor` | A trigger condition is implanted to activate attacker-chosen behavior. |
 | `malicious-adapter` | A fine-tuned adapter, LoRA module, or plugin is distributed with hidden harmful behavior. |

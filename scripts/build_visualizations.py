@@ -39,12 +39,12 @@ BG, PANEL, TEXT, MUTED, GRID = "#FFFFFF", "#F7F9FC", "#202938", "#657287", "#DCE
 # Canonical family groupings from docs/reference/taxonomy.md — chart axes are ordered
 # and grouped by these, not by raw frequency, so related values sit together.
 # mechanism (HOW) is technique-oriented: it classifies the concrete attack
-# technique or failure mode a paper studies, grouped by kind of operation, not
+# technique or failure mode a paper studies, grouped by related techniques, not
 # by where it occurs (surface, a deliberately different axis) or an inferred
 # root cause. Mirrors docs/reference/taxonomy.md and templates/explorer.html's
 # MECHANISM_GROUPS/SURFACE_GROUPS.
 MECHANISM_GROUPS = [
-    {"name": "data-model-corruption", "label": "Data & Model Corruption", "values": ["data-poisoning", "backdoor", "malicious-adapter", "checkpoint-compromise", "reward-manipulation", "memory-poisoning", "retrieval-poisoning", "membership-inference"]},
+    {"name": "data-model-attacks", "label": "Data & Model Attacks", "values": ["data-poisoning", "backdoor", "malicious-adapter", "checkpoint-compromise", "reward-manipulation", "memory-poisoning", "retrieval-poisoning", "membership-inference"]},
     {"name": "perturbation-spoofing", "label": "Perturbation & Spoofing", "values": ["digital-perturbation", "adversarial-patch", "adversarial-object", "sensor-spoofing", "feedback-spoofing", "environment-manipulation"]},
     {"name": "instruction-semantic-manipulation", "label": "Instruction & Semantic Manipulation", "values": ["direct-prompt-injection", "indirect-prompt-injection", "jailbreak", "typographic-injection", "hazardous-instruction"]},
     {"name": "runtime-system-manipulation", "label": "Runtime & System Manipulation", "values": ["middleware-compromise", "network-attack", "denial-of-service", "covert-channel", "state-manipulation", "action-manipulation", "trajectory-manipulation", "representation-manipulation"]},

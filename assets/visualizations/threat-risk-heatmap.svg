@@ -16,7 +16,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text class="axis" x="615.0" y="100" text-anchor="middle">Physical Safety</text>
 <text class="axis" x="805.0" y="100" text-anchor="middle">Ethical Societal</text>
 <text class="axis" x="995.0" y="100" text-anchor="middle">Security Privacy</text>
-<text class="axis" text-anchor="end" x="312.0" y="142.0">Data &amp; Model Corruption</text>
+<text class="axis" text-anchor="end" x="312.0" y="142.0">Data &amp; Model Attacks</text>
 <rect x="332" y="114" width="186" height="46" rx="6" fill="#D6CFEE"><title>[OpenReview 2026] Clean-Action Backdoor Attacks on Vision-Language-Action Models via Sequential Error Exploitation
 [arXiv 2024] Compromising Embodied Agents with Contextual Backdoor Attacks
 [arXiv 2025] BEAT: Visual Backdoor Attacks on VLM-based Embodied Agents via Contrastive Trigger Learning

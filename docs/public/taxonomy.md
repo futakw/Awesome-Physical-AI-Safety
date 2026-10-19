@@ -84,13 +84,15 @@ HOW names the concrete attack technique or failure mode studied by the paper. It
 <!-- taxonomy-sync:start mechanism -->
 | Family | Labels |
 |---|---|
-| **Data & Model Corruption** | `data-poisoning`, `backdoor`, `malicious-adapter`, `checkpoint-compromise`, `reward-manipulation`, `memory-poisoning`, `retrieval-poisoning`, `membership-inference` |
+| **Data & Model Attacks** | `data-poisoning`, `backdoor`, `malicious-adapter`, `checkpoint-compromise`, `reward-manipulation`, `memory-poisoning`, `retrieval-poisoning`, `membership-inference` |
 | **Perturbation & Spoofing** | `digital-perturbation`, `adversarial-patch`, `adversarial-object`, `sensor-spoofing`, `feedback-spoofing`, `environment-manipulation` |
 | **Instruction & Semantic Manipulation** | `direct-prompt-injection`, `indirect-prompt-injection`, `jailbreak`, `typographic-injection`, `hazardous-instruction` |
 | **Runtime & System Manipulation** | `middleware-compromise`, `network-attack`, `denial-of-service`, `covert-channel`, `state-manipulation`, `action-manipulation`, `trajectory-manipulation`, `representation-manipulation` |
 | **Distribution Shift & Uncertainty** | `distribution-shift`, `instruction-ambiguity`, `uncertainty-miscalibration` |
 | **Reasoning, Planning & Execution Failure** | `perception-error`, `semantic-misalignment`, `planning-error`, `execution-error`, `multimodal-desynchronization` |
 <!-- taxonomy-sync:end mechanism -->
+
+Data & Model Attacks includes poisoning or compromising data and models, as well as inferring sensitive information from them. Membership inference does not require data or model modification.
 
 ## TARGET
 

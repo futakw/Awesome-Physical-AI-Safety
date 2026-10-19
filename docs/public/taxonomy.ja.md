@@ -84,13 +84,15 @@ HOWは、論文が扱う具体的な攻撃手法または失敗モードを表�
 <!-- taxonomy-sync:start mechanism -->
 | Family | ラベル |
 |---|---|
-| **データ・モデル汚染** | `data-poisoning`, `backdoor`, `malicious-adapter`, `checkpoint-compromise`, `reward-manipulation`, `memory-poisoning`, `retrieval-poisoning`, `membership-inference` |
+| **データ・モデルへの攻撃** | `data-poisoning`, `backdoor`, `malicious-adapter`, `checkpoint-compromise`, `reward-manipulation`, `memory-poisoning`, `retrieval-poisoning`, `membership-inference` |
 | **摂動・なりすまし** | `digital-perturbation`, `adversarial-patch`, `adversarial-object`, `sensor-spoofing`, `feedback-spoofing`, `environment-manipulation` |
 | **命令・意味操作** | `direct-prompt-injection`, `indirect-prompt-injection`, `jailbreak`, `typographic-injection`, `hazardous-instruction` |
 | **ランタイム・システム操作** | `middleware-compromise`, `network-attack`, `denial-of-service`, `covert-channel`, `state-manipulation`, `action-manipulation`, `trajectory-manipulation`, `representation-manipulation` |
 | **分布シフト・不確実性** | `distribution-shift`, `instruction-ambiguity`, `uncertainty-miscalibration` |
 | **推論・計画・実行の失敗** | `perception-error`, `semantic-misalignment`, `planning-error`, `execution-error`, `multimodal-desynchronization` |
 <!-- taxonomy-sync:end mechanism -->
+
+「データ・モデルへの攻撃」は、データやモデルの汚染・侵害に加え、それらから機微情報を推定する攻撃を含みます。Membership inferenceはデータやモデルの改変を必要としません。
 
 ## TARGET
 

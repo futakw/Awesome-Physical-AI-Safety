@@ -92,6 +92,12 @@
     .view-container { min-height:960px; }
     section { display:none; }
     section.active { display:block; }
+    .catalog-views { display:flex; flex-wrap:nowrap; overflow-x:auto; max-width:100%; gap:4px; margin:0 0 14px; }
+    .catalog-views[hidden] { display:none; }
+    .catalog-views button { flex:none; white-space:nowrap; }
+    .timeline-overview { margin-bottom:12px; min-width:0; }
+    .timeline-overview > summary { width:fit-content; padding:6px 10px; border:1px solid var(--line); border-radius:4px; cursor:pointer; color:var(--muted); }
+    .timeline-overview[open] > summary { margin-bottom:10px; }
     .note { color:var(--muted); font-size:13px; margin:0 0 12px; }
     .coverage-note { margin:0 0 12px; color:var(--muted); font-size:12px; }
     .coverage-note > summary { display:list-item; width:fit-content; max-width:100%; padding:4px 9px; border:1px solid var(--line); border-radius:7px; background:var(--surface-2); color:var(--muted); cursor:pointer; }
@@ -294,7 +300,46 @@
     .lp-readme-link a { color:var(--signal); font-size:13px; font-weight:600; text-decoration:none; }
     .lp-readme-link a:hover { text-decoration:underline; }
     @media (max-width:860px) { .lp-hero { grid-template-columns:1fr; } .lp-axis-grid,.lp-features { grid-template-columns:repeat(2,1fr); } .lp-axis:nth-child(3n) { border-right:1px solid var(--line); } .lp-axis:nth-child(2n) { border-right:none; } }
-    @media (max-width:560px) { .lp-axis-grid,.lp-features { grid-template-columns:1fr; } .lp-axis { border-right:none !important; } }
+    @media (max-width:860px) {
+      .topbar-left,.topbar-right,.topbar-bottom,main,.view-container,section.active { min-width:0; max-width:100%; }
+      h1 { min-width:0; white-space:normal; line-height:1.3; }
+      h1 .brand-mark { flex:none; }
+      .topbar-bottom nav { flex-wrap:nowrap; overflow-x:auto; width:100%; min-width:0; padding-bottom:3px; }
+      .topbar-bottom nav button { flex:none; white-space:nowrap; }
+      .lp-hero { grid-template-columns:minmax(0,1fr); }
+      .lp-hero > *, .lp-axis, .lp-feature { min-width:0; }
+      .lp-panel { width:100% !important; max-width:100%; }
+      .lp-title,.lp-lede,.lp-t,.lp-foot-id { overflow-wrap:anywhere; }
+      .lp-heat { grid-template-columns:118px repeat(7,minmax(80px,1fr)) !important; overflow-x:auto; padding-bottom:8px; }
+      section > div[id$="-chart"],#timeline-chart { max-width:100%; overflow-x:auto; }
+      section > div[id$="-chart"] > svg,#timeline-chart > svg { min-width:760px; }
+      .catalog-table-head { flex-wrap:wrap; }
+      .subsection-group { min-width:0; max-width:100%; overflow-x:auto; }
+      .catalog-table { min-width:680px; }
+      .subsection-title,.catalog-table th { position:static; }
+    }
+    .mobile-menu-toggle,.mobile-footer { display:none; }
+    .topbar-bottom { flex-wrap:nowrap; }
+    .topbar-bottom nav { flex:1; min-width:0; flex-wrap:nowrap; overflow-x:auto; }
+    .topbar-bottom nav button,.topbar .author { flex:none; }
+    @media (max-width:1100px) {
+      .topbar-inner { padding:4px 12px 0; }
+      .topbar-main { flex-wrap:nowrap; padding-bottom:4px; }
+      .topbar-left { flex:1; min-width:0; }
+      h1 { font-size:clamp(13px,3.8vw,16.5px); white-space:nowrap; gap:6px; }
+      h1 .brand-mark { width:20px; height:20px; }
+      .topbar-main { gap:8px; }
+      .topbar #gh-link,.topbar .citation-wrap,.topbar .meta-badges { display:none; }
+      .mobile-menu-toggle { display:inline-flex; align-items:center; justify-content:center; width:36px; height:32px; padding:0; }
+      .mobile-menu-toggle svg { width:18px; height:18px; border:0; border-radius:0; background:transparent; }
+      .topbar-right { display:none; position:absolute; right:12px; top:48px; padding:14px; gap:14px; border:1px solid var(--line); border-radius:6px; background:var(--surface); box-shadow:var(--shadow-md); z-index:10; }
+      .topbar-right.mobile-open { display:flex; flex-direction:column; align-items:flex-start; }
+      .topbar-bottom { padding-bottom:6px; }
+      .topbar .author { display:none; }
+      .mobile-footer { display:flex; justify-content:center; flex-wrap:wrap; gap:8px 16px; padding:20px 12px; font-size:12px; color:var(--muted); }
+      .mobile-footer a { color:var(--ink); }
+    }
+    @media (max-width:560px) { .topbar #gh-link,.topbar .citation-wrap,.topbar .meta-badges { display:none; } .lp-axis-grid,.lp-features { grid-template-columns:1fr; } .lp-axis { border-right:none !important; } }
   </style>
 </head>
 <body>
@@ -315,7 +360,8 @@
           </div>
         </div>
       </div>
-      <div class="topbar-right">
+      <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Display settings" aria-expanded="false" aria-controls="display-settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <div class="topbar-right" id="display-settings">
         <div class="meta-badges" aria-label="Catalog metadata">
           <a class="meta-badge papers" href="readme.html" target="_blank" rel="noopener noreferrer"><span data-i18n="badgePapers">Papers</span><strong id="paper-count-badge">—</strong></a>
         </div>
@@ -330,21 +376,24 @@
       </div>
     </div>
     <div class="topbar-bottom">
-    <nav aria-label="Visualization views">
+    <nav aria-label="Main navigation">
       <button type="button" data-view="readme" aria-pressed="true" data-i18n="navReadme">README</button>
       <button type="button" data-view="taxonomy" aria-pressed="false" data-i18n="navTaxonomy">Taxonomy</button>
-      <button type="button" data-view="timeline" aria-pressed="false" data-i18n="navTimeline">Field timeline</button>
-      <button type="button" data-view="heatmap" aria-pressed="false" data-i18n="navHeatmap">How × Where</button>
-      <button type="button" data-view="risk" aria-pressed="false" data-i18n="navRisk">How × Measured Risk</button>
-      <button type="button" data-view="defense" aria-pressed="false" data-i18n="navDefense">Defense × Threat</button>
-      <button type="button" data-view="target" aria-pressed="false" data-i18n="navTarget">Target × Consequence</button>
-      <button type="button" data-view="outcome-risk" aria-pressed="false" data-i18n="navOutcomeRisk">Consequence × Measured Risk</button>
+      <button type="button" id="catalog-home" aria-pressed="false" data-i18n="navCatalog">Catalog</button>
     </nav>
     <p class="author">Author: <a href="https://futa-waseda.netlify.app/" target="_blank" rel="noopener noreferrer">Futa Waseda</a><a class="contact-link" id="contact-link" href="https://futa-waseda.netlify.app/contact/" target="_blank" rel="noopener noreferrer" aria-label="Contact" title="Contact"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="15" height="11" rx="1.8"/><path d="M3 5.5 10 11 17 5.5"/></svg></a></p>
     </div>
   </div>
 </header>
 <main>
+  <nav class="catalog-views" id="catalog-views" aria-label="Catalog views" hidden>
+      <button type="button" data-view="timeline" aria-pressed="false" data-i18n="navTimeline">Paper list</button>
+      <button type="button" data-view="heatmap" aria-pressed="false" data-i18n="navHeatmap">How × Where</button>
+      <button type="button" data-view="risk" aria-pressed="false" data-i18n="navRisk">How × Measured Risk</button>
+      <button type="button" data-view="defense" aria-pressed="false" data-i18n="navDefense">Defense × Threat</button>
+      <button type="button" data-view="target" aria-pressed="false" data-i18n="navTarget">Target × Consequence</button>
+      <button type="button" data-view="outcome-risk" aria-pressed="false" data-i18n="navOutcomeRisk">Consequence × Measured Risk</button>
+  </nav>
   <aside id="catalog-filters" class="catalog-filters" aria-label="Catalog filters" hidden>
     <div class="filter-main">
       <label class="search-wrap" for="catalog-search"><span class="sr-only" data-i18n="searchLabel">Search papers</span><input type="search" id="catalog-search" autocomplete="off" data-i18n-placeholder="searchPlaceholder" placeholder="Search title, author, venue, tags, or taxonomy labels"></label>
@@ -361,7 +410,7 @@
     <div id="filter-chips" class="filter-chips" aria-label="Selected taxonomy leaf filters"></div>
   </aside>
   <div class="view-container">
-  <section id="timeline"><p class="note" data-i18n="timelineNote">Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to filter the table.</p><div id="timeline-chart"></div><div id="timeline-table"></div></section>
+  <section id="timeline"><details class="timeline-overview" id="timeline-overview"><summary data-i18n="timelineToggle">Timeline</summary><p class="note" data-i18n="timelineNote">Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to filter the table.</p><div id="timeline-chart"></div></details><div id="timeline-table"></div></section>
   <section id="heatmap"><details class="coverage-note"><summary id="heatmap-population"></summary><div class="coverage-detail"><p id="heatmap-population-detail"></p><p data-i18n="countingNote"></p></div></details><div id="heatmap-chart"></div><div id="heatmap-table"></div></section>
   <section id="risk"><details class="coverage-note"><summary id="risk-population"></summary><div class="coverage-detail"><p id="risk-population-detail"></p><p data-i18n="countingNote"></p></div></details><div id="risk-chart"></div><div id="risk-table"></div></section>
   <section id="defense"><details class="coverage-note"><summary id="defense-population"></summary><div class="coverage-detail"><p id="defense-population-detail"></p><p data-i18n="countingNote"></p></div></details><div id="defense-chart"></div><div id="defense-table"></div></section>
@@ -380,7 +429,7 @@
           <div><span class="lp-num" id="lp-stat-axes">—</span><span class="lp-lbl" data-i18n="lpStatAxes">Taxonomy axes</span></div>
         </div>
         <div class="lp-ctas">
-          <button type="button" class="lp-btn lp-btn-solid" id="lp-cta-explore" data-i18n="lpCtaExplore">Explore the catalog →</button>
+          <button type="button" class="lp-btn lp-btn-solid" id="lp-cta-explore" data-i18n="lpCtaExplore">Search all papers →</button>
           <button type="button" class="lp-btn lp-btn-line" id="lp-cta-taxonomy" data-i18n="lpCtaTaxonomy">Read the taxonomy</button>
         </div>
       </div>
@@ -441,6 +490,7 @@
   <section id="taxonomy"><iframe class="doc-frame" id="taxonomy-frame" src="taxonomy.html" title="Rendered taxonomy"></iframe></section>
   </div>
 </main>
+<footer class="mobile-footer"><a href="https://futa-waseda.netlify.app/" target="_blank" rel="noopener noreferrer">Futa Waseda</a><a href="https://futa-waseda.netlify.app/contact/" target="_blank" rel="noopener noreferrer">Contact</a></footer>
 <button type="button" class="back-to-top" id="back-to-top" data-i18n="backToTop" hidden>↑ Back to top</button>
 <div id="tooltip" class="tooltip" role="tooltip"></div>
 <script>
@@ -468,10 +518,10 @@ const CONSEQUENCES = ['task-failure','targeted-action','action-freezing','unsafe
 // cross-map charts, not just a sort/divider hint.
 // Technique-oriented families (see docs/reference/taxonomy.md). HOW classifies
 // the concrete attack technique or failure mode a paper studies; family
-// membership groups techniques by kind of operation, not by where they occur
+// membership groups related techniques and failure modes, not where they occur
 // (that's `surface`, below) or by inferred root cause.
 const MECHANISM_GROUPS = [
-  {name:'data-model-corruption',label:'Data & Model Corruption',short:'Data/Model',labelJa:'データ・モデル汚染',values:['data-poisoning','backdoor','malicious-adapter','checkpoint-compromise','reward-manipulation','memory-poisoning','retrieval-poisoning','membership-inference']},
+  {name:'data-model-attacks',label:'Data & Model Attacks',short:'Data/Model',labelJa:'データ・モデルへの攻撃',values:['data-poisoning','backdoor','malicious-adapter','checkpoint-compromise','reward-manipulation','memory-poisoning','retrieval-poisoning','membership-inference']},
   {name:'perturbation-spoofing',label:'Perturbation & Spoofing',short:'Perturb/Spoof',labelJa:'摂動・なりすまし',values:['digital-perturbation','adversarial-patch','adversarial-object','sensor-spoofing','feedback-spoofing','environment-manipulation']},
   {name:'instruction-semantic-manipulation',label:'Instruction & Semantic Manipulation',short:'Instruction',labelJa:'命令・意味操作',values:['direct-prompt-injection','indirect-prompt-injection','jailbreak','typographic-injection','hazardous-instruction']},
   {name:'runtime-system-manipulation',label:'Runtime & System Manipulation',short:'Runtime/System',labelJa:'ランタイム・システム操作',values:['middleware-compromise','network-attack','denial-of-service','covert-channel','state-manipulation','action-manipulation','trajectory-manipulation','representation-manipulation']},
@@ -702,8 +752,9 @@ const I18N = {
   en: {
     title: 'Awesome Physical AI Safety',
     ghlink: 'Star on GitHub',
-    navReadme: 'Overview', navTaxonomy: 'Taxonomy', navTimeline: 'Timeline', navHeatmap: 'Mechanism × Surface', navRisk: 'Mechanism × Risk', navDefense: 'Defense × Threat', navTarget: 'Target × Consequence', navOutcomeRisk: 'Consequence × Risk',
+    navReadme: 'Overview', navTaxonomy: 'Taxonomy', navCatalog: 'Catalog', navTimeline: 'Paper list', navHeatmap: 'Mechanism × Surface', navRisk: 'Mechanism × Risk', navDefense: 'Defense × Threat', navTarget: 'Target × Consequence', navOutcomeRisk: 'Consequence × Risk',
     badgeLicenses: 'Licenses', badgePapers: 'Papers', badgeUpdate: 'Update', badgeCuration: 'Curation', badgeDaily: 'Daily', badgeLlm: 'LLM-assisted',
+    timelineToggle: 'Timeline',
     timelineNote: 'Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to filter the table.',
     rowsLabel: 'Rows', colsLabel: 'Columns',
     axisMechanism: 'Mechanism', axisSurface: 'Surface', axisRisk: 'Measured risk', axisDefenseMechanism: 'Defense mechanism', axisThreatFamily: 'Threat family', axisTarget: 'Target', axisConsequence: 'Consequence',
@@ -729,7 +780,7 @@ const I18N = {
     lpTitle: 'Mapping how <em>physical&nbsp;AI</em> fails,<br>and what breaks it.',
     lpLede: 'A structured, continuously updated bibliography of safety, security, and robustness research for VLA models, robots, and embodied agents — annotated across six taxonomy axes, not just tagged by topic.',
     lpStatPapers: 'Papers indexed', lpStatAxes: 'Taxonomy axes',
-    lpCtaExplore: 'Explore the catalog →', lpCtaTaxonomy: 'Read the taxonomy',
+    lpCtaExplore: 'Search all papers →', lpCtaTaxonomy: 'Read the taxonomy',
     lpPanelTab: 'Mechanism × Surface', lpPanelTitle: 'Threat Mechanism × Surface',
     lpPanelSub: 'Co-occurrence across {n} concrete threat models · click a cell to explore',
     lpRecentTitle: 'Recently catalogued',
@@ -753,8 +804,9 @@ const I18N = {
   ja: {
     title: 'Awesome Physical AI Safety',
     ghlink: 'GitHubでStar',
-    navReadme: 'Overview', navTaxonomy: 'Taxonomy', navTimeline: 'タイムライン', navHeatmap: 'Mechanism × Surface', navRisk: 'Mechanism × Risk', navDefense: 'Defense × Threat', navTarget: 'Target × Consequence', navOutcomeRisk: 'Consequence × Risk',
+    navReadme: 'Overview', navTaxonomy: 'Taxonomy', navCatalog: 'カタログ', navTimeline: '論文一覧', navHeatmap: 'Mechanism × Surface', navRisk: 'Mechanism × Risk', navDefense: 'Defense × Threat', navTarget: 'Target × Consequence', navOutcomeRisk: 'Consequence × Risk',
     badgeLicenses: 'ライセンス', badgePapers: '論文数', badgeUpdate: '更新頻度', badgeCuration: 'キュレーション', badgeDaily: '毎日', badgeLlm: 'LLM支援',
+    timelineToggle: 'タイムライン',
     timelineNote: 'バブルの大きさは、分野×年のセルに含まれる論文数を表します。ホバーでプレビュー、クリックで下の表を絞り込みます。',
     rowsLabel: '行', colsLabel: '列',
     axisMechanism: 'メカニズム', axisSurface: 'サーフェス', axisRisk: '測定リスク', axisDefenseMechanism: '防御メカニズム', axisThreatFamily: '脅威群', axisTarget: '対象（TARGET）', axisConsequence: '帰結（CONSEQUENCE）',
@@ -780,7 +832,7 @@ const I18N = {
     lpTitle: 'Mapping how <em>physical&nbsp;AI</em> fails,<br>and what breaks it.',
     lpLede: 'VLAモデル・ロボット・身体性AIエージェントの安全性・セキュリティ・堅牢性研究を体系的に収集し、継続的に更新するbibliographyです。単なるトピックタグではなく、6つのtaxonomy軸で注釈づけされています。',
     lpStatPapers: '収録論文数', lpStatAxes: 'Taxonomy軸',
-    lpCtaExplore: 'カタログを探索する →', lpCtaTaxonomy: 'Taxonomyを読む',
+    lpCtaExplore: '全論文から検索する →', lpCtaTaxonomy: 'Taxonomyを読む',
     lpPanelTab: 'Mechanism × Surface', lpPanelTitle: 'Threat Mechanism × Surface',
     lpPanelSub: '{n}件の具体的な脅威モデルの共起 · セルをクリックして探索',
     lpRecentTitle: '最近収録された論文',
@@ -1089,6 +1141,11 @@ function recentPapers(n=3){
     .map(({paper})=>paper);
 }
 let lpEnglishPanelWidth = null;
+// Restore the desktop panel width when leaving the compact layout.
+matchMedia('(max-width:860px)').addEventListener('change',({matches})=>{
+  document.querySelector('.lp-panel').style.width = !matches && currentLang==='ja' && lpEnglishPanelWidth
+    ? `${lpEnglishPanelWidth}px` : '';
+});
 function renderLpOverview(){
   const mechanisms=MECHANISM_GROUPS, surfaces=SURFACE_GROUPS;
   // Keep the landing-page showcase stable while using the same population
@@ -1121,24 +1178,27 @@ function renderLpOverview(){
     });
   });
   heat.innerHTML=html;
-  if(currentLang==='en'){
-    lpEnglishPanelWidth=lpPanel.getBoundingClientRect().width;
-  }else if(lpEnglishPanelWidth){
-    lpPanel.style.width=`${lpEnglishPanelWidth}px`;
+  // A compact layout must not overwrite the desktop language-width cache.
+  if(!matchMedia('(max-width:860px)').matches){
+    if(currentLang==='en'){
+      lpEnglishPanelWidth=lpPanel.getBoundingClientRect().width;
+    }else if(lpEnglishPanelWidth){
+      lpPanel.style.width=`${lpEnglishPanelWidth}px`;
+    }
   }
   heat.querySelectorAll('.lp-cell').forEach(cell=>{
     cell.addEventListener('click',()=>{
       const mg=mechanisms[+cell.dataset.mg], sg=surfaces[+cell.dataset.sg];
       toggleCellFilter('mechanism',mg.values,'surface',sg.values);
-      activateView('heatmap');
+      navigateView('heatmap');
       renderAll();
     });
   });
   const list=document.getElementById('lp-recent-list');
   list.innerHTML=recentPapers(3).map((p,i)=>`<li><span class="lp-idx">${String(i+1).padStart(2,'0')}</span><div><div class="lp-t"><a href="${escapeHtml(p.paper_url||'#')}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.title)}</a></div><div class="lp-m">${escapeHtml(authorLabel(p))} · ${escapeHtml(p.venue||'')} ${p.year||''} · ${escapeHtml(p.catalogued_date)}</div></div></li>`).join('');
 }
-document.getElementById('lp-cta-explore').addEventListener('click',()=>activateView('heatmap'));
-document.getElementById('lp-cta-taxonomy').addEventListener('click',()=>activateView('taxonomy'));
+document.getElementById('lp-cta-explore').addEventListener('click',()=>navigateView('timeline'));
+document.getElementById('lp-cta-taxonomy').addEventListener('click',()=>navigateView('taxonomy'));
 document.getElementById('lp-footer-cite').addEventListener('click',event=>{event.stopPropagation();document.getElementById('citation-link').click();});
 
 function renderDefense(){
@@ -1344,26 +1404,40 @@ taxonomyFrame.addEventListener('load', watchTaxonomyFrame);
 if (taxonomyFrame.contentDocument?.readyState === 'complete') watchTaxonomyFrame();
 window.addEventListener('resize', resizeTaxonomyFrame);
 
+const catalogViews = new Set([...document.querySelectorAll('#catalog-views button[data-view]')].map(button=>button.dataset.view));
 const availableViews = new Set([...document.querySelectorAll('button[data-view]')].map(button => button.dataset.view));
 function activateView(view) {
   if (!availableViews.has(view)) return;
   d3.selectAll('button[data-view]').attr('aria-pressed', function(){ return String(this.dataset.view === view); });
   d3.selectAll('section').classed('active', function(){ return this.id === view; });
-  document.getElementById('catalog-filters').hidden=['readme','taxonomy'].includes(view);
+  const isCatalog=catalogViews.has(view);
+  document.getElementById('catalog-home').setAttribute('aria-pressed',String(isCatalog));
+  document.getElementById('catalog-views').hidden=!isCatalog;
+  document.getElementById('catalog-filters').hidden=!isCatalog;
   if (view === 'taxonomy') requestAnimationFrame(resizeTaxonomyFrame);
   else if (view !== 'readme') requestAnimationFrame(() => applyStickyOffsets(view));
 }
-d3.selectAll('button[data-view]').on('click', function(){
-  const view = this.dataset.view;
+function navigateView(view){
+  if(view==='timeline') renderPaperTable('timeline');
   activateView(view);
   history.replaceState(null, '', '#' + view);
   window.scrollTo(0, 0);
+}
+d3.selectAll('button[data-view]').on('click', function(){ navigateView(this.dataset.view); });
+document.getElementById('catalog-home').addEventListener('click',()=>navigateView('timeline'));
+document.getElementById('timeline-overview').addEventListener('toggle',()=>{
+  requestAnimationFrame(()=>applyStickyOffsets('timeline'));
 });
 function activateViewFromHash() {
   const view = window.location.hash.slice(1);
   activateView(availableViews.has(view) ? view : 'readme');
+  if(catalogViews.has(view)) requestAnimationFrame(()=>window.scrollTo(0,0));
 }
 window.addEventListener('hashchange', activateViewFromHash);
+// Native anchor scrolling must not skip the all-papers search controls.
+window.addEventListener('load',()=>{
+  if(catalogViews.has(location.hash.slice(1))) window.scrollTo(0,0);
+});
 activateViewFromHash();
 
 const backToTop = document.getElementById('back-to-top');
@@ -1422,6 +1496,26 @@ function setLanguage(lang){
   localStorage.setItem('lang', lang);
   renderAll();
 }
+const mobileMenuToggle=document.getElementById('mobile-menu-toggle');
+const displaySettings=document.getElementById('display-settings');
+function closeMobileMenu(){
+  displaySettings.classList.remove('mobile-open');
+  mobileMenuToggle.setAttribute('aria-expanded','false');
+}
+mobileMenuToggle.addEventListener('click',()=>{
+  const open=mobileMenuToggle.getAttribute('aria-expanded')!=='true';
+  displaySettings.classList.toggle('mobile-open',open);
+  mobileMenuToggle.setAttribute('aria-expanded',String(open));
+});
+document.addEventListener('pointerdown',event=>{
+  if(!displaySettings.contains(event.target) && !mobileMenuToggle.contains(event.target)) closeMobileMenu();
+});
+document.addEventListener('keydown',event=>{
+  if(event.key==='Escape' && mobileMenuToggle.getAttribute('aria-expanded')==='true'){
+    closeMobileMenu(); mobileMenuToggle.focus();
+  }
+});
+matchMedia('(max-width:1100px)').addEventListener('change',closeMobileMenu);
 document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
 document.getElementById('lang-ja').addEventListener('click', () => setLanguage('ja'));
 
