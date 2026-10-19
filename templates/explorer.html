@@ -95,9 +95,6 @@
     .catalog-views { display:flex; flex-wrap:nowrap; overflow-x:auto; max-width:100%; gap:4px; margin:0 0 14px; }
     .catalog-views[hidden] { display:none; }
     .catalog-views button { flex:none; white-space:nowrap; }
-    .timeline-overview { margin-bottom:12px; min-width:0; }
-    .timeline-overview > summary { width:fit-content; padding:6px 10px; border:1px solid var(--line); border-radius:4px; cursor:pointer; color:var(--muted); }
-    .timeline-overview[open] > summary { margin-bottom:10px; }
     .note { color:var(--muted); font-size:13px; margin:0 0 12px; }
     .coverage-note { margin:0 0 12px; color:var(--muted); font-size:12px; }
     .coverage-note > summary { display:list-item; width:fit-content; max-width:100%; padding:4px 9px; border:1px solid var(--line); border-radius:7px; background:var(--surface-2); color:var(--muted); cursor:pointer; }
@@ -135,7 +132,6 @@
     .venue-parent-leaf .leaf-option { padding-left:20px; font-weight:400; }
     .filter-clear { min-height:38px; }
     .filter-clear:disabled { opacity:.48; cursor:default; }
-    .filter-meta { display:flex; align-items:baseline; gap:8px 14px; flex-wrap:wrap; margin-top:8px; }
     .filter-status { margin:0; color:var(--ink); font-size:13px; font-weight:650; }
     .filter-help { margin:0; color:var(--muted); font-size:12px; }
     .filter-chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
@@ -207,7 +203,7 @@
     .lang-toggle button[aria-pressed="true"],.theme-toggle button[aria-pressed="true"] { background:var(--ink); color:var(--bg); font-weight:650; }
     .theme-toggle button { font:600 11px/1.2 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; color:var(--muted); letter-spacing:.04em; padding:6px 10px; }
     .theme-toggle button[aria-pressed="true"] { color:var(--bg); }
-    @media (max-width:760px) { .leaf-filter { flex:1 1 210px; } .leaf-filter > summary { text-align:center; } .leaf-options { position:fixed; top:12px; right:12px; left:12px; width:auto; max-height:calc(100vh - 24px); grid-template-columns:1fr; } }
+    @media (max-width:760px) { .leaf-filter { flex:1 1 210px; } .leaf-filter > summary { text-align:center; } .leaf-options { position:fixed; top:calc(84px + env(safe-area-inset-top)); right:12px; left:12px; width:auto; max-height:calc(100dvh - 96px - env(safe-area-inset-top)); grid-template-columns:1fr; } }
     @media (max-width:620px) { main { padding:14px 12px 40px; } .topbar-inner { padding:8px 12px 0; } .meta-badges { margin-left:0; } .tooltip { max-width:280px; } .catalog-filters { padding:11px; } }
 
     /* Overview landing section */
@@ -311,8 +307,8 @@
       .lp-panel { width:100% !important; max-width:100%; }
       .lp-title,.lp-lede,.lp-t,.lp-foot-id { overflow-wrap:anywhere; }
       .lp-heat { grid-template-columns:118px repeat(7,minmax(80px,1fr)) !important; overflow-x:auto; padding-bottom:8px; }
-      section > div[id$="-chart"],#timeline-chart { max-width:100%; overflow-x:auto; }
-      section > div[id$="-chart"] > svg,#timeline-chart > svg { min-width:760px; }
+      section > div[id$="-chart"],.chart-panel > div[id$="-chart"],#timeline-chart { max-width:100%; overflow-x:auto; }
+      section > div[id$="-chart"] > svg,.chart-panel > div[id$="-chart"] > svg,#timeline-chart > svg { min-width:760px; }
       .catalog-table-head { flex-wrap:wrap; }
       .subsection-group { min-width:0; max-width:100%; overflow-x:auto; }
       .catalog-table { min-width:680px; }
@@ -335,11 +331,50 @@
       .topbar-right { display:none; position:absolute; right:12px; top:48px; padding:14px; gap:14px; border:1px solid var(--line); border-radius:6px; background:var(--surface); box-shadow:var(--shadow-md); z-index:10; }
       .topbar-right.mobile-open { display:flex; flex-direction:column; align-items:flex-start; }
       .topbar-bottom { padding-bottom:6px; }
-      .topbar .author { display:none; }
       .mobile-footer { display:flex; justify-content:center; flex-wrap:wrap; gap:8px 16px; padding:20px 12px; font-size:12px; color:var(--muted); }
       .mobile-footer a { color:var(--ink); }
     }
     @media (max-width:560px) { .topbar #gh-link,.topbar .citation-wrap,.topbar .meta-badges { display:none; } .lp-axis-grid,.lp-features { grid-template-columns:1fr; } .lp-axis { border-right:none !important; } }
+    .topbar-inner { padding-top:8px; padding-bottom:0; }
+    .topbar-main { flex-wrap:nowrap; gap:8px; padding-bottom:8px; }
+    .topbar-left,.topbar-right { flex-wrap:nowrap; }
+    .topbar-left { gap:8px; }
+    .primary-nav { flex:none; flex-wrap:nowrap; }
+    .primary-nav button { flex:none; white-space:nowrap; }
+    .topbar .author { display:block; }
+    .topbar .author[hidden] { display:none; }
+    body.header-author-hidden .mobile-footer { display:flex; }
+    .mobile-footer { display:none; }
+    .catalog-views { margin-bottom:0; padding:4px 0; background:var(--surface); border-bottom:1px solid var(--line); }
+    .catalog-views button[aria-pressed="true"] { box-shadow:inset 0 -2px var(--accent); }
+    .filter-help-toggle { display:inline-flex; align-items:center; justify-content:center; flex:none; width:26px; height:38px; padding:0; border:0; background:transparent; color:var(--muted); }
+    .filter-help { flex-basis:100%; padding-top:5px; }
+    .filter-help p { margin:0 0 4px; }
+    .chart-panel { position:relative; min-width:0; max-width:100%; border:1px solid var(--line); border-radius:0 0 10px 10px; background:var(--surface); }
+    .chart-panel > div[id$="-chart"] > svg { border:0; border-radius:0 0 10px 10px; }
+    .coverage-note:not(.timeline-help) { position:absolute; z-index:2; top:4px; right:8px; margin:0; padding:0; }
+    .coverage-note:not(.timeline-help) > summary { white-space:nowrap; }
+    .coverage-note:not(.timeline-help)[open] { position:relative; top:auto; right:auto; padding:8px 10px 0; }
+    .coverage-note.timeline-help { position:absolute; z-index:2; top:4px; right:8px; margin:0; padding:0; }
+    .coverage-note.timeline-help[open] { position:relative; top:auto; right:auto; padding:8px 10px 0; }
+    #timeline-chart { padding-top:6px; }
+    .coverage-note > summary { display:block; margin-left:auto; border-radius:4px; }
+    .coverage-note > summary::-webkit-details-marker { display:none; }
+    .coverage-note[open] > summary { margin-bottom:0; }
+    .coverage-detail { margin-top:8px; }
+    @media (max-width:1100px) { .coverage-note:not(.timeline-help) { display:none; } }
+    @media (min-width:1101px) {
+      .chart-panel > div[id$="-chart"] > svg { transform:translateX(-4%); background:transparent; }
+    }
+    @media (max-width:1100px) {
+      .topbar-inner { padding:4px 12px 0; }
+      .topbar-main { padding-bottom:4px; }
+      .topbar-right { top:44px; }
+    }
+    @media (max-width:860px) {
+      .filter-main .search-wrap { flex:1 1 calc(100% - 35px); min-width:0; }
+      .filter-main .leaf-filter,.filter-main .filter-clear { order:1; }
+    }
   </style>
 </head>
 <body>
@@ -376,7 +411,7 @@
       </div>
     </div>
     <div class="topbar-bottom">
-    <nav aria-label="Main navigation">
+    <nav class="primary-nav" aria-label="Main navigation">
       <button type="button" data-view="readme" aria-pressed="true" data-i18n="navReadme">README</button>
       <button type="button" data-view="taxonomy" aria-pressed="false" data-i18n="navTaxonomy">Taxonomy</button>
       <button type="button" id="catalog-home" aria-pressed="false" data-i18n="navCatalog">Catalog</button>
@@ -386,14 +421,6 @@
   </div>
 </header>
 <main>
-  <nav class="catalog-views" id="catalog-views" aria-label="Catalog views" hidden>
-      <button type="button" data-view="timeline" aria-pressed="false" data-i18n="navTimeline">Paper list</button>
-      <button type="button" data-view="heatmap" aria-pressed="false" data-i18n="navHeatmap">How × Where</button>
-      <button type="button" data-view="risk" aria-pressed="false" data-i18n="navRisk">How × Measured Risk</button>
-      <button type="button" data-view="defense" aria-pressed="false" data-i18n="navDefense">Defense × Threat</button>
-      <button type="button" data-view="target" aria-pressed="false" data-i18n="navTarget">Target × Consequence</button>
-      <button type="button" data-view="outcome-risk" aria-pressed="false" data-i18n="navOutcomeRisk">Consequence × Measured Risk</button>
-  </nav>
   <aside id="catalog-filters" class="catalog-filters" aria-label="Catalog filters" hidden>
     <div class="filter-main">
       <label class="search-wrap" for="catalog-search"><span class="sr-only" data-i18n="searchLabel">Search papers</span><input type="search" id="catalog-search" autocomplete="off" data-i18n-placeholder="searchPlaceholder" placeholder="Search title, author, venue, tags, or taxonomy labels"></label>
@@ -402,20 +429,29 @@
         <div id="leaf-options" class="leaf-options"></div>
       </details>
       <button type="button" id="filter-clear" class="filter-clear" data-i18n="filterClear" disabled>Clear filters</button>
+
+      <button type="button" class="filter-help-toggle" id="filter-help-toggle" aria-expanded="false" aria-controls="filter-help-body"><span aria-hidden="true">ⓘ</span><span class="sr-only" data-i18n="filterHelpLabel">Search rules</span></button>
     </div>
-    <div class="filter-meta">
-      <p id="filter-status" class="filter-status" aria-live="polite"></p>
-      <p class="filter-help" data-i18n="filterHelp">Leaf labels use OR within one axis and AND across axes. Keyword search is also combined with AND.</p>
-    </div>
+      <p id="filter-status" class="filter-status sr-only" role="status" aria-live="polite"><span id="filter-status-count" aria-hidden="true"></span><span class="sr-only" id="filter-status-reader"></span></p>
+      <div class="filter-help" id="filter-help-body" hidden><p data-i18n="filterHelpScope">Counts show matches across the full catalog.</p><p data-i18n="filterHelp">Taxonomy and venue labels use OR within one axis and AND across axes. Keyword search is also combined with AND.</p></div>
     <div id="filter-chips" class="filter-chips" aria-label="Selected taxonomy leaf filters"></div>
   </aside>
   <div class="view-container">
-  <section id="timeline"><details class="timeline-overview" id="timeline-overview"><summary data-i18n="timelineToggle">Timeline</summary><p class="note" data-i18n="timelineNote">Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to filter the table.</p><div id="timeline-chart"></div></details><div id="timeline-table"></div></section>
-  <section id="heatmap"><details class="coverage-note"><summary id="heatmap-population"></summary><div class="coverage-detail"><p id="heatmap-population-detail"></p><p data-i18n="countingNote"></p></div></details><div id="heatmap-chart"></div><div id="heatmap-table"></div></section>
-  <section id="risk"><details class="coverage-note"><summary id="risk-population"></summary><div class="coverage-detail"><p id="risk-population-detail"></p><p data-i18n="countingNote"></p></div></details><div id="risk-chart"></div><div id="risk-table"></div></section>
-  <section id="defense"><details class="coverage-note"><summary id="defense-population"></summary><div class="coverage-detail"><p id="defense-population-detail"></p><p data-i18n="countingNote"></p></div></details><div id="defense-chart"></div><div id="defense-table"></div></section>
-  <section id="target"><details class="coverage-note"><summary id="target-population"></summary><div class="coverage-detail"><p id="target-population-detail"></p><p data-i18n="countingNote"></p></div></details><div id="target-chart"></div><div id="target-table"></div></section>
-  <section id="outcome-risk"><details class="coverage-note"><summary id="outcome-risk-population"></summary><div class="coverage-detail"><p id="outcome-risk-population-detail"></p><p data-i18n="countingNote"></p></div></details><div id="outcome-risk-chart"></div><div id="outcome-risk-table"></div></section>
+  <nav class="catalog-views" id="catalog-views" aria-label="Catalog views" hidden>
+      <button type="button" data-view="timeline" aria-pressed="false" data-i18n="navTimeline">Timeline</button>
+      <button type="button" data-view="heatmap" aria-pressed="false" data-i18n="navHeatmap">How × Where</button>
+      <button type="button" data-view="risk" aria-pressed="false" data-i18n="navRisk">How × Measured Risk</button>
+      <button type="button" data-view="defense" aria-pressed="false" data-i18n="navDefense">Defense × Threat</button>
+      <button type="button" data-view="target" aria-pressed="false" data-i18n="navTarget">Target × Consequence</button>
+      <button type="button" data-view="outcome-risk" aria-pressed="false" data-i18n="navOutcomeRisk">Consequence × Measured Risk</button>
+  </nav>
+
+  <section id="timeline"><div class="chart-panel"><details class="coverage-note timeline-help"><summary><span aria-hidden="true">ⓘ</span><span class="sr-only" data-i18n="timelineHelpLabel">How to use the timeline</span></summary><div class="coverage-detail"><p data-i18n="timelineNote">Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to filter the table.</p></div></details><div id="timeline-chart"></div></div><div id="timeline-table"></div></section>
+  <section id="heatmap"><div class="chart-panel"><details class="coverage-note"><summary id="heatmap-population"></summary><div class="coverage-detail"><p id="heatmap-population-detail"></p><p data-i18n="countingNote"></p></div></details><div id="heatmap-chart"></div></div><div id="heatmap-table"></div></section>
+  <section id="risk"><div class="chart-panel"><details class="coverage-note"><summary id="risk-population"></summary><div class="coverage-detail"><p id="risk-population-detail"></p><p data-i18n="countingNote"></p></div></details><div id="risk-chart"></div></div><div id="risk-table"></div></section>
+  <section id="defense"><div class="chart-panel"><details class="coverage-note"><summary id="defense-population"></summary><div class="coverage-detail"><p id="defense-population-detail"></p><p data-i18n="countingNote"></p></div></details><div id="defense-chart"></div></div><div id="defense-table"></div></section>
+  <section id="target"><div class="chart-panel"><details class="coverage-note"><summary id="target-population"></summary><div class="coverage-detail"><p id="target-population-detail"></p><p data-i18n="countingNote"></p></div></details><div id="target-chart"></div></div><div id="target-table"></div></section>
+  <section id="outcome-risk"><div class="chart-panel"><details class="coverage-note"><summary id="outcome-risk-population"></summary><div class="coverage-detail"><p id="outcome-risk-population-detail"></p><p data-i18n="countingNote"></p></div></details><div id="outcome-risk-chart"></div></div><div id="outcome-risk-table"></div></section>
   <section id="readme" class="active">
     <div class="lp-hero">
       <div class="lp-tick" style="top:8px; left:8px;"></div>
@@ -490,7 +526,7 @@
   <section id="taxonomy"><iframe class="doc-frame" id="taxonomy-frame" src="taxonomy.html" title="Rendered taxonomy"></iframe></section>
   </div>
 </main>
-<footer class="mobile-footer"><a href="https://futa-waseda.netlify.app/" target="_blank" rel="noopener noreferrer">Futa Waseda</a><a href="https://futa-waseda.netlify.app/contact/" target="_blank" rel="noopener noreferrer">Contact</a></footer>
+<footer class="mobile-footer"><a href="https://futa-waseda.netlify.app/" target="_blank" rel="noopener noreferrer">Futa Waseda</a><a href="https://futa-waseda.netlify.app/contact/" target="_blank" rel="noopener noreferrer" data-i18n="contactLabel">Contact</a></footer>
 <button type="button" class="back-to-top" id="back-to-top" data-i18n="backToTop" hidden>↑ Back to top</button>
 <div id="tooltip" class="tooltip" role="tooltip"></div>
 <script>
@@ -752,13 +788,13 @@ const I18N = {
   en: {
     title: 'Awesome Physical AI Safety',
     ghlink: 'Star on GitHub',
-    navReadme: 'Overview', navTaxonomy: 'Taxonomy', navCatalog: 'Catalog', navTimeline: 'Paper list', navHeatmap: 'Mechanism × Surface', navRisk: 'Mechanism × Risk', navDefense: 'Defense × Threat', navTarget: 'Target × Consequence', navOutcomeRisk: 'Consequence × Risk',
+    navReadme: 'Overview', navTaxonomy: 'Taxonomy', navCatalog: 'Catalog', navTimeline: 'Timeline', navHeatmap: 'Mechanism × Surface', navRisk: 'Mechanism × Risk', navDefense: 'Defense × Threat', navTarget: 'Target × Consequence', navOutcomeRisk: 'Consequence × Risk',
     badgeLicenses: 'Licenses', badgePapers: 'Papers', badgeUpdate: 'Update', badgeCuration: 'Curation', badgeDaily: 'Daily', badgeLlm: 'LLM-assisted',
-    timelineToggle: 'Timeline',
+    timelineHelpLabel: 'How to use the timeline',
     timelineNote: 'Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to filter the table.',
     rowsLabel: 'Rows', colsLabel: 'Columns',
     axisMechanism: 'Mechanism', axisSurface: 'Surface', axisRisk: 'Measured risk', axisDefenseMechanism: 'Defense mechanism', axisThreatFamily: 'Threat family', axisTarget: 'Target', axisConsequence: 'Consequence',
-    chartTimelineTitle: 'Field timeline',
+    chartTimelineTitle: 'Field Timeline',
     chartHeatmapTitle: 'Threat Mechanism Family × Surface Family',
     chartHeatmapHint: 'Hover a cell to inspect contributing papers.',
     chartRiskTitle: 'Threat Mechanism Family × Measured Risk', chartDefenseTitle: 'Defense Mechanism × Defended Threat Mechanism Family', chartTargetTitle: 'Target × Consequence', chartOutcomeRiskTitle: 'Consequence × Measured Risk',
@@ -770,9 +806,10 @@ const I18N = {
     populationDefense: "Eligible: records with defense metadata, across all primary sections. Cells use defense.mechanism and defense.defends_against.",
     populationCount: "{eligible} of {total} catalog papers eligible; {excluded} excluded. This is the eligible pool, not the sum of cells.",
     populationFiltered: "{matched} match the active filters among {eligible} eligible papers; {excluded} excluded by this view's population rule.",
-    populationCompact: "Coverage {eligible}/{total} · distinct papers per cell · multi-label papers may count in multiple cells",
-    populationCompactFiltered: "Filters {matched}/{eligible} eligible · distinct papers per cell · multi-label papers may count in multiple cells",
+    populationCompact: "Coverage {eligible}/{total} ⓘ",
+    populationCompactFiltered: "Filtered {matched}/{eligible} ⓘ",
     searchLabel: 'Search papers', searchPlaceholder: 'Search title, author, venue, tags, or taxonomy labels', leafFilter: 'Taxonomy & venue filters', filterClear: 'Clear filters', filterDone: 'Done',
+    filterHelpLabel: 'Search rules', filterHelpScope: 'Counts show matches across the full catalog; each chart has its own eligible population.',
     filterHelp: 'Taxonomy and venue labels use OR within one axis and AND across axes. Keyword search is also combined with AND.',
     filterStatus: '{matched} of {total} catalog papers match globally', filterSelected: '{count} leaf filters selected', filterRemove: 'Remove filter',
     citeLink: 'Cite', citeTitle: 'Cite this catalog', citeCopy: 'Copy BibTeX', citeCopied: 'Copied!', contactLabel: 'Contact', backToTop: '↑ Back to top',
@@ -804,9 +841,9 @@ const I18N = {
   ja: {
     title: 'Awesome Physical AI Safety',
     ghlink: 'GitHubでStar',
-    navReadme: 'Overview', navTaxonomy: 'Taxonomy', navCatalog: 'カタログ', navTimeline: '論文一覧', navHeatmap: 'Mechanism × Surface', navRisk: 'Mechanism × Risk', navDefense: 'Defense × Threat', navTarget: 'Target × Consequence', navOutcomeRisk: 'Consequence × Risk',
+    navReadme: 'Overview', navTaxonomy: 'Taxonomy', navCatalog: 'カタログ', navTimeline: 'タイムライン', navHeatmap: 'Mechanism × Surface', navRisk: 'Mechanism × Risk', navDefense: 'Defense × Threat', navTarget: 'Target × Consequence', navOutcomeRisk: 'Consequence × Risk',
     badgeLicenses: 'ライセンス', badgePapers: '論文数', badgeUpdate: '更新頻度', badgeCuration: 'キュレーション', badgeDaily: '毎日', badgeLlm: 'LLM支援',
-    timelineToggle: 'タイムライン',
+    timelineHelpLabel: 'タイムラインの見方と操作',
     timelineNote: 'バブルの大きさは、分野×年のセルに含まれる論文数を表します。ホバーでプレビュー、クリックで下の表を絞り込みます。',
     rowsLabel: '行', colsLabel: '列',
     axisMechanism: 'メカニズム', axisSurface: 'サーフェス', axisRisk: '測定リスク', axisDefenseMechanism: '防御メカニズム', axisThreatFamily: '脅威群', axisTarget: '対象（TARGET）', axisConsequence: '帰結（CONSEQUENCE）',
@@ -822,9 +859,10 @@ const I18N = {
     populationDefense: "対象：主sectionを問わずdefense metadataを持つレコード。セルはdefense.mechanismとdefense.defends_againstを使います。",
     populationCount: "全{total}件中、集計対象{eligible}件・除外{excluded}件。対象件数はセル件数の合計ではありません。",
     populationFiltered: "このビューの集計対象{eligible}件中、フィルタ一致{matched}件・母集団ルールによる除外{excluded}件。",
-    populationCompact: "集計対象 {eligible}/{total}件 · 1セルはユニーク論文数 · 複数ラベルは複数セルに計上",
-    populationCompactFiltered: "フィルタ一致 {matched}/{eligible}件 · 1セルはユニーク論文数 · 複数ラベルは複数セルに計上",
+    populationCompact: "集計対象 {eligible}/{total} ⓘ",
+    populationCompactFiltered: "フィルタ一致 {matched}/{eligible} ⓘ",
     searchLabel: '論文を検索', searchPlaceholder: 'タイトル・著者・Venue・タグ・Taxonomyラベルを検索', leafFilter: 'Taxonomy・Venueフィルタ', filterClear: 'すべて解除', filterDone: '閉じる',
+    filterHelpLabel: '検索ルール', filterHelpScope: '件数は全カタログに対する一致数です。各図の集計対象はCoverageで確認できます。',
     filterHelp: 'TaxonomyとVenueの同じ軸のラベルはOR、異なる軸はANDで結合します。キーワード検索ともANDで結合します。',
     filterStatus: '全{total}件中{matched}件が一致（全体）', filterSelected: 'Leafフィルタ{count}件を選択中', filterRemove: 'フィルタを解除',
     citeLink: '引用', citeTitle: '引用方法', citeCopy: 'BibTeXをコピー', citeCopied: 'コピーしました', contactLabel: 'お問い合わせ', backToTop: '↑ ページ上部へ',
@@ -952,7 +990,8 @@ function selectedLeafCount(){ return FILTER_AXES.reduce((sum,axis)=>sum+filterSe
 function filtersActive(){ return Boolean(normalizeSearch(keywordQuery)||selectedLeafCount()); }
 function renderFilterControls(){
   const t=I18N[currentLang], matched=filteredPapers().length, selectedCount=selectedLeafCount();
-  document.getElementById('filter-status').textContent=t.filterStatus.replace('{matched}',matched).replace('{total}',papers.length);
+  document.getElementById('filter-status-count').textContent=`${matched} / ${papers.length}`;
+  document.getElementById('filter-status-reader').textContent=t.filterStatus.replace('{matched}',matched).replace('{total}',papers.length);
   const countBadge=document.getElementById('leaf-filter-count');
   countBadge.textContent=selectedCount;
   countBadge.hidden=!selectedCount;
@@ -1404,6 +1443,12 @@ taxonomyFrame.addEventListener('load', watchTaxonomyFrame);
 if (taxonomyFrame.contentDocument?.readyState === 'complete') watchTaxonomyFrame();
 window.addEventListener('resize', resizeTaxonomyFrame);
 
+const filterHelpToggle=document.getElementById('filter-help-toggle');
+filterHelpToggle.addEventListener('click',()=>{
+  const open=filterHelpToggle.getAttribute('aria-expanded')!=='true';
+  filterHelpToggle.setAttribute('aria-expanded',String(open));
+  document.getElementById('filter-help-body').hidden=!open;
+});
 const catalogViews = new Set([...document.querySelectorAll('#catalog-views button[data-view]')].map(button=>button.dataset.view));
 const availableViews = new Set([...document.querySelectorAll('button[data-view]')].map(button => button.dataset.view));
 function activateView(view) {
@@ -1425,9 +1470,7 @@ function navigateView(view){
 }
 d3.selectAll('button[data-view]').on('click', function(){ navigateView(this.dataset.view); });
 document.getElementById('catalog-home').addEventListener('click',()=>navigateView('timeline'));
-document.getElementById('timeline-overview').addEventListener('toggle',()=>{
-  requestAnimationFrame(()=>applyStickyOffsets('timeline'));
-});
+
 function activateViewFromHash() {
   const view = window.location.hash.slice(1);
   activateView(availableViews.has(view) ? view : 'readme');
@@ -1597,6 +1640,25 @@ document.addEventListener('keydown', event => {
 // Clicks inside the README/Taxonomy iframes never bubble to this document,
 // so fall back to closing on window blur (focus moving into the iframe).
 window.addEventListener('blur', () => { if (!citationPopover.hidden) closeCitationPopover(); });
+
+// Show the author whenever the navigation and credit fit on the same row.
+const authorRow=document.querySelector('.topbar-bottom');
+const headerAuthor=authorRow.querySelector('.author');
+const authorNav=authorRow.querySelector('nav');
+function fitHeaderAuthor(){
+  headerAuthor.hidden=false;
+  const navStyle=getComputedStyle(authorNav), rowStyle=getComputedStyle(authorRow);
+  const buttons=[...authorNav.querySelectorAll('button')];
+  const navWidth=buttons.reduce((sum,button)=>sum+button.getBoundingClientRect().width,0)+(parseFloat(navStyle.columnGap)||0)*Math.max(0,buttons.length-1);
+  const fits=navWidth+headerAuthor.getBoundingClientRect().width+(parseFloat(rowStyle.columnGap)||0)<=authorRow.clientWidth;
+  headerAuthor.hidden=!fits;
+  document.body.classList.toggle('header-author-hidden',!fits);
+}
+const authorFitObserver=new ResizeObserver(fitHeaderAuthor);
+authorFitObserver.observe(authorRow);
+authorNav.querySelectorAll('button').forEach(button=>authorFitObserver.observe(button));
+document.fonts.ready.then(fitHeaderAuthor);
+fitHeaderAuthor();
 
 const savedLang = localStorage.getItem('lang');
 const browserJapanese = [navigator.language, ...(navigator.languages || [])].some(l => (l || '').toLowerCase().startsWith('ja'));

@@ -1,6 +1,6 @@
 # Physical AI Safety Taxonomy
 
-This catalog's original six-axis taxonomy was designed by [Futa Waseda](https://futa-waseda.netlify.app/) and refined through ongoing literature review.
+This catalog's original six-axis taxonomy was designed by [Futa Waseda](https://futa-waseda.netlify.app/) and refined through ongoing literature review. Suggestions for taxonomy improvements are welcome—please open a [GitHub issue](https://github.com/futakw/Awesome-Physical-AI-Safety/issues/new).
 
 ## How to Read the Taxonomy
 

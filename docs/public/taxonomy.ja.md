@@ -1,6 +1,6 @@
 # Physical AI Safety Taxonomy
 
-本カタログ独自の6軸taxonomyは、[Futa Waseda](https://futa-waseda.netlify.app/)が設計し、関連研究を踏まえて継続的に洗練しています。
+本カタログ独自の6軸taxonomyは、[Futa Waseda](https://futa-waseda.netlify.app/)が設計し、関連研究を踏まえて継続的に洗練しています。taxonomyの改善案は[GitHub Issue](https://github.com/futakw/Awesome-Physical-AI-Safety/issues/new)からお寄せください。
 
 ## Taxonomyの読み方
 
