@@ -171,7 +171,7 @@ def render(papers: list[dict]) -> str:
         "[![LLM-assisted](https://img.shields.io/badge/curation-%F0%9F%A4%96%20LLM--assisted-critical.svg)](docs/agent/daily-curation-workflow.md)",
         f"[![Licenses: MIT + CC BY 4.0](https://img.shields.io/badge/Licenses-MIT%20%2B%20CC%20BY%204.0-3FA89B?style=flat)](LICENSES.md) [![Papers](https://img.shields.io/badge/Papers-{paper_count}-6F9FEF?style=flat)]({PAGES_URL}/) [![Update](https://img.shields.io/badge/Update-Daily-D47A5D?style=flat)](docs/agent/daily-curation-workflow.md)",
         "",
-        f"**[🔎 Explore the interactive research landscape →]({PAGES_URL}/#heatmap)** — open any chart cell to inspect its contributing papers.",
+        f"**[🔎 Explore the interactive research landscape →]({PAGES_URL}/)** — start with the catalog overview, then explore charts and their contributing papers.",
         "",
         "⭐ **If this catalog is useful to you, please star the repo** — it helps other researchers find it and signals that a maintained taxonomy for this field is worth keeping alive.",
         "",

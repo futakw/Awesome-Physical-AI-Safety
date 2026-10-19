@@ -153,7 +153,7 @@ def render_overview(paper_count: int) -> list[str]:
         "[![LLM-assisted](https://img.shields.io/badge/curation-%F0%9F%A4%96%20LLM--assisted-critical.svg)](docs/agent/daily-curation-workflow.md)",
         f"[![Licenses: MIT + CC BY 4.0](https://img.shields.io/badge/Licenses-MIT%20%2B%20CC%20BY%204.0-3FA89B?style=flat)](LICENSES.md) [![Papers](https://img.shields.io/badge/Papers-{paper_count}-6F9FEF?style=flat)]({PAGES_URL}/) [![Update](https://img.shields.io/badge/Update-Daily-D47A5D?style=flat)](docs/agent/daily-curation-workflow.md)",
         "",
-        f"**[🔎 インタラクティブな研究ランドスケープを見る →]({PAGES_URL}/#heatmap)** — チャートのセルをクリックすると、該当する論文の一覧が開きます。",
+        f"**[🔎 インタラクティブな研究ランドスケープを見る →]({PAGES_URL}/)** — カタログの概要から、チャートと関連論文を探索できます。",
         "",
         "⭐ **このカタログが役に立ったら、ぜひリポジトリにStarをお願いします** — この分野のtaxonomyを維持する価値を示すことにもつながります。",
         "",
