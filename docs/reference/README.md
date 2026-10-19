@@ -55,3 +55,7 @@ These files form one deployment group but must remain at the published site root
 - `googlecd3652538aa5cebc.html`: Google Search Console ownership verification
 
 Keeping them in `docs/` is a hosting requirement, not a documentation-audience choice.
+
+## Site Identity Asset
+
+`docs/favicon.svg` is a maintained SVG asset matching the explorer header mark, including its light and dark theme colors. The explorer template and rendered documentation template reference it; keep the favicon geometry aligned when changing the header mark.
