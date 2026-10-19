@@ -81,6 +81,9 @@ def main() -> None:
         assert extract(template, pattern) == extract(generated, pattern), f"Regenerate Explorer: {name}"
     code = explorer_code(generated)
     papers = json.loads((ROOT / "data/papers.json").read_text())
+    embedded_papers = extract(generated, r"^const papers = [^\n]+")
+    assert json.loads(embedded_papers.removeprefix("const papers = ").removesuffix(";")) == papers, \
+        "Regenerate Explorer: embedded catalog data is stale"
     cases = [papers, [p for p in papers if p["year"] == 2026], fixture_papers()]
     harness = r"""
 const fs = require('node:fs'), vm = require('node:vm');
