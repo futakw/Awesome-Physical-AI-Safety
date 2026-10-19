@@ -59,3 +59,5 @@ Keeping them in `docs/` is a hosting requirement, not a documentation-audience c
 ## Site Identity Asset
 
 `docs/favicon.svg` is a maintained SVG asset matching the explorer header mark, including its light and dark theme colors. The explorer template and rendered documentation template reference it; keep the favicon geometry aligned when changing the header mark.
+
+`docs/favicon.png` (96×96) and `docs/favicon.ico` are raster companions for search engines and browsers. They use the same geometry and light-theme orange as the SVG. Google Search also requires the hostname home page to declare its favicon; a project subdirectory alone cannot set a separate search favicon.
