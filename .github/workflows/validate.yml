@@ -19,4 +19,9 @@ jobs:
         run: python3 scripts/validate_catalog.py
       - name: Verify generated README
         run: python3 scripts/build_readme.py --check
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Verify landscape populations and cell counts
+        run: python3 scripts/check_landscape_consistency.py
 

@@ -6,6 +6,8 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from landscape_population import CONCRETE_THREAT_KINDS
+
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data" / "papers.json"
 VENUE_RANKS_PATH = ROOT / "data" / "venue_ranks.json"
@@ -49,6 +51,7 @@ def main() -> int:
         ("__PAPERS_JSON__", papers),
         ("__VENUE_RANKS_JSON__", venue_ranks),
         ("__LABELS_JA_JSON__", labels_payload),
+        ("__CONCRETE_THREAT_KINDS_JSON__", CONCRETE_THREAT_KINDS),
     ):
         if placeholder not in template:
             raise SystemExit(f"explorer template is missing {placeholder}")

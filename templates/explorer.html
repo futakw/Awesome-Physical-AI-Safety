@@ -377,7 +377,7 @@
         <p class="lp-lede" data-i18n="lpLede">A structured, continuously updated bibliography of safety, security, and robustness research for VLA models, robots, and embodied agents — annotated across six taxonomy axes, not just tagged by topic.</p>
         <div class="lp-meta-strip">
           <div><span class="lp-num" id="lp-stat-papers">—</span><span class="lp-lbl" data-i18n="lpStatPapers">Papers indexed</span></div>
-          <div><span class="lp-num">6</span><span class="lp-lbl" data-i18n="lpStatAxes">Taxonomy axes</span></div>
+          <div><span class="lp-num" id="lp-stat-axes">—</span><span class="lp-lbl" data-i18n="lpStatAxes">Taxonomy axes</span></div>
         </div>
         <div class="lp-ctas">
           <button type="button" class="lp-btn lp-btn-solid" id="lp-cta-explore" data-i18n="lpCtaExplore">Explore the catalog →</button>
@@ -445,6 +445,7 @@
 <div id="tooltip" class="tooltip" role="tooltip"></div>
 <script>
 const papers = __PAPERS_JSON__;
+const CONCRETE_THREAT_KINDS = new Set(__CONCRETE_THREAT_KINDS_JSON__);
 const venueRanks = __VENUE_RANKS_JSON__;
 const labelsJa = __LABELS_JA_JSON__;
 const colors = {surveys:'#3A5FA0', 'ood-generalization':'#2FA893', 'training-attacks':'#8E6FD9', 'inference-attacks':'#D1495B', defenses:'#5B8DEF', benchmarks:'#B8841F', 'system-security':'#C96FA8'};
@@ -713,7 +714,7 @@ const I18N = {
     enrichedSuffix: ' eligible papers; hover or click a cell for the paper list.',
     papersWord: ' papers', tablePaper: 'Paper', tableVenue: 'Venue', tableRisk: 'Measured Risk', tableThreat: 'Threat Model', tableAll: 'All papers in this view', tableShowing: 'Showing', tableReset: 'Reset filter', tableCode: 'Project / Code', tableNone: 'None reported', storyWhen: 'When', storyWhere: 'Where', storyHow: 'How', storyTarget: 'Target', storyResult: 'Consequence',
     countingNote: "Each cell counts distinct papers: a paper is counted once per cell, even if several leaf labels match one family. Multi-label papers can appear in multiple cells, so cell, row, and column sums are not unique-paper totals or percentages. Counts show paper-level co-occurrence, not causality or a pairing verified in the same experiment. Eligible papers without both axis annotations contribute to no cell; empty annotations do not establish absence of a risk. Empty cells mean zero matching catalog records, not proof that a topic is unstudied. Counts reflect catalog selection and annotation, not field-wide prevalence or defense effectiveness.",
-    populationConcrete: "Eligible: non-survey records; evaluation coverage is included using its reported threat mechanisms and surfaces.",
+    populationConcrete: "Eligible: concrete threat-model records only; survey and broad evaluation coverage are excluded.",
     populationRisk: "Eligible: all non-survey records, including broad evaluation coverage. Coverage labels are included for evaluation records; risk labels require reported empirical metrics.",
     populationDefense: "Eligible: records with defense metadata, across all primary sections. Cells use defense.mechanism and defense.defends_against.",
     populationCount: "{eligible} of {total} catalog papers eligible; {excluded} excluded. This is the eligible pool, not the sum of cells.",
@@ -764,7 +765,7 @@ const I18N = {
     enrichedSuffix: '件の集計対象論文。ホバーまたはクリックで論文一覧を表示します。',
     papersWord: '件', tablePaper: '論文', tableVenue: 'Venue', tableRisk: '評価リスク', tableThreat: '脅威モデル', tableAll: 'このビューの全論文', tableShowing: '表示中', tableReset: '絞り込み解除', tableCode: 'Project / Code', tableNone: '報告なし', storyWhen: 'いつ', storyWhere: 'どこ', storyHow: '方法', storyTarget: '対象', storyResult: '帰結',
     countingNote: "各セルは異なる論文の件数です。同じfamilyに複数のleafラベルが一致しても、1セル内では1論文を1回だけ数えます。複数ラベルの論文は複数セルに現れるため、セル・行・列の合計はユニークな論文総数や割合ではありません。論文単位の共起であり、因果関係や同一実験内で確認された組合せを意味しません。両軸のラベルが揃わない対象論文はどのセルにも寄与しません。空のannotationはリスクの不存在を示しません。空セルは該当する採録レコードが0件という意味で、未研究の証明ではありません。件数は採録範囲・分類状況に依存し、分野全体の頻度や防御の有効性を示しません。",
-    populationConcrete: "対象：survey以外のレコード。evaluationは報告された脅威mechanismとsurfaceのcoverageを含みます。",
+    populationConcrete: "対象：具体的な脅威モデルを持つレコードのみ。surveyと広範なevaluationのcoverageは除外します。",
     populationRisk: "対象：survey以外のレコード（広範なevaluationのcoverageを含む）。evaluationではcoverageラベルを使い、リスクラベルは報告された実験指標を要件とします。",
     populationDefense: "対象：主sectionを問わずdefense metadataを持つレコード。セルはdefense.mechanismとdefense.defends_againstを使います。",
     populationCount: "全{total}件中、集計対象{eligible}件・除外{excluded}件。対象件数はセル件数の合計ではありません。",
@@ -880,11 +881,19 @@ function matchesCatalogFilters(p){
 }
 function filteredPapers(){ return papers.filter(matchesCatalogFilters); }
 function viewBasePapers(view,source=papers){
-  if(view==='heatmap') return source.filter(p=>p.threat_model.kind!=='survey');
-  if(view==='target') return source.filter(p=>!['survey','evaluation'].includes(p.threat_model.kind));
+  if(view==='heatmap'||view==='target') return source.filter(p=>CONCRETE_THREAT_KINDS.has(p.threat_model.kind));
   if(view==='risk'||view==='outcome-risk') return source.filter(p=>p.threat_model.kind!=='survey');
   if(view==='defense') return source.filter(p=>p.defense);
   return source;
+}
+function mechanismSurfaceCells(source){
+  const concrete=viewBasePapers('heatmap',source);
+  const cells=[];
+  for(const mg of MECHANISM_GROUPS) for(const sg of SURFACE_GROUPS){
+    const list=concrete.filter(p=>threatValues(p,'mechanism').some(m=>mg.values.includes(m))&&threatValues(p,'surface').some(s=>sg.values.includes(s)));
+    cells.push({mg,sg,list,n:list.length});
+  }
+  return cells;
 }
 function viewPapers(view){ return viewBasePapers(view,filteredPapers()); }
 function selectedLeafCount(){ return FILTER_AXES.reduce((sum,axis)=>sum+filterSelection[axis.key].size,0); }
@@ -1062,11 +1071,7 @@ function renderHeatmap(){
   const height=margin.top+mechanisms.length*48+margin.bottom;
   const svg=d3.select('#heatmap-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Interactive threat model heatmap');
   const y=d3.scaleBand().domain(mechanisms.map(g=>g.name)).range([margin.top,height-margin.bottom]).padding(.08);
-  const cellData=[];
-  for(const mg of mechanisms) for(const sg of surfaces){
-    const list=concrete.filter(p=>threatValues(p,'mechanism').some(m=>mg.values.includes(m))&&threatValues(p,'surface').some(s=>sg.values.includes(s)));
-    cellData.push({mg,sg,list,n:list.length});
-  }
+  const cellData=mechanismSurfaceCells(concrete);
   const max=d3.max(cellData,d=>d.n)||1, fill=d3.scaleSequential().domain([0,max]).interpolator(d3.interpolate(...seqRampColors()));
   svg.append('text').attr('x',margin.left).attr('y',24).attr('font-size',19).attr('font-weight',650).attr('fill','var(--ink)').text(I18N[currentLang].chartHeatmapTitle);
   svg.append('text').attr('x',margin.left).attr('y',40).attr('font-size',12).attr('fill','var(--muted)').text(rowsColsPrefix(I18N[currentLang].axisMechanism,I18N[currentLang].axisSurface)+I18N[currentLang].chartHeatmapHint);
@@ -1092,19 +1097,16 @@ function renderLpOverview(){
   const lpPanel=document.querySelector('.lp-panel');
   if(currentLang==='en') lpPanel.style.width='';
   document.getElementById('lp-stat-papers').textContent=papers.length;
+  const taxonomyAxes=FILTER_AXES.filter(axis=>axis.key!=='venue_rank');
+  document.getElementById('lp-stat-axes').textContent=taxonomyAxes.length;
   document.getElementById('lp-panel-sub').textContent=I18N[currentLang].lpPanelSub.replace('{n}',concrete.length);
   const t=I18N[currentLang];
-  document.getElementById('lp-axis-n-1').textContent='3'+t.lpUnitStages;
-  document.getElementById('lp-axis-n-2').textContent=SURFACE_GROUPS.flatMap(g=>g.values).length+t.lpUnitSurfaces;
-  document.getElementById('lp-axis-n-3').textContent=MECHANISM_GROUPS.flatMap(g=>g.values).length+t.lpUnitTechniques;
-  document.getElementById('lp-axis-n-4').textContent=TARGET_GROUPS.flatMap(g=>g.values).length+t.lpUnitTargets;
-  document.getElementById('lp-axis-n-5').textContent=Object.keys(labelsJa.consequence).length+t.lpUnitOutcomes;
-  document.getElementById('lp-axis-n-6').textContent='4'+t.lpUnitDomains;
-  const cellData=[];
-  for(const mg of mechanisms) for(const sg of surfaces){
-    const list=concrete.filter(p=>threatValues(p,'mechanism').some(m=>mg.values.includes(m))&&threatValues(p,'surface').some(s=>sg.values.includes(s)));
-    cellData.push({mg,sg,list,n:list.length});
-  }
+  const units=[t.lpUnitStages,t.lpUnitSurfaces,t.lpUnitTechniques,t.lpUnitTargets,t.lpUnitOutcomes,t.lpUnitDomains];
+  taxonomyAxes.forEach((axis,index)=>{
+    const values=axis.groups?axis.groups.flatMap(group=>group.values):axis.values;
+    document.getElementById(`lp-axis-n-${index+1}`).textContent=new Set(values).size+units[index];
+  });
+  const cellData=mechanismSurfaceCells(concrete);
   const max=d3.max(cellData,d=>d.n)||1;
   const level=n=>n===0?0:Math.min(4,Math.max(1,Math.ceil((n/max)*4)));
   const heat=document.getElementById('lp-heat');

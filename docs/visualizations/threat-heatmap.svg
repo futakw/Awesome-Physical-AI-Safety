@@ -11,7 +11,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 </style>
 <rect width="1200" height="610" fill="#FFFFFF"/>
 <text class="title" x="48" y="48">Where threats enter and how they act</text>
-<text class="subtitle" x="48" y="74">Mechanism family × surface family co-occurrence for concrete threat models; survey coverage is excluded.</text>
+<text class="subtitle" x="48" y="74">Mechanism family × surface family co-occurrence across 289 concrete threat models; survey/evaluation coverage is excluded.</text>
 <text class="axis" text-anchor="middle" x="385.0" y="170.0"><tspan x="385.0" dy="0em">Training &amp;</tspan><tspan x="385.0" dy="1.05em">Infrastructure</tspan></text>
 <text class="axis" text-anchor="middle" x="495.0" y="183.0"><tspan x="495.0" dy="0em">Perception</tspan></text>
 <text class="axis" text-anchor="middle" x="605.0" y="183.0"><tspan x="605.0" dy="0em">Language</tspan></text>

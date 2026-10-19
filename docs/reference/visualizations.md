@@ -20,6 +20,8 @@ Each cell counts distinct papers once, even when multiple leaf labels match the 
 - **Mechanism × Measured Risk / Consequence × Measured Risk:** exclude `survey`, include `evaluation` coverage via `coverage.mechanisms` / `coverage.consequences`. Risk labels still require reported empirical metrics.
 - **Defense × Threat:** all records with `defense` metadata, regardless of primary section; use `defense.mechanism` and `defense.defends_against`.
 
+The Overview preview, detailed Mechanism × Surface view, and static README chart use the same concrete-threat population (`adversarial`, `non-adversarial`, `system-failure`). The population definition is shared through `scripts/landscape_population.py` and embedded by the Explorer generator. Overview shows the full, unfiltered population; detailed views additionally respect active filters. The Overview's total paper count includes every catalog record, while its preview caption counts only eligible concrete-threat records. Taxonomy-axis and leaf counts come from the Explorer's taxonomy filter definitions.
+
 The displayed eligible count includes records with empty axis annotations; these records contribute to no cell unless both axis conditions match. An empty annotation does not establish absence of a risk. Empty cells mean zero matching catalog records, not proof of an unstudied topic. Catalog selection and annotation affect counts; counts do not measure field-wide prevalence or defense effectiveness. Each interactive view displays its current eligible and excluded counts.
 
 ## Field Timeline
@@ -64,4 +66,7 @@ Static benchmark and evaluation-extension heatmaps are also generated for metada
 python3 scripts/build_visualizations.py
 python3 scripts/build_visualizations.py --check
 python3 scripts/build_explorer.py
+python3 scripts/check_landscape_consistency.py
 ```
+
+The consistency check requires Node.js. It executes the generated Explorer's own counting functions and compares all cells with both static SVG outputs, a filtered catalog subset, and multi-label / broad-coverage fixtures.

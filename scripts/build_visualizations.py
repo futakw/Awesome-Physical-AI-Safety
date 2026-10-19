@@ -11,6 +11,8 @@ from collections import Counter
 from datetime import date
 from pathlib import Path
 
+from landscape_population import concrete_threat_papers
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data" / "papers.json"
@@ -222,8 +224,8 @@ def heatmap_text_color(background: str) -> str:
 
 def render_heatmap(papers: list[dict]) -> str:
     width, height = 1200, 610
-    body = header("Where threats enter and how they act", "Mechanism family × surface family co-occurrence for concrete threat models; survey coverage is excluded.")
-    concrete = [p for p in papers if p["threat_model"]["kind"] not in {"survey", "evaluation"}]
+    concrete = concrete_threat_papers(papers)
+    body = header("Where threats enter and how they act", f"Mechanism family × surface family co-occurrence across {len(concrete)} concrete threat models; survey/evaluation coverage is excluded.")
     mechanisms, surfaces = MECHANISM_GROUPS, SURFACE_GROUPS
     left, top, cell_w, cell_h = 330, 195, 110, 50
     cell_data = []
