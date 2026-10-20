@@ -22,6 +22,10 @@ The optional extension contract is documented in [`paper-extensions.schema.json`
 
 `abstract-verified` is also supported for defense and benchmark extensions when the primary abstract establishes the method or evaluation scope but the full paper has not been audited. Unmentioned metrics, platforms, models, and artifact availability are left empty or null rather than inferred.
 
+## Secondary tags
+
+`tags` must be a non-empty array of unique strings registered in [`data/taxonomy/tags.json`](../../data/taxonomy/tags.json). The validator rejects unregistered values, duplicates, and non-string entries. The initial allow-list preserves every existing value without renaming or merging it; it includes descriptors, source identifiers, and curation markers and is not a semantic reclassification. Add genuinely new values to the registry in the same change that first uses them. Defined HOW failure modes, including `self-assessment-failure`, belong in `threat_model.mechanism` or the broad-evaluation `coverage.mechanisms`, rather than duplicate `tags` entries. See the [taxonomy rules](taxonomy.md#controlled-secondary-tags).
+
 ## Venue and year
 
 `venue` and `year` together describe where and when the work was published, not

@@ -49,7 +49,7 @@ MECHANISM_GROUPS = [
     {"name": "instruction-semantic-manipulation", "label": "Instruction & Semantic Manipulation", "values": ["direct-prompt-injection", "indirect-prompt-injection", "jailbreak", "typographic-injection", "hazardous-instruction"]},
     {"name": "runtime-system-manipulation", "label": "Runtime & System Manipulation", "values": ["middleware-compromise", "network-attack", "denial-of-service", "covert-channel", "state-manipulation", "action-manipulation", "trajectory-manipulation", "representation-manipulation"]},
     {"name": "distribution-shift-uncertainty", "label": "Distribution Shift & Uncertainty", "values": ["distribution-shift", "instruction-ambiguity", "uncertainty-miscalibration"]},
-    {"name": "reasoning-planning-execution-failure", "label": "Reasoning, Planning & Execution Failure", "values": ["perception-error", "semantic-misalignment", "planning-error", "execution-error", "multimodal-desynchronization"]},
+    {"name": "reasoning-planning-execution-failure", "label": "Reasoning, Planning & Execution Failure", "values": ["perception-error", "semantic-misalignment", "planning-error", "execution-error", "self-assessment-failure", "multimodal-desynchronization"]},
 ]
 SURFACE_GROUPS = [
     {"name": "training-infrastructure", "label": "Training & Infrastructure", "values": ["model-supply-chain", "middleware-network"]},
