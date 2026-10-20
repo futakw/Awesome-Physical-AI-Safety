@@ -11,7 +11,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 </style>
 <rect width="1200" height="610" fill="#FFFFFF"/>
 <text class="title" x="48" y="48">Where threats enter and how they act</text>
-<text class="subtitle" x="48" y="74">Mechanism family × surface family co-occurrence across 299 concrete threat models; survey/evaluation coverage is excluded.</text>
+<text class="subtitle" x="48" y="74">Mechanism family × surface family co-occurrence across 302 concrete threat models; survey/evaluation coverage is excluded.</text>
 <text class="axis" text-anchor="middle" x="385.0" y="170.0"><tspan x="385.0" dy="0em">Training &amp;</tspan><tspan x="385.0" dy="1.05em">Infrastructure</tspan></text>
 <text class="axis" text-anchor="middle" x="495.0" y="183.0"><tspan x="495.0" dy="0em">Perception</tspan></text>
 <text class="axis" text-anchor="middle" x="605.0" y="183.0"><tspan x="605.0" dy="0em">Language</tspan></text>
@@ -25,7 +25,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text class="axis" text-anchor="end" x="312.0" y="375.0"><tspan x="312.0" dy="-0.35em">Runtime &amp; System</tspan><tspan x="312.0" dy="1.1em">Manipulation</tspan></text>
 <text class="axis" text-anchor="end" x="312.0" y="425.0"><tspan x="312.0" dy="-0.35em">Distribution</tspan><tspan x="312.0" dy="1.1em">Shift &amp; Uncertainty</tspan></text>
 <text class="axis" text-anchor="end" x="312.0" y="475.0"><tspan x="312.0" dy="-0.35em">Reasoning, Planning</tspan><tspan x="312.0" dy="1.1em">&amp; Execution Failure</tspan></text>
-<rect x="332" y="197" width="106" height="46" rx="6" fill="#A1B0D0"><title>[OpenReview 2026] Clean-Action Backdoor Attacks on Vision-Language-Action Models via Sequential Error Exploitation
+<rect x="332" y="197" width="106" height="46" rx="6" fill="#9FADCF"><title>[OpenReview 2026] Clean-Action Backdoor Attacks on Vision-Language-Action Models via Sequential Error Exploitation
 [arXiv 2024] Robot Collapse: Supply Chain Backdoor Attacks Against VLM-based Robotic Manipulation
 [arXiv 2024] Compromising Embodied Agents with Contextual Backdoor Attacks
 [arXiv 2025] BEAT: Visual Backdoor Attacks on VLM-based Embodied Agents via Contrastive Trigger Learning
@@ -45,9 +45,10 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2026] TrapVLA: Trapping Vision-Language-Action Models in Configured Failure Modes
 [arXiv 2026] TRAP: Tail-aware Ranking Attack for World-Model Planning
 [arXiv 2025] MuTRAP: Multi-trigger Trojans Attacking Robot Task Planning Systems
-[arXiv 2026] From Prompt to Physical Action: Structured Backdoor Attacks on LLM-Mediated Robotic Control Systems</title></rect>
-<text x="385.0" y="225.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">21</text>
-<rect x="442" y="197" width="106" height="46" rx="6" fill="#BEC9DF"><title>[arXiv 2024] Robot Collapse: Supply Chain Backdoor Attacks Against VLM-based Robotic Manipulation
+[arXiv 2026] From Prompt to Physical Action: Structured Backdoor Attacks on LLM-Mediated Robotic Control Systems
+[CoRL 2026] Targeting World Models to Compromise Robot Learning Pipelines</title></rect>
+<text x="385.0" y="225.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">22</text>
+<rect x="442" y="197" width="106" height="46" rx="6" fill="#BBC6DD"><title>[arXiv 2024] Robot Collapse: Supply Chain Backdoor Attacks Against VLM-based Robotic Manipulation
 [arXiv 2024] Compromising Embodied Agents with Contextual Backdoor Attacks
 [arXiv 2026] When Attention Betrays: Erasing Backdoor Attacks in Robotic Policies by Reconstructing Visual Tokens
 [NeurIPS 2025] BadVLA: Towards Backdoor Attacks on Vision-Language-Action Models via Objective-Decoupled Optimization
@@ -57,8 +58,9 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2025] Goal-Oriented Backdoor Attack Against Vision-Language-Action Models via Physical Objects
 [arXiv 2026] TrustVLA: Mechanism-Guided Inference-Time Defense Against Vision-Language-Action Backdoors
 [arXiv 2026] Inject Once Survive Later: Backdooring Vision-Language-Action Models to Persist Through Downstream Fine-tuning
-[IROS 2026 Workshop 2026] Backdoors in Learning-Based Industrial Robotic Arm Manipulation: An Empirical Security Study</title></rect>
-<text x="495.0" y="225.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">11</text>
+[IROS 2026 Workshop 2026] Backdoors in Learning-Based Industrial Robotic Arm Manipulation: An Empirical Security Study
+[CoRL 2026] Targeting World Models to Compromise Robot Learning Pipelines</title></rect>
+<text x="495.0" y="225.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">12</text>
 <rect x="552" y="197" width="106" height="46" rx="6" fill="#C8D1E4"><title>[arXiv 2024] Compromising Embodied Agents with Contextual Backdoor Attacks
 [arXiv 2025] DropVLA: An Action-Level Backdoor Attack on Vision-Language-Action Models
 [ICLR 2025] Can We Trust Embodied Agents? Exploring Backdoor Attacks Against Embodied LLM-Based Decision-Making Systems
@@ -77,9 +79,9 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <rect x="992" y="197" width="106" height="46" rx="6" fill="#E0E7F1"><title>[arXiv 2026] SilentDrift: Exploiting Action Chunking for Stealthy Backdoor Attacks on Vision-Language-Action Models
 [arXiv 2025] Beyond Model Jailbreak: Systematic Dissection of the &quot;Ten DeadlySins&quot; in Embodied Intelligence</title></rect>
 <text x="1045.0" y="225.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">2</text>
-<rect x="332" y="247" width="106" height="46" rx="6" fill="#EEF3F8"><title></title></rect>
-<text x="385.0" y="275.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000"></text>
-<rect x="442" y="247" width="106" height="46" rx="6" fill="#7D90BD"><title>[arXiv 2024] On the Vulnerability of LLM/VLM-Controlled Robotics
+<rect x="332" y="247" width="106" height="46" rx="6" fill="#E5EBF4"><title>[CoRL 2026] Targeting World Models to Compromise Robot Learning Pipelines</title></rect>
+<text x="385.0" y="275.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">1</text>
+<rect x="442" y="247" width="106" height="46" rx="6" fill="#7B8EBC"><title>[arXiv 2024] On the Vulnerability of LLM/VLM-Controlled Robotics
 [arXiv 2026] Lights, Camera, Malfunction: When Illumination Robustness Leaves VLA Models Blind to Color
 [arXiv 2026] Structure-Aware Robust Fine-Tuning: Defending Vision-Language-Action Robots Against Physical Attention Hijacking
 [arXiv 2026] DRIFT: Derailing Denoising Trajectories of Flow-Matching VLAs with Adversarial Patch Attack
@@ -114,8 +116,9 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2024] Diffusion Policy Attacker: Crafting Adversarial Attacks for Diffusion-based Policies
 [arXiv 2024] Towards Physically Realizable Adversarial Attacks in Embodied Vision Navigation
 [arXiv 2024] Visual Adversarial Attack on Vision-Language Models for Autonomous Driving
-[arXiv 2026] Enhancing Visual Task-Redirection Attacks on Vision-Language-Action Models via Closed-Loop Optimization</title></rect>
-<text x="495.0" y="275.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">36</text>
+[arXiv 2026] Enhancing Visual Task-Redirection Attacks on Vision-Language-Action Models via Closed-Loop Optimization
+[CoRL 2026] Targeting World Models to Compromise Robot Learning Pipelines</title></rect>
+<text x="495.0" y="275.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">37</text>
 <rect x="552" y="247" width="106" height="46" rx="6" fill="#D7DFEC"><title>[arXiv 2024] On the Vulnerability of LLM/VLM-Controlled Robotics
 [arXiv 2025] When Alignment Fails: Multimodal Adversarial Attacks on Vision-Language-Action Models
 [CoRL 2026] Trajectory-Level Redirection Attacks on Vision-Language-Action Models
@@ -212,7 +215,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="1045.0" y="375.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">3</text>
 <rect x="332" y="397" width="106" height="46" rx="6" fill="#E5EBF4"><title>[arXiv 2026] Recovering Low-Bit Failures in Vision-Language-Action Policies via Quantization-Conditioned Reinforcement Learning</title></rect>
 <text x="385.0" y="425.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">1</text>
-<rect x="442" y="397" width="106" height="46" rx="6" fill="#7084B6"><title>[arXiv 2025] RobustVLA: Robustness-Aware Reinforcement Post-Training for Vision-Language-Action Models
+<rect x="442" y="397" width="106" height="46" rx="6" fill="#6C80B4"><title>[arXiv 2025] RobustVLA: Robustness-Aware Reinforcement Post-Training for Vision-Language-Action Models
 [arXiv 2025] MergeVLA: Cross-Skill Model Merging Toward a Generalist Vision-Language-Action Agent
 [arXiv 2025] Robust Finetuning of Vision-Language-Action Robot Policies via Parameter Merging
 [arXiv 2026] Generalizable VLA Finetuning via Representation Anchoring and Language-Action Alignment
@@ -253,9 +256,11 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2026] PASS-VLN: Passability-Aware Local-Command Vision-and-Language Navigation
 [arXiv 2026] AWAM: Active Trajectory-Conditioned View Imagination for Robust Robot Manipulation
 [arXiv 2026] Look Before You Act: Bridging Active Perception and Vision-Language-Action Models via Observation-Aligned Data Adaptation
-[arXiv 2026] FCTS: Failure-Guided Curriculum Tree Search Over Generated Terrain for Legged Parkour</title></rect>
-<text x="495.0" y="425.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">42</text>
-<rect x="552" y="397" width="106" height="46" rx="6" fill="#A1B0D0"><title>[arXiv 2026] Generalizable VLA Finetuning via Representation Anchoring and Language-Action Alignment
+[arXiv 2026] FCTS: Failure-Guided Curriculum Tree Search Over Generated Terrain for Legged Parkour
+[arXiv 2026] Red-Teaming of Vision-Language-Action Models via Quality Diversity Environment Generation
+[CoRL 2026] Learning What to Say to Your VLA: Mostly Harmless Vision Language Action Model Steering</title></rect>
+<text x="495.0" y="425.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">44</text>
+<rect x="552" y="397" width="106" height="46" rx="6" fill="#9FADCF"><title>[arXiv 2026] Generalizable VLA Finetuning via Representation Anchoring and Language-Action Alignment
 [CVPR 2026] LIBERO-Plus: A Progressive Robustness Benchmark for Visual-Language-Action Models
 [arXiv 2026] ICR-Drive: Instruction Counterfactual Robustness for End-to-End Language-Driven Autonomous Driving
 [NeurIPS Datasets and Benchmarks 2023] LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning
@@ -275,8 +280,9 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2025] Communication-Efficient Desire Alignment for Embodied Agent-Human Adaptation
 [arXiv 2024] A Model-Agnostic Approach for Semantically Driven Disambiguation in Human-Robot Interaction
 [arXiv 2026] SCOPE: Selective Certification of Program Edits for Embodied Heuristic Learning
-[arXiv 2026] Same Goal, Different Words: Spatial Instruction Sensitivity in World-Action Models</title></rect>
-<text x="605.0" y="425.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">21</text>
+[arXiv 2026] Same Goal, Different Words: Spatial Instruction Sensitivity in World-Action Models
+[CoRL 2026] Learning What to Say to Your VLA: Mostly Harmless Vision Language Action Model Steering</title></rect>
+<text x="605.0" y="425.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">22</text>
 <rect x="662" y="397" width="106" height="46" rx="6" fill="#C8D1E4"><title>[CVPR 2026] LIBERO-Plus: A Progressive Robustness Benchmark for Visual-Language-Action Models
 [arXiv 2026] RC-NF: Robot-Conditioned Normalizing Flow for Real-Time Anomaly Detection in Robotic Manipulation
 [arXiv 2026] Sensing Which Modality Matters: Evidence-Gated Regularization for Robust VLA Policies
@@ -286,7 +292,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2026] PIER: An Evidence-Gated Execution Interface for Robotic Manipulation
 [arXiv 2026] Embodiment-Classifier Guidance: Transferring Frozen VLAs Across Robot Dynamics without Demonstrations</title></rect>
 <text x="715.0" y="425.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">8</text>
-<rect x="772" y="397" width="106" height="46" rx="6" fill="#8B9CC4"><title>[CVPR 2026] Boosting Vision-Language-Action Finetuning with Feasible Action Neighborhood Prior
+<rect x="772" y="397" width="106" height="46" rx="6" fill="#899AC3"><title>[CVPR 2026] Boosting Vision-Language-Action Finetuning with Feasible Action Neighborhood Prior
 [arXiv 2025] LIBERO-PRO: Towards Robust and Fair Evaluation of Vision-Language-Action Models Beyond Memorization
 [CVPR 2026] LIBERO-Plus: A Progressive Robustness Benchmark for Visual-Language-Action Models
 [arXiv 2025] Geometric Red-Teaming for Robotic Manipulation
@@ -315,8 +321,9 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2026] ForkCast: Predictive Recovery for Vision-Language-Action Policies via Counterfactual Futures
 [arXiv 2026] CoSMO: Conformal Semantic Mapping for Open-World Safe Robot Navigation
 [arXiv 2026] SCOPE: Selective Certification of Program Edits for Embodied Heuristic Learning
-[arXiv 2026] Look Before You Act: Bridging Active Perception and Vision-Language-Action Models via Observation-Aligned Data Adaptation</title></rect>
-<text x="825.0" y="425.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">30</text>
+[arXiv 2026] Look Before You Act: Bridging Active Perception and Vision-Language-Action Models via Observation-Aligned Data Adaptation
+[arXiv 2026] Red-Teaming of Vision-Language-Action Models via Quality Diversity Environment Generation</title></rect>
+<text x="825.0" y="425.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">31</text>
 <rect x="882" y="397" width="106" height="46" rx="6" fill="#C1CCE1"><title>[arXiv 2026] Generalizable VLA Finetuning via Representation Anchoring and Language-Action Alignment
 [arXiv 2026] Restoring Linguistic Grounding in VLA Models via Train-Free Attention Recalibration
 [arXiv 2025] Confidence Calibration in Vision-Language-Action Models

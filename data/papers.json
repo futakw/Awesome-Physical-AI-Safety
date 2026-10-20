@@ -31550,5 +31550,339 @@
       "assumptions": [],
       "curation_status": "paper-verified"
     }
+  },
+  {
+    "id": "arxiv-2610-14415",
+    "title": "Red-Teaming of Vision-Language-Action Models via Quality Diversity Environment Generation",
+    "first_author": "Zhao",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.14415",
+    "code_url": "https://qd-env.github.io/qdeg/",
+    "section": "ood-generalization",
+    "subsection": "OOD and Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "visual-perception",
+        "world-state"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [
+      "quality-diversity",
+      "environment-generation",
+      "vla-robustness",
+      "LIBERO-Spatial",
+      "sim-to-real"
+    ],
+    "catalogued_date": "2026-10-20",
+    "first_submission_date": "2026-10-10",
+    "first_submission_source": "https://arxiv.org/abs/2610.14415",
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "LIBERO-Spatial",
+        "Kinova JACO Gen2"
+      ],
+      "models": [
+        "pi0-FAST",
+        "OpenVLA-OFT",
+        "pi0.5"
+      ],
+      "access": [
+        "white-box"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "robust-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "training-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "visual-perception",
+        "world-state"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [
+        "model-access"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2610-05818",
+    "title": "What the Guard Misses, the Robot Executes: Implied Harm in VLA Instructions",
+    "first_author": "Karne",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.05818",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Semantic and Ethical Safety",
+    "scope": "vla",
+    "risks": [
+      "task-reliability",
+      "ethical-societal"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "hazardous-instruction"
+        ],
+        "surfaces": [
+          "user-instruction"
+        ],
+        "consequences": [
+          "unsafe-success",
+          "policy-violation"
+        ]
+      },
+      "curation_status": "paper-verified"
+    },
+    "tags": [
+      "implied-harm",
+      "safety-guard-evaluation",
+      "VLA-refusal",
+      "LIBERO-Goal"
+    ],
+    "catalogued_date": "2026-10-20",
+    "first_submission_date": "2026-10-05",
+    "first_submission_source": "https://arxiv.org/abs/2610.05818",
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "LIBERO-Goal"
+      ],
+      "models": [
+        "pi0.5",
+        "OpenVLA-OFT",
+        "Llama Guard 3",
+        "WildGuard",
+        "Qwen3Guard"
+      ],
+      "access": [
+        "black-box",
+        "white-box"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "attack-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "semantic-safety",
+        "task-reliability"
+      ],
+      "shift_types": [
+        "instruction"
+      ],
+      "environment": "simulation",
+      "base_platforms": [
+        "LIBERO-Goal"
+      ],
+      "public_data": false,
+      "leaderboard": null,
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2606-09499",
+    "title": "Targeting World Models to Compromise Robot Learning Pipelines",
+    "first_author": "Rathbun",
+    "venue": "CoRL",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2606.09499",
+    "code_url": null,
+    "section": "training-attacks",
+    "subsection": "Backdoors and Data Poisoning",
+    "scope": "robot-policy",
+    "risks": [
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "digital-perturbation",
+        "data-poisoning",
+        "backdoor"
+      ],
+      "surface": [
+        "visual-perception",
+        "model-supply-chain"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "targeted-action"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [
+      "world-model",
+      "visual-prompt-hijacking",
+      "visual-transition-hijacking",
+      "robot-learning-supply-chain",
+      "CoRL-Spotlight"
+    ],
+    "catalogued_date": "2026-10-20",
+    "first_submission_date": "2026-06-08",
+    "first_submission_source": "https://arxiv.org/abs/2606.09499",
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "offline-dataset"
+      ],
+      "platforms": [
+        "LIBERO",
+        "DROID",
+        "Single Wall"
+      ],
+      "models": [
+        "Cosmos-Predict 2.5",
+        "Dino-WM",
+        "Le-WM"
+      ],
+      "access": [
+        "white-box"
+      ],
+      "metrics": [
+        "attack-success-rate",
+        "clean-task-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2606-12299",
+    "title": "Learning What to Say to Your VLA: Mostly Harmless Vision Language Action Model Steering",
+    "first_author": "Jeong",
+    "venue": "CoRL",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2606.12299",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Uncertainty, Abstention, and Human Oversight",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "user-instruction",
+        "visual-perception"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [
+      "language-steering",
+      "conformal-prediction",
+      "harmlessness-guarantee",
+      "LIBERO-OOD",
+      "DROID"
+    ],
+    "catalogued_date": "2026-10-20",
+    "first_submission_date": "2026-06-10",
+    "first_submission_source": "https://arxiv.org/abs/2606.12299",
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "LIBERO-OOD",
+        "DROID",
+        "Franka robot"
+      ],
+      "models": [
+        "pi0.5"
+      ],
+      "access": [
+        "black-box"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "robust-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "representation-steering",
+        "uncertainty-gating"
+      ],
+      "protected_surface": [
+        "user-instruction",
+        "visual-perception"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [
+        "model-access"
+      ],
+      "curation_status": "paper-verified"
+    }
   }
 ]
