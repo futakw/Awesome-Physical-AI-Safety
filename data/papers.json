@@ -34,7 +34,6 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "survey-2608.16843",
       "reinforcement-learning",
       "post-training",
       "robustness"
@@ -82,7 +81,10 @@
     },
     "catalogued_date": "2026-09-04",
     "first_submission_date": "2025-11-03",
-    "first_submission_source": "https://arxiv.org/abs/2511.01331"
+    "first_submission_source": "https://arxiv.org/abs/2511.01331",
+    "related_surveys": [
+      "https://arxiv.org/abs/2608.16843"
+    ]
   },
   {
     "id": "clean-action-backdoor-attacks-on-vision-language-action-models-via-sequenti-2025",
@@ -119,9 +121,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "survey-2608.16843"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation"
@@ -145,7 +145,10 @@
     },
     "catalogued_date": "2026-09-04",
     "first_submission_date": null,
-    "first_submission_source": null
+    "first_submission_source": null,
+    "related_surveys": [
+      "https://arxiv.org/abs/2608.16843"
+    ]
   },
   {
     "id": "pre-execution-safety-gate-task-safety-contracts-for-llm-based-robot-task-pl-2026",
@@ -182,10 +185,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "survey-2608.16843",
-      "survey-reference"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation",
@@ -224,7 +224,10 @@
     },
     "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-04-07",
-    "first_submission_source": "https://arxiv.org/abs/2604.05427"
+    "first_submission_source": "https://arxiv.org/abs/2604.05427",
+    "related_surveys": [
+      "https://arxiv.org/abs/2608.16843"
+    ]
   },
   {
     "id": "protea-securing-robot-task-planning-and-execution-2026",
@@ -260,10 +263,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "survey-2608.16843",
-      "survey-reference"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "offline-dataset"
@@ -295,7 +295,10 @@
     },
     "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-01-12",
-    "first_submission_source": "https://arxiv.org/abs/2601.07186"
+    "first_submission_source": "https://arxiv.org/abs/2601.07186",
+    "related_surveys": [
+      "https://arxiv.org/abs/2608.16843"
+    ]
   },
   {
     "id": "logicguard-improving-embodied-llm-agents-through-temporal-logic-based-criti-2026",
@@ -332,9 +335,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "survey-2608.16843"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation"
@@ -378,7 +379,10 @@
     },
     "catalogued_date": "2026-09-04",
     "first_submission_date": "2025-07-04",
-    "first_submission_source": "https://arxiv.org/abs/2507.03293"
+    "first_submission_source": "https://arxiv.org/abs/2507.03293",
+    "related_surveys": [
+      "https://arxiv.org/abs/2608.16843"
+    ]
   },
   {
     "id": "safeplan-leveraging-formal-logic-and-chain-of-thought-reasoning-for-enhance-2025",
@@ -417,10 +421,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "survey-2608.16843",
-      "survey-reference"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation"
@@ -464,7 +465,10 @@
     },
     "catalogued_date": "2026-09-04",
     "first_submission_date": "2025-03-10",
-    "first_submission_source": "https://arxiv.org/abs/2503.06892"
+    "first_submission_source": "https://arxiv.org/abs/2503.06892",
+    "related_surveys": [
+      "https://arxiv.org/abs/2608.16843"
+    ]
   },
   {
     "id": "safe-llm-controlled-robots-with-formal-guarantees-via-reachability-analysis-2025",
@@ -499,10 +503,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "survey-2608.16843",
-      "survey-reference"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation",
@@ -547,7 +548,10 @@
     },
     "catalogued_date": "2026-09-04",
     "first_submission_date": "2025-03-05",
-    "first_submission_source": "https://arxiv.org/abs/2503.03911"
+    "first_submission_source": "https://arxiv.org/abs/2503.03911",
+    "related_surveys": [
+      "https://arxiv.org/abs/2608.16843"
+    ]
   },
   {
     "id": "safeembodai-securing-llm-controlled-mobile-robots-against-prompt-injection-2024",
@@ -586,10 +590,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "survey-2608.16843",
-      "survey-reference"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation"
@@ -623,7 +624,10 @@
     },
     "catalogued_date": "2026-09-04",
     "first_submission_date": "2024-09-03",
-    "first_submission_source": "https://arxiv.org/abs/2409.01630"
+    "first_submission_source": "https://arxiv.org/abs/2409.01630",
+    "related_surveys": [
+      "https://arxiv.org/abs/2608.16843"
+    ]
   },
   {
     "id": "trojanrobot-robot-collapse-supply-chain-backdoor-attacks-against-vlm-based--2025",
@@ -662,10 +666,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "survey-2608.16843",
-      "survey-reference"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation",
@@ -696,7 +697,10 @@
     },
     "catalogued_date": "2026-09-04",
     "first_submission_date": "2024-11-18",
-    "first_submission_source": "https://arxiv.org/abs/2411.11683"
+    "first_submission_source": "https://arxiv.org/abs/2411.11683",
+    "related_surveys": [
+      "https://arxiv.org/abs/2608.16843"
+    ]
   },
   {
     "id": "compromising-llm-driven-embodied-agents-with-contextual-backdoor-attacks-2025",
@@ -736,10 +740,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "survey-2608.16843",
-      "survey-reference"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "real-robot"
@@ -759,7 +760,10 @@
     },
     "catalogued_date": "2026-09-04",
     "first_submission_date": "2024-08-06",
-    "first_submission_source": "https://arxiv.org/abs/2408.02882"
+    "first_submission_source": "https://arxiv.org/abs/2408.02882",
+    "related_surveys": [
+      "https://arxiv.org/abs/2608.16843"
+    ]
   },
   {
     "id": "exploring-the-robustness-of-decision-level-through-adversarial-attacks-on-l-2024",
@@ -796,10 +800,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "survey-2608.16843",
-      "survey-reference"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "offline-dataset"
@@ -823,7 +824,10 @@
     },
     "catalogued_date": "2026-09-04",
     "first_submission_date": "2024-05-30",
-    "first_submission_source": "https://arxiv.org/abs/2405.19802"
+    "first_submission_source": "https://arxiv.org/abs/2405.19802",
+    "related_surveys": [
+      "https://arxiv.org/abs/2608.16843"
+    ]
   },
   {
     "id": "on-the-vulnerability-of-llm-vlm-controlled-robotics-2024",
@@ -859,10 +863,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "survey-2608.16843",
-      "survey-reference"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation"
@@ -887,7 +888,10 @@
     },
     "catalogued_date": "2026-09-04",
     "first_submission_date": "2024-02-15",
-    "first_submission_source": "https://arxiv.org/abs/2402.10340"
+    "first_submission_source": "https://arxiv.org/abs/2402.10340",
+    "related_surveys": [
+      "https://arxiv.org/abs/2608.16843"
+    ]
   },
   {
     "id": "extended-to-reality-prompt-injection-in-3d-environments-2026",
@@ -924,10 +928,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "survey-2608.16843",
-      "survey-reference"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation",
@@ -975,7 +976,10 @@
         "known-attack"
       ],
       "curation_status": "paper-verified"
-    }
+    },
+    "related_surveys": [
+      "https://arxiv.org/abs/2608.16843"
+    ]
   },
   {
     "id": "hijacking-robots-with-a-piece-of-paper-a-systematic-study-of-physical-promp-2026",
@@ -1013,10 +1017,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "survey-2608.16843",
-      "survey-reference"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "offline-dataset"
@@ -1064,7 +1065,10 @@
         "none"
       ],
       "curation_status": "abstract-verified"
-    }
+    },
+    "related_surveys": [
+      "https://arxiv.org/abs/2608.16843"
+    ]
   },
   {
     "id": "jailbreaking-embodied-llms-via-action-level-manipulation-2026",
@@ -1104,10 +1108,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "survey-2608.16843",
-      "survey-reference"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation",
@@ -1142,7 +1143,10 @@
     },
     "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-03-02",
-    "first_submission_source": "https://arxiv.org/abs/2603.01414"
+    "first_submission_source": "https://arxiv.org/abs/2603.01414",
+    "related_surveys": [
+      "https://arxiv.org/abs/2608.16843"
+    ]
   },
   {
     "id": "badnaver-jailbreaking-vision-language-navigation-agents-2025",
@@ -1182,10 +1186,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "survey-2608.16843",
-      "survey-reference"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation",
@@ -1214,7 +1215,10 @@
     },
     "catalogued_date": "2026-09-04",
     "first_submission_date": "2025-05-18",
-    "first_submission_source": "https://arxiv.org/abs/2505.12443"
+    "first_submission_source": "https://arxiv.org/abs/2505.12443",
+    "related_surveys": [
+      "https://arxiv.org/abs/2608.16843"
+    ]
   },
   {
     "id": "beat-visual-backdoor-attacks-on-mllm-embodied-decision-making-via-contrasti-2025",
@@ -1252,10 +1256,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "survey-2608.16843",
-      "survey-reference"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation"
@@ -1285,7 +1286,10 @@
     },
     "catalogued_date": "2026-09-04",
     "first_submission_date": "2025-10-31",
-    "first_submission_source": "https://arxiv.org/abs/2510.27623"
+    "first_submission_source": "https://arxiv.org/abs/2510.27623",
+    "related_surveys": [
+      "https://arxiv.org/abs/2608.16843"
+    ]
   },
   {
     "id": "safedec-constrained-decoding-for-safe-autoregressive-embodied-policies-2025",
@@ -1321,10 +1325,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "survey-2608.16843",
-      "survey-reference"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation"
@@ -1362,7 +1363,10 @@
     },
     "catalogued_date": "2026-09-04",
     "first_submission_date": "2025-09-01",
-    "first_submission_source": "https://arxiv.org/abs/2509.01728"
+    "first_submission_source": "https://arxiv.org/abs/2509.01728",
+    "related_surveys": [
+      "https://arxiv.org/abs/2608.16843"
+    ]
   },
   {
     "id": "ask-before-you-act-token-level-uncertainty-for-intervention-in-vision-langu-2025",
@@ -1397,9 +1401,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "survey-2608.16843"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "real-robot"
@@ -1439,7 +1441,10 @@
     },
     "catalogued_date": "2026-09-04",
     "first_submission_date": null,
-    "first_submission_source": null
+    "first_submission_source": null,
+    "related_surveys": [
+      "https://arxiv.org/abs/2608.16843"
+    ]
   },
   {
     "id": "fpc-vla-a-vision-language-action-framework-with-a-supervisor-for-failure-pr-2026",
@@ -1476,9 +1481,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "survey-2608.16843"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation",
@@ -1527,7 +1530,10 @@
     },
     "catalogued_date": "2026-09-04",
     "first_submission_date": "2025-09-04",
-    "first_submission_source": "https://arxiv.org/abs/2509.04018"
+    "first_submission_source": "https://arxiv.org/abs/2509.04018",
+    "related_surveys": [
+      "https://arxiv.org/abs/2608.16843"
+    ]
   },
   {
     "id": "guardian-detecting-robotic-planning-and-execution-errors-with-vision-langua-2025",
@@ -1564,10 +1570,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "survey-2608.16843",
-      "survey-reference"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation",
@@ -1613,7 +1616,10 @@
     },
     "catalogued_date": "2026-09-04",
     "first_submission_date": "2025-12-01",
-    "first_submission_source": "https://arxiv.org/abs/2512.01946"
+    "first_submission_source": "https://arxiv.org/abs/2512.01946",
+    "related_surveys": [
+      "https://arxiv.org/abs/2608.16843"
+    ]
   },
   {
     "id": "aha-a-vision-language-model-for-detecting-and-reasoning-over-failures-in-ro-2024",
@@ -1650,9 +1656,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "survey-2608.16843"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation",
@@ -1702,7 +1706,10 @@
     },
     "catalogued_date": "2026-09-04",
     "first_submission_date": "2024-10-01",
-    "first_submission_source": "https://arxiv.org/abs/2410.00371"
+    "first_submission_source": "https://arxiv.org/abs/2410.00371",
+    "related_surveys": [
+      "https://arxiv.org/abs/2608.16843"
+    ]
   },
   {
     "id": "when-attention-betrays-erasing-backdoor-attacks-in-robotic-policies-by-reco-2026",
@@ -1740,10 +1747,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "survey-2608.16843",
-      "survey-reference"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "real-robot",
@@ -1791,7 +1795,10 @@
     },
     "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-02-03",
-    "first_submission_source": "https://arxiv.org/abs/2602.03153"
+    "first_submission_source": "https://arxiv.org/abs/2602.03153",
+    "related_surveys": [
+      "https://arxiv.org/abs/2608.16843"
+    ]
   },
   {
     "id": "chromaguard-defending-vla-models-against-color-illumination-induced-blindne-2026",
@@ -1826,10 +1833,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "survey-2608.16843",
-      "survey-reference"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "real-robot"
@@ -1865,7 +1869,10 @@
     },
     "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-07-16",
-    "first_submission_source": "https://arxiv.org/abs/2607.14698"
+    "first_submission_source": "https://arxiv.org/abs/2607.14698",
+    "related_surveys": [
+      "https://arxiv.org/abs/2608.16843"
+    ]
   },
   {
     "id": "structure-aware-robust-fine-tuning-2026",
@@ -1900,10 +1907,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "survey-2608.16843",
-      "survey-reference"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation",
@@ -1947,7 +1951,10 @@
     },
     "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-08-04",
-    "first_submission_source": "https://arxiv.org/abs/2608.03231"
+    "first_submission_source": "https://arxiv.org/abs/2608.03231",
+    "related_surveys": [
+      "https://arxiv.org/abs/2608.16843"
+    ]
   },
   {
     "id": "safe-dict-concept-based-dictionary-learning-for-inference-time-safety-in-vi-2026",
@@ -1985,10 +1992,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "survey-2608.16843",
-      "survey-reference"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation"
@@ -2037,7 +2041,10 @@
     },
     "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-02-02",
-    "first_submission_source": "https://arxiv.org/abs/2602.01834"
+    "first_submission_source": "https://arxiv.org/abs/2602.01834",
+    "related_surveys": [
+      "https://arxiv.org/abs/2608.16843"
+    ]
   },
   {
     "id": "horcrux-robustness-recovery-for-vision-language-action-policies-2025",
@@ -2074,10 +2081,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "survey-2608.16843",
-      "survey-reference"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "offline-dataset"
@@ -2118,7 +2122,10 @@
     },
     "catalogued_date": "2026-09-04",
     "first_submission_date": "2025-11-22",
-    "first_submission_source": "https://arxiv.org/abs/2511.17869"
+    "first_submission_source": "https://arxiv.org/abs/2511.17869",
+    "related_surveys": [
+      "https://arxiv.org/abs/2608.16843"
+    ]
   },
   {
     "id": "mergevla-robust-vision-language-action-models-via-model-merging-2025",
@@ -2154,10 +2161,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "survey-2608.16843",
-      "survey-reference"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation",
@@ -2200,7 +2204,10 @@
     },
     "catalogued_date": "2026-09-04",
     "first_submission_date": "2025-11-24",
-    "first_submission_source": "https://arxiv.org/abs/2511.18810"
+    "first_submission_source": "https://arxiv.org/abs/2511.18810",
+    "related_surveys": [
+      "https://arxiv.org/abs/2608.16843"
+    ]
   },
   {
     "id": "retain-robust-finetuning-of-vision-language-action-robot-policies-via-param-2025",
@@ -2235,10 +2242,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "survey-2608.16843",
-      "survey-reference"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation",
@@ -2276,7 +2280,10 @@
     },
     "catalogued_date": "2026-09-04",
     "first_submission_date": "2025-12-09",
-    "first_submission_source": "https://arxiv.org/abs/2512.08333"
+    "first_submission_source": "https://arxiv.org/abs/2512.08333",
+    "related_surveys": [
+      "https://arxiv.org/abs/2608.16843"
+    ]
   },
   {
     "id": "drift-derailing-trajectories-of-flow-matching-vlas-with-adversarial-patches-2026",
@@ -2311,10 +2318,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "survey-2608.16843",
-      "survey-reference"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation"
@@ -2339,7 +2343,10 @@
     },
     "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-08-04",
-    "first_submission_source": "https://arxiv.org/abs/2608.03207"
+    "first_submission_source": "https://arxiv.org/abs/2608.03207",
+    "related_surveys": [
+      "https://arxiv.org/abs/2608.16843"
+    ]
   },
   {
     "id": "vlaguard-vasa-visuomotor-attention-guided-semantic-attack-2026",
@@ -2376,10 +2383,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "survey-2608.16843",
-      "survey-reference"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation",
@@ -2426,7 +2430,10 @@
     },
     "catalogued_date": "2026-09-04",
     "first_submission_date": "2026-08-02",
-    "first_submission_source": "https://arxiv.org/abs/2608.01028"
+    "first_submission_source": "https://arxiv.org/abs/2608.01028",
+    "related_surveys": [
+      "https://arxiv.org/abs/2608.16843"
+    ]
   },
   {
     "id": "saber-2026-vla",
@@ -2466,9 +2473,7 @@
       "curation_status": "paper-verified"
     },
     "tags": [
-      "black-box",
-      "agentic-attack",
-      "vla"
+      "agentic-attack"
     ],
     "evaluation": {
       "environments": [
@@ -2530,8 +2535,7 @@
     },
     "tags": [
       "diffusion",
-      "unrestricted-attack",
-      "vla"
+      "unrestricted-attack"
     ],
     "evaluation": {
       "environments": [
@@ -2601,8 +2605,7 @@
     },
     "tags": [
       "chain-of-thought",
-      "reasoning",
-      "vla"
+      "reasoning"
     ],
     "evaluation": {
       "environments": [
@@ -2667,9 +2670,7 @@
       "curation_status": "paper-verified"
     },
     "tags": [
-      "adversarial-patch",
-      "partial-observability",
-      "vla"
+      "partial-observability"
     ],
     "evaluation": {
       "environments": [
@@ -2737,8 +2738,7 @@
     },
     "tags": [
       "world-model",
-      "physical-attack",
-      "embodied-agent"
+      "physical-attack"
     ],
     "evaluation": {
       "environments": [
@@ -2805,9 +2805,7 @@
       "curation_status": "paper-verified"
     },
     "tags": [
-      "adversarial-patch",
-      "chain-of-thought",
-      "vla"
+      "chain-of-thought"
     ],
     "evaluation": {
       "environments": [
@@ -2867,8 +2865,7 @@
     },
     "tags": [
       "physical-attack",
-      "texture",
-      "vla"
+      "texture"
     ],
     "evaluation": {
       "environments": [
@@ -2938,9 +2935,7 @@
       "curation_status": "paper-verified"
     },
     "tags": [
-      "backdoor",
-      "flow-matching",
-      "vla"
+      "flow-matching"
     ],
     "evaluation": {
       "environments": [
@@ -3009,7 +3004,6 @@
       "curation_status": "paper-verified"
     },
     "tags": [
-      "jailbreak",
       "world-action-model",
       "robotics"
     ],
@@ -3079,8 +3073,7 @@
     },
     "tags": [
       "prompt-injection",
-      "navigation",
-      "embodied-agent"
+      "navigation"
     ],
     "evaluation": {
       "environments": [
@@ -3143,9 +3136,7 @@
       "curation_status": "paper-verified"
     },
     "tags": [
-      "membership-inference",
-      "privacy",
-      "vla"
+      "privacy"
     ],
     "evaluation": {
       "environments": [
@@ -3312,7 +3303,6 @@
       "curation_status": "paper-verified"
     },
     "tags": [
-      "survey",
       "security",
       "privacy",
       "foundation-model-robotics"
@@ -3354,7 +3344,6 @@
       "curation_status": "paper-verified"
     },
     "tags": [
-      "survey",
       "llm-agents",
       "threat-model",
       "defense"
@@ -3396,7 +3385,6 @@
       "curation_status": "paper-verified"
     },
     "tags": [
-      "survey",
       "world-model",
       "lifecycle",
       "security"
@@ -3436,7 +3424,6 @@
       "curation_status": "paper-verified"
     },
     "tags": [
-      "survey",
       "trust",
       "llm-robotics",
       "mitigation"
@@ -3489,7 +3476,6 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "survey",
       "taxonomy"
     ],
     "catalogued_date": "2026-09-02",
@@ -3540,7 +3526,6 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "survey",
       "vulnerability-taxonomy"
     ],
     "catalogued_date": "2026-09-02",
@@ -3830,7 +3815,6 @@
       "viewpoint-camera",
       "robot-state",
       "language-instruction",
-      "lighting",
       "background-texture",
       "sensor-noise"
     ],
@@ -3914,8 +3898,7 @@
     },
     "tags": [
       "object-geometry",
-      "red-teaming",
-      "real-robot"
+      "red-teaming"
     ],
     "evaluation": {
       "environments": [
@@ -4129,7 +4112,6 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "backdoor",
       "training-data"
     ],
     "evaluation": {
@@ -4196,7 +4178,6 @@
       "curation_status": "paper-verified"
     },
     "tags": [
-      "backdoor",
       "action-output"
     ],
     "evaluation": {
@@ -4267,7 +4248,6 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "backdoor",
       "state-attack",
       "physical-access"
     ],
@@ -4334,7 +4314,6 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "backdoor",
       "action-chunk",
       "temporal-attack"
     ],
@@ -4395,9 +4374,7 @@
       "curation_status": "paper-verified"
     },
     "tags": [
-      "adversarial-patch",
-      "digital-perturbation",
-      "real-robot"
+      "digital-perturbation"
     ],
     "evaluation": {
       "environments": [
@@ -4462,7 +4439,6 @@
       "curation_status": "paper-verified"
     },
     "tags": [
-      "digital-perturbation",
       "multimodal-misalignment"
     ],
     "evaluation": {
@@ -4527,9 +4503,7 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "action-freezing",
-      "dangerous-inaction",
-      "digital-perturbation"
+      "dangerous-inaction"
     ],
     "evaluation": {
       "environments": [
@@ -4676,9 +4650,7 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "jailbreak",
-      "harmful-policy",
-      "real-robot"
+      "harmful-policy"
     ],
     "evaluation": {
       "environments": [
@@ -4743,7 +4715,6 @@
       "curation_status": "paper-verified"
     },
     "tags": [
-      "jailbreak",
       "command-hijacking"
     ],
     "evaluation": {
@@ -4925,7 +4896,6 @@
       "curation_status": "paper-verified"
     },
     "tags": [
-      "adversarial-patch",
       "model-agnostic",
       "adversarial-fine-tuning"
     ],
@@ -5585,7 +5555,6 @@
       "curation_status": "paper-verified"
     },
     "tags": [
-      "hazardous-instruction",
       "task-planning"
     ],
     "evaluation": {
@@ -5836,8 +5805,7 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "robot-constitution",
-      "semantic-safety"
+      "robot-constitution"
     ],
     "evaluation": {
       "environments": [
@@ -5905,7 +5873,6 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "simulation",
       "sim-to-real",
       "evaluation-framework"
     ],
@@ -6125,8 +6092,6 @@
       "curation_status": "paper-verified"
     },
     "tags": [
-      "covert-channel",
-      "trajectory-manipulation",
       "misuse"
     ],
     "evaluation": {
@@ -6192,7 +6157,6 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "survey",
       "security",
       "privacy"
     ],
@@ -6236,7 +6200,6 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "survey",
       "trustworthiness",
       "maturity-model"
     ],
@@ -6281,8 +6244,6 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "survey",
-      "autonomous-driving",
       "closed-loop-control"
     ],
     "catalogued_date": "2026-09-02",
@@ -6391,7 +6352,6 @@
       "curation_status": "paper-verified"
     },
     "tags": [
-      "backdoor",
       "decision-making",
       "knowledge-injection"
     ],
@@ -6479,7 +6439,6 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "adversarial-patch",
       "black-box-transfer",
       "sim-to-real"
     ],
@@ -6544,9 +6503,7 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "jailbreak",
-      "policy-executability",
-      "real-robot"
+      "policy-executability"
     ],
     "evaluation": {
       "environments": [
@@ -6630,7 +6587,6 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "jailbreak",
       "voice-instruction",
       "physical-harm"
     ],
@@ -6697,7 +6653,6 @@
     },
     "tags": [
       "transfer-attack",
-      "black-box",
       "multimodal-semantics"
     ],
     "evaluation": {
@@ -6758,9 +6713,7 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "jailbreak-defense",
-      "representation-steering",
-      "inference-time"
+      "jailbreak-defense"
     ],
     "evaluation": {
       "environments": [
@@ -6843,7 +6796,6 @@
       "curation_status": "paper-verified"
     },
     "tags": [
-      "multi-agent",
       "memory-defense",
       "communication-security"
     ],
@@ -6929,7 +6881,6 @@
       "curation_status": "paper-verified"
     },
     "tags": [
-      "adversarial-patch",
       "active-perception",
       "recurrent-feedback"
     ],
@@ -7014,7 +6965,6 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "backdoor",
       "physical-object",
       "goal-hijacking"
     ],
@@ -7634,7 +7584,6 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "failure-recovery",
       "reasoning",
       "closed-loop"
     ],
@@ -7724,8 +7673,7 @@
     },
     "tags": [
       "anomaly-detection",
-      "normalizing-flow",
-      "runtime-monitoring"
+      "normalizing-flow"
     ],
     "evaluation": {
       "environments": [
@@ -7807,7 +7755,6 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "semantic-safety",
       "hazard",
       "benchmark"
     ],
@@ -8111,8 +8058,6 @@
       "curation_status": "paper-verified"
     },
     "tags": [
-      "hazardous-instruction",
-      "embodied-agent",
       "benchmark"
     ],
     "evaluation": {
@@ -8187,7 +8132,6 @@
     },
     "tags": [
       "safety-benchmark",
-      "jailbreak",
       "mitigation"
     ],
     "evaluation": {
@@ -8362,7 +8306,6 @@
       "curation_status": "paper-verified"
     },
     "tags": [
-      "autonomous-driving",
       "scenario-rollout",
       "long-horizon",
       "zero-shot"
@@ -8582,8 +8525,7 @@
     "tags": [
       "human-in-the-loop",
       "preference-optimization",
-      "failure-correction",
-      "real-robot"
+      "failure-correction"
     ],
     "evaluation": {
       "environments": [
@@ -8658,7 +8600,6 @@
     },
     "tags": [
       "collision-avoidance",
-      "vision-language-navigation",
       "waypoint",
       "recovery"
     ],
@@ -8828,7 +8769,6 @@
       "curation_status": "paper-verified"
     },
     "tags": [
-      "autonomous-driving",
       "runtime-supervision",
       "causal-narration",
       "infraction-score"
@@ -9079,8 +9019,7 @@
     "tags": [
       "contact-rich-manipulation",
       "force-control",
-      "variable-impedance",
-      "real-robot"
+      "variable-impedance"
     ],
     "evaluation": {
       "environments": [
@@ -9156,8 +9095,7 @@
     "tags": [
       "construction-safety",
       "human-action-recognition",
-      "emotion-recognition",
-      "vlm"
+      "emotion-recognition"
     ],
     "evaluation": {
       "environments": [
@@ -9440,7 +9378,6 @@
     },
     "tags": [
       "navigation",
-      "collision",
       "economic-cost",
       "deployment"
     ],
@@ -9523,8 +9460,7 @@
     "tags": [
       "indirect-jailbreak",
       "environmental-injection",
-      "benchmark",
-      "black-box"
+      "benchmark"
     ],
     "evaluation": {
       "environments": [
@@ -9588,7 +9524,6 @@
     "tags": [
       "benchmark",
       "collision-free-demonstration",
-      "semantic-safety",
       "domain-randomization"
     ],
     "evaluation": {
@@ -9831,9 +9766,6 @@
     },
     "tags": [
       "benchmark",
-      "adversarial-attack",
-      "backdoor",
-      "targeted-action",
       "real-robot"
     ],
     "evaluation": {
@@ -10201,10 +10133,8 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "backdoor",
       "supply-chain",
-      "fine-tuning-persistence",
-      "real-robot"
+      "fine-tuning-persistence"
     ],
     "evaluation": {
       "environments": [
@@ -10269,7 +10199,6 @@
     "tags": [
       "safe-rl",
       "world-model",
-      "autonomous-driving",
       "semantic-safety"
     ],
     "evaluation": {
@@ -10353,7 +10282,6 @@
     "tags": [
       "benchmark",
       "alignment",
-      "task-planning",
       "hazard-category"
     ],
     "evaluation": {
@@ -10536,8 +10464,7 @@
     "tags": [
       "visual-representation",
       "fine-tuning",
-      "alignment",
-      "ood-generalization"
+      "alignment"
     ],
     "evaluation": {
       "environments": [
@@ -10616,8 +10543,7 @@
     "tags": [
       "benchmark",
       "physical-threat",
-      "typographic-attack",
-      "adversarial-patch"
+      "typographic-attack"
     ],
     "evaluation": {
       "environments": [
@@ -10947,7 +10873,6 @@
     "tags": [
       "semantic-safety",
       "control-barrier-function",
-      "collision",
       "safety-filter"
     ],
     "evaluation": {
@@ -11029,9 +10954,7 @@
     },
     "tags": [
       "failure-detection",
-      "semantic-misalignment",
-      "vlm",
-      "real-robot"
+      "vlm"
     ],
     "evaluation": {
       "environments": [
@@ -11459,10 +11382,8 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "instruction-ambiguity",
       "multi-turn-dialogue",
-      "disambiguation",
-      "real-robot"
+      "disambiguation"
     ],
     "evaluation": {
       "environments": [
@@ -11623,8 +11544,7 @@
     "tags": [
       "self-correction",
       "fast-slow-system",
-      "chain-of-thought",
-      "failure-recovery"
+      "chain-of-thought"
     ],
     "evaluation": {
       "environments": [
@@ -11789,8 +11709,6 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "survey",
-      "vla",
       "applications",
       "challenges"
     ],
@@ -11829,7 +11747,6 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "survey",
       "vlm",
       "robotic-manipulation",
       "architecture"
@@ -11867,7 +11784,6 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "survey",
       "post-training",
       "adaptation",
       "motor-learning"
@@ -11905,10 +11821,8 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "survey",
       "action-tokenization",
-      "policy-representation",
-      "vla"
+      "policy-representation"
     ],
     "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-07-02",
@@ -11945,10 +11859,8 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "survey",
       "systematic-review",
-      "robotic-manipulation",
-      "vla"
+      "robotic-manipulation"
     ],
     "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-07-14",
@@ -11985,10 +11897,8 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "survey",
       "end-to-end",
-      "taxonomy",
-      "vla"
+      "taxonomy"
     ],
     "catalogued_date": "2026-09-02",
     "first_submission_date": "2025-09-23",
@@ -12026,9 +11936,7 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "survey",
       "efficiency",
-      "inference",
       "deployment"
     ],
     "catalogued_date": "2026-09-02",
@@ -12071,7 +11979,6 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "survey",
       "real-world",
       "robotics",
       "deployment"
@@ -12118,10 +12025,8 @@
       "curation_status": "paper-verified"
     },
     "tags": [
-      "vla",
       "retry",
       "reset",
-      "failure-recovery",
       "contact-rich"
     ],
     "evaluation": {
@@ -12211,7 +12116,6 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "vla",
       "harness",
       "retry",
       "contact-rich",
@@ -12301,7 +12205,6 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "robot-policy",
       "failure-aware",
       "test-time-adaptation",
       "continual-improvement"
@@ -12384,7 +12287,6 @@
     },
     "tags": [
       "benchmark",
-      "autonomous-driving",
       "closed-loop",
       "semantic-shift",
       "state-drift",
@@ -12446,7 +12348,6 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "embodied-agent",
       "skill-discovery",
       "failure-diagnosis",
       "repair",
@@ -12526,10 +12427,8 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "survey",
       "embodied-ai",
-      "benchmark",
-      "vla"
+      "benchmark"
     ],
     "catalogued_date": "2026-09-02",
     "first_submission_date": "2024-05-23",
@@ -12571,9 +12470,7 @@
     },
     "tags": [
       "modality-entanglement",
-      "sensor-corruption",
-      "BEHAVIOR-1K",
-      "real-robot"
+      "sensor-corruption"
     ],
     "evaluation": {
       "environments": [
@@ -12655,7 +12552,6 @@
     "tags": [
       "privacy",
       "representation-export",
-      "AI2-THOR",
       "task-utility"
     ],
     "evaluation": {
@@ -12735,8 +12631,7 @@
     "tags": [
       "failure-detection",
       "VLM-judge",
-      "contact-rich-manipulation",
-      "real-robot"
+      "contact-rich-manipulation"
     ],
     "evaluation": {
       "environments": [
@@ -12791,10 +12686,8 @@
       "curation_status": "paper-verified"
     },
     "tags": [
-      "runtime-monitoring",
       "zonotope",
-      "sensor-uncertainty",
-      "formal-verification"
+      "sensor-uncertainty"
     ],
     "evaluation": {
       "environments": [
@@ -12878,8 +12771,7 @@
     "tags": [
       "force-aware-control",
       "contact-rich-manipulation",
-      "loco-manipulation",
-      "real-robot"
+      "loco-manipulation"
     ],
     "evaluation": {
       "environments": [
@@ -13159,8 +13051,7 @@
       "tactile",
       "contact-rich-manipulation",
       "real-time-correction",
-      "world-action-model",
-      "real-robot"
+      "world-action-model"
     ],
     "evaluation": {
       "environments": [
@@ -13241,7 +13132,6 @@
       "reward-model",
       "VLM-judge",
       "paraphrase-robustness",
-      "real-robot",
       "progress-labels"
     ],
     "evaluation": {
@@ -13304,8 +13194,7 @@
       "graph-memory",
       "partial-observability",
       "risk-prediction",
-      "replanning",
-      "IS-Bench"
+      "replanning"
     ],
     "evaluation": {
       "environments": [
@@ -13391,8 +13280,6 @@
       "command-preserving-attack",
       "trajectory-redirection",
       "prompt-perturbation",
-      "LIBERO",
-      "SO-100",
       "CoRL-2026"
     ],
     "evaluation": {
@@ -13466,8 +13353,7 @@
       "crowd-navigation",
       "human-robot-interaction",
       "partial-observability",
-      "response-shift",
-      "real-robot"
+      "response-shift"
     ],
     "evaluation": {
       "environments": [
@@ -13531,9 +13417,7 @@
     "tags": [
       "flow-matching",
       "training-aligned-safety",
-      "action-feasibility",
-      "pi0.5",
-      "Fast-WAM"
+      "action-feasibility"
     ],
     "evaluation": {
       "environments": [
@@ -13681,7 +13565,6 @@
     },
     "tags": [
       "obstacle-aware",
-      "diffusion-policy",
       "clutter",
       "greenhouse",
       "CoRL-2026"
@@ -13769,8 +13652,7 @@
       "Dist-GPRL",
       "skill-adaptation",
       "dynamic-obstacles",
-      "Gaussian-process",
-      "real-robot"
+      "Gaussian-process"
     ],
     "evaluation": {
       "environments": [
@@ -13855,7 +13737,6 @@
     "tags": [
       "formal-verification",
       "bound-propagation",
-      "CARLA",
       "lane-departure",
       "unseen-conditions"
     ],
@@ -14777,7 +14658,6 @@
       "temporal-safety",
       "LTLf",
       "DFA-monitor",
-      "RoboCasa365",
       "safe-success"
     ],
     "evaluation": {
@@ -14864,7 +14744,6 @@
     "tags": [
       "coding-agent",
       "SafeHarness",
-      "SafeLIBERO",
       "obstacle-avoidance",
       "replanning",
       "contact-execution"
@@ -15033,8 +14912,7 @@
       "control-barrier-function",
       "whole-body-safety",
       "hyper-redundant-robot",
-      "adaptive-weighting",
-      "real-robot"
+      "adaptive-weighting"
     ],
     "evaluation": {
       "environments": [
@@ -15181,8 +15059,7 @@
       "lifecycle-safety",
       "initial-state-hazard",
       "execution-time-safety",
-      "final-state-hazard",
-      "unsafe-success"
+      "final-state-hazard"
     ],
     "evaluation": {
       "environments": [
@@ -15272,8 +15149,7 @@
       "time-to-hazard",
       "rollback",
       "safe-waypoint",
-      "frozen-VLA",
-      "real-robot"
+      "frozen-VLA"
     ],
     "evaluation": {
       "environments": [
@@ -15367,7 +15243,6 @@
       "poisson-safety-function",
       "full-body-safety",
       "grasped-object",
-      "SafeLIBERO",
       "dynamic-obstacles"
     ],
     "evaluation": {
@@ -15542,7 +15417,6 @@
     "tags": [
       "failure-diagnosis",
       "failure-onset-localization",
-      "proprioception",
       "VLM",
       "FailTime",
       "training-free"
@@ -15633,7 +15507,6 @@
       "corrective-execution",
       "atomic-skills",
       "3D-monitor",
-      "FSR-Bench",
       "dual-arm"
     ],
     "evaluation": {
@@ -15732,7 +15605,6 @@
       "RoboTwin",
       "13-attributes",
       "WAM",
-      "VLA",
       "5k-demonstrations"
     ],
     "evaluation": {
@@ -15820,7 +15692,6 @@
       "actuation-bias",
       "joint-encoder-offset",
       "context-adaptation",
-      "proprioception",
       "bimanual-manipulation"
     ],
     "evaluation": {
@@ -16005,9 +15876,7 @@
     "tags": [
       "recovery-data",
       "interventional-recoverability",
-      "failed-rollouts",
-      "SmolVLA",
-      "simulation"
+      "failed-rollouts"
     ],
     "evaluation": {
       "environments": [
@@ -16087,7 +15956,6 @@
     },
     "tags": [
       "failure-detection",
-      "runtime-monitoring",
       "coarse-supervision",
       "contrastive-learning",
       "conformal-prediction",
@@ -16180,10 +16048,7 @@
       "formal-methods",
       "reactive-synthesis",
       "GR1",
-      "ROS2",
-      "FlexBE",
-      "liveness",
-      "supervisor-audit"
+      "liveness"
     ],
     "evaluation": {
       "environments": [
@@ -16354,9 +16219,7 @@
     "tags": [
       "failure-aware-learning",
       "residual-expert",
-      "hidden-representation",
-      "RoboTwin",
-      "real-robot"
+      "hidden-representation"
     ],
     "evaluation": {
       "environments": [
@@ -16446,8 +16309,7 @@
       "predictive-safety",
       "semantic-physical-reasoning",
       "conformal-prediction",
-      "backup-control",
-      "Unitree-Go1"
+      "backup-control"
     ],
     "evaluation": {
       "environments": [
@@ -16607,7 +16469,6 @@
       "pre-failure-replanning",
       "continuous-perception",
       "dynamic-manipulation",
-      "IROS-2026",
       "Franka"
     ],
     "evaluation": {
@@ -16698,8 +16559,7 @@
       "semantic-grounding",
       "ambiguity-detection",
       "clarification",
-      "abstention",
-      "TRUST-NAV"
+      "abstention"
     ],
     "evaluation": {
       "environments": [
@@ -16877,9 +16737,7 @@
     "tags": [
       "counterfactual-benchmark",
       "corner-case",
-      "hazard-clearance",
-      "nuScenes",
-      "autonomous-driving"
+      "hazard-clearance"
     ],
     "evaluation": {
       "environments": [
@@ -16963,10 +16821,7 @@
     },
     "tags": [
       "configured-failure",
-      "text-trigger",
-      "Trap-LIBERO",
-      "Trap-RoboTwin",
-      "real-robot"
+      "text-trigger"
     ],
     "evaluation": {
       "environments": [
@@ -17038,9 +16893,7 @@
       "physical-execution-contract",
       "fast-slow-agent",
       "failure-attribution",
-      "self-evolution",
-      "LIBERO-Pro",
-      "pi0.5"
+      "self-evolution"
     ],
     "evaluation": {
       "environments": [
@@ -17130,8 +16983,6 @@
       "SPSA",
       "multi-view",
       "trajectory-deviation",
-      "Pi0",
-      "RDT",
       "Aloha"
     ],
     "evaluation": {
@@ -17205,9 +17056,7 @@
       "multi-link-shield",
       "control-barrier-function",
       "optical-flow",
-      "safe-success",
-      "SO-101",
-      "real-robot"
+      "safe-success"
     ],
     "evaluation": {
       "environments": [
@@ -17300,7 +17149,6 @@
       "attached-geometry",
       "grasp-conditioned",
       "control-barrier-function",
-      "SafeLIBERO",
       "safe-success"
     ],
     "evaluation": {
@@ -17391,7 +17239,6 @@
       "feasible-future",
       "VICS",
       "training-free",
-      "Safety-CHORES",
       "simulation-only"
     ],
     "evaluation": {
@@ -17476,9 +17323,7 @@
       "SALT",
       "test-time-adaptation",
       "visual-disruption",
-      "action-chunk",
-      "LIBERO-Plus",
-      "real-robot"
+      "action-chunk"
     ],
     "evaluation": {
       "environments": [
@@ -17566,10 +17411,6 @@
       "state-hallucination",
       "policy-unlearning",
       "sparse-autoencoder",
-      "OpenVLA",
-      "pi0.5",
-      "LIBERO-Plus",
-      "RoboCasa",
       "Franka"
     ],
     "evaluation": {
@@ -17659,8 +17500,6 @@
       "attribution-patching",
       "CKA",
       "directional-corruption",
-      "pi0.5",
-      "GR00T-N1.7",
       "LIBERO-10"
     ],
     "evaluation": {
@@ -17723,8 +17562,6 @@
       "mechanistic-defense",
       "sparse-autoencoder",
       "conditional-intervention",
-      "adversarial-patch",
-      "LIBERO-10",
       "linear-probe"
     ],
     "evaluation": {
@@ -17809,12 +17646,9 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "jailbreak",
       "guardrail-benchmark",
       "hazard-success",
-      "false-positive-rate",
-      "latency",
-      "embodied-agent"
+      "latency"
     ],
     "evaluation": {
       "environments": [
@@ -17918,10 +17752,8 @@
       "curation_status": "paper-verified"
     },
     "tags": [
-      "black-box",
       "ancestor-vlm",
       "transfer-attack",
-      "adversarial-patch",
       "instruction-grounding",
       "visual-token"
     ],
@@ -17993,9 +17825,7 @@
       "contextual-safety-filtering",
       "natural-language-safety-rules",
       "reference-trajectory",
-      "control-barrier-function",
-      "Unitree-G1",
-      "real-robot"
+      "control-barrier-function"
     ],
     "evaluation": {
       "environments": [
@@ -18225,12 +18055,10 @@
       "curation_status": "paper-verified"
     },
     "tags": [
-      "world-state",
       "provenance",
       "deterministic-replay",
       "tamper-evident-log",
       "hash-chain",
-      "BEHAVIOR-1K",
       "Unitree-G1"
     ],
     "evaluation": {
@@ -18297,8 +18125,7 @@
       "safety-filtered-RL",
       "peak-harm-fallback",
       "high-dimensional-control",
-      "humanoid",
-      "Unitree-G1"
+      "humanoid"
     ],
     "evaluation": {
       "environments": [
@@ -18390,9 +18217,7 @@
       "state-restoration",
       "recovery-debt",
       "intervention-latency",
-      "EDPA",
-      "OpenVLA-OFT",
-      "LIBERO-Long"
+      "EDPA"
     ],
     "evaluation": {
       "environments": [
@@ -18550,9 +18375,7 @@
     "tags": [
       "predictive-safety-guidance",
       "flow-matching",
-      "trajectory-level-cbf",
-      "SafeLIBERO",
-      "pi0.5"
+      "trajectory-level-cbf"
     ],
     "evaluation": {
       "environments": [
@@ -18636,10 +18459,7 @@
       "counterfactual-evaluation",
       "recoverability-horizon",
       "intervention-value",
-      "false-alarm-cost",
-      "OpenVLA-OFT",
-      "pi0.5",
-      "LIBERO-Plus"
+      "false-alarm-cost"
     ],
     "evaluation": {
       "environments": [
@@ -18815,8 +18635,7 @@
       "local-guard",
       "onboard-agent",
       "structured-failure-feedback",
-      "fault-injection",
-      "Habitat"
+      "fault-injection"
     ],
     "evaluation": {
       "environments": [
@@ -18907,8 +18726,6 @@
       "trace-refinement",
       "trace-completeness",
       "LTL",
-      "RoboGuard",
-      "SPINE",
       "false-safe"
     ],
     "evaluation": {
@@ -18997,8 +18814,6 @@
       "view-collapse",
       "view-reliance",
       "view-swap",
-      "adversarial-training",
-      "LIBERO-Plus",
       "Qwen3.5"
     ],
     "evaluation": {
@@ -19181,10 +18996,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation"
@@ -19246,10 +19058,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -19317,10 +19126,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -19391,10 +19197,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -19463,10 +19266,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-04-01",
     "first_submission_source": "https://arxiv.org/abs/2604.01346"
@@ -19508,10 +19308,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -19561,10 +19358,7 @@
       },
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-10-07",
     "first_submission_source": "https://arxiv.org/abs/2510.05865"
@@ -19601,10 +19395,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [
@@ -19673,10 +19464,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -19745,10 +19533,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation"
@@ -19815,10 +19600,7 @@
       },
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -19882,10 +19664,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -19949,10 +19728,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -20003,10 +19779,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation"
@@ -20075,10 +19848,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -20127,10 +19897,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation"
@@ -20216,10 +19983,7 @@
       },
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -20306,10 +20070,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [
@@ -20382,10 +20143,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -20454,10 +20212,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "real-robot"
@@ -20510,10 +20265,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [
@@ -20583,10 +20335,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation"
@@ -20647,10 +20396,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation",
@@ -20726,10 +20472,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "real-robot"
@@ -20808,10 +20551,7 @@
       },
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [
@@ -20877,10 +20617,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "real-robot"
@@ -20936,10 +20673,7 @@
       },
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -20999,10 +20733,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -21061,10 +20792,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -21128,10 +20856,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -21185,10 +20910,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -21239,10 +20961,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -21294,10 +21013,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "real-robot"
@@ -21371,10 +21087,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -21442,10 +21155,7 @@
       },
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation",
@@ -21510,10 +21220,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -21571,10 +21278,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation",
@@ -21663,10 +21367,7 @@
       },
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "offline-dataset"
@@ -21749,10 +21450,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-05-06",
     "first_submission_source": "https://arxiv.org/abs/2605.05017"
@@ -21791,10 +21489,7 @@
       },
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-08-24",
     "first_submission_source": "https://arxiv.org/abs/2508.17481"
@@ -21833,10 +21528,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -21884,10 +21576,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-14",
     "first_submission_date": "2023-10-12",
     "first_submission_source": "https://arxiv.org/abs/2310.08565"
@@ -21924,10 +21613,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-08-07",
     "first_submission_source": "https://arxiv.org/abs/2508.05855"
@@ -21960,10 +21646,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-08-28",
     "first_submission_source": "https://arxiv.org/abs/2509.00117"
@@ -22002,10 +21685,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [
@@ -22069,10 +21749,7 @@
       },
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -22134,10 +21811,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "offline-dataset"
@@ -22201,10 +21875,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [
@@ -22277,10 +21948,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -22356,10 +22024,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -22416,10 +22081,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "real-robot"
@@ -22488,10 +22150,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [
@@ -22580,10 +22239,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "offline-dataset"
@@ -22645,10 +22301,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -22710,10 +22363,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation",
@@ -22789,10 +22439,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -22857,10 +22504,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation"
@@ -22926,10 +22570,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation",
@@ -22994,10 +22635,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "real-robot"
@@ -23065,10 +22703,7 @@
       },
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -23134,10 +22769,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation"
@@ -23210,10 +22842,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation",
@@ -23285,10 +22914,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -23351,10 +22977,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -23425,10 +23048,7 @@
       },
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "offline-dataset"
@@ -23493,10 +23113,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "real-robot"
@@ -23566,10 +23183,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation"
@@ -23616,10 +23230,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "real-robot"
@@ -23688,10 +23299,7 @@
       },
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation"
@@ -23760,10 +23368,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "real-robot"
@@ -23834,10 +23439,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -23918,10 +23520,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [
@@ -23988,10 +23587,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "real-robot"
@@ -24066,10 +23662,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -24138,10 +23731,7 @@
       },
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -24207,10 +23797,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "real-robot"
@@ -24279,10 +23866,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-03-16",
     "first_submission_source": "https://arxiv.org/abs/2603.16013"
@@ -24319,10 +23903,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "real-robot"
@@ -24392,10 +23973,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -24459,10 +24037,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [
@@ -24523,10 +24098,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "real-robot",
@@ -24593,10 +24165,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -24653,10 +24222,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "offline-dataset"
@@ -24710,10 +24276,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "offline-dataset"
@@ -24769,10 +24332,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "real-robot"
@@ -24830,10 +24390,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [
@@ -24900,10 +24457,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation",
@@ -24972,10 +24526,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "real-robot"
@@ -25045,10 +24596,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation",
@@ -25117,10 +24665,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -25202,10 +24747,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation"
@@ -25273,10 +24815,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-14",
     "first_submission_date": null,
     "first_submission_source": null
@@ -25309,10 +24848,7 @@
       },
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-14",
     "first_submission_date": "2024-06-13",
     "first_submission_source": "https://arxiv.org/abs/2406.09239"
@@ -25345,10 +24881,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-14",
     "first_submission_date": null,
     "first_submission_source": null
@@ -25385,10 +24918,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-14",
     "first_submission_date": null,
     "first_submission_source": null
@@ -25421,10 +24951,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-14",
     "first_submission_date": null,
     "first_submission_source": null
@@ -25462,10 +24989,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-06-04",
     "first_submission_source": "https://arxiv.org/abs/2606.05660"
@@ -25501,10 +25025,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-14",
     "first_submission_date": null,
     "first_submission_source": null
@@ -25537,10 +25058,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-14",
     "first_submission_date": null,
     "first_submission_source": null
@@ -25577,10 +25095,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-14",
     "first_submission_date": "2026-03-28",
     "first_submission_source": "https://arxiv.org/abs/2605.02900"
@@ -25620,10 +25135,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation",
@@ -25675,10 +25187,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "offline-dataset"
@@ -25747,10 +25256,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "real-robot"
@@ -25823,10 +25329,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -25889,10 +25392,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -25953,10 +25453,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "real-robot"
@@ -26023,10 +25520,7 @@
       },
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -26103,10 +25597,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "real-robot"
@@ -26166,10 +25657,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation"
@@ -26237,10 +25725,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [
@@ -26313,10 +25798,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [
@@ -26391,10 +25873,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation",
@@ -26465,10 +25944,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -26536,10 +26012,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [
@@ -26607,10 +26080,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -26674,10 +26144,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation"
@@ -26743,10 +26210,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "real-robot"
@@ -26820,10 +26284,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation",
@@ -26891,10 +26352,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -26958,10 +26416,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation",
@@ -27031,10 +26486,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -27098,10 +26550,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation",
@@ -27170,10 +26619,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-12-10",
     "first_submission_source": "https://arxiv.org/abs/2512.11908"
@@ -27210,10 +26656,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-14",
     "first_submission_date": "2025-05-19",
     "first_submission_source": "https://arxiv.org/abs/2505.12583"
@@ -27250,10 +26693,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [
         "simulation",
@@ -27320,10 +26760,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "priority-literature-review-2026-10",
-      "abstract-verified"
-    ],
+    "tags": [],
     "evaluation": {
       "environments": [],
       "platforms": [],
@@ -27390,9 +26827,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "full-text-reviewed"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-15",
     "first_submission_date": "2026-10-13",
     "first_submission_source": "https://arxiv.org/abs/2610.18843"
@@ -27435,9 +26870,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "full-text-reviewed"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-15",
     "first_submission_date": "2026-10-13",
     "first_submission_source": "https://arxiv.org/abs/2610.18866",
@@ -27500,9 +26933,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "full-text-reviewed"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-15",
     "first_submission_date": "2026-10-13",
     "first_submission_source": "https://arxiv.org/abs/2610.18650",
@@ -27563,9 +26994,7 @@
       ],
       "curation_status": "paper-verified"
     },
-    "tags": [
-      "full-text-reviewed"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-15",
     "first_submission_date": "2026-10-13",
     "first_submission_source": "https://arxiv.org/abs/2610.18321",
@@ -27622,9 +27051,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "full-text-reviewed"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-15",
     "first_submission_date": "2026-10-13",
     "first_submission_source": "https://arxiv.org/abs/2610.17806"
@@ -27664,9 +27091,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "full-text-reviewed"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-15",
     "first_submission_date": "2026-10-13",
     "first_submission_source": "https://arxiv.org/abs/2610.17799",
@@ -27724,9 +27149,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "full-text-reviewed"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-15",
     "first_submission_date": "2026-10-13",
     "first_submission_source": "https://arxiv.org/abs/2610.17746"
@@ -27765,9 +27188,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "full-text-reviewed"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-15",
     "first_submission_date": "2026-10-12",
     "first_submission_source": "https://arxiv.org/abs/2610.17326"
@@ -27838,9 +27259,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "full-text-reviewed"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-15",
     "first_submission_date": "2026-10-12",
     "first_submission_source": "https://arxiv.org/abs/2610.16309",
@@ -27897,9 +27316,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "full-text-reviewed"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-15",
     "first_submission_date": "2026-10-11",
     "first_submission_source": "https://arxiv.org/abs/2610.15814",
@@ -27958,9 +27375,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "full-text-reviewed"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-15",
     "first_submission_date": "2026-10-11",
     "first_submission_source": "https://arxiv.org/abs/2610.15675"
@@ -27998,9 +27413,7 @@
       ],
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "full-text-reviewed"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-15",
     "first_submission_date": "2026-10-10",
     "first_submission_source": "https://arxiv.org/abs/2610.14682",
@@ -28052,9 +27465,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "full-text-reviewed"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-15",
     "first_submission_date": "2026-10-01",
     "first_submission_source": "https://arxiv.org/abs/2610.14034"
@@ -28093,9 +27504,7 @@
       },
       "curation_status": "catalog-derived"
     },
-    "tags": [
-      "full-text-reviewed"
-    ],
+    "tags": [],
     "catalogued_date": "2026-10-15",
     "first_submission_date": "2026-10-12",
     "first_submission_source": "https://arxiv.org/abs/2610.16567",
@@ -28158,8 +27567,6 @@
     },
     "tags": [
       "foundation-model-based",
-      "candidate-audit-follow-up",
-      "autonomous-driving",
       "advlm"
     ],
     "evaluation": {
@@ -28223,8 +27630,7 @@
       "curation_status": "catalog-derived"
     },
     "tags": [
-      "foundation-model-based",
-      "candidate-audit-follow-up"
+      "foundation-model-based"
     ],
     "evaluation": {
       "environments": [
@@ -28308,9 +27714,7 @@
     },
     "tags": [
       "foundation-model-based",
-      "candidate-audit-follow-up",
-      "memory-security",
-      "autonomous-driving"
+      "memory-security"
     ],
     "evaluation": {
       "environments": [
@@ -28366,7 +27770,6 @@
     },
     "tags": [
       "foundation-model-based",
-      "candidate-audit-follow-up",
       "human-robot-interaction",
       "instruction-disambiguation"
     ],
@@ -28444,7 +27847,6 @@
     },
     "tags": [
       "foundation-model-based",
-      "candidate-audit-follow-up",
       "human-robot-interaction",
       "user-adaptation"
     ],
@@ -28527,7 +27929,6 @@
     },
     "tags": [
       "foundation-model-based",
-      "candidate-audit-follow-up",
       "camera-shift"
     ],
     "evaluation": {
@@ -28587,7 +27988,6 @@
     },
     "tags": [
       "foundation-model-based",
-      "candidate-audit-follow-up",
       "sensor-noise",
       "surprise-recognition"
     ],
@@ -28669,8 +28069,6 @@
     },
     "tags": [
       "foundation-model-based",
-      "candidate-audit-follow-up",
-      "autonomous-driving",
       "closed-loop-evaluation"
     ],
     "evaluation": {
@@ -28735,7 +28133,6 @@
     },
     "tags": [
       "foundation-model-based",
-      "candidate-audit-follow-up",
       "hazard-recognition",
       "safety-proxy"
     ],
@@ -28787,7 +28184,6 @@
     },
     "tags": [
       "foundation-model-based",
-      "candidate-audit-follow-up",
       "policy-ranking",
       "world-model-evaluation"
     ],
@@ -28842,7 +28238,6 @@
     },
     "tags": [
       "foundation-model-based",
-      "candidate-audit-follow-up",
       "noisy-instructions",
       "noise-detection",
       "noise-correction"
@@ -28922,7 +28317,6 @@
     },
     "tags": [
       "foundation-model-based",
-      "candidate-audit-follow-up",
       "multi-robot",
       "constitutional-prompting",
       "safe-task-screening"
@@ -29004,7 +28398,6 @@
     },
     "tags": [
       "foundation-model-based",
-      "candidate-audit-follow-up",
       "world-model-evaluation",
       "kinematic-feasibility",
       "visual-ood"
@@ -29066,7 +28459,6 @@
     },
     "tags": [
       "foundation-model-based",
-      "candidate-audit-follow-up",
       "force-control",
       "normalized-force-error",
       "contact-rich-manipulation"
@@ -29145,7 +28537,6 @@
     },
     "tags": [
       "foundation-model-based",
-      "candidate-audit-follow-up",
       "human-robot-interaction",
       "social-navigation"
     ],
@@ -29225,7 +28616,6 @@
     },
     "tags": [
       "foundation-model-based",
-      "candidate-audit-follow-up",
       "human-robot-interaction",
       "instruction-disambiguation"
     ],
@@ -29295,7 +28685,6 @@
     },
     "tags": [
       "foundation-model-based",
-      "candidate-audit-follow-up",
       "accountability",
       "explainability",
       "encrypted-logging"
@@ -29521,9 +28910,7 @@
     "tags": [
       "how-level-instructions",
       "instruction-following",
-      "SIMPLER-IN",
-      "segment-level-instructions",
-      "full-text-reviewed"
+      "segment-level-instructions"
     ],
     "evaluation": {
       "environments": [
@@ -29628,10 +29015,7 @@
     "tags": [
       "action-chunking",
       "predictive-verification",
-      "adaptive-execution-horizon",
-      "LIBERO",
-      "RoboTwin-2.0",
-      "real-robot"
+      "adaptive-execution-horizon"
     ],
     "evaluation": {
       "environments": [
@@ -29722,11 +29106,7 @@
     "tags": [
       "dual-loop-harness",
       "personalization",
-      "geometric-shield",
-      "failure-recovery",
-      "LIBERO-Safety",
-      "LIBERO-Recovery",
-      "real-robot"
+      "geometric-shield"
     ],
     "evaluation": {
       "environments": [
@@ -29820,10 +29200,7 @@
     "tags": [
       "contact-rich-manipulation",
       "vision-action-force-world-model",
-      "anomaly-anticipation",
-      "CRIA",
-      "pi0.5",
-      "real-robot"
+      "anomaly-anticipation"
     ],
     "evaluation": {
       "environments": [
@@ -29929,10 +29306,7 @@
       "flow-based-vla",
       "test-time-verification",
       "latent-world-model",
-      "adaptive-compute",
-      "RoboTwin-2.0",
-      "LIBERO",
-      "real-robot"
+      "adaptive-compute"
     ],
     "evaluation": {
       "environments": [
@@ -30026,7 +29400,6 @@
       "retrieval-augmented-generation",
       "grammar-constrained-decoding",
       "occlusion-persistence",
-      "Gazebo",
       "UAV"
     ],
     "evaluation": {
@@ -30111,7 +29484,6 @@
     },
     "tags": [
       "benchmark",
-      "autonomous-driving",
       "defensive-driving",
       "geographic-robustness",
       "latent-hazard",
@@ -31589,7 +30961,6 @@
       "quality-diversity",
       "environment-generation",
       "vla-robustness",
-      "LIBERO-Spatial",
       "sim-to-real"
     ],
     "catalogued_date": "2026-10-20",
@@ -31676,8 +31047,7 @@
     "tags": [
       "implied-harm",
       "safety-guard-evaluation",
-      "VLA-refusal",
-      "LIBERO-Goal"
+      "VLA-refusal"
     ],
     "catalogued_date": "2026-10-20",
     "first_submission_date": "2026-10-05",
@@ -31834,9 +31204,7 @@
     "tags": [
       "language-steering",
       "conformal-prediction",
-      "harmlessness-guarantee",
-      "LIBERO-OOD",
-      "DROID"
+      "harmlessness-guarantee"
     ],
     "catalogued_date": "2026-10-20",
     "first_submission_date": "2026-06-10",

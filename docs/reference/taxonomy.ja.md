@@ -355,7 +355,7 @@ physical AIリスクや信頼できる実運用との明示的な関連がない
 
 ### 統制された補助タグ
 
-`tags`は`data/taxonomy/tags.json`に登録された文字列の空でない重複のないリストです。この許可リストは既存の記述子、出典ID、curation markerをそのまま保持し、登録によって科学的な意味や根拠の質を認定するものではありません。既存値を優先し、新しい補助記述子は初回使用と同じ変更でregistryへ登録します。HOWで定義された具体的な失敗モードは`threat_model.mechanism`（または`coverage.mechanisms`）へ記録し、補助タグへ重複登録しません。registryとHOW語彙は別の統制リストです。
+`tags`は`data/taxonomy/tags.json`に登録された科学的記述子の重複のないリストです。構造化fieldですでに論文の有用な性質を表せる場合、空リストを許容します。`scope`、`risks`、`threat_model`、`evaluation`、`benchmark`、`defense`、`section`、`subsection`、`venue`、`year`に含まれる値をタグとして重複させず、curation status、一時的な監査作業、出典参照にも使いません。タグを削除する場合は、同じ論文レコードの該当fieldに同じ意味の値があることを確認します。頻度だけを理由に稀なタグを削除しません。カタログにレコードがないsurveyの出典は、重複のないHTTPS URL配列`related_surveys`へ記録します。新しい科学的記述子は既存fieldと語彙を確認し、初回使用と同じ変更でregistryへ登録します。HOWの失敗モードは`threat_model.mechanism`（または根拠のある広範な評価の`coverage.mechanisms`）へ記録し、タグに重複登録しません。registryとHOW語彙は別の統制リストです。
 
 ### Subsection
 

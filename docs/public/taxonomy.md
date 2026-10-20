@@ -29,6 +29,10 @@ Each paper in this catalog is described using six complementary taxonomy axes. T
   </a>
 </p>
 
+## Supplementary Descriptors
+
+The six axes provide the catalog’s primary controlled classification. A record may also carry `tags` for paper-specific scientific descriptors that are not represented by its structured metadata; the list may be empty. Temporary curation markers and source references are kept out of tags. External survey citations without a catalog record use `related_surveys` URLs.
+
 ## WHEN
 
 WHEN identifies the stage at which a threat is introduced or activated, or a failure is evaluated. A study can span more than one stage—for example, a backdoor may be implanted during training and activated at inference time.
