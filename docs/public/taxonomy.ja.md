@@ -89,8 +89,10 @@ HOWは、論文が扱う具体的な攻撃手法または失敗モードを表�
 | **命令・意味操作** | `direct-prompt-injection`, `indirect-prompt-injection`, `jailbreak`, `typographic-injection`, `hazardous-instruction` |
 | **ランタイム・システム操作** | `middleware-compromise`, `network-attack`, `denial-of-service`, `covert-channel`, `state-manipulation`, `action-manipulation`, `trajectory-manipulation`, `representation-manipulation` |
 | **分布シフト・不確実性** | `distribution-shift`, `instruction-ambiguity`, `uncertainty-miscalibration` |
-| **推論・計画・実行の失敗** | `perception-error`, `semantic-misalignment`, `planning-error`, `execution-error`, `multimodal-desynchronization` |
+| **推論・計画・実行の失敗** | `perception-error`, `semantic-misalignment`, `planning-error`, `execution-error`, `self-assessment-failure`, `multimodal-desynchronization` |
 <!-- taxonomy-sync:end mechanism -->
+
+`self-assessment-failure`は、agentが完了を申告した一方、明示的なタスク基準に基づく独立評価では未達だった失敗モードです。**推論・計画・実行の失敗**に属します。タスク失敗、外部judgeの誤り、成功後の操作継続だけでは付与せず、欺瞞の意図やconfidenceの校正不良も意味しません。
 
 「データ・モデルへの攻撃」は、データやモデルの汚染・侵害に加え、それらから機微情報を推定する攻撃を含みます。Membership inferenceはデータやモデルの改変を必要としません。
 

@@ -108,6 +108,7 @@ MECHANISM_JA = {
     "distribution-shift": "分布シフト",
     "environment-manipulation": "環境操作",
     "execution-error": "実行エラー",
+    "self-assessment-failure": "自己評価の失敗",
     "hazardous-instruction": "危険指示",
     "indirect-prompt-injection": "間接プロンプトインジェクション",
     "instruction-ambiguity": "指示の曖昧性",

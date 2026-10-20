@@ -17,6 +17,8 @@ jobs:
           python-version: "3.12"
       - name: Validate public metadata and leakage guards
         run: python3 scripts/validate_catalog.py
+      - name: Check controlled tag validation
+        run: python3 -m unittest discover -s tests
       - name: Verify generated README
         run: python3 scripts/build_readme.py --check
       - uses: actions/setup-node@v4

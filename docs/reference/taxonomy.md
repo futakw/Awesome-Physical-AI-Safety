@@ -169,7 +169,12 @@ Values are grouped below by where they sit in the perceive → reason → act pi
 | `semantic-misalignment` | Language and visual or action grounding diverge without adversarial cause. |
 | `planning-error` | The planner produces an infeasible, suboptimal, or unsafe plan without an attacker. |
 | `execution-error` | Low-level execution deviates from the intended action without an attacker. |
+| `self-assessment-failure` | The agent reports task completion although an independent assessment against explicit task criteria establishes that the task remains incomplete. |
 | `multimodal-desynchronization` | Modalities fall out of time or semantic alignment, corrupting fused understanding. |
+
+`self-assessment-failure` belongs to HOW / **Reasoning, Planning & Execution Failure**, not to a new family. Require evidence of both the agent's explicit completion report and an independent assessment of the corresponding task state against explicit criteria. Ordinary task failure, an external judge's error, and continued actions after success alone do not qualify. The label describes an observed failure mode; it does not establish deception, a perceptual cause, or confidence miscalibration. Add `perception-error` or `uncertainty-miscalibration` only when separately established, following the mechanism assignment rules above. Store it in `threat_model.mechanism`, or `coverage.mechanisms` for a supported broad-evaluation record, rather than duplicating it in `tags`.
+
+[AA-Robotics v0.1](https://artificialanalysis.ai/articles/aa-robotics/) illustrates the distinction with reports of completion despite unmet placement criteria. It is a research preview, not a catalog paper record; its qualitative examples do not establish a failure rate. A paper's section/subsection (for example, `benchmarks / Failure Detection and Recovery`) is a separate classification by primary contribution and is not this HOW family.
 
 A handful of labels are defined but may have zero current users — a label stays in the controlled vocabulary when it names a clear, reusable technique even before a catalog paper demonstrates it (`representation-manipulation` is the current example), rather than being removed and re-added each time evidence appears.
 
@@ -347,6 +352,10 @@ Generic VLM, LLM, robotics, or capability papers should not be included unless t
 Assign each paper one catalog record and one primary-contribution section. Use `risks` and `tags` for cross-cutting properties; generated thematic tables may display the same record without creating a duplicate entry.
 
 Evaluation records that study human perceptions, trust, or fairness without establishing a specific threat or failure mechanism may use an empty `coverage.mechanisms` list. This leaves the mechanism unasserted rather than inventing an attack or causal failure path.
+
+### Controlled Secondary Tags
+
+`tags` is a non-empty, duplicate-free list of strings from `data/taxonomy/tags.json`. This allow-list preserves existing descriptors, source identifiers, and curation markers unchanged; registration does not certify their scientific meaning or evidence quality. Add a new secondary descriptor to the registry in the same change that first uses it, reusing an existing value where appropriate. A concrete failure mode defined in HOW belongs in `threat_model.mechanism` (or `coverage.mechanisms`), not a duplicate secondary tag. The registry and the HOW vocabulary are separate controlled lists.
 
 ### Subsection
 

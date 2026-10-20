@@ -171,7 +171,12 @@
 | `semantic-misalignment` | 敵対的な原因なしに、言語と視覚・行動のグラウンディングが乖離する。 |
 | `planning-error` | 攻撃者なしに、プランナーが実行不可能・非最適・安全でない計画を生成する。 |
 | `execution-error` | 攻撃者なしに、低レベルの実行が意図した行動から逸脱する。 |
+| `self-assessment-failure` | agentがタスク完了を自己申告したが、明示的なタスク基準に基づく独立した評価では未達である。 |
 | `multimodal-desynchronization` | モダリティ間の時間的・意味的整合が崩れ、統合理解が汚染される。 |
+
+`self-assessment-failure`はHOWの既存family **推論・計画・実行の失敗**に属します。agentの明示的な完了申告と、それに対応するtask stateが明示基準を満たさないという独立した評価の両方を根拠として要求します。通常のタスク失敗、外部judgeの誤り、成功後の操作継続だけでは該当しません。観測された失敗モードを表すラベルであり、欺瞞の意図、知覚上の原因、confidenceの校正不良は推定しません。`perception-error`や`uncertainty-miscalibration`は、上の付与規則に従って別途立証された場合のみ併記します。`threat_model.mechanism`、または根拠のあるbroad evaluationの`coverage.mechanisms`へ記録し、`tags`には重複登録しません。
+
+[AA-Robotics v0.1](https://artificialanalysis.ai/articles/aa-robotics/)では、配置基準が未達でも完了を報告する例が示されています。これはresearch previewであり、カタログの論文レコードではありません。定性的な例示から失敗率は判断できません。論文のsection/subsection（例: `benchmarks / Failure Detection and Recovery`）は主たる貢献による別の分類であり、このHOW familyとは区別します。
 
 一部のラベルは、現時点で採用論文がゼロであっても統制語彙として定義を維持することがあります。明確で再利用可能な技術を指す場合（現時点では`representation-manipulation`が該当）、根拠論文が見つかるたびに追加・削除するのではなく、定義を維持しておきます。
 
@@ -347,6 +352,10 @@ physical AIリスクや信頼できる実運用との明示的な関連がない
 各論文には1つのカタログレコードと1つの主たる貢献セクションを割り当てます。横断的な性質は`risks`と`tags`で表現し、生成されたテーマ別ビューは重複エントリを作成することなく同じレコードを表示できます。
 
 人の主観的なprivacy・trust・fairnessを扱い、特定の脅威・失敗mechanismを実証していない評価研究では、`coverage.mechanisms` を空リストにできます。攻撃や因果的な失敗経路を推測で割り当てることを避けるための扱いです。
+
+### 統制された補助タグ
+
+`tags`は`data/taxonomy/tags.json`に登録された文字列の空でない重複のないリストです。この許可リストは既存の記述子、出典ID、curation markerをそのまま保持し、登録によって科学的な意味や根拠の質を認定するものではありません。既存値を優先し、新しい補助記述子は初回使用と同じ変更でregistryへ登録します。HOWで定義された具体的な失敗モードは`threat_model.mechanism`（または`coverage.mechanisms`）へ記録し、補助タグへ重複登録しません。registryとHOW語彙は別の統制リストです。
 
 ### Subsection
 

@@ -126,7 +126,7 @@ MECHANISMS = {
     "membership-inference", "memory-poisoning", "middleware-compromise",
     "multimodal-desynchronization", "network-attack", "perception-error", "planning-error",
     "representation-manipulation",
-    "retrieval-poisoning", "reward-manipulation", "semantic-misalignment", "sensor-spoofing",
+    "retrieval-poisoning", "reward-manipulation", "self-assessment-failure", "semantic-misalignment", "sensor-spoofing",
     "state-manipulation", "trajectory-manipulation", "typographic-injection",
     "uncertainty-miscalibration",
 }
@@ -358,6 +358,37 @@ def validate_extensions(errors: list[str], label: str, paper: dict, taxonomies: 
             errors.append(f"{label}: invalid benchmark.curation_status {benchmark.get('curation_status')!r}")
 
 
+def load_tag_vocabulary(errors: list[str]) -> set[str]:
+    path = TAXONOMY_DIR / "tags.json"
+    try:
+        values = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as exc:
+        errors.append(f"data/taxonomy/tags.json: cannot load vocabulary: {exc}")
+        return set()
+    if not isinstance(values, list) or not values or any(
+        not isinstance(value, str) or not value.strip() or value != value.strip()
+        for value in values
+    ):
+        errors.append("data/taxonomy/tags.json: must be a non-empty array of non-blank, trimmed strings")
+        return set()
+    if len(values) != len(set(values)):
+        errors.append("data/taxonomy/tags.json: contains duplicate values")
+    return set(values)
+
+
+def validate_tags(errors: list[str], label: str, tags: object, allowed: set[str]) -> None:
+    if not isinstance(tags, list) or any(not isinstance(tag, str) for tag in tags):
+        errors.append(f"{label}: tags must be a list of strings")
+        return
+    if not tags:
+        errors.append(f"{label}: tags must not be empty")
+    if len(tags) != len(set(tags)):
+        errors.append(f"{label}: tags contains duplicates")
+    invalid = set(tags) - allowed
+    if invalid:
+        errors.append(f"{label}: unregistered tags {sorted(invalid)}; register values in data/taxonomy/tags.json")
+
+
 def main() -> int:
     errors: list[str] = []
     papers = json.loads(DATA_PATH.read_text(encoding="utf-8"))
@@ -366,6 +397,7 @@ def main() -> int:
         errors.append("data/papers.json must be a non-empty array")
         papers = []
     validate_venue_ranks(errors, papers)
+    allowed_tags = load_tag_vocabulary(errors)
 
     seen_ids: set[str] = set()
     seen_titles: set[str] = set()
@@ -401,8 +433,7 @@ def main() -> int:
             invalid_risks = set(paper["risks"]) - RISKS
             if invalid_risks:
                 errors.append(f"{label}: invalid risks {sorted(invalid_risks)}")
-        if not paper.get("tags"):
-            errors.append(f"{label}: tags must not be empty")
+        validate_tags(errors, label, paper.get("tags"), allowed_tags)
         validate_threat_model(errors, label, paper.get("threat_model"), taxonomies)
         validate_extensions(errors, label, paper, taxonomies)
         validate_catalogued_date(errors, label, paper)

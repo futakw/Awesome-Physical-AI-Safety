@@ -89,8 +89,10 @@ HOW names the concrete attack technique or failure mode studied by the paper. It
 | **Instruction & Semantic Manipulation** | `direct-prompt-injection`, `indirect-prompt-injection`, `jailbreak`, `typographic-injection`, `hazardous-instruction` |
 | **Runtime & System Manipulation** | `middleware-compromise`, `network-attack`, `denial-of-service`, `covert-channel`, `state-manipulation`, `action-manipulation`, `trajectory-manipulation`, `representation-manipulation` |
 | **Distribution Shift & Uncertainty** | `distribution-shift`, `instruction-ambiguity`, `uncertainty-miscalibration` |
-| **Reasoning, Planning & Execution Failure** | `perception-error`, `semantic-misalignment`, `planning-error`, `execution-error`, `multimodal-desynchronization` |
+| **Reasoning, Planning & Execution Failure** | `perception-error`, `semantic-misalignment`, `planning-error`, `execution-error`, `self-assessment-failure`, `multimodal-desynchronization` |
 <!-- taxonomy-sync:end mechanism -->
+
+`self-assessment-failure` means that an agent reports task completion while an independent assessment against explicit task criteria finds the task incomplete. It belongs to **Reasoning, Planning & Execution Failure**. Task failure alone, an external judge error, or continuing after success is insufficient; the label does not imply deception or confidence miscalibration.
 
 Data & Model Attacks includes poisoning or compromising data and models, as well as inferring sensitive information from them. Membership inference does not require data or model modification.
 
