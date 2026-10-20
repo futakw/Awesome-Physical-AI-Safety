@@ -30157,5 +30157,1398 @@
     "catalogued_date": "2026-10-18",
     "first_submission_date": "2026-09-28",
     "first_submission_source": "https://arxiv.org/abs/2610.20627"
+  },
+  {
+    "id": "arxiv-2610-22471",
+    "title": "Has GPT-6-Astra Achieved Embodied Intelligence?",
+    "first_author": "SenseNova",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.22471",
+    "code_url": "https://sensenova.ai/has-gpt-6-astra-achieved-embodied-intelligence",
+    "section": "benchmarks",
+    "subsection": "Evaluation Infrastructure",
+    "scope": "embodied-agents",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "execution-error"
+        ],
+        "surfaces": [
+          "execution-control",
+          "context-memory-retrieval"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      },
+      "curation_status": "paper-verified"
+    },
+    "tags": [
+      "deployment-evaluation",
+      "interaction-budget",
+      "in-context-learning",
+      "failure-analysis"
+    ],
+    "catalogued_date": "2026-10-20",
+    "first_submission_date": "2026-10-15",
+    "first_submission_source": "https://arxiv.org/abs/2610.22471",
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "LIBERO-PRO",
+        "RoboDojo",
+        "DexJoCo"
+      ],
+      "models": [
+        "GPT-6-Astra",
+        "pi0.5"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "task-reliability"
+      ],
+      "shift_types": [
+        "none"
+      ],
+      "environment": "mixed",
+      "base_platforms": [
+        "LIBERO-PRO",
+        "RoboDojo",
+        "DexJoCo"
+      ],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2610-22576",
+    "title": "Embodiment-Classifier Guidance: Transferring Frozen VLAs Across Robot Dynamics without Demonstrations",
+    "first_author": "Han",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.22576",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Action and Spatial Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "execution-control",
+        "proprioception"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [
+      "embodiment-transfer",
+      "controller-shift",
+      "classifier-guidance",
+      "simulation-only"
+    ],
+    "catalogued_date": "2026-10-20",
+    "first_submission_date": "2026-10-15",
+    "first_submission_source": "https://arxiv.org/abs/2610.22576",
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "LIBERO"
+      ],
+      "models": [
+        "pi0"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "robust-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "inference-time"
+      ],
+      "mechanism": [
+        "representation-steering"
+      ],
+      "protected_surface": [
+        "action-interface"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [
+        "model-access"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2610-22812",
+    "title": "PASS-VLN: Passability-Aware Local-Command Vision-and-Language Navigation",
+    "first_author": "Zou",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.22812",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Task and Physical Safety",
+    "scope": "embodied-agents",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "physical-semantic-environment",
+        "execution-control"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure",
+        "collision"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [
+      "body-width",
+      "passability",
+      "safe-stopping",
+      "vision-language-navigation"
+    ],
+    "catalogued_date": "2026-10-20",
+    "first_submission_date": "2026-10-16",
+    "first_submission_source": "https://arxiv.org/abs/2610.22812",
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "PASS-VLN",
+        "R2R-CE",
+        "RxR-CE",
+        "Unitree Go2-W"
+      ],
+      "models": [
+        "PASS-VLN",
+        "StreamVLN",
+        "DualVLN",
+        "JanusVLN",
+        "LLaVA-Video-7B"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "collision-rate",
+        "robust-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "training-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "execution-control"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [
+        "model-access"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "physical-safety",
+        "task-reliability",
+        "ood"
+      ],
+      "shift_types": [
+        "dynamics"
+      ],
+      "environment": "mixed",
+      "base_platforms": [
+        "PASS-VLN"
+      ],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2610-23068",
+    "title": "Foundation Models for Autonomous Space Robotics: Architectures, Physical Adaptation, and Validation",
+    "first_author": "Wang",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.23068",
+    "code_url": null,
+    "section": "surveys",
+    "subsection": "Domain-Specific Surveys",
+    "scope": "robot-policy",
+    "risks": [],
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": [
+          "inference",
+          "system"
+        ],
+        "mechanisms": [
+          "distribution-shift",
+          "execution-error"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "execution-control"
+        ],
+        "consequences": []
+      },
+      "curation_status": "paper-verified"
+    },
+    "tags": [
+      "space-robotics",
+      "deployment-validation",
+      "feedback-latency",
+      "sim-to-ground-to-space"
+    ],
+    "catalogued_date": "2026-10-20",
+    "first_submission_date": "2026-10-16",
+    "first_submission_source": "https://arxiv.org/abs/2610.23068"
+  },
+  {
+    "id": "arxiv-2610-23128",
+    "title": "SCOPE: Selective Certification of Program Edits for Embodied Heuristic Learning",
+    "first_author": "Shu",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.23128",
+    "code_url": "https://github.com/VDIGPKU/SCOPE",
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "embodied-agents",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "planning-error",
+        "distribution-shift"
+      ],
+      "surface": [
+        "task-planning",
+        "context-memory-retrieval"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [
+      "program-repair",
+      "regression-checking",
+      "stateful-api-replay",
+      "selective-certification"
+    ],
+    "catalogued_date": "2026-10-20",
+    "first_submission_date": "2026-10-16",
+    "first_submission_source": "https://arxiv.org/abs/2610.23128",
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "LIBERO-PRO",
+        "Robosuite"
+      ],
+      "models": [
+        "GLM-5.3-Flash"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "system-level"
+      ],
+      "mechanism": [
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "task-planning"
+      ],
+      "defends_against": [
+        "planning-error",
+        "distribution-shift"
+      ],
+      "assumptions": [],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2610-23293",
+    "title": "SkyAgent: Revisable Target Memory for Continuous Aerial Search",
+    "first_author": "Yang",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.23293",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "embodied-agents",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "perception-error",
+        "planning-error"
+      ],
+      "surface": [
+        "context-memory-retrieval",
+        "task-planning"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [
+      "aerial-search",
+      "memory-revision",
+      "false-candidate-persistence",
+      "stale-goal-cancellation"
+    ],
+    "catalogued_date": "2026-10-20",
+    "first_submission_date": "2026-10-16",
+    "first_submission_source": "https://arxiv.org/abs/2610.23293",
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "CityAVOS",
+        "UAV-ON",
+        "OpenUAV",
+        "DJI"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "recovery-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime"
+      ],
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "context-memory-retrieval",
+        "task-planning"
+      ],
+      "defends_against": [
+        "perception-error",
+        "planning-error"
+      ],
+      "assumptions": [],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2610-23372",
+    "title": "Beyond Success Rate: Interventional Evaluation of Memory in Vision-Language-Action Systems",
+    "first_author": "Luo",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.23372",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Evaluation Infrastructure",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "context-memory-retrieval"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      },
+      "curation_status": "paper-verified"
+    },
+    "tags": [
+      "memory-intervention",
+      "fact-specificity",
+      "matched-controls",
+      "decision-execution-separation"
+    ],
+    "catalogued_date": "2026-10-20",
+    "first_submission_date": "2026-10-16",
+    "first_submission_source": "https://arxiv.org/abs/2610.23372",
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "ChainBench",
+        "LIBERO",
+        "SimplerEnv"
+      ],
+      "models": [
+        "OpenVLA",
+        "pi0.5"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "task-reliability"
+      ],
+      "shift_types": [
+        "none"
+      ],
+      "environment": "simulation",
+      "base_platforms": [
+        "ChainBench",
+        "LIBERO",
+        "SimplerEnv"
+      ],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2610-23396",
+    "title": "AWAM: Active Trajectory-Conditioned View Imagination for Robust Robot Manipulation",
+    "first_author": "Geng",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.23396",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "OOD and Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "visual-perception"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [
+      "occlusion",
+      "virtual-viewpoint",
+      "world-model",
+      "predictive-memory"
+    ],
+    "catalogued_date": "2026-10-20",
+    "first_submission_date": "2026-10-16",
+    "first_submission_source": "https://arxiv.org/abs/2610.23396",
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "LIBERO-Occ",
+        "LIBERO-Plus",
+        "RLBench-OG",
+        "ARCHER-Y6"
+      ],
+      "models": [
+        "AWAM"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "robust-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "training-time",
+        "inference-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "visual-perception"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [
+        "model-access"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2610-23566",
+    "title": "Enhancing Visual Task-Redirection Attacks on Vision-Language-Action Models via Closed-Loop Optimization",
+    "first_author": "Ye",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.23566",
+    "code_url": null,
+    "section": "inference-attacks",
+    "subsection": "Visual Perturbations and Patches",
+    "scope": "vla",
+    "risks": [
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "digital-perturbation",
+        "adversarial-patch"
+      ],
+      "surface": [
+        "visual-perception"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "targeted-action",
+        "control-hijacking"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [
+      "closed-loop-attack",
+      "task-redirection",
+      "execution-driven-supervision",
+      "progress-guided-selection"
+    ],
+    "catalogued_date": "2026-10-20",
+    "first_submission_date": "2026-10-16",
+    "first_submission_source": "https://arxiv.org/abs/2610.23566",
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "LIBERO",
+        "LIBERO-Plus",
+        "SimplerEnv"
+      ],
+      "models": [
+        "StarVLA-PI",
+        "StarVLA-GR00T",
+        "StarVLA-FAST",
+        "StarVLA-OFT",
+        "LangForce",
+        "InstructVLA"
+      ],
+      "access": [
+        "white-box"
+      ],
+      "metrics": [
+        "attack-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2610-22795",
+    "title": "STRIDE: Evaluating Spatiotemporal Reasoning in Driving Edge Cases",
+    "first_author": "Liu",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.22795",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Safety-Critical Perception Evaluation",
+    "scope": "autonomous-driving",
+    "risks": [],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "perception-error"
+        ],
+        "surfaces": [
+          "visual-perception"
+        ],
+        "consequences": []
+      },
+      "curation_status": "paper-verified"
+    },
+    "tags": [
+      "spatiotemporal-reasoning",
+      "driving-edge-cases",
+      "offline-vqa",
+      "trajectory-prediction"
+    ],
+    "catalogued_date": "2026-10-20",
+    "first_submission_date": "2026-10-16",
+    "first_submission_source": "https://arxiv.org/abs/2610.22795",
+    "evaluation": {
+      "environments": [
+        "offline-dataset"
+      ],
+      "platforms": [
+        "STRIDE",
+        "nuScenes",
+        "Waymo E2E"
+      ],
+      "models": [
+        "GPT-6-Astra",
+        "Gemini-3.1-Pro",
+        "Claude-Sonnet-5",
+        "Qwen3.6-27B",
+        "Dolphins",
+        "UniAD 2.0"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "semantic-safety"
+      ],
+      "shift_types": [
+        "none"
+      ],
+      "environment": "unspecified",
+      "base_platforms": [
+        "STRIDE",
+        "nuScenes",
+        "Waymo E2E"
+      ],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2610-23378",
+    "title": "Look Before You Act: Bridging Active Perception and Vision-Language-Action Models via Observation-Aligned Data Adaptation",
+    "first_author": "Geng",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.23378",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "OOD and Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "visual-perception",
+        "world-state"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [
+      "active-perception",
+      "observation-aligned-adaptation",
+      "first-frame-sensitivity"
+    ],
+    "catalogued_date": "2026-10-20",
+    "first_submission_date": "2026-10-16",
+    "first_submission_source": "https://arxiv.org/abs/2610.23378",
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "LIBERO",
+        "LIBERO-Occ",
+        "ARX X5",
+        "ARCHER-Y6"
+      ],
+      "models": [
+        "pi0",
+        "pi0.5",
+        "OpenVLA",
+        "GR00T N1"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "robust-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "training-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "visual-perception"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [
+        "model-access"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2608-01402",
+    "title": "Demystifying When and Why VLAs Fail in Contact-Rich Tasks and How to Fix Them",
+    "first_author": "Parés-Morlans",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2608.01402",
+    "code_url": "https://stanford-iprl-lab.github.io/fact/",
+    "section": "defenses",
+    "subsection": "Safety-Aligned and Robust Policy Training",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "proprioception",
+        "execution-control"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [
+      "contact-rich-manipulation",
+      "force-conditioning",
+      "low-noise-sampling",
+      "FACT"
+    ],
+    "catalogued_date": "2026-10-20",
+    "first_submission_date": "2026-08-02",
+    "first_submission_source": "https://arxiv.org/abs/2608.01402",
+    "evaluation": {
+      "environments": [
+        "real-robot"
+      ],
+      "platforms": [],
+      "models": [
+        "pi0",
+        "pi0.5",
+        "GR00T N1",
+        "ForceVLA",
+        "TA-VLA"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "training-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "execution-control"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "assumptions": [
+        "model-access"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2608-29005",
+    "title": "When Does Corruption Break the Plan? A Degradation-Tolerance Benchmark for Camera-Only End-to-End Driving",
+    "first_author": "Que",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2608.29005",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
+    "scope": "autonomous-driving",
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "distribution-shift"
+        ],
+        "surfaces": [
+          "visual-perception"
+        ],
+        "consequences": [
+          "collision"
+        ]
+      },
+      "curation_status": "paper-verified"
+    },
+    "tags": [
+      "sensor-corruption",
+      "vision-reliance",
+      "camera-blackout",
+      "degradation-tolerance"
+    ],
+    "catalogued_date": "2026-10-20",
+    "first_submission_date": "2026-08-29",
+    "first_submission_source": "https://arxiv.org/abs/2608.29005",
+    "evaluation": {
+      "environments": [
+        "offline-dataset",
+        "simulation"
+      ],
+      "platforms": [
+        "DriveDegrade",
+        "nuScenes",
+        "NAVSIM",
+        "CARLA"
+      ],
+      "models": [
+        "OpenDriveVLA-0.5B",
+        "Epona",
+        "UniAD",
+        "VAD",
+        "DiffusionDrive",
+        "DrivoR"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "collision-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "ood",
+        "physical-safety"
+      ],
+      "shift_types": [
+        "camera",
+        "lighting"
+      ],
+      "environment": "mixed",
+      "base_platforms": [
+        "DriveDegrade",
+        "nuScenes",
+        "NAVSIM",
+        "CARLA"
+      ],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2605-09387",
+    "title": "NEXUS: Learning Safety Constraints and Action Models for Safe and Robust Embodied Planning",
+    "first_author": "Cui",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2605.09387",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "embodied-agents",
+    "risks": [
+      "task-reliability",
+      "physical-safety",
+      "ethical-societal",
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "hazardous-instruction",
+          "jailbreak",
+          "planning-error"
+        ],
+        "surfaces": [
+          "user-instruction",
+          "task-planning"
+        ],
+        "consequences": [
+          "unsafe-success",
+          "policy-violation",
+          "task-failure"
+        ]
+      },
+      "curation_status": "paper-verified"
+    },
+    "tags": [
+      "neuro-symbolic-planning",
+      "PDDL",
+      "LTL",
+      "constraint-learning",
+      "jailbreak-defense"
+    ],
+    "catalogued_date": "2026-10-20",
+    "first_submission_date": "2026-05-10",
+    "first_submission_source": "https://arxiv.org/abs/2605.09387",
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "SafeAgentBench"
+      ],
+      "models": [
+        "GPT-4"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "constraint-violation-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "runtime",
+        "system-level"
+      ],
+      "mechanism": [
+        "formal-verification",
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "protected_surface": [
+        "task-planning"
+      ],
+      "defends_against": [
+        "hazardous-instruction",
+        "jailbreak",
+        "planning-error"
+      ],
+      "assumptions": [
+        "safety-constraints"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2610-16242",
+    "title": "Same Goal, Different Words: Spatial Instruction Sensitivity in World-Action Models",
+    "first_author": "Abbas",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.16242",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
+    "scope": "robot-policy",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift",
+        "semantic-misalignment"
+      ],
+      "surface": [
+        "user-instruction"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [
+      "world-action-model",
+      "instruction-paraphrase",
+      "spatial-grounding",
+      "persistent-placement"
+    ],
+    "catalogued_date": "2026-10-20",
+    "first_submission_date": "2026-10-12",
+    "first_submission_source": "https://arxiv.org/abs/2610.16242",
+    "evaluation": {
+      "environments": [
+        "simulation"
+      ],
+      "platforms": [
+        "RoboLab"
+      ],
+      "models": [
+        "Cosmos3-Nano",
+        "Cosmos3-Edge",
+        "FLUX"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "robust-success-rate"
+      ],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "ood",
+        "task-reliability"
+      ],
+      "shift_types": [
+        "instruction"
+      ],
+      "environment": "simulation",
+      "base_platforms": [
+        "RoboLab"
+      ],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2610-14603",
+    "title": "AnyRank: Reliable Anytime Policy Ranking via Sequential Testing",
+    "first_author": "Badithela",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.14603",
+    "code_url": "https://abadithela.github.io/anyrank-page/",
+    "section": "benchmarks",
+    "subsection": "Evaluation Infrastructure",
+    "scope": "robot-policy",
+    "risks": [],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "execution-control"
+        ],
+        "consequences": []
+      },
+      "curation_status": "paper-verified"
+    },
+    "tags": [
+      "sequential-testing",
+      "policy-ranking",
+      "anytime-valid-inference",
+      "evaluation-uncertainty"
+    ],
+    "catalogued_date": "2026-10-20",
+    "first_submission_date": "2026-10-10",
+    "first_submission_source": "https://arxiv.org/abs/2610.14603",
+    "evaluation": {
+      "environments": [
+        "offline-dataset",
+        "simulation"
+      ],
+      "platforms": [
+        "RoboArena",
+        "TRI-LBM",
+        "DROID"
+      ],
+      "models": [
+        "pi0-FAST",
+        "PG-FAST",
+        "PG-FAST-Spec",
+        "PG-FSQ",
+        "PG-Diff"
+      ],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [],
+      "physical_validation": false,
+      "curation_status": "paper-verified"
+    },
+    "benchmark": {
+      "evaluates": [
+        "task-reliability"
+      ],
+      "shift_types": [
+        "none"
+      ],
+      "environment": "unspecified",
+      "base_platforms": [
+        "RoboArena",
+        "TRI-LBM",
+        "DROID"
+      ],
+      "public_data": null,
+      "leaderboard": null,
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2610-22619",
+    "title": "FCTS: Failure-Guided Curriculum Tree Search Over Generated Terrain for Legged Parkour",
+    "first_author": "Parameswaran",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.22619",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "OOD and Generalization",
+    "scope": "robot-policy",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "physical-semantic-environment"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [
+      "LLM-generated-curriculum",
+      "failure-conditioned-terrain",
+      "quadruped-parkour",
+      "Monte-Carlo-tree-search"
+    ],
+    "catalogued_date": "2026-10-20",
+    "first_submission_date": "2026-10-15",
+    "first_submission_source": "https://arxiv.org/abs/2610.22619",
+    "evaluation": {
+      "environments": [
+        "simulation",
+        "real-robot"
+      ],
+      "platforms": [
+        "Boston Dynamics Spot"
+      ],
+      "models": [],
+      "access": [
+        "not-applicable"
+      ],
+      "metrics": [
+        "task-success-rate",
+        "robust-success-rate"
+      ],
+      "physical_validation": true,
+      "curation_status": "paper-verified"
+    },
+    "defense": {
+      "position": [
+        "training-time"
+      ],
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "protected_surface": [
+        "physical-semantic-environment"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "assumptions": [],
+      "curation_status": "paper-verified"
+    }
   }
 ]
