@@ -258,6 +258,9 @@
     .lp-cell[data-l="4"] { background:var(--grid-4); color:var(--accent-ink); }
     .lp-divider { height:1px; background:var(--line); margin:20px 0; }
     .lp-recent h3 { margin:0 0 12px; font-size:13px; font-weight:700; color:var(--ink); }
+    .lp-recent h3 a { color:inherit; text-decoration:underline; text-underline-offset:3px; }
+    .lp-recent h3 a:hover { color:var(--signal); }
+    .catalogued-date { white-space:nowrap; }
     .lp-recent ul { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px; }
     .lp-recent li { display:flex; gap:12px; align-items:flex-start; }
     .lp-idx { font:700 10px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; color:var(--ink-faint); padding-top:3px; flex:none; width:16px; }
@@ -439,6 +442,7 @@
   <div class="view-container">
   <nav class="catalog-views" id="catalog-views" aria-label="Catalog views" hidden>
       <button type="button" data-view="timeline" aria-pressed="false" data-i18n="navTimeline">Timeline</button>
+      <button type="button" data-view="recent" aria-pressed="false" data-i18n="navRecent">Recently catalogued</button>
       <button type="button" data-view="heatmap" aria-pressed="false" data-i18n="navHeatmap">How × Where</button>
       <button type="button" data-view="risk" aria-pressed="false" data-i18n="navRisk">How × Measured Risk</button>
       <button type="button" data-view="defense" aria-pressed="false" data-i18n="navDefense">Defense × Threat</button>
@@ -447,6 +451,7 @@
   </nav>
 
   <section id="timeline"><div class="chart-panel"><details class="coverage-note timeline-help"><summary><span aria-hidden="true">ⓘ</span><span class="sr-only" data-i18n="timelineHelpLabel">How to use the timeline</span></summary><div class="coverage-detail"><p data-i18n="timelineNote">Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to filter the table.</p></div></details><div id="timeline-chart"></div></div><div id="timeline-table"></div></section>
+  <section id="recent"><div id="recent-table"></div></section>
   <section id="heatmap"><div class="chart-panel"><details class="coverage-note"><summary id="heatmap-population"></summary><div class="coverage-detail"><p id="heatmap-population-detail"></p><p data-i18n="countingNote"></p></div></details><div id="heatmap-chart"></div></div><div id="heatmap-table"></div></section>
   <section id="risk"><div class="chart-panel"><details class="coverage-note"><summary id="risk-population"></summary><div class="coverage-detail"><p id="risk-population-detail"></p><p data-i18n="countingNote"></p></div></details><div id="risk-chart"></div></div><div id="risk-table"></div></section>
   <section id="defense"><div class="chart-panel"><details class="coverage-note"><summary id="defense-population"></summary><div class="coverage-detail"><p id="defense-population-detail"></p><p data-i18n="countingNote"></p></div></details><div id="defense-chart"></div></div><div id="defense-table"></div></section>
@@ -477,7 +482,7 @@
           <div class="lp-heat" id="lp-heat"></div>
           <div class="lp-divider"></div>
           <div class="lp-recent">
-            <h3><span data-i18n="lpRecentTitle">Recently catalogued</span></h3>
+            <h3><a id="lp-recent-link" href="#recent" data-i18n="lpRecentTitle">Recently catalogued</a></h3>
             <ul id="lp-recent-list"></ul>
           </div>
         </div>
@@ -788,7 +793,7 @@ const I18N = {
   en: {
     title: 'Awesome Physical AI Safety',
     ghlink: 'Star on GitHub',
-    navReadme: 'Overview', navTaxonomy: 'Taxonomy', navCatalog: 'Catalog', navTimeline: 'Timeline', navHeatmap: 'Mechanism × Surface', navRisk: 'Mechanism × Risk', navDefense: 'Defense × Threat', navTarget: 'Target × Consequence', navOutcomeRisk: 'Consequence × Risk',
+    navReadme: 'Overview', navTaxonomy: 'Taxonomy', navCatalog: 'Catalog', navTimeline: 'Timeline', navRecent: 'Recently catalogued', navHeatmap: 'Mechanism × Surface', navRisk: 'Mechanism × Risk', navDefense: 'Defense × Threat', navTarget: 'Target × Consequence', navOutcomeRisk: 'Consequence × Risk',
     badgeLicenses: 'Licenses', badgePapers: 'Papers', badgeUpdate: 'Update', badgeCuration: 'Curation', badgeDaily: 'Daily', badgeLlm: 'LLM-assisted',
     timelineHelpLabel: 'How to use the timeline',
     timelineNote: 'Bubble size is the number of cataloged papers in a field-year cell. Hover for a preview; click a bubble to filter the table.',
@@ -799,7 +804,7 @@ const I18N = {
     chartHeatmapHint: 'Hover a cell to inspect contributing papers.',
     chartRiskTitle: 'Threat Mechanism Family × Measured Risk', chartDefenseTitle: 'Defense Mechanism × Defended Threat Mechanism Family', chartTargetTitle: 'Target × Consequence', chartOutcomeRiskTitle: 'Consequence × Measured Risk',
     enrichedSuffix: ' eligible papers; hover or click a cell for the paper list.',
-    papersWord: ' papers', tablePaper: 'Paper', tableVenue: 'Venue', tableRisk: 'Measured Risk', tableThreat: 'Threat Model', tableAll: 'All papers in this view', tableShowing: 'Showing', tableReset: 'Reset filter', tableCode: 'Project / Code', tableNone: 'None reported', storyWhen: 'When', storyWhere: 'Where', storyHow: 'How', storyTarget: 'Target', storyResult: 'Consequence',
+    papersWord: ' papers', tablePaper: 'Paper', tableCatalogued: 'Catalogued', tableVenue: 'Venue', tableRisk: 'Measured Risk', tableThreat: 'Threat Model', tableAll: 'All papers in this view', tableShowing: 'Showing', tableReset: 'Reset filter', tableCode: 'Project / Code', tableNone: 'None reported', storyWhen: 'When', storyWhere: 'Where', storyHow: 'How', storyTarget: 'Target', storyResult: 'Consequence',
     countingNote: "Each cell counts distinct papers: a paper is counted once per cell, even if several leaf labels match one family. Multi-label papers can appear in multiple cells, so cell, row, and column sums are not unique-paper totals or percentages. Counts show paper-level co-occurrence, not causality or a pairing verified in the same experiment. Eligible papers without both axis annotations contribute to no cell; empty annotations do not establish absence of a risk. Empty cells mean zero matching catalog records, not proof that a topic is unstudied. Counts reflect catalog selection and annotation, not field-wide prevalence or defense effectiveness.",
     populationConcrete: "Eligible: concrete threat-model records only; survey and broad evaluation coverage are excluded.",
     populationRisk: "Eligible: all non-survey records, including broad evaluation coverage. Coverage labels are included for evaluation records; risk labels require reported empirical metrics.",
@@ -841,7 +846,7 @@ const I18N = {
   ja: {
     title: 'Awesome Physical AI Safety',
     ghlink: 'GitHubでStar',
-    navReadme: 'Overview', navTaxonomy: 'Taxonomy', navCatalog: 'カタログ', navTimeline: 'タイムライン', navHeatmap: 'Mechanism × Surface', navRisk: 'Mechanism × Risk', navDefense: 'Defense × Threat', navTarget: 'Target × Consequence', navOutcomeRisk: 'Consequence × Risk',
+    navReadme: 'Overview', navTaxonomy: 'Taxonomy', navCatalog: 'カタログ', navTimeline: 'タイムライン', navRecent: '最近収録', navHeatmap: 'Mechanism × Surface', navRisk: 'Mechanism × Risk', navDefense: 'Defense × Threat', navTarget: 'Target × Consequence', navOutcomeRisk: 'Consequence × Risk',
     badgeLicenses: 'ライセンス', badgePapers: '論文数', badgeUpdate: '更新頻度', badgeCuration: 'キュレーション', badgeDaily: '毎日', badgeLlm: 'LLM支援',
     timelineHelpLabel: 'タイムラインの見方と操作',
     timelineNote: 'バブルの大きさは、分野×年のセルに含まれる論文数を表します。ホバーでプレビュー、クリックで下の表を絞り込みます。',
@@ -852,7 +857,7 @@ const I18N = {
     chartHeatmapHint: 'セルにホバーすると該当論文を確認できます。',
     chartRiskTitle: '脅威メカニズム群 × 実証的に評価されたリスク', chartDefenseTitle: '防御メカニズム × 対象脅威メカニズム群', chartTargetTitle: '対象（TARGET） × 帰結（CONSEQUENCE）', chartOutcomeRiskTitle: '帰結（Consequence） × 実証的に評価されたリスク',
     enrichedSuffix: '件の集計対象論文。ホバーまたはクリックで論文一覧を表示します。',
-    papersWord: '件', tablePaper: '論文', tableVenue: 'Venue', tableRisk: '評価リスク', tableThreat: '脅威モデル', tableAll: 'このビューの全論文', tableShowing: '表示中', tableReset: '絞り込み解除', tableCode: 'Project / Code', tableNone: '報告なし', storyWhen: 'いつ', storyWhere: 'どこ', storyHow: '方法', storyTarget: '対象', storyResult: '帰結',
+    papersWord: '件', tablePaper: '論文', tableCatalogued: '追加日', tableVenue: 'Venue', tableRisk: '評価リスク', tableThreat: '脅威モデル', tableAll: 'このビューの全論文', tableShowing: '表示中', tableReset: '絞り込み解除', tableCode: 'Project / Code', tableNone: '報告なし', storyWhen: 'いつ', storyWhere: 'どこ', storyHow: '方法', storyTarget: '対象', storyResult: '帰結',
     countingNote: "各セルは異なる論文の件数です。同じfamilyに複数のleafラベルが一致しても、1セル内では1論文を1回だけ数えます。複数ラベルの論文は複数セルに現れるため、セル・行・列の合計はユニークな論文総数や割合ではありません。論文単位の共起であり、因果関係や同一実験内で確認された組合せを意味しません。両軸のラベルが揃わない対象論文はどのセルにも寄与しません。空のannotationはリスクの不存在を示しません。空セルは該当する採録レコードが0件という意味で、未研究の証明ではありません。件数は採録範囲・分類状況に依存し、分野全体の頻度や防御の有効性を示しません。",
     populationConcrete: "対象：具体的な脅威モデルを持つレコードのみ。surveyと広範なevaluationのcoverageは除外します。",
     populationRisk: "対象：survey以外のレコード（広範なevaluationのcoverageを含む）。evaluationではcoverageラベルを使い、リスクラベルは報告された実験指標を要件とします。",
@@ -1009,7 +1014,9 @@ function renderFilterControls(){
     const rows=axis.groups
       ? axis.groups.map(group=>{
           const famId=`leaf-family-${axis.key}-${group.name}`;
-          const familyValues=group.filterValues||group.values;
+          const familyValues=group.parents
+            ? [...(group.directValues||[]),...group.parents.map(parent=>(parent.filterValues||parent.values)[0])]
+            : group.values?.length ? group.values : (group.filterValues||[]);
           const directRows=(group.directValues||(!group.parents?group.values:[])).map(value=>leafRow(axis,value)).join('');
           const parentRows=(group.parents||[]).map(parent=>{
             const parentValue=(parent.filterValues||parent.values)[0];
@@ -1076,13 +1083,16 @@ function threatModelHtml(p) {
   return `<div class="threat-kind-row">${kindTag}</div><div class="threat-chain-row">${chain || `<span class="empty">${I18N[currentLang].tableNone}</span>`}</div>`;
 }
 function renderPaperTable(view, list=viewPapers(view), filterLabel='') {
+  const isRecent=view==='recent';
   const paperRows=papersInGroup=>papersInGroup.map(p=>{
     const code=p.code_url?`<a class="code-link" href="${escapeHtml(p.code_url)}" target="_blank" rel="noopener noreferrer">${I18N[currentLang].tableCode}</a>`:'';
-    return `<tr><td><a class="paper-title" href="${escapeHtml(p.paper_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.title)}</a>${code}<span class="paper-author">${escapeHtml(authorLabel(p))}</span></td><td>${escapeHtml(p.venue)} ${p.year}</td><td>${tagsHtml(riskTagItems(p))}</td><td>${threatModelHtml(p)}</td></tr>`;
+    return `<tr><td><a class="paper-title" href="${escapeHtml(p.paper_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.title)}</a>${code}<span class="paper-author">${escapeHtml(authorLabel(p))}</span></td>${isRecent?`<td class="catalogued-date">${escapeHtml(p.catalogued_date)}</td>`:''}<td>${escapeHtml(p.venue)} ${p.year}</td><td>${tagsHtml(riskTagItems(p))}</td><td>${threatModelHtml(p)}</td></tr>`;
   }).join('');
   const bySection=d3.group(list,p=>p.section);
   const sectionSummary=sections.filter(section=>bySection.has(section)).map(section=>`${sectionLabel(section)} ${bySection.get(section).length}`).join(' · ');
-  const groups=sections.filter(section=>bySection.has(section)).map(section=>{
+  const groups=isRecent
+    ? `<div class="subsection-group"><table class="catalog-table"><thead><tr><th>${I18N[currentLang].tablePaper}</th><th>${I18N[currentLang].tableCatalogued}</th><th>${I18N[currentLang].tableVenue}</th><th>${I18N[currentLang].tableRisk}</th><th>${I18N[currentLang].tableThreat}</th></tr></thead><tbody>${paperRows(sortByCataloguedDate(list))}</tbody></table></div>`
+    : sections.filter(section=>bySection.has(section)).map(section=>{
     const sectionPapers=bySection.get(section);
     const bySubsection=d3.group(sectionPapers,p=>p.subsection);
     const subsections=[...bySubsection].sort((a,b)=>d3.descending(a[1].length,b[1].length)||d3.ascending(a[0],b[0]));
@@ -1105,6 +1115,9 @@ function applyStickyOffsets(view){
   const tableHead=document.querySelector(`#${view}-table .catalog-table-head`);
   const tableHeadH=tableHead?tableHead.offsetHeight:0;
   if(tableHead) tableHead.style.top=`${topbarH}px`;
+  if(view==='recent') document.querySelectorAll('#recent-table .catalog-table th').forEach(th=>{
+    th.style.top=`${topbarH+tableHeadH}px`;
+  });
   document.querySelectorAll(`#${view}-table .section-group`).forEach(group=>{
     const summary=group.querySelector(':scope > summary');
     const summaryH=summary?summary.offsetHeight:0;
@@ -1119,7 +1132,7 @@ function applyStickyOffsets(view){
   });
 }
 window.addEventListener('resize',()=>{
-  ['timeline','heatmap','risk','defense','target','outcome-risk'].forEach(applyStickyOffsets);
+  ['timeline','recent','heatmap','risk','defense','target','outcome-risk'].forEach(applyStickyOffsets);
 });
 function filterPaperTable(view,list,label){ renderPaperTable(view,list,label); document.getElementById(`${view}-table`).scrollIntoView({behavior:'smooth',block:'start'}); pinned=false; tooltip.style('opacity',0); }
 const orderedThreatMechanisms = () => { const concrete=filteredPapers().filter(p=>p.threat_model.kind!=='survey'); const exploded=concrete.flatMap(p=>threatValues(p,'mechanism').map(m=>({p,m}))); const counts=d3.rollup(exploded,v=>new Set(v.map(d=>d.p.id)).size,d=>d.m); const top=[...counts].sort((a,b)=>d3.descending(a[1],b[1])).slice(0,10).map(d=>d[0]); return orderByGroups(top,MECHANISM_GROUPS); };
@@ -1172,13 +1185,11 @@ function renderHeatmap(){
   svg.selectAll('text.value').data(cellData.filter(d=>d.n)).join('text').attr('class','value').attr('x',d=>x(d.sg.name)+x.bandwidth()/2).attr('y',d=>y(d.mg.name)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',650).attr('fill',d=>heatmapTextColor(fill(d.n))).style('pointer-events','none').text(d=>d.n);
 }
 
-function recentPapers(n=3){
-  return papers
-    .map((paper,index)=>({paper,index}))
-    .sort((a,b)=>b.paper.catalogued_date.localeCompare(a.paper.catalogued_date)||b.index-a.index)
-    .slice(0,n)
-    .map(({paper})=>paper);
+const catalogOrder=new Map(papers.map((paper,index)=>[paper.id,index]));
+function sortByCataloguedDate(list){
+  return [...list].sort((a,b)=>b.catalogued_date.localeCompare(a.catalogued_date)||catalogOrder.get(b.id)-catalogOrder.get(a.id));
 }
+function recentPapers(n=3){ return sortByCataloguedDate(papers).slice(0,n); }
 let lpEnglishPanelWidth = null;
 // Restore the desktop panel width when leaving the compact layout.
 matchMedia('(max-width:860px)').addEventListener('change',({matches})=>{
@@ -1236,6 +1247,7 @@ function renderLpOverview(){
   const list=document.getElementById('lp-recent-list');
   list.innerHTML=recentPapers(3).map((p,i)=>`<li><span class="lp-idx">${String(i+1).padStart(2,'0')}</span><div><div class="lp-t"><a href="${escapeHtml(p.paper_url||'#')}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.title)}</a></div><div class="lp-m">${escapeHtml(authorLabel(p))} · ${escapeHtml(p.venue||'')} ${p.year||''} · ${escapeHtml(p.catalogued_date)}</div></div></li>`).join('');
 }
+document.getElementById('lp-recent-link').addEventListener('click',event=>{ event.preventDefault(); navigateView('recent'); });
 document.getElementById('lp-cta-explore').addEventListener('click',()=>navigateView('timeline'));
 document.getElementById('lp-cta-taxonomy').addEventListener('click',()=>navigateView('taxonomy'));
 document.getElementById('lp-footer-cite').addEventListener('click',event=>{event.stopPropagation();document.getElementById('citation-link').click();});
@@ -1507,7 +1519,7 @@ function renderAll(){
   for (const render of [renderTimeline, renderHeatmap, renderThreatRisk, renderDefenseThreat, renderTargetResult, renderOutcomeRisk, renderLpOverview]) {
     try { render(); } catch (error) { console.error('Visualization failed to render:', error); }
   }
-  for (const view of ['timeline','heatmap','risk','defense','target','outcome-risk']) renderPaperTable(view);
+  for (const view of ['timeline','recent','heatmap','risk','defense','target','outcome-risk']) renderPaperTable(view);
 }
 
 function applyStaticI18n(lang){
