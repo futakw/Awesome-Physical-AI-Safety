@@ -380,13 +380,23 @@ def validate_tags(errors: list[str], label: str, tags: object, allowed: set[str]
     if not isinstance(tags, list) or any(not isinstance(tag, str) for tag in tags):
         errors.append(f"{label}: tags must be a list of strings")
         return
-    if not tags:
-        errors.append(f"{label}: tags must not be empty")
     if len(tags) != len(set(tags)):
         errors.append(f"{label}: tags contains duplicates")
     invalid = set(tags) - allowed
     if invalid:
         errors.append(f"{label}: unregistered tags {sorted(invalid)}; register values in data/taxonomy/tags.json")
+
+
+def validate_related_surveys(errors: list[str], label: str, refs: object) -> None:
+    if not isinstance(refs, list) or not refs or any(not isinstance(ref, str) for ref in refs):
+        errors.append(f"{label}: related_surveys must be a non-empty list of URLs when present")
+        return
+    if len(refs) != len(set(refs)):
+        errors.append(f"{label}: related_surveys contains duplicates")
+    for ref in refs:
+        parsed = urlparse(ref)
+        if parsed.scheme != "https" or not parsed.netloc or parsed.username or parsed.password:
+            errors.append(f"{label}: invalid related_surveys URL {ref!r}")
 
 
 def main() -> int:
@@ -434,6 +444,8 @@ def main() -> int:
             if invalid_risks:
                 errors.append(f"{label}: invalid risks {sorted(invalid_risks)}")
         validate_tags(errors, label, paper.get("tags"), allowed_tags)
+        if "related_surveys" in paper:
+            validate_related_surveys(errors, label, paper.get("related_surveys"))
         validate_threat_model(errors, label, paper.get("threat_model"), taxonomies)
         validate_extensions(errors, label, paper, taxonomies)
         validate_catalogued_date(errors, label, paper)

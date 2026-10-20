@@ -963,7 +963,7 @@ const searchIndex = new Map(papers.map(p=>{
   const taxonomyValues=FILTER_AXES.flatMap(axis=>paperAxisValues(p,axis.key));
   const englishLabels=taxonomyValues.map(value=>dlabel(value));
   const japaneseLabels=taxonomyValues.map(value=>dlabelFlat[value]||(labelsJa.risks&&labelsJa.risks[value])||'');
-  const fields=[p.title,p.first_author,p.venue,p.year,p.section,p.subsection,p.scope,...(p.tags||[]),...taxonomyValues,...englishLabels,...japaneseLabels];
+  const fields=[p.title,p.first_author,p.venue,p.year,p.section,p.subsection,p.scope,...(p.tags||[]),...(p.related_surveys||[]),...taxonomyValues,...englishLabels,...japaneseLabels];
   return [p.id,normalizeSearch(fields.join(' '))];
 }));
 function matchesCatalogFilters(p){
