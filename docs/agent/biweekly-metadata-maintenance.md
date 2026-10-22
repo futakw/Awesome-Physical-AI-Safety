@@ -1,90 +1,32 @@
-# Biweekly Metadata Maintenance
+# Bounded Biweekly Metadata Maintenance
 
-**Audience:** LLM agents and maintainers running periodic catalog maintenance.
+**Audience:** periodic maintainers of already-cataloged papers. Preserve the existing biweekly schedule. New-paper admission belongs to the [scout](daily-curation-workflow.md).
 
-This workflow maintains already-cataloged papers. New-paper discovery and addition belong to the daily curation workflow.
+## Start and select
 
-## 1. Read and Inspect
+Use the same external queue and whole-run guard as the scout; see [curation-queue.md](curation-queue.md). Inspect/fetch the expected remote before editing and preserve unrelated changes. Load only the catalog index, compact memory and relevant workflow/schema/taxonomy sections.
 
-Read `AGENTS.md`, `docs/agent/daily-curation-workflow.md`, `docs/reference/taxonomy.md`, `docs/reference/metadata-schema.md`, and `data/papers.json`. Inspect the branch, remote, and working tree. Preserve unrelated changes. Use `scripts/paper_cache.py get <id>` (cache-first, no network access) before re-downloading a record's primary source; do not schedule a recurring full-cache refresh.
+Process only lane `maintenance`, FIFO, at most **20 claimed records** per run including held/rejected/unchanged results. A concrete signal is required: changed source version, specific acceptance/publication or official code-release evidence, a reported correction, or validator-detected inconsistency. An unconfirmed venue, null code URL, recent addition or elapsed time alone never selects a record. Carry forward specific known unresolved evidence issues; do not enqueue all unconfirmed venues or missing-code records. Do not discover/admit new papers.
 
-For newly fetched cache entries, follow the daily workflow's document title/identifier comparison and `paper_cache.py verify` procedure before using a verified `get` result as evidence. Fetching alone is not verification; `--allow-unverified` is for diagnostics only.
+## Targeted review
 
-## 2. Select Content-Review Targets
+Use `scripts/paper_cache.py get <id>` first; no recurring full-cache refresh. Follow the source-title/identifier verification procedure in the scout workflow for new cache content. Read only the passages necessary for the signaled field, including methods/results/limitations when an actual content revision changes a retained classification. Do not re-summarize the full paper or follow unrelated citations.
 
-Review only records matching at least one condition:
+- Confirm a venue from official acceptance/proceedings/publisher evidence; update venue and venue year together. Author claims alone do not establish acceptance.
+- Update an official project/code URL only with specific author-maintained evidence and reachability. Do not routinely crawl existing URLs or retry known 404s without a restoration/release signal.
+- Correct title, identity, risks, threat model or minimal secondary defense only when new evidence or a concrete inconsistency warrants it. No blanket mechanism/target reclassification.
+- Apply the narrowed Physical AI scope and indispensable-only taxonomy rule. Do not remove existing historical records as a side effect.
+- Do not collect, backfill or refresh `evaluation`, `benchmark`, or legacy defense position/protected_surface/assumptions. Preserve existing values; collect only common retained fields and defense mechanism/defends_against/curation_status.
+- If a claim cannot be established, preserve current metadata and hold with a reason. Reopen a hold only when evidence changes. Resolve `updated` only after successful publication; failures leave proposed work pending. Use `unchanged` when the signaled update was checked and requires no change.
 
-1. venue is still `arXiv`, `OpenReview`, `Preprint`, unset, or otherwise unconfirmed
-2. `code_url` is `null`
-3. the record was added or updated since the previous biweekly run
-4. the paper is opened during venue or code maintenance and its secondary defense metadata may be incomplete
-5. `section` is `defenses` but the `defense` extension is absent
+## Verification and publication
 
-Do not perform broad new-paper searches. Use existing paper IDs and URLs to reach primary sources directly.
+**Do not run a full-catalog network bibliography audit.** Verify changed records by explicit IDs only. Full bibliography rereads, link sweeps and reclassification require a separate explicit request, not this recurring task.
 
-Use `audit/taxonomy_requalification_2026-10.jsonl` as a reference for the completed one-time audit and unresolved evidence gaps. Revisit an insufficient-evidence record when it is already selected for review under the conditions above and primary evidence becomes available; do not repeat the full audit each run. In that log, `out-of-scope` means outside the one-time audit population, not excluded from the catalog.
+Cheap catalog-wide mechanical validators remain publication gates and may enqueue concrete inconsistencies without rereading every paper. Preserve the null-defense prohibition. If an existing invalid record blocks validation, do not bypass it to publish unrelated changes.
 
-### Mechanism and Target Vocabulary Stability
+For actual changes, execute the scout's complete fail-closed generation, test, leakage, remote/PUBLIC, commit and push gates once changes settle. If no metadata changed, do not regenerate, verify unchanged bibliography or create a commit. Do not perform research synthesis or synchronize unrelated historical notes.
 
-Do not run a recurring full-catalog `mechanism` or `target` reclassification. Recheck a record's `mechanism` or `target` only when: the record is already under review for another reason above and new primary-source evidence changes the picture; an ambiguity is resolved by newly available information; validation reports an invalid or deprecated value; or a formal taxonomy migration has been explicitly approved. When a `mechanism` or `target` assignment is corrected, update `threat_model.curation_status` to reflect the evidence actually checked.
+## Every exit reports both queue lanes
 
-## 3. Check Updates
-
-### Venue
-
-- Confirm acceptance or publication through OpenReview, official proceedings, or a publisher page.
-- Distinguish submitted, accepted workshop, and accepted main-conference states.
-- When a named venue is confirmed, update `venue` and its official venue year together.
-
-### Official Project or Code
-
-- Prefer links from the paper, author project page, or author-maintained repository.
-- Keep `code_url: null` when no official or author-maintained artifact is confirmed.
-
-### Secondary Defense Drift
-
-- Audit reviewed records regardless of primary section.
-- Add or update `defense` only for a substantive proposed or experimentally evaluated mitigation.
-- Exclude discussion-only recommendations, future work, and survey coverage.
-- Omit the field after an audited non-applicable result; never publish `defense: null`.
-
-### Other Metadata
-
-Update a formal title change or bibliographic correction only when found during the targeted checks. Do not expand the run into unrelated metadata research.
-
-## 4. Catalog-Wide Mechanical Checks
-
-Every run reports:
-
-- total records with a `defense` object, grouped by primary section
-- explicit `defense: null` count
-- records in `section: defenses` without a `defense` object
-
-Fix a null or missing primary-defense extension when primary evidence is available; otherwise report it as a blocker. Do not re-read every paper solely to reproduce the completed baseline audit.
-
-Run the full catalog bibliography verification on every biweekly maintenance run:
-
-```bash
-python3 scripts/verify_bibliography.py
-```
-
-Treat retrieval, parsing, identity, title, author, year, and verified submission-date failures as failures, not successful checks.
-
-## 5. Validate and Publish Changes
-
-If records changed, follow the complete regeneration, validation, review, remote, visibility, commit, and push gates in `docs/agent/daily-curation-workflow.md`. Verify changed records explicitly before publication.
-
-If no metadata changed, do not regenerate derived files or create a commit. Still report the full-verification and defense-sanity results.
-
-## 6. Report
-
-Report:
-
-- venue updates
-- official project or code additions
-- secondary defense updates
-- defense counts by section, null count, and missing primary-defense count
-- other formal metadata corrections
-- number of targeted records checked and unresolved
-- full bibliography verification result
-- validation, commit, and push result, or blocker
+On success, no change, lock contention or failure, report reviewed N/20, additions/updates/holds/exclusions; remaining new and maintenance counts, each split pending/held; and their combined total from the final snapshot. Unreadable state is unknown, never zero. Include changed-record bibliography and publication status or the exact blocker. Use the same counts in the timestamped archive block; never duplicate full paper summaries or queue contents in memory. Do not change notification settings.

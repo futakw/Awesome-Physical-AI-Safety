@@ -323,14 +323,21 @@ def validate_extensions(errors: list[str], label: str, paper: dict, taxonomies: 
         errors.append(f"{label}: defense must be an object or omitted after audit; null is not publishable")
     defense = paper.get("defense")
     if defense is not None:
-        expected = {"position", "mechanism", "protected_surface", "defends_against", "assumptions", "curation_status"}
-        if set(defense) != expected:
-            errors.append(f"{label}: defense fields must be {sorted(expected)}")
-        validate_values(errors, label, "defense.position", defense.get("position"), set(taxonomies["defense"]["positions"]))
+        required = {"mechanism", "defends_against", "curation_status"}
+        optional = {"position", "protected_surface", "assumptions"}
+        if not isinstance(defense, dict):
+            errors.append(f"{label}: defense must be an object")
+            return
+        if not required <= set(defense) or set(defense) - required - optional:
+            errors.append(f"{label}: defense requires {sorted(required)}; optional legacy fields are {sorted(optional)}")
+        if "position" in defense:
+            validate_values(errors, label, "defense.position", defense["position"], set(taxonomies["defense"]["positions"]))
         validate_values(errors, label, "defense.mechanism", defense.get("mechanism"), set(taxonomies["defense"]["mechanisms"]))
-        validate_values(errors, label, "defense.protected_surface", defense.get("protected_surface"), SURFACES)
+        if "protected_surface" in defense:
+            validate_values(errors, label, "defense.protected_surface", defense["protected_surface"], SURFACES)
         validate_values(errors, label, "defense.defends_against", defense.get("defends_against"), MECHANISMS)
-        validate_values(errors, label, "defense.assumptions", defense.get("assumptions"), set(taxonomies["defense"]["assumptions"]))
+        if "assumptions" in defense:
+            validate_values(errors, label, "defense.assumptions", defense["assumptions"], set(taxonomies["defense"]["assumptions"]))
         if defense.get("curation_status") not in taxonomies["defense"]["curation_statuses"]:
             errors.append(f"{label}: invalid defense.curation_status {defense.get('curation_status')!r}")
     evaluation = paper.get("evaluation")

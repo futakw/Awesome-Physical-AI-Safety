@@ -44,7 +44,7 @@ python3 scripts/build_explorer.py
 
 ## Scope
 
-The scope is physical-AI safety, security, robustness, privacy, ethical and societal outcomes, and trustworthy deployment. VLA is a major focus; robot-policy, autonomous-driving, and embodied-agent work is also in scope when it studies embodied behavior, physical interaction, or deployment-relevant risk. General-purpose LLM/VLM work needs an explicit physical-AI connection.
+This catalog admits research directly studying the safety, robustness, failure detection, recovery, or other trustworthiness properties of VLA models and foundation model–based Physical AI. LLM/VLM-driven robots and embodied agents qualify only when the contribution directly evaluates physical-agent task behavior, execution, or safety constraints, including simulation or symbolic task evaluation. Standalone VLM perception, recognition, grounding, and video-rating research is out of scope even when motivated by robotics. Generic capability improvements and broad surveys with only an incidental safety chapter are also out of scope. Existing records are retained; this policy does not trigger a retrospective removal audit.
 
 ## Pull Requests
 
@@ -53,3 +53,7 @@ Keep each pull request focused. Explain why a new paper belongs in the selected 
 ## Licensing
 
 Code contributions are under MIT; original catalog content contributions are under CC BY 4.0. Submit only material you have the right to contribute, and see [LICENSES.md](LICENSES.md) for the scope of each license.
+
+## Recurring Metadata Policy
+
+Recurring runs use the minimal metadata policy in [the metadata schema](docs/reference/metadata-schema.md). Retain existing detailed metadata; do not backfill legacy extensions. Only indispensable controlled leaf values may be introduced with evidence and synchronized validation/labels; do not add optional tags or redesign axes during recurring runs.

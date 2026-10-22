@@ -53,3 +53,9 @@ python3 scripts/build_explorer.py
 ## ライセンス
 
 コードのコントリビューションはMITの下で、カタログのオリジナルコンテンツのコントリビューションはCC BY 4.0の下でライセンスされます。ご自身が寄稿する権利を持つ素材のみを提出してください。各ライセンスの範囲については[LICENSES.md](LICENSES.md)（英語）を参照してください。
+
+## 定期収録の対象と最小metadata
+
+新規収録はVLAまたはFoundation Modelに基づくPhysical AIの信頼性を直接評価する研究に限定する。VLM単体の知覚・認識・動画評価はroboticsへの応用動機だけでは収録しない。simulation・symbolic taskを含む物理エージェントの行動・実行・安全制約の直接評価は対象とする。一般能力向上や安全性を一章だけ扱う広範なsurveyは対象外。既存recordは保持する。
+
+定期処理は書誌・分類・risk・threat modelと、防御のmechanism・defends_against・curation_statusだけを収集する。evaluation、benchmark、防御のposition・protected_surface・assumptionsは収集・補完せず、既存値を保持する。未収集extensionの欠如は監査済み非該当を意味しない。不可欠な分類語の追加だけを根拠と関連検証付きで許可し、非必須タグ追加や軸の再設計は行わない。

@@ -338,7 +338,7 @@ OOD generalization is a first-class section rather than a subtype of attack.
 
 ## Inclusion Criteria
 
-Include a paper when it studies physical-AI safety or trustworthy deployment and at least one of the following holds:
+New papers must satisfy the direct Physical AI reliability scope below; the following contribution criteria alone do not admit standalone VLM or generic capability work:
 
 1. It directly studies safety, robustness, security, privacy, misuse, ethics, fairness, or trustworthy evaluation of a VLA, robot policy, autonomous system, or embodied agent.
 2. It analyzes an embodied failure, attack, or human impact relevant to physical interaction or deployment.
@@ -378,3 +378,9 @@ Within its primary `section`, assign each record one `subsection` — a second, 
 The same subsection name can legitimately recur under more than one section (e.g. "Failure Detection and Recovery" under both `defenses` and `benchmarks`, or "Privacy and Data Leakage" under three attack/benchmark sections) — these describe the same topic approached as a different contribution type (defending against it vs. benchmarking it vs. attacking via it) and are not duplicates of each other.
 
 When curating a record, reuse an existing subsection whenever the paper reasonably fits one; only add a new value when it genuinely doesn't fit any existing option for that section, and do so by adding it to both `SUBSECTIONS[section]` in `scripts/validate_catalog.py` and `SUBSECTIONS_JA` in `scripts/labels_ja.py` in the same commit — see [the metadata schema](metadata-schema.md#subsection) for the full operational rule.
+
+## Recurring Curation Scope
+
+This catalog admits research directly studying the safety, robustness, failure detection, recovery, or other trustworthiness properties of VLA models and foundation model–based Physical AI. LLM/VLM-driven robots and embodied agents qualify only when the contribution directly evaluates physical-agent task behavior, execution, or safety constraints, including simulation or symbolic task evaluation. Standalone VLM perception, recognition, grounding, and video-rating research is out of scope even when motivated by robotics. Generic capability improvements and broad surveys with only an incidental safety chapter are also out of scope. Existing records are retained; this policy does not trigger a retrospective removal audit.
+
+Recurring runs use the minimal metadata policy in [the metadata schema](metadata-schema.md). Retain existing detailed metadata; do not backfill legacy extensions. Only indispensable controlled leaf values may be introduced with evidence and synchronized validation/labels; do not add optional tags or redesign axes during recurring runs.

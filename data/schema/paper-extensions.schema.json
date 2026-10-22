@@ -6,15 +6,35 @@
   "properties": {
     "defense": {
       "type": "object",
-      "required": ["position", "mechanism", "protected_surface", "defends_against", "assumptions", "curation_status"]
+      "required": [
+        "mechanism",
+        "defends_against",
+        "curation_status"
+      ]
     },
     "evaluation": {
       "type": "object",
-      "required": ["environments", "platforms", "models", "access", "metrics", "physical_validation", "curation_status"]
+      "required": [
+        "environments",
+        "platforms",
+        "models",
+        "access",
+        "metrics",
+        "physical_validation",
+        "curation_status"
+      ]
     },
     "benchmark": {
       "type": "object",
-      "required": ["evaluates", "shift_types", "environment", "base_platforms", "public_data", "leaderboard", "curation_status"]
+      "required": [
+        "evaluates",
+        "shift_types",
+        "environment",
+        "base_platforms",
+        "public_data",
+        "leaderboard",
+        "curation_status"
+      ]
     }
   }
 }

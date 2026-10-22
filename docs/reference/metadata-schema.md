@@ -1,26 +1,15 @@
 # Type-Specific Metadata Pilot
 
-The catalog keeps a small common record and adds optional extensions only where they apply.
+Recurring curation collects common bibliographic and classification fields, `risks`, the structured `threat_model`, and a minimal `defense` object when a substantive mitigation is established.
 
-- `defense`: proposed defense position, mechanism, protected surface, addressed threats, and assumptions.
-- `evaluation`: experimental environments, platforms, evaluated models, attacker access, metrics, and physical validation.
-- `benchmark`: evaluated dimensions, distribution shifts, environment, base platforms, and artifact availability.
+- `defense` requires only `mechanism`, `defends_against`, and `curation_status`, which support the public Defense × Threat view. Its absence after review means no substantive mitigation was established. Never publish `defense: null`.
+- `position`, `protected_surface`, and `assumptions` remain optional legacy defense fields. Validate them when present, preserve existing values, and do not collect or backfill them during recurring runs.
+- `evaluation` and `benchmark` are legacy extensions: retain and validate existing objects, but do not collect, backfill, or refresh them in either recurring workflow. Their absence means not collected, not audited non-applicability. Do not create empty objects or null placeholders to simulate a review.
+- Do not remove existing detailed metadata as part of this policy change. The validator accepts both minimal and complete legacy defense objects.
 
-An absent extension means the extension was audited and does not apply to that paper. Published extension values must be objects; explicit `null` is an incomplete curation state and fails validation. An empty list means no value could be established within an otherwise applicable extension. Each extension includes `curation_status`; catalog-wide inferred values are explicitly marked `catalog-derived` until checked against the original paper.
+Primary empirical results must still be inspected when assigning risk outcomes; stopping metric-list collection does not relax the evidence requirement. `threat_model.curation_status` and `defense.curation_status` record actual evidence depth (`paper-verified`, `abstract-verified`, `catalog-derived`, or `reference-only`). Reading targeted methods, experiments, and limitations is sufficient for paper-level verification of those fields; do not claim an exhaustive full-paper review.
 
-`defense` is independent of the primary section. Add it whenever a paper proposes or experimentally evaluates a substantive mitigation, including attack, benchmark, OOD, and system-security papers. Do not add it for discussion-only recommendations, future-work suggestions, or survey coverage. `threat_model` continues to describe the threat or failure being mitigated; `defense` describes the mitigation.
-
-Controlled values are maintained under [`data/taxonomy`](../../data/taxonomy/). Type-specific extensions now cover every applicable catalog record, with provenance status retained for later paper-level verification.
-
-Within `evaluation`, `models` stores explicitly named evaluated target models or policies. `platforms` stores explicitly named benchmarks, simulators, datasets, or physical robot platforms used for evaluation. Generic descriptions such as “a robotic arm” are not treated as platform names. Names obtained from an abstract are marked `abstract-verified`; unmentioned models or platforms are not inferred.
-
-For `survey` and `evaluation` threat models, `coverage` contains `lifecycles`, `mechanisms`, `surfaces`, and `consequences`. This keeps benchmark threat/consequence aggregation aligned with concrete threat-model records.
-
-`threat_model` itself (not only the optional extensions above) carries `curation_status`, on the same `paper-verified`/`abstract-verified`/`catalog-derived`/`reference-only` scale, so a record not yet re-checked under the current `mechanism` vocabulary can be told apart from one reviewed and found to support no concrete technique (an empty `mechanism` list). See [Mechanism Curation Status](taxonomy.md#mechanism-curation-status).
-
-The optional extension contract is documented in [`paper-extensions.schema.json`](../../data/schema/paper-extensions.schema.json), while `scripts/validate_catalog.py` enforces the controlled vocabularies.
-
-`abstract-verified` is also supported for defense and benchmark extensions when the primary abstract establishes the method or evaluation scope but the full paper has not been audited. Unmentioned metrics, platforms, models, and artifact availability are left empty or null rather than inferred.
+Controlled values remain in `data/taxonomy/`. The optional extension contract is in `paper-extensions.schema.json`; `scripts/validate_catalog.py` enforces controlled values. Existing evaluation objects continue to store environments, named models/platforms, access, metrics and physical validation, and existing benchmark objects retain their original dimensions and availability. Neither extension is needed by current public views.
 
 ## Secondary tags
 

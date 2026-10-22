@@ -58,7 +58,7 @@ This view uses the optional `defense` extension across every primary section. It
 
 This interactive-only cross-map connects the explicitly attacked, protected, or evaluated component, capability, or asset (TARGET) to a concrete outcome (CONSEQUENCE), without inferring downstream affected components. Open the [Project Page](../index.html#target) to inspect and filter its paper table.
 
-Static benchmark and evaluation-extension heatmaps are also generated for metadata review. They are not currently top-level Project Page navigation views.
+Only the five public static figures above are generated. Internal benchmark and evaluation-extension review figures and inactive Explorer renderers have been retired; legacy metadata remains intact.
 
 ## Regeneration
 

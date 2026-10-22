@@ -265,64 +265,6 @@ def render_heatmap(papers: list[dict]) -> str:
     return svg_document("Threat mechanism and surface heatmap", "Heatmap of mechanism family and surface family co-occurrence counts.", width, height, body)
 
 
-def render_defense_heatmap(papers: list[dict]) -> str:
-    width, height = 1200, 980
-    body = header("Defense coverage map", "Defense subsections × the threats they address; multi-label records contribute to each applicable cell.")
-    defenses = [paper for paper in papers if paper["section"] == "defenses"]
-    subsections = [value for value, _ in Counter(paper["subsection"] for paper in defenses).most_common()]
-    concrete = [paper for paper in papers if paper["threat_model"].get("kind") not in {"survey", "evaluation"}]
-    mechanisms = [value for value, _ in Counter(value for paper in concrete for value in threat_values(paper, "mechanism")).most_common(10)]
-    left, top, cell_w, cell_h = 390, 185, 77, 43
-    max_value = max((sum(1 for paper in defenses if paper["subsection"] == subsection and mechanism in threat_values(paper, "mechanism")) for subsection in subsections for mechanism in mechanisms), default=1)
-    for col, mechanism in enumerate(mechanisms):
-        x = left + col * cell_w + cell_w / 2
-        body.append(cross_map_column_label(x, top, cell_w, label(mechanism)))
-    for row, subsection in enumerate(subsections):
-        y = top + row * cell_h
-        body.append(f'<text class="label" x="{left - 18}" y="{y + cell_h / 2 + 4:.1f}" text-anchor="end">{esc(subsection)}</text>')
-        for col, mechanism in enumerate(mechanisms):
-            matching = [paper for paper in defenses if paper["subsection"] == subsection and mechanism in threat_values(paper, "mechanism")]
-            value = len(matching)
-            fraction = value / max_value if max_value else 0
-            color = blend("#EEF3F8", "#6F9FEF", fraction ** 0.72)
-            x = left + col * cell_w
-            text_color = heatmap_text_color(color)
-            papers_title = "\n".join(f"[{paper['venue']} {paper['year']}] {paper['title']}" for paper in matching)
-            body += [
-                f'<rect x="{x + 2}" y="{y + 2}" width="{cell_w - 4}" height="{cell_h - 4}" rx="6" fill="{color}"><title>{esc(papers_title)}</title></rect>',
-                f'<text x="{x + cell_w / 2:.1f}" y="{y + cell_h / 2 + 4:.1f}" text-anchor="middle" font-size="12" font-weight="600" fill="{text_color}">{value if value else ""}</text>',
-            ]
-    body += [
-        f'<text class="axis" x="{left + 5 * cell_w}" y="{top + len(subsections) * cell_h + 36}" text-anchor="middle">threat_model.mechanism</text>',
-        f'<text class="axis" transform="translate(45 {top + len(subsections) * cell_h / 2}) rotate(-90)" text-anchor="middle">Defense subsection</text>',
-    ]
-    return svg_document("Defense coverage map", "Defense subsection and addressed-threat mechanism counts.", width, height, body)
-
-
-def render_benchmark_heatmap(papers: list[dict]) -> str:
-    width, height = 1200, 760
-    body = header("Benchmark coverage map", "Benchmark subsections × the threat mechanisms represented in their evaluations.")
-    benchmarks = [paper for paper in papers if paper["section"] == "benchmarks"]
-    subsections = [value for value, _ in Counter(paper["subsection"] for paper in benchmarks).most_common()]
-    concrete = [paper for paper in papers if paper["threat_model"].get("kind") not in {"survey", "evaluation"}]
-    mechanisms = [value for value, _ in Counter(value for paper in concrete for value in threat_values(paper, "mechanism")).most_common(10)]
-    left, top, cell_w, cell_h = 390, 185, 77, 43
-    max_value = max((sum(1 for paper in benchmarks if paper["subsection"] == subsection and mechanism in threat_values(paper, "mechanism")) for subsection in subsections for mechanism in mechanisms), default=1)
-    for col, mechanism in enumerate(mechanisms):
-        x = left + col * cell_w + cell_w / 2
-        body.append(cross_map_column_label(x, top, cell_w, label(mechanism)))
-    for row, subsection in enumerate(subsections):
-        y = top + row * cell_h
-        body.append(f'<text class="label" x="{left - 18}" y="{y + cell_h / 2 + 4:.1f}" text-anchor="end">{esc(subsection)}</text>')
-        for col, mechanism in enumerate(mechanisms):
-            matching = [paper for paper in benchmarks if paper["subsection"] == subsection and mechanism in threat_values(paper, "mechanism")]
-            value = len(matching); fraction = value / max_value if max_value else 0; color = blend("#EEF3F8", "#6F9FEF", fraction ** 0.72); x = left + col * cell_w; text_color = heatmap_text_color(color)
-            papers_title = "\n".join(f"[{paper['venue']} {paper['year']}] {paper['title']}" for paper in matching)
-            body += [f'<rect x="{x + 2}" y="{y + 2}" width="{cell_w - 4}" height="{cell_h - 4}" rx="6" fill="{color}"><title>{esc(papers_title)}</title></rect>', f'<text x="{x + cell_w / 2:.1f}" y="{y + cell_h / 2 + 4:.1f}" text-anchor="middle" font-size="12" font-weight="600" fill="{text_color}">{value if value else ""}</text>']
-    body += [f'<text class="axis" x="{left + 5 * cell_w}" y="{top + len(subsections) * cell_h + 36}" text-anchor="middle">threat_model.mechanism</text>', f'<text class="axis" transform="translate(45 {top + len(subsections) * cell_h / 2}) rotate(-90)" text-anchor="middle">Benchmark subsection</text>']
-    return svg_document("Benchmark coverage map", "Benchmark subsection and threat-mechanism counts.", width, height, body)
-
-
 def render_extension_heatmap(papers, extension, title, subtitle, row_field, col_field, row_label, col_label, cols_override=None):
     items = [paper for paper in papers if extension in paper]
     rows = list(dict.fromkeys(value for paper in items for value in paper[extension][row_field]))
@@ -404,26 +346,6 @@ def render_threat_risk_heatmap(papers: list[dict]) -> str:
     return svg_document("Threat mechanism family × evaluated risk", "Cross-map of threat mechanism families and empirically evaluated risk outcomes.", width, height, body)
 
 
-def render_benchmark_threat_consequence(papers: list[dict]) -> str:
-    items = [paper for paper in papers if paper["section"] == "benchmarks"]
-    rows = [value for value, _ in Counter(value for paper in items for value in threat_values(paper, "mechanism")).most_common()]
-    cols = list(dict.fromkeys(value for paper in items for value in threat_values(paper, "consequence")))
-    width, left, top, cell_h = 1200, 300, 185, 54
-    cell_w = min(135, (width - left - 35) / max(1, len(cols))); height = max(720, int(top + len(rows) * cell_h + 90))
-    body = header("Threat mechanism × consequence", f"Benchmark papers only ({len(items)} papers).")
-    cells = {(row, col): [paper for paper in items if row in threat_values(paper, "mechanism") and col in threat_values(paper, "consequence")] for row in rows for col in cols}
-    max_value = max((len(value) for value in cells.values()), default=1)
-    for index, col in enumerate(cols):
-        x = left + index * cell_w + cell_w / 2; body.append(cross_map_column_label(x, top, cell_w, label(col)))
-    for rindex, row in enumerate(rows):
-        y = top + rindex * cell_h; body.append(f'<text class="label" x="{left - 18}" y="{y + cell_h / 2 + 4:.1f}" text-anchor="end">{esc(label(row))}</text>')
-        for cindex, col in enumerate(cols):
-            matching = cells[(row, col)]; value = len(matching); fraction = value / max_value if max_value else 0; x = left + cindex * cell_w; color = blend("#EEF3F8", "#6F9FEF", fraction ** 0.72); text_color = heatmap_text_color(color)
-            papers_title = "\n".join(f"[{paper['venue']} {paper['year']}] {paper['title']}" for paper in matching)
-            body += [f'<rect x="{x + 2}" y="{y + 2}" width="{cell_w - 4}" height="{cell_h - 4}" rx="6" fill="{color}"><title>{esc(papers_title)}</title></rect>', f'<text x="{x + cell_w / 2:.1f}" y="{y + cell_h / 2 + 4:.1f}" text-anchor="middle" font-size="12" font-weight="600" fill="{text_color}">{value if value else ""}</text>']
-    return svg_document("Threat mechanism × consequence", "Benchmark threat and consequence cross-map.", width, height, body)
-
-
 def render_submission_growth(papers: list[dict]) -> str:
     counts = Counter(p["first_submission_date"] for p in papers if p.get("first_submission_date"))
     width, height = 1200, 270
@@ -468,8 +390,6 @@ def outputs(papers: list[dict]) -> dict[Path, str]:
         OUTPUT_DIR / "threat-heatmap.svg": render_heatmap(papers),
         OUTPUT_DIR / "threat-risk-heatmap.svg": render_threat_risk_heatmap(papers),
         OUTPUT_DIR / "defense-heatmap.svg": render_extension_heatmap(papers, "defense", "Defense mechanism × defended threat", "Columns follow the Threat Cross-Map order, including empty cells", "mechanism", "defends_against", "Defense mechanism", "Defended threat", ordered_threat_mechanisms(papers)),
-        OUTPUT_DIR / "benchmark-heatmap.svg": render_benchmark_threat_consequence(papers),
-        OUTPUT_DIR / "evaluation-heatmap.svg": render_extension_heatmap(papers, "evaluation", "Evaluation environment × metric", "Catalog-wide metadata; unspecified marks records awaiting paper-level verification", "environments", "metrics", "Environment", "Metric"),
     }
 
 

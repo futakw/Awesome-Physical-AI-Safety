@@ -177,7 +177,7 @@ def render_overview(paper_count: int) -> list[str]:
         "",
         "### スコープ",
         "",
-        "このカタログは、**Foundation Modelに基づくPhysical AI**の安全性と信頼性を中心に、**Perception → Cognition → Planning → Action**の流れで捉えます。この流れは概念上の枠組みであり、独立したモジュール構成を要求しません。VLAやLLM/VLM駆動の身体性AIを対象とし、人との協働・複数ロボット・自動運転も含みます。Physical AIとの明確な関連を持たない汎用LLM/VLM研究はスコープ外です。",
+        "新規収録は、**VLAおよびFoundation Modelに基づくPhysical AI**の安全性・頑健性・失敗検知・回復など、信頼性を直接扱う研究に限定します。LLM/VLMを使う研究は、simulationやsymbolic taskを含め、物理エージェントの行動・実行・安全制約を直接評価する場合に対象とします。roboticsへの応用動機だけのVLM単体の知覚・認識・grounding・動画評価、一般的な能力向上、安全性を一章だけ扱う広範なsurveyは対象外です。既存recordの遡及的な削除は行いません。",
         "",
         "### キュレーション方針",
         "",

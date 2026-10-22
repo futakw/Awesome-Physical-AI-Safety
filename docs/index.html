@@ -1252,75 +1252,6 @@ document.getElementById('lp-cta-explore').addEventListener('click',()=>navigateV
 document.getElementById('lp-cta-taxonomy').addEventListener('click',()=>navigateView('taxonomy'));
 document.getElementById('lp-footer-cite').addEventListener('click',event=>{event.stopPropagation();document.getElementById('citation-link').click();});
 
-function renderDefense(){
-  const defenses=filteredPapers().filter(p=>p.section==='defenses');
-  const subsectionCounts=d3.rollup(defenses,v=>v.length,p=>p.subsection);
-  const subsections=[...subsectionCounts].sort((a,b)=>d3.descending(a[1],b[1])).map(d=>d[0]);
-  const concrete=filteredPapers().filter(p=>!['survey','evaluation'].includes(p.threat_model.kind));
-  const explodedMechanisms=concrete.flatMap(p=>p.threat_model.mechanism.map(m=>({p,m})));
-  const mechanismCounts=d3.rollup(explodedMechanisms,v=>new Set(v.map(d=>d.p.id)).size,d=>d.m);
-  const mechanisms=[...mechanismCounts].sort((a,b)=>d3.descending(a[1],b[1])).slice(0,10).map(d=>d[0]);
-  const margin={right:35,bottom:70,left:390}, width=1180;
-  const x=d3.scaleBand().domain(mechanisms).range([margin.left,width-margin.right]).padding(.06);
-  margin.top=crossMapMarginTop(mechanisms,m=>m.replaceAll('-',' '),x.bandwidth());
-  const height=Math.max(760,margin.top+subsections.length*44+margin.bottom);
-  const svg=d3.select('#defense-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Interactive defense coverage heatmap');
-  const y=d3.scaleBand().domain(subsections).range([margin.top,height-margin.bottom]).padding(.06);
-  const cellData=[]; for(const sub of subsections) for(const mechanism of mechanisms){const list=defenses.filter(p=>p.subsection===sub&&p.threat_model.mechanism.includes(mechanism));cellData.push({sub,mechanism,list,n:list.length});}
-  const max=d3.max(cellData,d=>d.n)||1, fill=d3.scaleSequential().domain([0,max]).interpolator(d3.interpolate(...seqRampColors()));
-  svg.append('text').attr('x',margin.left).attr('y',35).attr('font-size',24).attr('font-weight',650).attr('fill','var(--ink)').text('Defense subsection × addressed threat');
-  svg.append('text').attr('x',margin.left).attr('y',57).attr('font-size',13).attr('fill','var(--muted)').text('Hover a cell to inspect contributing papers.');
-  svg.selectAll('text.mechanism').data(mechanisms).join('text').attr('class','axis').call(layoutCrossMapColumns,m=>x(m)+x.bandwidth()/2,margin.top,x.bandwidth(),m=>m.replaceAll('-',' '));
-  svg.selectAll('text.subsection').data(subsections).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',s=>y(s)+y.bandwidth()/2+4).text(s=>s);
-  svg.selectAll('rect.cell').data(cellData).join('rect').attr('class','cell').attr('x',d=>x(d.mechanism)).attr('y',d=>y(d.sub)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(d.sub)} × ${escapeHtml(d.mechanism.replaceAll('-',' '))}</strong><div>${d.n} papers</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();pinTooltip(event,`<strong>${escapeHtml(d.sub)} × ${escapeHtml(d.mechanism.replaceAll('-',' '))}</strong><div>${d.n} papers</div>${paperListHtml(d.list)}`);});
-  svg.selectAll('text.value').data(cellData.filter(d=>d.n)).join('text').attr('class','value').attr('x',d=>x(d.mechanism)+x.bandwidth()/2).attr('y',d=>y(d.sub)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',650).attr('fill',d=>heatmapTextColor(fill(d.n))).style('pointer-events','none').text(d=>d.n);
-}
-
-function renderBenchmark(){
-  const benchmarks=filteredPapers().filter(p=>p.section==='benchmarks');
-  const subsectionCounts=d3.rollup(benchmarks,v=>v.length,p=>p.subsection);
-  const subsections=[...subsectionCounts].sort((a,b)=>d3.descending(a[1],b[1])).map(d=>d[0]);
-  const concrete=filteredPapers().filter(p=>!['survey','evaluation'].includes(p.threat_model.kind));
-  const explodedMechanisms=concrete.flatMap(p=>p.threat_model.mechanism.map(m=>({p,m})));
-  const mechanismCounts=d3.rollup(explodedMechanisms,v=>new Set(v.map(d=>d.p.id)).size,d=>d.m);
-  const mechanisms=[...mechanismCounts].sort((a,b)=>d3.descending(a[1],b[1])).slice(0,10).map(d=>d[0]);
-  const margin={right:35,bottom:70,left:390}, width=1180;
-  const x=d3.scaleBand().domain(mechanisms).range([margin.left,width-margin.right]).padding(.06);
-  margin.top=crossMapMarginTop(mechanisms,m=>m.replaceAll('-',' '),x.bandwidth());
-  const height=Math.max(760,margin.top+subsections.length*44+margin.bottom);
-  const svg=d3.select('#benchmark-chart').append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Interactive benchmark threat heatmap');
-  const y=d3.scaleBand().domain(subsections).range([margin.top,height-margin.bottom]).padding(.06);
-  const cellData=[]; for(const sub of subsections) for(const mechanism of mechanisms){const list=benchmarks.filter(p=>p.subsection===sub&&p.threat_model.mechanism?.includes(mechanism));cellData.push({sub,mechanism,list,n:list.length});}
-  const max=d3.max(cellData,d=>d.n)||1, fill=d3.scaleSequential().domain([0,max]).interpolator(d3.interpolate(...seqRampColors()));
-  svg.append('text').attr('x',margin.left).attr('y',35).attr('font-size',24).attr('font-weight',650).attr('fill','var(--ink)').text('Benchmark subsection × threat');
-  svg.append('text').attr('x',margin.left).attr('y',57).attr('font-size',13).attr('fill','var(--muted)').text('Hover a cell to inspect contributing papers.');
-  svg.selectAll('text.mechanism').data(mechanisms).join('text').attr('class','axis').call(layoutCrossMapColumns,m=>x(m)+x.bandwidth()/2,margin.top,x.bandwidth(),m=>m.replaceAll('-',' '));
-  svg.selectAll('text.subsection').data(subsections).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',s=>y(s)+y.bandwidth()/2+4).text(s=>s);
-  svg.selectAll('rect.cell').data(cellData).join('rect').attr('class','cell').attr('x',d=>x(d.mechanism)).attr('y',d=>y(d.sub)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(d.sub)} × ${escapeHtml(d.mechanism.replaceAll('-',' '))}</strong><div>${d.n} papers</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();pinTooltip(event,`<strong>${escapeHtml(d.sub)} × ${escapeHtml(d.mechanism.replaceAll('-',' '))}</strong><div>${d.n} papers</div>${paperListHtml(d.list)}`);});
-  svg.selectAll('text.value').data(cellData.filter(d=>d.n)).join('text').attr('class','value').attr('x',d=>x(d.mechanism)+x.bandwidth()/2).attr('y',d=>y(d.sub)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',650).attr('fill',d=>heatmapTextColor(fill(d.n))).style('pointer-events','none').text(d=>d.n);
-}
-
-function renderExtensionMap(container,title,items,rows,cols,rowValues,colValues,aria,tableView='',rowGroups=null){
-  const margin={right:55,bottom:20,left:245}, width=1180;
-  const x=d3.scaleBand().domain(cols).range([margin.left,width-margin.right]).padding(.06);
-  margin.top=crossMapMarginTop(cols,dlabel,x.bandwidth(),2);
-  const height=Math.max(320,margin.top+rows.length*36+margin.bottom);
-  const svg=d3.select(container).append('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label',aria);
-  const y=d3.scaleBand().domain(rows).range([margin.top,height-margin.bottom]).padding(.06);
-  const cells=[]; for(const row of rows) for(const col of cols){const list=items.filter(p=>rowValues(p).includes(row)&&colValues(p).includes(col));cells.push({row,col,list,n:list.length});}
-  const max=d3.max(cells,d=>d.n)||1, fill=d3.scaleSequential().domain([0,max]).interpolator(d3.interpolate(...seqRampColors()));
-  svg.append('text').attr('x',margin.left).attr('y',24).attr('font-size',19).attr('font-weight',650).attr('fill','var(--ink)').text(title);
-  svg.append('text').attr('x',margin.left).attr('y',40).attr('font-size',12).attr('fill','var(--muted)').text(`${items.length}${I18N[currentLang].enrichedSuffix}`);
-  svg.selectAll('text.col').data(cols).join('text').attr('class','axis').call(layoutCrossMapColumns,d=>x(d)+x.bandwidth()/2,margin.top,x.bandwidth(),d=>dlabel(d),2);
-  svg.selectAll('text.row').data(rows).join('text').attr('class','axis').attr('text-anchor','end').attr('x',margin.left-12).attr('y',d=>y(d)+y.bandwidth()/2+4).text(d=>dlabel(d));
-  svg.selectAll('rect.cell').data(cells).join('rect').attr('class','cell').attr('x',d=>x(d.col)).attr('y',d=>y(d.row)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(dlabel(d.row))} × ${escapeHtml(dlabel(d.col))}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();if(tableView)filterPaperTable(tableView,d.list,`${dlabel(d.row)} × ${dlabel(d.col)}`);else pinTooltip(event,`<strong>${escapeHtml(dlabel(d.row))} × ${escapeHtml(dlabel(d.col))}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`);});
-  svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.col)+x.bandwidth()/2).attr('y',d=>y(d.row)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',11).attr('font-weight',650).attr('fill',d=>heatmapTextColor(fill(d.n))).style('pointer-events','none').text(d=>d.n);
-  if(rowGroups){
-    const rowStep=y.step();
-    svg.selectAll('line.row-divider').data(groupBoundaries(rows,rowGroups)).join('line').attr('class','group-divider').attr('y1',i=>margin.top+i*rowStep-rowStep*.03).attr('y2',i=>margin.top+i*rowStep-rowStep*.03).attr('x1',margin.left).attr('x2',width-margin.right+6).attr('stroke','#c7d2e0').attr('stroke-width',1.5).attr('stroke-dasharray','3,3');
-  }
-}
-
 function renderDefenseThreat(){
   const items=viewPapers('defense'), rows=DEFENSE_MECHANISMS, cols=MECHANISM_GROUPS;
   const isJa=currentLang==='ja';
@@ -1404,24 +1335,6 @@ function renderThreatRisk(){
   svg.selectAll('rect.cell').data(cells).join('rect').attr('class','cell').classed('cell-active',d=>axisFilterMatches('mechanism',d.mg.values)&&axisFilterMatches('risks',[d.col])).attr('x',d=>x(d.col)).attr('y',d=>y(d.mg.name)).attr('width',x.bandwidth()).attr('height',y.bandwidth()).attr('rx',6).attr('fill',d=>fill(d.n)).style('cursor','pointer').on('pointermove',(event,d)=>showTooltip(event,`<strong>${escapeHtml(familyLabel(d.mg))} × ${escapeHtml(dlabel(d.col))}</strong><div>${countLabel(d.n)}</div>${paperListHtml(d.list)}`)).on('pointerleave',hideTooltip).on('click',(event,d)=>{event.stopPropagation();const activating=toggleCellFilter('mechanism',d.mg.values,'risks',[d.col]);renderAll();if(activating)filterPaperTable('risk',d.list,`${familyLabel(d.mg)} × ${dlabel(d.col)}`);});
   svg.selectAll('text.value').data(cells.filter(d=>d.n)).join('text').attr('x',d=>x(d.col)+x.bandwidth()/2).attr('y',d=>y(d.mg.name)+y.bandwidth()/2+4).attr('text-anchor','middle').attr('font-size',11).attr('font-weight',650).attr('fill',d=>heatmapTextColor(fill(d.n))).style('pointer-events','none').text(d=>d.n);
 }
-function renderBenchmarkV2(){
-  const items=filteredPapers().filter(p=>p.section==='benchmarks');
-  const rows=[...new Set(items.flatMap(p=>threatValues(p,'mechanism')))].sort((a,b)=>d3.descending(items.filter(p=>threatValues(p,'mechanism').includes(a)).length,items.filter(p=>threatValues(p,'mechanism').includes(b)).length));
-  const cols=[...new Set(items.flatMap(p=>threatValues(p,'consequence')))];
-  renderExtensionMap('#benchmark-chart','Threat mechanism × consequence',items,rows,cols,p=>threatValues(p,'mechanism'),p=>threatValues(p,'consequence'),'Benchmark threat mechanism and consequence cross-map');
-}
-function renderEvaluation(){
-  const items=filteredPapers().filter(p=>p.evaluation), rows=[...new Set(items.flatMap(p=>p.evaluation.environments))], cols=[...new Set(items.flatMap(p=>p.evaluation.metrics))];
-  renderExtensionMap('#evaluation-chart','Evaluation environment × metric',items,rows,cols,p=>p.evaluation.environments,p=>p.evaluation.metrics,'Evaluation environment and metric cross-map');
-}
-function renderModelEnvironment(){
-  const items=filteredPapers().filter(p=>p.evaluation), cols=['task-reliability','physical-safety','ethical-societal','security-privacy'];
-  const models=[...new Set(items.flatMap(p=>p.evaluation.models||[]))].filter(x=>x!=='unspecified').sort();
-  const envs=[...new Set(items.flatMap(p=>p.evaluation.environments||[]))].filter(x=>x!=='unspecified').sort();
-  renderExtensionMap('#model-chart','Model × evaluated risk',items,models,cols,p=>p.evaluation.models||[],p=>p.risks,'Model and evaluated risk cross-map');
-  renderExtensionMap('#environment-chart','Environment × evaluated risk',items,envs,cols,p=>p.evaluation.environments||[],p=>p.risks,'Environment and evaluated risk cross-map');
-}
-
 const taxonomyFrame = document.getElementById('taxonomy-frame');
 let taxonomyBodyObserver;
 function syncTaxonomyTheme() {

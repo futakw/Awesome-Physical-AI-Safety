@@ -33,7 +33,7 @@ The five-part threat taxonomy describes studied failure paths; **Measured Risk**
 
 ### Scope
 
-This catalog focuses on the safety and trustworthiness of **foundation model–based Physical AI**, viewed through **Perception → Cognition → Planning → Action**. This is a conceptual pipeline, not a required modular architecture, and includes VLA models and LLM/VLM-driven embodied systems in human–robot interaction, multi-robot collaboration, and autonomous driving. General-purpose LLM/VLM work without a clear physical-AI connection is out of scope.
+This catalog admits research directly studying the safety, robustness, failure detection, recovery, or other trustworthiness properties of **VLA models and foundation model–based Physical AI**. LLM/VLM-driven robots and embodied agents qualify only when the contribution directly evaluates physical-agent task behavior, execution, or safety constraints, including simulation or symbolic task evaluation. Standalone VLM perception, recognition, grounding, and video-rating research is out of scope even when motivated by robotics. Generic capability improvements and broad surveys with only an incidental safety chapter are also out of scope. Existing records are retained; this policy does not trigger a retrospective removal audit.
 
 ### Curation Policy
 

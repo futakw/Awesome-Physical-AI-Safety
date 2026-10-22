@@ -30,8 +30,9 @@ These Markdown files are maintained sources under `docs/reference/`.
 
 Start with [`../../AGENTS.md`](../../AGENTS.md). Public operational runbooks live separately under `docs/agent/`:
 
-- [`../agent/daily-curation-workflow.md`](../agent/daily-curation-workflow.md): discovery, curation, generation, validation, and publication.
-- [`../agent/biweekly-metadata-maintenance.md`](../agent/biweekly-metadata-maintenance.md): targeted venue, code, bibliography, and secondary-defense maintenance.
+- [`../agent/daily-curation-workflow.md`](../agent/daily-curation-workflow.md): bounded new-paper discovery, curation, validation, and publication (stable filename; schedule configured externally).
+- [`../agent/biweekly-metadata-maintenance.md`](../agent/biweekly-metadata-maintenance.md): signal-driven existing-record maintenance; changed-record bibliography only.
+- [`../agent/curation-queue.md`](../agent/curation-queue.md): external shared state, whole-run locking, 20-record budgets, and mandatory exit reports.
 
 Local schedules should keep machine-specific paths, cadence, and private workspace boundaries in the automation prompt rather than adding them to public documentation.
 

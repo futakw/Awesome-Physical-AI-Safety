@@ -1,85 +1,44 @@
-# Daily Curation Workflow
+# Bounded New-Paper Curation
 
-**Audience:** LLM agents and maintainers running the daily curation automation.
+**Audience:** recurring research scouts. This filename remains stable for existing integrations; scheduling is configured externally. Read the companion [maintenance workflow](biweekly-metadata-maintenance.md) for already-cataloged papers.
 
-This document is the operational source of truth for recurring literature curation in Awesome Physical AI Safety. Keep automation prompts short: they should provide local execution context and point here rather than duplicate these rules. Human-facing scope and contribution explanations remain in `README.md` and `CONTRIBUTING.md`.
+## 1. Start and coordinate
 
-## 1. Read Before Working
+Inspect branch, remote and working tree, fetch the expected remote before editing, and preserve unrelated changes. Fast-forward only when safe. Use the shared queue/guard procedure in [curation-queue.md](curation-queue.md); hold its run lock through source review, catalog edits, validation and publication. If another run holds it, do not edit the catalog or queue; report current counts and exit. Initialize state only during setup, never recreate an unreadable queue during a run.
 
-From the repository root, read:
+Read `AGENTS.md`, current Scope, `docs/reference/metadata-schema.md`, and relevant taxonomy sections. Load the catalog ID/title/URL index programmatically, not the complete JSON into model context. Use compact automation memory, a PAPERS heading/ID/date scan, and only the latest or specifically needed archive blocks. Do not read the full research archive or refresh the full source cache.
 
-- `AGENTS.md`
-- the Scope and Curation Policy in `README.md`
-- `CONTRIBUTING.md`
-- `docs/reference/taxonomy.md`
-- `docs/reference/metadata-schema.md`
-- `data/papers.json`
+## 2. Discover and queue
 
-Inspect the current branch, remote, and working tree before editing. Preserve unrelated changes; do not reset or overwrite them.
+Use source-specific successful scan boundaries and cached listing fingerprints. Screen only the new title/abstract/identifier/date delta. Reject duplicate identities and obvious scope failures before opening paper bodies. Compare normalized title, primary URL, arXiv/DOI/OpenReview IDs, and available title history. Do not re-add renamed work.
 
-Do not load the full research-hub `PAPERS.md` or all recent archive prose for every run. Use the compact automation memory plus a heading/ID/date scan of `PAPERS.md` to identify existing work, and read only the latest survey or the specific archive blocks needed to establish the coverage boundary. Historical summaries remain the source of truth, but they are not a required full-context input.
+Scope requires a direct VLA or foundation-model Physical AI reliability contribution: safety, robustness, failure detection, recovery or trustworthy physical-agent execution. LLM/VLM-driven systems qualify through direct agent/task behavior or physical/symbolic safety-constraint evaluation, including simulation. Standalone VLM perception/recognition/grounding/video-rating papers do not qualify through robotics motivation alone. Generic capability work and broad surveys with an incidental safety chapter are excluded. Do not retrospectively delete existing records.
 
-## 2. Search and Verify
+Enqueue new candidates in lane `new`. Mechanically detected updates to known records go to `maintenance` with a concrete revision/venue/code/correction/invalid-metadata signal and an evidence key; do not read or update those papers here. Missing code, an unconfirmed venue, or recent catalog addition alone is not a signal. Record successful scan cursors only after the candidate batch is durably enqueued; preserve boundaries for failed retrieval/parsing.
 
-1. Search primary sources for new papers and material revisions since the previous run.
-2. Prefer arXiv, OpenReview, official proceedings, publisher pages, author project pages, and official or author-maintained repositories. For a record already in the catalog, check `scripts/paper_cache.py get <id>` first (cache-first, no network access) before re-downloading its primary source; only call `fetch`/`check-update` when evidence is actually missing or a revision needs checking. Do not add a recurring full-cache refresh.
-3. Read the abstract and inspect the method, experiments, and limitations when needed for scope or metadata decisions. Do not report abstract review as full-paper review.
-4. Confirm the official title, first-author surname, paper identity, publication state, paper URL, and any official project or code URL.
-5. Check normalized title, paper URL, arXiv ID, DOI, OpenReview ID, and title history before adding a record. Update renamed or materially revised work in place.
+## 3. Review at most 20 candidates
 
-After fetching a document into the cache, read its title and identifier and compare them with the catalog record before recording the result with `python3 scripts/paper_cache.py verify <id> --match true --observed-title "<title read from the document>"`. Record a mismatch with `--match false` and resolve it before using the document as evidence. Fetching alone does not verify identity; use the verified `get` result for curation. `--allow-unverified` is for diagnostics only and must never be used for audit evidence.
+Claim one candidate before inspecting paper bodies or performing targeted bibliography/field verification beyond discovery-listing title/abstract screening. Every admitted record requires a claim, even if its abstract suffices. The queue enforces 20 distinct candidates per run, including held and rejected outcomes. Title/ID/date deduplication and cheap discovery screening do not consume claims. Continue FIFO pending work; excess remains queued. Do not open unclaimed paper bodies. If a selected record is already cataloged, route it to maintenance without substantive review.
 
-Crossref, search results, and other reading lists are discovery aids, not substitutes for a primary source.
+Read the abstract first, then only the methods, experiments and limitations passages needed for scope and the retained classification fields. Store source text locally; emit compact selected excerpts, not complete HTML/PDF or truncated bulk dumps. Do not characterize targeted inspection as an exhaustive full-paper review. For an existing cached source, use `scripts/paper_cache.py get <id>` first. A newly fetched cache document requires observed title/identifier comparison and `verify --match true --observed-title ...`; resolve mismatches before using it. No unverified cache evidence.
 
-### Cost-aware screening
+Confirm official title, first-author surname, identity, primary URL and arXiv v1 UTC submission date. Use arXiv/OpenReview for unconfirmed publication; do not hunt venues for new records. Use an official project/code link only when directly established and reachable; otherwise null. No opportunistic historical synchronization or metadata repairs.
 
-Use a two-stage screen for daily runs. First compare the title, abstract or summary, date, identifier, and catalog ID/title index. Reject duplicates, out-of-scope papers, and papers without an explicit physical-AI safety or trustworthy-deployment connection without opening the full paper. Read the full primary source only for shortlisted candidates, materially revised records, or ambiguous scope/metadata cases.
+Edit `data/papers.json`, never generated output. Collect common bibliography, dates, section/subsection, scope, empirically supported risks, structured threat model, and actual curation status. For a substantive secondary defense, collect only `mechanism`, `defends_against`, `curation_status`, regardless of primary section. Do not collect or backfill evaluation/benchmark extensions or legacy defense position/protected_surface/assumptions. Preserve all existing detailed metadata. Inspect empirical outcomes to support risks even though metric lists are no longer collected.
 
-## 3. Decide Scope
+Use existing controlled values. Empty mechanism/tag lists are preferable to guesses where allowed. Add a new controlled leaf only when indispensable to express an evidenced, in-scope required classification; synchronize validator, Japanese labels and public taxonomy documentation when applicable. Do not add optional descriptive tags or redesign axes/sections. Preserve evidence-based mechanism/target semantics, including the explicit-report plus independently unmet-criterion rule for self-assessment-failure.
 
-Use the current Scope in `README.md` and contribution rules in `CONTRIBUTING.md`. The catalog focuses on safety and trustworthiness of foundation model-based Physical AI. General LLM/VLM safety, conventional robotics, HRI, driving, or multi-robot work requires a concrete connection to the catalog scope.
+Resolve held/rejected candidates with a short reason. Holds require a changed evidence key, new version, or confirmed source restoration before another review. Keep accepted work pending until publication succeeds; only then resolve it as `added`. A failed publication leaves it pending for the next run.
 
-Exclude unrelated uses of “VLA,” generic capability work without a responsible-deployment contribution, untraceable secondary sources, and duplicate or pre-rename versions of the same paper.
+## 4. Validate and publish once
 
-## 4. Add or Update Metadata
-
-Edit `data/papers.json`; do not hand-edit generated README or documentation pages.
-
-For every new or updated record:
-
-- use a stable, unique `id`
-- store the official title and first-author surname
-- collect `first_submission_date` and `first_submission_source` as defined in `docs/reference/metadata-schema.md`; use the arXiv v1 UTC date, never the revision, publication, or catalog-addition date
-- use the confirmed venue and venue year; use `arXiv` when acceptance is unverified
-- use a primary `paper_url` and only an official or author-maintained `code_url`
-- assign one primary `section` and one valid `subsection`
-- assign `risks` only for empirically evaluated outcomes
-- use the controlled structured `threat_model` from `docs/reference/taxonomy.md`; `mechanism` is technique-oriented — assign the attack technique or failure mode the paper's method or experiments actually establish, never from the title alone, allow multiple labels only when each is independently evidenced, and use an empty `mechanism` list (not an unsupported guess) when no concrete technique is established. `target` is objective-oriented — assign from the paper's explicitly stated attack, defense, or evaluation objective and experimental/evaluation design, not by inferring internal causal effects, and not by carrying over `surface` (the delivery channel) or `consequence` (the result) as if either were the target. Prefer a specific target when the paper's objective clearly supports one; `vla-policy` remains correct when the overall policy or its task-level behavior is explicitly the subject and no narrower target is established. Allow multiple targets only when the paper explicitly attacks, defends, or evaluates more than one. Set `threat_model.curation_status` to the actual evidence depth, same scale as the extensions below.
-- audit secondary defense contributions regardless of primary section; add `defense` when the paper proposes or experimentally evaluates a substantive mitigation, and omit it after review when no such contribution exists
-- exclude discussion-only recommendations, future-work suggestions, and survey coverage from `defense`
-- use `tags` only for scientific descriptors that add information beyond structured fields; the list may be empty, must contain no duplicates, and must use values from `data/taxonomy/tags.json`; register new descriptors in the same change as first use
-- do not use tags for curation status, temporary audit work, or source references; put an external survey citation without a catalog record in `related_surveys` as an HTTPS URL
-- before removing a tag, verify that the same paper record contains an exact equivalent in the relevant structured field; do not remove a rare tag based on frequency alone
-- record `self-assessment-failure` in HOW / Reasoning, Planning & Execution Failure (`threat_model.mechanism` or supported `coverage.mechanisms`) only with evidence of an explicit completion report and an independent unmet task criterion; do not infer it from task failure or post-success overrun alone, and do not duplicate it in `tags`
-- set extension `curation_status` to the actual evidence depth
-
-Never publish personal research questions, unpublished interpretations, private notes, local paths, or content from private research folders.
-
-If a new section, subsection, or controlled value is genuinely required, update its validator and Japanese label in the same change. Do not leave translation warnings unresolved. When canonical taxonomy vocabulary changes, also align `docs/public/taxonomy.md` and `docs/public/taxonomy.ja.md`, following `docs/reference/README.md`. Edit those reader-oriented Markdown sources directly and regenerate their HTML with the documentation generator.
-
-## 5. Regenerate and Validate
-
-Verify each changed record by passing its ID explicitly:
+If no catalog/schema/taxonomy/template change exists, do not generate files, verify unchanged bibliography, commit or push. Otherwise verify each changed record explicitly (skip bibliography only when no record changed):
 
 ```bash
-python3 scripts/verify_bibliography.py --id <record-id-1> --id <record-id-2>
-```
-
-Then run:
-
-```bash
+python3 scripts/verify_bibliography.py --id <changed-id>
 python3 scripts/validate_catalog.py
 python3 scripts/check_public_taxonomy.py
+python3 -m unittest discover -s tests
 python3 scripts/build_readme.py
 python3 scripts/build_readme.py --check
 python3 scripts/build_readme_ja.py
@@ -89,48 +48,16 @@ python3 scripts/build_visualizations.py --check
 python3 scripts/build_doc_pages.py
 python3 scripts/build_doc_pages.py --check
 python3 scripts/build_explorer.py
+python3 scripts/check_landscape_consistency.py
 git diff --check
 ```
 
-Bibliography verification is fail-closed. A title, first-author, year, initial-submission-date, identity, retrieval, or parsing failure blocks publication for that record. Do not treat an unavailable primary source as verified.
+Run this suite once after changes settle. Repeat only for subsequent changes, failures, or remote integration. A failed retrieval, identity, bibliography, validator, translation or generated-output check is not a pass. Review changed risk/threat/defense annotations, placement, duplicate identities, paper/code links, matching English/Japanese counts, and absence of local paths or unpublished material.
 
-Review generated outputs for duplicate records, correct placement, working paper and code links, evidence-supported risks and threat metadata, matching English/Japanese counts, current visualizations, untranslated values, English-only public catalog fields, and absence of private information or local paths.
+Immediately before commit/push confirm expected fetch/push remote `https://github.com/futakw/Awesome-Physical-AI-Safety.git`, fresh `gh repo view futakw/Awesome-Physical-AI-Safety --json visibility` = `PUBLIC`, and unchanged remote main. Never change visibility, force-push, rewrite history, or discard unrelated work. If upstream advanced, integrate safely and rerun affected gates. Commit only this work; otherwise report the blocker. No literature change means no curation commit.
 
-## 6. Commit and Push
+## 5. Finish and report, including empty or failed runs
 
-The repository is publicly operated. Before pushing, confirm:
+Always report reviewed N/20, additions, updates, holds, exclusions, and both lanes' pending/held/total counts from the updated queue snapshot. Missing/unreadable queue means **unknown/read failed**, never zero. Include coverage, added titles or links to their single source-backed notes, catalog count, changed-record bibliography/generation results and commit/push result or blocker. Release the guard with success or failed, then capture its final report; archive the same counts. If setup/locking fails, call read-only `report` and still emit an end report.
 
-```bash
-git remote -v
-gh repo view futakw/Awesome-Physical-AI-Safety --json visibility
-```
-
-The expected repository is `futakw/Awesome-Physical-AI-Safety`, and visibility must be `PUBLIC`. Do not change repository visibility automatically.
-
-Commit and push only when:
-
-- every changed record passes primary-source bibliography verification
-- catalog, README, documentation, visualization, explorer, and diff checks pass
-- metadata identity and scope are certain
-- no private or local information is present
-- only changes belonging to the current work can be committed safely
-- the remote and visibility are expected
-
-Do not force-push, rewrite history, disable validation, discard unrelated changes, or publish around authentication, metadata, or primary-source failures. If safe isolation is not possible, leave the changes local and report the blocker.
-
-If no verified new or materially revised record exists, leave the public repository unchanged and do not create a commit.
-
-## 7. Report
-
-Report:
-
-- search date and coverage window
-- new records and material revisions
-- added or updated titles
-- held or excluded candidates and reasons
-- catalog count
-- bibliography and validation results
-- generated-output and translation status
-- commit hash and push result, or the exact blocker
-
-An empty update is valid when the search and its evidence are recorded.
+Use PAPERS entries of 3–5 lines per paper/change, DASHBOARD at most three current findings, and a timestamped append-only archive block with IDs, decisions, counts, short reasons and publication result. Do not copy long summaries between them or copy queue contents into memory. Keep research-hub writes to the configured allowlist. Work directly by default; if necessary delegate at most one isolated subagent with only candidate IDs, sources and relevant rules, without conversation-history inheritance.
