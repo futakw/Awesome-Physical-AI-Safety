@@ -36009,5 +36009,626 @@
       ],
       "curation_status": "paper-verified"
     }
+  },
+  {
+    "id": "arxiv-2610-31841",
+    "title": "FORCA: A Force-Aware Coding Agent for Contact-Rich Robot Manipulation",
+    "first_author": "Tan et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.31841",
+    "code_url": "https://tanoom.github.io/forca/",
+    "section": "defenses",
+    "subsection": "Multimodal Perception and Physical Safeguards",
+    "scope": "robotics",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "proprioception",
+        "action-interface"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-26",
+    "first_submission_date": "2026-10-22",
+    "first_submission_source": "https://arxiv.org/abs/2610.31841",
+    "defense": {
+      "mechanism": [
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2610-31845",
+    "title": "EgoForesight: Effectively Scaling Policy Learning with Noisy Egocentric Actions",
+    "first_author": "Zhang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.31845",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety-Aligned and Robust Policy Training",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "training"
+      ],
+      "mechanism": [],
+      "surface": [
+        "model-supply-chain"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-26",
+    "first_submission_date": "2026-10-22",
+    "first_submission_source": "https://arxiv.org/abs/2610.31845",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2610-31859",
+    "title": "Full-Weight VLA Fine-Tuning Without an fp32 Master Copy Silently Erases Most Updates",
+    "first_author": "Singh et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.31859",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety-Aligned and Robust Policy Training",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "training"
+      ],
+      "mechanism": [],
+      "surface": [
+        "model-supply-chain"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-26",
+    "first_submission_date": "2026-10-22",
+    "first_submission_source": "https://arxiv.org/abs/2610.31859",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2610-32102",
+    "title": "Coupling Execution Horizon and Sampling Depth in Flow-Matching VLA Policies",
+    "first_author": "Yang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.32102",
+    "code_url": "https://jiabingyang01.github.io/Horizon-Depth-VLA/",
+    "section": "ood-generalization",
+    "subsection": "Reliability-Oriented Policy Refinement",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-26",
+    "first_submission_date": "2026-10-23",
+    "first_submission_source": "https://arxiv.org/abs/2610.32102",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2610-32208",
+    "title": "Do VLAs Know They Will Fail? Interpretable Success and Failure Patterns in Physical AI Systems",
+    "first_author": "Rogers et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.32208",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "vla",
+    "risks": [],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "reasoning-representation"
+      ],
+      "target": [
+        "runtime-monitor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-26",
+    "first_submission_date": "2026-10-23",
+    "first_submission_source": "https://arxiv.org/abs/2610.32208",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2610-32348",
+    "title": "LogLook: Execution-Grounded Memory for Frontier-Model Robot Planners",
+    "first_author": "Jiang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.32348",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "embodied-ai",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "planning-error"
+      ],
+      "surface": [
+        "context-memory-retrieval"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-26",
+    "first_submission_date": "2026-10-23",
+    "first_submission_source": "https://arxiv.org/abs/2610.32348",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "planning-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2610-32633",
+    "title": "Natural-Language to Nav2: Operational Policies for Costmap-Based Navigation",
+    "first_author": "Chae et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.32633",
+    "code_url": "https://a56239637-dot.github.io/Natural-Language-to-Nav2-Project-Page/",
+    "section": "defenses",
+    "subsection": "Safety Requirements and Assurance",
+    "scope": "robotics",
+    "risks": [],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "semantic-misalignment"
+      ],
+      "surface": [
+        "user-instruction",
+        "task-planning"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "policy-violation"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-26",
+    "first_submission_date": "2026-10-23",
+    "first_submission_source": "https://arxiv.org/abs/2610.32633",
+    "defense": {
+      "mechanism": [
+        "input-filtering"
+      ],
+      "defends_against": [
+        "semantic-misalignment"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2610-32888",
+    "title": "When Human Corrections Travel: Safety in Federated VLA Adaptation",
+    "first_author": "Subbaraju et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.32888",
+    "code_url": null,
+    "section": "surveys",
+    "subsection": "Position Papers and Research Agendas",
+    "scope": "vla",
+    "risks": [],
+    "threat_model": {
+      "kind": "survey",
+      "curation_status": "abstract-verified",
+      "coverage": {
+        "lifecycles": [
+          "training",
+          "inference"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "model-supply-chain",
+          "user-instruction"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-26",
+    "first_submission_date": "2026-10-23",
+    "first_submission_source": "https://arxiv.org/abs/2610.32888"
+  },
+  {
+    "id": "arxiv-2610-32941",
+    "title": "If at First You Don't Succeed, Backtrack: Lightweight Recovery for Frozen VLAs",
+    "first_author": "Landeg et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.32941",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure",
+        "recovery-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-26",
+    "first_submission_date": "2026-10-23",
+    "first_submission_source": "https://arxiv.org/abs/2610.32941",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2606-26588",
+    "title": "Inference-Time Robot Behavior Steering through Physically-Aware Reconfiguration of Task-Structure",
+    "first_author": "Pan et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2606.26588",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Representation Steering and Inference-Time Defense",
+    "scope": "embodied-ai",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "semantic-misalignment"
+      ],
+      "surface": [
+        "user-instruction",
+        "task-planning"
+      ],
+      "target": [
+        "task-planner",
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-26",
+    "first_submission_date": "2026-06-25",
+    "first_submission_source": "https://arxiv.org/abs/2606.26588",
+    "defense": {
+      "mechanism": [
+        "representation-steering"
+      ],
+      "defends_against": [
+        "semantic-misalignment"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2608-24885",
+    "title": "Do Robotic World Models Really Follow Actions? Diagnosing and Aligning Action-Conditioned Generation for Policy Learning",
+    "first_author": "Chen et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2608.24885",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety-Aligned and Robust Policy Training",
+    "scope": "robotics",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "action-interface",
+        "world-state"
+      ],
+      "target": [
+        "world-state"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-26",
+    "first_submission_date": "2026-08-25",
+    "first_submission_source": "https://arxiv.org/abs/2608.24885",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2610-00854",
+    "title": "Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena",
+    "first_author": "Huang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.00854",
+    "code_url": "https://embodied-agent-arena.github.io/embodied-agent-arena/",
+    "section": "benchmarks",
+    "subsection": "Task and Physical Safety",
+    "scope": "embodied-ai",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "curation_status": "paper-verified",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "planning-error",
+          "execution-error"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "task-planning",
+          "action-interface"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-26",
+    "first_submission_date": "2026-10-01",
+    "first_submission_source": "https://arxiv.org/abs/2610.00854"
+  },
+  {
+    "id": "arxiv-2610-32069",
+    "title": "DriveMind: Mind-Evolving Belief Tracking for Closed-Loop Autonomous Driving",
+    "first_author": "Shi et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.32069",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Driving Robustness and Generalization",
+    "scope": "driving",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [],
+      "surface": [
+        "world-state"
+      ],
+      "target": [
+        "reasoning-process"
+      ],
+      "consequence": [
+        "task-failure",
+        "collision"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-26",
+    "first_submission_date": "2026-10-23",
+    "first_submission_source": "https://arxiv.org/abs/2610.32069",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2610-32431",
+    "title": "When to Stop Penalizing Actions? Martingale GRPO for VLA Reinforcement Learning",
+    "first_author": "Zhao et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.32431",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety-Aligned and Robust Policy Training",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "training"
+      ],
+      "mechanism": [],
+      "surface": [
+        "model-supply-chain"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-26",
+    "first_submission_date": "2026-10-23",
+    "first_submission_source": "https://arxiv.org/abs/2610.32431",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [],
+      "curation_status": "paper-verified"
+    }
   }
 ]
