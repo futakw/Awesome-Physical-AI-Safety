@@ -36630,5 +36630,736 @@
       "defends_against": [],
       "curation_status": "paper-verified"
     }
+  },
+  {
+    "id": "zhang-2026-worldfailbench",
+    "title": "WorldFailBench: Do World Models Understand Policy Failures?",
+    "first_author": "Zhang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.33565",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Failure Detection and Recovery",
+    "scope": "world-model",
+    "risks": [],
+    "threat_model": {
+      "kind": "evaluation",
+      "curation_status": "abstract-verified",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "execution-error"
+        ],
+        "surfaces": [
+          "world-state",
+          "action-interface"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-27",
+    "first_submission_date": "2026-10-24",
+    "first_submission_source": "https://arxiv.org/abs/2610.33565"
+  },
+  {
+    "id": "mabrok-2026-open-world-law-to-action",
+    "title": "Open-World Law-to-Action: Vision-Language Priors and Touch for Parts with Hidden Physics",
+    "first_author": "Mabrok et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.33705",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Uncertainty, Abstention, and Human Oversight",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "world-state",
+        "physical-semantic-environment"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-27",
+    "first_submission_date": "2026-10-24",
+    "first_submission_source": "https://arxiv.org/abs/2610.33705",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "yu-2026-scan2instruction-realnav",
+    "title": "One Scan is Enough: Demonstration-Free Adaptation for Language-Guided Navigation",
+    "first_author": "Yu et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.33794",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "OOD and Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "visual-perception",
+        "user-instruction"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-27",
+    "first_submission_date": "2026-10-24",
+    "first_submission_source": "https://arxiv.org/abs/2610.33794",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "thien-2026-roboworm",
+    "title": "RoboWorM: Evaluating Movement Realism, Consistency and Acceleration Affects in Embodied Video World Models",
+    "first_author": "Thien et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.33807",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Evaluation Infrastructure",
+    "scope": "world-model",
+    "risks": [],
+    "threat_model": {
+      "kind": "evaluation",
+      "curation_status": "abstract-verified",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "execution-error"
+        ],
+        "surfaces": [
+          "world-state",
+          "action-interface"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-27",
+    "first_submission_date": "2026-10-24",
+    "first_submission_source": "https://arxiv.org/abs/2610.33807"
+  },
+  {
+    "id": "wang-2026-roboduo",
+    "title": "RoboDuo: Attempt, Check and Atomic Recovery through Code for Vision-Language-Action Models",
+    "first_author": "Wang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.34108",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "execution-control"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure",
+        "recovery-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-27",
+    "first_submission_date": "2026-10-25",
+    "first_submission_source": "https://arxiv.org/abs/2610.34108",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "kwon-2026-triage-vla",
+    "title": "TRIAGE: Efficient Vision-Language-Action Inference Needs Both Reuse and Pruning",
+    "first_author": "Kwon et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.34519",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "System and Communication Defenses",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "reasoning-representation"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-27",
+    "first_submission_date": "2026-10-25",
+    "first_submission_source": "https://arxiv.org/abs/2610.34519",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "cui-2026-world-modeling-action-learning",
+    "title": "What Does World Modeling Actually Improve in Robot Action Learning?",
+    "first_author": "Cui et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.34593",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "OOD and Generalization",
+    "scope": "world-model",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "curation_status": "abstract-verified",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "distribution-shift"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "world-state"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-27",
+    "first_submission_date": "2026-10-25",
+    "first_submission_source": "https://arxiv.org/abs/2610.34593"
+  },
+  {
+    "id": "mao-2026-robotagentbench",
+    "title": "RobotAgentBench: Towards Open-world Robot Autonomy",
+    "first_author": "Mao et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.34649",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Failure Detection and Recovery",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "curation_status": "abstract-verified",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "execution-error",
+          "planning-error",
+          "distribution-shift"
+        ],
+        "surfaces": [
+          "task-planning",
+          "execution-control"
+        ],
+        "consequences": [
+          "task-failure",
+          "recovery-failure"
+        ]
+      }
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-27",
+    "first_submission_date": "2026-10-26",
+    "first_submission_source": "https://arxiv.org/abs/2610.34649"
+  },
+  {
+    "id": "bae-2026-osma-bench",
+    "title": "Benchmarking Obstacle-Conditioned Safety in Household Robot Navigation",
+    "first_author": "Bae et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.34674",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Task and Physical Safety",
+    "scope": "vla",
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "semantic-misalignment"
+      ],
+      "surface": [
+        "physical-semantic-environment",
+        "action-interface"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "unsafe-motion"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-27",
+    "first_submission_date": "2026-10-26",
+    "first_submission_source": "https://arxiv.org/abs/2610.34674",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "semantic-misalignment"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "liu-2026-labference",
+    "title": "Labference: Benchmarking the Reasoning-Action Connection in Robotic Laboratories",
+    "first_author": "Liu et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.35252",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Failure Detection and Recovery",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "curation_status": "abstract-verified",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "planning-error",
+          "execution-error"
+        ],
+        "surfaces": [
+          "task-planning",
+          "execution-control"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-27",
+    "first_submission_date": "2026-10-26",
+    "first_submission_source": "https://arxiv.org/abs/2610.35252"
+  },
+  {
+    "id": "yu-2026-robodoctor",
+    "title": "RoboDoctor: Training-Free Recursive Self-Improvement for Robot Policies",
+    "first_author": "Yu et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.35604",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "planning-error",
+        "execution-error"
+      ],
+      "surface": [
+        "task-planning",
+        "execution-control",
+        "context-memory-retrieval"
+      ],
+      "target": [
+        "task-planner",
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-27",
+    "first_submission_date": "2026-10-26",
+    "first_submission_source": "https://arxiv.org/abs/2610.35604",
+    "defense": {
+      "mechanism": [
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "planning-error",
+        "execution-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "liang-2026-fisrf",
+    "title": "FISRF: Flexible Instructional Scaffolding Reflection Framework for Robotics Task Planning with Large Language Model",
+    "first_author": "Liang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.35686",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "planning-error"
+      ],
+      "surface": [
+        "task-planning",
+        "context-memory-retrieval"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-27",
+    "first_submission_date": "2026-10-26",
+    "first_submission_source": "https://arxiv.org/abs/2610.35686",
+    "defense": {
+      "mechanism": [
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "planning-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "yao-2026-ebench-frontier-agent",
+    "title": "Profiling a Frontier Agent with EBench: From Direct Control to Harness with Policy",
+    "first_author": "Yao et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.35832",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "curation_status": "abstract-verified",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "planning-error",
+          "execution-error",
+          "distribution-shift"
+        ],
+        "surfaces": [
+          "task-planning",
+          "execution-control"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-27",
+    "first_submission_date": "2026-10-26",
+    "first_submission_source": "https://arxiv.org/abs/2610.35832"
+  },
+  {
+    "id": "li-2025-industrynav",
+    "title": "IndustryNav: Evaluating Spatial Reasoning and Safety of Embodied Agents in Dynamic Industrial Navigation",
+    "first_author": "Li et al.",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2511.17384",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Task and Physical Safety",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "curation_status": "abstract-verified",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "distribution-shift",
+          "execution-error"
+        ],
+        "surfaces": [
+          "physical-semantic-environment",
+          "execution-control"
+        ],
+        "consequences": [
+          "task-failure",
+          "collision"
+        ]
+      }
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-27",
+    "first_submission_date": "2025-11-21",
+    "first_submission_source": "https://arxiv.org/abs/2511.17384"
+  },
+  {
+    "id": "grant-2026-action-atlas",
+    "title": "Not All Features Are Created Equal: A Mechanistic Study of Vision-Language-Action Models",
+    "first_author": "Grant et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2603.19233",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Representation and Language-Action Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "curation_status": "abstract-verified",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "distribution-shift",
+          "representation-manipulation"
+        ],
+        "surfaces": [
+          "reasoning-representation",
+          "physical-semantic-environment"
+        ],
+        "consequences": [
+          "task-failure",
+          "targeted-action"
+        ]
+      }
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-27",
+    "first_submission_date": "2026-03-19",
+    "first_submission_source": "https://arxiv.org/abs/2603.19233"
+  },
+  {
+    "id": "lyu-2026-sentryvla",
+    "title": "SentryVLA: Uncertainty-Guided Action Selection and State Monitoring for Vision-Language-Action Robotic Control",
+    "first_author": "Lyu et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2604.16677",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "vla",
+    "risks": [],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "reasoning-representation",
+        "action-interface"
+      ],
+      "target": [
+        "vla-policy",
+        "runtime-monitor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-27",
+    "first_submission_date": "2026-04-17",
+    "first_submission_source": "https://arxiv.org/abs/2604.16677",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "schroder-2026-shrimp",
+    "title": "SHRIMP: Iterative Refinement of Robot Task Plans",
+    "first_author": "Schroder et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2608.08884",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Uncertainty, Abstention, and Human Oversight",
+    "scope": "llm-robot",
+    "risks": [],
+    "threat_model": {
+      "kind": "evaluation",
+      "curation_status": "abstract-verified",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "instruction-ambiguity"
+        ],
+        "surfaces": [
+          "user-instruction",
+          "task-planning"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-27",
+    "first_submission_date": "2026-08-09",
+    "first_submission_source": "https://arxiv.org/abs/2608.08884",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "instruction-ambiguity"
+      ],
+      "curation_status": "abstract-verified"
+    }
   }
 ]
