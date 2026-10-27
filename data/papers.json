@@ -37361,5 +37361,473 @@
       ],
       "curation_status": "abstract-verified"
     }
+  },
+  {
+    "id": "kwon-2026-one-sentence-vla-correction",
+    "title": "What Can One Sentence Fix? A Failure Taxonomy and a Minimal Language Correction for Frozen VLA Policies",
+    "first_author": "Kwon et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2608.29967",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "action-interface"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-27",
+    "first_submission_date": "2026-08-30",
+    "first_submission_source": "https://arxiv.org/abs/2608.29967",
+    "defense": {
+      "mechanism": [
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "dong-2026-forcedelta-vla",
+    "title": "ForceDelta-VLA: Distilling Force-Conditioned Action Corrections for Contact-Rich Manipulation",
+    "first_author": "Dong et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2609.18242",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety-Aligned and Robust Policy Training",
+    "scope": "vla",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "proprioception",
+        "action-interface"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "task-failure",
+        "unsafe-motion"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-27",
+    "first_submission_date": "2026-09-16",
+    "first_submission_source": "https://arxiv.org/abs/2609.18242",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "zhang-2026-steptrigger",
+    "title": "StepTrigger: Contact-State-Triggered Backdoor Attacks on VLM-Powered Legged Robots",
+    "first_author": "Zhang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2609.26131",
+    "code_url": null,
+    "section": "training-attacks",
+    "subsection": "Backdoors and Data Poisoning",
+    "scope": "llm-robot",
+    "risks": [
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "backdoor"
+      ],
+      "surface": [
+        "model-supply-chain",
+        "proprioception"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "targeted-action"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-27",
+    "first_submission_date": "2026-08-07",
+    "first_submission_source": "https://arxiv.org/abs/2609.26131"
+  },
+  {
+    "id": "duan-2026-worldoracle",
+    "title": "WorldOracle: Benchmarking Action-Conditioned World Models against Real-World Executions",
+    "first_author": "Duan et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.18826",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Evaluation Infrastructure",
+    "scope": "world-model",
+    "risks": [],
+    "threat_model": {
+      "kind": "evaluation",
+      "curation_status": "abstract-verified",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "execution-error"
+        ],
+        "surfaces": [
+          "world-state",
+          "action-interface"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-27",
+    "first_submission_date": "2026-10-13",
+    "first_submission_source": "https://arxiv.org/abs/2610.18826"
+  },
+  {
+    "id": "zheng-2026-actecc",
+    "title": "ActECC: Action Chunk Temporal Harnessing for Edge-Cloud Collaborative VLA Inference System",
+    "first_author": "Zheng et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2603.07949",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "System and Communication Defenses",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "action-interface",
+        "middleware-network"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-27",
+    "first_submission_date": "2026-03-09",
+    "first_submission_source": "https://arxiv.org/abs/2603.07949",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "vo-2026-beyond-behaviour-stimulus-response",
+    "title": "Beyond Behaviour: A Stimulus-Response Safety Evaluation of Vision-Language-Action Models",
+    "first_author": "Vo et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.34837",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Task and Physical Safety",
+    "scope": "vla",
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "curation_status": "paper-verified",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "visual-perception",
+          "action-interface"
+        ],
+        "consequences": [
+          "unsafe-motion"
+        ]
+      }
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-27",
+    "first_submission_date": "2026-10-26",
+    "first_submission_source": "https://arxiv.org/abs/2610.34837"
+  },
+  {
+    "id": "chen-2026-thinklocomanip",
+    "title": "ThinkLocoManip: A Whole-Body Control Agentic Harness for Legged Loco-Manipulation",
+    "first_author": "Chen et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.34370",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "planning-error",
+        "execution-error"
+      ],
+      "surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "target": [
+        "task-planner",
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-27",
+    "first_submission_date": "2026-10-25",
+    "first_submission_source": "https://arxiv.org/abs/2610.34370",
+    "defense": {
+      "mechanism": [
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "planning-error",
+        "execution-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "tu-2026-retronav",
+    "title": "RetroNav: Scene-Grounded Retrospection and Retry for Self-Evolving Lifelong Navigation",
+    "first_author": "Tu et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.35172",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "planning-error"
+      ],
+      "surface": [
+        "task-planning",
+        "context-memory-retrieval"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-27",
+    "first_submission_date": "2026-10-26",
+    "first_submission_source": "https://arxiv.org/abs/2610.35172",
+    "defense": {
+      "mechanism": [
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "planning-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "gao-2026-embodiedlab",
+    "title": "EmbodiedLab: Benchmarking Embodied Agents That Act to Know",
+    "first_author": "Gao et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.35385",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Failure Detection and Recovery",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "curation_status": "abstract-verified",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "execution-error"
+        ],
+        "surfaces": [
+          "execution-control",
+          "task-planning"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-27",
+    "first_submission_date": "2026-10-26",
+    "first_submission_source": "https://arxiv.org/abs/2610.35385"
+  },
+  {
+    "id": "tian-2026-east-digital-twin-safety",
+    "title": "EAST: Embodied AI Safety Testing via Systematic Fault Injection in Digital Twins",
+    "first_author": "Tian et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.34358",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Task and Physical Safety",
+    "scope": "vla",
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "curation_status": "paper-verified",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "execution-error"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "user-instruction",
+          "physical-semantic-environment",
+          "action-interface",
+          "execution-control"
+        ],
+        "consequences": [
+          "unsafe-success"
+        ]
+      }
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-27",
+    "first_submission_date": "2026-10-25",
+    "first_submission_source": "https://arxiv.org/abs/2610.34358"
+  },
+  {
+    "id": "hana-2026-cosmos-compass-intralogistics",
+    "title": "Physical AI for Intralogistics: Benchmarking the NVIDIA Sim-to-Real Ecosystem for Cosmos-Enhanced COMPASS Navigation on Industrial Mobile Robots",
+    "first_author": "Hana et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.28432",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "OOD and Generalization",
+    "scope": "world-model",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "physical-semantic-environment",
+        "visual-perception"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-27",
+    "first_submission_date": "2026-10-20",
+    "first_submission_source": "https://arxiv.org/abs/2610.28432"
   }
 ]
