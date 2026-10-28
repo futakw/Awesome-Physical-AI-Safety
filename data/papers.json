@@ -37829,5 +37829,288 @@
     "catalogued_date": "2026-10-27",
     "first_submission_date": "2026-10-20",
     "first_submission_source": "https://arxiv.org/abs/2610.28432"
+  },
+  {
+    "id": "li-2026-graft",
+    "title": "GRAFT: Geometry-Aware Residual Adaptation for Foundation Trackers",
+    "first_author": "Li et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.36507",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "OOD and Generalization",
+    "scope": "robot-policy",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "world-state"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-28",
+    "first_submission_date": "2026-10-27",
+    "first_submission_source": "https://arxiv.org/abs/2610.36507"
+  },
+  {
+    "id": "quang-2026-retrieve-to-act",
+    "title": "Retrieve to Act: Motion Primitive Graph Retrieval for Robust VLA Execution",
+    "first_author": "Quang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.37215",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Representation Steering and Inference-Time Defense",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "visual-perception",
+        "proprioception"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-28",
+    "first_submission_date": "2026-10-27",
+    "first_submission_source": "https://arxiv.org/abs/2610.37215",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "zou-2026-vla-stem",
+    "title": "VLA-Stem: A Lightweight Safety Mechanism for Vision-Language-Action Models via Reinforcement Learning",
+    "first_author": "Zou et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.37378",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Multimodal Perception and Physical Safeguards",
+    "scope": "vla",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "world-state",
+        "execution-control"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure",
+        "collision"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-28",
+    "first_submission_date": "2026-10-27",
+    "first_submission_source": "https://arxiv.org/abs/2610.37378",
+    "defense": {
+      "mechanism": [
+        "action-shielding"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "liufu-2026-repo-vla",
+    "title": "RePO-VLA: Recovery-Driven Policy Optimization for Vision-Language-Action Models",
+    "first_author": "Liufu et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2605.09410",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety-Aligned and Robust Policy Training",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "execution-control"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure",
+        "recovery-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-28",
+    "first_submission_date": "2026-05-10",
+    "first_submission_source": "https://arxiv.org/abs/2605.09410",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "xu-2026-gtp-fa",
+    "title": "Grasp-Then-Plan with Failure Attribution: A Closed Two-Stage Framework for Precise and Generalizable Robotic Manipulation",
+    "first_author": "Xu et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2606.03385",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "planning-error",
+        "execution-error"
+      ],
+      "surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "target": [
+        "task-planner",
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-28",
+    "first_submission_date": "2026-06-02",
+    "first_submission_source": "https://arxiv.org/abs/2606.03385",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "planning-error",
+        "execution-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "marra-2026-temporal-tactile-handover",
+    "title": "Temporal Tactile Encoding and Compliance for Intent-Aware Robot-to-Human Bimanual Handover",
+    "first_author": "Marra et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2609.05282",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Multimodal Perception and Physical Safeguards",
+    "scope": "vla",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "proprioception",
+        "execution-control"
+      ],
+      "target": [
+        "vla-policy",
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure",
+        "unsafe-motion"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-28",
+    "first_submission_date": "2026-09-04",
+    "first_submission_source": "https://arxiv.org/abs/2609.05282",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "paper-verified"
+    }
   }
 ]
