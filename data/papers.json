@@ -38112,5 +38112,679 @@
       ],
       "curation_status": "paper-verified"
     }
+  },
+  {
+    "id": "hammele-2026-inference-settings",
+    "title": "What Actually Matters? A Paired Evaluation of Inference Settings for $\\pi_{0.5}$ on BEHAVIOR-1K",
+    "first_author": "Hammele et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.37917",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "curation_status": "abstract-verified",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "distribution-shift"
+        ],
+        "surfaces": [
+          "execution-control",
+          "physical-semantic-environment"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-30",
+    "first_submission_date": "2026-10-27",
+    "first_submission_source": "https://arxiv.org/abs/2610.37917"
+  },
+  {
+    "id": "hong-2026-spt",
+    "title": "Self-Labeled Preference Transfer for Steerable Robot Manipulation",
+    "first_author": "Hong et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.38000",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety-Aligned and Robust Policy Training",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift",
+        "semantic-misalignment"
+      ],
+      "surface": [
+        "user-instruction",
+        "action-interface"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-30",
+    "first_submission_date": "2026-10-27",
+    "first_submission_source": "https://arxiv.org/abs/2610.38000",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "distribution-shift",
+        "semantic-misalignment"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "liu-2026-elevate",
+    "title": "ELEVATE: Agentic Controller Acquisition from Task Failure for Quadrupedal Manipulation",
+    "first_author": "Liu et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.38388",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "execution-control",
+        "task-planning"
+      ],
+      "target": [
+        "robot-executor",
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-30",
+    "first_submission_date": "2026-10-28",
+    "first_submission_source": "https://arxiv.org/abs/2610.38388",
+    "defense": {
+      "mechanism": [
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "khalastchi-2026-hri-lessons",
+    "title": "When \"No Worries\" Went Wrong: HRI Lessons for Foundation-Model Robots",
+    "first_author": "Khalastchi et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.38400",
+    "code_url": null,
+    "section": "surveys",
+    "subsection": "Privacy, Fairness, and Human-Robot Trust",
+    "scope": "hri",
+    "risks": [],
+    "threat_model": {
+      "kind": "survey",
+      "curation_status": "abstract-verified",
+      "coverage": {
+        "lifecycles": [
+          "inference",
+          "system"
+        ],
+        "mechanisms": [
+          "planning-error",
+          "execution-error",
+          "semantic-misalignment"
+        ],
+        "surfaces": [
+          "task-planning",
+          "execution-control",
+          "physical-semantic-environment"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-30",
+    "first_submission_date": "2026-10-28",
+    "first_submission_source": "https://arxiv.org/abs/2610.38400"
+  },
+  {
+    "id": "zhai-2026-atomtree",
+    "title": "AtomTree: A Hierarchical Framework for State-Aware Embodied Instruction Following with LLMs",
+    "first_author": "Zhai et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.38744",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "planning-error"
+      ],
+      "surface": [
+        "world-state",
+        "task-planning"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-30",
+    "first_submission_date": "2026-10-28",
+    "first_submission_source": "https://arxiv.org/abs/2610.38744",
+    "defense": {
+      "mechanism": [
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "planning-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "zou-2026-proloop",
+    "title": "ProLoop: Progress-Aware Closed-Loop Framework via Structured State Relations for Long-Horizon Robotic Task Planning",
+    "first_author": "Zou et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.39319",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "planning-error",
+        "execution-error"
+      ],
+      "surface": [
+        "world-state",
+        "execution-control"
+      ],
+      "target": [
+        "task-planner",
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-30",
+    "first_submission_date": "2026-10-29",
+    "first_submission_source": "https://arxiv.org/abs/2610.39319",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "planning-error",
+        "execution-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "zhang-2026-utility-wam",
+    "title": "Utility-WAM: Correcting Future-Induced Action Changes",
+    "first_author": "Zhang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.39367",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety-Aligned and Robust Policy Training",
+    "scope": "world-model",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "reasoning-representation"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-30",
+    "first_submission_date": "2026-10-29",
+    "first_submission_source": "https://arxiv.org/abs/2610.39367",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "zhang-2026-coract",
+    "title": "From Reasoning to Action: Consequence-Grounded Alignment for Vision-Language-Action Models",
+    "first_author": "Zhang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.39543",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety-Aligned and Robust Policy Training",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "semantic-misalignment"
+      ],
+      "surface": [
+        "reasoning-representation",
+        "action-interface"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-30",
+    "first_submission_date": "2026-10-29",
+    "first_submission_source": "https://arxiv.org/abs/2610.39543",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "semantic-misalignment"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "zheng-2026-foundation-model-assurance-stack",
+    "title": "Assuring Learning-Enabled Cyber-Physical Systems with Foundation Models: A Neuro-Symbolic Agenda for Testing, Verification, and Runtime Assurance",
+    "first_author": "Zheng et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.39547",
+    "code_url": null,
+    "section": "surveys",
+    "subsection": "Position Papers and Research Agendas",
+    "scope": "physical-ai",
+    "risks": [],
+    "threat_model": {
+      "kind": "survey",
+      "curation_status": "abstract-verified",
+      "coverage": {
+        "lifecycles": [
+          "training",
+          "inference",
+          "system"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "task-planning",
+          "execution-control",
+          "world-state"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-30",
+    "first_submission_date": "2026-10-29",
+    "first_submission_source": "https://arxiv.org/abs/2610.39547"
+  },
+  {
+    "id": "ceder-2026-tree-recovery",
+    "title": "Teaching a Tree to Recover: Online Distillation of an LLM Supervisor with Counterfactual Replay",
+    "first_author": "Ceder et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.39775",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "planning-error"
+      ],
+      "surface": [
+        "task-planning"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "action-freezing",
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-30",
+    "first_submission_date": "2026-10-29",
+    "first_submission_source": "https://arxiv.org/abs/2610.39775",
+    "defense": {
+      "mechanism": [
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "planning-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "wu-2026-pasa-kv",
+    "title": "PASA-KV: Attacking Action-Facing Visual Routes in World Action Models",
+    "first_author": "Wu et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.39816",
+    "code_url": null,
+    "section": "inference-attacks",
+    "subsection": "Planning, Action, and Trajectory Manipulation",
+    "scope": "world-model",
+    "risks": [],
+    "threat_model": {
+      "kind": "adversarial",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "representation-manipulation"
+      ],
+      "surface": [
+        "reasoning-representation"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-30",
+    "first_submission_date": "2026-10-29",
+    "first_submission_source": "https://arxiv.org/abs/2610.39816"
+  },
+  {
+    "id": "seo-2026-coc-cfg",
+    "title": "How Much Should a VLA Trust Its Reasoning? Step-Level Guidance as a Measured Action-Value Function",
+    "first_author": "Seo et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.40002",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Representation Steering and Inference-Time Defense",
+    "scope": "autonomous-driving",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "semantic-misalignment"
+      ],
+      "surface": [
+        "reasoning-representation"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-30",
+    "first_submission_date": "2026-10-29",
+    "first_submission_source": "https://arxiv.org/abs/2610.40002",
+    "defense": {
+      "mechanism": [
+        "representation-steering"
+      ],
+      "defends_against": [
+        "semantic-misalignment"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "lu-2026-logiv",
+    "title": "LOGIV: Graph-Verified Execution with Causal Local Repair for Long-Horizon Robot Tasks",
+    "first_author": "Lu et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.40016",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "planning-error",
+        "execution-error"
+      ],
+      "surface": [
+        "world-state",
+        "execution-control"
+      ],
+      "target": [
+        "task-planner",
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-30",
+    "first_submission_date": "2026-10-29",
+    "first_submission_source": "https://arxiv.org/abs/2610.40016",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "formal-verification",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "planning-error",
+        "execution-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "ma-2026-roboseed",
+    "title": "RoboSeed: Multidimensional Evaluation of Vision-Language-Action and World-Action Models: Capability, Resource Affordability, and Research Evidence",
+    "first_author": "Ma et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.40026",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Evaluation Infrastructure",
+    "scope": "vla",
+    "risks": [],
+    "threat_model": {
+      "kind": "evaluation",
+      "curation_status": "abstract-verified",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "action-interface",
+          "execution-control"
+        ],
+        "consequences": []
+      }
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-30",
+    "first_submission_date": "2026-10-29",
+    "first_submission_source": "https://arxiv.org/abs/2610.40026"
+  },
+  {
+    "id": "ma-2026-oracle-safe-flow",
+    "title": "Learning Safe Flow Matching Robot Policies from Binary Feasibility Oracles",
+    "first_author": "Ma et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.40075",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Multimodal Perception and Physical Safeguards",
+    "scope": "robot-foundation-model",
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "action-interface"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "collision",
+        "unsafe-motion"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-10-30",
+    "first_submission_date": "2026-10-29",
+    "first_submission_source": "https://arxiv.org/abs/2610.40075",
+    "defense": {
+      "mechanism": [
+        "action-shielding"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
   }
 ]
