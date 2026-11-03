@@ -39493,5 +39493,619 @@
       ],
       "curation_status": "abstract-verified"
     }
+  },
+  {
+    "id": "arxiv-2611-00155",
+    "title": "From Concepts to Actual Causes: Toward Closing the Concept-Malfunction Gap in Robot Foundation Models",
+    "first_author": "Ko et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.00155",
+    "code_url": null,
+    "section": "surveys",
+    "subsection": "Position Papers and Research Agendas",
+    "scope": "vla",
+    "risks": [],
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "reasoning-representation"
+        ],
+        "consequences": []
+      },
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-03",
+    "first_submission_date": "2026-10-30",
+    "first_submission_source": "https://arxiv.org/abs/2611.00155"
+  },
+  {
+    "id": "arxiv-2611-00158",
+    "title": "Scaling Trusted Autonomy: Towards Generally Capable Verifiable Robots",
+    "first_author": "Quartey et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.00158",
+    "code_url": null,
+    "section": "surveys",
+    "subsection": "Position Papers and Research Agendas",
+    "scope": "llm-robot",
+    "risks": [],
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "task-planning",
+          "world-state",
+          "execution-control"
+        ],
+        "consequences": []
+      },
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-03",
+    "first_submission_date": "2026-10-30",
+    "first_submission_source": "https://arxiv.org/abs/2611.00158"
+  },
+  {
+    "id": "arxiv-2611-00283",
+    "title": "Does Validation Loss Predict Real-Robot Success? Evidence from Four Imitation-Learning Policies on a Low-Cost Arm",
+    "first_author": "Cowling et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.00283",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "action-interface",
+          "execution-control"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      },
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-03",
+    "first_submission_date": "2026-10-30",
+    "first_submission_source": "https://arxiv.org/abs/2611.00283"
+  },
+  {
+    "id": "arxiv-2611-00634",
+    "title": "PREM: Prediction-Regulated Memory for Robot Manipulation",
+    "first_author": "Huang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.00634",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Representation and Language-Action Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "context-memory-retrieval",
+        "visual-perception"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-03",
+    "first_submission_date": "2026-10-31",
+    "first_submission_source": "https://arxiv.org/abs/2611.00634",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-01112",
+    "title": "Auriga Technical Report: A Task-Agnostic Agent Harness for Zero-Shot Embodied Manipulation",
+    "first_author": "Wang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.01112",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "execution-control"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-03",
+    "first_submission_date": "2026-10-31",
+    "first_submission_source": "https://arxiv.org/abs/2611.01112",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-01390",
+    "title": "Same Path, Less Time: Training-Free Fast Execution of Vision-Language-Action Models under Inference Latency",
+    "first_author": "Chen et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.01390",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "System and Communication Defenses",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [],
+      "surface": [
+        "execution-control"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-03",
+    "first_submission_date": "2026-11-01",
+    "first_submission_source": "https://arxiv.org/abs/2611.01390",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-02101",
+    "title": "When Delay Meets Drift: Physical Safety of Robot Foundation Models Is a Cross-Layer Problem",
+    "first_author": "Liu et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.02101",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Task and Physical Safety",
+    "scope": "vla",
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "distribution-shift"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "execution-control"
+        ],
+        "consequences": [
+          "policy-violation"
+        ]
+      },
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-03",
+    "first_submission_date": "2026-11-01",
+    "first_submission_source": "https://arxiv.org/abs/2611.02101"
+  },
+  {
+    "id": "arxiv-2611-02497",
+    "title": "RoboColosseum: Evaluating Physical Intelligence at Scale In-The-Wild",
+    "first_author": "Nguyen et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.02497",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
+    "scope": "mixed",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "physical-semantic-environment",
+          "execution-control"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      },
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-03",
+    "first_submission_date": "2026-11-02",
+    "first_submission_source": "https://arxiv.org/abs/2611.02497"
+  },
+  {
+    "id": "arxiv-2611-03103",
+    "title": "VLALagBench: Understanding When and Why VLA Inference Latency Matters",
+    "first_author": "Wen et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.03103",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "execution-control",
+          "physical-semantic-environment"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      },
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-03",
+    "first_submission_date": "2026-11-02",
+    "first_submission_source": "https://arxiv.org/abs/2611.03103"
+  },
+  {
+    "id": "arxiv-2611-03168",
+    "title": "Rollout then Recycle: 3,718 Labelled Real-Robot Episodes from Benchmarking 7 Policies on 12 Tasks",
+    "first_author": "Selvaraj et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.03168",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Evaluation Infrastructure",
+    "scope": "mixed",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "execution-control"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      },
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-03",
+    "first_submission_date": "2026-11-02",
+    "first_submission_source": "https://arxiv.org/abs/2611.03168"
+  },
+  {
+    "id": "arxiv-2611-03268",
+    "title": "VerifLM: Physically Verified Image-Edit-Guided Goal Pose Generation for Robotic Manipulation",
+    "first_author": "Chen et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.03268",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety Requirements and Assurance",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "planning-error"
+      ],
+      "surface": [
+        "task-planning"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-03",
+    "first_submission_date": "2026-11-02",
+    "first_submission_source": "https://arxiv.org/abs/2611.03268",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "planning-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-00394",
+    "title": "CalVLA: Shaping Native Confidence in Vision-Language-Action Policies with Outcome Supervision",
+    "first_author": "Godwin et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.00394",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Uncertainty, Abstention, and Human Oversight",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "uncertainty-miscalibration"
+      ],
+      "surface": [
+        "reasoning-representation"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-03",
+    "first_submission_date": "2026-10-30",
+    "first_submission_source": "https://arxiv.org/abs/2611.00394",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "uncertainty-miscalibration"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-01565",
+    "title": "Beyond Validation Loss: Coverage and Reliability Dynamics in Robot Policy Pretraining",
+    "first_author": "Sun et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.01565",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "training",
+          "inference"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "model-supply-chain",
+          "execution-control"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      },
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-03",
+    "first_submission_date": "2026-11-01",
+    "first_submission_source": "https://arxiv.org/abs/2611.01565",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-01713",
+    "title": "Route-Guided CBF-QP Repair for Safe Vision-Language-Action Models",
+    "first_author": "Park et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.01713",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "vla",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "collision",
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-03",
+    "first_submission_date": "2026-11-01",
+    "first_submission_source": "https://arxiv.org/abs/2611.01713",
+    "defense": {
+      "mechanism": [
+        "action-shielding",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-02516",
+    "title": "Cumulative and Audited Guardrail Tool Evolution for LLM Agent Safety",
+    "first_author": "Yang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.02516",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "llm-robot",
+    "risks": [],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "hazardous-instruction"
+      ],
+      "surface": [
+        "user-instruction",
+        "task-planning"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "policy-violation"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-03",
+    "first_submission_date": "2026-11-02",
+    "first_submission_source": "https://arxiv.org/abs/2611.02516",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "action-shielding"
+      ],
+      "defends_against": [
+        "hazardous-instruction"
+      ],
+      "curation_status": "paper-verified"
+    }
   }
 ]
