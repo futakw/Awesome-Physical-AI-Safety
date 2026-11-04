@@ -40342,5 +40342,690 @@
       "defends_against": [],
       "curation_status": "paper-verified"
     }
+  },
+  {
+    "id": "arxiv-2611-04080",
+    "title": "FEIJOA: Task-Driven Grounding and Execution for Mobile Manipulation",
+    "first_author": "Agarwal et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.04080",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "execution-control",
+        "action-interface"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-04",
+    "first_submission_date": "2026-11-02",
+    "first_submission_source": "https://arxiv.org/abs/2611.04080",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-04226",
+    "title": "DiMuRe: Diagnosis-Guided Multilevel Recovery for Robotic Task Execution",
+    "first_author": "Yi et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.04226",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "mixed",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift",
+        "execution-error"
+      ],
+      "surface": [
+        "physical-semantic-environment",
+        "execution-control"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-04",
+    "first_submission_date": "2026-11-03",
+    "first_submission_source": "https://arxiv.org/abs/2611.04226",
+    "defense": {
+      "mechanism": [
+        "failure-recovery",
+        "runtime-monitoring"
+      ],
+      "defends_against": [
+        "distribution-shift",
+        "execution-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-04368",
+    "title": "RAFT: Reasoning-Aligned Fine-Tuning Improves Robustness of VLA Post-Training",
+    "first_author": "Grover et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.04368",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "OOD and Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "visual-perception",
+        "user-instruction"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-04",
+    "first_submission_date": "2026-11-03",
+    "first_submission_source": "https://arxiv.org/abs/2611.04368",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-04518",
+    "title": "LLM-Assisted Planning with Distributed Onboard Behaviour Tree Execution for Multi-AUV Missions",
+    "first_author": "Khorrambakht et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.04518",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "execution-control"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-04",
+    "first_submission_date": "2026-11-03",
+    "first_submission_source": "https://arxiv.org/abs/2611.04518",
+    "defense": {
+      "mechanism": [
+        "failure-recovery",
+        "runtime-monitoring"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-04873",
+    "title": "Trusting Imagined Futures: Auditing Imagined Rewards for VLA Post-Training",
+    "first_author": "Kong et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.04873",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety-Aligned and Robust Policy Training",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "training"
+      ],
+      "mechanism": [
+        "uncertainty-miscalibration"
+      ],
+      "surface": [
+        "world-state"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-04",
+    "first_submission_date": "2026-11-03",
+    "first_submission_source": "https://arxiv.org/abs/2611.04873",
+    "defense": {
+      "mechanism": [
+        "uncertainty-gating"
+      ],
+      "defends_against": [
+        "uncertainty-miscalibration"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-04972",
+    "title": "Caging Vision-Language Navigation for Legged Robots via Barrier-Certified Safety Architecture",
+    "first_author": "Kulkarni et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.04972",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety Requirements and Assurance",
+    "scope": "mixed",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "planning-error"
+      ],
+      "surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "collision",
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-04",
+    "first_submission_date": "2026-11-03",
+    "first_submission_source": "https://arxiv.org/abs/2611.04972",
+    "defense": {
+      "mechanism": [
+        "action-shielding",
+        "formal-verification"
+      ],
+      "defends_against": [
+        "planning-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-05080",
+    "title": "CRONOS: Benchmarking Non-Episodic Reinforcement Learning for Robotic Manipulation",
+    "first_author": "Wu et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.05080",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "distribution-shift"
+        ],
+        "surfaces": [
+          "physical-semantic-environment",
+          "proprioception"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      },
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-04",
+    "first_submission_date": "2026-11-03",
+    "first_submission_source": "https://arxiv.org/abs/2611.05080",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-05093",
+    "title": "LoopQ: Fair, Closed-Loop Evaluation of Quantized Vision-Language-Action Models",
+    "first_author": "Bukhari et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.05093",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "distribution-shift"
+        ],
+        "surfaces": [
+          "model-supply-chain",
+          "visual-perception"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      },
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-04",
+    "first_submission_date": "2026-11-03",
+    "first_submission_source": "https://arxiv.org/abs/2611.05093"
+  },
+  {
+    "id": "arxiv-2611-05129",
+    "title": "WayTrace: A Map-to-Language-to-Trace Hierarchy for Embodied Urban Navigation",
+    "first_author": "Patel et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.05129",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Open-World Evaluation",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "proprioception",
+        "physical-semantic-environment"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure",
+        "unsafe-motion"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-04",
+    "first_submission_date": "2026-11-03",
+    "first_submission_source": "https://arxiv.org/abs/2611.05129"
+  },
+  {
+    "id": "arxiv-2611-04166",
+    "title": "Say the Same, Act Differently: Diagnosing and Steering Text-Action Divergence in Reasoning VLAs",
+    "first_author": "Feng et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.04166",
+    "code_url": null,
+    "section": "inference-attacks",
+    "subsection": "Visual Perturbations and Patches",
+    "scope": "vla",
+    "risks": [
+      "physical-safety",
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "digital-perturbation",
+        "adversarial-patch"
+      ],
+      "surface": [
+        "visual-perception"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "collision",
+        "targeted-action"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-04",
+    "first_submission_date": "2026-11-03",
+    "first_submission_source": "https://arxiv.org/abs/2611.04166"
+  },
+  {
+    "id": "arxiv-2611-05029",
+    "title": "DRAP: Dynamics-Risk Adaptive Plasticity for Continual Learning in Physical AI",
+    "first_author": "Ludwig et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.05029",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Reliability-Oriented Policy Refinement",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "training"
+      ],
+      "mechanism": [],
+      "surface": [
+        "model-supply-chain"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-04",
+    "first_submission_date": "2026-11-03",
+    "first_submission_source": "https://arxiv.org/abs/2611.05029",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2606-00537",
+    "title": "PACE: Phase-Aware Chunk Execution for Robot Policies with Action Chunking",
+    "first_author": "Nie et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2606.00537",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "mixed",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "action-interface"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-04",
+    "first_submission_date": "2026-05-30",
+    "first_submission_source": "https://arxiv.org/abs/2606.00537",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2606-11901",
+    "title": "DuoBench: A Reproducible Benchmark for Bimanual Manipulation in Simulation and the Real World",
+    "first_author": "Jülg et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2606.11901",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Failure Detection and Recovery",
+    "scope": "mixed",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "execution-error",
+          "distribution-shift"
+        ],
+        "surfaces": [
+          "execution-control",
+          "physical-semantic-environment"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      },
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-04",
+    "first_submission_date": "2026-06-10",
+    "first_submission_source": "https://arxiv.org/abs/2606.11901"
+  },
+  {
+    "id": "arxiv-2607-20345",
+    "title": "Closing the Lab-to-Store Gap: A Data-Efficient Post-Training and Experience-Driven Learning VLA Framework for Retail Humanoids",
+    "first_author": "Sisó et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2607.20345",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Reliability-Oriented Policy Refinement",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error",
+        "distribution-shift"
+      ],
+      "surface": [
+        "execution-control",
+        "physical-semantic-environment"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-04",
+    "first_submission_date": "2026-07-22",
+    "first_submission_source": "https://arxiv.org/abs/2607.20345",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "execution-error",
+        "distribution-shift"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2609-34270",
+    "title": "Bayesian Active Learning for Intent Disambiguation in Interactive Robot Planning",
+    "first_author": "Li et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2609.34270",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Uncertainty, Abstention, and Human Oversight",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "instruction-ambiguity"
+      ],
+      "surface": [
+        "user-instruction"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-04",
+    "first_submission_date": "2026-09-28",
+    "first_submission_source": "https://arxiv.org/abs/2609.34270",
+    "defense": {
+      "mechanism": [
+        "uncertainty-gating",
+        "formal-verification"
+      ],
+      "defends_against": [
+        "instruction-ambiguity"
+      ],
+      "curation_status": "abstract-verified"
+    }
   }
 ]
