@@ -40107,5 +40107,240 @@
       ],
       "curation_status": "paper-verified"
     }
+  },
+  {
+    "id": "arxiv-2611-01600",
+    "title": "SCOUT: Planning under Occlusion via Object-Centric World Model Rollouts",
+    "first_author": "Raj et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.01600",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "OOD and Generalization",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "world-state",
+        "visual-perception"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-04",
+    "first_submission_date": "2026-11-01",
+    "first_submission_source": "https://arxiv.org/abs/2611.01600",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-02660",
+    "title": "HeLM: Hierarchical Explicit Language Memory for Non-Markovian Manipulation",
+    "first_author": "Kim et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.02660",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Reliability-Oriented Policy Refinement",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "planning-error"
+      ],
+      "surface": [
+        "context-memory-retrieval"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-04",
+    "first_submission_date": "2026-11-02",
+    "first_submission_source": "https://arxiv.org/abs/2611.02660",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "planning-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-02777",
+    "title": "Beyond Policy Patches: Distilling RL Specialists into Vision-Language-Action Policies",
+    "first_author": "Jiang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.02777",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Reliability-Oriented Policy Refinement",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error",
+        "distribution-shift"
+      ],
+      "surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-04",
+    "first_submission_date": "2026-11-02",
+    "first_submission_source": "https://arxiv.org/abs/2611.02777",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "execution-error",
+        "distribution-shift"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-03584",
+    "title": "TAMPAgent: Agentic Belief-Space Planning for Mobile Manipulation",
+    "first_author": "Mishra et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.03584",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "planning-error"
+      ],
+      "surface": [
+        "task-planning"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure",
+        "physical-damage"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-04",
+    "first_submission_date": "2026-11-02",
+    "first_submission_source": "https://arxiv.org/abs/2611.03584",
+    "defense": {
+      "mechanism": [
+        "action-shielding",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "planning-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-03622",
+    "title": "D&A: Decoupling Description and Assessment Enables VLMs as Zero-Shot Robotic Reward Models",
+    "first_author": "Memmel et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.03622",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "mixed",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [],
+      "surface": [
+        "visual-perception"
+      ],
+      "target": [
+        "runtime-monitor"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-04",
+    "first_submission_date": "2026-11-02",
+    "first_submission_source": "https://arxiv.org/abs/2611.03622",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "defends_against": [],
+      "curation_status": "paper-verified"
+    }
   }
 ]
