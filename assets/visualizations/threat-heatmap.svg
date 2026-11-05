@@ -11,7 +11,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 </style>
 <rect width="1200" height="610" fill="#FFFFFF"/>
 <text class="title" x="48" y="48">Where threats enter and how they act</text>
-<text class="subtitle" x="48" y="74">Mechanism family × surface family co-occurrence across 427 concrete threat models; survey/evaluation coverage is excluded.</text>
+<text class="subtitle" x="48" y="74">Mechanism family × surface family co-occurrence across 428 concrete threat models; survey/evaluation coverage is excluded.</text>
 <text class="axis" text-anchor="middle" x="385.0" y="170.0"><tspan x="385.0" dy="0em">Training &amp;</tspan><tspan x="385.0" dy="1.05em">Infrastructure</tspan></text>
 <text class="axis" text-anchor="middle" x="495.0" y="183.0"><tspan x="495.0" dy="0em">Perception</tspan></text>
 <text class="axis" text-anchor="middle" x="605.0" y="183.0"><tspan x="605.0" dy="0em">Language</tspan></text>
@@ -290,7 +290,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2026] WayTrace: A Map-to-Language-to-Trace Hierarchy for Embodied Urban Navigation
 [arXiv 2026] Closing the Lab-to-Store Gap: A Data-Efficient Post-Training and Experience-Driven Learning VLA Framework for Retail Humanoids</title></rect>
 <text x="495.0" y="425.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">66</text>
-<rect x="552" y="397" width="106" height="46" rx="6" fill="#ABB8D5"><title>[arXiv 2026] Generalizable VLA Finetuning via Representation Anchoring and Language-Action Alignment
+<rect x="552" y="397" width="106" height="46" rx="6" fill="#A9B6D4"><title>[arXiv 2026] Generalizable VLA Finetuning via Representation Anchoring and Language-Action Alignment
 [CVPR 2026] LIBERO-Plus: A Progressive Robustness Benchmark for Visual-Language-Action Models
 [arXiv 2026] ICR-Drive: Instruction Counterfactual Robustness for End-to-End Language-Driven Autonomous Driving
 [NeurIPS Datasets and Benchmarks 2023] LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning
@@ -323,8 +323,9 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2026] Improving Fine-Grained Manipulation through Demonstration Expansion and Execution Design
 [arXiv 2026] PREM: Prediction-Regulated Memory for Robot Manipulation
 [arXiv 2026] RAFT: Reasoning-Aligned Fine-Tuning Improves Robustness of VLA Post-Training
-[arXiv 2026] Bayesian Active Learning for Intent Disambiguation in Interactive Robot Planning</title></rect>
-<text x="605.0" y="425.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">34</text>
+[arXiv 2026] Bayesian Active Learning for Intent Disambiguation in Interactive Robot Planning
+[arXiv 2026] VagueBench: Benchmarking the Robustness of Embodied Agents on Ambient Context Illusions</title></rect>
+<text x="605.0" y="425.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">35</text>
 <rect x="662" y="397" width="106" height="46" rx="6" fill="#CCD5E6"><title>[CVPR 2026] LIBERO-Plus: A Progressive Robustness Benchmark for Visual-Language-Action Models
 [arXiv 2026] RC-NF: Robot-Conditioned Normalizing Flow for Real-Time Anomaly Detection in Robotic Manipulation
 [arXiv 2026] Sensing Which Modality Matters: Evidence-Gated Regularization for Robust VLA Policies
@@ -481,7 +482,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2026] DiMuRe: Diagnosis-Guided Multilevel Recovery for Robotic Task Execution
 [arXiv 2026] Closing the Lab-to-Store Gap: A Data-Efficient Post-Training and Experience-Driven Learning VLA Framework for Retail Humanoids</title></rect>
 <text x="495.0" y="475.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">46</text>
-<rect x="552" y="447" width="106" height="46" rx="6" fill="#ABB8D5"><title>[AAAI 2026] IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents in Daily Household Tasks
+<rect x="552" y="447" width="106" height="46" rx="6" fill="#A9B6D4"><title>[AAAI 2026] IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents in Daily Household Tasks
 [arXiv 2024] EARBench: Towards Evaluating Physical Risk Awareness for Task Planning of Foundation Model-Based Embodied AI Agents
 [arXiv 2025] Generating Robot Constitutions &amp; Benchmarks for Semantic Safety
 [arXiv 2026] HazardArena: Evaluating Semantic Safety in Vision-Language-Action Models
@@ -514,8 +515,9 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2026] RetroNav: Scene-Grounded Retrospection and Retry for Self-Evolving Lifelong Navigation
 [arXiv 2026] Self-Labeled Preference Transfer for Steerable Robot Manipulation
 [arXiv 2026] VLA Policies Do Not Know When Not to Act: Unintended Task Execution and Start Suppression
-[arXiv 2026] HeLM: Hierarchical Explicit Language Memory for Non-Markovian Manipulation</title></rect>
-<text x="605.0" y="475.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">34</text>
+[arXiv 2026] HeLM: Hierarchical Explicit Language Memory for Non-Markovian Manipulation
+[arXiv 2026] VagueBench: Benchmarking the Robustness of Embodied Agents on Ambient Context Illusions</title></rect>
+<text x="605.0" y="475.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">35</text>
 <rect x="662" y="447" width="106" height="46" rx="6" fill="#C2CCE1"><title>[arXiv 2026] RC-NF: Robot-Conditioned Normalizing Flow for Real-Time Anomaly Detection in Robotic Manipulation
 [CoRL 2023] REFLECT: Summarizing Robot Experiences for Failure Explanation and Correction
 [arXiv 2025] I-FailSense: Towards General Robotic Failure Detection with Vision-Language Models

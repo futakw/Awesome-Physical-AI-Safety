@@ -11,7 +11,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 </style>
 <rect width="1200" height="815" fill="#FFFFFF"/>
 <text class="title" x="48" y="48">Defense mechanism × defended threat</text>
-<text class="subtitle" x="48" y="74">Columns follow the Threat Cross-Map order, including empty cells (351 enriched papers).</text>
+<text class="subtitle" x="48" y="74">Columns follow the Threat Cross-Map order, including empty cells (352 enriched papers).</text>
 <text class="axis" text-anchor="middle" x="343.2" y="173.0"><tspan x="343.2" dy="0em">Backdoor</tspan></text>
 <text class="axis" text-anchor="start" transform="translate(429.8 173.0) rotate(-30)"><tspan x="0" dy="0em">Digital</tspan><tspan x="0" dy="1.05em">Perturbation</tspan></text>
 <text class="axis" text-anchor="middle" x="516.2" y="160.0"><tspan x="516.2" dy="0em">Adversarial</tspan><tspan x="516.2" dy="1.05em">Patch</tspan></text>

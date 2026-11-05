@@ -41027,5 +41027,93 @@
       ],
       "curation_status": "abstract-verified"
     }
+  },
+  {
+    "id": "arxiv-2611-03765",
+    "title": "VagueBench: Benchmarking the Robustness of Embodied Agents on Ambient Context Illusions",
+    "first_author": "Qu et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.03765",
+    "code_url": "https://github.com/stardreaming/VagueBench",
+    "section": "benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift",
+        "planning-error"
+      ],
+      "surface": [
+        "user-instruction"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-05",
+    "first_submission_date": "2026-11-02",
+    "first_submission_source": "https://arxiv.org/abs/2611.03765",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "distribution-shift",
+        "planning-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-04228",
+    "title": "DualWorldBench: Can Agents Plan Deliveries across Symbolic and Grounded Worlds?",
+    "first_author": "Chen et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.04228",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "planning-error",
+          "perception-error",
+          "distribution-shift"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "world-state",
+          "user-instruction"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      },
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-05",
+    "first_submission_date": "2026-11-03",
+    "first_submission_source": "https://arxiv.org/abs/2611.04228"
   }
 ]
