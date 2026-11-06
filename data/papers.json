@@ -42228,5 +42228,54 @@
     "catalogued_date": "2026-11-06",
     "first_submission_date": "2026-05-17",
     "first_submission_source": "https://arxiv.org/abs/2605.17204"
+  },
+  {
+    "id": "arxiv-2607-13033",
+    "title": "DenseReward: Dense Reward Learning via Failure Synthesis for Robotic Manipulation",
+    "first_author": "Fang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2607.13033",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety-Aligned and Robust Policy Training",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "visual-perception",
+        "execution-control"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-06",
+    "first_submission_date": "2026-07-14",
+    "first_submission_source": "https://arxiv.org/abs/2607.13033",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "paper-verified"
+    }
   }
 ]
