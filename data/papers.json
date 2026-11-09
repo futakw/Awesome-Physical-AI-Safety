@@ -42277,5 +42277,479 @@
       ],
       "curation_status": "paper-verified"
     }
+  },
+  {
+    "id": "arxiv-2611-08654",
+    "title": "CS-Pi: Constraint-Satisfying Flow Policy Sampling",
+    "first_author": "Bhattacharya et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.08654",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "vla",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [],
+      "surface": [
+        "action-interface"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "task-failure",
+        "collision"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-09",
+    "first_submission_date": "2026-11-05",
+    "first_submission_source": "https://arxiv.org/abs/2611.08654",
+    "defense": {
+      "mechanism": [
+        "action-shielding"
+      ],
+      "defends_against": [],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-08895",
+    "title": "Localizing and Editing the Goal Representation of a Vision-Language-Action Model",
+    "first_author": "Srivastava et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.08895",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "semantic-misalignment"
+      ],
+      "surface": [
+        "user-instruction"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure",
+        "policy-violation"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-09",
+    "first_submission_date": "2026-11-06",
+    "first_submission_source": "https://arxiv.org/abs/2611.08895",
+    "defense": {
+      "mechanism": [
+        "representation-steering",
+        "runtime-monitoring"
+      ],
+      "defends_against": [
+        "semantic-misalignment"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-08914",
+    "title": "HomeLoop: A Simulation Framework and Benchmark for Robot-IoT Coordination in Everyday Domestic Assistance and Safety",
+    "first_author": "ElMallah et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.08914",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Task and Physical Safety",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "planning-error"
+      ],
+      "surface": [
+        "task-planning",
+        "physical-semantic-environment"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure",
+        "policy-violation"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-09",
+    "first_submission_date": "2026-11-06",
+    "first_submission_source": "https://arxiv.org/abs/2611.08914"
+  },
+  {
+    "id": "arxiv-2611-08917",
+    "title": "PRISM: Primitive Routing via In-context Skill Mixing for Retentive VLA Adaptation",
+    "first_author": "Tao et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.08917",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Reliability-Oriented Policy Refinement",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [],
+      "surface": [
+        "model-supply-chain"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-09",
+    "first_submission_date": "2026-11-06",
+    "first_submission_source": "https://arxiv.org/abs/2611.08917",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-08987",
+    "title": "VLA Handover: Failure-Prediction-Based Switching from On-Robot to Server VLA Models",
+    "first_author": "Nishio",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.08987",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "execution-control"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure",
+        "recovery-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-09",
+    "first_submission_date": "2026-11-06",
+    "first_submission_source": "https://arxiv.org/abs/2611.08987",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-09124",
+    "title": "Toward the Era of Agentic Embodied Intelligence",
+    "first_author": "Liang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.09124",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "execution-control",
+        "context-memory-retrieval"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure",
+        "recovery-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-09",
+    "first_submission_date": "2026-11-06",
+    "first_submission_source": "https://arxiv.org/abs/2611.09124",
+    "defense": {
+      "mechanism": [
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-09376",
+    "title": "Can LLMs Debug Robots by Editing Their Weights?",
+    "first_author": "Zhang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.09376",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Language and Instruction Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "semantic-misalignment"
+      ],
+      "surface": [
+        "user-instruction",
+        "model-supply-chain"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-09",
+    "first_submission_date": "2026-11-06",
+    "first_submission_source": "https://arxiv.org/abs/2611.09376",
+    "defense": {
+      "mechanism": [
+        "representation-steering"
+      ],
+      "defends_against": [
+        "semantic-misalignment"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-09364",
+    "title": "SafeOrchestrate: Runtime Checked Intent-Driven Orchestration for Cyber-Physical Systems",
+    "first_author": "Ashfaq et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.09364",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "physical-ai",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "planning-error"
+      ],
+      "surface": [
+        "task-planning",
+        "action-interface"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "task-failure",
+        "policy-violation"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-09",
+    "first_submission_date": "2026-11-06",
+    "first_submission_source": "https://arxiv.org/abs/2611.09364",
+    "defense": {
+      "mechanism": [
+        "formal-verification",
+        "action-shielding"
+      ],
+      "defends_against": [
+        "planning-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2607-06724",
+    "title": "EvoPlan: Evolutionary Neuro-Symbolic Robot Planning with Spatio-Temporal Guarantees",
+    "first_author": "Nukapotula et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2607.06724",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety Requirements and Assurance",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "planning-error"
+      ],
+      "surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "target": [
+        "task-planner",
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure",
+        "collision"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-09",
+    "first_submission_date": "2026-07-07",
+    "first_submission_source": "https://arxiv.org/abs/2607.06724",
+    "defense": {
+      "mechanism": [
+        "formal-verification",
+        "action-shielding",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "planning-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2610-01834",
+    "title": "Code Owns the Simulation, Jev Owns the Evaluation",
+    "first_author": "Yang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.01834",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
+    "scope": "embodied-agent",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "planning-error"
+      ],
+      "surface": [
+        "task-planning"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-09",
+    "first_submission_date": "2026-10-01",
+    "first_submission_source": "https://arxiv.org/abs/2610.01834",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "planning-error"
+      ],
+      "curation_status": "paper-verified"
+    }
   }
 ]
