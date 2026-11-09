@@ -38713,7 +38713,7 @@
     "venue": "arXiv",
     "year": 2026,
     "paper_url": "https://arxiv.org/abs/2610.40026",
-    "code_url": null,
+    "code_url": "https://github.com/PrimitiveX/RoboSeed",
     "section": "benchmarks",
     "subsection": "Evaluation Infrastructure",
     "scope": "vla",
