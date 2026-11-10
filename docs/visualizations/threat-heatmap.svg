@@ -11,7 +11,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 </style>
 <rect width="1200" height="610" fill="#FFFFFF"/>
 <text class="title" x="48" y="48">Where threats enter and how they act</text>
-<text class="subtitle" x="48" y="74">Mechanism family × surface family co-occurrence across 469 concrete threat models; survey/evaluation coverage is excluded.</text>
+<text class="subtitle" x="48" y="74">Mechanism family × surface family co-occurrence across 471 concrete threat models; survey/evaluation coverage is excluded.</text>
 <text class="axis" text-anchor="middle" x="385.0" y="170.0"><tspan x="385.0" dy="0em">Training &amp;</tspan><tspan x="385.0" dy="1.05em">Infrastructure</tspan></text>
 <text class="axis" text-anchor="middle" x="495.0" y="183.0"><tspan x="495.0" dy="0em">Perception</tspan></text>
 <text class="axis" text-anchor="middle" x="605.0" y="183.0"><tspan x="605.0" dy="0em">Language</tspan></text>
@@ -226,7 +226,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <rect x="332" y="397" width="106" height="46" rx="6" fill="#E6ECF4"><title>[arXiv 2026] Recovering Low-Bit Failures in Vision-Language-Action Policies via Quantization-Conditioned Reinforcement Learning
 [arXiv 2026] Kinematic Hypothesis Context: Embodiment-Conditioned Learned Video Coding for Bandwidth-Limited Robot Policy Uplinks</title></rect>
 <text x="385.0" y="425.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">2</text>
-<rect x="442" y="397" width="106" height="46" rx="6" fill="#7E90BE"><title>[arXiv 2025] RobustVLA: Robustness-Aware Reinforcement Post-Training for Vision-Language-Action Models
+<rect x="442" y="397" width="106" height="46" rx="6" fill="#7C8EBC"><title>[arXiv 2025] RobustVLA: Robustness-Aware Reinforcement Post-Training for Vision-Language-Action Models
 [arXiv 2025] MergeVLA: Cross-Skill Model Merging Toward a Generalist Vision-Language-Action Agent
 [arXiv 2025] Robust Finetuning of Vision-Language-Action Robot Policies via Parameter Merging
 [arXiv 2026] Generalizable VLA Finetuning via Representation Anchoring and Language-Action Alignment
@@ -300,9 +300,11 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2026] CPNav: Calibrated Vision-Language Navigation for Object-Goal Search in Unseen Environments
 [arXiv 2026] DreamVLA: From Generated Human Motions to Humanoid Vision-Language-Action Policies
 [arXiv 2026] Streaming Failure Forecasting: VLA Failure Monitors That Keep Learning After Deployment
-[arXiv 2026] PAIR: Proprioception-Aligned Image-Ray Representations for Viewpoint-Robust Manipulation</title></rect>
-<text x="495.0" y="425.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">75</text>
-<rect x="552" y="397" width="106" height="46" rx="6" fill="#ADBAD6"><title>[arXiv 2026] Generalizable VLA Finetuning via Representation Anchoring and Language-Action Alignment
+[arXiv 2026] PAIR: Proprioception-Aligned Image-Ray Representations for Viewpoint-Robust Manipulation
+[arXiv 2026] Review the Episodes, Refine the Lessons: Simple Memory Evolution for Embodied Agents
+[arXiv 2026] OASIS: Observation-Action Space Alignment via SE(3) Trajectory Prediction for Robotic Manipulation</title></rect>
+<text x="495.0" y="425.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">77</text>
+<rect x="552" y="397" width="106" height="46" rx="6" fill="#ACB9D6"><title>[arXiv 2026] Generalizable VLA Finetuning via Representation Anchoring and Language-Action Alignment
 [CVPR 2026] LIBERO-Plus: A Progressive Robustness Benchmark for Visual-Language-Action Models
 [arXiv 2026] ICR-Drive: Instruction Counterfactual Robustness for End-to-End Language-Driven Autonomous Driving
 [NeurIPS Datasets and Benchmarks 2023] LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning
@@ -336,8 +338,9 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2026] PREM: Prediction-Regulated Memory for Robot Manipulation
 [arXiv 2026] RAFT: Reasoning-Aligned Fine-Tuning Improves Robustness of VLA Post-Training
 [arXiv 2026] Bayesian Active Learning for Intent Disambiguation in Interactive Robot Planning
-[arXiv 2026] VagueBench: Benchmarking the Robustness of Embodied Agents on Ambient Context Illusions</title></rect>
-<text x="605.0" y="425.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">35</text>
+[arXiv 2026] VagueBench: Benchmarking the Robustness of Embodied Agents on Ambient Context Illusions
+[arXiv 2026] Review the Episodes, Refine the Lessons: Simple Memory Evolution for Embodied Agents</title></rect>
+<text x="605.0" y="425.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">36</text>
 <rect x="662" y="397" width="106" height="46" rx="6" fill="#CED7E7"><title>[CVPR 2026] LIBERO-Plus: A Progressive Robustness Benchmark for Visual-Language-Action Models
 [arXiv 2026] RC-NF: Robot-Conditioned Normalizing Flow for Real-Time Anomaly Detection in Robotic Manipulation
 [arXiv 2026] Sensing Which Modality Matters: Evidence-Gated Regularization for Robust VLA Policies

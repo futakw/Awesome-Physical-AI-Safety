@@ -43549,5 +43549,83 @@
       ],
       "curation_status": "paper-verified"
     }
+  },
+  {
+    "id": "yao-2026-review-the-episodes-refine-the-lessons-simple-memory-evolution-for-embodied-agents",
+    "title": "Review the Episodes, Refine the Lessons: Simple Memory Evolution for Embodied Agents",
+    "first_author": "Yao et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.11509",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Reliability-Oriented Policy Refinement",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "physical-semantic-environment",
+        "context-memory-retrieval"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-10",
+    "first_submission_date": "2026-11-08",
+    "first_submission_source": "https://arxiv.org/abs/2611.11509"
+  },
+  {
+    "id": "chen-2026-oasis-observation-action-space-alignment-via-se-3-trajectory-prediction-for-robotic-manipulation",
+    "title": "OASIS: Observation-Action Space Alignment via SE(3) Trajectory Prediction for Robotic Manipulation",
+    "first_author": "Chen et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2605.25829",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Representation and Language-Action Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "visual-perception",
+        "physical-semantic-environment"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-10",
+    "first_submission_date": "2026-05-25",
+    "first_submission_source": "https://arxiv.org/abs/2605.25829"
   }
 ]
