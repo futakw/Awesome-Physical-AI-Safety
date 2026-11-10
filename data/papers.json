@@ -42751,5 +42751,803 @@
       ],
       "curation_status": "paper-verified"
     }
+  },
+  {
+    "id": "chen-2026-cpnav-calibrated-vision-language-navigation-for-object-goal-search-in-unseen-environments",
+    "title": "CPNav: Calibrated Vision-Language Navigation for Object-Goal Search in Unseen Environments",
+    "first_author": "Chen et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.10366",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Uncertainty, Abstention, and Human Oversight",
+    "scope": "vision-language-navigation",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "uncertainty-miscalibration"
+      ],
+      "surface": [
+        "visual-perception",
+        "physical-semantic-environment"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-10",
+    "first_submission_date": "2026-11-07",
+    "first_submission_source": "https://arxiv.org/abs/2611.10366",
+    "defense": {
+      "mechanism": [
+        "uncertainty-gating"
+      ],
+      "defends_against": [
+        "uncertainty-miscalibration"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "cui-2026-reins-a-self-evolving-agent-harness-for-real-time-trajectory-planning",
+    "title": "REINS: A Self-Evolving Agent Harness for Real-Time Trajectory Planning",
+    "first_author": "Cui et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.10748",
+    "code_url": "https://github.com/ZhihongCui/REINS",
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "autonomous-driving",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "planning-error"
+      ],
+      "surface": [
+        "task-planning",
+        "world-state"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "collision",
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-10",
+    "first_submission_date": "2026-11-07",
+    "first_submission_source": "https://arxiv.org/abs/2611.10748",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "action-shielding"
+      ],
+      "defends_against": [
+        "planning-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "park-2026-dreamvla-from-generated-human-motions-to-humanoid-vision-language-action-policies",
+    "title": "DreamVLA: From Generated Human Motions to Humanoid Vision-Language-Action Policies",
+    "first_author": "Park et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.10872",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Reliability-Oriented Policy Refinement",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "physical-semantic-environment",
+        "action-interface"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-10",
+    "first_submission_date": "2026-11-07",
+    "first_submission_source": "https://arxiv.org/abs/2611.10872",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "zhou-2026-harp-bench-benchmarking-robot-manipulation-around-active-humans",
+    "title": "HARP-Bench: Benchmarking Robot Manipulation Around Active Humans",
+    "first_author": "Zhou et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.11123",
+    "code_url": "https://github.com/UMass-Embodied-AGI/harp",
+    "section": "benchmarks",
+    "subsection": "Task and Physical Safety",
+    "scope": "vla",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "distribution-shift",
+          "execution-error"
+        ],
+        "surfaces": [
+          "physical-semantic-environment",
+          "action-interface"
+        ],
+        "consequences": [
+          "collision",
+          "task-failure"
+        ]
+      },
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-10",
+    "first_submission_date": "2026-11-08",
+    "first_submission_source": "https://arxiv.org/abs/2611.11123"
+  },
+  {
+    "id": "yoon-2026-hint-vlm-humanoid-interactive-navigation-over-rough-terrain-with-embodiment-grounded-vision-language-model",
+    "title": "HINT-VLM: Humanoid Interactive Navigation over Rough Terrain with Embodiment-Grounded Vision-Language Model",
+    "first_author": "Yoon et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.11665",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Uncertainty, Abstention, and Human Oversight",
+    "scope": "robot-navigation",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [],
+      "surface": [
+        "physical-semantic-environment",
+        "task-planning"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-10",
+    "first_submission_date": "2026-11-08",
+    "first_submission_source": "https://arxiv.org/abs/2611.11665",
+    "defense": {
+      "mechanism": [
+        "uncertainty-gating"
+      ],
+      "defends_against": [],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "jadhav-2026-streaming-failure-forecasting-vla-failure-monitors-that-keep-learning-after-deployment",
+    "title": "Streaming Failure Forecasting: VLA Failure Monitors That Keep Learning After Deployment",
+    "first_author": "Jadhav et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.11688",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "visual-perception",
+        "action-interface"
+      ],
+      "target": [
+        "runtime-monitor"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-10",
+    "first_submission_date": "2026-11-08",
+    "first_submission_source": "https://arxiv.org/abs/2611.11688",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "lee-2026-pair-proprioception-aligned-image-ray-representations-for-viewpoint-robust-manipulation",
+    "title": "PAIR: Proprioception-Aligned Image-Ray Representations for Viewpoint-Robust Manipulation",
+    "first_author": "Lee et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.11798",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Representation and Language-Action Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "visual-perception"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-10",
+    "first_submission_date": "2026-11-09",
+    "first_submission_source": "https://arxiv.org/abs/2611.11798",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "abbas-2026-distilling-instructions-into-weights-closed-form-edits-fix-a-robot-policy-s-misreading",
+    "title": "Distilling Instructions into Weights: Closed-Form Edits Fix a Robot Policy's Misreading",
+    "first_author": "Abbas et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.11894",
+    "code_url": "https://github.com/adeeb10abbas/weightsmith",
+    "section": "defenses",
+    "subsection": "Representation Steering and Inference-Time Defense",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "semantic-misalignment"
+      ],
+      "surface": [
+        "user-instruction"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-10",
+    "first_submission_date": "2026-11-09",
+    "first_submission_source": "https://arxiv.org/abs/2611.11894",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "semantic-misalignment"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "ghosh-2026-motion-belief-action-from-a-visual-scene-map-to-physical-decisions",
+    "title": "Motion Belief Action: From a Visual Scene Map to Physical Decisions",
+    "first_author": "Ghosh",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.12113",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Uncertainty, Abstention, and Human Oversight",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [],
+      "surface": [
+        "physical-semantic-environment",
+        "world-state"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-10",
+    "first_submission_date": "2026-11-09",
+    "first_submission_source": "https://arxiv.org/abs/2611.12113",
+    "defense": {
+      "mechanism": [
+        "uncertainty-gating"
+      ],
+      "defends_against": [],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "wang-2026-embodied-first-exam",
+    "title": "Embodied First Exam",
+    "first_author": "Wang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.12177",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Failure Detection and Recovery",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "execution-error"
+        ],
+        "surfaces": [
+          "physical-semantic-environment",
+          "action-interface"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      },
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-10",
+    "first_submission_date": "2026-11-09",
+    "first_submission_source": "https://arxiv.org/abs/2611.12177"
+  },
+  {
+    "id": "kripner-2026-vla-adaptation-with-real-and-simulated-data-a-case-study-on-robotic-chess",
+    "title": "VLA Adaptation with Real and Simulated Data: A Case Study on Robotic Chess",
+    "first_author": "Kripner et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.12676",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Failure Detection and Recovery",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [],
+      "surface": [
+        "action-interface",
+        "model-supply-chain"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-10",
+    "first_submission_date": "2026-11-09",
+    "first_submission_source": "https://arxiv.org/abs/2611.12676"
+  },
+  {
+    "id": "lin-2026-robowits-unexpected-challenges-for-robotic-creative-problem-solving",
+    "title": "RoboWits: Unexpected Challenges for Robotic Creative Problem Solving",
+    "first_author": "Lin et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2605.30326",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "distribution-shift"
+        ],
+        "surfaces": [
+          "physical-semantic-environment"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      },
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-10",
+    "first_submission_date": "2026-05-28",
+    "first_submission_source": "https://arxiv.org/abs/2605.30326"
+  },
+  {
+    "id": "guo-2026-frequency-aware-flow-matching-for-continuous-and-consistent-robotic-action-generation",
+    "title": "Frequency-Aware Flow Matching for Continuous and Consistent Robotic Action Generation",
+    "first_author": "Guo et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2606.20135",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Action and Spatial Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "action-interface"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-10",
+    "first_submission_date": "2026-06-18",
+    "first_submission_source": "https://arxiv.org/abs/2606.20135",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "luo-2026-geometric-entropy-when-trajectory-diversity-helps-and-hurts-in-imitation-learning",
+    "title": "Geometric Entropy: When Trajectory Diversity Helps and Hurts in Imitation Learning",
+    "first_author": "Luo et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2606.20871",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "training",
+          "inference"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "model-supply-chain"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      },
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-10",
+    "first_submission_date": "2026-06-18",
+    "first_submission_source": "https://arxiv.org/abs/2606.20871"
+  },
+  {
+    "id": "yu-2026-you-don-t-need-to-stay-in-the-loop-an-agentic-robotics-loop-for-robot-policy-improvement",
+    "title": "You Don't Need To Stay in The Loop: An Agentic Robotics Loop for Robot-Policy Improvement",
+    "first_author": "Yu",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2608.07555",
+    "code_url": null,
+    "section": "system-security",
+    "subsection": "Cross-Layer System Security",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability",
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "feedback-spoofing",
+        "execution-error"
+      ],
+      "surface": [
+        "context-memory-retrieval",
+        "middleware-network"
+      ],
+      "target": [
+        "runtime-monitor",
+        "shared-system-state"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-10",
+    "first_submission_date": "2026-08-02",
+    "first_submission_source": "https://arxiv.org/abs/2608.07555",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "defends_against": [
+        "feedback-spoofing",
+        "execution-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "song-2025-more-than-meets-the-eye-uncovering-the-reasoning-planning-disconnect-in-training-vision-language-driving-models",
+    "title": "More Than Meets the Eye? Uncovering the Reasoning-Planning Disconnect in Training Vision-Language Driving Models",
+    "first_author": "Song et al.",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2510.04532",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
+    "scope": "autonomous-driving",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [],
+      "surface": [
+        "visual-perception",
+        "user-instruction",
+        "world-state"
+      ],
+      "target": [
+        "action-generation",
+        "reasoning-process"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-10",
+    "first_submission_date": "2025-10-06",
+    "first_submission_source": "https://arxiv.org/abs/2510.04532"
+  },
+  {
+    "id": "park-2026-grounding-driving-vla-via-inverse-kinematics",
+    "title": "Grounding Driving VLA via Inverse Kinematics",
+    "first_author": "Park et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2605.21061",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Driving Robustness and Generalization",
+    "scope": "autonomous-driving",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [],
+      "surface": [
+        "visual-perception",
+        "world-state"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "collision",
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-10",
+    "first_submission_date": "2026-05-20",
+    "first_submission_source": "https://arxiv.org/abs/2605.21061",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "cao-2026-anytime-valid-runtime-monitoring-of-learned-barrier-certificates",
+    "title": "Anytime-Valid Runtime Monitoring of Learned Barrier Certificates",
+    "first_author": "Cao et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.27726",
+    "code_url": "https://github.com/FormalCert-AI/runtime-barrier-monitor",
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "vla",
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "world-state",
+        "execution-control"
+      ],
+      "target": [
+        "runtime-monitor"
+      ],
+      "consequence": [
+        "unsafe-motion"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-10",
+    "first_submission_date": "2026-10-20",
+    "first_submission_source": "https://arxiv.org/abs/2610.27726",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "action-shielding"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "paper-verified"
+    }
   }
 ]
