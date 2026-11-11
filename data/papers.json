@@ -43627,5 +43627,583 @@
     "catalogued_date": "2026-11-10",
     "first_submission_date": "2026-05-25",
     "first_submission_source": "https://arxiv.org/abs/2605.25829"
+  },
+  {
+    "id": "chen-2026-cafe-closed-loop-autonomous-task-formulation-and-execution-without-instance-specific-instructions",
+    "title": "CAFE: Closed-Loop Autonomous Task Formulation and Execution without Instance-Specific Instructions",
+    "first_author": "Chen et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.12983",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "planning-error",
+        "execution-error"
+      ],
+      "surface": [
+        "task-planning",
+        "world-state"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-11",
+    "first_submission_date": "2026-11-08",
+    "first_submission_source": "https://arxiv.org/abs/2611.12983",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "planning-error",
+        "execution-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "zhao-2026-roboace-adversarial-co-evolution-for-robot-self-improvement",
+    "title": "RoboACE: Adversarial Co-Evolution for Robot Self-Improvement",
+    "first_author": "Zhao et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.13034",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Reliability-Oriented Policy Refinement",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "physical-semantic-environment",
+        "action-interface"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-11",
+    "first_submission_date": "2026-11-09",
+    "first_submission_source": "https://arxiv.org/abs/2611.13034",
+    "defense": {
+      "mechanism": [
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "zeng-2026-robo-mlt-dual-system-robotic-manipulation-for-long-horizon-medical-laboratory-tasks",
+    "title": "Robo-MLT: Dual-System Robotic Manipulation for Long-Horizon Medical Laboratory Tasks",
+    "first_author": "Zeng et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.13039",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "execution-control",
+        "world-state"
+      ],
+      "target": [
+        "runtime-monitor"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-11",
+    "first_submission_date": "2026-11-09",
+    "first_submission_source": "https://arxiv.org/abs/2611.13039",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "grachev-2026-how-much-of-your-vla-is-knn",
+    "title": "How Much of Your VLA Is kNN",
+    "first_author": "Grachev et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.13160",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "visual-perception",
+        "action-interface"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-11",
+    "first_submission_date": "2026-11-09",
+    "first_submission_source": "https://arxiv.org/abs/2611.13160"
+  },
+  {
+    "id": "daghigh-2026-from-depth-to-safe-depth-uncertainty-aware-monocular-perception-for-mobile-robot-navigation",
+    "title": "From Depth to Safe Depth: Uncertainty-Aware Monocular Perception for Mobile Robot Navigation",
+    "first_author": "Daghigh et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.13769",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Multimodal Perception and Physical Safeguards",
+    "scope": "robot-navigation",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "perception-error",
+        "uncertainty-miscalibration"
+      ],
+      "surface": [
+        "visual-perception"
+      ],
+      "target": [
+        "perception-model"
+      ],
+      "consequence": [
+        "collision",
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-11",
+    "first_submission_date": "2026-11-10",
+    "first_submission_source": "https://arxiv.org/abs/2611.13769",
+    "defense": {
+      "mechanism": [
+        "uncertainty-gating"
+      ],
+      "defends_against": [
+        "perception-error",
+        "uncertainty-miscalibration"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "cowling-2026-camera-equalisation-of-an-11-5x-drop-in-environmental-illuminance-four-imitation-learning-policies-on-an-so-101-arm",
+    "title": "Camera equalisation of an 11.5x drop in environmental illuminance: four imitation-learning policies on an SO-101 arm",
+    "first_author": "Cowling",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.13810",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "visual-perception"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-11",
+    "first_submission_date": "2026-11-10",
+    "first_submission_source": "https://arxiv.org/abs/2611.13810"
+  },
+  {
+    "id": "zhu-2026-leash-stay-safe-in-agentic-robotics",
+    "title": "LEASH: Stay Safe in Agentic Robotics",
+    "first_author": "Zhu et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.14115",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability",
+      "physical-safety",
+      "ethical-societal",
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "hazardous-instruction",
+          "planning-error",
+          "indirect-prompt-injection"
+        ],
+        "surfaces": [
+          "user-instruction",
+          "task-planning",
+          "physical-semantic-environment"
+        ],
+        "consequences": [
+          "unsafe-motion",
+          "policy-violation",
+          "task-failure"
+        ]
+      },
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-11",
+    "first_submission_date": "2026-11-10",
+    "first_submission_source": "https://arxiv.org/abs/2611.14115",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "action-shielding"
+      ],
+      "defends_against": [
+        "hazardous-instruction",
+        "planning-error",
+        "indirect-prompt-injection"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "zhang-2026-is-your-robot-s-memory-just-a-clock-temporal-shortcuts-in-memory-augmented-vla-policies",
+    "title": "Is Your Robot's Memory Just a Clock? Temporal Shortcuts in Memory-Augmented VLA Policies",
+    "first_author": "Zhang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.14488",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "context-memory-retrieval"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-11",
+    "first_submission_date": "2026-11-10",
+    "first_submission_source": "https://arxiv.org/abs/2611.14488",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "liu-2025-predicting-risks-before-they-happen-vision-language-reasoning-for-autonomous-driving",
+    "title": "Predicting Risks Before They Happen: Vision-Language Reasoning for Autonomous Driving",
+    "first_author": "Liu et al.",
+    "venue": "arXiv",
+    "year": 2025,
+    "paper_url": "https://arxiv.org/abs/2511.22928",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Driving Robustness and Generalization",
+    "scope": "autonomous-driving",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "planning-error"
+      ],
+      "surface": [
+        "visual-perception",
+        "world-state"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "collision",
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-11",
+    "first_submission_date": "2025-11-28",
+    "first_submission_source": "https://arxiv.org/abs/2511.22928",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "planning-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "jian-2026-seeing-what-execution-needs-benchmarking-task-conditioned-actionable-spatial-belief-for-manipulation",
+    "title": "Seeing What Execution Needs: Benchmarking Task-Conditioned Actionable Spatial Belief for Manipulation",
+    "first_author": "Jian et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.09794",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "perception-error",
+        "semantic-misalignment"
+      ],
+      "surface": [
+        "visual-perception",
+        "user-instruction"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-11",
+    "first_submission_date": "2026-11-06",
+    "first_submission_source": "https://arxiv.org/abs/2611.09794"
+  },
+  {
+    "id": "ravanbakhsh-2026-cognitive-multi-agent-search-and-rescue-language-grounded-hierarchical-reinforcement-learning-for-collaborative-robotics",
+    "title": "Cognitive Multi-Agent Search and Rescue: Language-Grounded Hierarchical Reinforcement Learning for Collaborative Robotics",
+    "first_author": "Ravanbakhsh et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.13161",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety-Aligned and Robust Policy Training",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "planning-error"
+      ],
+      "surface": [
+        "user-instruction",
+        "multi-agent-communication"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "unsafe-motion",
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-11",
+    "first_submission_date": "2026-11-09",
+    "first_submission_source": "https://arxiv.org/abs/2611.13161",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "planning-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "luthra-2026-auditable-human-agent-teams-for-autonomous-x-ray-experimentation",
+    "title": "Auditable Human-Agent Teams for Autonomous X-ray Experimentation",
+    "first_author": "Luthra et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.12933",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Governance and Deployment Assurance",
+    "scope": "llm-robot",
+    "risks": [],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "multi-agent-communication",
+          "execution-control"
+        ],
+        "consequences": []
+      },
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-11",
+    "first_submission_date": "2026-11-06",
+    "first_submission_source": "https://arxiv.org/abs/2611.12933"
+  },
+  {
+    "id": "rautela-2026-one-trajectory-two-requirements-accuracy-and-local-stability-in-euler-sampling-for-flow-matching-policies",
+    "title": "One Trajectory, Two Requirements: Accuracy and Local Stability in Euler Sampling for Flow Matching Policies",
+    "first_author": "Rautela",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.13311",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Evaluation Infrastructure",
+    "scope": "vla",
+    "risks": [],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "action-interface"
+        ],
+        "consequences": []
+      },
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-11",
+    "first_submission_date": "2026-11-09",
+    "first_submission_source": "https://arxiv.org/abs/2611.13311"
   }
 ]
