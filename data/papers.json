@@ -44612,5 +44612,513 @@
     "catalogued_date": "2026-11-13",
     "first_submission_date": "2026-11-09",
     "first_submission_source": "https://arxiv.org/abs/2611.11854"
+  },
+  {
+    "id": "arxiv-2611-17394",
+    "title": "Agentic-Teacher: An Agentic Data Engine for Failure-Driven VLA Post-Training",
+    "first_author": "Teng et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.17394",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety-Aligned and Robust Policy Training",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "execution-control"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-16",
+    "first_submission_date": "2026-11-12",
+    "first_submission_source": "https://arxiv.org/abs/2611.17394",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-17566",
+    "title": "Grounding Object-to-Object Hazard Reasoning into 3D Risk Fields for Task-Conditioned Safety",
+    "first_author": "Guzmán et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.17566",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Multimodal Perception and Physical Safeguards",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "hazardous-instruction",
+        "planning-error"
+      ],
+      "surface": [
+        "user-instruction",
+        "physical-semantic-environment"
+      ],
+      "target": [
+        "task-planner",
+        "robot-executor"
+      ],
+      "consequence": [
+        "unsafe-motion"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-16",
+    "first_submission_date": "2026-11-12",
+    "first_submission_source": "https://arxiv.org/abs/2611.17566",
+    "defense": {
+      "mechanism": [
+        "action-shielding",
+        "runtime-monitoring"
+      ],
+      "defends_against": [
+        "hazardous-instruction",
+        "planning-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-17730",
+    "title": "ERA: Error-Resistant Autonomous Object Navigation with Predicted Depth",
+    "first_author": "Huang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.17730",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "perception-error"
+      ],
+      "surface": [
+        "visual-perception",
+        "world-state"
+      ],
+      "target": [
+        "world-state",
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-16",
+    "first_submission_date": "2026-11-13",
+    "first_submission_source": "https://arxiv.org/abs/2611.17730",
+    "defense": {
+      "mechanism": [
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "perception-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-18026",
+    "title": "A Generalizable Approach to Safety-Aware Robotic Behavior Planning with an Explicit Constraint Space",
+    "first_author": "Wu et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.18026",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "llm-robot",
+    "risks": [],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "planning-error"
+      ],
+      "surface": [
+        "task-planning",
+        "physical-semantic-environment"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "policy-violation"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-16",
+    "first_submission_date": "2026-11-13",
+    "first_submission_source": "https://arxiv.org/abs/2611.18026",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "defends_against": [
+        "planning-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-18176",
+    "title": "ESI: An Embodied Self-Improvement Flywheel for LLM-VLA Agents",
+    "first_author": "Cai et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.18176",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety-Aligned and Robust Policy Training",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "semantic-misalignment",
+        "execution-error"
+      ],
+      "surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure",
+        "recovery-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-16",
+    "first_submission_date": "2026-11-13",
+    "first_submission_source": "https://arxiv.org/abs/2611.18176",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "semantic-misalignment",
+        "execution-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-18562",
+    "title": "Training Reasoning Models in Simulation to Natively Use Real Robots",
+    "first_author": "Tang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.18562",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Action and Spatial Generalization",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "user-instruction",
+        "physical-semantic-environment"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-16",
+    "first_submission_date": "2026-11-13",
+    "first_submission_source": "https://arxiv.org/abs/2611.18562",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2610-39180",
+    "title": "EmbodiExp: Compositional Experience Transfer for Embodied Agents",
+    "first_author": "Gu et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.39180",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "planning-error",
+        "execution-error"
+      ],
+      "surface": [
+        "context-memory-retrieval",
+        "execution-control"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-16",
+    "first_submission_date": "2026-10-29",
+    "first_submission_source": "https://arxiv.org/abs/2610.39180",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "planning-error",
+        "execution-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-18346",
+    "title": "VLAN: Vision-Language Accessible Navigation",
+    "first_author": "Hu et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.18346",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Task and Physical Safety",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "planning-error"
+        ],
+        "surfaces": [
+          "user-instruction",
+          "physical-semantic-environment",
+          "action-interface"
+        ],
+        "consequences": [
+          "task-failure",
+          "collision"
+        ]
+      },
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-16",
+    "first_submission_date": "2026-11-13",
+    "first_submission_source": "https://arxiv.org/abs/2611.18346"
+  },
+  {
+    "id": "arxiv-2611-18140",
+    "title": "Large Language Model-Empowered Intelligent Agent for Adaptive Fast-Charging Control of Lithium-Ion Batteries",
+    "first_author": "Chan et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.18140",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety-Aligned and Robust Policy Training",
+    "scope": "llm-robot",
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "execution-control"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "physical-damage"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-16",
+    "first_submission_date": "2026-11-13",
+    "first_submission_source": "https://arxiv.org/abs/2611.18140",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning",
+        "action-shielding"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-18359",
+    "title": "Envisioning Agentic Robotics: A New Era of Robotic Systems",
+    "first_author": "Grid Robotics",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.18359",
+    "code_url": null,
+    "section": "surveys",
+    "subsection": "Position Papers and Research Agendas",
+    "scope": "llm-robot",
+    "risks": [],
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": [
+          "inference",
+          "system"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "task-planning",
+          "execution-control"
+        ],
+        "consequences": []
+      },
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-16",
+    "first_submission_date": "2026-11-13",
+    "first_submission_source": "https://arxiv.org/abs/2611.18359"
+  },
+  {
+    "id": "arxiv-2611-09326",
+    "title": "ABHBench: Evaluating Moral Decision-Making of Foundation Models from an Agentic Perspective",
+    "first_author": "Li et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.09326",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Semantic and Ethical Safety",
+    "scope": "llm-robot",
+    "risks": [
+      "ethical-societal"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "user-instruction",
+          "physical-semantic-environment"
+        ],
+        "consequences": [
+          "policy-violation"
+        ]
+      },
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-16",
+    "first_submission_date": "2026-11-06",
+    "first_submission_source": "https://arxiv.org/abs/2611.09326"
   }
 ]
