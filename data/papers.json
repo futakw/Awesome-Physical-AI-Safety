@@ -45120,5 +45120,807 @@
     "catalogued_date": "2026-11-16",
     "first_submission_date": "2026-11-06",
     "first_submission_source": "https://arxiv.org/abs/2611.09326"
+  },
+  {
+    "id": "arxiv-2611-18702",
+    "title": "Robustness as a Transferable Skill: Cross-Task Adversarial Defense for Vision-Language-Action Policies",
+    "first_author": "Zhang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.18702",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety-Aligned and Robust Policy Training",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "surface": [
+        "visual-perception"
+      ],
+      "mechanism": [
+        "adversarial-patch",
+        "digital-perturbation"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-17",
+    "first_submission_date": "2026-11-06",
+    "first_submission_source": "https://arxiv.org/abs/2611.18702",
+    "defense": {
+      "mechanism": [
+        "model-merging"
+      ],
+      "defends_against": [
+        "adversarial-patch",
+        "digital-perturbation"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-19274",
+    "title": "HospitalBench: Diagnosing Where and Why Embodied Agents Fail on Long Hospital Task Chains",
+    "first_author": "Jena et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.19274",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Failure Detection and Recovery",
+    "scope": "vision-language-agent",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "curation_status": "abstract-verified",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "planning-error",
+          "execution-error"
+        ],
+        "surfaces": [
+          "task-planning",
+          "execution-control"
+        ],
+        "consequences": [
+          "task-failure",
+          "recovery-failure"
+        ]
+      }
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-17",
+    "first_submission_date": "2026-11-14",
+    "first_submission_source": "https://arxiv.org/abs/2611.19274"
+  },
+  {
+    "id": "arxiv-2611-19912",
+    "title": "AgenticJevNav: Agentic Object Search and Navigation via Event-Driven Verification",
+    "first_author": "Zhang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.19912",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference",
+        "system"
+      ],
+      "surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "mechanism": [
+        "execution-error",
+        "planning-error"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-17",
+    "first_submission_date": "2026-11-15",
+    "first_submission_source": "https://arxiv.org/abs/2611.19912",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "execution-error",
+        "planning-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-19952",
+    "title": "CRAFT: A Robot-Agent Harness with Scope-Aware Adaptation",
+    "first_author": "Zhang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.19952",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety Requirements and Assurance",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "context-memory-retrieval",
+        "task-planning"
+      ],
+      "mechanism": [
+        "semantic-misalignment"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-17",
+    "first_submission_date": "2026-11-15",
+    "first_submission_source": "https://arxiv.org/abs/2611.19952",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "semantic-misalignment"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-20244",
+    "title": "Right Goal, Wrong Body: Re-grounding Frozen VLAs under Actuation Shift",
+    "first_author": "Siddique et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.20244",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "execution-control"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-17",
+    "first_submission_date": "2026-11-15",
+    "first_submission_source": "https://arxiv.org/abs/2611.20244",
+    "defense": {
+      "mechanism": [
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-20465",
+    "title": "ReRead: Wrong Predictions, Useful Representations - Correcting Frozen Robot Policies by Re-reading Their Own Representations",
+    "first_author": "Su et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.20465",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Reliability-Oriented Policy Refinement",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "surface": [
+        "reasoning-representation",
+        "action-interface"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-17",
+    "first_submission_date": "2026-11-16",
+    "first_submission_source": "https://arxiv.org/abs/2611.20465",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-20676",
+    "title": "Learning and Verifying Progress: Closed-Loop Agentic Planning with Progress-Enhanced Execution for Long-Horizon Vision-Language Navigation",
+    "first_author": "Zhou et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.20676",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "vision-language-navigation",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "mechanism": [
+        "execution-error",
+        "planning-error"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure",
+        "recovery-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-17",
+    "first_submission_date": "2026-11-16",
+    "first_submission_source": "https://arxiv.org/abs/2611.20676",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery",
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "execution-error",
+        "planning-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-21099",
+    "title": "ForceHarness: Turning Force into Action and Physics for Frozen Frontier Models",
+    "first_author": "Sun et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.21099",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Multimodal Perception and Physical Safeguards",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "proprioception",
+        "execution-control"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-17",
+    "first_submission_date": "2026-11-16",
+    "first_submission_source": "https://arxiv.org/abs/2611.21099",
+    "defense": {
+      "mechanism": [
+        "action-shielding"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-21258",
+    "title": "ThinkWAM: Rethinking Latent Futures for Action Refinement",
+    "first_author": "Tang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.21258",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Reliability-Oriented Policy Refinement",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "surface": [
+        "action-interface",
+        "world-state"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-17",
+    "first_submission_date": "2026-11-16",
+    "first_submission_source": "https://arxiv.org/abs/2611.21258",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-20011",
+    "title": "ReactBench-AD: Do Driving VLAs and World-Action Models React to Imminent Hazards in Their Path?",
+    "first_author": "Theodoridis et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.20011",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Task and Physical Safety",
+    "scope": "vla",
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "curation_status": "paper-verified",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "environment-manipulation"
+        ],
+        "surfaces": [
+          "visual-perception"
+        ],
+        "consequences": [
+          "collision"
+        ]
+      }
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-17",
+    "first_submission_date": "2026-11-15",
+    "first_submission_source": "https://arxiv.org/abs/2611.20011",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "environment-manipulation"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-20765",
+    "title": "STA: A Split Temporal Adversary Method for Evaluating Robustness of Multimodal RL-based Driving Policies",
+    "first_author": "Xiong et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.20765",
+    "code_url": null,
+    "section": "inference-attacks",
+    "subsection": "Sensor, State, and Physical Interventions",
+    "scope": "autonomous-driving",
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "visual-perception"
+      ],
+      "mechanism": [
+        "multimodal-desynchronization"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "collision"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-17",
+    "first_submission_date": "2026-11-16",
+    "first_submission_source": "https://arxiv.org/abs/2611.20765"
+  },
+  {
+    "id": "arxiv-2604-26569",
+    "title": "LLM-Flax: LLM-Generated Rules and Object Guidance for Neuro-Symbolic Task Planning",
+    "first_author": "Kim et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2604.26569",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety Requirements and Assurance",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "surface": [
+        "task-planning"
+      ],
+      "mechanism": [
+        "planning-error"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-17",
+    "first_submission_date": "2026-04-29",
+    "first_submission_source": "https://arxiv.org/abs/2604.26569",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "planning-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2605-06481",
+    "title": "OA-WAM: Object-Addressable World Action Model for Robust Robot Manipulation",
+    "first_author": "Liu et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2605.06481",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Representation and Language-Action Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "surface": [
+        "visual-perception",
+        "world-state"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-17",
+    "first_submission_date": "2026-05-07",
+    "first_submission_source": "https://arxiv.org/abs/2605.06481",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2608-13438",
+    "title": "ContactGuard: Pre-Contact Execution Monitoring with Action-Conditioned Latent World Models",
+    "first_author": "Zheng et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2608.13438",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "physical-ai",
+    "risks": [],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "target": [
+        "runtime-monitor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-17",
+    "first_submission_date": "2026-08-13",
+    "first_submission_source": "https://arxiv.org/abs/2608.13438",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "action-shielding"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-16246",
+    "title": "What Can a VLA Learn from the Agent That Calls It? Task-Level Experience Distillation for Embodied Navigation",
+    "first_author": "Tao et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.16246",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety-Aligned and Robust Policy Training",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "mechanism": [
+        "execution-error",
+        "planning-error"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure",
+        "recovery-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-17",
+    "first_submission_date": "2026-11-12",
+    "first_submission_source": "https://arxiv.org/abs/2611.16246",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "execution-error",
+        "planning-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2609-18304",
+    "title": "Rollback the World, Keep the Reflection: Rollback-Induced Reflection for Long-Horizon LLM Agents",
+    "first_author": "Yu et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2609.18304",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "embodied-agent",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "context-memory-retrieval",
+        "world-state"
+      ],
+      "mechanism": [
+        "execution-error",
+        "planning-error"
+      ],
+      "target": [
+        "shared-system-state"
+      ],
+      "consequence": [
+        "task-failure",
+        "recovery-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-17",
+    "first_submission_date": "2026-09-16",
+    "first_submission_source": "https://arxiv.org/abs/2609.18304",
+    "defense": {
+      "mechanism": [
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "execution-error",
+        "planning-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-19774",
+    "title": "When Backdoors Can Be Switched Off: Suppression-Aware Backdoor Attacks on Vision-Language-Action Models",
+    "first_author": "Syeda et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.19774",
+    "code_url": null,
+    "section": "training-attacks",
+    "subsection": "Backdoors and Data Poisoning",
+    "scope": "vla",
+    "risks": [
+      "task-reliability",
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "surface": [
+        "model-supply-chain",
+        "visual-perception",
+        "proprioception",
+        "user-instruction"
+      ],
+      "mechanism": [
+        "backdoor"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "targeted-action"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-17",
+    "first_submission_date": "2026-11-15",
+    "first_submission_source": "https://arxiv.org/abs/2611.19774"
   }
 ]

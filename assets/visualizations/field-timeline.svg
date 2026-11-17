@@ -38,7 +38,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2024] EHAZOP: A Proof of Concept Ethical Hazard Analysis of an Assistive Robot
 [ACM Computing Surveys 2024] Who’s in Charge Here? A Survey on Trustworthy AI in Variable Autonomy Robotic Systems</title></circle>
 <text x="830.0" y="97" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">3</text>
-<circle cx="975.0" cy="92" r="12.6" fill="#667585" fill-opacity="0.88"><title>[arXiv 2025] Trust in LLM-controlled Robotics: a Survey of Security Threats, Defenses and Challenges
+<circle cx="975.0" cy="92" r="12.4" fill="#667585" fill-opacity="0.88"><title>[arXiv 2025] Trust in LLM-controlled Robotics: a Survey of Security Threats, Defenses and Challenges
 [arXiv 2025] Towards Robust and Secure Embodied AI: A Survey on Vulnerabilities and Attacks
 [OpenReview 2025] Towards Safe and Trustworthy Embodied AI: Foundations, Status, and Prospects
 [arXiv 2025] A Survey on Vision-Language-Action Models for Autonomous Driving
@@ -60,7 +60,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2025] Safe Learning for Contact-Rich Robot Tasks: A Survey from Classical Learning-Based Methods to Safe Foundation Models
 [arXiv 2025] A Comprehensive Survey on Physical Risk Control in the Era of Foundation Model-enabled Robotics</title></circle>
 <text x="975.0" y="97" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">21</text>
-<circle cx="1120.0" cy="92" r="13.3" fill="#667585" fill-opacity="0.88"><title>[arXiv 2026] SoK: Security and Privacy of Foundation-Model-Powered Robots
+<circle cx="1120.0" cy="92" r="13.2" fill="#667585" fill-opacity="0.88"><title>[arXiv 2026] SoK: Security and Privacy of Foundation-Model-Powered Robots
 [arXiv 2026] Toward Secure LLM Agents: Threat Surfaces, Attacks, Defenses, and Evaluation
 [arXiv 2026] Security of World-Model-Based Embodied AI: A Lifecycle of Threats, Defenses, and Evaluation
 [arXiv 2026] Vision-Language-Action Safety: Threats, Challenges, Evaluations, and Mechanisms
@@ -97,7 +97,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2025] Don&#x27;t Blind Your VLA: Aligning Visual Representations for OOD Generalization
 [arXiv 2025] Predicting Risks Before They Happen: Vision-Language Reasoning for Autonomous Driving</title></circle>
 <text x="975.0" y="141" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">4</text>
-<circle cx="1120.0" cy="136" r="16.3" fill="#2F7D73" fill-opacity="0.88"><title>[arXiv 2026] Generalizable VLA Finetuning via Representation Anchoring and Language-Action Alignment
+<circle cx="1120.0" cy="136" r="16.4" fill="#2F7D73" fill-opacity="0.88"><title>[arXiv 2026] Generalizable VLA Finetuning via Representation Anchoring and Language-Action Alignment
 [CVPR 2026] Boosting Vision-Language-Action Finetuning with Feasible Action Neighborhood Prior
 [arXiv 2026] ICR-Drive: Instruction Counterfactual Robustness for End-to-End Language-Driven Autonomous Driving
 [arXiv 2026] How VLAs (Really) Work in Open-World Environments
@@ -155,22 +155,25 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2026] MOSAIC: Modular Obstacle and Spatial-Aware Framework for Manipulation In Cluttered Scenes
 [arXiv 2026] AnyCamVLA: Zero-Shot Camera Adaptation for Viewpoint Robust Vision-Language-Action Models
 [arXiv 2026] Decoupled Asynchronous System for Humanoids (DASH): Latency-Agnostic Scaling of Vision-Language-Action Models for Humanoid Manipulation
-[arXiv 2026] Training Reasoning Models in Simulation to Natively Use Real Robots</title></circle>
-<text x="1120.0" y="141" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">59</text>
+[arXiv 2026] Training Reasoning Models in Simulation to Natively Use Real Robots
+[arXiv 2026] ReRead: Wrong Predictions, Useful Representations - Correcting Frozen Robot Policies by Re-reading Their Own Representations
+[arXiv 2026] ThinkWAM: Rethinking Latent Futures for Action Refinement
+[arXiv 2026] OA-WAM: Object-Addressable World Action Model for Robust Robot Manipulation</title></circle>
+<text x="1120.0" y="141" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">62</text>
 <text class="label" x="222" y="185" text-anchor="end">Training Attacks</text>
 <line x1="250" y1="180" x2="1120" y2="180" stroke="#DCE3EC"/>
 <circle cx="830.0" cy="180" r="9.1" fill="#7356A3" fill-opacity="0.88"><title>[arXiv 2024] Robot Collapse: Supply Chain Backdoor Attacks Against VLM-based Robotic Manipulation
 [arXiv 2024] Compromising Embodied Agents with Contextual Backdoor Attacks
 [ICRA 2024] Privacy Risks in Reinforcement Learning for Household Robots</title></circle>
 <text x="830.0" y="185" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">3</text>
-<circle cx="975.0" cy="180" r="10.0" fill="#7356A3" fill-opacity="0.88"><title>[arXiv 2025] BEAT: Visual Backdoor Attacks on VLM-based Embodied Agents via Contrastive Trigger Learning
+<circle cx="975.0" cy="180" r="9.9" fill="#7356A3" fill-opacity="0.88"><title>[arXiv 2025] BEAT: Visual Backdoor Attacks on VLM-based Embodied Agents via Contrastive Trigger Learning
 [NeurIPS 2025] BadVLA: Towards Backdoor Attacks on Vision-Language-Action Models via Objective-Decoupled Optimization
 [arXiv 2025] DropVLA: An Action-Level Backdoor Attack on Vision-Language-Action Models
 [ICLR 2025] Can We Trust Embodied Agents? Exploring Backdoor Attacks Against Embodied LLM-Based Decision-Making Systems
 [arXiv 2025] Goal-Oriented Backdoor Attack Against Vision-Language-Action Models via Physical Objects
 [arXiv 2025] MuTRAP: Multi-trigger Trojans Attacking Robot Task Planning Systems</title></circle>
 <text x="975.0" y="185" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">6</text>
-<circle cx="1120.0" cy="180" r="11.2" fill="#7356A3" fill-opacity="0.88"><title>[OpenReview 2026] Clean-Action Backdoor Attacks on Vision-Language-Action Models via Sequential Error Exploitation
+<circle cx="1120.0" cy="180" r="11.3" fill="#7356A3" fill-opacity="0.88"><title>[OpenReview 2026] Clean-Action Backdoor Attacks on Vision-Language-Action Models via Sequential Error Exploitation
 [arXiv 2026] FlowHijack: A Dynamics-Aware Backdoor Attack on Flow-Matching Vision-Language-Action Models
 [arXiv 2026] State Backdoor: Towards Stealthy Real-world Poisoning Attack on Vision-Language-Action Model in State Space
 [arXiv 2026] SilentDrift: Exploiting Action Chunking for Stealthy Backdoor Attacks on Vision-Language-Action Models
@@ -181,11 +184,12 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2026] TRAP: Tail-aware Ranking Attack for World-Model Planning
 [arXiv 2026] From Prompt to Physical Action: Structured Backdoor Attacks on LLM-Mediated Robotic Control Systems
 [CoRL 2026] Targeting World Models to Compromise Robot Learning Pipelines
-[arXiv 2026] StepTrigger: Contact-State-Triggered Backdoor Attacks on VLM-Powered Legged Robots</title></circle>
-<text x="1120.0" y="185" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">12</text>
+[arXiv 2026] StepTrigger: Contact-State-Triggered Backdoor Attacks on VLM-Powered Legged Robots
+[arXiv 2026] When Backdoors Can Be Switched Off: Suppression-Aware Backdoor Attacks on Vision-Language-Action Models</title></circle>
+<text x="1120.0" y="185" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">13</text>
 <text class="label" x="222" y="229" text-anchor="end">Inference Attacks</text>
 <line x1="250" y1="224" x2="1120" y2="224" stroke="#DCE3EC"/>
-<circle cx="830.0" cy="224" r="11.0" fill="#B0523A" fill-opacity="0.88"><title>[arXiv 2024] Exploring the Robustness of Decision-Level Through Adversarial Attacks on LLM-Based Embodied Models
+<circle cx="830.0" cy="224" r="10.9" fill="#B0523A" fill-opacity="0.88"><title>[arXiv 2024] Exploring the Robustness of Decision-Level Through Adversarial Attacks on LLM-Based Embodied Models
 [arXiv 2024] Easier Said Than Done: Unpacking Intent-Behavior Gap in Jailbreaking LLM-Based Robots
 [arXiv 2024] Malicious Path Manipulations via Exploitation of Representation Vulnerabilities of Vision-Language Navigation Systems
 [arXiv 2024] How Secure Are Large Language Models (LLMs) for Navigation in Urban Environments?
@@ -242,8 +246,9 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2026] Uncovering Linguistic Fragility in Vision-Language-Action Models via Diversity-Aware Red Teaming
 [arXiv 2026] Enhancing Visual Task-Redirection Attacks on Vision-Language-Action Models via Closed-Loop Optimization
 [arXiv 2026] PASA-KV: Attacking Action-Facing Visual Routes in World Action Models
-[arXiv 2026] Say the Same, Act Differently: Diagnosing and Steering Text-Action Divergence in Reasoning VLAs</title></circle>
-<text x="1120.0" y="229" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">29</text>
+[arXiv 2026] Say the Same, Act Differently: Diagnosing and Steering Text-Action Divergence in Reasoning VLAs
+[arXiv 2026] STA: A Split Temporal Adversary Method for Evaluating Robustness of Multimodal RL-based Driving Policies</title></circle>
+<text x="1120.0" y="229" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">30</text>
 <text class="label" x="222" y="273" text-anchor="end">Defenses</text>
 <line x1="250" y1="268" x2="1120" y2="268" stroke="#DCE3EC"/>
 <circle cx="250.0" cy="268" r="8.2" fill="#4F67A5" fill-opacity="0.88"><title>[IROS 2019] Privacy-Preserving Robot Vision with Anonymized Faces by Extreme Low Resolution</title></circle>
@@ -254,7 +259,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [CoRL 2023] Robots That Ask For Help: Uncertainty Alignment for Large Language Model Planners
 [arXiv 2023] SafeDreamer: Safe Reinforcement Learning with World Models</title></circle>
 <text x="685.0" y="273" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">5</text>
-<circle cx="830.0" cy="268" r="11.4" fill="#4F67A5" fill-opacity="0.88"><title>[arXiv 2024] SafeEmbodAI: a Safety Framework for Mobile Robots in Embodied AI Systems
+<circle cx="830.0" cy="268" r="11.3" fill="#4F67A5" fill-opacity="0.88"><title>[arXiv 2024] SafeEmbodAI: a Safety Framework for Mobile Robots in Embodied AI Systems
 [ICLR 2024] Embodied Active Defense: Leveraging Recurrent Feedback to Counter Adversarial Patches
 [arXiv 2024] Run-Time Observation Interventions Make Vision-Language-Action Models More Visually Robust
 [arXiv 2024] Safety Optimized Reinforcement Learning via Multi-Objective Policy Optimization
@@ -268,7 +273,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2024] VLM-Social-Nav: Socially Aware Robot Navigation through Scoring using Vision-Language Models
 [arXiv 2024] A Model-Agnostic Approach for Semantically Driven Disambiguation in Human-Robot Interaction</title></circle>
 <text x="830.0" y="273" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">13</text>
-<circle cx="975.0" cy="268" r="15.6" fill="#4F67A5" fill-opacity="0.88"><title>[arXiv 2025] RobustVLA: Robustness-Aware Reinforcement Post-Training for Vision-Language-Action Models
+<circle cx="975.0" cy="268" r="15.4" fill="#4F67A5" fill-opacity="0.88"><title>[arXiv 2025] RobustVLA: Robustness-Aware Reinforcement Post-Training for Vision-Language-Action Models
 [arXiv 2025] LogicGuard: Improving Embodied LLM agents through Temporal Logic based Critics
 [arXiv 2025] SafePlan: Leveraging Formal Logic and Chain-of-Thought Reasoning for Enhanced Safety in LLM-based Robotic Task Planning
 [arXiv 2025] Safe LLM-Controlled Robots with Formal Guarantees via Reachability Analysis
@@ -564,8 +569,18 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2026] A Generalizable Approach to Safety-Aware Robotic Behavior Planning with an Explicit Constraint Space
 [arXiv 2026] ESI: An Embodied Self-Improvement Flywheel for LLM-VLA Agents
 [arXiv 2026] EmbodiExp: Compositional Experience Transfer for Embodied Agents
-[arXiv 2026] Large Language Model-Empowered Intelligent Agent for Adaptive Fast-Charging Control of Lithium-Ion Batteries</title></circle>
-<text x="1120.0" y="273" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">246</text>
+[arXiv 2026] Large Language Model-Empowered Intelligent Agent for Adaptive Fast-Charging Control of Lithium-Ion Batteries
+[arXiv 2026] Robustness as a Transferable Skill: Cross-Task Adversarial Defense for Vision-Language-Action Policies
+[arXiv 2026] AgenticJevNav: Agentic Object Search and Navigation via Event-Driven Verification
+[arXiv 2026] CRAFT: A Robot-Agent Harness with Scope-Aware Adaptation
+[arXiv 2026] Right Goal, Wrong Body: Re-grounding Frozen VLAs under Actuation Shift
+[arXiv 2026] Learning and Verifying Progress: Closed-Loop Agentic Planning with Progress-Enhanced Execution for Long-Horizon Vision-Language Navigation
+[arXiv 2026] ForceHarness: Turning Force into Action and Physics for Frozen Frontier Models
+[arXiv 2026] LLM-Flax: LLM-Generated Rules and Object Guidance for Neuro-Symbolic Task Planning
+[arXiv 2026] ContactGuard: Pre-Contact Execution Monitoring with Action-Conditioned Latent World Models
+[arXiv 2026] What Can a VLA Learn from the Agent That Calls It? Task-Level Experience Distillation for Embodied Navigation
+[arXiv 2026] Rollback the World, Keep the Reflection: Rollback-Induced Reflection for Long-Horizon LLM Agents</title></circle>
+<text x="1120.0" y="273" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">256</text>
 <text class="label" x="222" y="317" text-anchor="end">Benchmarks</text>
 <line x1="250" y1="312" x2="1120" y2="312" stroke="#DCE3EC"/>
 <circle cx="395.0" cy="312" r="8.2" fill="#C48724" fill-opacity="0.88"><title>[ICCV 2021] RobustNav: Towards Benchmarking Robustness in Embodied Navigation</title></circle>
@@ -585,7 +600,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2024] MMRo: Are Multimodal LLMs Eligible as the Brain for In-Home Robotics?
 [arXiv 2024] NoisyEQA: Benchmarking Embodied Question Answering Against Noisy Queries</title></circle>
 <text x="830.0" y="317" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">9</text>
-<circle cx="975.0" cy="312" r="13.1" fill="#C48724" fill-opacity="0.88"><title>[arXiv 2025] LIBERO-PRO: Towards Robust and Fair Evaluation of Vision-Language-Action Models Beyond Memorization
+<circle cx="975.0" cy="312" r="12.9" fill="#C48724" fill-opacity="0.88"><title>[arXiv 2025] LIBERO-PRO: Towards Robust and Fair Evaluation of Vision-Language-Action Models Beyond Memorization
 [arXiv 2025] VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models
 [arXiv 2025] Generating Robot Constitutions &amp; Benchmarks for Semantic Safety
 [arXiv 2025] Confidence Calibration in Vision-Language-Action Models
@@ -611,7 +626,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2025] IndustryNav: Evaluating Spatial Reasoning and Safety of Embodied Agents in Dynamic Industrial Navigation
 [arXiv 2025] More Than Meets the Eye? Uncovering the Reasoning-Planning Disconnect in Training Vision-Language Driving Models</title></circle>
 <text x="975.0" y="317" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">25</text>
-<circle cx="1120.0" cy="312" r="22.0" fill="#C48724" fill-opacity="0.88"><title>[CVPR 2026] LIBERO-Plus: A Progressive Robustness Benchmark for Visual-Language-Action Models
+<circle cx="1120.0" cy="312" r="21.8" fill="#C48724" fill-opacity="0.88"><title>[CVPR 2026] LIBERO-Plus: A Progressive Robustness Benchmark for Visual-Language-Action Models
 [OpenReview 2026] VLA-Risk: Benchmarking Vision-Language-Action Models with Physical Robustness
 [AAAI 2026] IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents in Daily Household Tasks
 [arXiv 2026] HazardArena: Evaluating Semantic Safety in Vision-Language-Action Models
@@ -763,13 +778,15 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2026] One Trajectory, Two Requirements: Accuracy and Local Stability in Euler Sampling for Flow Matching Policies
 [arXiv 2026] What Makes a VLA Reactive? A Study of Execution Strategies for Dynamic Manipulation
 [arXiv 2026] VLAN: Vision-Language Accessible Navigation
-[arXiv 2026] ABHBench: Evaluating Moral Decision-Making of Foundation Models from an Agentic Perspective</title></circle>
-<text x="1120.0" y="317" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">153</text>
+[arXiv 2026] ABHBench: Evaluating Moral Decision-Making of Foundation Models from an Agentic Perspective
+[arXiv 2026] HospitalBench: Diagnosing Where and Why Embodied Agents Fail on Long Hospital Task Chains
+[arXiv 2026] ReactBench-AD: Do Driving VLAs and World-Action Models React to Imminent Hazards in Their Path?</title></circle>
+<text x="1120.0" y="317" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">155</text>
 <text class="label" x="222" y="361" text-anchor="end">System Security</text>
 <line x1="250" y1="356" x2="1120" y2="356" stroke="#DCE3EC"/>
 <circle cx="975.0" cy="356" r="8.2" fill="#AE4560" fill-opacity="0.88"><title>[arXiv 2025] Beyond Model Jailbreak: Systematic Dissection of the &quot;Ten DeadlySins&quot; in Embodied Intelligence</title></circle>
 <text x="975.0" y="361" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">1</text>
-<circle cx="1120.0" cy="356" r="10.0" fill="#AE4560" fill-opacity="0.88"><title>[IEICE Transactions 2026] Cyber-Physical Steganography in Robotic Motion Control
+<circle cx="1120.0" cy="356" r="9.9" fill="#AE4560" fill-opacity="0.88"><title>[IEICE Transactions 2026] Cyber-Physical Steganography in Robotic Motion Control
 [arXiv 2026] Same Weights, Different Robot: A Deployment Safety View of VLA Policies
 [arXiv 2026] PIER: An Evidence-Gated Execution Interface for Robotic Manipulation
 [arXiv 2026] Traceable World State: A Provenance-Aware State Representation and Deterministic Replay Framework for Robotic Systems
