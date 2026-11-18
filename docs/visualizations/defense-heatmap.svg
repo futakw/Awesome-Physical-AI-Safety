@@ -11,7 +11,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 </style>
 <rect width="1200" height="815" fill="#FFFFFF"/>
 <text class="title" x="48" y="48">Defense mechanism × defended threat</text>
-<text class="subtitle" x="48" y="74">Columns follow the Threat Cross-Map order, including empty cells (426 enriched papers).</text>
+<text class="subtitle" x="48" y="74">Columns follow the Threat Cross-Map order, including empty cells (430 enriched papers).</text>
 <text class="axis" text-anchor="middle" x="343.2" y="173.0"><tspan x="343.2" dy="0em">Backdoor</tspan></text>
 <text class="axis" text-anchor="start" transform="translate(429.8 173.0) rotate(-30)"><tspan x="0" dy="0em">Digital</tspan><tspan x="0" dy="1.05em">Perturbation</tspan></text>
 <text class="axis" text-anchor="middle" x="516.2" y="160.0"><tspan x="516.2" dy="0em">Adversarial</tspan><tspan x="516.2" dy="1.05em">Patch</tspan></text>
@@ -392,7 +392,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 <text x="516.2" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">1</text>
 <rect x="561.5" y="457" width="82.5" height="50" rx="6" fill="#E8EFF8"><title>[arXiv 2026] NEXUS: Learning Safety Constraints and Action Models for Safe and Robust Embodied Planning</title></rect>
 <text x="602.8" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">1</text>
-<rect x="648.0" y="457" width="82.5" height="50" rx="6" fill="#C9DBF5"><title>[arXiv 2025] Affordance Field Intervention: Enabling VLAs to Escape Memory Traps in Robotic Manipulation
+<rect x="648.0" y="457" width="82.5" height="50" rx="6" fill="#C7D9F5"><title>[arXiv 2025] Affordance Field Intervention: Enabling VLAs to Escape Memory Traps in Robotic Manipulation
 [arXiv 2026] Self-Adaptive VLA for Robust Robot Deployment
 [arXiv 2026] Dreaming the Unseen: World Model-regularized Diffusion Policy for Out-of-Distribution Robustness
 [arXiv 2026] ForkCast: Predictive Recovery for Vision-Language-Action Policies via Counterfactual Futures
@@ -404,8 +404,9 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2026] DiMuRe: Diagnosis-Guided Multilevel Recovery for Robotic Task Execution
 [arXiv 2026] RoboACE: Adversarial Co-Evolution for Robot Self-Improvement
 [arXiv 2026] AgenticTactileVLA: Contact-Guided Execution-Time Supervision for Generalizable Dexterous Manipulation without VLA Retraining
-[arXiv 2026] Right Goal, Wrong Body: Re-grounding Frozen VLAs under Actuation Shift</title></rect>
-<text x="689.2" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">13</text>
+[arXiv 2026] Right Goal, Wrong Body: Re-grounding Frozen VLAs under Actuation Shift
+[arXiv 2026] InteractVLA: Turning VLAs into Interactive Tools for Agentic Robotic Manipulation</title></rect>
+<text x="689.2" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000">14</text>
 <rect x="734.5" y="457" width="82.5" height="50" rx="6" fill="#EEF3F8"><title></title></rect>
 <text x="775.8" y="486.0" text-anchor="middle" font-size="12" font-weight="600" fill="#000000"></text>
 <rect x="821.0" y="457" width="82.5" height="50" rx="6" fill="#DEE9F7"><title>[arXiv 2026] AutoAgent0: An Agentic Runtime for Safe Closed-Loop Driving

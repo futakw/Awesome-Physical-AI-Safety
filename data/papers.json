@@ -45922,5 +45922,289 @@
     "catalogued_date": "2026-11-17",
     "first_submission_date": "2026-11-15",
     "first_submission_source": "https://arxiv.org/abs/2611.19774"
+  },
+  {
+    "id": "arxiv-2611-22080",
+    "title": "CRA: Continuous Risk Assessment for Safety-critical Visual Navigation",
+    "first_author": "Zheng et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.22080",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Multimodal Perception and Physical Safeguards",
+    "scope": "robot-navigation",
+    "risks": [],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "physical-semantic-environment"
+      ],
+      "mechanism": [],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "unsafe-motion"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-18",
+    "first_submission_date": "2026-11-17",
+    "first_submission_source": "https://arxiv.org/abs/2611.22080",
+    "defense": {
+      "mechanism": [
+        "action-shielding"
+      ],
+      "defends_against": [],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-22138",
+    "title": "RoboTeam: Benchmarking Vision-Based Multi-Agent Control of Many Robot Arms in Real Time",
+    "first_author": "Fan et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.22138",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Evaluation Infrastructure",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference",
+          "system"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "action-interface",
+          "execution-control"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      },
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-18",
+    "first_submission_date": "2026-11-17",
+    "first_submission_source": "https://arxiv.org/abs/2611.22138"
+  },
+  {
+    "id": "arxiv-2611-22291",
+    "title": "When the World Is the Test Suite: Agentic Intelligence for the Physical World",
+    "first_author": "Li et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.22291",
+    "code_url": null,
+    "section": "surveys",
+    "subsection": "Position Papers and Research Agendas",
+    "scope": "physical-ai",
+    "risks": [],
+    "threat_model": {
+      "kind": "survey",
+      "coverage": {
+        "lifecycles": [
+          "inference",
+          "system"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "action-interface",
+          "execution-control"
+        ],
+        "consequences": []
+      },
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-18",
+    "first_submission_date": "2026-11-17",
+    "first_submission_source": "https://arxiv.org/abs/2611.22291"
+  },
+  {
+    "id": "arxiv-2611-22453",
+    "title": "VoxelSBFL: Voxel-Level Spectrum-Based Failure Prediction for Vision-Language-Action Models",
+    "first_author": "Kanwal et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.22453",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "action-interface"
+      ],
+      "mechanism": [],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-18",
+    "first_submission_date": "2026-11-17",
+    "first_submission_source": "https://arxiv.org/abs/2611.22453",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-22584",
+    "title": "InteractVLA: Turning VLAs into Interactive Tools for Agentic Robotic Manipulation",
+    "first_author": "Zhao et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.22584",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "user-instruction",
+        "physical-semantic-environment"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-18",
+    "first_submission_date": "2026-11-17",
+    "first_submission_source": "https://arxiv.org/abs/2611.22584",
+    "defense": {
+      "mechanism": [
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-22395",
+    "title": "CoBoVLA: Decoupling Language from Action with Discrete Codes for Robust and Interpretable Robot Manipulation",
+    "first_author": "Arora et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.22395",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Language and Instruction Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "user-instruction"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-18",
+    "first_submission_date": "2026-11-17",
+    "first_submission_source": "https://arxiv.org/abs/2611.22395",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-22761",
+    "title": "Network-Exposed Configuration Attacks on LLM-Controlled Social Robots",
+    "first_author": "Akingbola et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.22761",
+    "code_url": null,
+    "section": "system-security",
+    "subsection": "Cross-Layer System Security",
+    "scope": "llm-robot",
+    "risks": [
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "system",
+        "inference"
+      ],
+      "surface": [
+        "middleware-network"
+      ],
+      "mechanism": [
+        "network-attack"
+      ],
+      "target": [
+        "shared-system-state"
+      ],
+      "consequence": [
+        "control-hijacking"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-18",
+    "first_submission_date": "2026-11-17",
+    "first_submission_source": "https://arxiv.org/abs/2611.22761"
   }
 ]
