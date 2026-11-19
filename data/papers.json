@@ -46831,5 +46831,146 @@
     "catalogued_date": "2026-11-19",
     "first_submission_date": "2026-11-18",
     "first_submission_source": "https://arxiv.org/abs/2611.23676"
+  },
+  {
+    "id": "arxiv-2611-24455",
+    "title": "Homeward: No Place Like the Training View",
+    "first_author": "Lyu et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.24455",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "OOD and Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "visual-perception"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "catalogued_date": "2026-11-19",
+    "first_submission_date": "2026-11-18",
+    "first_submission_source": "https://arxiv.org/abs/2611.24455"
+  },
+  {
+    "id": "arxiv-2611-24077",
+    "title": "AeroRSI: Recursive Self-Improvement for Aerial Vision-Language Navigation",
+    "first_author": "Wu et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.24077",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety-Aligned and Robust Policy Training",
+    "scope": "vla",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "action-interface"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure",
+        "collision"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "catalogued_date": "2026-11-19",
+    "first_submission_date": "2026-11-18",
+    "first_submission_source": "https://arxiv.org/abs/2611.24077"
+  },
+  {
+    "id": "arxiv-2606-20118",
+    "title": "Pose6DAug: Physically Plausible Multi-view Object Swapping for Robot Data Augmentation",
+    "first_author": "Lee et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2606.20118",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "OOD and Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "visual-perception"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "catalogued_date": "2026-11-19",
+    "first_submission_date": "2026-06-18",
+    "first_submission_source": "https://arxiv.org/abs/2606.20118"
   }
 ]
