@@ -46206,5 +46206,630 @@
     "catalogued_date": "2026-11-18",
     "first_submission_date": "2026-11-17",
     "first_submission_source": "https://arxiv.org/abs/2611.22761"
+  },
+  {
+    "id": "arxiv-2611-23517",
+    "title": "RageVLA: Augmentation-Trained Perception and Action for State-of-the-Art Robustness on LIBERO",
+    "first_author": "Singh et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.23517",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "OOD and Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "physical-semantic-environment",
+        "user-instruction"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "catalogued_date": "2026-11-19",
+    "first_submission_date": "2026-11-17",
+    "first_submission_source": "https://arxiv.org/abs/2611.23517"
+  },
+  {
+    "id": "arxiv-2611-23620",
+    "title": "How Uncertain Is My Action? Self-Correcting Visual Planning with Frozen World Models",
+    "first_author": "Li et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.23620",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "world-model",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "action-interface"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "catalogued_date": "2026-11-19",
+    "first_submission_date": "2026-11-17",
+    "first_submission_source": "https://arxiv.org/abs/2611.23620"
+  },
+  {
+    "id": "arxiv-2611-23714",
+    "title": "ExecGap: Exploiting Command-Execution Gap for Patch Attacks on Vision-Language-Action Models",
+    "first_author": "Tang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.23714",
+    "code_url": null,
+    "section": "inference-attacks",
+    "subsection": "Visual Perturbations and Patches",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "visual-perception"
+      ],
+      "mechanism": [
+        "adversarial-patch"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-19",
+    "first_submission_date": "2026-11-18",
+    "first_submission_source": "https://arxiv.org/abs/2611.23714"
+  },
+  {
+    "id": "arxiv-2611-23816",
+    "title": "RoboDx: Repair and Diagnosis of Faults in Robot Software",
+    "first_author": "Dan",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.23816",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Failure Detection and Recovery",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "execution-error"
+        ],
+        "surfaces": [
+          "execution-control"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      },
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-19",
+    "first_submission_date": "2026-11-18",
+    "first_submission_source": "https://arxiv.org/abs/2611.23816"
+  },
+  {
+    "id": "arxiv-2611-23843",
+    "title": "RePlan-VLA: Progress-Aware Replanning for Long-Horizon Vision-Language-Action Models",
+    "first_author": "Vashisth et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.23843",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "execution-control"
+      ],
+      "mechanism": [
+        "planning-error"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "planning-error"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "catalogued_date": "2026-11-19",
+    "first_submission_date": "2026-11-18",
+    "first_submission_source": "https://arxiv.org/abs/2611.23843"
+  },
+  {
+    "id": "arxiv-2611-24076",
+    "title": "Meaning Reaches Object Choice but Not Completion: Where Is a VLA Vulnerable to Landmark Synonyms?",
+    "first_author": "Kurihara et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.24076",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Language and Instruction Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "user-instruction"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "catalogued_date": "2026-11-19",
+    "first_submission_date": "2026-11-18",
+    "first_submission_source": "https://arxiv.org/abs/2611.24076"
+  },
+  {
+    "id": "arxiv-2611-24100",
+    "title": "Lost Between Mind, Model Collaboration, and Motion: Understanding and Measuring Cross-Model Action Misalignment in Commercial Robots",
+    "first_author": "Huang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.24100",
+    "code_url": null,
+    "section": "system-security",
+    "subsection": "Cross-Layer System Security",
+    "scope": "llm-robot",
+    "risks": [
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "semantic-misalignment"
+        ],
+        "surfaces": [
+          "user-instruction",
+          "action-interface"
+        ],
+        "consequences": [
+          "targeted-action"
+        ]
+      },
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-19",
+    "first_submission_date": "2026-11-18",
+    "first_submission_source": "https://arxiv.org/abs/2611.24100"
+  },
+  {
+    "id": "arxiv-2611-24360",
+    "title": "Towards Pose-Robust Few-Shot Vision-Language-Action Models",
+    "first_author": "Li et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.24360",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "OOD and Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "visual-perception",
+        "proprioception"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "catalogued_date": "2026-11-19",
+    "first_submission_date": "2026-11-18",
+    "first_submission_source": "https://arxiv.org/abs/2611.24360"
+  },
+  {
+    "id": "arxiv-2611-24178",
+    "title": "Adaptive Action Horizon Selection via Flow-Field Uncertainty",
+    "first_author": "Ben-Ami et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.24178",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Uncertainty, Abstention, and Human Oversight",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "action-interface"
+      ],
+      "mechanism": [],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "defense": {
+      "mechanism": [
+        "uncertainty-gating"
+      ],
+      "defends_against": [],
+      "curation_status": "abstract-verified"
+    },
+    "catalogued_date": "2026-11-19",
+    "first_submission_date": "2026-11-18",
+    "first_submission_source": "https://arxiv.org/abs/2611.24178"
+  },
+  {
+    "id": "arxiv-2610-05745",
+    "title": "Think Before You Distill: Generalization Recovery in Quantized VLAs via Selective Policy Distillation",
+    "first_author": "Ruan et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.05745",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Reliability-Oriented Policy Refinement",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "physical-semantic-environment"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "catalogued_date": "2026-11-19",
+    "first_submission_date": "2026-10-05",
+    "first_submission_source": "https://arxiv.org/abs/2610.05745"
+  },
+  {
+    "id": "arxiv-2611-24494",
+    "title": "RECLAIM: Robot-Vision-Informed Adversarial Patch Defense via Embodied Attention Feedback",
+    "first_author": "Zhu et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.24494",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Representation Steering and Inference-Time Defense",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "visual-perception"
+      ],
+      "mechanism": [
+        "adversarial-patch"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "defense": {
+      "mechanism": [
+        "input-filtering"
+      ],
+      "defends_against": [
+        "adversarial-patch"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "catalogued_date": "2026-11-19",
+    "first_submission_date": "2026-11-18",
+    "first_submission_source": "https://arxiv.org/abs/2611.24494"
+  },
+  {
+    "id": "arxiv-2611-23926",
+    "title": "GTI: Grounding Task Intent Throughout Long-Horizon VLA Manipulation",
+    "first_author": "Gong et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.23926",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "mechanism": [
+        "semantic-misalignment"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "semantic-misalignment"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "catalogued_date": "2026-11-19",
+    "first_submission_date": "2026-11-18",
+    "first_submission_source": "https://arxiv.org/abs/2611.23926"
+  },
+  {
+    "id": "arxiv-2610-02527",
+    "title": "CriticHack: Evaluating Visual Rewards Under Robot Policy Optimization",
+    "first_author": "Luo et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2610.02527",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Task and Physical Safety",
+    "scope": "robot-policy",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "training"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "visual-perception"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      },
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "defense": {
+      "mechanism": [
+        "input-filtering"
+      ],
+      "defends_against": [],
+      "curation_status": "abstract-verified"
+    },
+    "catalogued_date": "2026-11-19",
+    "first_submission_date": "2026-10-01",
+    "first_submission_source": "https://arxiv.org/abs/2610.02527"
+  },
+  {
+    "id": "arxiv-2611-23676",
+    "title": "Finetuning VLAs for Dexterous Manipulation: The Right Checkpoint Is All You Need",
+    "first_author": "Kuramshin et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.23676",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "OOD and Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "physical-semantic-environment"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "catalogued_date": "2026-11-19",
+    "first_submission_date": "2026-11-18",
+    "first_submission_source": "https://arxiv.org/abs/2611.23676"
   }
 ]
