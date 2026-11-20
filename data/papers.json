@@ -47671,5 +47671,276 @@
       ],
       "curation_status": "abstract-verified"
     }
+  },
+  {
+    "id": "arxiv-2611-25215",
+    "title": "Bridging vision-language reasoning and learned control for legged navigation in the wild",
+    "first_author": "Miki et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.25215",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Open-World Evaluation",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "visual-perception"
+      ],
+      "mechanism": [
+        "distribution-shift",
+        "perception-error"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure",
+        "collision"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-20",
+    "first_submission_date": "2026-11-18",
+    "first_submission_source": "https://arxiv.org/abs/2611.25215"
+  },
+  {
+    "id": "arxiv-2611-25529",
+    "title": "CoachSI: Self-Improvement of Robot Policies with a Language Coach",
+    "first_author": "Tao et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.25529",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "user-instruction",
+        "task-planning"
+      ],
+      "mechanism": [
+        "planning-error"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-20",
+    "first_submission_date": "2026-11-19",
+    "first_submission_source": "https://arxiv.org/abs/2611.25529",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "planning-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-26385",
+    "title": "Beyond the Sink Interpretation: Radial Attention in Flow-Based VLA Policies",
+    "first_author": "Zheng et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.26385",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Reliability-Oriented Policy Refinement",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "reasoning-representation"
+      ],
+      "mechanism": [],
+      "target": [
+        "reasoning-process"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-20",
+    "first_submission_date": "2026-11-19",
+    "first_submission_source": "https://arxiv.org/abs/2611.26385"
+  },
+  {
+    "id": "arxiv-2611-26596",
+    "title": "PGX: Physically Grounded Execution for Long-Horizon Humanoid Loco-Manipulation",
+    "first_author": "Lu et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.26596",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "execution-control",
+        "task-planning"
+      ],
+      "mechanism": [
+        "execution-error",
+        "planning-error"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-20",
+    "first_submission_date": "2026-11-19",
+    "first_submission_source": "https://arxiv.org/abs/2611.26596",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "execution-error",
+        "planning-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-25980",
+    "title": "Learning What Actions Change: Action Effect Matching for Dynamics-Faithful World Models",
+    "first_author": "Won et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.25980",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety-Aligned and Robust Policy Training",
+    "scope": "world-model",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "surface": [
+        "world-state"
+      ],
+      "mechanism": [],
+      "target": [
+        "world-state"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-20",
+    "first_submission_date": "2026-11-19",
+    "first_submission_source": "https://arxiv.org/abs/2611.25980",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-25005",
+    "title": "Inhabitant: An Agent Framework for Long-Horizon Human-Scene Interaction with Spatial Control and Quantitative Feedback",
+    "first_author": "Zhang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.25005",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure",
+        "collision"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-20",
+    "first_submission_date": "2026-11-18",
+    "first_submission_source": "https://arxiv.org/abs/2611.25005",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "paper-verified"
+    }
   }
 ]
