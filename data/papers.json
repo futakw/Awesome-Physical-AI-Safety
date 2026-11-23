@@ -47942,5 +47942,599 @@
       ],
       "curation_status": "paper-verified"
     }
+  },
+  {
+    "id": "arxiv-2611-26744",
+    "title": "FORTH: Grounding Tactile VLA Execution via Forward-Only Proxy-Control Pairing",
+    "first_author": "Li et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.26744",
+    "code_url": "https://github.com/Jordanlllll/FORTH",
+    "section": "defenses",
+    "subsection": "Multimodal Perception and Physical Safeguards",
+    "scope": "vla",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "proprioception",
+        "execution-control"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "target": [
+        "vla-policy",
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure",
+        "physical-damage"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-23",
+    "first_submission_date": "2026-11-19",
+    "first_submission_source": "https://arxiv.org/abs/2611.26744",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "action-shielding"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-26855",
+    "title": "Coherent Moment Propagation: Epistemic Uncertainty for Pre-trained Robot Policies",
+    "first_author": "Saavedra-Ruiz et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.26855",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Uncertainty, Abstention, and Human Oversight",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "reasoning-representation"
+      ],
+      "mechanism": [
+        "uncertainty-miscalibration"
+      ],
+      "target": [
+        "runtime-monitor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-23",
+    "first_submission_date": "2026-11-19",
+    "first_submission_source": "https://arxiv.org/abs/2611.26855",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "defends_against": [
+        "uncertainty-miscalibration"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-26858",
+    "title": "Staleness Deadlines for Motion Plans during Onboard Reasoning",
+    "first_author": "Iqbal",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.26858",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "mechanism": [],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure",
+        "collision"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-23",
+    "first_submission_date": "2026-11-19",
+    "first_submission_source": "https://arxiv.org/abs/2611.26858",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "action-shielding"
+      ],
+      "defends_against": [],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-26969",
+    "title": "RoboDyna: A Benchmark for Evaluating Robotic Manipulation under Physically Grounded Dynamics",
+    "first_author": "Li et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.26969",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "curation_status": "paper-verified",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "surfaces": [
+          "physical-semantic-environment",
+          "execution-control"
+        ],
+        "mechanisms": [
+          "distribution-shift"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-23",
+    "first_submission_date": "2026-11-20",
+    "first_submission_source": "https://arxiv.org/abs/2611.26969"
+  },
+  {
+    "id": "arxiv-2611-26971",
+    "title": "RoboPRO: A Perturbation-Resilient and Obstacle-Aware Benchmark for Robotic Manipulation",
+    "first_author": "Li et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.26971",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Task and Physical Safety",
+    "scope": "vla",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "curation_status": "paper-verified",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "user-instruction",
+          "physical-semantic-environment"
+        ],
+        "mechanisms": [
+          "distribution-shift"
+        ],
+        "consequences": [
+          "task-failure",
+          "collision",
+          "unsafe-success"
+        ]
+      }
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-23",
+    "first_submission_date": "2026-11-20",
+    "first_submission_source": "https://arxiv.org/abs/2611.26971"
+  },
+  {
+    "id": "arxiv-2611-27011",
+    "title": "FoRe: A Force-Guided Framework for Autonomous Grasp Recovery in Vision-Language-Action Models",
+    "first_author": "Peng et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.27011",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "proprioception",
+        "execution-control"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-23",
+    "first_submission_date": "2026-11-20",
+    "first_submission_source": "https://arxiv.org/abs/2611.27011",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-27182",
+    "title": "Tripwire: Robot Agents that Program Their Own Interrupts under Human Disturbance",
+    "first_author": "Chen et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.27182",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "vla",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "physical-semantic-environment"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure",
+        "collision"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-23",
+    "first_submission_date": "2026-11-20",
+    "first_submission_source": "https://arxiv.org/abs/2611.27182",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "action-shielding",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-27305",
+    "title": "ManipScope: A Diagnostic Benchmark for Instruction Following and Generalization in Robotic Manipulation",
+    "first_author": "Li et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.27305",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "user-instruction"
+      ],
+      "mechanism": [],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-23",
+    "first_submission_date": "2026-11-20",
+    "first_submission_source": "https://arxiv.org/abs/2611.27305"
+  },
+  {
+    "id": "arxiv-2611-27467",
+    "title": "ROSWORLD: When Digital Task Competence Meets Physical Execution",
+    "first_author": "Ma et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.27467",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Evaluation Infrastructure",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-23",
+    "first_submission_date": "2026-11-20",
+    "first_submission_source": "https://arxiv.org/abs/2611.27467"
+  },
+  {
+    "id": "arxiv-2611-27638",
+    "title": "Seeing Is Not Steering: Where Verifiable Reasoning Can Enter an End-to-End Driving Planner",
+    "first_author": "Jain et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.27638",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "autonomous-driving",
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "task-planning"
+      ],
+      "mechanism": [
+        "planning-error"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "collision",
+        "unsafe-motion"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-23",
+    "first_submission_date": "2026-11-20",
+    "first_submission_source": "https://arxiv.org/abs/2611.27638",
+    "defense": {
+      "mechanism": [
+        "action-shielding"
+      ],
+      "defends_against": [
+        "planning-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-27689",
+    "title": "Embodied-Harness: Towards Recursive Self-Improvement for Robotic Manipulation",
+    "first_author": "Fan et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.27689",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "context-memory-retrieval",
+        "execution-control"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-23",
+    "first_submission_date": "2026-11-20",
+    "first_submission_source": "https://arxiv.org/abs/2611.27689",
+    "defense": {
+      "mechanism": [
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-27804",
+    "title": "Generalist Action Critic: Harnessing Frontier Models in Autonomous Driving",
+    "first_author": "Yan et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.27804",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "autonomous-driving",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "task-planning"
+      ],
+      "mechanism": [
+        "planning-error"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure",
+        "collision"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-23",
+    "first_submission_date": "2026-11-20",
+    "first_submission_source": "https://arxiv.org/abs/2611.27804",
+    "defense": {
+      "mechanism": [
+        "action-shielding"
+      ],
+      "defends_against": [
+        "planning-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-27255",
+    "title": "AceVLN: Asynchronous Cloud Edge Deployment of VLNs via Latent Scheduling and Compensation",
+    "first_author": "Zheng et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.27255",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "System and Communication Defenses",
+    "scope": "vision-language-navigation",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "middleware-network",
+        "reasoning-representation"
+      ],
+      "mechanism": [
+        "multimodal-desynchronization"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-23",
+    "first_submission_date": "2026-11-20",
+    "first_submission_source": "https://arxiv.org/abs/2611.27255",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "defends_against": [
+        "multimodal-desynchronization"
+      ],
+      "curation_status": "paper-verified"
+    }
   }
 ]
