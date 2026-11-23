@@ -48536,5 +48536,240 @@
       ],
       "curation_status": "paper-verified"
     }
+  },
+  {
+    "id": "arxiv-2611-27171",
+    "title": "Learning from Incomplete Actions: Interval Motion Supervision for Vision-Language-Action Policies",
+    "first_author": "Mei et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.27171",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Reliability-Oriented Policy Refinement",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "training"
+      ],
+      "surface": [
+        "model-supply-chain"
+      ],
+      "mechanism": [],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-23",
+    "first_submission_date": "2026-11-20",
+    "first_submission_source": "https://arxiv.org/abs/2611.27171"
+  },
+  {
+    "id": "arxiv-2611-27499",
+    "title": "NavRSI: Recursive Harness Self-Improvement for Vision-and-Language Navigation",
+    "first_author": "Dai et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.27499",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "execution-control",
+        "task-planning"
+      ],
+      "mechanism": [
+        "execution-error",
+        "planning-error"
+      ],
+      "target": [
+        "task-planner",
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-23",
+    "first_submission_date": "2026-11-20",
+    "first_submission_source": "https://arxiv.org/abs/2611.27499",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "execution-error",
+        "planning-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-27797",
+    "title": "EvoTER: Evolving Embodied Agents via Tool-Use Experience and Reflection",
+    "first_author": "Zhou et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.27797",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-23",
+    "first_submission_date": "2026-11-20",
+    "first_submission_source": "https://arxiv.org/abs/2611.27797",
+    "defense": {
+      "mechanism": [
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2609-36774",
+    "title": "LexiconVLA: Learning Reusable Atomic Action Codebooks for Manipulation",
+    "first_author": "Wei et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2609.36774",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Action and Spatial Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "user-instruction",
+        "physical-semantic-environment"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-23",
+    "first_submission_date": "2026-09-29",
+    "first_submission_source": "https://arxiv.org/abs/2609.36774",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2609-16884",
+    "title": "Bridging Learned Visual Perception and Symbolic Belief-Space Planning via Probabilistic Grounding",
+    "first_author": "Azran et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2609.16884",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Uncertainty, Abstention, and Human Oversight",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "world-state",
+        "task-planning"
+      ],
+      "mechanism": [
+        "planning-error"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-23",
+    "first_submission_date": "2026-09-15",
+    "first_submission_source": "https://arxiv.org/abs/2609.16884",
+    "defense": {
+      "mechanism": [
+        "uncertainty-gating",
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "planning-error"
+      ],
+      "curation_status": "paper-verified"
+    }
   }
 ]
