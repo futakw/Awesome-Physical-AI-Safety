@@ -49648,5 +49648,308 @@
       ],
       "curation_status": "abstract-verified"
     }
+  },
+  {
+    "id": "arxiv-2611-30555",
+    "title": "RoboInF: A Benchmark for Instruction Fidelity in Robotic Manipulation",
+    "first_author": "Guo et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.30555",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
+    "scope": "mixed",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "semantic-misalignment"
+        ],
+        "surfaces": [
+          "user-instruction",
+          "execution-control"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      },
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-25",
+    "first_submission_date": "2026-11-23",
+    "first_submission_source": "https://arxiv.org/abs/2611.30555"
+  },
+  {
+    "id": "arxiv-2611-30637",
+    "title": "SWEEP-Bench: Do Embodied Policies Act on the Speed They See?",
+    "first_author": "Honda et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.30637",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
+    "scope": "mixed",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "distribution-shift"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "physical-semantic-environment"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      },
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-25",
+    "first_submission_date": "2026-11-23",
+    "first_submission_source": "https://arxiv.org/abs/2611.30637"
+  },
+  {
+    "id": "arxiv-2611-30957",
+    "title": "SayDo: Benchmarking the Safety of Frontier Models from Chat to Closed-Loop Robot Control",
+    "first_author": "Alt et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.30957",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Task and Physical Safety",
+    "scope": "llm-robot",
+    "risks": [
+      "physical-safety",
+      "ethical-societal"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "physical-semantic-environment",
+          "user-instruction",
+          "action-interface"
+        ],
+        "consequences": [
+          "unsafe-motion",
+          "policy-violation"
+        ]
+      },
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-25",
+    "first_submission_date": "2026-11-23",
+    "first_submission_source": "https://arxiv.org/abs/2611.30957"
+  },
+  {
+    "id": "arxiv-2611-31037",
+    "title": "SurgeCount: A Protocol-Guided Composition Harness for Bimanual Surgical Sponge Counting",
+    "first_author": "Kim et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.31037",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "task-planning",
+        "execution-control"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure",
+        "recovery-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-25",
+    "first_submission_date": "2026-11-23",
+    "first_submission_source": "https://arxiv.org/abs/2611.31037",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-31115",
+    "title": "RUIBench: What Makes a Good Robot-Use Interface?",
+    "first_author": "Chen et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.31115",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Evaluation Infrastructure",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "execution-error",
+          "self-assessment-failure"
+        ],
+        "surfaces": [
+          "action-interface",
+          "execution-control"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      },
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-25",
+    "first_submission_date": "2026-11-23",
+    "first_submission_source": "https://arxiv.org/abs/2611.31115"
+  },
+  {
+    "id": "arxiv-2611-30004",
+    "title": "EnvTrap: Revealing the Environment-Only Attack Surface in Embodied AI via Consequence-Blind Action Execution",
+    "first_author": "Liu et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.30004",
+    "code_url": null,
+    "section": "inference-attacks",
+    "subsection": "Sensor, State, and Physical Interventions",
+    "scope": "mixed",
+    "risks": [
+      "task-reliability",
+      "physical-safety",
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "environment-manipulation"
+      ],
+      "surface": [
+        "physical-semantic-environment"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "unsafe-motion"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-25",
+    "first_submission_date": "2026-11-23",
+    "first_submission_source": "https://arxiv.org/abs/2611.30004",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "action-shielding",
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "environment-manipulation"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-28345",
+    "title": "Toward Adversarially Robust World Models",
+    "first_author": "Rathbun et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.28345",
+    "code_url": null,
+    "section": "inference-attacks",
+    "subsection": "Visual Perturbations and Patches",
+    "scope": "world-model",
+    "risks": [
+      "task-reliability",
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "digital-perturbation"
+      ],
+      "surface": [
+        "visual-perception"
+      ],
+      "target": [
+        "world-state"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-25",
+    "first_submission_date": "2026-11-20",
+    "first_submission_source": "https://arxiv.org/abs/2611.28345",
+    "defense": {
+      "mechanism": [
+        "adversarial-training"
+      ],
+      "defends_against": [
+        "digital-perturbation"
+      ],
+      "curation_status": "paper-verified"
+    }
   }
 ]
