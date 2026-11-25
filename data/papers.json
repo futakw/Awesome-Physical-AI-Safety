@@ -49951,5 +49951,709 @@
       ],
       "curation_status": "paper-verified"
     }
+  },
+  {
+    "id": "arxiv-2611-31488",
+    "title": "Embodied Neuro-symbolic AI: Making Robot Behavior Auditable, Safe, and Scalable",
+    "first_author": "Wickramarachchi et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.31488",
+    "code_url": null,
+    "section": "surveys",
+    "subsection": "Position Papers and Research Agendas",
+    "scope": "vla",
+    "risks": [],
+    "threat_model": {
+      "kind": "survey",
+      "curation_status": "abstract-verified",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "task-planning",
+          "execution-control"
+        ],
+        "consequences": [
+          "task-failure",
+          "policy-violation"
+        ]
+      }
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-25",
+    "first_submission_date": "2026-11-23",
+    "first_submission_source": "https://arxiv.org/abs/2611.31488"
+  },
+  {
+    "id": "arxiv-2611-31511",
+    "title": "Near-Zero Forgetting Is Not Enough: Out-of-Distribution Robustness in Continual Learning of Pretrained VLAs",
+    "first_author": "Ruiz et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.31511",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "OOD and Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "model-supply-chain",
+        "visual-perception"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-25",
+    "first_submission_date": "2026-11-23",
+    "first_submission_source": "https://arxiv.org/abs/2611.31511"
+  },
+  {
+    "id": "arxiv-2611-31694",
+    "title": "CATWAY: Cost-sensitive agentic three-way robot decisions with calibrated language-model confidence",
+    "first_author": "Derner et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.31694",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Uncertainty, Abstention, and Human Oversight",
+    "scope": "llm-robot",
+    "risks": [
+      "ethical-societal"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "instruction-ambiguity",
+        "hazardous-instruction",
+        "uncertainty-miscalibration"
+      ],
+      "surface": [
+        "user-instruction"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "policy-violation"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-25",
+    "first_submission_date": "2026-11-23",
+    "first_submission_source": "https://arxiv.org/abs/2611.31694",
+    "defense": {
+      "mechanism": [
+        "uncertainty-gating"
+      ],
+      "defends_against": [
+        "instruction-ambiguity",
+        "hazardous-instruction",
+        "uncertainty-miscalibration"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-31868",
+    "title": "CALVIN-MAX: When Does a Mid-Execution Change Hurt a Robot Policy?",
+    "first_author": "Pakdamansavoji et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.31868",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
+    "scope": "mixed",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "curation_status": "abstract-verified",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "distribution-shift"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "world-state",
+          "execution-control",
+          "user-instruction"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-25",
+    "first_submission_date": "2026-11-24",
+    "first_submission_source": "https://arxiv.org/abs/2611.31868"
+  },
+  {
+    "id": "arxiv-2611-31903",
+    "title": "Beyond Expert Replay: Cross-Instruction Anchoring for Continual Vision-Language-Action Learning",
+    "first_author": "Chen et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.31903",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety-Aligned and Robust Policy Training",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [],
+      "surface": [
+        "model-supply-chain",
+        "user-instruction"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-25",
+    "first_submission_date": "2026-11-24",
+    "first_submission_source": "https://arxiv.org/abs/2611.31903",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-32093",
+    "title": "MARGIN: A Risk-Aware Agent for Robot Program Refinement",
+    "first_author": "Duan et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.32093",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [],
+      "surface": [
+        "action-interface",
+        "execution-control"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-25",
+    "first_submission_date": "2026-11-24",
+    "first_submission_source": "https://arxiv.org/abs/2611.32093",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "defends_against": [],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-32206",
+    "title": "Seeing Is Not Reaching: Instruction Shortcuts Override Visual Grounding in Vision-Language-Action Models",
+    "first_author": "Zhang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.32206",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Representation Steering and Inference-Time Defense",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "semantic-misalignment"
+      ],
+      "surface": [
+        "user-instruction",
+        "visual-perception"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-25",
+    "first_submission_date": "2026-11-24",
+    "first_submission_source": "https://arxiv.org/abs/2611.32206",
+    "defense": {
+      "mechanism": [
+        "representation-steering"
+      ],
+      "defends_against": [
+        "semantic-misalignment"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-32233",
+    "title": "Roboclock: A Unified Benchmark for Time-Aware Robotic Intelligence",
+    "first_author": "Zhao et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.32233",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "curation_status": "abstract-verified",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [],
+        "surfaces": [
+          "execution-control",
+          "action-interface"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-25",
+    "first_submission_date": "2026-11-24",
+    "first_submission_source": "https://arxiv.org/abs/2611.32233"
+  },
+  {
+    "id": "arxiv-2611-32238",
+    "title": "Boundary-Aware Policy Learning for Agent-Orchestrated Robot Manipulation",
+    "first_author": "Fang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.32238",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety-Aligned and Robust Policy Training",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "action-interface",
+        "world-state"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-25",
+    "first_submission_date": "2026-11-24",
+    "first_submission_source": "https://arxiv.org/abs/2611.32238",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-32245",
+    "title": "VLAs Execute, Code Recovers: 3D Skill Envelopes Bridge the Compositional Gap in Agentic Manipulation",
+    "first_author": "Zhang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.32245",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "vla",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "surface": [
+        "world-state",
+        "execution-control"
+      ],
+      "target": [
+        "robot-executor"
+      ],
+      "consequence": [
+        "collision",
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-25",
+    "first_submission_date": "2026-11-24",
+    "first_submission_source": "https://arxiv.org/abs/2611.32245",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-32304",
+    "title": "Sparse Poison, Strong Hijack: Efficient Trajectory-Level Backdoors in Vision-Language-Action Models with Only 1\\% Poisoning",
+    "first_author": "Huang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.32304",
+    "code_url": null,
+    "section": "training-attacks",
+    "subsection": "Backdoors and Data Poisoning",
+    "scope": "vla",
+    "risks": [
+      "task-reliability",
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "mechanism": [
+        "backdoor",
+        "data-poisoning"
+      ],
+      "surface": [
+        "model-supply-chain",
+        "visual-perception"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "control-hijacking"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-25",
+    "first_submission_date": "2026-11-24",
+    "first_submission_source": "https://arxiv.org/abs/2611.32304"
+  },
+  {
+    "id": "arxiv-2611-32400",
+    "title": "Verify then Steer: Progress Hallucination-Aware Recovery for Continuous Vision-and-Language Navigation",
+    "first_author": "Hou et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.32400",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "vlm",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "semantic-misalignment"
+      ],
+      "surface": [
+        "reasoning-representation",
+        "task-planning"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "recovery-failure",
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-25",
+    "first_submission_date": "2026-11-24",
+    "first_submission_source": "https://arxiv.org/abs/2611.32400",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "representation-steering",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "semantic-misalignment"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-32579",
+    "title": "Follow-Bench 2.0: An End-to-End 3D Benchmark for Socially-Aware Robot Person Following",
+    "first_author": "Ye et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.32579",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Task and Physical Safety",
+    "scope": "mixed",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "curation_status": "paper-verified",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "perception-error",
+          "distribution-shift"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "world-state",
+          "execution-control"
+        ],
+        "consequences": [
+          "collision",
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-25",
+    "first_submission_date": "2026-11-24",
+    "first_submission_source": "https://arxiv.org/abs/2611.32579"
+  },
+  {
+    "id": "arxiv-2611-32803",
+    "title": "MRBench: Benchmarking Physical Necessity Reasoning in Heterogeneous Multi-Robot Manipulation",
+    "first_author": "Chen et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.32803",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "curation_status": "paper-verified",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "mechanisms": [
+          "planning-error",
+          "distribution-shift"
+        ],
+        "surfaces": [
+          "task-planning",
+          "world-state"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-25",
+    "first_submission_date": "2026-11-24",
+    "first_submission_source": "https://arxiv.org/abs/2611.32803",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "planning-error",
+        "distribution-shift"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-32986",
+    "title": "CAPER: PartGround and PlanRefine for Reliable Manual-Guided Robotic Assembly Planning",
+    "first_author": "Xi et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.32986",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety Requirements and Assurance",
+    "scope": "llm-robot",
+    "risks": [],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "planning-error"
+      ],
+      "surface": [
+        "context-memory-retrieval",
+        "task-planning"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "policy-violation"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-25",
+    "first_submission_date": "2026-11-24",
+    "first_submission_source": "https://arxiv.org/abs/2611.32986",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "planning-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-33010",
+    "title": "Embodied AI Fails the Mirror Test: How a Simple Mirror Breaks Robot Policies",
+    "first_author": "Liu et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.33010",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "OOD and Generalization",
+    "scope": "mixed",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "surface": [
+        "visual-perception"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-25",
+    "first_submission_date": "2026-11-24",
+    "first_submission_source": "https://arxiv.org/abs/2611.33010"
   }
 ]
