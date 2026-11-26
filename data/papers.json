@@ -51387,5 +51387,423 @@
       ],
       "curation_status": "abstract-verified"
     }
+  },
+  {
+    "id": "arxiv-2611-33794",
+    "title": "Keep or Roll Back? Out-of-Loop Judges for Self-Improving VLA and End-to-End Embodied Policies",
+    "first_author": "Huang",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.33794",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety Requirements and Assurance",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "surface": [
+        "model-supply-chain"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-26",
+    "first_submission_date": "2026-11-25",
+    "first_submission_source": "https://arxiv.org/abs/2611.33794",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-34811",
+    "title": "HOG-WAM: Improving Visual Robustness through Future Gradient Prediction",
+    "first_author": "Dong",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.34811",
+    "code_url": "https://github.com/iPPLab/HOG-WAM",
+    "section": "defenses",
+    "subsection": "Safety-Aligned and Robust Policy Training",
+    "scope": "robot-foundation-model",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "visual-perception"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-26",
+    "first_submission_date": "2026-11-25",
+    "first_submission_source": "https://arxiv.org/abs/2611.34811",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-34698",
+    "title": "A Failure-Driven Data Flywheel for Post-Training Vision-Language-Action Models",
+    "first_author": "Luo",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.34698",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety-Aligned and Robust Policy Training",
+    "scope": "autonomous-driving",
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "physical-semantic-environment"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "collision"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-26",
+    "first_submission_date": "2026-11-25",
+    "first_submission_source": "https://arxiv.org/abs/2611.34698",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-33810",
+    "title": "FlipVLA: Backdoor Attacks on Vision-Language-Action(VLA) Models Only Through Bit Flips",
+    "first_author": "Zhao",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.33810",
+    "code_url": null,
+    "section": "training-attacks",
+    "subsection": "Backdoors and Data Poisoning",
+    "scope": "vla",
+    "risks": [
+      "task-reliability",
+      "security-privacy"
+    ],
+    "threat_model": {
+      "kind": "adversarial",
+      "lifecycle": [
+        "training",
+        "inference"
+      ],
+      "surface": [
+        "model-supply-chain",
+        "visual-perception"
+      ],
+      "mechanism": [
+        "backdoor",
+        "checkpoint-compromise"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-26",
+    "first_submission_date": "2026-11-25",
+    "first_submission_source": "https://arxiv.org/abs/2611.33810"
+  },
+  {
+    "id": "arxiv-2611-33161",
+    "title": "Constraint-Aware Test-Time Scoring for LLM and VLM Candidate Selection",
+    "first_author": "Ramesh",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.33161",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "llm-robot",
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "task-planning"
+      ],
+      "mechanism": [
+        "planning-error"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "unsafe-motion"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-26",
+    "first_submission_date": "2026-08-31",
+    "first_submission_source": "https://arxiv.org/abs/2611.33161",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "defends_against": [
+        "planning-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2609-37292",
+    "title": "Recovering the View: Benchmarking Physical Active Vision for Occlusion Recovery in Robotic Manipulation",
+    "first_author": "Luo",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2609.37292",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Robustness, Uncertainty, and OOD Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "visual-perception"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-26",
+    "first_submission_date": "2026-09-29",
+    "first_submission_source": "https://arxiv.org/abs/2609.37292",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2605-10925",
+    "title": "PriorVLA: Prior-Preserving Adaptation for Vision-Language-Action Models",
+    "first_author": "Guo",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2605.10925",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "OOD and Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "visual-perception",
+        "physical-semantic-environment"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-26",
+    "first_submission_date": "2026-05-11",
+    "first_submission_source": "https://arxiv.org/abs/2605.10925",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-34778",
+    "title": "Toward Agentic Robotics: A Large-Scale Study of Harness Design for Robot-Use Agents",
+    "first_author": "Lai",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.34778",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "OOD and Generalization",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "task-planning",
+        "context-memory-retrieval"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "target": [
+        "vla-policy",
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-26",
+    "first_submission_date": "2026-11-25",
+    "first_submission_source": "https://arxiv.org/abs/2611.34778",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-34914",
+    "title": "Cairn: Object-Centric 3D Trajectory Priors for Steering Frozen VLAs",
+    "first_author": "Kratimenos",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.34914",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Action and Spatial Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "physical-semantic-environment"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ],
+      "curation_status": "abstract-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-26",
+    "first_submission_date": "2026-11-25",
+    "first_submission_source": "https://arxiv.org/abs/2611.34914",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "abstract-verified"
+    }
   }
 ]
