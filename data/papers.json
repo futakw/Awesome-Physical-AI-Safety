@@ -50747,5 +50747,645 @@
     "catalogued_date": "2026-11-26",
     "first_submission_date": "2026-11-24",
     "first_submission_source": "https://arxiv.org/abs/2611.33143"
+  },
+  {
+    "id": "arxiv-2611-33398",
+    "title": "Best-of-$N$ Test-Time Steering Can Lead to Reward Hacking in Vision-Language-Action Models",
+    "first_author": "Khattar et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.33398",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "Reliability-Oriented Policy Refinement",
+    "scope": "vla",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "world-state",
+        "action-interface"
+      ],
+      "mechanism": [
+        "planning-error"
+      ],
+      "target": [
+        "runtime-monitor",
+        "action-generation"
+      ],
+      "consequence": [
+        "task-failure",
+        "unsafe-motion"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-26",
+    "first_submission_date": "2026-11-24",
+    "first_submission_source": "https://arxiv.org/abs/2611.33398",
+    "defense": {
+      "mechanism": [],
+      "defends_against": [
+        "planning-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-33560",
+    "title": "Skeptic: Grounding Failure Diagnosis for Robot Skill Discovery",
+    "first_author": "Sun et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.33560",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Failure Detection, Shielding, and Recovery",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "task-planning",
+        "context-memory-retrieval"
+      ],
+      "mechanism": [
+        "planning-error"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "recovery-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-26",
+    "first_submission_date": "2026-11-25",
+    "first_submission_source": "https://arxiv.org/abs/2611.33560",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "planning-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-33739",
+    "title": "RegHarness: Regulating What Code-as-Policy Agents Keep from Steps to Skills",
+    "first_author": "Liu et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.33739",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference",
+        "system"
+      ],
+      "surface": [
+        "action-interface",
+        "task-planning",
+        "context-memory-retrieval"
+      ],
+      "mechanism": [
+        "planning-error",
+        "execution-error"
+      ],
+      "target": [
+        "task-planner",
+        "robot-executor"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-26",
+    "first_submission_date": "2026-11-25",
+    "first_submission_source": "https://arxiv.org/abs/2611.33739",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "action-shielding"
+      ],
+      "defends_against": [
+        "planning-error",
+        "execution-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-33769",
+    "title": "FailPoint-X: A Policy-Matched, Failure-Anchored Benchmark for Offline VLA Post-Training from Human Takeovers",
+    "first_author": "Li et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.33769",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Failure Detection and Recovery",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "curation_status": "abstract-verified",
+      "coverage": {
+        "lifecycles": [
+          "training",
+          "inference"
+        ],
+        "surfaces": [
+          "model-supply-chain",
+          "execution-control"
+        ],
+        "mechanisms": [
+          "execution-error",
+          "distribution-shift"
+        ],
+        "consequences": [
+          "recovery-failure",
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-26",
+    "first_submission_date": "2026-11-25",
+    "first_submission_source": "https://arxiv.org/abs/2611.33769",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "execution-error",
+        "distribution-shift"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-33772",
+    "title": "Triage Before Fine-Tuning: Feasibility-Gated Selection and Monitored Adaptation of Embodied Foundation Models for a Fixed Physical Platform",
+    "first_author": "Huang et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.33772",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety Requirements and Assurance",
+    "scope": "vla",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference",
+        "system"
+      ],
+      "surface": [
+        "visual-perception",
+        "execution-control"
+      ],
+      "mechanism": [
+        "distribution-shift",
+        "execution-error"
+      ],
+      "target": [
+        "vla-policy",
+        "robot-executor"
+      ],
+      "consequence": [
+        "collision",
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-26",
+    "first_submission_date": "2026-11-25",
+    "first_submission_source": "https://arxiv.org/abs/2611.33772",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "defends_against": [
+        "distribution-shift",
+        "execution-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-33816",
+    "title": "$\\widetilde{\\varepsilon}$: Does Initial Noise Induce Directional Bias in Vision-Language-Action Models?",
+    "first_author": "Lee et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.33816",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety-Aligned and Robust Policy Training",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "action-interface"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-26",
+    "first_submission_date": "2026-11-25",
+    "first_submission_source": "https://arxiv.org/abs/2611.33816",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-33865",
+    "title": "Measuring the Value of One Shared Image at Robot Handoffs in Vision-and-Language Navigation",
+    "first_author": "Lu",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.33865",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "System and Communication Defenses",
+    "scope": "vision-language-navigation",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "paper-verified",
+      "lifecycle": [
+        "inference",
+        "system"
+      ],
+      "surface": [
+        "multi-agent-communication",
+        "context-memory-retrieval"
+      ],
+      "mechanism": [
+        "planning-error"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-26",
+    "first_submission_date": "2026-11-25",
+    "first_submission_source": "https://arxiv.org/abs/2611.33865",
+    "defense": {
+      "mechanism": [
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "planning-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-33993",
+    "title": "Aegis-VLA: Reliability-Gated Action Refinement via a Trajectory World Model for Dynamic Object Manipulation",
+    "first_author": "Wei et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.33993",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Uncertainty, Abstention, and Human Oversight",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "world-state",
+        "action-interface"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "target": [
+        "vla-policy",
+        "action-generation"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-26",
+    "first_submission_date": "2026-11-25",
+    "first_submission_source": "https://arxiv.org/abs/2611.33993",
+    "defense": {
+      "mechanism": [
+        "uncertainty-gating"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-34124",
+    "title": "WAtcher: Watching Ahead for Safe Robotic Manipulation with Efficient World-Action Models",
+    "first_author": "Shan et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.34124",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "robot-foundation-model",
+    "risks": [
+      "task-reliability",
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "action-interface",
+        "world-state"
+      ],
+      "mechanism": [
+        "execution-error"
+      ],
+      "target": [
+        "action-generation",
+        "robot-executor"
+      ],
+      "consequence": [
+        "unsafe-motion",
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-26",
+    "first_submission_date": "2026-11-25",
+    "first_submission_source": "https://arxiv.org/abs/2611.34124",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring",
+        "action-shielding",
+        "failure-recovery"
+      ],
+      "defends_against": [
+        "execution-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-34328",
+    "title": "LUDIUS: A Benchmark for Embodied Social Intelligence in Everyday Human-Robot Interactions",
+    "first_author": "Kim et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.34328",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Human-Robot Trust and Fairness",
+    "scope": "llm-robot",
+    "risks": [
+      "task-reliability",
+      "ethical-societal"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "curation_status": "paper-verified",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "surfaces": [
+          "task-planning",
+          "user-instruction",
+          "context-memory-retrieval"
+        ],
+        "mechanisms": [
+          "planning-error",
+          "semantic-misalignment"
+        ],
+        "consequences": [
+          "policy-violation",
+          "task-failure"
+        ]
+      }
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-26",
+    "first_submission_date": "2026-11-25",
+    "first_submission_source": "https://arxiv.org/abs/2611.34328"
+  },
+  {
+    "id": "arxiv-2611-34560",
+    "title": "M$^{2}$AdaptVLA: Multimodal Memory-Augmented Vision-Language-Action Model with Predictive Test-Time Adaptation",
+    "first_author": "Tan et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.34560",
+    "code_url": null,
+    "section": "ood-generalization",
+    "subsection": "OOD and Generalization",
+    "scope": "vla",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "non-adversarial",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "proprioception",
+        "visual-perception"
+      ],
+      "mechanism": [
+        "distribution-shift"
+      ],
+      "target": [
+        "vla-policy"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-26",
+    "first_submission_date": "2026-11-25",
+    "first_submission_source": "https://arxiv.org/abs/2611.34560",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "distribution-shift"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-34658",
+    "title": "FeaXDrive2: Body-Scene Spatial Grounding for Feasibility-Aware Generative Driving",
+    "first_author": "Leng et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.34658",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Safety-Aligned and Robust Policy Training",
+    "scope": "autonomous-driving",
+    "risks": [
+      "physical-safety"
+    ],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "visual-perception",
+        "action-interface"
+      ],
+      "mechanism": [
+        "planning-error"
+      ],
+      "target": [
+        "action-generation"
+      ],
+      "consequence": [
+        "collision"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-26",
+    "first_submission_date": "2026-11-25",
+    "first_submission_source": "https://arxiv.org/abs/2611.34658",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "planning-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-34915",
+    "title": "Memory Is Not Ground Truth: Revising Navigation Authority under Unreliable VLM Evidence for Persistent Semantic Navigation",
+    "first_author": "Shrote et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.34915",
+    "code_url": null,
+    "section": "defenses",
+    "subsection": "Runtime Monitoring and Guardrails",
+    "scope": "robot-navigation",
+    "risks": [],
+    "threat_model": {
+      "kind": "system-failure",
+      "curation_status": "abstract-verified",
+      "lifecycle": [
+        "inference"
+      ],
+      "surface": [
+        "context-memory-retrieval",
+        "visual-perception"
+      ],
+      "mechanism": [
+        "perception-error"
+      ],
+      "target": [
+        "task-planner"
+      ],
+      "consequence": [
+        "task-failure"
+      ]
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-26",
+    "first_submission_date": "2026-11-25",
+    "first_submission_source": "https://arxiv.org/abs/2611.34915",
+    "defense": {
+      "mechanism": [
+        "runtime-monitoring"
+      ],
+      "defends_against": [
+        "perception-error"
+      ],
+      "curation_status": "abstract-verified"
+    }
   }
 ]
