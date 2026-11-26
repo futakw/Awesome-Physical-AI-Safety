@@ -884,8 +884,10 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 [arXiv 2026] CALVIN-MAX: When Does a Mid-Execution Change Hurt a Robot Policy?
 [arXiv 2026] Roboclock: A Unified Benchmark for Time-Aware Robotic Intelligence
 [arXiv 2026] Follow-Bench 2.0: An End-to-End 3D Benchmark for Socially-Aware Robot Person Following
-[arXiv 2026] MRBench: Benchmarking Physical Necessity Reasoning in Heterogeneous Multi-Robot Manipulation</title></circle>
-<text x="1120.0" y="317" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">177</text>
+[arXiv 2026] MRBench: Benchmarking Physical Necessity Reasoning in Heterogeneous Multi-Robot Manipulation
+[arXiv 2026] EmbodiSafety: Benchmarking Risk Understanding and Response in Embodied AI
+[arXiv 2026] ROAM-Bench: Evaluating Embodied Active Spatial Intelligence through Evidence Verification</title></circle>
+<text x="1120.0" y="317" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">179</text>
 <text class="label" x="222" y="361" text-anchor="end">System Security</text>
 <line x1="250" y1="356" x2="1120" y2="356" stroke="#DCE3EC"/>
 <circle cx="975.0" cy="356" r="8.1" fill="#AE4560" fill-opacity="0.88"><title>[arXiv 2025] Beyond Model Jailbreak: Systematic Dissection of the &quot;Ten DeadlySins&quot; in Embodied Intelligence</title></circle>

@@ -50655,5 +50655,97 @@
     "catalogued_date": "2026-11-25",
     "first_submission_date": "2026-11-24",
     "first_submission_source": "https://arxiv.org/abs/2611.33010"
+  },
+  {
+    "id": "arxiv-2611-33054",
+    "title": "EmbodiSafety: Benchmarking Risk Understanding and Response in Embodied AI",
+    "first_author": "Cui et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.33054",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Semantic and Ethical Safety",
+    "scope": "embodied-agent",
+    "risks": [
+      "ethical-societal"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "user-instruction",
+          "task-planning"
+        ],
+        "mechanisms": [
+          "hazardous-instruction",
+          "instruction-ambiguity",
+          "planning-error"
+        ],
+        "consequences": [
+          "policy-violation",
+          "recovery-failure"
+        ]
+      },
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-26",
+    "first_submission_date": "2026-11-24",
+    "first_submission_source": "https://arxiv.org/abs/2611.33054",
+    "defense": {
+      "mechanism": [
+        "robust-finetuning"
+      ],
+      "defends_against": [
+        "hazardous-instruction",
+        "instruction-ambiguity",
+        "planning-error"
+      ],
+      "curation_status": "paper-verified"
+    }
+  },
+  {
+    "id": "arxiv-2611-33143",
+    "title": "ROAM-Bench: Evaluating Embodied Active Spatial Intelligence through Evidence Verification",
+    "first_author": "Ran et al.",
+    "venue": "arXiv",
+    "year": 2026,
+    "paper_url": "https://arxiv.org/abs/2611.33143",
+    "code_url": null,
+    "section": "benchmarks",
+    "subsection": "Evaluation Infrastructure",
+    "scope": "embodied-agent",
+    "risks": [
+      "task-reliability"
+    ],
+    "threat_model": {
+      "kind": "evaluation",
+      "coverage": {
+        "lifecycles": [
+          "inference"
+        ],
+        "surfaces": [
+          "visual-perception",
+          "action-interface",
+          "task-planning"
+        ],
+        "mechanisms": [
+          "planning-error"
+        ],
+        "consequences": [
+          "task-failure"
+        ]
+      },
+      "curation_status": "paper-verified"
+    },
+    "tags": [],
+    "catalogued_date": "2026-11-26",
+    "first_submission_date": "2026-11-24",
+    "first_submission_source": "https://arxiv.org/abs/2611.33143"
   }
 ]
